@@ -1,0 +1,94 @@
+version: 2
+updates:
+  # Enable version updates for Python dependencies
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "UTC"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "JLWard429"
+    assignees:
+      - "JLWard429"
+    commit-message:
+      prefix: "⬆️ "
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "python"
+      - "automated"
+    ignore:
+      # Ignore minor and patch updates for development dependencies
+      - dependency-name: "pytest*"
+        update-types: ["version-update:semver-patch"]
+      - dependency-name: "black"
+        update-types: ["version-update:semver-patch"]
+    groups:
+      # Group all pytest-related packages
+      pytest:
+        patterns:
+          - "pytest*"
+        update-types:
+          - "minor"
+          - "patch"
+      # Group linting and formatting tools
+      dev-tools:
+        patterns:
+          - "black"
+          - "flake8*"
+          - "isort"
+          - "mypy"
+          - "pylint"
+        update-types:
+          - "minor"
+          - "patch"
+
+  # Enable version updates for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "UTC"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "JLWard429"
+    assignees:
+      - "JLWard429"
+    commit-message:
+      prefix: "🔄 "
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "github-actions"
+      - "automated"
+    groups:
+      # Group GitHub Actions updates
+      actions:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+
+  # Monitor Docker dependencies if any Dockerfiles are added
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "UTC"
+    open-pull-requests-limit: 3
+    reviewers:
+      - "JLWard429"
+    commit-message:
+      prefix: "🐳 "
+    labels:
+      - "dependencies"
+      - "docker"
+      - "automated"

@@ -1,0 +1,172 @@
+name: 🛡️ Dependency Security Scan
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  dependency-scan:
+    name: 🔍 Dependency Vulnerability Scan
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
+
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v4
+
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: 📦 Install security scanning tools
+      run: |
+        python -m pip install --upgrade pip
+        pip install safety pip-audit
+
+    - name: 🔍 Scan Python dependencies with Safety
+      run: |
+        echo "## 🛡️ Python Dependency Security Scan" > security-report.md
+        echo "" >> security-report.md
+        
+        if [ -f requirements.txt ]; then
+          echo "### Safety Scan Results:" >> security-report.md
+          safety check --json --output safety-report.json || true
+          safety check --output safety-report.txt || echo "Safety scan completed with warnings"
+          
+          if [ -f safety-report.txt ]; then
+            echo '```' >> security-report.md
+            cat safety-report.txt >> security-report.md
+            echo '```' >> security-report.md
+          fi
+        else
+          echo "No requirements.txt found - creating basic scan" >> security-report.md
+          pip freeze > temp-requirements.txt
+          safety check --file temp-requirements.txt --output safety-report.txt || echo "Safety scan completed"
+          if [ -f safety-report.txt ]; then
+            echo '```' >> security-report.md
+            cat safety-report.txt >> security-report.md
+            echo '```' >> security-report.md
+          fi
+          rm -f temp-requirements.txt
+        fi
+
+    - name: 🔍 Scan with pip-audit
+      run: |
+        echo "" >> security-report.md
+        echo "### pip-audit Scan Results:" >> security-report.md
+        pip-audit --desc --format=json --output=pip-audit-report.json || true
+        pip-audit --desc --output=pip-audit-report.txt || echo "pip-audit completed with warnings"
+        
+        if [ -f pip-audit-report.txt ]; then
+          echo '```' >> security-report.md
+          cat pip-audit-report.txt >> security-report.md
+          echo '```' >> security-report.md
+        fi
+
+    - name: 🔍 Check for known vulnerable packages
+      run: |
+        echo "" >> security-report.md
+        echo "### Manual Vulnerability Check:" >> security-report.md
+        
+        # Check for commonly vulnerable packages
+        VULNERABLE_PACKAGES=("pillow<8.3.2" "requests<2.25.1" "urllib3<1.26.5")
+        
+        pip freeze > current-packages.txt
+        
+        for pkg in "${VULNERABLE_PACKAGES[@]}"; do
+          pkg_name=$(echo "$pkg" | cut -d'<' -f1)
+          if grep -q "^$pkg_name==" current-packages.txt; then
+            echo "⚠️ Found potentially vulnerable package: $pkg_name" >> security-report.md
+          fi
+        done
+        
+        rm -f current-packages.txt
+
+    - name: 📤 Upload security artifacts
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: dependency-security-reports
+        path: |
+          safety-report.json
+          pip-audit-report.json
+          security-report.md
+        retention-days: 30
+
+    - name: 📊 Display security summary
+      if: always()
+      run: |
+        echo "## 🛡️ Dependency Security Scan Results" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ -f security-report.md ]; then
+          cat security-report.md >> $GITHUB_STEP_SUMMARY
+        else
+          echo "Security scan completed - check artifacts for detailed results." >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "📅 **Scan Date**: $(date)" >> $GITHUB_STEP_SUMMARY
+        echo "🔧 **Tools Used**: Safety, pip-audit" >> $GITHUB_STEP_SUMMARY
+
+  # Separate job for license compliance
+  license-check:
+    name: 📜 License Compliance Check
+    runs-on: ubuntu-latest
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v4
+
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: 📦 Install license checking tools
+      run: |
+        pip install pip-licenses licensecheck
+
+    - name: 📜 Check licenses
+      run: |
+        echo "## 📜 License Compliance Report" > license-report.md
+        echo "" >> license-report.md
+        
+        if [ -f requirements.txt ]; then
+          echo "### Installed Package Licenses:" >> license-report.md
+          pip install -r requirements.txt
+          pip-licenses --format=markdown >> license-report.md
+        else
+          echo "No requirements.txt found - checking installed packages" >> license-report.md
+          pip-licenses --format=markdown >> license-report.md
+        fi
+        
+        echo "" >> license-report.md
+        echo "### Repository License:" >> license-report.md
+        if [ -f LICENSE ]; then
+          echo "✅ LICENSE file found" >> license-report.md
+        else
+          echo "⚠️ No LICENSE file found in repository" >> license-report.md
+        fi
+
+    - name: 📤 Upload license report
+      uses: actions/upload-artifact@v4
+      with:
+        name: license-compliance-report
+        path: license-report.md
+
+    - name: 📊 Display license summary
+      run: |
+        echo "## 📜 License Compliance Summary" >> $GITHUB_STEP_SUMMARY
+        if [ -f license-report.md ]; then
+          cat license-report.md >> $GITHUB_STEP_SUMMARY
+        fi
