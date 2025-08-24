@@ -3,6 +3,8 @@
 import subprocess
 from pathlib import Path
 
+import pytest
+
 
 def test_dev_tools_script_exists():
     """Test that the development tools script exists and is executable."""

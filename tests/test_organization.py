@@ -1,6 +1,5 @@
 """Tests for the enhanced organization script."""
 
-import json
 import tempfile
 from pathlib import Path
 from unittest.mock import patch
@@ -10,7 +9,6 @@ import pytest
 
 def test_organization_script_imports():
     """Test that the organization script can be imported without errors."""
-    import os
     import sys
 
     # Add the script directory to Python path
