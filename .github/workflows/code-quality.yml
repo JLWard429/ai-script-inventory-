@@ -1,0 +1,218 @@
+name: Code Quality & Security
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - '**.py'
+      - '**.yml'
+      - '**.yaml'
+      - 'requirements*.txt'
+      - 'pyproject.toml'
+      - '.pre-commit-config.yaml'
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - '**.py'
+      - '**.yml'
+      - '**.yaml'
+      - 'requirements*.txt'
+      - 'pyproject.toml'
+      - '.pre-commit-config.yaml'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  code-quality:
+    name: Code Quality Checks
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+          if [ -f requirements-dev.txt ]; then
+            pip install -r requirements-dev.txt
+          elif [ -f pyproject.toml ]; then
+            pip install -e ".[dev]"
+          fi
+
+      - name: Code formatting check (Black)
+        run: |
+          black --check --diff .
+
+      - name: Import sorting check (isort)
+        run: |
+          isort --check-only --diff .
+
+      - name: Linting (flake8)
+        run: |
+          flake8 .
+
+      - name: Type checking (mypy)
+        run: |
+          mypy python_scripts/ .github/scripts/ || true
+
+      - name: Security check (bandit)
+        run: |
+          bandit -r python_scripts/ .github/scripts/ -f json -o bandit-report.json || true
+          if [ -f bandit-report.json ]; then
+            cat bandit-report.json
+          fi
+
+      - name: Dependency vulnerability check (safety)
+        run: |
+          safety check --json --output safety-report.json || true
+          if [ -f safety-report.json ]; then
+            cat safety-report.json
+          fi
+
+      - name: Upload security reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: security-reports-py${{ matrix.python-version }}
+          path: |
+            bandit-report.json
+            safety-report.json
+          retention-days: 7
+
+  pre-commit-checks:
+    name: Pre-commit Hooks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install pre-commit
+        run: |
+          python -m pip install --upgrade pip
+          pip install pre-commit
+
+      - name: Run pre-commit hooks
+        run: |
+          pre-commit run --all-files --show-diff-on-failure
+
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.11']
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+          if [ -f requirements-dev.txt ]; then
+            pip install -r requirements-dev.txt
+          elif [ -f pyproject.toml ]; then
+            pip install -e ".[dev]"
+          fi
+
+      - name: Run tests with pytest
+        run: |
+          if [ -d tests ]; then
+            pytest --cov=python_scripts --cov=.github/scripts --cov-report=xml --cov-report=html
+          else
+            echo "No tests directory found, creating basic test structure..."
+            mkdir -p tests
+            echo "# Tests directory created for future test files" > tests/README.md
+          fi
+
+      - name: Upload coverage reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-reports-py${{ matrix.python-version }}
+          path: |
+            htmlcov/
+            coverage.xml
+          retention-days: 7
+
+  script-validation:
+    name: Script Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate Python scripts
+        run: |
+          echo "=== Validating Python Scripts ==="
+          for script in $(find python_scripts/ .github/scripts/ -name "*.py" 2>/dev/null); do
+            echo "Checking syntax: $script"
+            python -m py_compile "$script"
+            echo "✓ $script syntax is valid"
+          done
+
+      - name: Validate shell scripts
+        run: |
+          echo "=== Validating Shell Scripts ==="
+          if command -v shellcheck >/dev/null 2>&1; then
+            for script in $(find shell_scripts/ -name "*.sh" 2>/dev/null); do
+              echo "Checking: $script"
+              shellcheck "$script" || echo "⚠️ ShellCheck warnings for $script"
+            done
+          else
+            echo "ShellCheck not available, skipping shell script validation"
+          fi
+
+  workflow-summary:
+    name: Workflow Summary
+    runs-on: ubuntu-latest
+    needs: [code-quality, pre-commit-checks, test, script-validation]
+    if: always()
+
+    steps:
+      - name: Generate summary
+        run: |
+          echo "## Code Quality & Security Workflow Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Job | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|-----|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Code Quality | ${{ needs.code-quality.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Pre-commit Checks | ${{ needs.pre-commit-checks.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Tests | ${{ needs.test.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Script Validation | ${{ needs.script-validation.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Workflow completed at $(date)" >> $GITHUB_STEP_SUMMARY
