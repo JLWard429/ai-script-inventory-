@@ -2,30 +2,70 @@ name: Auto Organize AI Scripts
 
 on:
   push:
+    # Only run when script directories or the organization script change
     paths:
-      - '**/*'
+      - 'python_scripts/**'
+      - 'shell_scripts/**'
+      - '.github/scripts/**'
   workflow_dispatch:
 
 jobs:
-  organize:
+  organize-ai-scripts:
+    name: Organize and Audit AI Scripts
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Consider full history if needed for script logic
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
-      - name: Run organization script
+      - name: Install Python dependencies (if requirements.txt exists)
         run: |
-          python .github/scripts/organize_ai_scripts.py
+          if [ -f .github/scripts/requirements.txt ]; then
+            pip install -r .github/scripts/requirements.txt
+          fi
+
+      - name: Run organization script (with output)
+        id: organize
+        run: |
+          echo "Running organize_ai_scripts.py..."
+          python .github/scripts/organize_ai_scripts.py | tee organize_output.log
+
+      - name: Display organization script output
+        if: always()
+        run: |
+          echo "------ organize_ai_scripts.py Output ------"
+          cat organize_output.log || echo "No output log found."
 
       - name: Commit & push changes (if any)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git diff --cached --quiet || git commit -m "Automated: Organize and check AI scripts"
-          git push
+          if ! git diff --cached --quiet; then
+            git commit -m "Automated: Organize and audit AI scripts [skip ci]"
+            git push
+          else
+            echo "No changes to commit."
+          fi
+
+      - name: Workflow summary
+        if: always()
+        run: |
+          echo "## Organization Workflow Completed" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ -f organize_output.log ]; then
+            echo '### Script Output:' >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            cat organize_output.log >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+          else
+            echo "No script output." >> $GITHUB_STEP_SUMMARY
+          fi
