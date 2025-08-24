@@ -1,0 +1,3 @@
+# Python dependencies for this repository
+# Currently no external dependencies are required
+# All scripts use standard library modules only

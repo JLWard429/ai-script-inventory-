@@ -31,7 +31,7 @@ REQUIRED_FILES = {
 
 # Files/directories to skip during organization
 SKIP = {
-    '.git', '.github', '__pycache__', 'organize_ai_scripts.log', os.path.basename(__file__)
+    '.git', '.github', '__pycache__', 'organize_ai_scripts.log', os.path.basename(__file__), 'requirements.txt'
 }
 
 # Log file name for audit trail
