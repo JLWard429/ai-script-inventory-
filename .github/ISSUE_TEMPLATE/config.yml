@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 General Discussion
+    url: https://github.com/JLWard429/ai-script-inventory-/discussions
+    about: Ask questions, share ideas, or discuss the project with the community
+  - name: 🔒 Security Vulnerability
+    url: https://github.com/JLWard429/ai-script-inventory-/security/advisories/new
+    about: Report a security vulnerability privately (for sensitive security issues)
+  - name: 📖 Documentation
+    url: https://github.com/JLWard429/ai-script-inventory-/blob/main/docs/README.md
+    about: Read the documentation for setup and usage instructions
