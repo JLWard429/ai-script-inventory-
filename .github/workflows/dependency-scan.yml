@@ -118,6 +118,8 @@ jobs:
   # Separate job for license compliance
   license-check:
     name: 📜 License Compliance Check
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     steps:
     - name: 📥 Checkout repository
