@@ -212,6 +212,8 @@ jobs:
 
   create-release:
     name: 🎉 Create GitHub Release
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     needs: [validate-release, run-tests, build-artifacts, generate-changelog]
     
