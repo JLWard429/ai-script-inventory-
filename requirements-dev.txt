@@ -1,0 +1,25 @@
+# Development dependencies for AI Script Inventory
+# These dependencies are needed for development, testing, and CI/CD
+
+# Core runtime dependencies
+spacy>=3.8.0,<4.0.0
+pyyaml>=6.0.0,<7.0.0
+
+# Code formatting and linting
+black>=24.0.0
+isort>=5.13.0
+flake8>=7.0.0
+mypy>=1.8.0
+
+# Testing framework
+pytest>=8.0.0
+pytest-cov>=5.0.0
+
+# Security and quality tools  
+bandit>=1.8.0
+safety>=3.0.0
+pre-commit>=4.0.0
+
+# Additional development tools
+setuptools>=61.0
+wheel>=0.40.0
