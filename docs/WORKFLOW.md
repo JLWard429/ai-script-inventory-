@@ -383,7 +383,7 @@ Located in `.github/workflows/`:
 
 ## 📚 Additional Resources
 
-- [Contributing Guidelines](CONTRIBUTING.md)
+- [Contributing Guidelines](docs/CONTRIBUTING.md)
 - [Security Policy](SECURITY.md)
 - [Code of Conduct](CODE_OF_CONDUCT.md)
 - [API Documentation](docs/api/)

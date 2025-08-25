@@ -10,28 +10,12 @@ This script provides common development tasks automation including:
 """
 
 import argparse
-import subprocess
 import sys
 from pathlib import Path
 from typing import List
 
-
-def run_command(command: List[str], description: str) -> bool:
-    """Run a command and return success status."""
-    print(f"🔄 {description}...")
-    try:
-        result = subprocess.run(command, check=True, capture_output=True, text=True)
-        if result.stdout:
-            print(result.stdout)
-        print(f"✅ {description} completed successfully")
-        return True
-    except subprocess.CalledProcessError as e:
-        print(f"❌ {description} failed")
-        if e.stdout:
-            print("STDOUT:", e.stdout)
-        if e.stderr:
-            print("STDERR:", e.stderr)
-        return False
+# Import shared utilities
+from utils import run_command
 
 
 def setup_dev_environment() -> bool:

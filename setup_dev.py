@@ -5,25 +5,12 @@ Setup script for AI Script Inventory development environment.
 This script installs the required spaCy model and sets up the development environment.
 """
 
-import subprocess
 import sys
 from pathlib import Path
 
-
-def run_command(command, description):
-    """Run a command and return success status."""
-    print(f"🔧 {description}...")
-    try:
-        result = subprocess.run(command, check=True, capture_output=True, text=True)
-        print(f"✅ {description} completed successfully")
-        return True
-    except subprocess.CalledProcessError as e:
-        print(f"❌ {description} failed: {e}")
-        if e.stdout:
-            print(f"stdout: {e.stdout}")
-        if e.stderr:
-            print(f"stderr: {e.stderr}")
-        return False
+# Import shared utilities
+sys.path.insert(0, str(Path(__file__).parent / "python_scripts"))
+from utils import run_command_simple as run_command
 
 
 def setup_spacy_model():
