@@ -29,7 +29,8 @@ classifiers = [
 dependencies = [
     # Main dependencies are listed in requirements.txt
 # Main dependencies are listed in requirements.txt
-# Install with: pip install -r requirements.txt
+    # Install with: pip install -r requirements.txt
+]
 
 [project.optional-dependencies]
 dev = [
