@@ -1,3 +1,5 @@
+permissions:
+  contents: read
 name: 🛡️ Dependency Security Scan
 
 on:
@@ -14,11 +16,7 @@ jobs:
   dependency-scan:
     name: 🔍 Dependency Vulnerability Scan
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      security-events: write
-      actions: read
-
+    
     steps:
     - name: 📥 Checkout repository
       uses: actions/checkout@v5
@@ -122,6 +120,8 @@ jobs:
   # Separate job for license compliance
   license-check:
     name: 📜 License Compliance Check
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     steps:
     - name: 📥 Checkout repository

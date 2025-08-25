@@ -1,0 +1,54 @@
+🔧 Using spaCy for enhanced intent recognition
+🚀 Welcome to Superhuman AI Terminal with spaCy!
+==================================================
+I can help you with:
+  • Running scripts (e.g., 'run test_script.py')
+  • Listing files (e.g., 'list all Python files')
+  • Searching files (e.g., 'search for PDFs')
+  • Showing file contents (e.g., 'show README.md')
+  • Summarizing documents (e.g., 'summarize the latest README')
+  • Answering questions (e.g., 'what can you do?')
+  • Providing guidance (e.g., 'how do I get started?')
+  • General help (type 'help')
+
+🤖 NEW: Ask me questions in natural language!
+  • 'What is this repository about?'
+  • 'How should I organize my scripts?'
+  • 'What are the best practices?'
+
+Type your request in natural language or 'exit' to quit.
+==================================================
+
+🤖 > 🤖 AI Assistant:
+
+I'm your Superhuman AI Terminal! Here's what I can help you with:
+
+🚀 **Script Management:**
+  • Run Python and shell scripts from your repository
+  • Execute automation and development tools
+  • Run tests and linting scripts
+
+📁 **File Operations:**
+  • List and organize files by type (Python, shell, markdown, etc.)
+  • Search for files containing specific content
+  • Display file contents and structure
+
+📊 **Content Analysis:**
+  • Summarize documents and README files
+  • Preview file contents quickly
+  • Extract key information from markdown files
+
+💡 **Repository Features:**
+  • This repository is an AI Script Inventory with automated organization
+  • It has quality controls, security scanning, and comprehensive testing
+  • Files are automatically organized into appropriate directories
+
+🔧 **Natural Language Interface:**
+  • Use natural language like "run security scan on all Python files"
+  • Ask questions like "what scripts are available?" 
+  • Get contextual help and suggestions
+            
+
+==================================================
+
+🤖 > 👋 Thank you for using Superhuman AI Terminal!
