@@ -1,67 +1,3 @@
-
-name: CI/CD Pipeline
-
-on:
-  push:
-    branches: [ main ]
-    tags: [ 'v*' ]
-  pull_request:
-    branches: [ main, develop ]
-  workflow_dispatch:
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
-env:
-  PYTHON_VERSION: '3.11'
-
-jobs:
-  changes:
-    name: Detect Changes
-    runs-on: ubuntu-latest
-    outputs:
-      python: ${{ steps.changes.outputs.python }}
-      workflows: ${{ steps.changes.outputs.workflows }}
-      docs: ${{ steps.changes.outputs.docs }}
-      scripts: ${{ steps.changes.outputs.scripts }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Check for changes
-        uses: dorny/paths-filter@v2
-        id: changes
-        with:
-          filters: |
-            python:
-              - '**/*.py'
-              - 'requirements*.txt'
-              - 'pyproject.toml'
-            workflows:
-              - '.github/workflows/**'
-              - '.github/scripts/**'
-            docs:
-              - '**.md'
-              - 'docs/**'
-            scripts:
-              - 'python_scripts/**'
-              - 'shell_scripts/**'
-
-  lint-and-format:
-    name: Lint & Format
-    runs-on: ubuntu-latest
-    needs: changes
-    if: needs.changes.outputs.python == 'true' || needs.changes.outputs.scripts == 'true'
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-=======
 name: 🚀 Superhuman CI/CD Pipeline
 
 on:
@@ -80,7 +16,6 @@ permissions:
 
 env:
   PYTHON_VERSION: '3.11'
-  NODE_VERSION: '18'
 
 jobs:
   # ==================== QUALITY CHECKS ====================
@@ -89,482 +24,116 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: 🐍 Set up Python
-        develop
         uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: 'pip'
 
-
-      - name: Install dependencies
+      - name: 📦 Install dependencies
         run: |
           python -m pip install --upgrade pip setuptools wheel
           pip install -r requirements-dev.txt
 
-      - name: Auto-format with black
-        run: |
-          black .
-          
-      - name: Auto-fix imports with isort
-        run: |
-          isort .
+      - name: 🎯 Run development tools - all checks
+        run: python python_scripts/dev_tools.py all
 
-      - name: Check if auto-fixes created changes
-        id: changes
-        run: |
-          if [ -n "$(git status --porcelain)" ]; then
-            echo "changes=true" >> $GITHUB_OUTPUT
-            git diff
-          else
-            echo "changes=false" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Commit auto-fixes
-        if: steps.changes.outputs.changes == 'true' && github.event_name == 'push'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "🎨 Auto-format code with black and isort [skip ci]"
-          git push
-
-      - name: Final lint check
-        run: |
-          flake8 .
-
-  security-scan:
-    name: Security Scan
-    runs-on: ubuntu-latest
-    needs: changes
-    if: needs.changes.outputs.python == 'true' || needs.changes.outputs.scripts == 'true'
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-          cache: 'pip'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install bandit safety
-
-      - name: Run Bandit security check
-        run: |
-          bandit -r python_scripts/ .github/scripts/ -f json -o bandit-report.json
-        continue-on-error: true
-
-      - name: Run Safety dependency check
-        run: |
-          safety check --json --output safety-report.json
-        continue-on-error: true
-
-      - name: Upload security reports
-        uses: actions/upload-artifact@v4
-        with:
-          name: security-reports
-          path: |
-            bandit-report.json
-            safety-report.json
-          retention-days: 30
-
+  # ==================== TESTING ====================
   test:
-    name: Test Suite
+    name: 🧪 Test Suite
     runs-on: ubuntu-latest
-    needs: changes
-    if: needs.changes.outputs.python == 'true' || needs.changes.outputs.scripts == 'true'
+    needs: quality-checks
     strategy:
       matrix:
         python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
-          cache: 'pip'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip setuptools wheel
-          pip install -r requirements-dev.txt
-
-      - name: Create tests if they don't exist
-        run: |
-          if [ ! -d tests ]; then
-            mkdir -p tests
-            cat > tests/test_basic.py << 'EOF'
-          """Basic tests for the AI script inventory."""
-          import os
-          import sys
-          from pathlib import Path
-          
-          def test_repository_structure():
-              """Test that required directories exist."""
-              assert Path("python_scripts").exists()
-              assert Path("shell_scripts").exists()
-              assert Path("docs").exists()
-              assert Path("text_files").exists()
-              assert Path(".github").exists()
-          
-          def test_organization_script_exists():
-              """Test that the organization script exists and is valid Python."""
-              script_path = Path(".github/scripts/organize_ai_scripts.py")
-              assert script_path.exists()
-              
-              # Test syntax by compiling
-              with open(script_path) as f:
-                  compile(f.read(), script_path, 'exec')
-          
-          def test_python_scripts_syntax():
-              """Test that all Python scripts have valid syntax."""
-              for py_file in Path("python_scripts").glob("*.py"):
-                  with open(py_file) as f:
-                      compile(f.read(), py_file, 'exec')
-          
-          def test_github_scripts_syntax():
-              """Test that all GitHub scripts have valid syntax."""
-              for py_file in Path(".github/scripts").glob("*.py"):
-                  with open(py_file) as f:
-                      compile(f.read(), py_file, 'exec')
-          EOF
-          fi
-
-      - name: Run tests
-        run: |
-          pytest tests/ -v --cov=python_scripts --cov=.github/scripts --cov-report=xml
-
-      - name: Upload coverage
-        uses: codecov/codecov-action@v3
-        if: matrix.python-version == '3.11'
-        with:
-          file: ./coverage.xml
-          fail_ci_if_error: false
-
-  script-integration-test:
-    name: Script Integration Test
-    runs-on: ubuntu-latest
-    needs: changes
-    if: needs.changes.outputs.python == 'true' || needs.changes.outputs.scripts == 'true'
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-      - name: 📦 Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install flake8 black isort mypy bandit pylint
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
-      - name: 🎨 Check code formatting (Black)
-        run: black --check --diff .
-
-      - name: 📐 Check import sorting (isort)
-        run: isort --check-only --diff .
-
-      - name: 🔧 Lint with flake8
-        run: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-
-      - name: 🔍 Advanced linting (pylint)
-        run: |
-          find . -name "*.py" -not -path "./.github/*" | xargs pylint --disable=C0114,C0115,C0116 --exit-zero
-
-      - name: 🛡️ Security check (bandit)
-        run: bandit -r . -f json -o bandit-report.json --exit-zero
-
-      - name: 📊 Upload security results
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: bandit-security-report
-          path: bandit-report.json
-
-  # ==================== SHELL SCRIPT VALIDATION ====================
-  shell-validation:
-    name: 🐚 Shell Script Validation
-    runs-on: ubuntu-latest
+        
     steps:
       - name: 📥 Checkout repository
-        uses: actions/checkout@v5
-
-      - name: 🔍 Install ShellCheck
-        run: sudo apt-get install -y shellcheck
-
-      - name: ✅ Validate shell scripts
-        run: |
-          find . -name "*.sh" -not -path "./.git/*" | while read -r script; do
-            echo "Checking $script..."
-            shellcheck "$script" || echo "Issues found in $script"
-          done
-
-  # ==================== MULTI-PLATFORM TESTING ====================
-  test-matrix:
-    name: 🧪 Test Suite
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        python-version: ['3.9', '3.10', '3.11', '3.12']
-        exclude:
-          # Reduce matrix size for efficiency
-          - os: windows-latest
-            python-version: '3.9'
-          - os: macos-latest
-            python-version: '3.9'
-    runs-on: ${{ matrix.os }}
-    
-    steps:
-      - name: 📥 Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: 🐍 Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
+          cache: 'pip'
 
       - name: 📦 Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install pytest pytest-cov pytest-xdist
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-        shell: bash
+          python -m pip install --upgrade pip setuptools wheel
+          pip install -r requirements-dev.txt
 
       - name: 🧪 Run tests
-        run: |
-          if [ -f "python_scripts/test_script.py" ]; then
-            python python_scripts/test_script.py
-          fi
-          # Run organization script as test
-          python .github/scripts/organize_ai_scripts.py
-        shell: bash
+        run: python python_scripts/dev_tools.py test
 
-      - name: 📊 Generate test report
-        if: matrix.os == 'ubuntu-latest' && matrix.python-version == '3.11'
-        run: |
-          echo "# Test Report" > test-report.md
-          echo "- OS: ${{ matrix.os }}" >> test-report.md
-          echo "- Python: ${{ matrix.python-version }}" >> test-report.md
-          echo "- Status: ✅ Passed" >> test-report.md
+      - name: 📤 Upload coverage reports
+        uses: codecov/codecov-action@v4
+        if: matrix.python-version == '3.11'
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./coverage.xml
 
-  # ==================== PERFORMANCE TESTING ====================
-  performance:
-    name: ⚡ Performance Benchmarks
+  # ==================== SECURITY ====================
+  security:
+    name: 🛡️ Security Scanning
     runs-on: ubuntu-latest
-    needs: [quality-checks]
+    needs: test
+    
     steps:
       - name: 📥 Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: 🐍 Set up Python
-        develop
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+
+      - name: 📦 Install dependencies
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+          pip install -r requirements-dev.txt
+
+      - name: 🛡️ Run security scans
+        run: python python_scripts/dev_tools.py security
+
+      - name: 📤 Upload security reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: security-reports
+          path: |
+            bandit-report.json
+            safety-report.txt
+          retention-days: 30
+
+  # ==================== DEPLOYMENT ====================
+  deploy:
+    name: 🚀 Deploy
+    runs-on: ubuntu-latest
+    needs: [quality-checks, test, security]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
-      - name: Test organization script in dry-run mode
+      - name: 📦 Build package
         run: |
-          cd /tmp
-          cp -r $GITHUB_WORKSPACE test_repo
-          cd test_repo
-          
-          # Create test files
-          echo "print('test')" > test_python.py
-          echo "#!/bin/bash\necho 'test'" > test_shell.sh
-          echo "# Test docs" > test_doc.md
-          echo "test content" > test_file.txt
-          
-          # Run organization script in dry-run mode
-          sed -i 's/DRY_RUN = False/DRY_RUN = True/' .github/scripts/organize_ai_scripts.py
-          python .github/scripts/organize_ai_scripts.py
-          
-          echo "Dry run completed successfully"
+          python -m pip install --upgrade pip build
+          python -m build
 
-  documentation-check:
-    name: Documentation Check
-    runs-on: ubuntu-latest
-    needs: changes
-    if: needs.changes.outputs.docs == 'true'
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Check README files exist
-        run: |
-          echo "Checking for README files..."
-          find . -name "README.md" -type f | while read readme; do
-            echo "Found: $readme"
-            if [ ! -s "$readme" ]; then
-              echo "WARNING: $readme is empty"
-            fi
-          done
-
-      - name: Check documentation consistency
-        run: |
-          echo "Checking documentation consistency..."
-          if [ -f docs/README.md ] && [ -f README.md ]; then
-            echo "Both main and docs README exist - good!"
-          fi
-
-  release:
-    name: Release
-    runs-on: ubuntu-latest
-    needs: [lint-and-format, security-scan, test, script-integration-test]
-    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: 📤 Upload build artifacts
+        uses: actions/upload-artifact@v4
         with:
-          fetch-depth: 0
-
-      - name: Generate changelog
-        id: changelog
-        run: |
-          echo "## Changes in ${{ github.ref_name }}" > CHANGELOG.md
-          echo "" >> CHANGELOG.md
-          git log --pretty=format:"- %s" $(git describe --tags --abbrev=0 HEAD^)..HEAD >> CHANGELOG.md
-
-      - name: Create Release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref_name }}
-          release_name: Release ${{ github.ref_name }}
-          body_path: CHANGELOG.md
-          draft: false
-          prerelease: false
-
-  workflow-summary:
-    name: Workflow Summary
-    runs-on: ubuntu-latest
-    needs: [changes, lint-and-format, security-scan, test, script-integration-test, documentation-check]
-    if: always()
-
-    steps:
-      - name: Generate summary
-        run: |
-          echo "## 🚀 CI/CD Pipeline Summary" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### Jobs Status" >> $GITHUB_STEP_SUMMARY
-          echo "| Job | Status |" >> $GITHUB_STEP_SUMMARY
-          echo "|-----|--------|" >> $GITHUB_STEP_SUMMARY
-          echo "| Changes Detection | ${{ needs.changes.result }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| Lint & Format | ${{ needs.lint-and-format.result }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| Security Scan | ${{ needs.security-scan.result }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| Test Suite | ${{ needs.test.result }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| Integration Test | ${{ needs.script-integration-test.result }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| Documentation | ${{ needs.documentation-check.result }} |" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### Changes Detected" >> $GITHUB_STEP_SUMMARY
-          echo "- Python: ${{ needs.changes.outputs.python }}" >> $GITHUB_STEP_SUMMARY
-          echo "- Workflows: ${{ needs.changes.outputs.workflows }}" >> $GITHUB_STEP_SUMMARY
-          echo "- Documentation: ${{ needs.changes.outputs.docs }}" >> $GITHUB_STEP_SUMMARY
-          echo "- Scripts: ${{ needs.changes.outputs.scripts }}" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "_Pipeline completed at $(date)_" >> $GITHUB_STEP_SUMMARY
-      - name: ⏱️ Performance test - Organization script
-        run: |
-          echo "Testing organization script performance..."
-          time python .github/scripts/organize_ai_scripts.py
-          
-      - name: 📈 Memory usage check
-        run: |
-          pip install memory-profiler
-          echo "Checking memory usage..."
-          python -c "
-          import psutil
-          import os
-          process = psutil.Process(os.getpid())
-          print(f'Memory usage: {process.memory_info().rss / 1024 / 1024:.2f} MB')
-          "
-
-  # ==================== SECURITY SCANNING ====================
-  security-scan:
-    name: 🛡️ Security Analysis
-    runs-on: ubuntu-latest
-  
-    
-    steps:
-      - name: 📥 Checkout repository
-        uses: actions/checkout@v5
-
-      - name: 🔍 Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@master
-        with:
-          scan-type: 'fs'
-          scan-ref: '.'
-          format: 'sarif'
-          output: 'trivy-results.sarif'
-
-      - name: 📤 Upload Trivy scan results
-        uses: github/codeql-action/upload-sarif@v3
-        if: always()
-        with:
-          sarif_file: 'trivy-results.sarif'
-
-  # ==================== DOCUMENTATION CHECK ====================
-  docs-check:
-    name: 📚 Documentation Validation
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📥 Checkout repository
-        uses: actions/checkout@v5
-
-      - name: 🔍 Check README structure
-        run: |
-          echo "Validating documentation structure..."
-          if [ ! -f "README.md" ]; then
-            echo "❌ README.md is missing"
-            exit 1
-          fi
-          
-          # Check for required sections
-          if ! grep -q "# " README.md; then
-            echo "⚠️ README.md should have proper headers"
-          fi
-          
-          echo "✅ Documentation structure validated"
-
-      - name: 📝 Check for broken links
-        run: |
-          echo "Checking for broken internal links..."
-          # Simple check for relative links
-          find . -name "*.md" -exec grep -l "\[.*\](" {} \; || echo "No markdown links found"
-
-  # ==================== BUILD STATUS ====================
-  build-status:
-    name: 📋 Build Summary
-    runs-on: ubuntu-latest
-    needs: [quality-checks, shell-validation, test-matrix, performance, security-scan, docs-check]
-    if: always()
-    steps:
-      - name: 📊 Generate build summary
-        run: |
-          echo "## 🚀 Superhuman CI/CD Pipeline Results" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### Job Status:" >> $GITHUB_STEP_SUMMARY
-          echo "- Quality Checks: ${{ needs.quality-checks.result }}" >> $GITHUB_STEP_SUMMARY
-          echo "- Shell Validation: ${{ needs.shell-validation.result }}" >> $GITHUB_STEP_SUMMARY
-          echo "- Test Matrix: ${{ needs.test-matrix.result }}" >> $GITHUB_STEP_SUMMARY
-          echo "- Performance: ${{ needs.performance.result }}" >> $GITHUB_STEP_SUMMARY
-          echo "- Security Scan: ${{ needs.security-scan.result }}" >> $GITHUB_STEP_SUMMARY
-          echo "- Documentation: ${{ needs.docs-check.result }}" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "✨ Pipeline completed at $(date)" >> $GITHUB_STEP_SUMMARY
-         develop
+          name: build-artifacts
+          path: dist/
+          retention-days: 90
