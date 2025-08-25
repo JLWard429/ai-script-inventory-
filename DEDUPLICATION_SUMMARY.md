@@ -42,22 +42,45 @@ This document summarizes all changes made during the deduplication and refactori
 - Module `terminal.py`: Internal module entry point
 - **Decision:** Keep both as they serve distinct purposes
 
-### 4. Archive Directory Verification
+### 4. Code Duplication Refactoring
 
-**Status:** ✅ Well-organized
-- `text_files/archives/` - Contains proper timestamped backups
-- `python_scripts/archives/` - Contains proper timestamped backups
+**Duplicate Function Identified and Consolidated:**
 
-**No Action Required:** These directories are properly structured and serve their intended purpose.
+#### `run_command()` Function Duplication
+- **Location 1:** `setup_dev.py` (lines 13-26)
+- **Location 2:** `python_scripts/dev_tools.py` (lines 19-34)
 
-## 📊 Files Removed Summary
+**Issue:** Both files implemented nearly identical `run_command()` functions for executing shell commands with error handling.
 
-| File Type | Count | Total Size Saved | Location |
-|-----------|-------|------------------|----------|
-| README duplicates | 5 | ~7.0 KB | docs/ |
-| Copilot Commands duplicates | 4 | ~10.8 KB | docs/ |
-| CONTRIBUTING.md duplicate | 1 | ~15.2 KB | root |
-| **Total** | **10** | **~33.0 KB** | - |
+**Solution:** 
+- Created `python_scripts/utils.py` with consolidated utility functions
+- Extracted shared `run_command()` functionality into utils module
+- Refactored both files to import and use shared implementation
+- Added flexible parameters for output display and emoji customization
+- Maintained backward compatibility
+
+**Benefits:**
+- Eliminated 32 lines of duplicate code
+- Centralized command execution logic for easier maintenance
+- Improved consistency across development tools
+- Reduced technical debt
+
+**Files Modified:**
+- `python_scripts/utils.py` (new file) - Shared utilities module
+- `setup_dev.py` - Refactored to use shared utility
+- `python_scripts/dev_tools.py` - Refactored to use shared utility
+
+**Verification:** ✅ All tests pass, both scripts function correctly after refactoring
+
+## 📊 Files Removed and Refactored Summary
+
+| File Type | Count | Total Size Saved | Location | Action |
+|-----------|-------|------------------|----------|---------|
+| README duplicates | 5 | ~7.0 KB | docs/ | Removed |
+| Copilot Commands duplicates | 4 | ~10.8 KB | docs/ | Removed |
+| CONTRIBUTING.md duplicate | 1 | ~15.2 KB | root | Removed |
+| Code duplication (run_command) | 1 | ~32 lines | Multiple files | Refactored |
+| **Total** | **11** | **~33.0 KB + 32 lines** | - | - |
 
 ## 🔍 Code Quality Analysis
 
@@ -66,9 +89,10 @@ This document summarizes all changes made during the deduplication and refactori
 - No scripts require modularization at this time
 
 ### Function Duplication Analysis
-- Reviewed similar functions across modules
-- No significant code duplication found requiring refactoring
-- Code is well-organized with clear separation of concerns
+- ✅ Found and refactored `run_command()` function duplication between `setup_dev.py` and `dev_tools.py`
+- ✅ Created shared utilities module (`python_scripts/utils.py`) for common functionality
+- ✅ Maintained backward compatibility while reducing technical debt
+- ✅ No other significant code duplication found requiring refactoring
 
 ## 📚 Documentation Updates
 
@@ -98,4 +122,4 @@ This document summarizes all changes made during the deduplication and refactori
 
 ---
 
-**Summary:** Successfully removed 10 duplicate files totaling ~33KB with no loss of functionality or content. Repository is now cleaner and more maintainable while preserving all important historical data in appropriate archive directories.
+**Summary:** Successfully removed 10 duplicate files totaling ~33KB and refactored 1 code duplication (32 lines) with no loss of functionality or content. Repository is now cleaner and more maintainable while preserving all important historical data in appropriate archive directories. Created shared utilities module to prevent future code duplication.
