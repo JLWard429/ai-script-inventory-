@@ -185,6 +185,14 @@ class IntentRecognizer:
         ]
         self.matcher.add("RENAME", rename_patterns)
 
+        # Preview patterns (for quick file viewing)
+        preview_patterns = [
+            [{"LOWER": {"IN": ["preview", "peek", "glimpse"]}}, {"IS_ALPHA": True}],
+            [{"LOWER": "quick"}, {"LOWER": {"IN": ["look", "view"]}}, {"LOWER": "at"}],
+            [{"LOWER": {"IN": ["preview", "peek"]}}, {"LOWER": {"IN": ["the", "at"]}}, {"IS_ALPHA": True}],
+        ]
+        self.matcher.add("PREVIEW", preview_patterns)
+
         # AI Chat patterns (questions, general queries)
         ai_chat_patterns = [
             [{"LOWER": {"IN": ["why", "how", "when", "where", "who", "what"]}}],
@@ -206,6 +214,17 @@ class IntentRecognizer:
                     }
                 }
             ],
+            # Enhanced conversational patterns
+            [{"LOWER": {"IN": ["best", "good"]}}, {"LOWER": {"IN": ["practices", "practice", "way", "ways"]}}],
+            [{"LOWER": "organize"}, {"LOWER": {"IN": ["scripts", "files", "code"]}}],
+            [{"LOWER": {"IN": ["repository", "repo", "project"]}}, {"LOWER": {"IN": ["works", "structure", "organization"]}}],
+            # Security-related questions
+            [{"LOWER": {"IN": ["security", "secure"]}}, {"LOWER": {"IN": ["features", "capabilities", "information", "details"]}}],
+            [{"LOWER": "how"}, {"LOWER": {"IN": ["secure", "safe"]}}],
+            [{"LOWER": "tell"}, {"LOWER": "me"}, {"LOWER": "about"}, {"LOWER": {"IN": ["security", "safety"]}}],
+            # Capability questions
+            [{"LOWER": {"IN": ["capabilities", "features"]}}, {"LOWER": {"IN": ["available", "here", "this"]}}],
+            [{"LOWER": {"IN": ["what", "which"]}}, {"LOWER": {"IN": ["tools", "scripts", "features"]}}],
         ]
         self.matcher.add("AI_CHAT", ai_chat_patterns)
 
@@ -479,6 +498,7 @@ class IntentRecognizer:
             "RUN_SCRIPT": IntentType.RUN_SCRIPT,
             "LIST": IntentType.LIST,
             "SHOW": IntentType.SHOW,
+            "PREVIEW": IntentType.PREVIEW,
             "SEARCH": IntentType.SEARCH,
             "SUMMARIZE": IntentType.SUMMARIZE,
             "RENAME": IntentType.RENAME,
@@ -509,6 +529,15 @@ class IntentRecognizer:
                 if intent_type in intent_scores:
                     intent_scores[intent_type] += 0.2
 
+        # Special handling for "I need to [action]" patterns - should be commands
+        if re.search(r"\bi\s+need\s+to\s+(run|execute|list|show|find|search|get)", user_input.lower()):
+            for intent_type in [IntentType.RUN_SCRIPT, IntentType.LIST, IntentType.SHOW, IntentType.SEARCH]:
+                if intent_type in intent_scores:
+                    intent_scores[intent_type] += 0.5
+            # Reduce AI_CHAT score for command-like phrases
+            if IntentType.AI_CHAT in intent_scores:
+                intent_scores[IntentType.AI_CHAT] = max(0.0, intent_scores[IntentType.AI_CHAT] - 0.3)
+
         # Check for file-related entities
         file_entities = self._find_file_entities(doc)
         if file_entities:
@@ -521,11 +550,20 @@ class IntentRecognizer:
                     intent_scores[intent_type] += 0.3
 
         # Check for request/help indicators
-        help_indicators = ["please", "can you", "could you", "help me", "i need"]
+        help_indicators = ["please", "can you", "could you", "help me", "i want to understand"]
         if any(phrase in user_input.lower() for phrase in help_indicators):
-            intent_scores[IntentType.AI_CHAT] = (
-                intent_scores.get(IntentType.AI_CHAT, 0) + 0.3
-            )
+            # Only boost AI_CHAT if it's not a command-like request
+            if not re.search(r"\b(run|execute|list|show|find|search)\b", user_input.lower()):
+                intent_scores[IntentType.AI_CHAT] = (
+                    intent_scores.get(IntentType.AI_CHAT, 0) + 0.3
+                )
+
+        # Boost scores for action modifiers detected in entity extraction
+        user_input_lower = user_input.lower()
+        if "security" in user_input_lower and "scan" in user_input_lower:
+            intent_scores[IntentType.RUN_SCRIPT] = intent_scores.get(IntentType.RUN_SCRIPT, 0) + 0.4
+        if "dev" in user_input_lower and "tools" in user_input_lower:
+            intent_scores[IntentType.RUN_SCRIPT] = intent_scores.get(IntentType.RUN_SCRIPT, 0) + 0.3
 
     def _analyze_for_ai_chat(self, doc, user_input: str) -> Tuple[IntentType, float]:
         """Analyze input to determine if it should be handled as AI chat."""
@@ -540,6 +578,10 @@ class IntentRecognizer:
             r"\badvice",
             r"\btip",
             r"\bhelp\s+with",
+            r"\bbest\s+practices?",
+            r"\bhow\s+to\s+organize",
+            r"\brepository\s+(works|structure)",
+            r"\bci/cd\s+(works|pipeline)",
         ]
 
         conversational_score = 0.0
@@ -556,6 +598,24 @@ class IntentRecognizer:
         if any(word in user_input.lower() for word in uncertainty_words):
             conversational_score += 0.2
 
+        # Check for request vs command language
+        request_phrases = ["could you", "would you", "can you help", "i need help", "i want to understand"]
+        command_phrases = ["run", "execute", "list", "show", "search", "find", "summarize"]
+        
+        has_request = any(phrase in user_input.lower() for phrase in request_phrases)
+        has_command = any(phrase in user_input.lower() for phrase in command_phrases)
+        
+        if has_request and not has_command:
+            conversational_score += 0.4
+        elif has_command and "i need to" in user_input.lower():
+            # "I need to run..." - should be actionable command, not chat
+            conversational_score -= 0.3
+
+        # Check for specific repository/development topics
+        dev_topics = ["organize", "best practices", "workflow", "ci/cd", "automation", "quality", "security practices"]
+        if any(topic in user_input.lower() for topic in dev_topics):
+            conversational_score += 0.3
+
         if conversational_score >= 0.4:
             return IntentType.AI_CHAT, min(conversational_score, 0.9)
         else:
@@ -568,42 +628,89 @@ class IntentRecognizer:
         target = None
         parameters = {}
 
-        # Extract file entities
+        # Extract file entities with improved patterns
         file_entities = self._find_file_entities(doc)
         if file_entities:
             target = file_entities[0]  # Use first file found as target
 
-        # Extract file types using spaCy entities and patterns
+        # Enhanced file type detection using multiple approaches
         file_type_mapping = {
             "python": "python",
-            "shell": "shell",
+            "shell": "shell", 
+            "bash": "shell",
             "markdown": "markdown",
             "pdf": "pdf",
             "text": "text",
+            "configuration": "text",
+            "config": "text",
+            "documentation": "markdown",
+            "docs": "markdown",
+            "script": "python",  # Default to python for generic "script"
         }
 
+        # Check spaCy entities first
         for entity in doc.ents:
-            if (
-                entity.label_ in ["ORG", "PRODUCT"]
-                and entity.text.lower() in file_type_mapping
-            ):
-                parameters["file_type"] = file_type_mapping[entity.text.lower()]
+            entity_text = entity.text.lower()
+            if entity.label_ in ["ORG", "PRODUCT", "MISC"] and entity_text in file_type_mapping:
+                parameters["file_type"] = file_type_mapping[entity_text]
 
-        # Look for scope indicators
-        scope_words = ["all", "every", "recent", "latest", "new"]
-        for token in doc:
-            if token.text.lower() in scope_words:
-                parameters["scope"] = token.text.lower()
+        # Enhanced keyword-based file type detection
+        user_input_lower = user_input.lower()
+        for keyword, file_type in file_type_mapping.items():
+            if keyword in user_input_lower:
+                if "file_type" not in parameters:  # Don't override spaCy detection
+                    parameters["file_type"] = file_type
                 break
 
-        # Extract directory mentions using dependency parsing
+        # Better scope detection with more keywords
+        scope_indicators = {
+            "all": ["all", "every", "entire", "complete"],
+            "latest": ["latest", "newest", "most recent", "most new"],
+            "recent": ["recent", "new", "current"],
+            "main": ["main", "primary", "core", "principal"],
+            "configuration": ["config", "configuration", "settings", "setup"],
+        }
+        
+        for scope_type, keywords in scope_indicators.items():
+            if any(keyword in user_input_lower for keyword in keywords):
+                if "scope" not in parameters:  # First match wins
+                    parameters["scope"] = scope_type
+                break
+
+        # Enhanced directory detection using dependency parsing and patterns
+        directory_keywords = ["shell_scripts", "python_scripts", "docs", "text_files"]
         for token in doc:
-            if token.dep_ in ["prep", "pobj"] and token.head.text.lower() in [
-                "in",
-                "from",
-                "under",
-            ]:
-                parameters["directory"] = token.text
+            # Check for directory names
+            if token.text.lower() in directory_keywords:
+                parameters["directory"] = token.text.lower()
+                break
+            # Check for "in/from/under" + directory pattern
+            if token.dep_ in ["prep", "pobj"] and token.head.text.lower() in ["in", "from", "under"]:
+                if token.text.lower() in directory_keywords or "_" in token.text:
+                    parameters["directory"] = token.text
+                    break
+
+        # Detect action modifiers (for better intent classification)
+        action_modifiers = {
+            "security": ["security", "safe", "vulnerability", "scan"],
+            "dev": ["dev", "development", "tools", "setup"],
+            "test": ["test", "testing", "check"],
+            "organization": ["organize", "organiz", "clean", "structure"],
+        }
+        
+        for modifier_type, keywords in action_modifiers.items():
+            if any(keyword in user_input_lower for keyword in keywords):
+                parameters["action_modifier"] = modifier_type
+                break
+
+        # Detect intent strength for better confidence scoring
+        strong_intent_words = ["need", "want", "must", "should", "require"]
+        polite_words = ["please", "could", "would", "can"]
+        
+        if any(word in user_input_lower for word in strong_intent_words):
+            parameters["intent_strength"] = "strong"
+        elif any(word in user_input_lower for word in polite_words):
+            parameters["intent_strength"] = "polite"
 
         # Fallback to regex-based extraction for file targets
         if not target:
