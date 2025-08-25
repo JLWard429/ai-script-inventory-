@@ -8,8 +8,6 @@ on:
       - '**.js'
       - '**.ts'
       - '**.java'
-      - '**.cpp'
-      - '**.c'
       - '**.cs'
       - '**.go'
       - '**.rb'
@@ -22,8 +20,6 @@ on:
       - '**.js'
       - '**.ts'
       - '**.java'
-      - '**.cpp'
-      - '**.c'
       - '**.cs'
       - '**.go'
       - '**.rb'
@@ -99,12 +95,6 @@ jobs:
             echo "✅ Java detected"
           fi
           
-          # Check for C/C++
-          if find . -name "*.c" -o -name "*.cpp" -o -name "*.cxx" -o -name "*.h" -o -name "*.hpp" -type f | head -1 | grep -q .; then
-            languages+=("cpp")
-            echo "✅ C/C++ detected"
-          fi
-          
           # Check for C#
           if find . -name "*.cs" -type f | head -1 | grep -q .; then
             languages+=("csharp")
@@ -173,9 +163,6 @@ jobs:
           - language: java
             os: ubuntu-latest
             build-mode: autobuild
-          - language: cpp
-            os: ubuntu-latest
-            build-mode: manual
           - language: csharp
             os: ubuntu-latest
             build-mode: autobuild
@@ -267,14 +254,6 @@ jobs:
               mvn clean compile -DskipTests
             elif [ -f build.gradle ]; then
               ./gradlew compileJava
-            fi
-            ;;
-          "cpp")
-            if [ -f Makefile ]; then
-              make
-            elif [ -f CMakeLists.txt ]; then
-              mkdir -p build && cd build
-              cmake .. && make
             fi
             ;;
           "csharp")
