@@ -334,10 +334,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: [detect-languages, analyze]
     if: always()
-    permissions:
-      contents: read
-      security-events: read
-      actions: read
 
     steps:
     - name: 📥 Checkout repository
