@@ -1,0 +1,13 @@
+# GitHub CODEOWNERS file
+# This file defines who is responsible for reviewing code in the repository.
+# For more information about CODEOWNERS, see:
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Global code ownership - @JLWard429 owns all code by default
+* @JLWard429
+
+# Specific ownership patterns can be added below as needed
+# Examples:
+# /docs/ @JLWard429
+# *.md @JLWard429  
+# .github/ @JLWard429
