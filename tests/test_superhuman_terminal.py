@@ -202,7 +202,7 @@ class TestSuperhumanTerminal:
     def test_spacy_fallback(self):
         """Test that the system works even without spaCy model."""
         # This test ensures graceful degradation
-        with mock.patch("ai.intent.HAS_SPACY", False):
+        with mock.patch("ai_script_inventory.ai.intent.HAS_SPACY", False):
             fallback_recognizer = create_intent_recognizer()
 
             intent = fallback_recognizer.recognize("help")
