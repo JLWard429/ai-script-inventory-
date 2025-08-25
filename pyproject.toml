@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=45", "wheel"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -26,25 +26,43 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
-dependencies = []
+dependencies = [
+    # Core runtime dependencies - only what's actually used
+    "spacy>=3.8.0,<4.0.0",      # NLP processing for intent recognition
+    "pyyaml>=6.0.0,<7.0.0",     # YAML parsing for configuration files
+]
 
 [project.optional-dependencies]
 dev = [
-    "black>=23.0.0",
-    "flake8>=6.0.0",
-    "isort>=5.12.0",
-    "mypy>=1.0.0",
-    "pytest>=7.0.0",
-    "pytest-cov>=4.0.0",
-    "pre-commit>=3.0.0",
-    "bandit>=1.7.0",
-    "safety>=2.3.0",
+    # Code formatting and linting
+    "black>=24.0.0",
+    "isort>=5.13.0",
+    "flake8>=7.0.0",
+    "mypy>=1.8.0",
+    
+    # Testing
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
+    
+    # Security and quality tools
+    "bandit>=1.8.0",
+    "safety>=3.0.0",
+    "pre-commit>=4.0.0",
 ]
+
+[project.scripts]
+ai-terminal = "ai_script_inventory.terminal:main"
 
 [project.urls]
 Homepage = "https://github.com/JLWard429/ai-script-inventory-"
 Repository = "https://github.com/JLWard429/ai-script-inventory-.git"
 Issues = "https://github.com/JLWard429/ai-script-inventory-/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
 
 [tool.black]
 line-length = 88
@@ -104,7 +122,7 @@ python_files = [
 ]
 
 [tool.coverage.run]
-source = ["python_scripts", ".github/scripts"]
+source = ["src/ai_script_inventory", "python_scripts", ".github/scripts"]
 omit = [
     "*/tests/*",
     "*/test_*",

@@ -17,17 +17,14 @@ Features:
     - Local-only processing (no cloud dependencies)
 """
 
-import os
-import sys
-import subprocess
 import glob
+import os
+import subprocess
+import sys
 from pathlib import Path
-from typing import List, Optional, Dict, Any
+from typing import Any, Dict, List, Optional
 
-# Add the current directory to the Python path for imports
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-
-from ai.intent import create_intent_recognizer, IntentType, Intent
+from .ai.intent import Intent, IntentType, create_intent_recognizer
 
 
 class SuperhumanTerminal:
@@ -181,7 +178,7 @@ class SuperhumanTerminal:
         """Handle script execution requests."""
         target = intent.target
         parameters = intent.parameters
-        
+
         if not target:
             print("❌ Please specify which script to run.")
             return
@@ -235,68 +232,76 @@ class SuperhumanTerminal:
     def _handle_special_commands(self, target: str, parameters: Dict[str, Any]) -> bool:
         """Handle special commands like 'security scan'."""
         target_lower = target.lower()
-        
+
         # Security scan command
-        if any(keyword in target_lower for keyword in ['security', 'scan']):
+        if any(keyword in target_lower for keyword in ["security", "scan"]):
             return self._run_security_scan(parameters)
-        
+
         # Development tools commands
-        if target_lower in ['dev_tools', 'devtools', 'development', 'tools']:
+        if target_lower in ["dev_tools", "devtools", "development", "tools"]:
             return self._run_dev_tools(parameters)
-        
+
         return False
-    
+
     def _run_security_scan(self, parameters: Dict[str, Any]) -> bool:
         """Run security scan with optional filtering."""
         print("🛡️ Running security scan...")
-        
+
         # Check if targeting specific file types or directories
-        file_type = parameters.get('file_type')
-        directory = parameters.get('directory')
-        scope = parameters.get('scope', 'all')
-        
+        file_type = parameters.get("file_type")
+        directory = parameters.get("directory")
+        scope = parameters.get("scope", "all")
+
         # Build command for dev_tools.py security
-        dev_tools_path = os.path.join(self.repository_root, "python_scripts/dev_tools.py")
-        
+        dev_tools_path = os.path.join(
+            self.repository_root, "python_scripts/dev_tools.py"
+        )
+
         if os.path.exists(dev_tools_path):
             try:
-                print(f"🔍 Scanning {scope} {file_type or 'files'}" + 
-                      (f" in {directory}" if directory else ""))
-                
+                print(
+                    f"🔍 Scanning {scope} {file_type or 'files'}"
+                    + (f" in {directory}" if directory else "")
+                )
+
                 result = subprocess.run(
                     [sys.executable, dev_tools_path, "security"],
                     capture_output=True,
                     text=True,
                     cwd=self.repository_root,
                 )
-                
+
                 if result.stdout:
                     print("📤 Security Scan Results:")
                     print(result.stdout)
-                
+
                 if result.stderr:
                     print("⚠️ Warnings/Errors:")
                     print(result.stderr)
-                    
+
                 print(f"✅ Security scan completed with exit code: {result.returncode}")
-                
+
                 # If specific filtering was requested, show additional info
-                if file_type == 'python' and directory:
+                if file_type == "python" and directory:
                     self._show_python_files_in_directory(directory)
-                
+
                 return True
-                
+
             except Exception as e:
                 print(f"❌ Error running security scan: {e}")
                 return True  # Handled, even if failed
         else:
-            print("❌ Security scanning tools not found. Please ensure dev_tools.py exists.")
+            print(
+                "❌ Security scanning tools not found. Please ensure dev_tools.py exists."
+            )
             return True
-            
+
     def _run_dev_tools(self, parameters: Dict[str, Any]) -> bool:
         """Run development tools with optional command."""
-        dev_tools_path = os.path.join(self.repository_root, "python_scripts/dev_tools.py")
-        
+        dev_tools_path = os.path.join(
+            self.repository_root, "python_scripts/dev_tools.py"
+        )
+
         if os.path.exists(dev_tools_path):
             print("🔧 Available development tools:")
             print("  • setup - Set up development environment")
@@ -305,14 +310,26 @@ class SuperhumanTerminal:
             print("  • format - Format code automatically")
             print("  • security - Run security scans")
             print("  • all - Run all checks")
-            
-            command = input("Which tool would you like to run? (or 'cancel'): ").strip().lower()
-            
-            if command == 'cancel':
+
+            command = (
+                input("Which tool would you like to run? (or 'cancel'): ")
+                .strip()
+                .lower()
+            )
+
+            if command == "cancel":
                 print("Operation cancelled.")
                 return True
-                
-            if command in ['setup', 'test', 'lint', 'format', 'security', 'org-test', 'all']:
+
+            if command in [
+                "setup",
+                "test",
+                "lint",
+                "format",
+                "security",
+                "org-test",
+                "all",
+            ]:
                 try:
                     print(f"🚀 Running dev tools: {command}")
                     result = subprocess.run(
@@ -331,7 +348,7 @@ class SuperhumanTerminal:
         else:
             print("❌ Development tools not found. Please ensure dev_tools.py exists.")
             return True
-    
+
     def _show_python_files_in_directory(self, directory: str):
         """Show Python files in a specific directory for context."""
         dir_path = os.path.join(self.repository_root, directory)
@@ -459,16 +476,16 @@ class SuperhumanTerminal:
         """Handle document summarization requests."""
         target = intent.target
         parameters = intent.parameters
-        scope = parameters.get('scope', '')
-        
+        scope = parameters.get("scope", "")
+
         # Handle "latest" or "recent" scope
-        if 'latest' in scope or 'recent' in scope:
+        if "latest" in scope or "recent" in scope:
             target = self._find_latest_file(target, parameters)
             if not target:
                 print("❌ Could not find latest file matching your criteria.")
                 return
             print(f"🕐 Found latest file: {target}")
-        
+
         if not target:
             # Look for common document files
             docs = self._get_files_by_type("markdown") + self._get_files_by_type("all")
@@ -511,8 +528,10 @@ class SuperhumanTerminal:
 
         except Exception as e:
             print(f"❌ Error reading file: {e}")
-    
-    def _find_latest_file(self, target: Optional[str], parameters: Dict[str, Any]) -> Optional[str]:
+
+    def _find_latest_file(
+        self, target: Optional[str], parameters: Dict[str, Any]
+    ) -> Optional[str]:
         """Find the latest/most recent file matching criteria."""
         # If target is provided, look for files with that name pattern
         if target:
@@ -520,16 +539,16 @@ class SuperhumanTerminal:
         else:
             # Look for common document names
             pattern = "readme"
-        
+
         # Get all files that match the pattern
         all_files = []
         search_dirs = [".", "docs", "python_scripts", "shell_scripts", "text_files"]
-        
+
         for search_dir in search_dirs:
             dir_path = os.path.join(self.repository_root, search_dir)
             if not os.path.isdir(dir_path):
                 continue
-                
+
             try:
                 for file in os.listdir(dir_path):
                     if pattern in file.lower():
@@ -539,17 +558,17 @@ class SuperhumanTerminal:
             except (OSError, PermissionError):
                 # Skip directories we can't read
                 continue
-        
+
         if not all_files:
             return None
-            
+
         # Sort by modification time (most recent first)
         try:
             all_files.sort(key=lambda x: os.path.getmtime(x), reverse=True)
         except OSError:
             # Fallback to alphabetical sort if we can't get modification times
             all_files.sort()
-        
+
         # Return the most recent file as relative path
         return os.path.relpath(all_files[0], self.repository_root)
 
@@ -583,15 +602,18 @@ class SuperhumanTerminal:
         scope = parameters.get("scope")
 
         # Repository overview questions
-        if any(
-            phrase in user_input
-            for phrase in [
-                "what can you do",
-                "what are you",
-                "capabilities",
-                "features",
-            ]
-        ) and action_modifier != "security":  # Don't override security-specific questions
+        if (
+            any(
+                phrase in user_input
+                for phrase in [
+                    "what can you do",
+                    "what are you",
+                    "capabilities",
+                    "features",
+                ]
+            )
+            and action_modifier != "security"
+        ):  # Don't override security-specific questions
             response = """
 I'm your Superhuman AI Terminal! Here's what I can help you with:
 
@@ -605,7 +627,7 @@ I'm your Superhuman AI Terminal! Here's what I can help you with:
                 response += "\n  • 🛡️ Security scanning with 'run security scan'"
             if action_modifier == "dev":
                 response += "\n  • 🔧 Development tools with 'run dev tools'"
-                
+
             response += """
 
 📁 **File Operations:**
@@ -631,15 +653,18 @@ I'm your Superhuman AI Terminal! Here's what I can help you with:
             print(response)
 
         # Specific script organization questions
-        elif any(
-            phrase in user_input
-            for phrase in [
-                "organize scripts",
-                "organize my scripts",
-                "organization",
-                "better organization"
-            ]
-        ) or action_modifier == "organization":
+        elif (
+            any(
+                phrase in user_input
+                for phrase in [
+                    "organize scripts",
+                    "organize my scripts",
+                    "organization",
+                    "better organization",
+                ]
+            )
+            or action_modifier == "organization"
+        ):
             print(
                 """
 📋 **Script Organization Best Practices:**
@@ -789,7 +814,12 @@ Try `run security scan on all Python files` to see detailed security analysis!
         # Summary and Python tools questions
         elif any(
             phrase in user_input
-            for phrase in ["summary", "python tools", "tools available", "available tools"]
+            for phrase in [
+                "summary",
+                "python tools",
+                "tools available",
+                "available tools",
+            ]
         ) or (action_modifier == "dev" and scope == "all" and file_type == "python"):
             print(
                 """
@@ -823,14 +853,14 @@ Want to explore? Try asking "list all Python files" or "show me the main develop
             """
             )
 
-        # Repository architecture questions  
+        # Repository architecture questions
         elif any(
             phrase in user_input
             for phrase in [
                 "how does this work",
                 "architecture",
-                "repository structure", 
-                "system design"
+                "repository structure",
+                "system design",
             ]
         ):
             print(
@@ -953,7 +983,7 @@ This terminal gives you a natural language interface to interact with all these 
                 "problem",
                 "trouble",
                 "help me",
-                "broken"
+                "broken",
             ]
         ):
             print(
@@ -991,13 +1021,7 @@ This terminal gives you a natural language interface to interact with all these 
         # Command examples and usage
         elif any(
             phrase in user_input
-            for phrase in [
-                "commands",
-                "syntax", 
-                "how to use",
-                "examples",
-                "usage"
-            ]
+            for phrase in ["commands", "syntax", "how to use", "examples", "usage"]
         ):
             print(
                 """

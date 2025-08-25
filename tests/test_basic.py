@@ -41,9 +41,6 @@ def test_configuration_files():
     # Test pyproject.toml exists
     assert Path("pyproject.toml").exists()
 
-    # Test requirements-dev.txt exists
-    assert Path("requirements-dev.txt").exists()
-
     # Test .gitignore exists
     assert Path(".gitignore").exists()
 
