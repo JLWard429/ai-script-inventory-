@@ -23,10 +23,10 @@ pip install -e ".[dev]"
 # 3. Download required spaCy model for NLP features
 python -m spacy download en_core_web_sm
 
-# 3. Set up pre-commit hooks (automated quality checks)
+# 4. Set up pre-commit hooks (automated quality checks)
 pre-commit install
 
-# 4. Verify everything works
+# 5. Verify everything works
 pytest tests/
 ```
 
