@@ -147,6 +147,7 @@ class SuperhumanTerminal:
 
         print("\n💡 Example Commands:")
         print("  • 'run organize_ai_scripts.py'")
+        print("  • 'run security scan on Python files'")
         print("  • 'list all Python scripts'")
         print("  • 'show README.md'")
         print("  • 'search for files containing test'")
@@ -154,6 +155,13 @@ class SuperhumanTerminal:
         print("  • 'what can you do?'")
         print("  • 'how do I get started?'")
         print("  • 'what are the best practices for organizing scripts?'")
+
+        print("\n🚀 Enhanced Features:")
+        print("  • Security scanning with 'run security scan'")
+        print("  • Latest file detection with 'latest' keyword")
+        print("  • Smart file type and directory recognition")
+        print("  • Development tools integration")
+        print("  • Context-aware parameter extraction")
 
         print("\n🔧 Natural Language Support:")
         print("  • Use conversational language for commands")
@@ -172,12 +180,18 @@ class SuperhumanTerminal:
     def handle_run_script(self, intent: Intent):
         """Handle script execution requests."""
         target = intent.target
+        parameters = intent.parameters
+        
         if not target:
             print("❌ Please specify which script to run.")
             return
 
+        # Handle special commands first
+        if self._handle_special_commands(target, parameters):
+            return
+
         # Find the script file
-        script_path = self._find_script_file(target, intent.parameters)
+        script_path = self._find_script_file(target, parameters)
 
         if not script_path:
             print(f"❌ Could not find script: {target}")
@@ -217,6 +231,119 @@ class SuperhumanTerminal:
 
         except Exception as e:
             print(f"❌ Error running script: {e}")
+
+    def _handle_special_commands(self, target: str, parameters: Dict[str, Any]) -> bool:
+        """Handle special commands like 'security scan'."""
+        target_lower = target.lower()
+        
+        # Security scan command
+        if any(keyword in target_lower for keyword in ['security', 'scan']):
+            return self._run_security_scan(parameters)
+        
+        # Development tools commands
+        if target_lower in ['dev_tools', 'devtools', 'development', 'tools']:
+            return self._run_dev_tools(parameters)
+        
+        return False
+    
+    def _run_security_scan(self, parameters: Dict[str, Any]) -> bool:
+        """Run security scan with optional filtering."""
+        print("🛡️ Running security scan...")
+        
+        # Check if targeting specific file types or directories
+        file_type = parameters.get('file_type')
+        directory = parameters.get('directory')
+        scope = parameters.get('scope', 'all')
+        
+        # Build command for dev_tools.py security
+        dev_tools_path = os.path.join(self.repository_root, "python_scripts/dev_tools.py")
+        
+        if os.path.exists(dev_tools_path):
+            try:
+                print(f"🔍 Scanning {scope} {file_type or 'files'}" + 
+                      (f" in {directory}" if directory else ""))
+                
+                result = subprocess.run(
+                    [sys.executable, dev_tools_path, "security"],
+                    capture_output=True,
+                    text=True,
+                    cwd=self.repository_root,
+                )
+                
+                if result.stdout:
+                    print("📤 Security Scan Results:")
+                    print(result.stdout)
+                
+                if result.stderr:
+                    print("⚠️ Warnings/Errors:")
+                    print(result.stderr)
+                    
+                print(f"✅ Security scan completed with exit code: {result.returncode}")
+                
+                # If specific filtering was requested, show additional info
+                if file_type == 'python' and directory:
+                    self._show_python_files_in_directory(directory)
+                
+                return True
+                
+            except Exception as e:
+                print(f"❌ Error running security scan: {e}")
+                return True  # Handled, even if failed
+        else:
+            print("❌ Security scanning tools not found. Please ensure dev_tools.py exists.")
+            return True
+            
+    def _run_dev_tools(self, parameters: Dict[str, Any]) -> bool:
+        """Run development tools with optional command."""
+        dev_tools_path = os.path.join(self.repository_root, "python_scripts/dev_tools.py")
+        
+        if os.path.exists(dev_tools_path):
+            print("🔧 Available development tools:")
+            print("  • setup - Set up development environment")
+            print("  • test - Run tests with coverage")
+            print("  • lint - Run code quality checks")
+            print("  • format - Format code automatically")
+            print("  • security - Run security scans")
+            print("  • all - Run all checks")
+            
+            command = input("Which tool would you like to run? (or 'cancel'): ").strip().lower()
+            
+            if command == 'cancel':
+                print("Operation cancelled.")
+                return True
+                
+            if command in ['setup', 'test', 'lint', 'format', 'security', 'org-test', 'all']:
+                try:
+                    print(f"🚀 Running dev tools: {command}")
+                    result = subprocess.run(
+                        [sys.executable, dev_tools_path, command],
+                        text=True,
+                        cwd=self.repository_root,
+                    )
+                    print(f"✅ Dev tools completed with exit code: {result.returncode}")
+                    return True
+                except Exception as e:
+                    print(f"❌ Error running dev tools: {e}")
+                    return True
+            else:
+                print(f"❌ Unknown command: {command}")
+                return True
+        else:
+            print("❌ Development tools not found. Please ensure dev_tools.py exists.")
+            return True
+    
+    def _show_python_files_in_directory(self, directory: str):
+        """Show Python files in a specific directory for context."""
+        dir_path = os.path.join(self.repository_root, directory)
+        if os.path.exists(dir_path):
+            python_files = glob.glob(os.path.join(dir_path, "*.py"))
+            if python_files:
+                print(f"\n📁 Python files in {directory}:")
+                for py_file in python_files:
+                    rel_path = os.path.relpath(py_file, self.repository_root)
+                    size = self._get_file_size(py_file)
+                    print(f"  • {os.path.basename(py_file)} ({size})")
+                print(f"Total: {len(python_files)} Python files")
 
     def handle_list(self, intent: Intent):
         """Handle file listing requests."""
@@ -331,6 +458,17 @@ class SuperhumanTerminal:
     def handle_summarize(self, intent: Intent):
         """Handle document summarization requests."""
         target = intent.target
+        parameters = intent.parameters
+        scope = parameters.get('scope', '')
+        
+        # Handle "latest" or "recent" scope
+        if 'latest' in scope or 'recent' in scope:
+            target = self._find_latest_file(target, parameters)
+            if not target:
+                print("❌ Could not find latest file matching your criteria.")
+                return
+            print(f"🕐 Found latest file: {target}")
+        
         if not target:
             # Look for common document files
             docs = self._get_files_by_type("markdown") + self._get_files_by_type("all")
@@ -356,7 +494,7 @@ class SuperhumanTerminal:
             else:
                 target = input("📄 Which file would you like me to summarize? ")
 
-        file_path = self._find_file(target)
+        file_path = self._find_file(target) if not os.path.isabs(target) else target
         if not file_path:
             print(f"❌ Could not find file: {target}")
             return
@@ -373,6 +511,47 @@ class SuperhumanTerminal:
 
         except Exception as e:
             print(f"❌ Error reading file: {e}")
+    
+    def _find_latest_file(self, target: Optional[str], parameters: Dict[str, Any]) -> Optional[str]:
+        """Find the latest/most recent file matching criteria."""
+        # If target is provided, look for files with that name pattern
+        if target:
+            pattern = target.lower()
+        else:
+            # Look for common document names
+            pattern = "readme"
+        
+        # Get all files that match the pattern
+        all_files = []
+        search_dirs = [".", "docs", "python_scripts", "shell_scripts", "text_files"]
+        
+        for search_dir in search_dirs:
+            dir_path = os.path.join(self.repository_root, search_dir)
+            if not os.path.isdir(dir_path):
+                continue
+                
+            try:
+                for file in os.listdir(dir_path):
+                    if pattern in file.lower():
+                        full_path = os.path.join(dir_path, file)
+                        if os.path.isfile(full_path):
+                            all_files.append(full_path)
+            except (OSError, PermissionError):
+                # Skip directories we can't read
+                continue
+        
+        if not all_files:
+            return None
+            
+        # Sort by modification time (most recent first)
+        try:
+            all_files.sort(key=lambda x: os.path.getmtime(x), reverse=True)
+        except OSError:
+            # Fallback to alphabetical sort if we can't get modification times
+            all_files.sort()
+        
+        # Return the most recent file as relative path
+        return os.path.relpath(all_files[0], self.repository_root)
 
     def handle_rename(self, intent: Intent):
         """Handle file rename requests."""
@@ -438,34 +617,95 @@ I'm your Superhuman AI Terminal! Here's what I can help you with:
             """
             )
 
-        # Getting started questions
+        # Best practices questions
         elif any(
             phrase in user_input
-            for phrase in ["how to start", "get started", "begin", "first steps"]
+            for phrase in [
+                "best practices",
+                "organize scripts",
+                "how to organize",
+                "script organization",
+                "file organization"
+            ]
         ):
             print(
                 """
-🎯 **Getting Started with the AI Script Inventory:**
+📋 **Best Practices for Script Organization:**
 
-1. **Explore what's available:**
-   • Say "list all files" to see everything
-   • Try "list Python scripts" for specific file types
-   
-2. **Check out documentation:**
-   • "show README.md" for repository overview
-   • "show TERMINAL_GUIDE.md" for detailed terminal info
-   
-3. **Run some scripts:**
-   • "run organize_ai_scripts.py" to organize files
-   • "run test_terminal.py" to test the system
-   
-4. **Explore the repository structure:**
-   • `python_scripts/` - Python tools and utilities
-   • `shell_scripts/` - Bash scripts and CLI tools  
-   • `docs/` - Documentation and guides
-   • `.github/scripts/` - Automation and CI tools
+🗂️ **File Structure:**
+  • Keep Python scripts in `python_scripts/`
+  • Put shell scripts in `shell_scripts/`
+  • Store documentation in `docs/`
+  • Use descriptive, lowercase filenames with underscores
 
-💡 **Pro tip:** Use natural language! Say things like "summarize the latest README" or "search for files about testing"
+🔧 **Development Workflow:**
+  • Use `python dev_tools.py setup` to prepare your environment
+  • Run `python dev_tools.py format` before committing
+  • Execute `python dev_tools.py security` to check for vulnerabilities
+  • Test with `python dev_tools.py test` regularly
+
+📝 **Documentation:**
+  • Include docstrings in all Python functions
+  • Add usage examples in script headers
+  • Keep README files up to date
+  • Document any dependencies clearly
+
+🛡️ **Security & Quality:**
+  • Use type hints in Python code
+  • Follow PEP 8 style guidelines
+  • Run security scans regularly
+  • Keep dependencies updated
+
+💡 **Automation:**
+  • Let the auto-organization script handle file placement
+  • Use pre-commit hooks for quality checks
+  • Leverage the CI/CD pipeline for testing
+            """
+            )
+
+        # Repository architecture questions  
+        elif any(
+            phrase in user_input
+            for phrase in [
+                "how does this work",
+                "architecture",
+                "repository structure", 
+                "system design"
+            ]
+        ):
+            print(
+                """
+🏗️ **Repository Architecture:**
+
+🤖 **Superhuman AI Terminal:**
+  • spaCy-powered natural language processing
+  • Intent recognition with confidence scoring
+  • Local-only processing (no cloud dependencies)
+  • Action handlers for different command types
+
+🔄 **Automation System:**
+  • Auto-organization of files by type
+  • CI/CD pipelines for quality and security
+  • Pre-commit hooks for code formatting
+  • Automated testing and coverage reports
+
+🛡️ **Security & Quality Framework:**
+  • Bandit security scanning
+  • Safety dependency vulnerability checks
+  • Multi-platform testing
+  • CodeQL analysis and SARIF reporting
+
+📁 **File Organization Logic:**
+  • `.py` files → `python_scripts/`
+  • `.sh` files → `shell_scripts/`
+  • `.md` files → `docs/`
+  • Config/data files → `text_files/`
+
+🔧 **Development Tools Integration:**
+  • Unified dev_tools.py for common tasks
+  • Environment setup automation
+  • Comprehensive linting and formatting
+  • Test execution with coverage reporting
             """
             )
 
@@ -544,7 +784,96 @@ This terminal gives you a natural language interface to interact with all these 
             """
             )
 
-        # Tool-specific questions
+        # Troubleshooting and help questions
+        elif any(
+            phrase in user_input
+            for phrase in [
+                "not working",
+                "error",
+                "problem",
+                "trouble",
+                "help me",
+                "broken"
+            ]
+        ):
+            print(
+                """
+🔧 **Troubleshooting Common Issues:**
+
+❌ **Command Not Recognized:**
+  • Try rephrasing with simpler language
+  • Use keywords like "run", "list", "show", "summarize"
+  • Type "help" for available commands
+
+📁 **File Not Found:**
+  • Check file names with "list files"
+  • Files are organized automatically by type
+  • Use partial names - I'll try to find matches
+
+🚀 **Script Execution Issues:**
+  • Ensure scripts have proper permissions
+  • Check for required dependencies
+  • Try "run dev_tools.py setup" to install requirements
+
+🧠 **Intent Recognition Problems:**
+  • Be specific about what you want to do
+  • Include action words (run, show, list, search)
+  • Ask conversational questions for general help
+
+💡 **Quick Fixes:**
+  • Type "help" for command reference
+  • Use "list all files" to see what's available
+  • Try "what can you do?" for capabilities overview
+  • Ask "how do I get started?" for guidance
+            """
+            )
+
+        # Command examples and usage
+        elif any(
+            phrase in user_input
+            for phrase in [
+                "commands",
+                "syntax", 
+                "how to use",
+                "examples",
+                "usage"
+            ]
+        ):
+            print(
+                """
+📚 **Command Examples & Usage:**
+
+🚀 **Running Scripts:**
+  • "run security scan" - Execute security analysis
+  • "run dev_tools.py test" - Run test suite
+  • "run organize_ai_scripts.py" - Organize files
+
+📁 **File Operations:**
+  • "list all Python files" - Show Python scripts
+  • "list files in python_scripts" - Directory-specific listing
+  • "show README.md" - Display file contents
+  • "search for test files" - Find files with content
+
+📊 **Analysis & Summarization:**
+  • "summarize the latest README" - Auto-find and summarize
+  • "summarize CONTRIBUTING.md" - Specific file summary
+  • "preview test_script.py" - Quick file preview
+
+🤖 **Conversational Queries:**
+  • "What can you do?" - Learn about capabilities
+  • "How do I get started?" - Onboarding guidance
+  • "What are best practices?" - Development advice
+  • "How does this work?" - Architecture overview
+
+💡 **Natural Language Tips:**
+  • Be descriptive: "run security scan on Python files"
+  • Use scope words: "all", "latest", "recent"
+  • Specify locations: "in shell_scripts directory"
+  • Ask questions naturally: "Can you help me...?"
+            """
+            )
+
+        # Tool-specific questions about spaCy and NLP
         elif any(
             phrase in user_input for phrase in ["spacy", "nlp", "natural language"]
         ):
@@ -552,7 +881,7 @@ This terminal gives you a natural language interface to interact with all these 
                 """
 🧠 **About spaCy Integration:**
 
-I now use spaCy for advanced natural language understanding:
+I use spaCy for advanced natural language understanding:
 
 ⚡ **Enhanced Capabilities:**
   • Better intent recognition from natural language
