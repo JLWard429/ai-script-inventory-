@@ -85,11 +85,49 @@ The built-in AI chat provides contextual help and guidance:
 
 ---
 
+## 📁 Repository Structure
+
+This repository is well-organized with clear separation of concerns and automated file management:
+
+```
+ai-script-inventory/
+├── .github/                    # Automation and CI/CD workflows
+│   ├── scripts/               # Organization and utility scripts
+│   └── workflows/             # GitHub Actions workflows
+├── src/                       # Core application modules
+│   └── ai_script_inventory/   # Main package
+│       ├── ai/                # Intent recognition and NLP processing
+│       └── superhuman_terminal.py  # Main terminal interface
+├── python_scripts/            # Python utilities and tools
+│   └── archives/              # Historical versions and duplicates
+├── shell_scripts/             # Shell utilities and automation scripts
+├── docs/                      # Comprehensive documentation
+├── text_files/                # Reports and data files
+│   ├── archives/              # Historical files
+│   └── reports/               # Current reports and analysis
+├── tests/                     # Test suite with full coverage
+└── [root files]               # Configuration and project documentation
+```
+
+### Key Features of the Organization:
+
+- **🏗️ Modular Structure**: Clear separation between source code, scripts, documentation, and data
+- **📦 Archive System**: Automatic archiving of duplicate and historical files to preserve history
+- **🔄 Auto-Organization**: GitHub Actions workflows automatically maintain file organization
+- **🛡️ Privacy Protection**: Enhanced `.gitignore` patterns protect sensitive data
+- **📚 Comprehensive Documentation**: Multiple levels of documentation for different audiences
+
+---
+
 ## 🔐 Security & Quality
 
 This repository implements enterprise-grade security and quality controls:
 
 - **🔍 Professional CodeQL Analysis**: Multi-language security scanning with advanced configuration
+- **🛡️ Dependency Scanning**: Daily vulnerability monitoring with automated updates
+- **🔒 Secret Scanning**: GitHub secret scanning with custom patterns
+- **🚨 Security Alerts**: Real-time notifications for security findings
+- **📊 Quality Metrics**: Comprehensive code quality and coverage tracking
 
 ---
 
