@@ -295,7 +295,7 @@ ai-script-inventory/
 5. **Verify Installation**
    ```bash
    # Test the Superhuman AI Terminal
-   python terminal.py
+   python src/ai_script_inventory/superhuman_terminal.py
    
    # Run the test suite
    python -m pytest tests/ -v
