@@ -26,7 +26,10 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
-dependencies = []
+dependencies = [
+    # Main dependencies are listed in requirements.txt
+    # Install with: pip install -r requirements.txt
+]
 
 [project.optional-dependencies]
 dev = [
