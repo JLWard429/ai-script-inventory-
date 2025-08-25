@@ -69,7 +69,7 @@ def test_configuration_files_exist():
 
 def test_documentation_files_exist():
     """Test that all documentation files exist."""
-    docs = ["README.md", "docs/WORKFLOW.md", "CONTRIBUTING.md", "docs/SECURITY.md", "SUPPORT.md"]
+    docs = ["README.md", "docs/WORKFLOW.md", "docs/CONTRIBUTING.md", "docs/SECURITY.md", "SUPPORT.md"]
 
     for doc in docs:
         doc_path = Path(doc)
