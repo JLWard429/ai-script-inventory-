@@ -1,0 +1,2 @@
+# Requirements for Superhuman AI Terminal
+# Add your dependencies here
