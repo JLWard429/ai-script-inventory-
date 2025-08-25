@@ -681,4 +681,3 @@ By contributing to this project, you agree that your contributions will be licen
 ---
 
 Thank you for contributing to the AI Script Inventory! Your efforts help make this project better for everyone. 🙏
-       develop
