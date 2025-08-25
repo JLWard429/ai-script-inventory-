@@ -90,7 +90,6 @@ jobs:
       - name: 📦 Install dependencies
         run: |
           python -m pip install --upgrade pip setuptools wheel
-          pip install gitpython>=3.1.0,<4.0.0
           if [ -f requirements-dev.txt ]; then
             pip install -r requirements-dev.txt
           elif [ -f .github/scripts/requirements.txt ]; then
