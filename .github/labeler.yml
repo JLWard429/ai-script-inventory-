@@ -1,0 +1,6 @@
+frontend:
+  - 'frontend/**'
+backend:
+  - 'backend/**'
+docs:
+  - '*.md'
