@@ -12,7 +12,6 @@ on:
       - '*.sh'
       - '*.md'
       - '*.txt'
-    branches: [ develop ]
   workflow_dispatch:
   schedule:
     # Run weekly cleanup on Sundays at 3 AM UTC
