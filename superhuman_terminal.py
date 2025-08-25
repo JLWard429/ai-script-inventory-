@@ -573,8 +573,14 @@ class SuperhumanTerminal:
     def handle_ai_chat(self, intent: Intent):
         """Handle general AI chat and conversational queries."""
         user_input = intent.original_input.lower()
+        parameters = intent.parameters
 
         print("🤖 AI Assistant:")
+
+        # Use parameters to provide more context-aware responses
+        action_modifier = parameters.get("action_modifier")
+        file_type = parameters.get("file_type")
+        scope = parameters.get("scope")
 
         # Repository overview questions
         if any(
@@ -585,15 +591,22 @@ class SuperhumanTerminal:
                 "capabilities",
                 "features",
             ]
-        ):
-            print(
-                """
+        ) and action_modifier != "security":  # Don't override security-specific questions
+            response = """
 I'm your Superhuman AI Terminal! Here's what I can help you with:
 
 🚀 **Script Management:**
   • Run Python and shell scripts from your repository
   • Execute automation and development tools
-  • Run tests and linting scripts
+  • Run tests and linting scripts"""
+
+            # Add specific guidance based on detected parameters
+            if action_modifier == "security":
+                response += "\n  • 🛡️ Security scanning with 'run security scan'"
+            if action_modifier == "dev":
+                response += "\n  • 🔧 Development tools with 'run dev tools'"
+                
+            response += """
 
 📁 **File Operations:**
   • List and organize files by type (Python, shell, markdown, etc.)
@@ -615,6 +628,123 @@ I'm your Superhuman AI Terminal! Here's what I can help you with:
   • Ask questions like "what scripts are available?" 
   • Get contextual help and suggestions
             """
+            print(response)
+
+        # Specific script organization questions
+        elif any(
+            phrase in user_input
+            for phrase in [
+                "organize scripts",
+                "organize my scripts",
+                "organization",
+                "better organization"
+            ]
+        ) or action_modifier == "organization":
+            print(
+                """
+📋 **Script Organization Best Practices:**
+
+🏗️ **This Repository's Structure:**
+  • `python_scripts/` - All Python (.py) files
+  • `shell_scripts/` - Shell scripts (.sh) and CLI tools
+  • `docs/` - Documentation and markdown files
+  • `text_files/` - Configuration, logs, and data files
+  • `ai/` - AI and NLP modules (like this terminal!)
+
+🤖 **Automated Organization:**
+  • Run `python organize_ai_scripts.py` to auto-organize files
+  • The system categorizes files by extension and content
+  • Files are moved to appropriate directories automatically
+
+💡 **Best Practices for Your Scripts:**
+  • Use descriptive, lowercase names with underscores
+  • Include docstrings and usage examples
+  • Add proper file headers with descriptions
+  • Group related functionality in the same directory
+
+🔧 **Development Workflow:**
+  • Use `run dev tools setup` to prepare your environment
+  • Run `run security scan` regularly for security checks
+  • Execute `run dev tools test` to validate your changes
+  • Leverage the CI/CD pipeline for automated quality checks
+
+Try asking me to "run organize_ai_scripts" to see the auto-organization in action!
+            """
+            )
+
+        # Development and tool questions
+        elif action_modifier == "dev" or any(
+            phrase in user_input
+            for phrase in ["dev tools", "development", "tools", "setup"]
+        ):
+            print(
+                """
+🔧 **Development Tools & Workflow:**
+
+🚀 **Available Development Commands:**
+  • `run dev tools setup` - Set up your development environment
+  • `run dev tools test` - Run comprehensive test suite
+  • `run dev tools lint` - Code quality and style checks
+  • `run dev tools format` - Auto-format your code
+  • `run dev tools security` - Security vulnerability scans
+  • `run dev tools all` - Run all quality checks
+
+🛡️ **Security & Quality:**
+  • `run security scan` - Dedicated security analysis
+  • Automated dependency vulnerability checking
+  • Code quality enforcement with Black, isort, flake8
+  • Pre-commit hooks for consistent code style
+
+🧪 **Testing Framework:**
+  • Comprehensive pytest test suite
+  • Coverage reporting and analysis
+  • Multi-platform compatibility testing
+  • Automated script syntax validation
+
+📊 **CI/CD Integration:**
+  • GitHub Actions workflows for automated testing
+  • Security scanning with CodeQL and Bandit
+  • Dependency monitoring with Safety
+  • Automated quality gates and reporting
+
+Type 'run dev tools' to see an interactive menu of available tools!
+            """
+            )
+
+        # Security-specific questions
+        elif action_modifier == "security" or any(
+            phrase in user_input for phrase in ["security", "scan", "vulnerability"]
+        ):
+            print(
+                """
+🛡️ **Security Features & Best Practices:**
+
+🔍 **Available Security Scans:**
+  • `run security scan` - Comprehensive security analysis
+  • `run security scan on Python files` - Target specific file types
+  • `run dev tools security` - Part of development workflow
+
+🚨 **What Security Scans Check:**
+  • Code vulnerabilities with Bandit
+  • Dependency vulnerabilities with Safety
+  • Secret detection and sensitive data exposure
+  • Code quality issues that could lead to security problems
+
+📋 **Security Best Practices:**
+  • Never commit secrets, API keys, or passwords
+  • Use environment variables for sensitive configuration
+  • Keep dependencies updated regularly
+  • Run security scans before committing code
+  • Use the pre-commit hooks for automated checks
+
+🔧 **Automated Security:**
+  • CI/CD pipeline includes security scanning
+  • CodeQL analysis for advanced threat detection
+  • SARIF security report generation
+  • Dependency monitoring and alerts
+
+Try `run security scan on all Python files` to see detailed security analysis!
+            """
             )
 
         # Best practices questions
@@ -623,43 +753,73 @@ I'm your Superhuman AI Terminal! Here's what I can help you with:
             for phrase in [
                 "best practices",
                 "organize scripts",
-                "how to organize",
-                "script organization",
-                "file organization"
+                "manage files",
+                "workflow",
             ]
         ):
             print(
                 """
-📋 **Best Practices for Script Organization:**
+✨ **Best Practices for Script Organization:**
 
-🗂️ **File Structure:**
-  • Keep Python scripts in `python_scripts/`
-  • Put shell scripts in `shell_scripts/`
-  • Store documentation in `docs/`
-  • Use descriptive, lowercase filenames with underscores
+📁 **File Organization:**
+  • Python scripts → `python_scripts/` directory
+  • Shell scripts → `shell_scripts/` directory
+  • Documentation → `docs/` directory
+  • Use descriptive, consistent naming conventions
 
 🔧 **Development Workflow:**
-  • Use `python dev_tools.py setup` to prepare your environment
-  • Run `python dev_tools.py format` before committing
-  • Execute `python dev_tools.py security` to check for vulnerabilities
-  • Test with `python dev_tools.py test` regularly
+  • Run `black .` and `isort .` before committing
+  • Use pre-commit hooks for automated quality checks
+  • Write tests for new functionality
+  • Include docstrings and type hints
 
-📝 **Documentation:**
-  • Include docstrings in all Python functions
-  • Add usage examples in script headers
-  • Keep README files up to date
-  • Document any dependencies clearly
-
-🛡️ **Security & Quality:**
-  • Use type hints in Python code
-  • Follow PEP 8 style guidelines
-  • Run security scans regularly
+🔒 **Security & Quality:**
+  • Regular security scans with Bandit
   • Keep dependencies updated
+  • Use environment variables for sensitive data
+  • Follow the repository's coding standards
 
-💡 **Automation:**
-  • Let the auto-organization script handle file placement
-  • Use pre-commit hooks for quality checks
-  • Leverage the CI/CD pipeline for testing
+🤖 **Using This Terminal:**
+  • Use natural language for commands
+  • Leverage file search and summarization
+  • Take advantage of automated organization
+  • Ask for help when unsure!
+            """
+            )
+        # Summary and Python tools questions
+        elif any(
+            phrase in user_input
+            for phrase in ["summary", "python tools", "tools available", "available tools"]
+        ) or (action_modifier == "dev" and scope == "all" and file_type == "python"):
+            print(
+                """
+🐍 **Python Tools & Scripts Summary:**
+
+🔧 **Development Tools:**
+  • `dev_tools.py` - Unified development environment setup and management
+  • `organize_ai_scripts.py` - Automated file organization system
+  • Security scanning and vulnerability assessment tools
+  • Code formatting and linting automation
+
+🤖 **AI & Terminal:**
+  • `superhuman_terminal.py` - This AI-powered natural language terminal
+  • `ai/intent.py` - spaCy-based intent recognition engine
+  • Advanced natural language processing for command interpretation
+
+📊 **Available Commands:**
+  • `list all Python files` - See all Python scripts in the repository
+  • `run dev tools` - Interactive development tools menu
+  • `run security scan on Python files` - Security analysis
+  • `show [filename].py` - View Python script contents
+  • `summarize [filename].py` - Get Python script analysis
+
+🚀 **Quick Actions:**
+  • Type `list all Python files` to see everything available
+  • Use `run dev tools setup` to get started with development
+  • Try `show dev_tools.py` to see the main development script
+  • Ask `what can you do?` for more capabilities
+
+Want to explore? Try asking "list all Python files" or "show me the main development tools"!
             """
             )
 
