@@ -214,8 +214,6 @@ jobs:
     name: 🎉 Create GitHub Release
     runs-on: ubuntu-latest
     needs: [validate-release, run-tests, build-artifacts, generate-changelog]
-    permissions:
-      contents: write
     
     steps:
     - name: 📥 Checkout repository
@@ -263,6 +261,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: [validate-release, create-release]
     if: always() && needs.create-release.result == 'success'
+    permissions:
+      contents: read
     
     steps:
     - name: 📥 Checkout repository
