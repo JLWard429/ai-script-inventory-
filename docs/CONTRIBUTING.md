@@ -669,10 +669,27 @@ If you're adding automated tests:
 
 Understanding our labeling system:
 
+### Manual Labels (for issues)
 - **Type**: `bug`, `enhancement`, `documentation`, `question`
 - **Priority**: `critical`, `high`, `medium`, `low`
 - **Status**: `triage`, `in-progress`, `blocked`, `ready-for-review`
-- **Component**: `python`, `shell`, `workflows`, `docs`
+
+### Automatic Labels (for pull requests)
+Our GitHub Actions automatically apply these labels based on files changed:
+
+- **Component Labels**:
+  - `python` - Python scripts, source code, requirements files
+  - `shell` - Shell scripts and bash utilities
+  - `workflows` - GitHub Actions workflows and automation
+  - `documentation` - Docs, README, contributing guides
+  - `testing` - Test files and testing configuration
+  - `security` - Security-related files and reports
+  - `configuration` - Config files (YAML, JSON, TOML)
+  - `dependencies` - Package management files
+  - `ai-ml` - AI/ML related source code
+  - `terminal` - Terminal and CLI interface files
+
+Labels are automatically applied when you create a pull request - no manual action needed!
 
 ## 🎯 Project Goals
 
