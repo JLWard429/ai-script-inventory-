@@ -1,3 +1,3 @@
-[![CI Passing](https://github.com/JLWard429/ai-script-inventory-/actions/workflows/structure-check.yml/badge.svg)](https://github.com/JLWard429/ai-script-inventory-/actions)
+# AI Script Inventory
 
-# ai-script-inventory-
+This repository contains a collection of AI-related scripts.
