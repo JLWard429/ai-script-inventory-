@@ -94,9 +94,12 @@ def run_linting() -> bool:
         (["black", "--check", "."], "Code formatting check (Black)"),
         (["isort", "--check-only", "."], "Import sorting check (isort)"),
         (["flake8", "."], "Linting (flake8)"),
-        (["mypy", "python_scripts/", ".github/scripts/"], "Type checking (mypy)"),
         (
-            ["bandit", "-r", "python_scripts/", ".github/scripts/"],
+            ["mypy", "src/", "python_scripts/", ".github/scripts/"],
+            "Type checking (mypy)",
+        ),
+        (
+            ["bandit", "-r", "src/", "python_scripts/", ".github/scripts/"],
             "Security check (bandit)",
         ),
     ]
@@ -135,6 +138,7 @@ def run_security_scan() -> bool:
             [
                 "bandit",
                 "-r",
+                "src/",
                 "python_scripts/",
                 ".github/scripts/",
                 "-f",

@@ -58,7 +58,6 @@ def test_configuration_files_exist():
     """Test that all configuration files exist."""
     config_files = [
         "pyproject.toml",
-        "requirements-dev.txt",
         ".pre-commit-config.yaml",
         ".gitignore",
     ]
@@ -88,6 +87,9 @@ def test_directory_structure():
         "docs",
         "text_files",
         "tests",
+        "src",
+        "src/ai_script_inventory",
+        "src/ai_script_inventory/ai",
         ".github",
         ".github/workflows",
         ".github/scripts",

@@ -1,6 +1,0 @@
-gitpython
-requests
-pyyaml
-python-dotenv
-pandas
-spacy>=3.4.0

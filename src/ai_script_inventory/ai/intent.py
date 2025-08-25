@@ -10,11 +10,11 @@ to action handlers.
 No cloud LLM required - all processing happens locally using spaCy.
 """
 
-import re
 import os
-from typing import Dict, List, Optional, Tuple, Any
+import re
 from dataclasses import dataclass, field
 from enum import Enum
+from typing import Any, Dict, List, Optional, Tuple
 
 try:
     import spacy
@@ -110,10 +110,19 @@ class IntentRecognizer:
             [{"LOWER": "python"}, {"TEXT": {"REGEX": r".*\.py$"}}],
             [{"LOWER": "bash"}, {"TEXT": {"REGEX": r".*\.sh$"}}],
             # Security scan patterns
-            [{"LOWER": {"IN": ["run", "execute"]}}, {"LOWER": "security"}, {"LOWER": "scan"}],
+            [
+                {"LOWER": {"IN": ["run", "execute"]}},
+                {"LOWER": "security"},
+                {"LOWER": "scan"},
+            ],
             [{"LOWER": "security"}, {"LOWER": "scan"}],
             [{"LOWER": {"IN": ["run", "execute"]}}, {"LOWER": "scan"}],
-            [{"LOWER": {"IN": ["run", "execute"]}}, {"LOWER": {"IN": ["the", "a"]}}, {"LOWER": "security"}, {"LOWER": "scan"}],
+            [
+                {"LOWER": {"IN": ["run", "execute"]}},
+                {"LOWER": {"IN": ["the", "a"]}},
+                {"LOWER": "security"},
+                {"LOWER": "scan"},
+            ],
         ]
         self.matcher.add("RUN_SCRIPT", run_patterns)
 
@@ -168,9 +177,18 @@ class IntentRecognizer:
             [{"LOWER": {"IN": ["give", "provide"]}}, {"LOWER": "summary"}],
             [{"LOWER": "brief"}, {"LOWER": "overview"}],
             # Latest/recent patterns for summarization
-            [{"LOWER": "summarize"}, {"LOWER": {"IN": ["the", "a"]}}, {"LOWER": {"IN": ["latest", "recent"]}}],
+            [
+                {"LOWER": "summarize"},
+                {"LOWER": {"IN": ["the", "a"]}},
+                {"LOWER": {"IN": ["latest", "recent"]}},
+            ],
             [{"LOWER": "summarize"}, {"LOWER": {"IN": ["latest", "recent"]}}],
-            [{"LOWER": {"IN": ["show", "get"]}}, {"LOWER": "summary"}, {"LOWER": "of"}, {"LOWER": {"IN": ["latest", "recent"]}}],
+            [
+                {"LOWER": {"IN": ["show", "get"]}},
+                {"LOWER": "summary"},
+                {"LOWER": "of"},
+                {"LOWER": {"IN": ["latest", "recent"]}},
+            ],
         ]
         self.matcher.add("SUMMARIZE", summarize_patterns)
 
@@ -189,7 +207,11 @@ class IntentRecognizer:
         preview_patterns = [
             [{"LOWER": {"IN": ["preview", "peek", "glimpse"]}}, {"IS_ALPHA": True}],
             [{"LOWER": "quick"}, {"LOWER": {"IN": ["look", "view"]}}, {"LOWER": "at"}],
-            [{"LOWER": {"IN": ["preview", "peek"]}}, {"LOWER": {"IN": ["the", "at"]}}, {"IS_ALPHA": True}],
+            [
+                {"LOWER": {"IN": ["preview", "peek"]}},
+                {"LOWER": {"IN": ["the", "at"]}},
+                {"IS_ALPHA": True},
+            ],
         ]
         self.matcher.add("PREVIEW", preview_patterns)
 
@@ -215,16 +237,40 @@ class IntentRecognizer:
                 }
             ],
             # Enhanced conversational patterns
-            [{"LOWER": {"IN": ["best", "good"]}}, {"LOWER": {"IN": ["practices", "practice", "way", "ways"]}}],
+            [
+                {"LOWER": {"IN": ["best", "good"]}},
+                {"LOWER": {"IN": ["practices", "practice", "way", "ways"]}},
+            ],
             [{"LOWER": "organize"}, {"LOWER": {"IN": ["scripts", "files", "code"]}}],
-            [{"LOWER": {"IN": ["repository", "repo", "project"]}}, {"LOWER": {"IN": ["works", "structure", "organization"]}}],
+            [
+                {"LOWER": {"IN": ["repository", "repo", "project"]}},
+                {"LOWER": {"IN": ["works", "structure", "organization"]}},
+            ],
             # Security-related questions
-            [{"LOWER": {"IN": ["security", "secure"]}}, {"LOWER": {"IN": ["features", "capabilities", "information", "details"]}}],
+            [
+                {"LOWER": {"IN": ["security", "secure"]}},
+                {
+                    "LOWER": {
+                        "IN": ["features", "capabilities", "information", "details"]
+                    }
+                },
+            ],
             [{"LOWER": "how"}, {"LOWER": {"IN": ["secure", "safe"]}}],
-            [{"LOWER": "tell"}, {"LOWER": "me"}, {"LOWER": "about"}, {"LOWER": {"IN": ["security", "safety"]}}],
+            [
+                {"LOWER": "tell"},
+                {"LOWER": "me"},
+                {"LOWER": "about"},
+                {"LOWER": {"IN": ["security", "safety"]}},
+            ],
             # Capability questions
-            [{"LOWER": {"IN": ["capabilities", "features"]}}, {"LOWER": {"IN": ["available", "here", "this"]}}],
-            [{"LOWER": {"IN": ["what", "which"]}}, {"LOWER": {"IN": ["tools", "scripts", "features"]}}],
+            [
+                {"LOWER": {"IN": ["capabilities", "features"]}},
+                {"LOWER": {"IN": ["available", "here", "this"]}},
+            ],
+            [
+                {"LOWER": {"IN": ["what", "which"]}},
+                {"LOWER": {"IN": ["tools", "scripts", "features"]}},
+            ],
         ]
         self.matcher.add("AI_CHAT", ai_chat_patterns)
 
@@ -530,13 +576,23 @@ class IntentRecognizer:
                     intent_scores[intent_type] += 0.2
 
         # Special handling for "I need to [action]" patterns - should be commands
-        if re.search(r"\bi\s+need\s+to\s+(run|execute|list|show|find|search|get)", user_input.lower()):
-            for intent_type in [IntentType.RUN_SCRIPT, IntentType.LIST, IntentType.SHOW, IntentType.SEARCH]:
+        if re.search(
+            r"\bi\s+need\s+to\s+(run|execute|list|show|find|search|get)",
+            user_input.lower(),
+        ):
+            for intent_type in [
+                IntentType.RUN_SCRIPT,
+                IntentType.LIST,
+                IntentType.SHOW,
+                IntentType.SEARCH,
+            ]:
                 if intent_type in intent_scores:
                     intent_scores[intent_type] += 0.5
             # Reduce AI_CHAT score for command-like phrases
             if IntentType.AI_CHAT in intent_scores:
-                intent_scores[IntentType.AI_CHAT] = max(0.0, intent_scores[IntentType.AI_CHAT] - 0.3)
+                intent_scores[IntentType.AI_CHAT] = max(
+                    0.0, intent_scores[IntentType.AI_CHAT] - 0.3
+                )
 
         # Check for file-related entities
         file_entities = self._find_file_entities(doc)
@@ -550,10 +606,18 @@ class IntentRecognizer:
                     intent_scores[intent_type] += 0.3
 
         # Check for request/help indicators
-        help_indicators = ["please", "can you", "could you", "help me", "i want to understand"]
+        help_indicators = [
+            "please",
+            "can you",
+            "could you",
+            "help me",
+            "i want to understand",
+        ]
         if any(phrase in user_input.lower() for phrase in help_indicators):
             # Only boost AI_CHAT if it's not a command-like request
-            if not re.search(r"\b(run|execute|list|show|find|search)\b", user_input.lower()):
+            if not re.search(
+                r"\b(run|execute|list|show|find|search)\b", user_input.lower()
+            ):
                 intent_scores[IntentType.AI_CHAT] = (
                     intent_scores.get(IntentType.AI_CHAT, 0) + 0.3
                 )
@@ -561,9 +625,13 @@ class IntentRecognizer:
         # Boost scores for action modifiers detected in entity extraction
         user_input_lower = user_input.lower()
         if "security" in user_input_lower and "scan" in user_input_lower:
-            intent_scores[IntentType.RUN_SCRIPT] = intent_scores.get(IntentType.RUN_SCRIPT, 0) + 0.4
+            intent_scores[IntentType.RUN_SCRIPT] = (
+                intent_scores.get(IntentType.RUN_SCRIPT, 0) + 0.4
+            )
         if "dev" in user_input_lower and "tools" in user_input_lower:
-            intent_scores[IntentType.RUN_SCRIPT] = intent_scores.get(IntentType.RUN_SCRIPT, 0) + 0.3
+            intent_scores[IntentType.RUN_SCRIPT] = (
+                intent_scores.get(IntentType.RUN_SCRIPT, 0) + 0.3
+            )
 
     def _analyze_for_ai_chat(self, doc, user_input: str) -> Tuple[IntentType, float]:
         """Analyze input to determine if it should be handled as AI chat."""
@@ -599,12 +667,26 @@ class IntentRecognizer:
             conversational_score += 0.2
 
         # Check for request vs command language
-        request_phrases = ["could you", "would you", "can you help", "i need help", "i want to understand"]
-        command_phrases = ["run", "execute", "list", "show", "search", "find", "summarize"]
-        
+        request_phrases = [
+            "could you",
+            "would you",
+            "can you help",
+            "i need help",
+            "i want to understand",
+        ]
+        command_phrases = [
+            "run",
+            "execute",
+            "list",
+            "show",
+            "search",
+            "find",
+            "summarize",
+        ]
+
         has_request = any(phrase in user_input.lower() for phrase in request_phrases)
         has_command = any(phrase in user_input.lower() for phrase in command_phrases)
-        
+
         if has_request and not has_command:
             conversational_score += 0.4
         elif has_command and "i need to" in user_input.lower():
@@ -612,7 +694,15 @@ class IntentRecognizer:
             conversational_score -= 0.3
 
         # Check for specific repository/development topics
-        dev_topics = ["organize", "best practices", "workflow", "ci/cd", "automation", "quality", "security practices"]
+        dev_topics = [
+            "organize",
+            "best practices",
+            "workflow",
+            "ci/cd",
+            "automation",
+            "quality",
+            "security practices",
+        ]
         if any(topic in user_input.lower() for topic in dev_topics):
             conversational_score += 0.3
 
@@ -636,7 +726,7 @@ class IntentRecognizer:
         # Enhanced file type detection using multiple approaches
         file_type_mapping = {
             "python": "python",
-            "shell": "shell", 
+            "shell": "shell",
             "bash": "shell",
             "markdown": "markdown",
             "pdf": "pdf",
@@ -651,7 +741,10 @@ class IntentRecognizer:
         # Check spaCy entities first
         for entity in doc.ents:
             entity_text = entity.text.lower()
-            if entity.label_ in ["ORG", "PRODUCT", "MISC"] and entity_text in file_type_mapping:
+            if (
+                entity.label_ in ["ORG", "PRODUCT", "MISC"]
+                and entity_text in file_type_mapping
+            ):
                 parameters["file_type"] = file_type_mapping[entity_text]
 
         # Enhanced keyword-based file type detection
@@ -670,7 +763,7 @@ class IntentRecognizer:
             "main": ["main", "primary", "core", "principal"],
             "configuration": ["config", "configuration", "settings", "setup"],
         }
-        
+
         for scope_type, keywords in scope_indicators.items():
             if any(keyword in user_input_lower for keyword in keywords):
                 if "scope" not in parameters:  # First match wins
@@ -685,7 +778,11 @@ class IntentRecognizer:
                 parameters["directory"] = token.text.lower()
                 break
             # Check for "in/from/under" + directory pattern
-            if token.dep_ in ["prep", "pobj"] and token.head.text.lower() in ["in", "from", "under"]:
+            if token.dep_ in ["prep", "pobj"] and token.head.text.lower() in [
+                "in",
+                "from",
+                "under",
+            ]:
                 if token.text.lower() in directory_keywords or "_" in token.text:
                     parameters["directory"] = token.text
                     break
@@ -697,7 +794,7 @@ class IntentRecognizer:
             "test": ["test", "testing", "check"],
             "organization": ["organize", "organiz", "clean", "structure"],
         }
-        
+
         for modifier_type, keywords in action_modifiers.items():
             if any(keyword in user_input_lower for keyword in keywords):
                 parameters["action_modifier"] = modifier_type
@@ -706,7 +803,7 @@ class IntentRecognizer:
         # Detect intent strength for better confidence scoring
         strong_intent_words = ["need", "want", "must", "should", "require"]
         polite_words = ["please", "could", "would", "can"]
-        
+
         if any(word in user_input_lower for word in strong_intent_words):
             parameters["intent_strength"] = "strong"
         elif any(word in user_input_lower for word in polite_words):
