@@ -13,7 +13,7 @@ No cloud LLM required - all processing happens locally using spaCy.
 import re
 import os
 from typing import Dict, List, Optional, Tuple, Any
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from enum import Enum
 
 try:
@@ -48,7 +48,7 @@ class Intent:
     type: IntentType
     confidence: float
     target: Optional[str] = None
-    parameters: Optional[Dict[str, Any]] = None
+    parameters: Dict[str, Any] = field(default_factory=dict)
     original_input: str = ""
 
 
@@ -109,6 +109,11 @@ class IntentRecognizer:
             ],
             [{"LOWER": "python"}, {"TEXT": {"REGEX": r".*\.py$"}}],
             [{"LOWER": "bash"}, {"TEXT": {"REGEX": r".*\.sh$"}}],
+            # Security scan patterns
+            [{"LOWER": {"IN": ["run", "execute"]}}, {"LOWER": "security"}, {"LOWER": "scan"}],
+            [{"LOWER": "security"}, {"LOWER": "scan"}],
+            [{"LOWER": {"IN": ["run", "execute"]}}, {"LOWER": "scan"}],
+            [{"LOWER": {"IN": ["run", "execute"]}}, {"LOWER": {"IN": ["the", "a"]}}, {"LOWER": "security"}, {"LOWER": "scan"}],
         ]
         self.matcher.add("RUN_SCRIPT", run_patterns)
 
@@ -162,6 +167,10 @@ class IntentRecognizer:
             [{"LOWER": "summarize"}, {"IS_ALPHA": True}],
             [{"LOWER": {"IN": ["give", "provide"]}}, {"LOWER": "summary"}],
             [{"LOWER": "brief"}, {"LOWER": "overview"}],
+            # Latest/recent patterns for summarization
+            [{"LOWER": "summarize"}, {"LOWER": {"IN": ["the", "a"]}}, {"LOWER": {"IN": ["latest", "recent"]}}],
+            [{"LOWER": "summarize"}, {"LOWER": {"IN": ["latest", "recent"]}}],
+            [{"LOWER": {"IN": ["show", "get"]}}, {"LOWER": "summary"}, {"LOWER": "of"}, {"LOWER": {"IN": ["latest", "recent"]}}],
         ]
         self.matcher.add("SUMMARIZE", summarize_patterns)
 
