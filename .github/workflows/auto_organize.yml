@@ -129,6 +129,7 @@ jobs:
 
       - name: 📊 Post-organization audit
         run: |
+          touch organization-report.md
           echo "" >> organization-report.md
           echo "## 📊 Post-Organization Repository State" >> organization-report.md
           echo "" >> organization-report.md
