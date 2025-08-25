@@ -265,8 +265,8 @@ ai-script-inventory/
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/JLWard429/ai-script-inventory-.git
-   cd ai-script-inventory-
+   git clone https://github.com/JLWard429/ai-script-inventory.git
+   cd ai-script-inventory
    ```
 
 2. **Install Core Dependencies**
