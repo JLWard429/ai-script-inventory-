@@ -121,6 +121,27 @@ class SuperhumanTerminal:
         handler = self.action_handlers.get(intent.type, self.handle_unknown)
         handler(intent)
 
+    def _run_subprocess(self, command: List[str], capture_output: bool = True, description: str = "") -> subprocess.CompletedProcess:
+        """Utility method to run subprocess commands consistently.
+        
+        Args:
+            command: Command to execute as list of arguments
+            capture_output: Whether to capture stdout/stderr 
+            description: Optional description for logging
+            
+        Returns:
+            CompletedProcess result
+        """
+        if description:
+            print(f"🔄 {description}...")
+            
+        return subprocess.run(
+            command,
+            capture_output=capture_output,
+            text=True,
+            cwd=self.repository_root,
+        )
+
     def handle_help(self, intent: Intent):
         """Handle help requests."""
         print("\n📚 Superhuman AI Terminal Help")
@@ -199,19 +220,9 @@ class SuperhumanTerminal:
 
         try:
             if script_path.endswith(".py"):
-                result = subprocess.run(
-                    [sys.executable, script_path],
-                    capture_output=True,
-                    text=True,
-                    cwd=self.repository_root,
-                )
+                result = self._run_subprocess([sys.executable, script_path])
             elif script_path.endswith(".sh"):
-                result = subprocess.run(
-                    ["bash", script_path],
-                    capture_output=True,
-                    text=True,
-                    cwd=self.repository_root,
-                )
+                result = self._run_subprocess(["bash", script_path])
             else:
                 print(f"❌ Unsupported script type: {script_path}")
                 return
@@ -259,16 +270,9 @@ class SuperhumanTerminal:
 
         if os.path.exists(dev_tools_path):
             try:
-                print(
-                    f"🔍 Scanning {scope} {file_type or 'files'}"
-                    + (f" in {directory}" if directory else "")
-                )
-
-                result = subprocess.run(
+                result = self._run_subprocess(
                     [sys.executable, dev_tools_path, "security"],
-                    capture_output=True,
-                    text=True,
-                    cwd=self.repository_root,
+                    description=f"Scanning {scope} {file_type or 'files'}" + (f" in {directory}" if directory else "")
                 )
 
                 if result.stdout:
@@ -331,11 +335,10 @@ class SuperhumanTerminal:
                 "all",
             ]:
                 try:
-                    print(f"🚀 Running dev tools: {command}")
-                    result = subprocess.run(
+                    result = self._run_subprocess(
                         [sys.executable, dev_tools_path, command],
-                        text=True,
-                        cwd=self.repository_root,
+                        capture_output=False,
+                        description=f"Running dev tools: {command}"
                     )
                     print(f"✅ Dev tools completed with exit code: {result.returncode}")
                     return True
