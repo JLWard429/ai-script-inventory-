@@ -247,3 +247,192 @@ def test_new_intent_recognition(self):
 - No cloud APIs or external data transmission
 - Complete offline functionality
 - User data never leaves the local machine
+
+---
+
+## 📁 Repository Structure
+
+Following recent organization and restructuring, the repository follows a clean, hierarchical structure:
+
+```
+ai-script-inventory/
+├── .github/                    # Automation and CI/CD workflows
+│   ├── scripts/               # Organization and utility scripts
+│   └── workflows/             # GitHub Actions workflows
+├── src/                       # Core application modules
+│   └── ai_script_inventory/   # Main package with Superhuman Terminal
+│       ├── ai/                # Intent recognition and NLP modules
+│       └── superhuman_terminal.py  # Main terminal interface
+├── python_scripts/            # Python utilities and tools
+│   └── archives/              # Historical versions and backups
+├── shell_scripts/             # Shell utilities and automation
+├── docs/                      # Comprehensive documentation
+│   ├── CONTRIBUTING.md        # Contribution guidelines
+│   ├── SECURITY.md           # Security policies and procedures
+│   └── WORKFLOW.md           # Development workflow documentation
+├── text_files/                # Reports, configuration, and data
+│   ├── archives/              # Historical files and backups
+│   └── reports/               # Current reports and analysis
+├── tests/                     # Test suite
+├── README.md                  # This file - main project documentation
+├── SECURITY.md               # Security policy (root level)
+├── SUPPORT.md                # Support and help information
+├── TERMINAL_GUIDE.md         # Superhuman Terminal developer guide
+└── pyproject.toml            # Project configuration and dependencies
+```
+
+### Key Features of the Organization
+
+- **📦 Modular Structure**: Clear separation between source code, scripts, documentation, and data
+- **🗃️ Archive System**: Historical files preserved in dedicated archives/ subdirectories
+- **🔒 Enhanced Privacy**: Improved .gitignore patterns protecting sensitive data
+- **📚 Comprehensive Documentation**: Dedicated docs/ directory with specialized guides
+- **🧪 Robust Testing**: Organized test suite with coverage for all major components
+
+---
+
+## 🚀 Quick Start & Installation
+
+### Prerequisites
+
+- **Python 3.8+** (Python 3.11+ recommended)
+- **Git** for version control
+- **Terminal/Command Line** access
+
+### Installation Steps
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/JLWard429/ai-script-inventory.git
+   cd ai-script-inventory
+   ```
+
+2. **Install Core Dependencies**
+   ```bash
+   # Install core runtime dependencies
+   pip install -e .
+   
+   # For development work, install dev dependencies
+   pip install -e ".[dev]"
+   ```
+
+3. **Download spaCy Language Model** (Required for Terminal)
+   ```bash
+   python -m spacy download en_core_web_sm
+   ```
+
+4. **Set Up Development Environment** (Optional)
+   ```bash
+   # Install pre-commit hooks for code quality
+   pre-commit install
+   
+   # Run setup script for additional dev tools
+   python setup_dev.py
+   ```
+
+5. **Verify Installation**
+   ```bash
+   # Test the Superhuman AI Terminal
+   python src/ai_script_inventory/superhuman_terminal.py
+   
+   # Run the test suite
+   python -m pytest tests/ -v
+   ```
+
+### First Steps
+
+1. **Explore the Terminal**: Launch `python terminal.py` and try:
+   - `help` - See available commands
+   - `list all Python files` - Explore the codebase
+   - `what can you do?` - Learn about capabilities
+
+2. **Review Documentation**: Check the `docs/` directory for:
+   - [Contributing Guidelines](docs/CONTRIBUTING.md)
+   - [Security Policy](docs/SECURITY.md) 
+   - [Workflow Documentation](docs/WORKFLOW.md)
+
+3. **Try the Organization Tools**: 
+   ```bash
+   # Auto-organize files (dry run)
+   python .github/scripts/organize_ai_scripts.py --dry-run
+   ```
+
+---
+
+## 🛠️ Development & Contribution
+
+### Development Workflow
+
+This repository uses a **superhuman AI workflow system** that automates code quality, security, and organization:
+
+- **🔧 Automated Code Quality**: Black formatting, isort imports, flake8 linting, mypy type checking
+- **🔒 Security Scanning**: Bandit security analysis, dependency vulnerability scanning
+- **🧪 Comprehensive Testing**: pytest with coverage reporting, syntax validation
+- **📁 Smart Organization**: Automated file categorization and archive management
+
+### Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](docs/CONTRIBUTING.md) for:
+- Development environment setup
+- Code style and quality standards  
+- Pull request process
+- Testing requirements
+- Security guidelines
+
+### Quick Development Commands
+
+```bash
+# Format and lint code
+python -m black .
+python -m isort .
+python -m flake8
+
+# Run security scans
+python -m bandit -r python_scripts/ src/
+
+# Run tests with coverage
+python -m pytest tests/ --cov=src --cov-report=html
+
+# Use the development tools helper
+python python_scripts/dev_tools.py --help
+```
+
+---
+
+## 🔒 Security & Privacy
+
+This repository implements **enterprise-grade security**:
+
+- **🛡️ Multi-layer Security Scanning**: CodeQL, Bandit, Safety, Trivy
+- **🔍 Continuous Monitoring**: Automated vulnerability detection and reporting
+- **🔐 Privacy Protection**: All AI processing happens locally with no cloud dependencies
+- **📊 Security Metrics**: Comprehensive security monitoring and reporting
+
+For security issues, see our [Security Policy](SECURITY.md) for responsible disclosure.
+
+---
+
+## 📞 Support & Community
+
+- **📚 Documentation**: Start with files in the `docs/` directory
+- **💬 Discussions**: [GitHub Discussions](https://github.com/JLWard429/ai-script-inventory-/discussions)
+- **🐛 Bug Reports**: [GitHub Issues](https://github.com/JLWard429/ai-script-inventory-/issues)
+- **🛟 Support**: See [SUPPORT.md](SUPPORT.md) for help options
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🎉 Acknowledgments
+
+- **spaCy**: Powers the natural language understanding in the Superhuman Terminal
+- **GitHub Actions**: Enables our automated workflow system
+- **Contributors**: Thank you to everyone who has contributed to making this project better!
+
+---
+
+*The AI Script Inventory represents a new paradigm in developer tooling - combining enterprise-grade automation with privacy-respecting AI assistance for a truly superhuman development experience.*
