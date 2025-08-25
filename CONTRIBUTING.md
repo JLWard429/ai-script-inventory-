@@ -406,10 +406,6 @@ Every contribution, no matter how small, makes this project better. Thank you fo
 ---
 
 **Questions?** Open an issue or start a discussion. We're here to help! 🚀
-- Python 3.9 or higher
-- Git
-- A GitHub account
-- Basic familiarity with command line tools
 
 ### Setting Up Your Development Environment
 
