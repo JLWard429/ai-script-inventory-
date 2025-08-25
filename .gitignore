@@ -147,3 +147,18 @@ ipython_config.py
 *.bak
 *.backup
 *~
+
+# Privacy-sensitive files
+chat gpt memoeries
+chat\ gpt\ memoeries  
+*memoeries*
+*memories*
+*.memory
+*.personal
+*.private
+
+# Large temporary inventories
+*_filetree_*.txt
+*_script_list_*.txt
+temp_inventory_*
+bulk_catalog_*
