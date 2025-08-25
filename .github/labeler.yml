@@ -1,0 +1,105 @@
+# Labeler configuration for automatically applying labels to pull requests
+# Based on file path patterns. For more information, see:
+# https://github.com/actions/labeler
+
+# Documentation changes
+documentation:
+  - changed-files:
+    - any-glob-to-any-file: 
+      - 'docs/**/*'
+      - '*.md'
+      - 'README*'
+      - 'CONTRIBUTING*'
+      - 'CODE_OF_CONDUCT*'
+      - 'SECURITY*'
+      - 'LICENSE*'
+
+# Python scripts and source code
+python:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'python_scripts/**/*'
+      - 'src/**/*.py'
+      - '*.py'
+      - 'pyproject.toml'
+      - 'requirements*.txt'
+      - 'setup.py'
+
+# Shell scripts
+shell:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'shell_scripts/**/*'
+      - '**/*.sh'
+
+# GitHub workflows and automation
+workflows:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '.github/workflows/**/*'
+      - '.github/scripts/**/*'
+      - '.github/**/*.yml'
+      - '.github/**/*.yaml'
+
+# Testing related changes
+testing:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'tests/**/*'
+      - 'test_*.py'
+      - '*_test.py'
+      - 'pytest.ini'
+      - '.pytest_cache/**/*'
+
+# Security related changes
+security:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'SECURITY*'
+      - '.github/SECURITY*'
+      - 'bandit-report.json'
+      - '.bandit'
+      - 'safety-report.json'
+
+# Configuration files
+configuration:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'pyproject.toml'
+      - '.pre-commit-config.yaml'
+      - '.gitignore'
+      - '.github/dependabot.yml'
+      - '.github/codeql-config.yml'
+      - 'text_files/**/*.json'
+      - 'text_files/**/*.yaml'
+      - 'text_files/**/*.yml'
+      - 'text_files/**/*.toml'
+
+# Dependencies and package management
+dependencies:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'requirements*.txt'
+      - 'pyproject.toml'
+      - 'setup.py'
+      - 'setup.cfg'
+      - 'Pipfile*'
+      - 'poetry.lock'
+
+# AI/ML related features
+ai-ml:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'src/ai_script_inventory/ai/**/*'
+      - 'superhuman_terminal.py'
+      - 'terminal.py'
+      - '**/intent.py'
+
+# Terminal and CLI features
+terminal:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'superhuman_terminal.py'
+      - 'terminal.py'
+      - 'TERMINAL_GUIDE.md'
+      - 'src/ai_script_inventory/terminal.py'
