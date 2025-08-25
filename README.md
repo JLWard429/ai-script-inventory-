@@ -36,13 +36,23 @@ python superhuman_terminal.py
 ### Example Commands
 
 ```
-🤖 > help                          # Show available commands
-🤖 > run test_script.py            # Execute a Python script
-🤖 > list all Python files         # List files by type
-🤖 > show README.md                # Display file contents
-🤖 > summarize CONTRIBUTING.md     # Get a summary of a document
-🤖 > search for test files         # Search for files containing text
+🤖 > help                                    # Show available commands
+🤖 > run security scan on Python files       # Execute security analysis
+🤖 > list all Python files                   # List files by type
+🤖 > show README.md                          # Display file contents
+🤖 > summarize the latest README             # Auto-find and summarize latest docs
+🤖 > search for test files                   # Search for files containing text
+🤖 > what can you do?                        # Get AI assistance and guidance
+🤖 > how do I get started?                   # Onboarding help
 ```
+
+### Advanced Features
+
+- **🧠 spaCy-Powered NLP**: Advanced natural language understanding with entity extraction
+- **🛡️ Security Integration**: Direct access to security scanning tools
+- **📊 Smart Summarization**: Automatic latest file detection and content analysis
+- **🔍 Intelligent Search**: Context-aware file finding and content search
+- **💬 AI Chat Assistant**: Conversational help and repository guidance
 
 ---
 

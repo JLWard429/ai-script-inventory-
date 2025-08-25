@@ -617,34 +617,95 @@ I'm your Superhuman AI Terminal! Here's what I can help you with:
             """
             )
 
-        # Getting started questions
+        # Best practices questions
         elif any(
             phrase in user_input
-            for phrase in ["how to start", "get started", "begin", "first steps"]
+            for phrase in [
+                "best practices",
+                "organize scripts",
+                "how to organize",
+                "script organization",
+                "file organization"
+            ]
         ):
             print(
                 """
-🎯 **Getting Started with the AI Script Inventory:**
+📋 **Best Practices for Script Organization:**
 
-1. **Explore what's available:**
-   • Say "list all files" to see everything
-   • Try "list Python scripts" for specific file types
-   
-2. **Check out documentation:**
-   • "show README.md" for repository overview
-   • "show TERMINAL_GUIDE.md" for detailed terminal info
-   
-3. **Run some scripts:**
-   • "run organize_ai_scripts.py" to organize files
-   • "run test_terminal.py" to test the system
-   
-4. **Explore the repository structure:**
-   • `python_scripts/` - Python tools and utilities
-   • `shell_scripts/` - Bash scripts and CLI tools  
-   • `docs/` - Documentation and guides
-   • `.github/scripts/` - Automation and CI tools
+🗂️ **File Structure:**
+  • Keep Python scripts in `python_scripts/`
+  • Put shell scripts in `shell_scripts/`
+  • Store documentation in `docs/`
+  • Use descriptive, lowercase filenames with underscores
 
-💡 **Pro tip:** Use natural language! Say things like "summarize the latest README" or "search for files about testing"
+🔧 **Development Workflow:**
+  • Use `python dev_tools.py setup` to prepare your environment
+  • Run `python dev_tools.py format` before committing
+  • Execute `python dev_tools.py security` to check for vulnerabilities
+  • Test with `python dev_tools.py test` regularly
+
+📝 **Documentation:**
+  • Include docstrings in all Python functions
+  • Add usage examples in script headers
+  • Keep README files up to date
+  • Document any dependencies clearly
+
+🛡️ **Security & Quality:**
+  • Use type hints in Python code
+  • Follow PEP 8 style guidelines
+  • Run security scans regularly
+  • Keep dependencies updated
+
+💡 **Automation:**
+  • Let the auto-organization script handle file placement
+  • Use pre-commit hooks for quality checks
+  • Leverage the CI/CD pipeline for testing
+            """
+            )
+
+        # Repository architecture questions  
+        elif any(
+            phrase in user_input
+            for phrase in [
+                "how does this work",
+                "architecture",
+                "repository structure", 
+                "system design"
+            ]
+        ):
+            print(
+                """
+🏗️ **Repository Architecture:**
+
+🤖 **Superhuman AI Terminal:**
+  • spaCy-powered natural language processing
+  • Intent recognition with confidence scoring
+  • Local-only processing (no cloud dependencies)
+  • Action handlers for different command types
+
+🔄 **Automation System:**
+  • Auto-organization of files by type
+  • CI/CD pipelines for quality and security
+  • Pre-commit hooks for code formatting
+  • Automated testing and coverage reports
+
+🛡️ **Security & Quality Framework:**
+  • Bandit security scanning
+  • Safety dependency vulnerability checks
+  • Multi-platform testing
+  • CodeQL analysis and SARIF reporting
+
+📁 **File Organization Logic:**
+  • `.py` files → `python_scripts/`
+  • `.sh` files → `shell_scripts/`
+  • `.md` files → `docs/`
+  • Config/data files → `text_files/`
+
+🔧 **Development Tools Integration:**
+  • Unified dev_tools.py for common tasks
+  • Environment setup automation
+  • Comprehensive linting and formatting
+  • Test execution with coverage reporting
             """
             )
 
@@ -723,7 +784,96 @@ This terminal gives you a natural language interface to interact with all these 
             """
             )
 
-        # Tool-specific questions
+        # Troubleshooting and help questions
+        elif any(
+            phrase in user_input
+            for phrase in [
+                "not working",
+                "error",
+                "problem",
+                "trouble",
+                "help me",
+                "broken"
+            ]
+        ):
+            print(
+                """
+🔧 **Troubleshooting Common Issues:**
+
+❌ **Command Not Recognized:**
+  • Try rephrasing with simpler language
+  • Use keywords like "run", "list", "show", "summarize"
+  • Type "help" for available commands
+
+📁 **File Not Found:**
+  • Check file names with "list files"
+  • Files are organized automatically by type
+  • Use partial names - I'll try to find matches
+
+🚀 **Script Execution Issues:**
+  • Ensure scripts have proper permissions
+  • Check for required dependencies
+  • Try "run dev_tools.py setup" to install requirements
+
+🧠 **Intent Recognition Problems:**
+  • Be specific about what you want to do
+  • Include action words (run, show, list, search)
+  • Ask conversational questions for general help
+
+💡 **Quick Fixes:**
+  • Type "help" for command reference
+  • Use "list all files" to see what's available
+  • Try "what can you do?" for capabilities overview
+  • Ask "how do I get started?" for guidance
+            """
+            )
+
+        # Command examples and usage
+        elif any(
+            phrase in user_input
+            for phrase in [
+                "commands",
+                "syntax", 
+                "how to use",
+                "examples",
+                "usage"
+            ]
+        ):
+            print(
+                """
+📚 **Command Examples & Usage:**
+
+🚀 **Running Scripts:**
+  • "run security scan" - Execute security analysis
+  • "run dev_tools.py test" - Run test suite
+  • "run organize_ai_scripts.py" - Organize files
+
+📁 **File Operations:**
+  • "list all Python files" - Show Python scripts
+  • "list files in python_scripts" - Directory-specific listing
+  • "show README.md" - Display file contents
+  • "search for test files" - Find files with content
+
+📊 **Analysis & Summarization:**
+  • "summarize the latest README" - Auto-find and summarize
+  • "summarize CONTRIBUTING.md" - Specific file summary
+  • "preview test_script.py" - Quick file preview
+
+🤖 **Conversational Queries:**
+  • "What can you do?" - Learn about capabilities
+  • "How do I get started?" - Onboarding guidance
+  • "What are best practices?" - Development advice
+  • "How does this work?" - Architecture overview
+
+💡 **Natural Language Tips:**
+  • Be descriptive: "run security scan on Python files"
+  • Use scope words: "all", "latest", "recent"
+  • Specify locations: "in shell_scripts directory"
+  • Ask questions naturally: "Can you help me...?"
+            """
+            )
+
+        # Tool-specific questions about spaCy and NLP
         elif any(
             phrase in user_input for phrase in ["spacy", "nlp", "natural language"]
         ):
@@ -731,7 +881,7 @@ This terminal gives you a natural language interface to interact with all these 
                 """
 🧠 **About spaCy Integration:**
 
-I now use spaCy for advanced natural language understanding:
+I use spaCy for advanced natural language understanding:
 
 ⚡ **Enhanced Capabilities:**
   • Better intent recognition from natural language
