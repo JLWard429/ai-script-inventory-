@@ -406,23 +406,6 @@ Every contribution, no matter how small, makes this project better. Thank you fo
 ---
 
 **Questions?** Open an issue or start a discussion. We're here to help! 🚀
-# Contributing to AI Script Inventory
-
-Thank you for your interest in contributing to the AI Script Inventory! This document provides guidelines and information for contributors.
-
-## 🌟 Ways to Contribute
-
-- **Report bugs** by opening detailed [bug reports](https://github.com/JLWard429/ai-script-inventory-/issues/new?template=bug_report.yml)
-- **Suggest features** through [feature requests](https://github.com/JLWard429/ai-script-inventory-/issues/new?template=feature_request.yml)
-- **Improve documentation** by fixing errors or adding clarifications
-- **Submit code** via pull requests for bug fixes or new features
-- **Help with testing** by reviewing pull requests
-- **Share scripts** by adding your AI-related scripts to the inventory
-
-## 🚀 Getting Started
-
-### Prerequisites
-
 - Python 3.9 or higher
 - Git
 - A GitHub account
