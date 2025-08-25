@@ -14,6 +14,7 @@ sys.path.insert(0, current_dir)
 if __name__ == "__main__":
     try:
         from superhuman_terminal import main
+
         main()
     except ImportError as e:
         print(f"❌ Error importing superhuman_terminal: {e}")
