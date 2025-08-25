@@ -147,3 +147,9 @@ ipython_config.py
 *.bak
 *.backup
 *~
+
+# Privacy-sensitive files
+chat gpt memoeries
+*memories*
+*personal*
+*private*
