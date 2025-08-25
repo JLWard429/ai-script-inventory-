@@ -53,4 +53,3 @@ def test_workflow_files():
     # Check that key workflow files exist
     assert (workflows_dir / "auto_organize.yml").exists()
     assert (workflows_dir / "code-quality.yml").exists()
-    assert (workflows_dir / "ci-cd.yml").exists()

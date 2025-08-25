@@ -47,7 +47,7 @@ def test_workflow_files_exist():
     workflows_dir = Path(".github/workflows")
     assert workflows_dir.exists()
 
-    expected_workflows = ["auto_organize.yml", "code-quality.yml", "ci-cd.yml"]
+    expected_workflows = ["auto_organize.yml", "code-quality.yml"]
 
     for workflow in expected_workflows:
         workflow_path = workflows_dir / workflow
@@ -69,7 +69,7 @@ def test_configuration_files_exist():
 
 def test_documentation_files_exist():
     """Test that all documentation files exist."""
-    docs = ["README.md", "docs/WORKFLOW.md", "docs/CONTRIBUTING.md", "docs/SECURITY.md"]
+    docs = ["README.md", "docs/WORKFLOW.md", "CONTRIBUTING.md", "docs/SECURITY.md", "SUPPORT.md"]
 
     for doc in docs:
         doc_path = Path(doc)
@@ -77,6 +77,16 @@ def test_documentation_files_exist():
 
         # Check that files are not empty
         assert doc_path.stat().st_size > 0, f"Documentation file {doc} is empty"
+
+
+def test_github_community_files():
+    """Test that GitHub community files exist."""
+    community_files = [".github/CODEOWNERS"]
+    
+    for file in community_files:
+        file_path = Path(file)
+        assert file_path.exists(), f"GitHub community file {file} not found"
+        assert file_path.stat().st_size > 0, f"GitHub community file {file} is empty"
 
 
 def test_directory_structure():
