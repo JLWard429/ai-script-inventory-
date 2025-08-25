@@ -8,7 +8,7 @@ version = "1.0.0"
 description = "A collection of AI-related scripts with superhuman workflow automation"
 readme = "README.md"
 requires-python = ">=3.8"
-license = {text = "MIT"}
+license = "MIT"
 authors = [
     {name = "JLWard429", email = "JLWard429@users.noreply.github.com"}
 ]
@@ -16,7 +16,6 @@ keywords = ["ai", "scripts", "automation", "workflow"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
@@ -26,7 +25,9 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
-dependencies = []
+dependencies = [
+    "spacy>=3.4.0,<4.0.0",
+]
 
 [project.optional-dependencies]
 dev = [
@@ -37,9 +38,19 @@ dev = [
     "pytest>=7.0.0",
     "pytest-cov>=4.0.0",
     "pre-commit>=3.0.0",
-    "bandit>=1.7.0",
-    "safety>=2.3.0",
+    "bandit>=1.7.5",
+    "safety>=3.0.0",
+    "pyyaml>=6.0.0",
 ]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ai*", "superhuman_terminal", "terminal"]
+exclude = ["tests*", "demos*", "reports*", "temp_files*", "logs*", "labels*", "shell_scripts*", "python_scripts*", "text_files*"]
+
+[project.scripts]
+superhuman-terminal = "superhuman_terminal:main"
+ai-terminal = "terminal:main"
 
 [project.urls]
 Homepage = "https://github.com/JLWard429/ai-script-inventory-"

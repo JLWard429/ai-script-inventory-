@@ -143,6 +143,11 @@ secrets/
 profile_default/
 ipython_config.py
 
+# Temporary files and demos
+temp_files/
+reports/
+demos/
+
 # Backup files
 *.bak
 *.backup
