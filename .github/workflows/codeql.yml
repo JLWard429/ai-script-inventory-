@@ -175,7 +175,7 @@ jobs:
             build-mode: autobuild
           - language: cpp
             os: ubuntu-latest
-            build-mode: autobuild
+            build-mode: manual
           - language: csharp
             os: ubuntu-latest
             build-mode: autobuild
