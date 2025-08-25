@@ -1,4 +1,3 @@
-
 # 🤝 Contributing to AI Script Inventory
 
 Thank you for your interest in contributing to the AI Script Inventory! This project is powered by a superhuman AI workflow system that makes contributing easier, safer, and more enjoyable.
