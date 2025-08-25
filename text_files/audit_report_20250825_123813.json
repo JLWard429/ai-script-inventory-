@@ -1,0 +1,90 @@
+{
+  "timestamp": "2025-08-25T12:33:23.545488",
+  "directories": {
+    "python_scripts": {
+      "exists": true,
+      "file_count": 10,
+      "files": [
+        "README.md",
+        "test_script_20250825090934.py",
+        ".gitkeep",
+        "terminal.py",
+        "test_script.py",
+        "test_validation.py",
+        "dev_tools.py",
+        "superhuman_terminal.py",
+        "test_script_20250825090428.py",
+        "test_terminal.py"
+      ]
+    },
+    "shell_scripts": {
+      "exists": true,
+      "file_count": 4,
+      "files": [
+        "README.md",
+        "setup_dev_env.sh",
+        ".gitkeep",
+        "activate_dev.sh"
+      ]
+    },
+    "docs": {
+      "exists": true,
+      "file_count": 23,
+      "files": [
+        "Copilot-CLI-Commands_Version7.md",
+        "CODEQL_SETUP.md",
+        "PR_INSTRUCTIONS.md",
+        "Copilot-CLI-Commands_Version7_20250825090428.md",
+        "README.md",
+        "README_20250825090934.md",
+        "SECURITY_20250825_123110.md",
+        "Copilot-CLI-Commands_20250825090934.md",
+        ".gitkeep",
+        "README_20250824191100.md",
+        "README_20250825_123110.md",
+        "Copilot-CLI-Commands_20250825090428.md",
+        "TERMINAL_GUIDE.md",
+        "README_20250824_192123.md",
+        "README_20250825_123323.md",
+        "README_20250824_191626.md",
+        "IMPLEMENTATION_SUMMARY.md",
+        "WORKFLOW.md",
+        "Copilot-CLI-Commands_Version7_20250825090934.md",
+        "SECURITY.md",
+        "CONTRIBUTING.md",
+        "Copilot-CLI-Commands.md",
+        "README_20250825090428.md"
+      ]
+    },
+    "text_files": {
+      "exists": true,
+      "file_count": 10,
+      "files": [
+        "my_ai_script_list_20250825090428.txt",
+        "README.md",
+        "my_ai_script_list_20250825090934.txt",
+        ".gitkeep",
+        "my_ai_script_list.txt",
+        "bandit-report.json",
+        "filetree.txt",
+        "audit_report.json",
+        "filetree_20250825090428.txt",
+        "filetree_20250825090934.txt"
+      ]
+    }
+  },
+  "file_counts": {
+    ".py": 799,
+    ".md": 29,
+    ".sh": 2,
+    ".txt": 42,
+    ".json": 155,
+    ".yaml": 1,
+    ".yml": 42,
+    ".cfg": 2,
+    ".ini": 0,
+    ".log": 1
+  },
+  "issues": [],
+  "recommendations": []
+}
