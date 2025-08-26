@@ -2,11 +2,13 @@
 """
 Superman AI Orchestrator
 
-Enhanced AI terminal with advanced features including internet connectivity checks,
-memory system, and code analysis capabilities.
+OpenAI-powered AI terminal that acts as the primary orchestrator for all user interactions.
+All user input is sent to OpenAI (ChatGPT) for processing. OpenAI determines whether to:
+1. Respond directly for general conversation, questions, and advice
+2. Delegate to local repository handlers for specific tasks (file management, script running, etc.)
 
-This extends the SuperhumanTerminal with additional orchestration features
-and startup connectivity validation.
+This extends the SuperhumanTerminal with OpenAI integration while maintaining
+the existing local capabilities as a fallback and for delegated tasks.
 """
 
 import os
@@ -21,6 +23,12 @@ sys.path.insert(0, str(Path(__file__).parent / "src"))
 
 from ai_script_inventory.ai.intent import IntentType, create_intent_recognizer
 from ai_script_inventory.superhuman_terminal import SuperhumanTerminal
+
+try:
+    import openai
+    HAS_OPENAI = True
+except ImportError:
+    HAS_OPENAI = False
 
 
 class MemorySystem:
@@ -211,9 +219,14 @@ class CodeAnalyzer:
 
 class SupermanOrchestrator(SuperhumanTerminal):
     """
-    Superman AI Orchestrator that extends SuperhumanTerminal with additional features.
+    Superman AI Orchestrator that uses OpenAI as the primary interface.
 
-    Includes internet connectivity checking, memory system, and code analysis.
+    All user input is processed by OpenAI first, which acts as the central coordinator:
+    - For general conversation and advice: OpenAI responds directly
+    - For repository tasks: OpenAI delegates to local handlers (file ops, script running, etc.)
+    - Includes fallback to local spaCy-based processing when OpenAI is unavailable
+    
+    Also includes internet connectivity checking, memory system, and code analysis.
     """
 
     def __init__(self):
@@ -225,6 +238,10 @@ class SupermanOrchestrator(SuperhumanTerminal):
         self.code_analyzer = CodeAnalyzer()
         self.superman_mode = False
         self.internet_available = False
+        self.openai_client = None
+
+        # Initialize OpenAI client if available
+        self._initialize_openai()
 
         # Add enhanced action handlers
         if hasattr(self, "action_handlers"):
@@ -233,6 +250,29 @@ class SupermanOrchestrator(SuperhumanTerminal):
                     IntentType.AI_CHAT: self.handle_ai_chat_enhanced,
                 }
             )
+
+    def _initialize_openai(self) -> None:
+        """Initialize OpenAI client if API key is available."""
+        if not HAS_OPENAI:
+            print("⚠️  OpenAI library not available. Install with: pip install openai")
+            return
+
+        api_key = os.environ.get("OPENAI_API_KEY", "").strip()
+        if not api_key:
+            print("ℹ️  OpenAI API key not configured")
+            print("   Set OPENAI_API_KEY environment variable for AI orchestration")
+            return
+
+        if not api_key.startswith("sk-"):
+            print("⚠️  OpenAI API key does not start with 'sk-' - may be invalid format")
+            return
+
+        try:
+            self.openai_client = openai.OpenAI(api_key=api_key)
+            print("✅ OpenAI integration enabled")
+        except Exception as e:
+            print(f"❌ Failed to initialize OpenAI client: {e}")
+            self.openai_client = None
 
     def check_internet_connectivity(self) -> bool:
         """
@@ -328,6 +368,92 @@ class SupermanOrchestrator(SuperhumanTerminal):
         self.superman_mode = False
         print("👤 Superman mode deactivated")
 
+    def _get_system_prompt(self) -> str:
+        """Get system prompt for OpenAI to understand repository context and capabilities."""
+        return """You are the Superman AI Orchestrator for an AI Script Inventory repository. You serve as the primary interface between users and the repository's capabilities.
+
+REPOSITORY CONTEXT:
+- This is a Python repository for organizing and managing AI-related scripts
+- Contains organized directories: python_scripts/, shell_scripts/, docs/, text_files/
+- Has a Superhuman AI Terminal with local spaCy-based intent recognition
+- Includes automation, security scanning, and file organization tools
+
+YOUR ROLE:
+1. For GENERAL CONVERSATION, QUESTIONS, or ADVICE: Respond directly with helpful information
+2. For REPOSITORY TASKS (file operations, script running, etc.): Delegate to the local system
+
+AVAILABLE REPOSITORY ACTIONS:
+- run_script: Execute Python/shell scripts (e.g., "run organize_ai_scripts.py")
+- list: List files by type (e.g., "list Python files", "list all scripts")
+- show: Display file contents (e.g., "show README.md")
+- preview: Quick file preview
+- search: Search for files (e.g., "search for test files")
+- summarize: Summarize document content
+- help: Show help information
+
+RESPONSE FORMAT:
+For repository tasks, respond with JSON: {"action": "ACTION_TYPE", "target": "TARGET", "params": {...}}
+For general conversation, respond normally with helpful text.
+
+EXAMPLES:
+User: "How do I organize my Python scripts?"
+Response: Direct helpful advice about script organization
+
+User: "run the security scan"
+Response: {"action": "run_script", "target": "security scan", "params": {"type": "security"}}
+
+User: "show me the README file"
+Response: {"action": "show", "target": "README.md", "params": {}}
+
+Remember: You are the primary orchestrator. Provide helpful responses for general queries and delegate repository tasks to the local system."""
+
+    def _process_with_openai(self, user_input: str) -> tuple[bool, str]:
+        """
+        Process user input with OpenAI and determine response.
+        
+        Returns:
+            tuple[bool, str]: (is_delegation, response)
+                - is_delegation: True if this should be delegated to local handlers
+                - response: Either the direct response or delegation JSON
+        """
+        if not self.openai_client:
+            # Fallback to local processing
+            return False, ""
+
+        try:
+            # Add conversation history context
+            messages = [{"role": "system", "content": self._get_system_prompt()}]
+            
+            # Add recent context from memory
+            recent_context = self.memory.get_recent_context(3)
+            if recent_context:
+                messages.append({"role": "assistant", "content": f"Recent context: {recent_context}"})
+            
+            messages.append({"role": "user", "content": user_input})
+
+            response = self.openai_client.chat.completions.create(
+                model="gpt-3.5-turbo",
+                messages=messages,
+                temperature=0.7,
+                max_tokens=1000
+            )
+
+            ai_response = response.choices[0].message.content.strip()
+            
+            # Store in memory
+            self.memory.remember(user_input, ai_response)
+
+            # Check if this is a delegation (JSON response) or direct response
+            if ai_response.startswith('{') and '"action"' in ai_response:
+                return True, ai_response
+            else:
+                return False, ai_response
+
+        except Exception as e:
+            print(f"⚠️  OpenAI request failed: {e}")
+            print("   Falling back to local processing...")
+            return False, ""
+
     def handle_ai_chat_enhanced(self, intent) -> None:
         """Enhanced AI chat handler with memory and context."""
         # Add to memory context
@@ -337,7 +463,7 @@ class SupermanOrchestrator(SuperhumanTerminal):
         self.handle_ai_chat(intent)
 
     def run(self) -> None:
-        """Override run method to include startup checks."""
+        """Override run method to include startup checks and OpenAI-first processing."""
         # Perform startup connectivity check
         self.check_internet_connectivity()
 
@@ -350,8 +476,124 @@ class SupermanOrchestrator(SuperhumanTerminal):
         print("🦸 Superman AI Orchestrator Ready!")
         print("=" * 50)
 
-        # Call parent run method
-        super().run()
+        # Custom welcome message for OpenAI-first approach
+        self.print_welcome_superman()
+
+        while self.running:
+            try:
+                user_input = input("\n🦸 > ").strip()
+
+                if not user_input:
+                    continue
+
+                # Add to history
+                self.history.append(user_input)
+
+                # Try OpenAI first
+                if self.openai_client:
+                    is_delegation, ai_response = self._process_with_openai(user_input)
+                    
+                    if is_delegation:
+                        # Parse JSON response and delegate to local handlers
+                        self._handle_openai_delegation(ai_response, user_input)
+                    else:
+                        # Direct response from OpenAI
+                        if ai_response:
+                            print(f"\n🤖 {ai_response}")
+                        else:
+                            # Fallback to local processing
+                            self._fallback_to_local_processing(user_input)
+                else:
+                    # No OpenAI available, use local processing
+                    self._fallback_to_local_processing(user_input)
+
+            except KeyboardInterrupt:
+                print("\n\n👋 Goodbye!")
+                break
+            except EOFError:
+                print("\n\n👋 Goodbye!")
+                break
+            except Exception as e:
+                print(f"❌ Error: {e}")
+
+    def print_welcome_superman(self):
+        """Print welcome message for Superman orchestrator."""
+        print("🦸 Welcome to Superman AI Orchestrator!")
+        print("=" * 50)
+        if self.openai_client:
+            print("🤖 Powered by OpenAI GPT for intelligent conversation and task coordination")
+            print("I can help you with:")
+            print("  • Answer questions about AI, programming, and best practices")
+            print("  • Execute repository tasks (running scripts, file management)")
+            print("  • Provide guidance on script organization and development")
+            print("  • Explain complex topics and provide detailed assistance")
+        else:
+            print("⚠️  Running in local-only mode (OpenAI not available)")
+            print("I can help you with:")
+        
+        print("  • Running scripts (e.g., 'run organize_ai_scripts.py')")
+        print("  • File operations (e.g., 'list Python files', 'show README.md')")
+        print("  • Code analysis and organization")
+        print("  • Security scanning and quality checks")
+        print("\n💡 Try natural language like:")
+        print("  • 'What are the best practices for organizing Python scripts?'")
+        print("  • 'Run a security scan on all Python files'")
+        print("  • 'Show me what's in the repository'")
+        print("  • 'How should I structure my AI project?'")
+        print("\nType your request or question, or 'exit' to quit.")
+        print("=" * 50)
+
+    def _handle_openai_delegation(self, ai_response: str, original_input: str) -> None:
+        """Handle delegation from OpenAI to local handlers."""
+        try:
+            import json
+            delegation = json.loads(ai_response)
+            action = delegation.get("action", "").lower()
+            target = delegation.get("target", "")
+            params = delegation.get("params", {})
+
+            # Map OpenAI actions to local intent types
+            action_mapping = {
+                "run_script": IntentType.RUN_SCRIPT,
+                "list": IntentType.LIST,
+                "show": IntentType.SHOW,
+                "preview": IntentType.PREVIEW,
+                "search": IntentType.SEARCH,
+                "summarize": IntentType.SUMMARIZE,
+                "help": IntentType.HELP,
+                "exit": IntentType.EXIT,
+            }
+
+            intent_type = action_mapping.get(action, IntentType.UNKNOWN)
+            
+            # Create intent object for local handler
+            from ai_script_inventory.ai.intent import Intent
+            intent = Intent(
+                type=intent_type,
+                confidence=1.0,  # High confidence since it came from OpenAI
+                target=target,
+                parameters=params,
+                original_input=original_input
+            )
+
+            # Call the appropriate handler
+            handler = self.action_handlers.get(intent.type, self.handle_unknown)
+            handler(intent)
+
+        except json.JSONDecodeError:
+            print("⚠️  Error parsing OpenAI delegation response")
+            self._fallback_to_local_processing(original_input)
+        except Exception as e:
+            print(f"⚠️  Error in delegation: {e}")
+            self._fallback_to_local_processing(original_input)
+
+    def _fallback_to_local_processing(self, user_input: str) -> None:
+        """Fallback to local spaCy-based processing when OpenAI is not available."""
+        print("🔄 Processing locally...")
+        
+        # Use parent class intent recognition
+        intent = self.intent_recognizer.recognize(user_input)
+        self.handle_intent(intent)
 
 
 def main() -> None:
