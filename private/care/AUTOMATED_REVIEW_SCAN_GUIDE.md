@@ -308,32 +308,51 @@ Evidence Standards Verification:
 
 #### Priority Scoring Algorithm
 ```python
+# Priority scoring constants for forensic medical investigation review queue
+CRITICAL_ERROR_WEIGHT = 100    # Weight for critical errors affecting patient safety/legal admissibility
+HIGH_ERROR_WEIGHT = 50         # Weight for high priority errors requiring urgent attention  
+MEDIUM_ERROR_WEIGHT = 20       # Weight for medium priority errors with moderate impact
+
+EVIDENCE_CATEGORY_WEIGHT = 30      # Weight for evidence documents in legal proceedings
+MEDICAL_CATEGORY_WEIGHT = 25       # Weight for medical records and clinical documentation
+REGULATORY_CATEGORY_WEIGHT = 20    # Weight for regulatory compliance documents
+
+MAXIMUM_PRIORITY_SCORE = 200   # Cap to prevent score overflow and maintain queue balance
+
 def calculate_review_priority(document):
+    """
+    Calculate priority score for document review queue management.
+    
+    Args:
+        document: Document object with error counts, category, and risk scores
+        
+    Returns:
+        int: Priority score capped at MAXIMUM_PRIORITY_SCORE
+    """
     score = 0
     
-    # Error severity weighting
+    # Error severity weighting - critical issues take precedence
     if document.critical_errors > 0:
-        score += 100
+        score += CRITICAL_ERROR_WEIGHT
     if document.high_errors > 0:
-        score += 50
+        score += HIGH_ERROR_WEIGHT
     if document.medium_errors > 0:
-        score += 20
+        score += MEDIUM_ERROR_WEIGHT
     
-    # Document importance
+    # Document importance - legal and medical documents prioritized
     if document.category == "EVIDENCE":
-        score += 30
+        score += EVIDENCE_CATEGORY_WEIGHT
     elif document.category == "MEDICAL":
-        score += 25
+        score += MEDICAL_CATEGORY_WEIGHT
     elif document.category == "REGULATORY":
-        score += 20
+        score += REGULATORY_CATEGORY_WEIGHT
     
-    # Compliance risk
+    # Additional risk factors
     score += document.compliance_risk_score
-    
-    # Case priority
     score += document.case_priority_multiplier
     
-    return min(score, 200)  # Cap at maximum priority
+    # Ensure score doesn't exceed maximum to maintain queue balance
+    return min(score, MAXIMUM_PRIORITY_SCORE)
 ```
 
 #### Review Assignment Criteria
