@@ -59,6 +59,7 @@ DEPENDENCIES:
 
 ENVIRONMENT VARIABLES:
     - OPENAI_API_KEY: Required for OpenAI integration (optional feature)
+    - SUPERMAN_DEBUG: Set to "1", "true", or "yes" to enable debug logging
 
 To install dependencies:
     pip install -r requirements-dev.txt
@@ -67,10 +68,15 @@ To install dependencies:
 For OpenAI features (optional):
     pip install openai
     export OPENAI_API_KEY="your-api-key-here"
+
+For debugging OpenAI issues:
+    export SUPERMAN_DEBUG=1
+    python superman.py
 """
 
 import datetime
 import json
+import logging
 import os
 import sys
 import traceback
@@ -320,6 +326,20 @@ class SupermanOrchestrator(SuperhumanTerminal):
         # Fix repository root to be the actual repository root, not the src directory
         self.repository_root = str(Path(__file__).parent)
 
+        # Set up debug mode from environment variable
+        self.debug_mode = os.getenv("SUPERMAN_DEBUG", "").lower() in (
+            "1",
+            "true",
+            "yes",
+        )
+
+        # Set up logging if debug mode is enabled
+        if self.debug_mode:
+            logging.basicConfig(
+                level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s"
+            )
+            logging.debug("Superman debug mode enabled")
+
         # Initialize additional systems
         self.memory = MemorySystem()
         self.code_analyzer = CodeAnalyzer()
@@ -330,19 +350,51 @@ class SupermanOrchestrator(SuperhumanTerminal):
         if HAS_OPENAI:
             api_key = os.getenv("OPENAI_API_KEY")
             if api_key:
+                # Strip whitespace and validate API key
+                api_key = api_key.strip()
+                if self.debug_mode:
+                    # Safely log API key status without exposing the actual key
+                    key_prefix = api_key[:7] if len(api_key) >= 7 else "***"
+                    key_suffix = api_key[-4:] if len(api_key) >= 4 else "***"
+                    masked_key = (
+                        f"{key_prefix}...{key_suffix}" if len(api_key) > 11 else "***"
+                    )
+                    logging.debug(
+                        f"OpenAI API key found: {masked_key} (length: {len(api_key)})"
+                    )
+
+                if not api_key:
+                    print("⚠️ OpenAI API key is empty after stripping whitespace")
+                elif not api_key.startswith("sk-"):
+                    print(
+                        "⚠️ OpenAI API key does not start with 'sk-' - this may cause authentication errors"
+                    )
+                    if self.debug_mode:
+                        logging.debug(f"API key starts with: {api_key[:10]}...")
+
                 try:
                     self.openai_client = openai.OpenAI(api_key=api_key)
                     print("🤖 OpenAI integration enabled")
+                    if self.debug_mode:
+                        logging.debug("OpenAI client initialized successfully")
                 except Exception as e:
                     print(f"⚠️ OpenAI initialization failed: {e}")
+                    if self.debug_mode:
+                        logging.debug(
+                            f"OpenAI initialization error details: {traceback.format_exc()}"
+                        )
             else:
                 print(
                     "💡 Set OPENAI_API_KEY environment variable to enable AI conversations"
                 )
+                if self.debug_mode:
+                    logging.debug("No OPENAI_API_KEY environment variable found")
         else:
             print(
                 "💡 Install 'openai' package to enable AI conversations: pip install openai"
             )
+            if self.debug_mode:
+                logging.debug("OpenAI package not available")
 
         # Add new intent handlers for Superman-specific features
         if hasattr(self, "action_handlers"):
@@ -482,6 +534,11 @@ Type "exit superman" to return to normal terminal mode.
         # If in Superman mode and OpenAI is available, use it for complex queries
         if self.superman_mode and self.openai_client:
             try:
+                if self.debug_mode:
+                    logging.debug(
+                        f"Making OpenAI API call for input: {user_input[:50]}..."
+                    )
+
                 # Get conversation context
                 context = self.memory.get_recent_context(3)
 
@@ -511,10 +568,56 @@ let them know they can use commands like 'analyze [path]' for detailed code anal
 
                 ai_response = response.choices[0].message.content
                 print(f"\n🤖 Superman AI: {ai_response}")
+
+                if self.debug_mode:
+                    logging.debug(
+                        f"OpenAI API call successful, response length: {len(ai_response)}"
+                    )
+
                 return ai_response
 
             except Exception as e:
-                print(f"\n⚠️ OpenAI error: {e}")
+                error_msg = str(e)
+                print(f"\n⚠️ OpenAI error: {error_msg}")
+
+                # Provide more specific error guidance
+                if "incorrect api key" in error_msg.lower():
+                    print("🔑 This suggests an issue with your OpenAI API key.")
+                    print("   Please check that:")
+                    print("   1. OPENAI_API_KEY environment variable is set correctly")
+                    print("   2. The API key is valid and active")
+                    print("   3. The API key has the correct permissions")
+                    if self.debug_mode:
+                        # Check current environment variable
+                        current_key = os.getenv("OPENAI_API_KEY", "")
+                        if current_key:
+                            current_key = current_key.strip()
+                            key_prefix = (
+                                current_key[:7] if len(current_key) >= 7 else "***"
+                            )
+                            key_suffix = (
+                                current_key[-4:] if len(current_key) >= 4 else "***"
+                            )
+                            masked_key = (
+                                f"{key_prefix}...{key_suffix}"
+                                if len(current_key) > 11
+                                else "***"
+                            )
+                            logging.debug(
+                                f"Current API key: {masked_key} (length: {len(current_key)})"
+                            )
+                        else:
+                            logging.debug("No API key found in environment")
+                elif "rate limit" in error_msg.lower():
+                    print(
+                        "⏱️ Rate limit exceeded. Please wait a moment before trying again."
+                    )
+                elif "quota" in error_msg.lower():
+                    print("💳 API quota exceeded. Please check your OpenAI billing.")
+
+                if self.debug_mode:
+                    logging.debug(f"OpenAI API error details: {traceback.format_exc()}")
+
                 print("Falling back to local processing...")
 
         # Fallback to original AI chat handling
@@ -607,13 +710,33 @@ let them know they can use commands like 'analyze [path]' for detailed code anal
         print(
             f"   Mode: {'🦸 Superman Mode' if self.superman_mode else '🤖 Normal Mode'}"
         )
+        print(f"   Debug mode: {'✅' if self.debug_mode else '❌'}")
         print(
             f"   spaCy available: {'✅' if hasattr(self.intent_recognizer, 'use_spacy') and self.intent_recognizer.use_spacy else '❌'}"
         )
-        print(f"   OpenAI available: {'✅' if self.openai_client else '❌'}")
+        openai_status = "✅" if self.openai_client else "❌"
+        if self.openai_client and self.debug_mode:
+            # Show API key status in debug mode
+            api_key = os.getenv("OPENAI_API_KEY", "").strip()
+            if api_key:
+                key_prefix = api_key[:7] if len(api_key) >= 7 else "***"
+                key_suffix = api_key[-4:] if len(api_key) >= 4 else "***"
+                masked_key = (
+                    f"{key_prefix}...{key_suffix}" if len(api_key) > 11 else "***"
+                )
+                openai_status += f" (key: {masked_key})"
+        print(f"   OpenAI available: {openai_status}")
         print(f"   Memory system: ✅ ({len(self.memory.memories)} memories)")
         print(f"   Code analyzer: ✅")
         print(f"   Repository root: {self.repository_root}")
+
+        if self.debug_mode:
+            print(f"\n🔧 Debug Information:")
+            print(f"   Environment variables:")
+            print(
+                f"     OPENAI_API_KEY: {'Set' if os.getenv('OPENAI_API_KEY') else 'Not set'}"
+            )
+            print(f"     SUPERMAN_DEBUG: {os.getenv('SUPERMAN_DEBUG', 'Not set')}")
 
         print(f"\n🛠️ Available capabilities:")
         print(f"   • Natural language command processing")

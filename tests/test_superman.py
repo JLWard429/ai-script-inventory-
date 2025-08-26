@@ -6,6 +6,7 @@ Tests for Superman AI Orchestrator functionality.
 import sys
 import tempfile
 import unittest.mock as mock
+import os
 from pathlib import Path
 
 import pytest
@@ -291,6 +292,137 @@ class TestSupermanOrchestrator:
 
         for command in expected_commands:
             assert command in self.orchestrator.superman_commands
+
+
+class TestSupermanOpenAIIntegration:
+    """Test suite for Superman's OpenAI integration improvements."""
+
+    def setup_method(self):
+        """Set up test fixtures."""
+        # Mock to avoid needing full terminal setup
+        with mock.patch(
+            "superman.create_intent_recognizer"
+        ) as mock_recognizer, mock.patch(
+            "superman.SuperhumanTerminal.__init__"
+        ) as mock_init:
+
+            mock_init.return_value = None  # __init__ returns None
+            self.orchestrator = SupermanOrchestrator()
+
+            # Manually set required attributes that would be set by parent __init__
+            self.orchestrator.intent_recognizer = mock.MagicMock()
+            self.orchestrator.running = True
+            self.orchestrator.history = []
+            self.orchestrator.action_handlers = {}
+
+    def test_debug_mode_initialization(self):
+        """Test that debug mode can be enabled via environment variable."""
+        with mock.patch.dict(os.environ, {"SUPERMAN_DEBUG": "1"}):
+            with mock.patch("builtins.print"):
+                orch = SupermanOrchestrator()
+                orch.intent_recognizer = mock.MagicMock()
+                orch.running = True
+                orch.history = []
+                orch.action_handlers = {}
+
+                assert orch.debug_mode is True
+
+    def test_api_key_whitespace_handling(self):
+        """Test that API keys with whitespace are properly handled."""
+        with mock.patch.dict(os.environ, {"OPENAI_API_KEY": "  sk-test123  "}):
+            with mock.patch("builtins.print") as mock_print:
+                orch = SupermanOrchestrator()
+                orch.intent_recognizer = mock.MagicMock()
+                orch.running = True
+                orch.history = []
+                orch.action_handlers = {}
+
+                # Should still initialize successfully
+                print_calls = [str(call) for call in mock_print.call_args_list]
+                success_found = any(
+                    "OpenAI integration enabled" in call for call in print_calls
+                )
+                assert success_found
+
+    def test_invalid_api_key_format_warning(self):
+        """Test that invalid API key formats trigger warnings."""
+        with mock.patch.dict(os.environ, {"OPENAI_API_KEY": "invalid-key-format"}):
+            with mock.patch("builtins.print") as mock_print:
+                orch = SupermanOrchestrator()
+                orch.intent_recognizer = mock.MagicMock()
+                orch.running = True
+                orch.history = []
+                orch.action_handlers = {}
+
+                # Should warn about invalid format
+                print_calls = [str(call) for call in mock_print.call_args_list]
+                warning_found = any(
+                    "does not start with 'sk-'" in call for call in print_calls
+                )
+                assert warning_found
+
+    @mock.patch("builtins.print")
+    def test_debug_status_display(self, mock_print):
+        """Test that debug mode is shown in status display."""
+        with mock.patch.dict(
+            os.environ, {"OPENAI_API_KEY": "sk-test123", "SUPERMAN_DEBUG": "1"}
+        ):
+            orch = SupermanOrchestrator()
+            orch.intent_recognizer = mock.MagicMock()
+            orch.running = True
+            orch.history = []
+            orch.action_handlers = {}
+
+            # Call status method
+            orch.show_status()
+
+            # Should show debug mode is enabled
+            print_calls = [str(call) for call in mock_print.call_args_list]
+            debug_status_found = any("Debug mode: ✅" in call for call in print_calls)
+            assert debug_status_found
+
+    def test_enhanced_error_handling(self):
+        """Test enhanced error handling for API key errors."""
+        from ai_script_inventory.ai.intent import Intent, IntentType
+
+        with mock.patch.dict(
+            os.environ, {"OPENAI_API_KEY": "sk-test123", "SUPERMAN_DEBUG": "1"}
+        ):
+            orch = SupermanOrchestrator()
+            orch.intent_recognizer = mock.MagicMock()
+            orch.running = True
+            orch.history = []
+            orch.action_handlers = {}
+            orch.superman_mode = True
+
+            # Mock OpenAI client to raise API key error
+            mock_client = mock.MagicMock()
+            orch.openai_client = mock_client
+            mock_client.chat.completions.create.side_effect = Exception(
+                "Incorrect API key provided"
+            )
+
+            test_intent = Intent(
+                IntentType.AI_CHAT, confidence=0.9, original_input="test question"
+            )
+
+            with mock.patch("builtins.print") as mock_print:
+                result = orch.handle_ai_chat_enhanced(test_intent)
+
+                print_calls = [str(call) for call in mock_print.call_args_list]
+
+                # Should provide specific guidance for API key errors
+                guidance_found = any(
+                    "This suggests an issue with your OpenAI API key" in call
+                    for call in print_calls
+                )
+                assert guidance_found
+
+                # Should provide troubleshooting checklist
+                checklist_found = any(
+                    "Please check that:" in call for call in print_calls
+                )
+                assert checklist_found
 
 
 class TestSupermanScript:
