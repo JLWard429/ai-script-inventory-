@@ -152,4 +152,7 @@ ipython_config.py
 chat gpt memoeries
 *memories*
 *personal*
-*private*
+
+# Private files except for specific forensic infrastructure
+private/*
+!private/care/
