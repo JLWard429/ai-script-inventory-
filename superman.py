@@ -565,12 +565,16 @@ class SupermanOrchestrator(SuperhumanTerminal):
             if employee["type"] == "python":
                 cmd = [sys.executable, employee["path"]]
                 if task_args:
-                    cmd.extend(task_args.split())
+                    # Use shlex to properly parse quoted arguments
+                    import shlex
+                    cmd.extend(shlex.split(task_args))
                 result = self._run_subprocess(cmd)
             elif employee["type"] == "shell":
                 cmd = ["bash", employee["path"]]
                 if task_args:
-                    cmd.extend(task_args.split())
+                    # Use shlex to properly parse quoted arguments
+                    import shlex
+                    cmd.extend(shlex.split(task_args))
                 result = self._run_subprocess(cmd)
             else:
                 return f"Unsupported employee type: {employee['type']}"
