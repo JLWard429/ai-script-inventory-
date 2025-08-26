@@ -6,6 +6,7 @@ Tests for Superman AI Orchestrator functionality.
 import sys
 import tempfile
 import unittest.mock as mock
+import urllib.error
 import os
 from pathlib import Path
 
@@ -361,6 +362,71 @@ class TestSupermanOrchestrator:
             self.orchestrator.check_openai_connectivity()
             # Should have printed some OpenAI status
             mock_print.assert_called()
+
+    def test_internet_connectivity_check_available(self):
+        """Test internet connectivity check when internet is available."""
+        with mock.patch("urllib.request.urlopen") as mock_urlopen:
+            # Mock successful connection
+            mock_response = mock.MagicMock()
+            mock_response.status = 200
+            mock_urlopen.return_value.__enter__.return_value = mock_response
+            
+            with mock.patch("builtins.print") as mock_print:
+                result = self.orchestrator.check_internet_connectivity()
+                
+                # Should return True for available internet
+                assert result is True
+                assert self.orchestrator.internet_available is True
+                
+                # Should print availability message
+                print_calls = [str(call) for call in mock_print.call_args_list]
+                availability_found = any(
+                    "Internet access: AVAILABLE" in call for call in print_calls
+                )
+                assert availability_found
+
+    def test_internet_connectivity_check_unavailable(self):
+        """Test internet connectivity check when internet is not available."""
+        with mock.patch("urllib.request.urlopen") as mock_urlopen:
+            # Mock network error
+            mock_urlopen.side_effect = urllib.error.URLError("Network unreachable")
+            
+            with mock.patch("builtins.print") as mock_print:
+                result = self.orchestrator.check_internet_connectivity()
+                
+                # Should return False for unavailable internet
+                assert result is False
+                assert self.orchestrator.internet_available is False
+                
+                # Should print unavailability and warning messages
+                print_calls = [str(call) for call in mock_print.call_args_list]
+                unavailable_found = any(
+                    "Internet access: NOT AVAILABLE" in call for call in print_calls
+                )
+                warning_found = any(
+                    "Operating in offline/limited mode" in call for call in print_calls
+                )
+                assert unavailable_found
+                assert warning_found
+
+    def test_internet_connectivity_check_dns_error(self):
+        """Test internet connectivity check with DNS resolution errors."""
+        with mock.patch("urllib.request.urlopen") as mock_urlopen:
+            # Mock DNS error
+            mock_urlopen.side_effect = urllib.error.URLError("[Errno -5] No address associated with hostname")
+            
+            with mock.patch("builtins.print") as mock_print:
+                result = self.orchestrator.check_internet_connectivity()
+                
+                # Should return False and provide actionable error info
+                assert result is False
+                
+                # Should show DNS error details
+                print_calls = [str(call) for call in mock_print.call_args_list]
+                dns_error_found = any(
+                    "No address associated with hostname" in call for call in print_calls
+                )
+                assert dns_error_found
 
 
 class TestSupermanOpenAIIntegration:

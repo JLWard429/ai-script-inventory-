@@ -52,6 +52,7 @@ dev = [
 
 [project.scripts]
 ai-terminal = "ai_script_inventory.terminal:main"
+superman = "superman:main"
 
 [project.urls]
 Homepage = "https://github.com/JLWard429/ai-script-inventory-"

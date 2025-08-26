@@ -51,6 +51,7 @@ setup(
     entry_points={
         "console_scripts": [
             "ai-terminal=ai_script_inventory.superhuman_terminal:main",
+            "superman=superman:main",
         ],
     },
 )
