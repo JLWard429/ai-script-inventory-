@@ -186,26 +186,37 @@ def test_precommit_config_syntax():
 
 def test_pyproject_toml_syntax():
     """Test that pyproject.toml is valid."""
-    import tomllib
+    try:
+        import tomllib
+
+        use_binary_mode = True
+    except ImportError:
+        # Fallback for Python < 3.11
+        try:
+            import tomli as tomllib
+
+            use_binary_mode = True
+        except ImportError:
+            import toml as tomllib
+
+            use_binary_mode = False
 
     pyproject_file = Path("pyproject.toml")
     if pyproject_file.exists():
         try:
-            with open(pyproject_file, "rb") as f:
-                config = tomllib.load(f)
+            if use_binary_mode:
+                with open(pyproject_file, "rb") as f:
+                    config = tomllib.load(f)
+            else:
+                with open(pyproject_file, "r") as f:
+                    config = tomllib.load(f)
 
             # Basic structure validation
             assert "project" in config, "pyproject.toml missing 'project' section"
             assert "name" in config["project"], "project section missing 'name'"
 
-        except tomllib.TOMLDecodeError as e:
-            pytest.fail(f"TOML syntax error in pyproject.toml: {e}")
-        except ImportError:
-            # Fall back for Python < 3.11
-            try:
-                import toml
-
-                with open(pyproject_file, "r") as f:
-                    toml.load(f)
-            except ImportError:
-                pytest.skip("Neither tomllib nor toml available for testing")
+        except Exception as e:
+            if hasattr(tomllib, "TOMLDecodeError"):
+                if isinstance(e, tomllib.TOMLDecodeError):
+                    pytest.fail(f"TOML syntax error in pyproject.toml: {e}")
+            pytest.fail(f"Error parsing pyproject.toml: {e}")
