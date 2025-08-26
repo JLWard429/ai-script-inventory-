@@ -288,10 +288,79 @@ class TestSupermanOrchestrator:
 
     def test_superman_commands_registration(self):
         """Test that Superman-specific commands are registered."""
-        expected_commands = ["memory", "analyze", "status", "demo"]
+        expected_commands = ["memory", "analyze", "status", "demo", "employees", "delegate"]
 
         for command in expected_commands:
             assert command in self.orchestrator.superman_commands
+
+    def test_employee_discovery(self):
+        """Test that employee scripts are discovered and registered."""
+        # The orchestrator should have discovered some employees during initialization
+        assert hasattr(self.orchestrator, "employees")
+        assert isinstance(self.orchestrator.employees, dict)
+        # Should have at least the example employee script we created
+        employee_names = list(self.orchestrator.employees.keys())
+        assert len(employee_names) > 0
+        assert "employee_spacy_test" in employee_names
+
+    def test_list_employees_command(self):
+        """Test the list employees command."""
+        with mock.patch("builtins.print") as mock_print:
+            result = self.orchestrator.list_employees()
+            
+            # Should return a success message
+            assert "employee scripts" in result.lower()
+            # Should have printed employee information
+            mock_print.assert_called()
+
+    def test_delegate_task_no_args(self):
+        """Test delegation with no arguments."""
+        result = self.orchestrator.delegate_task("delegate")
+        assert "Please specify employee" in result
+
+    def test_delegate_task_unknown_employee(self):
+        """Test delegation to unknown employee."""
+        result = self.orchestrator.delegate_task("delegate unknown_employee some_task")
+        assert "not found" in result.lower()
+
+    @mock.patch("superman.SupermanOrchestrator._run_subprocess")
+    def test_delegate_task_success(self, mock_subprocess):
+        """Test successful task delegation."""
+        # Mock subprocess result
+        mock_result = mock.MagicMock()
+        mock_result.stdout = "Test output"
+        mock_result.stderr = ""
+        mock_result.returncode = 0
+        mock_subprocess.return_value = mock_result
+        
+        # Ensure we have at least one employee
+        if not self.orchestrator.employees:
+            self.orchestrator.employees["test_employee"] = {
+                "path": "/test/path.py",
+                "type": "python",
+                "description": "Test employee",
+                "name": "test_employee"
+            }
+        
+        employee_name = list(self.orchestrator.employees.keys())[0]
+        result = self.orchestrator.delegate_task(f"delegate {employee_name} test_task")
+        
+        assert "successfully" in result.lower()
+        mock_subprocess.assert_called_once()
+
+    def test_spacy_installation_check(self):
+        """Test that spaCy installation check runs without error."""
+        with mock.patch("builtins.print") as mock_print:
+            self.orchestrator.check_spacy_installation()
+            # Should have printed some spaCy status
+            mock_print.assert_called()
+
+    def test_openai_connectivity_check(self):
+        """Test that OpenAI connectivity check runs without error."""
+        with mock.patch("builtins.print") as mock_print:
+            self.orchestrator.check_openai_connectivity()
+            # Should have printed some OpenAI status
+            mock_print.assert_called()
 
 
 class TestSupermanOpenAIIntegration:
