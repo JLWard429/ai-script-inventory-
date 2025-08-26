@@ -1,15 +1,12 @@
 """Tests for the empty folder cleanup functionality."""
 
-# Import the cleanup script
 import sys
 import tempfile
 from pathlib import Path
-from unittest.mock import patch
 
-import pytest
-
+# Add the script directory to Python path before importing
 sys.path.insert(0, str(Path(__file__).parent.parent / "python_scripts"))
-import cleanup_empty_folders
+import cleanup_empty_folders  # noqa: E402
 
 
 class TestEmptyFolderCleanup:
