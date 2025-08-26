@@ -560,6 +560,185 @@ class TestSupermanOpenAIIntegration:
                 assert checklist_found
 
 
+class TestOpenAIFirstArchitecture:
+    """Test suite for validating the OpenAI-first processing architecture."""
+
+    def setup_method(self):
+        """Set up test fixtures."""
+        with mock.patch("superman.create_intent_recognizer") as mock_recognizer, mock.patch(
+            "superman.SuperhumanTerminal.__init__"
+        ) as mock_init:
+            mock_init.return_value = None
+            self.orchestrator = SupermanOrchestrator()
+            
+            # Manually set required attributes
+            self.orchestrator.intent_recognizer = mock.MagicMock()
+            self.orchestrator.running = True
+            self.orchestrator.history = []
+            self.orchestrator.action_handlers = {}
+            self.orchestrator.memory = MemorySystem()
+
+    @mock.patch("builtins.print")
+    def test_openai_unavailable_shows_clear_error_and_setup_instructions(self, mock_print):
+        """Test that when OpenAI is unavailable, clear setup instructions are shown."""
+        # Ensure no OpenAI client
+        self.orchestrator.openai_client = None
+        
+        # Mock input to simulate user interaction once, then stop
+        with mock.patch("builtins.input", side_effect=["test query", KeyboardInterrupt()]):
+            try:
+                self.orchestrator.run()
+            except KeyboardInterrupt:
+                pass  # Expected to break out of loop
+        
+        # Verify error message and setup instructions were shown
+        print_calls = [str(call) for call in mock_print.call_args_list]
+        
+        # Should show OpenAI not available error
+        error_found = any("OpenAI integration not available" in call for call in print_calls)
+        assert error_found
+        
+        # Should show setup instructions
+        setup_found = any("To enable AI orchestration:" in call for call in print_calls)
+        assert setup_found
+        
+        # Should show pip install instruction
+        pip_found = any("pip install openai" in call for call in print_calls)
+        assert pip_found
+        
+        # Should show API key instruction
+        api_key_found = any("export OPENAI_API_KEY" in call for call in print_calls)
+        assert api_key_found
+
+    @mock.patch("builtins.print")
+    def test_openai_available_always_used_for_all_queries(self, mock_print):
+        """Test that when OpenAI is available, ALL queries go through it."""
+        # Set up OpenAI client
+        mock_client = mock.MagicMock()
+        self.orchestrator.openai_client = mock_client
+        
+        # Mock OpenAI response (direct response, not delegation)
+        mock_response = mock.MagicMock()
+        mock_response.choices = [mock.MagicMock()]
+        mock_response.choices[0].message.content = "This is OpenAI's response to your query."
+        mock_client.chat.completions.create.return_value = mock_response
+        
+        # Mock input to simulate user interaction once, then stop
+        with mock.patch("builtins.input", side_effect=["what is the weather?", KeyboardInterrupt()]):
+            try:
+                self.orchestrator.run()
+            except KeyboardInterrupt:
+                pass  # Expected to break out of loop
+        
+        # Verify OpenAI was called
+        mock_client.chat.completions.create.assert_called_once()
+        
+        # Verify OpenAI response was displayed
+        print_calls = [str(call) for call in mock_print.call_args_list]
+        response_found = any("🤖 This is OpenAI's response" in call for call in print_calls)
+        assert response_found
+
+    def test_process_with_openai_no_fallback_on_errors(self):
+        """Test that _process_with_openai provides error messages instead of falling back."""
+        # Set up OpenAI client that will fail
+        mock_client = mock.MagicMock()
+        self.orchestrator.openai_client = mock_client
+        
+        # Mock API key error
+        mock_client.chat.completions.create.side_effect = Exception("Incorrect API key provided")
+        
+        is_delegation, response = self.orchestrator._process_with_openai("test query")
+        
+        # Should not be delegation
+        assert is_delegation is False
+        
+        # Should provide detailed error message instead of empty string
+        assert response.startswith("❌ OpenAI request failed:")
+        assert "This suggests an issue with your OpenAI API key" in response
+        assert "Please check that:" in response
+
+    def test_process_with_openai_handles_empty_responses(self):
+        """Test that empty OpenAI responses are handled gracefully."""
+        # Set up OpenAI client
+        mock_client = mock.MagicMock()
+        self.orchestrator.openai_client = mock_client
+        
+        # Mock empty response
+        mock_response = mock.MagicMock()
+        mock_response.choices = [mock.MagicMock()]
+        mock_response.choices[0].message.content = ""  # Empty response
+        mock_client.chat.completions.create.return_value = mock_response
+        
+        is_delegation, response = self.orchestrator._process_with_openai("test query")
+        
+        # Should not be delegation
+        assert is_delegation is False
+        
+        # Should provide a helpful fallback message
+        assert "I apologize, but I couldn't generate a response" in response
+        assert "Please try rephrasing" in response
+
+    def test_enhanced_ai_chat_handler_openai_first(self):
+        """Test that enhanced AI chat handler uses OpenAI first when available."""
+        from ai_script_inventory.ai.intent import Intent, IntentType
+        
+        # Set up OpenAI client
+        mock_client = mock.MagicMock()
+        self.orchestrator.openai_client = mock_client
+        
+        # Mock OpenAI response
+        mock_response = mock.MagicMock()
+        mock_response.choices = [mock.MagicMock()]
+        mock_response.choices[0].message.content = "OpenAI handled this query."
+        mock_client.chat.completions.create.return_value = mock_response
+        
+        # Create test intent
+        test_intent = Intent(
+            IntentType.AI_CHAT,
+            confidence=0.9,
+            original_input="test question"
+        )
+        
+        with mock.patch("builtins.print") as mock_print:
+            self.orchestrator.handle_ai_chat_enhanced(test_intent)
+        
+        # Verify OpenAI was called
+        mock_client.chat.completions.create.assert_called_once()
+        
+        # Verify OpenAI response was displayed
+        print_calls = [str(call) for call in mock_print.call_args_list]
+        response_found = any("🤖 OpenAI handled this query" in call for call in print_calls)
+        assert response_found
+
+    @mock.patch("builtins.print")
+    def test_enhanced_ai_chat_handler_fallback_only_when_no_openai(self, mock_print):
+        """Test that enhanced AI chat handler only falls back when OpenAI is completely unavailable."""
+        from ai_script_inventory.ai.intent import Intent, IntentType
+        
+        # Ensure no OpenAI client
+        self.orchestrator.openai_client = None
+        
+        # Mock the parent handle_ai_chat method
+        self.orchestrator.handle_ai_chat = mock.MagicMock()
+        
+        # Create test intent
+        test_intent = Intent(
+            IntentType.AI_CHAT,
+            confidence=0.9,
+            original_input="test question"
+        )
+        
+        self.orchestrator.handle_ai_chat_enhanced(test_intent)
+        
+        # Should show fallback message
+        print_calls = [str(call) for call in mock_print.call_args_list]
+        fallback_found = any("OpenAI unavailable, using local chat handler" in call for call in print_calls)
+        assert fallback_found
+        
+        # Should call parent handler
+        self.orchestrator.handle_ai_chat.assert_called_once_with(test_intent)
+
+
 class TestSupermanScript:
     """Test suite for the overall Superman script functionality."""
 

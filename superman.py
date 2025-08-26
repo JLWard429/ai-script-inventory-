@@ -2,13 +2,23 @@
 """
 Superman AI Orchestrator
 
-OpenAI-powered AI terminal that acts as the primary orchestrator for all user interactions.
-All user input is sent to OpenAI (ChatGPT) for processing. OpenAI determines whether to:
-1. Respond directly for general conversation, questions, and advice
-2. Delegate to local repository handlers for specific tasks (file management, script running, etc.)
+OpenAI-powered AI terminal that routes ALL user interactions through OpenAI as the primary brain.
 
-This extends the SuperhumanTerminal with OpenAI integration while maintaining
-the existing local capabilities as a fallback and for delegated tasks.
+ARCHITECTURE:
+- **PRIMARY**: All user input is sent directly to OpenAI (ChatGPT) for processing
+- **DELEGATION**: OpenAI determines whether to respond directly or delegate to local handlers
+- **FALLBACK**: Only uses local processing when OpenAI is completely unavailable (no API key/client)
+
+PROCESSING FLOW:
+1. User input → OpenAI API (chat/completions endpoint)
+2. OpenAI responds with either:
+   - Direct conversational response for general queries
+   - JSON delegation for repository-specific tasks (file management, script running, etc.)
+3. If delegation: route to appropriate local handler
+4. If unavailable: clear error message + optional local fallback
+
+This extends the SuperhumanTerminal with OpenAI-first integration while maintaining
+local capabilities only as a last resort when OpenAI is completely unavailable.
 """
 
 import os
@@ -219,14 +229,24 @@ class CodeAnalyzer:
 
 class SupermanOrchestrator(SuperhumanTerminal):
     """
-    Superman AI Orchestrator that uses OpenAI as the primary interface.
+    Superman AI Orchestrator that uses OpenAI as the PRIMARY brain for all user interactions.
 
-    All user input is processed by OpenAI first, which acts as the central coordinator:
-    - For general conversation and advice: OpenAI responds directly
-    - For repository tasks: OpenAI delegates to local handlers (file ops, script running, etc.)
-    - Includes fallback to local spaCy-based processing when OpenAI is unavailable
+    ARCHITECTURE PRINCIPLE: OpenAI-First Processing
+    - ALL user input is routed through OpenAI when available and configured
+    - OpenAI acts as the central coordinator and decision maker for:
+      * General conversation and knowledge queries (direct response)
+      * Repository-specific tasks (delegation to local handlers)
+    - Local processing is ONLY used when OpenAI is completely unavailable
     
-    Also includes internet connectivity checking, memory system, and code analysis.
+    PROCESSING FLOW:
+    1. User input → OpenAI API (always, when configured)
+    2. OpenAI response handling:
+       - Direct response: Display to user
+       - Delegation JSON: Route to local handlers (file ops, script running, etc.)
+       - Error: Display error message with troubleshooting info
+    3. Fallback: Only when OpenAI client is not available (no API key/connection)
+    
+    Enhanced features: Memory system, internet connectivity checking, code analysis.
     """
 
     def __init__(self):
@@ -409,16 +429,16 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
 
     def _process_with_openai(self, user_input: str) -> tuple[bool, str]:
         """
-        Process user input with OpenAI and determine response.
+        Process user input with OpenAI as the primary brain.
         
         Returns:
             tuple[bool, str]: (is_delegation, response)
                 - is_delegation: True if this should be delegated to local handlers
-                - response: Either the direct response or delegation JSON
+                - response: Either the direct response, delegation JSON, or error message
         """
         if not self.openai_client:
-            # Fallback to local processing
-            return False, ""
+            # No OpenAI client available - this should not happen if method is called correctly
+            return False, "❌ OpenAI client not available. Please configure OPENAI_API_KEY."
 
         try:
             # Add conversation history context
@@ -443,6 +463,10 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
             # Store in memory
             self.memory.remember(user_input, ai_response)
 
+            # Ensure we always have a response
+            if not ai_response:
+                ai_response = "I apologize, but I couldn't generate a response to your query. Please try rephrasing your question."
+
             # Check if this is a delegation (JSON response) or direct response
             if ai_response.startswith('{') and '"action"' in ai_response:
                 return True, ai_response
@@ -451,30 +475,33 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
 
         except Exception as e:
             error_msg = str(e).lower()
-            print(f"⚠️  OpenAI request failed: {e}")
+            
+            # Create detailed error response instead of falling back
+            error_response = f"❌ OpenAI request failed: {e}\n\n"
             
             # Enhanced error handling for specific API issues
             if "api key" in error_msg or "incorrect api key" in error_msg:
-                print("🔑 This suggests an issue with your OpenAI API key.")
-                print("Please check that:")
-                print("  • Your API key is correct and starts with 'sk-'")
-                print("  • Your API key has not expired")
-                print("  • You have sufficient credits/quota")
-                print("  • The OPENAI_API_KEY environment variable is set correctly")
+                error_response += "🔑 This suggests an issue with your OpenAI API key.\n"
+                error_response += "Please check that:\n"
+                error_response += "  • Your API key is correct and starts with 'sk-'\n"
+                error_response += "  • Your API key has not expired\n"
+                error_response += "  • You have sufficient credits/quota\n"
+                error_response += "  • The OPENAI_API_KEY environment variable is set correctly"
             elif "rate limit" in error_msg:
-                print("⏱️  Rate limit exceeded. Please wait before making more requests.")
+                error_response += "⏱️  Rate limit exceeded. Please wait before making more requests."
             elif "connection" in error_msg or "network" in error_msg:
-                print("🌐 Network connectivity issue. Check your internet connection.")
+                error_response += "🌐 Network connectivity issue. Check your internet connection."
+            else:
+                error_response += "🔧 Please check your OpenAI configuration and try again."
             
-            print("   Falling back to local processing...")
-            return False, ""
+            return False, error_response
 
     def handle_ai_chat_enhanced(self, intent) -> None:
-        """Enhanced AI chat handler with memory and context."""
+        """Enhanced AI chat handler - routes through OpenAI when available."""
         # Add to memory context
         self.memory.add_context(intent.target or "")
 
-        # Try OpenAI first if available
+        # Route through OpenAI if available (primary brain)
         if self.openai_client:
             is_delegation, ai_response = self._process_with_openai(intent.original_input)
             
@@ -482,17 +509,17 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
                 # Parse JSON response and delegate to local handlers
                 self._handle_openai_delegation(ai_response, intent.original_input)
                 return
-            elif ai_response:
-                # Direct response from OpenAI
+            else:
+                # Direct response from OpenAI (including error messages)
                 print(f"\n🤖 {ai_response}")
                 return
-            # If no response, fall through to original handler
 
-        # Fall back to original AI chat handler
+        # Only fall back to original handler if OpenAI is completely unavailable
+        print("🔄 OpenAI unavailable, using local chat handler...")
         self.handle_ai_chat(intent)
 
     def run(self) -> None:
-        """Override run method to include startup checks and OpenAI-first processing."""
+        """Override run method to implement OpenAI-first processing architecture."""
         # Perform startup connectivity check
         self.check_internet_connectivity()
 
@@ -518,22 +545,25 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
                 # Add to history
                 self.history.append(user_input)
 
-                # Try OpenAI first
+                # Process with OpenAI as primary brain when available
                 if self.openai_client:
+                    # OpenAI is configured and available - use it for ALL queries
                     is_delegation, ai_response = self._process_with_openai(user_input)
                     
                     if is_delegation:
                         # Parse JSON response and delegate to local handlers
                         self._handle_openai_delegation(ai_response, user_input)
                     else:
-                        # Direct response from OpenAI
-                        if ai_response:
-                            print(f"\n🤖 {ai_response}")
-                        else:
-                            # Fallback to local processing
-                            self._fallback_to_local_processing(user_input)
+                        # Direct response from OpenAI (includes error messages)
+                        print(f"\n🤖 {ai_response}")
                 else:
-                    # No OpenAI available, use local processing
+                    # OpenAI not available - show clear error message and fallback info
+                    print("\n❌ OpenAI integration not available")
+                    print("🔧 To enable AI orchestration:")
+                    print("   1. Install OpenAI library: pip install openai")
+                    print("   2. Set your API key: export OPENAI_API_KEY='your-key-here'")
+                    print("   3. Restart the terminal")
+                    print("\n🔄 Falling back to local processing...")
                     self._fallback_to_local_processing(user_input)
 
             except KeyboardInterrupt:
