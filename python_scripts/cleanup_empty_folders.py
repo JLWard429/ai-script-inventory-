@@ -206,9 +206,7 @@ def main() -> None:
                 f"Cleanup complete. {removed_count} director{'y' if removed_count == 1 else 'ies'} removed."
             )
 
-    except Exception as e:
-        logging.error(f"Script failed: {e}")
-        exit(1)
+        sys.exit(1)
 
 
 if __name__ == "__main__":
