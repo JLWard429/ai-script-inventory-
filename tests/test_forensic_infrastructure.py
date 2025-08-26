@@ -1,7 +1,50 @@
 """Test module for forensic medical investigation infrastructure."""
 
-import pytest
 from pathlib import Path
+
+# ============================================================================
+# FORENSIC INFRASTRUCTURE TEST CONSTANTS
+# ============================================================================
+
+# Keyword lists for content validation
+MEDICAL_LEGAL_CONTEXT_KEYWORDS = [
+    "medical",
+    "legal",
+    "regulatory",
+    "compliance",
+    "investigation",
+]
+
+VERSION_CONTROL_KEYWORDS = ["version", "date", "approval", "review"]
+
+FORENSIC_AUDIT_KEYWORDS = [
+    "audit",
+    "forensic",
+    "evidence",
+    "chain of custody",
+    "integrity",
+    "verification",
+    "documentation",
+    "compliance",
+]
+
+# Priority scoring algorithm constants (from AUTOMATED_REVIEW_SCAN_GUIDE.md)
+# Error severity weights
+CRITICAL_ERROR_WEIGHT = 100
+HIGH_ERROR_WEIGHT = 50
+MEDIUM_ERROR_WEIGHT = 20
+
+# Document importance weights
+EVIDENCE_CATEGORY_WEIGHT = 30
+MEDICAL_CATEGORY_WEIGHT = 25
+REGULATORY_CATEGORY_WEIGHT = 20
+
+# System limits
+MAXIMUM_PRIORITY_SCORE = 200
+
+# File size validation constants
+MINIMUM_FILE_SIZE_BYTES = 1000  # Each file should have substantial content
+MAXIMUM_FILE_SIZE_BYTES = 100000  # Prevent excessively large documentation files
 
 
 class TestForensicInfrastructure:
@@ -24,7 +67,7 @@ class TestForensicInfrastructure:
             "FILE_FOLDER_MANAGEMENT_GUIDE.md",
             "AUTOMATED_REVIEW_SCAN_GUIDE.md",
         ]
-        
+
         care_dir = Path("private/care")
         for filename in required_files:
             file_path = care_dir / filename
@@ -35,7 +78,7 @@ class TestForensicInfrastructure:
         """Test that the staging README contains essential sections."""
         staging_readme = Path("private/care/_STAGING_README.txt")
         content = staging_readme.read_text()
-        
+
         # Check for key sections
         assert "STAGING WORKFLOW" in content
         assert "QUALITY CONTROL REQUIREMENTS" in content
@@ -47,7 +90,7 @@ class TestForensicInfrastructure:
         """Test that the master document index has proper structure."""
         master_index = Path("private/care/MASTER_DOCUMENT_INDEX.md")
         content = master_index.read_text()
-        
+
         # Check for key sections
         assert "# Master Document Index" in content
         assert "## Document Categories" in content
@@ -59,7 +102,7 @@ class TestForensicInfrastructure:
         """Test that the knowledge and learning log has proper framework."""
         knowledge_log = Path("private/care/KNOWLEDGE_AND_LEARNING_LOG.md")
         content = knowledge_log.read_text()
-        
+
         # Check for key sections
         assert "# Knowledge and Learning Log" in content
         assert "## Regulatory Framework Tracking" in content
@@ -71,7 +114,7 @@ class TestForensicInfrastructure:
         """Test that the forensic error log has proper classification."""
         error_log = Path("private/care/FORENSIC_ERROR_LOG.md")
         content = error_log.read_text()
-        
+
         # Check for key sections
         assert "# Forensic Error Log" in content
         assert "## Error Classification System" in content
@@ -85,7 +128,7 @@ class TestForensicInfrastructure:
         """Test that the task progress template is comprehensive."""
         task_template = Path("private/care/TASK_PROGRESS_LOG_TEMPLATE.md")
         content = task_template.read_text()
-        
+
         # Check for key sections
         assert "# Task Progress Log Template" in content
         assert "## Case Information" in content
@@ -98,7 +141,7 @@ class TestForensicInfrastructure:
         """Test that the file management guide has proper procedures."""
         file_guide = Path("private/care/FILE_FOLDER_MANAGEMENT_GUIDE.md")
         content = file_guide.read_text()
-        
+
         # Check for key sections
         assert "# File and Folder Management Guide" in content
         assert "## File Operation Procedures" in content
@@ -110,7 +153,7 @@ class TestForensicInfrastructure:
         """Test that the automated review guide has proper workflow."""
         review_guide = Path("private/care/AUTOMATED_REVIEW_SCAN_GUIDE.md")
         content = review_guide.read_text()
-        
+
         # Check for key sections
         assert "# Automated Review Scan Guide" in content
         assert "## Automated Review Framework" in content
@@ -125,55 +168,65 @@ class TestForensicInfrastructure:
             if file_path.is_file():
                 size = file_path.stat().st_size
                 # Each file should be at least 1KB (substantial content)
-                assert size > 1000, f"File {file_path.name} seems too small: {size} bytes"
+                assert (
+                    size > MINIMUM_FILE_SIZE_BYTES
+                ), f"File {file_path.name} seems too small: {size} bytes"
                 # But not unreasonably large (over 100KB would be excessive for docs)
-                assert size < 100000, f"File {file_path.name} seems too large: {size} bytes"
+                assert (
+                    size < MAXIMUM_FILE_SIZE_BYTES
+                ), f"File {file_path.name} seems too large: {size} bytes"
 
     def test_markdown_formatting_compliance(self):
         """Test that markdown files follow proper formatting."""
         care_dir = Path("private/care")
         md_files = care_dir.glob("*.md")
-        
+
         for md_file in md_files:
             content = md_file.read_text()
-            
+
             # Should start with a proper heading
-            assert content.startswith("#"), f"File {md_file.name} should start with a heading"
-            
+            assert content.startswith(
+                "#"
+            ), f"File {md_file.name} should start with a heading"
+
             # Should contain proper metadata sections
-            lines = content.split('\n')
+            lines = content.split("\n")
             header_lines = lines[:10]  # Check first 10 lines for metadata
-            header_text = '\n'.join(header_lines)
-            
+            header_text = "\n".join(header_lines)
+
             # Should have version info
-            assert ("Version:" in header_text or 
-                   "Template Version:" in header_text), f"File {md_file.name} missing version info"
+            assert (
+                "Version:" in header_text or "Template Version:" in header_text
+            ), f"File {md_file.name} missing version info"
 
     def test_forensic_grade_requirements(self):
         """Test that files meet forensic-grade documentation requirements."""
         care_dir = Path("private/care")
-        
+
         for file_path in care_dir.iterdir():
             if file_path.is_file():
                 content = file_path.read_text()
-                
-                          self.FORENSIC_AUDIT_KEYWORDS), \
-                          f"File {file_path.name} lacks forensic-grade audit requirements"
-                
+
+                # Should contain forensic-grade audit requirements
+                assert any(
+                    keyword in content.lower() for keyword in FORENSIC_AUDIT_KEYWORDS
+                ), f"File {file_path.name} lacks forensic-grade audit requirements"
+
                 # Should have version control or tracking
-                assert any(keyword in content.lower() for keyword in 
-                          ["version", "date", "approval", "review"]), \
-                          f"File {file_path.name} lacks proper version control"
+                assert any(
+                    keyword in content.lower() for keyword in VERSION_CONTROL_KEYWORDS
+                ), f"File {file_path.name} lacks proper version control"
 
     def test_medical_legal_focus(self):
         """Test that files are properly focused on medical/legal investigations."""
         care_dir = Path("private/care")
-        
+
         for file_path in care_dir.iterdir():
             if file_path.is_file():
                 content = file_path.read_text()
-                
+
                 # Should reference medical or legal context
-                assert any(keyword in content.lower() for keyword in 
-                          ["medical", "legal", "regulatory", "compliance", "investigation"]), \
-                          f"File {file_path.name} lacks medical/legal context"
+                assert any(
+                    keyword in content.lower()
+                    for keyword in MEDICAL_LEGAL_CONTEXT_KEYWORDS
+                ), f"File {file_path.name} lacks medical/legal context"
