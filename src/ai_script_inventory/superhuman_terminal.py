@@ -121,20 +121,22 @@ class SuperhumanTerminal:
         handler = self.action_handlers.get(intent.type, self.handle_unknown)
         handler(intent)
 
-    def _run_subprocess(self, command: List[str], capture_output: bool = True, description: str = "") -> subprocess.CompletedProcess:
+    def _run_subprocess(
+        self, command: List[str], capture_output: bool = True, description: str = ""
+    ) -> subprocess.CompletedProcess:
         """Utility method to run subprocess commands consistently.
-        
+
         Args:
             command: Command to execute as list of arguments
-            capture_output: Whether to capture stdout/stderr 
+            capture_output: Whether to capture stdout/stderr
             description: Optional description for logging
-            
+
         Returns:
             CompletedProcess result
         """
         if description:
             print(f"🔄 {description}...")
-            
+
         return subprocess.run(
             command,
             capture_output=capture_output,
@@ -272,7 +274,8 @@ class SuperhumanTerminal:
             try:
                 result = self._run_subprocess(
                     [sys.executable, dev_tools_path, "security"],
-                    description=f"Scanning {scope} {file_type or 'files'}" + (f" in {directory}" if directory else "")
+                    description=f"Scanning {scope} {file_type or 'files'}"
+                    + (f" in {directory}" if directory else ""),
                 )
 
                 if result.stdout:
@@ -338,7 +341,7 @@ class SuperhumanTerminal:
                     result = self._run_subprocess(
                         [sys.executable, dev_tools_path, command],
                         capture_output=False,
-                        description=f"Running dev tools: {command}"
+                        description=f"Running dev tools: {command}",
                     )
                     print(f"✅ Dev tools completed with exit code: {result.returncode}")
                     return True

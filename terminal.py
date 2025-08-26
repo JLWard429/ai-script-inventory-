@@ -17,9 +17,10 @@ def main():
     src_path = Path(__file__).parent / "src"
     if str(src_path) not in sys.path:
         sys.path.insert(0, str(src_path))
-    
+
     try:
         from ai_script_inventory.superhuman_terminal import main as terminal_main
+
         terminal_main()
     except ImportError as e:
         print(f"❌ Error importing superhuman_terminal: {e}")
