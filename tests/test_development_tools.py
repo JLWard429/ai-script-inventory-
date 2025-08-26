@@ -136,7 +136,7 @@ def test_python_files_syntax():
         f
         for f in python_files
         if not any(
-            part.startswith(".") or part in ["__pycache__", "build", "dist"]
+            part.startswith(".") or part in ["__pycache__", "build", "dist," "veno"]
             for part in f.parts
         )
     ]
