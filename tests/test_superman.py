@@ -3,11 +3,11 @@
 Tests for Superman AI Orchestrator functionality.
 """
 
+import os
 import sys
 import tempfile
 import unittest.mock as mock
 import urllib.error
-import os
 from pathlib import Path
 
 import pytest

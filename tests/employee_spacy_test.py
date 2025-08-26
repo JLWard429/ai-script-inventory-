@@ -17,8 +17,8 @@ Examples:
     python employee_spacy_test.py "Apple Inc. is planning to release a new iPhone in California"
 """
 
-import sys
 import argparse
+import sys
 from pathlib import Path
 
 
