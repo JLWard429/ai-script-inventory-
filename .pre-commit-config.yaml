@@ -38,7 +38,6 @@ repos:
     hooks:
       - id: mypy
         args: [--strict]
-        additional_dependencies: [types-all]
 
   - repo: https://github.com/PyCQA/bandit
     rev: 1.7.5
