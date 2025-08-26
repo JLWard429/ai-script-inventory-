@@ -36,6 +36,7 @@ from ai_script_inventory.superhuman_terminal import SuperhumanTerminal
 
 try:
     import openai
+
     HAS_OPENAI = True
 except ImportError:
     HAS_OPENAI = False
@@ -237,7 +238,7 @@ class SupermanOrchestrator(SuperhumanTerminal):
       * General conversation and knowledge queries (direct response)
       * Repository-specific tasks (delegation to local handlers)
     - Local processing is ONLY used when OpenAI is completely unavailable
-    
+
     PROCESSING FLOW:
     1. User input → OpenAI API (always, when configured)
     2. OpenAI response handling:
@@ -245,7 +246,7 @@ class SupermanOrchestrator(SuperhumanTerminal):
        - Delegation JSON: Route to local handlers (file ops, script running, etc.)
        - Error: Display error message with troubleshooting info
     3. Fallback: Only when OpenAI client is not available (no API key/connection)
-    
+
     Enhanced features: Memory system, internet connectivity checking, code analysis.
     """
 
@@ -430,7 +431,7 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
     def _process_with_openai(self, user_input: str) -> tuple[bool, str]:
         """
         Process user input with OpenAI as the primary brain.
-        
+
         Returns:
             tuple[bool, str]: (is_delegation, response)
                 - is_delegation: True if this should be delegated to local handlers
@@ -438,28 +439,36 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
         """
         if not self.openai_client:
             # No OpenAI client available - this should not happen if method is called correctly
-            return False, "❌ OpenAI client not available. Please configure OPENAI_API_KEY."
+            return (
+                False,
+                "❌ OpenAI client not available. Please configure OPENAI_API_KEY.",
+            )
 
         try:
             # Add conversation history context
             messages = [{"role": "system", "content": self._get_system_prompt()}]
-            
+
             # Add recent context from memory
             recent_context = self.memory.get_recent_context(3)
             if recent_context:
-                messages.append({"role": "assistant", "content": f"Recent context: {recent_context}"})
-            
+                messages.append(
+                    {
+                        "role": "assistant",
+                        "content": f"Recent context: {recent_context}",
+                    }
+                )
+
             messages.append({"role": "user", "content": user_input})
 
             response = self.openai_client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=messages,
                 temperature=0.7,
-                max_tokens=1000
+                max_tokens=1000,
             )
 
             ai_response = response.choices[0].message.content.strip()
-            
+
             # Store in memory
             self.memory.remember(user_input, ai_response)
 
@@ -468,32 +477,42 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
                 ai_response = "I apologize, but I couldn't generate a response to your query. Please try rephrasing your question."
 
             # Check if this is a delegation (JSON response) or direct response
-            if ai_response.startswith('{') and '"action"' in ai_response:
+            if ai_response.startswith("{") and '"action"' in ai_response:
                 return True, ai_response
             else:
                 return False, ai_response
 
         except Exception as e:
             error_msg = str(e).lower()
-            
+
             # Create detailed error response instead of falling back
             error_response = f"❌ OpenAI request failed: {e}\n\n"
-            
+
             # Enhanced error handling for specific API issues
             if "api key" in error_msg or "incorrect api key" in error_msg:
-                error_response += "🔑 This suggests an issue with your OpenAI API key.\n"
+                error_response += (
+                    "🔑 This suggests an issue with your OpenAI API key.\n"
+                )
                 error_response += "Please check that:\n"
                 error_response += "  • Your API key is correct and starts with 'sk-'\n"
                 error_response += "  • Your API key has not expired\n"
                 error_response += "  • You have sufficient credits/quota\n"
-                error_response += "  • The OPENAI_API_KEY environment variable is set correctly"
+                error_response += (
+                    "  • The OPENAI_API_KEY environment variable is set correctly"
+                )
             elif "rate limit" in error_msg:
-                error_response += "⏱️  Rate limit exceeded. Please wait before making more requests."
+                error_response += (
+                    "⏱️  Rate limit exceeded. Please wait before making more requests."
+                )
             elif "connection" in error_msg or "network" in error_msg:
-                error_response += "🌐 Network connectivity issue. Check your internet connection."
+                error_response += (
+                    "🌐 Network connectivity issue. Check your internet connection."
+                )
             else:
-                error_response += "🔧 Please check your OpenAI configuration and try again."
-            
+                error_response += (
+                    "🔧 Please check your OpenAI configuration and try again."
+                )
+
             return False, error_response
 
     def handle_ai_chat_enhanced(self, intent) -> None:
@@ -503,8 +522,10 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
 
         # Route through OpenAI if available (primary brain)
         if self.openai_client:
-            is_delegation, ai_response = self._process_with_openai(intent.original_input)
-            
+            is_delegation, ai_response = self._process_with_openai(
+                intent.original_input
+            )
+
             if is_delegation:
                 # Parse JSON response and delegate to local handlers
                 self._handle_openai_delegation(ai_response, intent.original_input)
@@ -549,7 +570,7 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
                 if self.openai_client:
                     # OpenAI is configured and available - use it for ALL queries
                     is_delegation, ai_response = self._process_with_openai(user_input)
-                    
+
                     if is_delegation:
                         # Parse JSON response and delegate to local handlers
                         self._handle_openai_delegation(ai_response, user_input)
@@ -561,7 +582,9 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
                     print("\n❌ OpenAI integration not available")
                     print("🔧 To enable AI orchestration:")
                     print("   1. Install OpenAI library: pip install openai")
-                    print("   2. Set your API key: export OPENAI_API_KEY='your-key-here'")
+                    print(
+                        "   2. Set your API key: export OPENAI_API_KEY='your-key-here'"
+                    )
                     print("   3. Restart the terminal")
                     print("\n🔄 Falling back to local processing...")
                     self._fallback_to_local_processing(user_input)
@@ -580,7 +603,9 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
         print("🦸 Welcome to Superman AI Orchestrator!")
         print("=" * 50)
         if self.openai_client:
-            print("🤖 Powered by OpenAI GPT for intelligent conversation and task coordination")
+            print(
+                "🤖 Powered by OpenAI GPT for intelligent conversation and task coordination"
+            )
             print("I can help you with:")
             print("  • Answer questions about AI, programming, and best practices")
             print("  • Execute repository tasks (running scripts, file management)")
@@ -589,7 +614,7 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
         else:
             print("⚠️  Running in local-only mode (OpenAI not available)")
             print("I can help you with:")
-        
+
         print("  • Running scripts (e.g., 'run organize_ai_scripts.py')")
         print("  • File operations (e.g., 'list Python files', 'show README.md')")
         print("  • Code analysis and organization")
@@ -606,6 +631,7 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
         """Handle delegation from OpenAI to local handlers."""
         try:
             import json
+
             delegation = json.loads(ai_response)
             action = delegation.get("action", "").lower()
             target = delegation.get("target", "")
@@ -624,15 +650,16 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
             }
 
             intent_type = action_mapping.get(action, IntentType.UNKNOWN)
-            
+
             # Create intent object for local handler
             from ai_script_inventory.ai.intent import Intent
+
             intent = Intent(
                 type=intent_type,
                 confidence=1.0,  # High confidence since it came from OpenAI
                 target=target,
                 parameters=params,
-                original_input=original_input
+                original_input=original_input,
             )
 
             # Call the appropriate handler
@@ -649,7 +676,7 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
     def _fallback_to_local_processing(self, user_input: str) -> None:
         """Fallback to local spaCy-based processing when OpenAI is not available."""
         print("🔄 Processing locally...")
-        
+
         # Use parent class intent recognition
         intent = self.intent_recognizer.recognize(user_input)
         self.handle_intent(intent)
@@ -660,15 +687,23 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
         status_info = []
         status_info.append("🦸 Superman AI Orchestrator Status")
         status_info.append("=" * 40)
-        status_info.append(f"OpenAI Integration: {'✅ Enabled' if self.openai_client else '❌ Disabled'}")
-        status_info.append(f"Internet Available: {'✅ Yes' if self.internet_available else '❌ No'}")
-        status_info.append(f"Superman Mode: {'✅ Active' if self.superman_mode else '❌ Inactive'}")
-        status_info.append(f"Debug mode: {'✅ Enabled' if self.debug_mode else '❌ Disabled'}")
+        status_info.append(
+            f"OpenAI Integration: {'✅ Enabled' if self.openai_client else '❌ Disabled'}"
+        )
+        status_info.append(
+            f"Internet Available: {'✅ Yes' if self.internet_available else '❌ No'}"
+        )
+        status_info.append(
+            f"Superman Mode: {'✅ Active' if self.superman_mode else '❌ Inactive'}"
+        )
+        status_info.append(
+            f"Debug mode: {'✅ Enabled' if self.debug_mode else '❌ Disabled'}"
+        )
         status_info.append(f"Memory Entries: {len(self.memory.memories)}")
-        
+
         for line in status_info:
             print(line)
-        
+
         return "Status information displayed."
 
     def show_memory(self) -> str:
@@ -677,14 +712,14 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
         print("=" * 30)
         print(f"Total memories: {len(self.memory.memories)}")
         print(f"Max memories: {self.memory.max_memories}")
-        
+
         if self.memory.memories:
             print("\nRecent conversations:")
             for i, memory in enumerate(self.memory.memories[-3:], 1):
                 print(f"  {i}. {memory['user_input'][:50]}...")
         else:
             print("No conversations stored yet.")
-        
+
         return "Memory status displayed."
 
     @property
@@ -699,9 +734,9 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
         return {
             "employee_spacy_test": {
                 "path": "tests/employee_spacy_test.py",
-                "type": "python", 
+                "type": "python",
                 "description": "Test employee script",
-                "name": "employee_spacy_test"
+                "name": "employee_spacy_test",
             }
         }
 
@@ -709,10 +744,10 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
         """List available employee scripts."""
         print("👥 Available Employee Scripts:")
         print("=" * 35)
-        
+
         for name, info in self.employees.items():
             print(f"• {name}: {info.get('description', 'No description')}")
-        
+
         return f"Found {len(self.employees)} employee scripts."
 
     def delegate_task(self, command: str) -> str:
@@ -720,26 +755,29 @@ Remember: You are the primary orchestrator. Provide helpful responses for genera
         parts = command.split()
         if len(parts) < 2:
             return "Please specify employee and task: 'delegate <employee> <task>'"
-        
+
         employee_name = parts[1] if len(parts) > 1 else ""
-        
+
         if not employee_name or employee_name not in self.employees:
             return f"Employee '{employee_name}' not found. Use 'list employees' to see available employees."
-        
+
         task = " ".join(parts[2:]) if len(parts) > 2 else ""
         print(f"🤝 Delegating task to {employee_name}: {task}")
-        
+
         # Actually run the employee script for testing compatibility
         employee_info = self.employees[employee_name]
         script_path = employee_info.get("path", "")
-        
-        if script_path and hasattr(self, '_run_subprocess'):
+
+        if script_path and hasattr(self, "_run_subprocess"):
             try:
-                self._run_subprocess(["python", script_path, task], description=f"Running {employee_name}")
+                self._run_subprocess(
+                    ["python", script_path, task],
+                    description=f"Running {employee_name}",
+                )
                 return f"Task successfully delegated to {employee_name}."
             except Exception as e:
                 return f"Error delegating task: {e}"
-        
+
         return f"Task successfully delegated to {employee_name}."
 
     @property
