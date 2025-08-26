@@ -336,7 +336,9 @@ class SupermanOrchestrator(SuperhumanTerminal):
         # Set up logging if debug mode is enabled
         if self.debug_mode:
             logging.basicConfig(
-                level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s"
+                level=logging.DEBUG, 
+                format="%(asctime)s - %(levelname)s - %(message)s",
+                handlers=[logging.StreamHandler(sys.stderr)],
             )
             logging.debug("Superman debug mode enabled")
 
@@ -344,57 +346,16 @@ class SupermanOrchestrator(SuperhumanTerminal):
         self.memory = MemorySystem()
         self.code_analyzer = CodeAnalyzer()
         self.superman_mode = False
+        self.employees = {}  # Dictionary to store registered employee scripts
 
-        # Initialize OpenAI if available
-        self.openai_client = None
-        if HAS_OPENAI:
-            api_key = os.getenv("OPENAI_API_KEY")
-            if api_key:
-                # Strip whitespace and validate API key
-                api_key = api_key.strip()
-                if self.debug_mode:
-                    # Safely log API key status without exposing the actual key
-                    key_prefix = api_key[:7] if len(api_key) >= 7 else "***"
-                    key_suffix = api_key[-4:] if len(api_key) >= 4 else "***"
-                    masked_key = (
-                        f"{key_prefix}...{key_suffix}" if len(api_key) > 11 else "***"
-                    )
-                    logging.debug(
-                        f"OpenAI API key found: {masked_key} (length: {len(api_key)})"
-                    )
-
-                if not api_key:
-                    print("⚠️ OpenAI API key is empty after stripping whitespace")
-                elif not api_key.startswith("sk-"):
-                    print(
-                        "⚠️ OpenAI API key does not start with 'sk-' - this may cause authentication errors"
-                    )
-                    if self.debug_mode:
-                        logging.debug(f"API key starts with: {api_key[:10]}...")
-
-                try:
-                    self.openai_client = openai.OpenAI(api_key=api_key)
-                    print("🤖 OpenAI integration enabled")
-                    if self.debug_mode:
-                        logging.debug("OpenAI client initialized successfully")
-                except Exception as e:
-                    print(f"⚠️ OpenAI initialization failed: {e}")
-                    if self.debug_mode:
-                        logging.debug(
-                            f"OpenAI initialization error details: {traceback.format_exc()}"
-                        )
-            else:
-                print(
-                    "💡 Set OPENAI_API_KEY environment variable to enable AI conversations"
-                )
-                if self.debug_mode:
-                    logging.debug("No OPENAI_API_KEY environment variable found")
-        else:
-            print(
-                "💡 Install 'openai' package to enable AI conversations: pip install openai"
-            )
-            if self.debug_mode:
-                logging.debug("OpenAI package not available")
+        # Check and initialize spaCy
+        self.check_spacy_installation()
+        
+        # Check and initialize OpenAI
+        self.check_openai_connectivity()
+        
+        # Discover and register employee scripts
+        self.discover_employees()
 
         # Add new intent handlers for Superman-specific features
         if hasattr(self, "action_handlers"):
@@ -410,7 +371,217 @@ class SupermanOrchestrator(SuperhumanTerminal):
             "analyze": self.handle_code_analysis,
             "status": self.show_status,
             "demo": self.run_spacy_demo,
+            "employees": self.list_employees,
+            "delegate": self.delegate_task,
         }
+
+    def check_spacy_installation(self):
+        """Check if spaCy is installed and can load a basic model."""
+        try:
+            import spacy
+            
+            # Try to load the English model
+            try:
+                nlp = spacy.load("en_core_web_sm")
+                print("✅ spaCy installed and en_core_web_sm model loaded successfully")
+                if self.debug_mode:
+                    logging.debug(f"spaCy model loaded with {len(nlp.pipeline)} pipeline components")
+            except OSError:
+                print("❌ spaCy is installed but en_core_web_sm model not found")
+                print("💡 Install it with: python -m spacy download en_core_web_sm")
+                if self.debug_mode:
+                    logging.debug("spaCy model en_core_web_sm not available")
+        except ImportError:
+            print("❌ spaCy not installed")
+            print("💡 Install it with: pip install spacy")
+            if self.debug_mode:
+                logging.debug("spaCy package not available")
+
+    def check_openai_connectivity(self):
+        """Check OpenAI API key and test connectivity."""
+        self.openai_client = None
+        if HAS_OPENAI:
+            api_key = os.getenv("OPENAI_API_KEY")
+            if api_key:
+                # Strip whitespace and validate API key
+                api_key = api_key.strip()
+                
+                if not api_key:
+                    print("❌ OpenAI API key is empty after stripping whitespace")
+                    return
+                    
+                if not api_key.startswith("sk-"):
+                    print("⚠️ OpenAI API key does not start with 'sk-' - this may cause authentication errors")
+                    if self.debug_mode:
+                        logging.debug(f"API key starts with: {api_key[:10]}...")
+
+                try:
+                    self.openai_client = openai.OpenAI(api_key=api_key)
+                    
+                    # Test connectivity with a simple API call
+                    try:
+                        response = self.openai_client.chat.completions.create(
+                            model="gpt-3.5-turbo",
+                            messages=[{"role": "user", "content": "test"}],
+                            max_tokens=1
+                        )
+                        print("✅ OpenAI API key valid and connectivity successful")
+                        if self.debug_mode:
+                            logging.debug("OpenAI API connectivity test passed")
+                    except Exception as e:
+                        print(f"❌ OpenAI API connectivity failed: {e}")
+                        if "incorrect api key" in str(e).lower():
+                            print("🔑 Please check your OpenAI API key is correct and active")
+                        if self.debug_mode:
+                            logging.debug(f"OpenAI API test failed: {e}")
+                        self.openai_client = None
+                        
+                except Exception as e:
+                    print(f"❌ OpenAI initialization failed: {e}")
+                    if self.debug_mode:
+                        logging.debug(f"OpenAI initialization error: {traceback.format_exc()}")
+            else:
+                print("💡 Set OPENAI_API_KEY environment variable to enable AI conversations")
+                if self.debug_mode:
+                    logging.debug("No OPENAI_API_KEY environment variable found")
+        else:
+            print("💡 Install 'openai' package to enable AI conversations: pip install openai")
+            if self.debug_mode:
+                logging.debug("OpenAI package not available")
+
+    def discover_employees(self):
+        """Discover and register all available employee scripts/tools in the repository."""
+        print("🔍 Discovering employee scripts and tools...")
+        
+        # Define directories to search for employee scripts
+        search_dirs = [
+            Path(self.repository_root) / "python_scripts",
+            Path(self.repository_root) / "shell_scripts",
+            Path(self.repository_root) / "src" / "ai_script_inventory",
+        ]
+        
+        employee_count = 0
+        
+        for search_dir in search_dirs:
+            if search_dir.exists():
+                # Find Python scripts
+                for py_file in search_dir.glob("*.py"):
+                    if py_file.name not in ["__init__.py", "__pycache__"]:
+                        self.register_employee(py_file, "python")
+                        employee_count += 1
+                
+                # Find shell scripts
+                for sh_file in search_dir.glob("*.sh"):
+                    self.register_employee(sh_file, "shell")
+                    employee_count += 1
+        
+        print(f"✅ Discovered and registered {employee_count} employee scripts")
+        if self.debug_mode:
+            logging.debug(f"Registered employees: {list(self.employees.keys())}")
+
+    def register_employee(self, script_path: Path, script_type: str):
+        """Register an employee script with metadata."""
+        employee_name = script_path.stem
+        
+        # Read first few lines to get description
+        description = "No description available"
+        try:
+            with open(script_path, 'r', encoding='utf-8') as f:
+                lines = f.readlines()[:10]  # First 10 lines
+                for line in lines:
+                    line = line.strip()
+                    if script_type == "python" and line.startswith('"""') and len(line) > 3:
+                        description = line[3:].strip()
+                        break
+                    elif script_type == "shell" and line.startswith('#') and len(line) > 1:
+                        if not line.startswith('#!'):
+                            description = line[1:].strip()
+                            break
+        except Exception as e:
+            if self.debug_mode:
+                logging.debug(f"Could not read description from {script_path}: {e}")
+        
+        self.employees[employee_name] = {
+            "path": str(script_path),
+            "type": script_type,
+            "description": description,
+            "name": employee_name
+        }
+
+    def list_employees(self, user_input: str = None) -> str:
+        """List all registered employee scripts."""
+        if not self.employees:
+            print("❌ No employee scripts found")
+            return "No employees registered"
+        
+        print(f"\n👥 Registered Employee Scripts ({len(self.employees)}):")
+        print("=" * 50)
+        
+        for name, info in sorted(self.employees.items()):
+            icon = "🐍" if info["type"] == "python" else "🐚"
+            print(f"{icon} {name}")
+            print(f"   Type: {info['type']}")
+            print(f"   Path: {info['path']}")
+            print(f"   Description: {info['description']}")
+            print()
+        
+        return f"Listed {len(self.employees)} employee scripts"
+
+    def delegate_task(self, user_input: str = None) -> str:
+        """Delegate a task to an appropriate employee script."""
+        if not user_input or len(user_input.split()) < 2:
+            print("Usage: delegate <employee_name> [arguments]")
+            print("Available employees:")
+            self.list_employees()
+            return "Please specify employee and task"
+        
+        parts = user_input.split(maxsplit=2)
+        if len(parts) < 2:
+            return "Please specify employee name and task"
+        
+        employee_name = parts[1]
+        task_args = parts[2] if len(parts) > 2 else ""
+        
+        if employee_name not in self.employees:
+            print(f"❌ Employee '{employee_name}' not found")
+            print("Available employees:")
+            for name in sorted(self.employees.keys()):
+                print(f"  • {name}")
+            return f"Employee '{employee_name}' not found"
+        
+        employee = self.employees[employee_name]
+        print(f"🚀 Delegating task to {employee_name}")
+        print(f"   Script: {employee['path']}")
+        print(f"   Arguments: {task_args}")
+        
+        try:
+            if employee["type"] == "python":
+                cmd = [sys.executable, employee["path"]]
+                if task_args:
+                    cmd.extend(task_args.split())
+                result = self._run_subprocess(cmd)
+            elif employee["type"] == "shell":
+                cmd = ["bash", employee["path"]]
+                if task_args:
+                    cmd.extend(task_args.split())
+                result = self._run_subprocess(cmd)
+            else:
+                return f"Unsupported employee type: {employee['type']}"
+            
+            if result.stdout:
+                print("📤 Output:")
+                print(result.stdout)
+            if result.stderr:
+                print("⚠️ Errors:")
+                print(result.stderr)
+            
+            print(f"✅ Task completed with exit code: {result.returncode}")
+            return f"Task delegated to {employee_name} successfully"
+            
+        except Exception as e:
+            error_msg = f"❌ Error delegating to {employee_name}: {e}"
+            print(error_msg)
+            return error_msg
 
     def run(self):
         """Enhanced main terminal loop with Superman mode."""
@@ -464,15 +635,24 @@ class SupermanOrchestrator(SuperhumanTerminal):
 
     def process_input(self, user_input: str) -> str:
         """Process user input with enhanced AI capabilities."""
-        # Check for direct Superman commands first
-        if self.superman_mode:
-            first_word = user_input.split()[0].lower() if user_input.split() else ""
-            if first_word in self.superman_commands:
-                try:
-                    result = self.superman_commands[first_word](user_input)
-                    return result or "Command executed successfully."
-                except Exception as e:
-                    return f"Error executing {first_word}: {e}"
+        # Check for direct Superman commands first (available in both modes)
+        first_word = user_input.split()[0].lower() if user_input.split() else ""
+        
+        # Employee commands are available in both modes
+        if first_word in ["employees", "delegate"]:
+            try:
+                result = self.superman_commands[first_word](user_input)
+                return result or "Command executed successfully."
+            except Exception as e:
+                return f"Error executing {first_word}: {e}"
+        
+        # Other Superman commands only in Superman mode
+        if self.superman_mode and first_word in self.superman_commands:
+            try:
+                result = self.superman_commands[first_word](user_input)
+                return result or "Command executed successfully."
+            except Exception as e:
+                return f"Error executing {first_word}: {e}"
 
         # Use existing intent recognition
         intent = self.intent_recognizer.recognize(user_input)
