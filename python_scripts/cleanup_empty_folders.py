@@ -18,7 +18,6 @@ import argparse
 import logging
 import os
 import shutil
-import sys
 from pathlib import Path
 from typing import List, Set
 
@@ -87,9 +86,18 @@ def find_empty_directories(
 
     empty_directories = []
 
+    for dirpath, dirnames, filenames in os.walk(root_path):
+        current_dir = Path(dirpath)
 
-        # Modify dirnames in-place to prevent descending into excluded directories
-        dirnames[:] = [d for d in dirnames if not any(pattern in os.path.join(dirpath, d) for pattern in exclude_patterns)]
+        # Modify dirnames in-place to prevent descending into excluded
+        # directories
+        dirnames[:] = [
+            d
+            for d in dirnames
+            if not any(
+                pattern in os.path.join(dirpath, d) for pattern in exclude_patterns
+            )
+        ]
         # Skip excluded directories
         if current_dir.name in exclude_patterns:
             continue
@@ -110,7 +118,8 @@ def find_empty_directories(
             if all(filename in placeholder_files for filename in filenames):
                 empty_directories.append(current_dir)
                 logging.debug(
-                    f"Found placeholder-only directory: {current_dir} (contains: {filenames})"
+                    f"Found placeholder-only directory: {current_dir} "
+                    f"(contains: {filenames})"
                 )
 
     # Sort by depth (deepest first) to avoid removing parent before child
@@ -186,27 +195,33 @@ def main() -> None:
             return
 
         logging.info(
-            f"Found {len(empty_dirs)} empty director{'y' if len(empty_dirs) == 1 else 'ies'}:"
+            f"Found {len(empty_dirs)} empty director"
+            f"{'y' if len(empty_dirs) == 1 else 'ies'}:"
         )
         for directory in empty_dirs:
             logging.info(f"  - {directory}")
 
         if args.dry_run:
             logging.info(
-                "Running in dry-run mode. Use without --dry-run to actually remove directories."
+                "Running in dry-run mode. Use without --dry-run to actually "
+                "remove directories."
             )
 
         removed_count = remove_empty_directories(empty_dirs, dry_run=args.dry_run)
 
         if args.dry_run:
             logging.info(
-                f"Dry run complete. {removed_count} director{'y' if removed_count == 1 else 'ies'} would be removed."
+                f"Dry run complete. {removed_count} director"
+                f"{'y' if removed_count == 1 else 'ies'} would be removed."
             )
         else:
             logging.info(
-                f"Cleanup complete. {removed_count} director{'y' if removed_count == 1 else 'ies'} removed."
+                f"Cleanup complete. {removed_count} director"
+                f"{'y' if removed_count == 1 else 'ies'} removed."
             )
-
+    except Exception as e:
+        logging.error(f"Error during cleanup operation: {e}")
+        exit(1)
 
 
 if __name__ == "__main__":
