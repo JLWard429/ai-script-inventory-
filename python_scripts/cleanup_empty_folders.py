@@ -86,9 +86,9 @@ def find_empty_directories(
 
     empty_directories = []
 
-    for dirpath, dirnames, filenames in os.walk(root_path):
-        current_dir = Path(dirpath)
 
+        # Modify dirnames in-place to prevent descending into excluded directories
+        dirnames[:] = [d for d in dirnames if not any(pattern in os.path.join(dirpath, d) for pattern in exclude_patterns)]
         # Skip excluded directories
         if any(pattern in str(current_dir) for pattern in exclude_patterns):
             continue
