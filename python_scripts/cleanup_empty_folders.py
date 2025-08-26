@@ -139,7 +139,7 @@ def remove_empty_directories(directories: List[Path], dry_run: bool = True) -> i
                 logging.info(f"Removing empty directory: {directory}")
                 shutil.rmtree(directory)
             removed_count += 1
-        except Exception as e:
+        except OSError as e:
             logging.error(f"Failed to remove {directory}: {e}")
 
     return removed_count
