@@ -12,20 +12,17 @@ from typing import List, Optional
 
 
 def run_command(
-    command: List[str], 
-    description: str, 
-    show_output: bool = False,
-    emoji: str = "🔄"
+    command: List[str], description: str, show_output: bool = False, emoji: str = "🔄"
 ) -> bool:
     """
     Run a command and return success status.
-    
+
     Args:
         command: List of command parts to execute
         description: Human-readable description of the operation
         show_output: Whether to print stdout during execution
         emoji: Emoji to use in status messages
-        
+
     Returns:
         True if command succeeded, False otherwise
     """
@@ -48,11 +45,11 @@ def run_command(
 def run_command_simple(command: List[str], description: str) -> bool:
     """
     Simplified version for backward compatibility.
-    
+
     Args:
-        command: List of command parts to execute  
+        command: List of command parts to execute
         description: Human-readable description of the operation
-        
+
     Returns:
         True if command succeeded, False otherwise
     """
