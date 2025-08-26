@@ -157,9 +157,7 @@ class TestForensicInfrastructure:
             if file_path.is_file():
                 content = file_path.read_text()
                 
-                # Should mention audit trails or tracking
-                assert any(keyword in content.lower() for keyword in 
-                          ["audit trail", "traceability", "chain of custody", "verification"]), \
+                          self.FORENSIC_AUDIT_KEYWORDS), \
                           f"File {file_path.name} lacks forensic-grade audit requirements"
                 
                 # Should have version control or tracking
