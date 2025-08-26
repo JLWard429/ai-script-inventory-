@@ -339,6 +339,109 @@ ai-script-inventory/
    python -m pytest tests/ -v
    ```
 
+### 🦸‍♂️ Superman Orchestrator Setup
+
+The Superman Orchestrator is an enhanced foreground AI terminal that automatically starts when you open a new terminal session, providing immediate access to all repository tools and AI capabilities.
+
+#### Basic Setup
+
+1. **Run Superman Orchestrator**
+   ```bash
+   # Launch Superman orchestrator (foreground mode)
+   python superman.py
+   ```
+
+2. **Optional: OpenAI Integration**
+   ```bash
+   # Set up OpenAI API (optional, for enhanced AI conversations)
+   export OPENAI_API_KEY="your-api-key-here"
+   
+   # Install OpenAI package
+   pip install openai
+   ```
+
+#### Auto-Start on Terminal Launch
+
+To have Superman automatically start when you open a new terminal session:
+
+**For Bash (.bashrc/.bash_profile):**
+```bash
+# Add to ~/.bashrc or ~/.bash_profile
+cd /path/to/ai-script-inventory
+python superman.py
+```
+
+**For Zsh (.zshrc):**
+```bash
+# Add to ~/.zshrc
+cd /path/to/ai-script-inventory
+python superman.py
+```
+
+**For Fish (config.fish):**
+```fish
+# Add to ~/.config/fish/config.fish
+cd /path/to/ai-script-inventory
+python superman.py
+```
+
+#### Employee Script Registration
+
+Superman automatically discovers and registers all scripts in your repository as "employees" that can be delegated tasks:
+
+```bash
+# List all available employee scripts
+employees
+
+# Delegate a task to an employee
+delegate employee_spacy_test --demo
+delegate dev_tools test
+delegate setup_dev_env
+```
+
+#### Superman Commands
+
+```bash
+# Employee management
+employees          # List all registered employee scripts
+delegate <name>    # Delegate task to specific employee
+
+# System status and analysis
+status            # Show system status and capabilities
+demo              # Run spaCy NLP demonstration
+
+# Memory and context
+memory            # Show conversation history
+analyze <path>    # Perform code analysis
+
+# Mode switching
+superman          # Enter enhanced AI orchestrator mode
+exit superman     # Return to normal terminal mode
+```
+
+#### Troubleshooting
+
+**spaCy Model Missing:**
+```bash
+# Download the required spaCy model
+python -m spacy download en_core_web_sm
+```
+
+**OpenAI API Issues:**
+```bash
+# Check API key format (should start with 'sk-')
+echo $OPENAI_API_KEY
+
+# Enable debug mode for detailed logging
+export SUPERMAN_DEBUG=1
+python superman.py
+```
+
+**Employee Scripts Not Found:**
+- Ensure scripts are in `python_scripts/`, `shell_scripts/`, or `src/ai_script_inventory/`
+- Check file permissions (scripts should be readable)
+- Add descriptions at the top of scripts for better discovery
+
 ### First Steps
 
 1. **Explore the Terminal**: Launch `python terminal.py` and try:
@@ -356,6 +459,116 @@ ai-script-inventory/
    # Auto-organize files (dry run)
    python .github/scripts/organize_ai_scripts.py --dry-run
    ```
+
+---
+
+## 👥 Creating Employee Scripts
+
+Employee scripts are the building blocks of the Superman orchestrator system. Any Python or shell script in your repository can become an "employee" that Superman can delegate tasks to.
+
+### Employee Script Guidelines
+
+1. **Location**: Place scripts in:
+   - `python_scripts/` for Python tools
+   - `shell_scripts/` for shell utilities  
+   - `src/ai_script_inventory/` for core modules
+
+2. **Description**: Add a description at the top of your script:
+
+**Python Employee Example:**
+```python
+#!/usr/bin/env python3
+"""
+Employee Data Processor
+
+Processes data files and generates reports using pandas and matplotlib.
+Supports CSV, JSON, and Excel formats with customizable output options.
+
+Usage:
+    python employee_data_processor.py <input_file> [--format csv|json|excel]
+
+Examples:
+    python employee_data_processor.py data.csv --format excel
+    python employee_data_processor.py sales.json --output-dir reports/
+"""
+
+import argparse
+import sys
+from pathlib import Path
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("input_file", help="Input file to process")
+    parser.add_argument("--format", choices=["csv", "json", "excel"], 
+                        default="csv", help="Output format")
+    
+    args = parser.parse_args()
+    
+    # Your employee script logic here
+    print(f"Processing {args.input_file} with format {args.format}")
+    
+if __name__ == "__main__":
+    main()
+```
+
+**Shell Employee Example:**
+```bash
+#!/bin/bash
+# Employee Log Analyzer
+# Analyzes log files and generates summaries with error detection and metrics.
+# Supports multiple log formats and provides detailed reporting capabilities.
+
+set -euo pipefail
+
+usage() {
+    echo "Usage: $0 <log_file> [--errors-only] [--output report.txt]"
+    echo "Examples:"
+    echo "  $0 app.log --errors-only"
+    echo "  $0 server.log --output analysis.txt"
+}
+
+# Your shell script logic here
+```
+
+### Registering New Employees
+
+New employee scripts are automatically discovered by Superman when it starts. No manual registration required!
+
+1. **Create your script** in the appropriate directory
+2. **Make it executable** (for shell scripts): `chmod +x script.sh`
+3. **Test it manually** to ensure it works correctly
+4. **Restart Superman** to discover the new employee: `python superman.py`
+
+### Employee Best Practices
+
+- **Clear Usage**: Provide `--help` options and usage examples
+- **Error Handling**: Handle invalid inputs gracefully
+- **Output Format**: Use consistent output formatting (stdout for results, stderr for errors)
+- **Exit Codes**: Return appropriate exit codes (0 for success, non-zero for errors)
+- **Documentation**: Include docstrings or comments explaining functionality
+
+### Testing Employees
+
+Test your employee scripts before delegating tasks:
+
+```bash
+# Test the script directly
+python python_scripts/your_employee.py --help
+
+# Test through Superman delegation
+python superman.py
+# Then in Superman: delegate your_employee --help
+```
+
+### Example Employee Scripts
+
+The repository includes example employee scripts:
+
+- **`employee_spacy_test.py`**: Demonstrates spaCy NLP processing
+- **`dev_tools.py`**: Development workflow automation
+- **`setup_dev_env.sh`**: Environment setup utilities
+
+Study these examples to understand the employee script patterns and conventions.
 
 ---
 

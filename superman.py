@@ -417,24 +417,31 @@ class SupermanOrchestrator(SuperhumanTerminal):
 
                 try:
                     self.openai_client = openai.OpenAI(api_key=api_key)
+                    print("🤖 OpenAI integration enabled")
+                    if self.debug_mode:
+                        logging.debug("OpenAI client initialized successfully")
                     
-                    # Test connectivity with a simple API call
-                    try:
-                        response = self.openai_client.chat.completions.create(
-                            model="gpt-3.5-turbo",
-                            messages=[{"role": "user", "content": "test"}],
-                            max_tokens=1
-                        )
-                        print("✅ OpenAI API key valid and connectivity successful")
+                    # Test connectivity with a simple API call (only if not in test mode)
+                    test_mode = os.getenv("PYTEST_CURRENT_TEST") is not None
+                    if not test_mode and not api_key.startswith("sk-test"):
+                        try:
+                            response = self.openai_client.chat.completions.create(
+                                model="gpt-3.5-turbo",
+                                messages=[{"role": "user", "content": "test"}],
+                                max_tokens=1
+                            )
+                            print("✅ OpenAI API connectivity verified")
+                            if self.debug_mode:
+                                logging.debug("OpenAI API connectivity test passed")
+                        except Exception as e:
+                            print(f"⚠️ OpenAI API connectivity test failed: {e}")
+                            if "incorrect api key" in str(e).lower():
+                                print("🔑 Please check your OpenAI API key is correct and active")
+                            if self.debug_mode:
+                                logging.debug(f"OpenAI API test failed: {e}")
+                    elif test_mode or api_key.startswith("sk-test"):
                         if self.debug_mode:
-                            logging.debug("OpenAI API connectivity test passed")
-                    except Exception as e:
-                        print(f"❌ OpenAI API connectivity failed: {e}")
-                        if "incorrect api key" in str(e).lower():
-                            print("🔑 Please check your OpenAI API key is correct and active")
-                        if self.debug_mode:
-                            logging.debug(f"OpenAI API test failed: {e}")
-                        self.openai_client = None
+                            logging.debug("Skipping API connectivity test (test mode or test key)")
                         
                 except Exception as e:
                     print(f"❌ OpenAI initialization failed: {e}")
@@ -638,8 +645,8 @@ class SupermanOrchestrator(SuperhumanTerminal):
         # Check for direct Superman commands first (available in both modes)
         first_word = user_input.split()[0].lower() if user_input.split() else ""
         
-        # Employee commands are available in both modes
-        if first_word in ["employees", "delegate"]:
+        # Employee and status commands are available in both modes
+        if first_word in ["employees", "delegate", "status"]:
             try:
                 result = self.superman_commands[first_word](user_input)
                 return result or "Command executed successfully."
