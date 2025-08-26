@@ -8,11 +8,43 @@ This repository implements an advanced automation system for managing AI scripts
 
 ### Key Features
 
+- **Superman AI Terminal**: Advanced AI-powered command-line interface with internet connectivity checking
 - **Automated Code Organization**: Files are automatically sorted by type into appropriate directories
 - **Code Quality Assurance**: Automated linting, formatting, and security scanning
 - **Documentation Management**: Auto-generated and maintained documentation
 - **Testing Infrastructure**: Comprehensive test suite with coverage reporting
 - **Security Monitoring**: Automated vulnerability scanning and dependency checks
+
+### Superman CLI
+
+The repository includes a Superman CLI (`superman`) that provides an enhanced AI terminal experience:
+
+**Key Features:**
+- **Internet Connectivity Check**: Automatically checks for internet access on startup
+- **Offline Mode Support**: Gracefully handles offline scenarios with clear warnings
+- **System Status Monitoring**: Checks spaCy installation and OpenAI API configuration
+- **Natural Language Processing**: Advanced intent recognition for intuitive commands
+- **Memory System**: Persistent conversation context and learning
+- **Code Analysis**: Intelligent code understanding and suggestions
+
+**Usage:**
+```bash
+# Install the package
+pip install -e .
+
+# Run Superman CLI
+superman
+
+# Or run directly
+python superman.py
+```
+
+**Startup Checks:**
+The Superman CLI performs comprehensive startup validation:
+- Internet connectivity (tests multiple endpoints)
+- spaCy model availability
+- OpenAI API configuration
+- System readiness assessment
 
 ### Directory Structure
 
