@@ -27,7 +27,8 @@ permissions:
   contents: read
   actions: read
   security-events: write
-      - '.pre-commit-config.yaml'
+
+on:
   workflow_dispatch:
 
 concurrency:
