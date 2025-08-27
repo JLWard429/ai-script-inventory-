@@ -32,6 +32,11 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+# AI and machine learning features
+ai = [
+    "openai>=1.0.0",             # Official OpenAI API client for AI orchestration
+]
+
 dev = [
     # Code formatting and linting
     "black>=24.0.0",
@@ -115,7 +120,7 @@ show_column_numbers = true
 
 # Per-module options
 [[tool.mypy.overrides]]
-module = ["spacy.*", "yaml.*"]
+module = ["spacy.*", "yaml.*", "openai.*"]
 ignore_missing_imports = true
 
 [[tool.mypy.overrides]]
