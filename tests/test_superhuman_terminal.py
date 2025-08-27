@@ -65,7 +65,6 @@ class TestSuperhumanTerminal:
                 "expected_intent": IntentType.SUMMARIZE,
                 "expected_params": {},
             },  # "latest" is correctly identified when spaCy is available; this expectation may vary if a fallback recognizer is used
-            },
             {
                 "prompt": "How do I use this system?",
                 "expected_intent": IntentType.AI_CHAT,
