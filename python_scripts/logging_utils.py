@@ -209,7 +209,11 @@ def get_logger(
         >>> logger = get_logger(__name__)
         >>> logger.info("Application started")
     """
-    cache_key = f"{name}_{level}_{hash(tuple(sorted(kwargs.items())))}"
+    try:
+        kwargs_key = json.dumps(kwargs, sort_keys=True, default=str)
+    except (TypeError, ValueError):
+        kwargs_key = str(kwargs)
+    cache_key = f"{name}_{level}_{kwargs_key}"
     
     if cache_key not in _logger_cache:
         _logger_cache[cache_key] = StructuredLogger(name, level, **kwargs)
