@@ -26,12 +26,26 @@ from typing import Any, Dict, List, Optional
 
 from .ai.intent import Intent, IntentType, create_intent_recognizer
 
+# Import centralized logging utility
+try:
+    # Try relative import for package structure
+    from ...python_scripts.logging_utils import get_logger, log_performance, log_context
+except ImportError:
+    # Fallback for direct execution
+    sys.path.append(str(Path(__file__).parent.parent.parent))
+    from python_scripts.logging_utils import get_logger, log_performance, log_context
+
 
 class SuperhumanTerminal:
     """Main terminal class that handles user interactions and actions."""
 
     def __init__(self):
         """Initialize the terminal with intent recognizer and action handlers."""
+        # Initialize centralized logging
+        self.structured_logger = StructuredLogger(__name__, level="INFO")
+        self.logger = self.structured_logger.get_logger()
+        self.structured_logger.info("Initializing Superhuman Terminal", version="1.0")
+        
         self.intent_recognizer = create_intent_recognizer()
         self.running = True
         self.history = []
@@ -52,8 +66,10 @@ class SuperhumanTerminal:
             IntentType.UNKNOWN: self.handle_unknown,
         }
 
+    @log_performance
     def run(self):
         """Main terminal loop."""
+        self.structured_logger.info("Starting Superhuman Terminal session")
         self.print_welcome()
 
         while self.running:
@@ -65,21 +81,32 @@ class SuperhumanTerminal:
 
                 # Add to history
                 self.history.append(user_input)
+                self.structured_logger.debug("User input received", input=user_input, history_count=len(self.history))
 
-                # Recognize intent
-                intent = self.intent_recognizer.recognize(user_input)
+                # Recognize intent with logging context
+                with log_context(self.structured_logger, "intent_recognition", user_input=user_input):
+                    intent = self.intent_recognizer.recognize(user_input)
+                    self.structured_logger.info("Intent recognized", 
+                                   intent_type=intent.type.value, 
+                                   confidence=intent.confidence,
+                                   target=intent.target)
 
                 # Handle the intent
                 self.handle_intent(intent)
 
             except KeyboardInterrupt:
+                self.structured_logger.info("Terminal session interrupted by user")
                 print("\n\n👋 Goodbye!")
                 break
             except EOFError:
+                self.structured_logger.info("Terminal session ended (EOF)")
                 print("\n\n👋 Goodbye!")
                 break
             except Exception as e:
+                self.structured_logger.error("Unexpected error in terminal loop", error=str(e), error_type=type(e).__name__)
                 print(f"❌ Error: {e}")
+        
+        self.structured_logger.info("Terminal session completed", commands_executed=len(self.history))
 
     def print_welcome(self):
         """Print welcome message and basic instructions."""
@@ -103,23 +130,52 @@ class SuperhumanTerminal:
 
     def handle_intent(self, intent: Intent):
         """Dispatch intent to appropriate handler."""
+        self.structured_logger.debug("Handling intent", 
+                         intent_type=intent.type.value,
+                         confidence=intent.confidence,
+                         target=intent.target)
+        
         if intent.confidence < 0.3:
+            self.structured_logger.warning("Low confidence intent rejected", 
+                              confidence=intent.confidence,
+                              input=intent.original_input)
             print(f"🤔 I'm not sure what you mean by '{intent.original_input}'")
             print("Try rephrasing or type 'help' for assistance.")
             return
 
         if intent.confidence < 0.5:
+            self.structured_logger.info("Medium confidence intent requires confirmation",
+                           confidence=intent.confidence,
+                           intent_type=intent.type.value)
             print(
                 f"🤔 I think you want to {intent.type.value}, but I'm not completely sure."
             )
             confirm = input("Is that correct? (y/n): ").lower().strip()
             if confirm not in ["y", "yes"]:
+                self.structured_logger.info("Intent confirmation rejected by user")
                 print("Please try rephrasing your request.")
                 return
 
-        # Call the appropriate handler
+        # Call the appropriate handler with logging
         handler = self.action_handlers.get(intent.type, self.handle_unknown)
-        handler(intent)
+        handler_name = handler.__name__
+        
+        try:
+            with log_context(self.structured_logger, f"handler_execution", 
+                           handler=handler_name, 
+                           intent_type=intent.type.value):
+                handler(intent)
+                self.structured_logger.info("Intent handler completed successfully",
+                               handler=handler_name,
+                               intent_type=intent.type.value)
+        except Exception as e:
+            self.structured_logger.error("Intent handler failed",
+                            handler=handler_name,
+                            intent_type=intent.type.value,
+                            error=str(e),
+                            error_type=type(e).__name__)
+            print(f"❌ Error executing {intent.type.value}: {e}")
+            raise
 
     def _run_subprocess(
         self, command: List[str], capture_output: bool = True, description: str = ""

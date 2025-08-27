@@ -82,7 +82,8 @@ jobs:
 
       - name: Type checking (mypy)
         run: |
-          mypy python_scripts/ .github/scripts/ || true
+          echo "🔍 Running strict type checking..."
+          mypy python_scripts/ .github/scripts/ src/ --strict --no-error-summary || exit 1
 
       - name: Security check (bandit)
         run: |
@@ -164,7 +165,11 @@ jobs:
       - name: Run tests with pytest
         run: |
           if [ -d tests ]; then
-            pytest --cov=python_scripts --cov=.github/scripts --cov-report=xml --cov-report=html
+            echo "🧪 Running tests with coverage enforcement..."
+            pytest --cov=python_scripts --cov=.github/scripts --cov=src/ai_script_inventory \
+                   --cov-report=xml --cov-report=html --cov-report=term \
+                   --cov-fail-under=75 \
+                   -v tests/
           else
             echo "No tests directory found, creating basic test structure..."
             mkdir -p tests
