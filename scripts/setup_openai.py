@@ -79,7 +79,7 @@ def setup_instructions():
     print("   echo 'export OPENAI_API_KEY=\"sk-your-api-key-here\"' >> ~/.bashrc")
 
     print("\n4. Test the setup:")
-    print("   python setup_openai.py")
+    print("   python scripts/setup_openai.py")
 
     print("\n5. Use Superman CLI:")
     print("   python python_scripts/superman.py")
