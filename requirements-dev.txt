@@ -4,7 +4,6 @@
 # Core runtime dependencies (pinned versions)
 spacy==3.8.7
 pyyaml==6.0.2
-openai==1.59.0
 
 # Code formatting and linting
 black==24.10.0
