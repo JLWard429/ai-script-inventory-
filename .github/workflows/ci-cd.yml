@@ -157,7 +157,16 @@ jobs:
 
       - name: 🧪 Run tests
         run: |
-          pytest tests/ -v --cov=python_scripts --cov=.github/scripts --cov-report=xml
+          echo "🧪 Running tests with coverage enforcement..."
+          pytest tests/ -v \
+                 --cov=python_scripts --cov=.github/scripts --cov=src/ai_script_inventory \
+                 --cov-report=xml --cov-report=html --cov-report=term \
+                 --cov-fail-under=75
+
+      - name: 🔍 Type checking (mypy)
+        run: |
+          echo "🔍 Running strict type checking..."
+          mypy python_scripts/ .github/scripts/ src/ --strict --no-error-summary
 
       - name: 📊 Upload coverage
         uses: codecov/codecov-action@v3
