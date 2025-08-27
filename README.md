@@ -1,5 +1,10 @@
 # AI Script Inventory
 
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/xxxx/badge)](https://www.bestpractices.dev/projects/xxxx)
+[![CodeQL](https://github.com/JLWard429/ai-script-inventory-/actions/workflows/codeql.yml/badge.svg)](https://github.com/JLWard429/ai-script-inventory-/actions/workflows/codeql.yml)
+[![CI/CD](https://github.com/JLWard429/ai-script-inventory-/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/JLWard429/ai-script-inventory-/actions/workflows/ci-cd.yml)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=JLWard429_ai-script-inventory-&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=JLWard429_ai-script-inventory-)
+
 This repository contains a collection of AI-related scripts and tools with automated workflow management.
 
 ## 🚀 Superhuman AI Workflow System
@@ -29,4 +34,36 @@ This repository implements an advanced automation system for managing AI scripts
 3. Set up pre-commit hooks: `pre-commit install`
 4. Start contributing! The automation will handle organization and quality checks.
 
-See [WORKFLOW.md](WORKFLOW.md) for detailed information about the automation system.
+See [WORKFLOW.md](docs/WORKFLOW.md) for detailed information about the automation system.
+
+## 🔒 Security
+
+Security is a top priority for this project. We implement multiple layers of automated security scanning:
+
+- **Static Analysis**: Bandit security scanning
+- **Dependency Scanning**: Safety vulnerability checks  
+- **CodeQL Analysis**: Semantic code analysis
+- **Secret Detection**: Automated secret scanning
+
+For security issues, please see our [Security Policy](SECURITY.md).
+
+## 📞 Support
+
+Need help? Check out our support resources:
+
+- **[Support Guide](SUPPORT.md)** - How to get help
+- **[Documentation](docs/)** - Comprehensive project documentation
+- **[Issues](https://github.com/JLWard429/ai-script-inventory-/issues)** - Bug reports and feature requests
+- **[Discussions](https://github.com/JLWard429/ai-script-inventory-/discussions)** - Community Q&A
+
+## 🤝 Contributing
+
+We welcome contributions! Please see:
+
+- **[Contributing Guidelines](docs/CONTRIBUTING.md)** - How to contribute
+- **[Code of Conduct](docs/CODE_OF_CONDUCT.md)** - Community standards
+- **[Security Policy](SECURITY.md)** - Security guidelines
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
