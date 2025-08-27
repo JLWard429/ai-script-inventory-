@@ -29,7 +29,7 @@ from pathlib import Path
 from typing import Optional
 
 # Add src to path for imports
-sys.path.insert(0, str(Path(__file__).parent / "src"))
+sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from ai_script_inventory.ai.intent import IntentType, create_intent_recognizer
 from ai_script_inventory.superhuman_terminal import SuperhumanTerminal
