@@ -1,26 +1,24 @@
 # Core runtime dependencies for AI Script Inventory
-# Generated with pip-compile --generate-hashes
-spacy>=3.8.0,<4.0.0 \
+# All dependencies pinned to exact versions for reproducible builds
+
+spacy==3.8.7 \
     --hash=sha256:86c17c87cbc39eb5a7d7e99a37ebe3d8d0ab8b6ae9e04b6be78fc4b01b60b32a \
     --hash=sha256:0c2dcc3c0df03f94eb3ee20de9a3e5d16b7fd5fb1b0b48a3d1ab5a4e6c5ba935 \
     --hash=sha256:c2efaf5eed066a9c79e6e0b5b4db0e0b21dad9ebb89c3ca4b49a9a00bf8ecf5c
---hash=sha256:86c17c87cbc39eb5a7d7e99a37ebe3d8d0ab8b6ae9e04b6be78fc4b01b60b32a \
-    --hash=sha256:0c2dcc3c0df03f94eb3ee20de9a3e5d16b7fd5fb1b0b48a3d1ab5a4e6c5ba935 \
-    --hash=sha256:c2efaf5eed066a9c79e6e0b5b4db0e0b21dad9ebb89c3ca4b49a9a00bf8ecf5c
-pyyaml>=6.0.0,<7.0.0 \
+
+pyyaml==6.0.2 \
     --hash=sha256:01b45c0191e6d66c470b6cf1b9531a771a83c1c4208272ead47a3ae4f2f603bf \
     --hash=sha256:0283c35a6a9fbf047493e3a0ce8d79ef5030852c51e9d911a27badfde0605293 \
     --hash=sha256:055d937d65826939cb044fc8c9b08889e8c743fdc6a32b33e2390f66013e449b
 
-# Testing dependencies
-pytest>=8.0.0 \
+pytest==8.3.3 \
     --hash=sha256:2a8386cfc11fa9d2c50ee7b2a57e7d898ef90470a7a34c4b949ff59662bb78b7 \
     --hash=sha256:ac978141a75948948817d360297b7aae0fcb9d6ff6bc9ec6d514b85d5a65c044
 
-# Python version compatibility  
-tomli>=2.0.0; python_version<"3.11" \
+tomli==2.1.0; python_version<"3.11" \
     --hash=sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc \
     --hash=sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f
-toml>=0.10.0 \
+
+toml==0.10.2 \
     --hash=sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b \
     --hash=sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f
