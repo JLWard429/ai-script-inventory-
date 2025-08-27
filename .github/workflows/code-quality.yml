@@ -18,6 +18,15 @@ on:
       - '**.yaml'
       - 'requirements*.txt'
       - 'pyproject.toml'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  actions: read
+  security-events: write
       - '.pre-commit-config.yaml'
   workflow_dispatch:
 

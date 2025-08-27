@@ -1,0 +1,178 @@
+name: 📦 Build and Publish Package
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      test_pypi:
+        description: 'Publish to Test PyPI'
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  id-token: write  # Required for trusted publishing
+
+env:
+  PYTHON_VERSION: '3.11'
+
+jobs:
+  # ==================== BUILD ====================
+  build:
+    name: 🔨 Build Package
+    runs-on: ubuntu-latest
+    outputs:
+      hashes: ${{ steps.hash.outputs.hashes }}
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+
+      - name: 📦 Install build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install build twine
+
+      - name: 🔧 Build package
+        run: python -m build
+
+      - name: 🔍 Check package
+        run: twine check dist/*
+
+      - name: 🏷️ Generate hash
+        id: hash
+        run: |
+          cd dist
+          echo "hashes=$(sha256sum * | base64 -w0)" >> "$GITHUB_OUTPUT"
+
+      - name: 📤 Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-package-distributions
+          path: dist/
+          retention-days: 7
+
+  # ==================== SECURITY SCAN ====================
+  security-scan:
+    name: 🛡️ Security Scan Package
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 📥 Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: python-package-distributions
+          path: dist/
+
+      - name: 🔍 Scan package with Bandit
+        run: |
+          pip install bandit
+          bandit -r . -f json -o bandit-report.json --exit-zero
+
+      - name: 📊 Upload security report
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-scan-results
+          path: bandit-report.json
+
+  # ==================== PROVENANCE ====================
+  provenance:
+    name: 📋 Generate Provenance
+    needs: [build]
+    permissions:
+      actions: read
+      id-token: write
+      contents: write
+    uses: slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@v1.10.0
+    with:
+      base64-subjects: "${{ needs.build.outputs.hashes }}"
+      upload-assets: true
+
+  # ==================== PUBLISH TEST PYPI ====================
+  publish-test-pypi:
+    name: 🧪 Publish to Test PyPI
+    runs-on: ubuntu-latest
+    needs: [build, security-scan]
+    if: github.event.inputs.test_pypi == 'true' || github.event_name == 'workflow_dispatch'
+    environment:
+      name: test-pypi
+      url: https://test.pypi.org/p/ai-script-inventory
+    
+    steps:
+      - name: 📥 Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: python-package-distributions
+          path: dist/
+
+      - name: 🚀 Publish to Test PyPI
+        uses: pypa/gh-action-pypi-publish@v1.10.3
+        with:
+          repository-url: https://test.pypi.org/legacy/
+          verbose: true
+          print-hash: true
+
+  # ==================== PUBLISH PYPI ====================
+  publish-pypi:
+    name: 🚀 Publish to PyPI
+    runs-on: ubuntu-latest
+    needs: [build, security-scan, provenance]
+    if: github.event_name == 'release'
+    environment:
+      name: pypi
+      url: https://pypi.org/p/ai-script-inventory
+    
+    steps:
+      - name: 📥 Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: python-package-distributions
+          path: dist/
+
+      - name: 🚀 Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@v1.10.3
+        with:
+          verbose: true
+          print-hash: true
+
+  # ==================== SUMMARY ====================
+  summary:
+    name: 📋 Publish Summary
+    runs-on: ubuntu-latest
+    needs: [build, security-scan, provenance]
+    if: always()
+    
+    steps:
+      - name: 📊 Generate summary
+        run: |
+          echo "## 📦 Package Build and Publish Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Job Status:" >> $GITHUB_STEP_SUMMARY
+          echo "- Build: ${{ needs.build.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Security Scan: ${{ needs.security-scan.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Provenance: ${{ needs.provenance.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Artifacts Generated:" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Python package distributions" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Security scan results" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ SLSA provenance attestation" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📊 Build completed at $(date)" >> $GITHUB_STEP_SUMMARY
