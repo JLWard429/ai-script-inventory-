@@ -178,8 +178,7 @@ class StructuredLogger:
 
     def exception(self, message: str, **kwargs: Any) -> None:
         """Log an exception with traceback."""
-        self.log_with_context(logging.ERROR, message, **kwargs)
-        self._logger.exception(message)
+        self.log_with_context(logging.ERROR, message, exc_info=True, **kwargs)
 
 
 # Global logger instance cache
