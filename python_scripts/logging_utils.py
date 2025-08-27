@@ -288,7 +288,7 @@ def log_context(
     context_name: str,
     level: int = logging.INFO,
     **context: Any
-):
+) -> Any:
     """
     Context manager for logging operation start and completion.
     
@@ -307,14 +307,16 @@ def log_context(
     start_time = time.time()
     
     # Handle both StructuredLogger and standard logger
+    log_func: Any
     if isinstance(logger, StructuredLogger):
         log_func = logger.log_with_context
     else:
         # For standard logger, use a simpler approach
-        def log_func(lvl: int, msg: str, **ctx: Any) -> None:
+        def simple_log_func(lvl: int, msg: str, **ctx: Any) -> None:
             ctx_str = " | ".join(f"{k}={v}" for k, v in ctx.items()) if ctx else ""
             full_msg = f"{msg} | {ctx_str}" if ctx_str else msg
             logger.log(lvl, full_msg)
+        log_func = simple_log_func
     
     log_func(
         level,
