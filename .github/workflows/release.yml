@@ -85,6 +85,10 @@ jobs:
         pip install pytest flake8 black
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+    - name: 📥 Download spaCy model for testing
+      run: |
+        python -m spacy download en_core_web_sm
+
     - name: 🧪 Run comprehensive tests
       run: |
         echo "Running pre-release test suite..."
