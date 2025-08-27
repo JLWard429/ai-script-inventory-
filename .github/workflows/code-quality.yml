@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+        python-version: ['3.9', '3.10', '3.11', '3.12']
 
     steps:
       - name: Checkout repository
@@ -53,6 +53,10 @@ jobs:
           elif [ -f pyproject.toml ]; then
             pip install -e ".[dev]"
           fi
+
+      - name: Download spaCy model for testing
+        run: |
+          python -m spacy download en_core_web_sm
 
       - name: Code formatting check (Black)
         run: |
@@ -122,7 +126,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ['3.8', '3.11']
+        python-version: ['3.9', '3.11']
 
     steps:
       - name: Checkout repository
@@ -142,6 +146,10 @@ jobs:
           elif [ -f pyproject.toml ]; then
             pip install -e ".[dev]"
           fi
+
+      - name: Download spaCy model for testing
+        run: |
+          python -m spacy download en_core_web_sm
 
       - name: Run tests with pytest
         run: |

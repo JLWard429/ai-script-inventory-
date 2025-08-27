@@ -23,3 +23,7 @@ pre-commit>=4.0.0
 
 # Additional CI/CD dependencies
 pylint>=3.0.0
+
+# Python version compatibility
+tomli>=2.0.0; python_version<"3.11"
+toml>=0.10.0
