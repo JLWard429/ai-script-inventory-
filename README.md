@@ -13,6 +13,7 @@ This repository implements an advanced automation system for managing AI scripts
 
 ### Key Features
 
+- **Superman AI Terminal**: Advanced AI-powered command-line interface with **official OpenAI integration**
 - **Automated Code Organization**: Files are automatically sorted by type into appropriate directories
 - **Code Quality Assurance**: Automated linting, formatting, and security scanning
 - **Documentation Management**: Auto-generated and maintained documentation
@@ -29,10 +30,29 @@ This repository implements an advanced automation system for managing AI scripts
 
 ### Getting Started
 
-1. Clone the repository
-2. Install development dependencies: `pip install -r requirements-dev.txt`
-3. Set up pre-commit hooks: `pre-commit install`
-4. Start contributing! The automation will handle organization and quality checks.
+1. **Clone the repository**
+2. **Install dependencies**:
+   ```bash
+   # Basic installation
+   pip install -r requirements.txt
+   
+   # Full development setup with OpenAI integration
+   pip install -r requirements-dev.txt
+   ```
+3. **Configure OpenAI (optional)**:
+   ```bash
+   export OPENAI_API_KEY="sk-your-api-key-here"
+   ```
+4. **Set up development tools**:
+   ```bash
+   pre-commit install
+   ```
+5. **Try the Superman AI Terminal**:
+   ```bash
+   python python_scripts/superman.py
+   ```
+
+For detailed OpenAI setup instructions, see [OpenAI Integration Guide](docs/OPENAI_INTEGRATION.md).
 
 See [WORKFLOW.md](docs/WORKFLOW.md) for detailed information about the automation system.
 
