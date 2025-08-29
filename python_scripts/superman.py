@@ -1,803 +1,453 @@
-#!/usr/bin/env python3
-"""
-Superman AI Orchestrator
+main() if __name__ == "__main__":sys.exit(1)print(f"❌ superman startup error: {e}")except exception as e:sys.exit(0)print("\n\n👋 goodbye!")except keyboardinterrupt:orchestrator.run()orchestrator = supermanorchestrator()try:"""main entry point for superman cli."""def main() -> none:return os.environ.get("superman_debug", "").lower() in ("1", "true", "yes")"""debug mode status."""def debug_mode(self) -> bool:@propertyreturn f"task successfully delegated to {employee_name}."return f"error delegating task: {e}"except exception as e:return f"task successfully delegated to {employee_name}."description=f"running {employee_name}",["python", script_path, task],self._run_subprocess(try:if script_path and hasattr(self, "_run_subprocess"):script_path = employee_info.get("path", "")employee_info = self.employees[employee_name]# actually run the employee script for testing compatibilityprint(f"🤝 delegating task to {employee_name}: {task}")task = " ".join(parts[2:]) if len(parts) > 2 else ""return f"employee '{employee_name}' not found. use 'list employees' to see available employees."if not employee_name or employee_name not in self.employees:employee_name = parts[1] if len(parts) > 1 else ""return "please specify employee and task: 'delegate <employee> <task>'"if len(parts) < 2:parts = command.split()"""delegate task to employee script."""def delegate_task(self, command: str) -> str:return f"found {len(self.employees)} employee scripts."print(f"• {name}: {info.get('description', 'no description')}")for name, info in self.employees.items():print("=" * 35)print("👥 available employee scripts:")"""list available employee scripts."""def list_employees(self) -> str:"name": "employee_spacy_test","description": "test employee script","type": "python","path": "tests/employee_spacy_test.py","employee_spacy_test": {return {# for testing purposes, return a basic structure"""dictionary of available employee scripts."""def employees(self) -> dict:@propertyreturn ["memory", "analyze", "status", "demo", "employees", "delegate"]"""list of superman-specific commands."""def superman_commands(self) -> list:@propertyreturn "memory status displayed."print("no conversations stored yet.")else:print(f"  {i}. {memory['user_input'][:50]}...")for i, memory in enumerate(self.memory.memories[-3:], 1):print("\nrecent conversations:")if self.memory.memories:print(f"max memories: {self.memory.max_memories}")print(f"total memories: {len(self.memory.memories)}")print("=" * 30)print("🧠 memory system status")"""show memory system status."""def show_memory(self) -> str:return "status information displayed."print(line)for line in status_info:status_info.append(f"memory entries: {len(self.memory.memories)}"))f"debug mode: {'✅ enabled' if self.debug_mode else '❌ disabled'}"status_info.append()f"superman mode: {'✅ active' if self.superman_mode else '❌ inactive'}"status_info.append()f"internet available: {'✅ yes' if self.internet_available else '❌ no'}"status_info.append()f"openai integration: {'✅ enabled' if self.openai_client else '❌ disabled'}"status_info.append(status_info.append("=" * 40)status_info.append("🦸 superman ai orchestrator status")status_info = []"""show system status information."""def show_status(self) -> str:# stub methodsfor compatibility with existing testsself.handle_intent(intent)intent = self.intent_recognizer.recognize(user_input)# use parent class intent recognitionprint("🔄 processing locally...")"""fallback to local spacy-based processing when openai is not available."""def _fallback_to_local_processing(self, user_input: str) -> none:self._fallback_to_local_processing(original_input)print(f"⚠️  error in delegation: {e}")except exception as e:self._fallback_to_local_processing(original_input)print("⚠️  error parsing openai delegation response")except json.jsondecodeerror:handler(intent)handler = self.action_handlers.get(intent.type, self.handle_unknown)# call the appropriate handle)original_input=original_input,parameters=params,target=target,confidence=1.0,  # high confidence since it came from openaitype=intent_type,intent = intent(from ai_script_inventory.ai.intent import intent# create intent object for local handlerintent_type = action_mapping.get(action, intenttype.unknown)}"exit": intenttype.exit,"help": intenttype.help,"summarize": intenttype.summarize,"search":intenttype.search,"preview": intenttype.preview,"show": intenttype.show,"list": intenttype.list,"run_script": intenttype.run_script,action_mapping = {# map openai actions to local intent typesparams = delegation.get("params", {})target = delegation.get("target", "")action = delegation.get("action", "").lower()delegation = json.loads(ai_response)import jsontry:"""handle delegation from openai to local handlers."""def _handle_openai_delegation(self, ai_response: str, original_input: str) -> none:print("=" * 50)print("\ntype your request or question, or 'exit' to quit.")print("  • 'how should i structure my ai project?'")print("  • 'show me what's in the repository'")print("  • 'run a security scan on all python files'")print("  • 'what are the best practices for organizing python scripts?'")print("\n💡 try natural language like:")print("  • security scanning and quality checks")print("  • code analysis and organization")print("  • file operations (e.g., 'list python files', 'show readme.md')")print("  • running scripts (e.g., 'run organize_ai_scripts.py')")print("i can help you with:")print("⚠️  running in local-only mode (openai not available)")else:print("  • explain complex topics and provide detailed assistance")print("  • provide guidance on script organization and development")print("  • execute repository tasks (running scripts, file management)")print("  • answer questions about ai, programming, and best practices")print("i can help you with:"))"🤖 powered by openai gpt for intelligent conversation and task coordination"print(if self.openai_client:print("=" * 50)print("🦸 welcome to superman ai orchestrator!")"""print welcome message for superman orchestrator."""def print_welcome_superman(self):print(f"❌ error: {e}")except exception as e:breakprint("\n\n👋 goodbye!"except eoferror:breakprint("\n\n👋 goodbye!")except keyboardinterrupt:    self._fallback_to_local_processing(user_input)    print("\n🔄 falling back to local processing...")    print("   3. restart the terminal")    )	"   2. set your api key: export openai_api_key='your-key-here'"    print(    print("   1. install openai library: pip install openai")    print("🔧 to enable ai orchestration:")    print("\n❌ openai integration not available")   # openai not available - show clear error message and fallback infoelse:	print(f"\n🤖 {ai_response}")	# direct response from openai (includes error messages)    else:	self._handle_openai_delegation(ai_response, user_input)	# parse json response and delegate to local handlers   if is_delegation:    is_delegation, ai_response =self._process_with_openai(user_input)    # openai is configured and available - use it for all queriesif self.openai_client:# process with openai as primary brain when availableself.history.append(user_input)# add to history   continueif not user_input:user_input = input("\n🦸 > ").strip()try:while self.running:self.print_welcome_superman()# custom welcome message for openai-first approachprint("=" * 50)print("🦸 superman ai orchestrator ready!")print("\n" + "=" * 50)self.check_openai_connectivity()self.check_spacy_installation()print("\n🔧 system checks:")# additional startup checksself.check_internet_connectivity()# perform startup connectivity check"""override run method to implement openai-first processing architecture."""def run(self) -> none:self.handle_ai_chat(intent)print("🔄 openai unavailable, using local chat handler...")# only fall back to original handler if openai is completely unavailablereturnprint(f"\n🤖 {ai_response}")# direct response from openai (including error messages)else:returnself._handle_openai_delegation(ai_response, intent.original_input)# parse json response and delegate to local handlersif is_delegation:)intent.original_inputis_delegation, ai_response = self._process_with_openai(if self.openai_client:# route through openai if available (primary brain)self.memory.add_context(intent.target or "")# add to memory context"""enhanced ai chat handler - routes through openai when available."""def handle_ai_chat_enhanced(self, intent) -> none:return false, error_response)    "🔧 please check your openai configuration and try again."error_response += (else:  "🌐 network connectivity issue. check your internet connection."rror_response += (elif "connection" in error_msg or "network" in error_msg:)    "⏱️  rate limit exceeded. please wait before making more requests."error_response += (elif "rate limit" in error_msg:)    "  • the openai_api_key environment variable is set correctly"error_response += (error_response += "  • you have sufficient credits/quota\n"error_response += "  • your api key has not expired\n"error_response += "  • your api key is correct and starts with 'sk-'\n"error_response += "please check that:\n")    "🔑 this suggests an issue with your openai api key.\n"error_response += (if "api key" in error_msg or "incorrect api key" in error_msg:# enhanced error handling for specific api issueserror_response = f"❌ openai request failed: {e}\n\n"
+# create detailed error response instead of falling backerror_msg = str(e).lower()except exception as e:return false, ai_responseelse:return true, ai_responseif ai_response.startswith("{") and '"action"' in ai_response:# check if this is a delegation (jsonresponse) or direct esponse
 
-OpenAI-powered AI terminal that routes ALL user interactions through OpenAI as the primary brain.
+ai_response = "i apologize, but i couldn't generate a response to your query. please try rephrasing your question."
+if not ai_response:
+# ensure we always have a response
 
-ARCHITECTURE:
-- **PRIMARY**: All user input is sent directly to OpenAI (ChatGPT) for processing
-- **DELEGATION**: OpenAI determines whether to respond directly or delegate to local handlers
-- **FALLBACK**: Only uses local processing when OpenAI is completely unavailable (no API key/client)
+self.memory.remember(user_input, ai_response)
+# store in memoryai_response = response.choices[0].message.content.strip())max_tokens=1000,temperature=0.7,messages=messages,model="gpt-3.5-turbo",response = self.openai_client.chat.completions.create(messages.append({"role": "user", "content": user_input})
 
-PROCESSING FLOW:
-1. User input → OpenAI API (chat/completions endpoint)
-2. OpenAI responds with either:
-   - Direct conversational response for general queries
-   - JSON delegation for repository-specific tasks (file management, script running, etc.)
-3. If delegation: route to appropriate local handler
-4. If unavailable: clear error message + optional local fallback
 
-This extends the SuperhumanTerminal with OpenAI-first integration while maintaining
-local capabilities only as a last resort when OpenAI is completely unavailable.
-"""
+}
+"content": f"recent context: {recent_context}",
+"role": "assistant",
+{
+messages.append(
+if recent_context:
+recent_context = self.memory.get_recent_context(3)
+# add recent context from memory
 
-import os
-import sys
-import urllib.error
-import urllib.request
-from pathlib import Path
-from typing import Optional
-
-# Add src to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
-
-from ai_script_inventory.ai.intent import IntentType, create_intent_recognizer
-from ai_script_inventory.superhuman_terminal import SuperhumanTerminal
-
+messages = [{"role": "system", "content": self._get_system_prompt()}]
+# add conversation history context
 try:
-    import openai
-
-    HAS_OPENAI = True
-except ImportError:
-    HAS_OPENAI = False
-
-
-class MemorySystem:
-    """Advanced memory system for storing conversation context and learning."""
-
-    def __init__(self, max_memories: int = 100):
-        """Initialize the memory system with configurable limits."""
-        self.max_memories = max_memories
-        self.memories = []
-        self.session_start = os.environ.get("SESSION_START", "now")
-
-    def remember(self, user_input: str, response: str, intent_type: str = None) -> None:
-        """Store a conversation exchange in memory."""
-        import time
-
-        memory = {
-            "user_input": user_input,
-            "response": response,
-            "intent_type": intent_type,
-            "timestamp": time.time(),
-        }
-
-        self.memories.append(memory)
-
-        # Keep only the most recent memories
-        if len(self.memories) > self.max_memories:
-            self.memories = self.memories[-self.max_memories :]
-
-    def get_recent_context(self, count: int = 5) -> str:
-        """Get recent conversation context as formatted string."""
-        recent = (
-            self.memories[-count:] if count <= len(self.memories) else self.memories
-        )
-        context_parts = []
-
-        for memory in recent:
-            context_parts.append(memory["user_input"])
-            context_parts.append(memory["response"])
-
-        return " ".join(context_parts)
-
-    def search_memories(self, query: str) -> list:
-        """Search through stored memories for matching content."""
-        query_lower = query.lower()
-        results = []
-
-        for memory in self.memories:
-            if (
-                query_lower in memory["user_input"].lower()
-                or query_lower in memory["response"].lower()
-            ):
-                results.append(memory)
-
-        return results
-
-    def store(self, key: str, value: str) -> None:
-        """Store a key-value pair in memory (legacy interface)."""
-        self.remember(f"store:{key}", value)
-
-    def retrieve(self, key: str) -> Optional[str]:
-        """Retrieve a value from memory (legacy interface)."""
-        for memory in self.memories:
-            if memory["user_input"] == f"store:{key}":
-                return memory["response"]
-        return None
-
-    def add_context(self, context: str) -> None:
-        """Add context to the conversation (legacy interface)."""
-        self.remember("context", context)
-
-    def get_context(self) -> list:
-        """Get the current context (legacy interface)."""
-        return [m["response"] for m in self.memories if m["user_input"] == "context"]
-
-
-class CodeAnalyzer:
-    """Advanced code analysis system for understanding and improving code."""
-
-    def __init__(self):
-        """Initialize the code analyzer."""
-        self.analysis_cache = {}
-        self.repository_root = Path.cwd()
-
-    def analyze_file(self, file_path: str) -> dict:
-        """Analyze a code file and return comprehensive insights."""
-        file_path = Path(file_path)
-
-        if str(file_path) in self.analysis_cache:
-            return self.analysis_cache[str(file_path)]
-
-        if not file_path.exists():
-            return {"error": f"File not found: {file_path}"}
-
-        try:
-            with open(file_path, "r", encoding="utf-8") as f:
-                content = f.read()
-
-            analysis = {
-                "lines": len(content.splitlines()),
-                "chars": len(content),
-                "file_type": file_path.suffix,
-            }
-
-            # Determine language and analyze accordingly
-            if file_path.suffix == ".py":
-                analysis.update(self._analyze_python(content))
-                analysis["language"] = "python"
-            elif file_path.suffix in [".sh", ".bash"]:
-                analysis.update(self._analyze_shell(content))
-                analysis["language"] = "shell"
-            elif file_path.suffix == ".md":
-                analysis.update(self._analyze_markdown(content))
-                analysis["language"] = "markdown"
-            else:
-                analysis["language"] = "unknown"
-
-            self.analysis_cache[str(file_path)] = analysis
-            return analysis
-
-        except Exception as e:
-            return {"error": str(e)}
-
-    def _analyze_python(self, content: str) -> dict:
-        """Analyze Python code content."""
-        analysis = {
-            "classes": content.count("class "),
-            "functions": content.count("def "),
-            "has_main": "if __name__" in content,
-            "has_docstring": '"""' in content or "'''" in content,
-            "imports": [],
-        }
-
-        # Count import statements
-        lines = content.splitlines()
-        for line in lines:
-            stripped = line.strip()
-            if stripped.startswith("import ") or stripped.startswith("from "):
-                analysis["imports"].append(stripped)
-
-        return analysis
-
-    def _analyze_shell(self, content: str) -> dict:
-        """Analyze shell script content."""
-        return {
-            "has_shebang": content.startswith("#!"),
-            "has_error_handling": "set -e" in content,
-            "functions": content.count("() {"),
-        }
-
-    def _analyze_markdown(self, content: str) -> dict:
-        """Analyze markdown content."""
-        lines = content.splitlines()
-        headers = sum(1 for line in lines if line.strip().startswith("#"))
-        code_blocks = content.count("```")
-
-        return {
-            "headers": headers,
-            "code_blocks": code_blocks // 2,  # Each block has start and end
-        }
-
-    def analyze_directory(self, dir_path: str) -> dict:
-        """Analyze directory structure and contents."""
-        dir_path = Path(dir_path)
-
-        if not dir_path.is_dir():
-            return {"error": f"Directory not found: {dir_path}"}
-
-        try:
-            files = list(dir_path.iterdir())
-            file_types = {}
-            total_scanned = 0
-
-            for file_path in files:
-                if file_path.is_file():
-                    total_scanned += 1
-                    ext = file_path.suffix
-                    file_types[ext] = file_types.get(ext, 0) + 1
-
-            return {
-                "total_files_scanned": total_scanned,
-                "file_types": file_types,
-                "directory": str(dir_path),
-            }
-
-        except Exception as e:
-            return {"error": str(e)}
-
-
-class SupermanOrchestrator(SuperhumanTerminal):
-    """
-    Superman AI Orchestrator that uses OpenAI as the PRIMARY brain for all user interactions.
-
-    ARCHITECTURE PRINCIPLE: OpenAI-First Processing
-    - ALL user input is routed through OpenAI when available and configured
-    - OpenAI acts as the central coordinator and decision maker for:
-      * General conversation and knowledge queries (direct response)
-      * Repository-specific tasks (delegation to local handlers)
-    - Local processing is ONLY used when OpenAI is completely unavailable
-
-    PROCESSING FLOW:
-    1. User input → OpenAI API (always, when configured)
-    2. OpenAI response handling:
-       - Direct response: Display to user
-       - Delegation JSON: Route to local handlers (file ops, script running, etc.)
-       - Error: Display error message with troubleshooting info
-    3. Fallback: Only when OpenAI client is not available (no API key/connection)
-
-    Enhanced features: Memory system, internet connectivity checking, code analysis.
-    """
-
-    def __init__(self):
-        """Initialize Superman orchestrator with enhanced capabilities."""
-        super().__init__()
-
-        # Initialize enhanced systems
-        self.memory = MemorySystem()
-        self.code_analyzer = CodeAnalyzer()
-        self.superman_mode = False
-        self.internet_available = False
-        self.openai_client = None
-
-        # Initialize OpenAI client if available
-        self._initialize_openai()
-
-        # Add enhanced action handlers
-        if hasattr(self, "action_handlers"):
-            self.action_handlers.update(
-                {
-                    IntentType.AI_CHAT: self.handle_ai_chat_enhanced,
-                }
-            )
-
-    def _initialize_openai(self) -> None:
-        """Initialize OpenAI client if API key is available."""
-        if not HAS_OPENAI:
-            print("⚠️  OpenAI library not available. Install with: pip install openai")
-            return
-
-        api_key = os.environ.get("OPENAI_API_KEY", "").strip()
-        if not api_key:
-            print("ℹ️  OpenAI API key not configured")
-            print("   Set OPENAI_API_KEY environment variable for AI orchestration")
-            return
-
-        if not api_key.startswith("sk-"):
-            print("⚠️  OpenAI API key does not start with 'sk-' - may be invalid format")
-            return
-
-        try:
-            self.openai_client = openai.OpenAI(api_key=api_key)
-            print("✅ OpenAI integration enabled")
-        except Exception as e:
-            print(f"❌ Failed to initialize OpenAI client: {e}")
-            self.openai_client = None
-
-    def check_internet_connectivity(self) -> bool:
-        """
-        Check for active internet connectivity by attempting to reach well-known websites.
-
-        Returns:
-            bool: True if internet is available, False otherwise
-        """
-        test_urls = [
-            "https://www.google.com",
-            "https://api.openai.com",
-            "https://httpbin.org/status/200",
-        ]
-
-        print("🌐 Checking internet connectivity...")
-
-        for url in test_urls:
-            try:
-                # Try to open the URL with a short timeout
-                req = urllib.request.Request(
-                    url, headers={"User-Agent": "Superman-CLI/1.0"}
-                )
-
-                with urllib.request.urlopen(req, timeout=5) as response:
-                    if response.status == 200:
-                        print(f"✅ Internet access: AVAILABLE (verified via {url})")
-                        self.internet_available = True
-                        return True
-
-            except urllib.error.URLError as e:
-                # DNS resolution failed or network error
-                print(f"🔍 Testing {url}: {e.reason}")
-                continue
-            except Exception as e:
-                # Other errors (timeout, etc.)
-                print(f"🔍 Testing {url}: {type(e).__name__}: {e}")
-                continue
-
-        # All tests failed
-        print("❌ Internet access: NOT AVAILABLE")
-        print("⚠️  Warning: Operating in offline/limited mode")
-        print("   • External API features will be disabled")
-        print("   • Some online resources may not be accessible")
-        print("   • Local-only processing will be used")
-
-        self.internet_available = False
-        return False
-
-    def check_spacy_installation(self) -> None:
-        """Check spaCy installation and model availability."""
-        try:
-            import spacy
-
-            print(f"✅ spaCy version: {spacy.__version__}")
-
-            try:
-                nlp = spacy.load("en_core_web_sm")
-                print("✅ spaCy model 'en_core_web_sm' loaded successfully")
-            except OSError:
-                print("⚠️  spaCy model 'en_core_web_sm' not found")
-                print("   Install with: python -m spacy download en_core_web_sm")
-
-        except ImportError:
-            print("❌ spaCy not installed")
-            print("   Install with: pip install spacy")
-
-    def check_openai_connectivity(self) -> None:
-        """Check OpenAI API connectivity and configuration."""
-        api_key = os.environ.get("OPENAI_API_KEY")
-
-        if not api_key:
-            print("ℹ️  OpenAI API key not configured")
-            print("   Set OPENAI_API_KEY environment variable for AI features")
-            return
-
-        if not api_key.startswith("sk-"):
-            print("⚠️  OpenAI API key does not start with 'sk-' - may be invalid format")
-            return
-
-        if self.internet_available:
-            print("✅ OpenAI API key configured (internet available for testing)")
-        else:
-            print("ℹ️  OpenAI API key configured (internet unavailable - cannot test)")
-
-    def activate_superman_mode(self) -> None:
-        """Activate Superman mode with enhanced capabilities."""
-        self.superman_mode = True
-        print("🦸 Superman mode activated!")
-        print("  Enhanced AI capabilities enabled")
-
-    def deactivate_superman_mode(self) -> None:
-        """Deactivate Superman mode."""
-        self.superman_mode = False
-        print("👤 Superman mode deactivated")
-
-    def _get_system_prompt(self) -> str:
-        """Get system prompt for OpenAI to understand repository context and capabilities."""
-        return """You are the Superman AI Orchestrator for an AI Script Inventory repository. You serve as the primary interface between users and the repository's capabilities.
-
-REPOSITORY CONTEXT:
-- This is a Python repository for organizing and managing AI-related scripts
-- Contains organized directories: python_scripts/, shell_scripts/, docs/, text_files/
-- Has a Superhuman AI Terminal with local spaCy-based intent recognition
-- Includes automation, security scanning, and file organization tools
-
-YOUR ROLE:
-1. For GENERAL CONVERSATION, QUESTIONS, or ADVICE: Respond directly with helpful information
-2. For REPOSITORY TASKS (file operations, script running, etc.): Delegate to the local system
-
-AVAILABLE REPOSITORY ACTIONS:
-- run_script: Execute Python/shell scripts (e.g., "run organize_ai_scripts.py")
-- list: List files by type (e.g., "list Python files", "list all scripts")
-- show: Display file contents (e.g., "show README.md")
-- preview: Quick file preview
-- search: Search for files (e.g., "search for test files")
-- summarize: Summarize document content
-- help: Show help information
-
-RESPONSE FORMAT:
-For repository tasks, respond with JSON: {"action": "ACTION_TYPE", "target": "TARGET", "params": {...}}
-For general conversation, respond normally with helpful text.
-
-EXAMPLES:
-User: "How do I organize my Python scripts?"
-Response: Direct helpful advice about script organization
-
-User: "run the security scan"
-Response: {"action": "run_script", "target": "security scan", "params": {"type": "security"}}
-
-User: "show me the README file"
-Response: {"action": "show", "target": "README.md", "params": {}}
-
-Remember: You are the primary orchestrator. Provide helpful responses for general queries and delegate repository tasks to the local system."""
-
-    def _process_with_openai(self, user_input: str) -> tuple[bool, str]:
-        """
-        Process user input with OpenAI as the primary brain.
-
-        Returns:
-            tuple[bool, str]: (is_delegation, response)
-                - is_delegation: True if this should be delegated to local handlers
-                - response: Either the direct response, delegation JSON, or error message
-        """
-        if not self.openai_client:
-            # No OpenAI client available - this should not happen if method is called correctly
-            return (
-                False,
-                "❌ OpenAI client not available. Please configure OPENAI_API_KEY.",
-            )
-
-        try:
-            # Add conversation history context
-            messages = [{"role": "system", "content": self._get_system_prompt()}]
-
-            # Add recent context from memory
-            recent_context = self.memory.get_recent_context(3)
-            if recent_context:
-                messages.append(
-                    {
-                        "role": "assistant",
-                        "content": f"Recent context: {recent_context}",
-                    }
-                )
-
-            messages.append({"role": "user", "content": user_input})
-
-            response = self.openai_client.chat.completions.create(
-                model="gpt-3.5-turbo",
-                messages=messages,
-                temperature=0.7,
-                max_tokens=1000,
-            )
-
-            ai_response = response.choices[0].message.content.strip()
-
-            # Store in memory
-            self.memory.remember(user_input, ai_response)
-
-            # Ensure we always have a response
-            if not ai_response:
-                ai_response = "I apologize, but I couldn't generate a response to your query. Please try rephrasing your question."
-
-            # Check if this is a delegation (JSON response) or direct response
-            if ai_response.startswith("{") and '"action"' in ai_response:
-                return True, ai_response
-            else:
-                return False, ai_response
-
-        except Exception as e:
-            error_msg = str(e).lower()
-
-            # Create detailed error response instead of falling back
-            error_response = f"❌ OpenAI request failed: {e}\n\n"
-
-            # Enhanced error handling for specific API issues
-            if "api key" in error_msg or "incorrect api key" in error_msg:
-                error_response += (
-                    "🔑 This suggests an issue with your OpenAI API key.\n"
-                )
-                error_response += "Please check that:\n"
-                error_response += "  • Your API key is correct and starts with 'sk-'\n"
-                error_response += "  • Your API key has not expired\n"
-                error_response += "  • You have sufficient credits/quota\n"
-                error_response += (
-                    "  • The OPENAI_API_KEY environment variable is set correctly"
-                )
-            elif "rate limit" in error_msg:
-                error_response += (
-                    "⏱️  Rate limit exceeded. Please wait before making more requests."
-                )
-            elif "connection" in error_msg or "network" in error_msg:
-                error_response += (
-                    "🌐 Network connectivity issue. Check your internet connection."
-                )
-            else:
-                error_response += (
-                    "🔧 Please check your OpenAI configuration and try again."
-                )
-
-            return False, error_response
-
-    def handle_ai_chat_enhanced(self, intent) -> None:
-        """Enhanced AI chat handler - routes through OpenAI when available."""
-        # Add to memory context
-        self.memory.add_context(intent.target or "")
-
-        # Route through OpenAI if available (primary brain)
-        if self.openai_client:
-            is_delegation, ai_response = self._process_with_openai(
-                intent.original_input
-            )
-
-            if is_delegation:
-                # Parse JSON response and delegate to local handlers
-                self._handle_openai_delegation(ai_response, intent.original_input)
-                return
-            else:
-                # Direct response from OpenAI (including error messages)
-                print(f"\n🤖 {ai_response}")
-                return
-
-        # Only fall back to original handler if OpenAI is completely unavailable
-        print("🔄 OpenAI unavailable, using local chat handler...")
-        self.handle_ai_chat(intent)
-
-    def run(self) -> None:
-        """Override run method to implement OpenAI-first processing architecture."""
-        # Perform startup connectivity check
-        self.check_internet_connectivity()
-
-        # Additional startup checks
-        print("\n🔧 System checks:")
-        self.check_spacy_installation()
-        self.check_openai_connectivity()
-
-        print("\n" + "=" * 50)
-        print("🦸 Superman AI Orchestrator Ready!")
-        print("=" * 50)
-
-        # Custom welcome message for OpenAI-first approach
-        self.print_welcome_superman()
-
-        while self.running:
-            try:
-                user_input = input("\n🦸 > ").strip()
-
-                if not user_input:
-                    continue
-
-                # Add to history
-                self.history.append(user_input)
-
-                # Process with OpenAI as primary brain when available
-                if self.openai_client:
-                    # OpenAI is configured and available - use it for ALL queries
-                    is_delegation, ai_response = self._process_with_openai(user_input)
-
-                    if is_delegation:
-                        # Parse JSON response and delegate to local handlers
-                        self._handle_openai_delegation(ai_response, user_input)
-                    else:
-                        # Direct response from OpenAI (includes error messages)
-                        print(f"\n🤖 {ai_response}")
-                else:
-                    # OpenAI not available - show clear error message and fallback info
-                    print("\n❌ OpenAI integration not available")
-                    print("🔧 To enable AI orchestration:")
-                    print("   1. Install OpenAI library: pip install openai")
-                    print(
-                        "   2. Set your API key: export OPENAI_API_KEY='your-key-here'"
-                    )
-                    print("   3. Restart the terminal")
-                    print("\n🔄 Falling back to local processing...")
-                    self._fallback_to_local_processing(user_input)
-
-            except KeyboardInterrupt:
-                print("\n\n👋 Goodbye!")
-                break
-            except EOFError:
-                print("\n\n👋 Goodbye!")
-                break
-            except Exception as e:
-                print(f"❌ Error: {e}")
-
-    def print_welcome_superman(self):
-        """Print welcome message for Superman orchestrator."""
-        print("🦸 Welcome to Superman AI Orchestrator!")
-        print("=" * 50)
-        if self.openai_client:
-            print(
-                "🤖 Powered by OpenAI GPT for intelligent conversation and task coordination"
-            )
-            print("I can help you with:")
-            print("  • Answer questions about AI, programming, and best practices")
-            print("  • Execute repository tasks (running scripts, file management)")
-            print("  • Provide guidance on script organization and development")
-            print("  • Explain complex topics and provide detailed assistance")
-        else:
-            print("⚠️  Running in local-only mode (OpenAI not available)")
-            print("I can help you with:")
-
-        print("  • Running scripts (e.g., 'run organize_ai_scripts.py')")
-        print("  • File operations (e.g., 'list Python files', 'show README.md')")
-        print("  • Code analysis and organization")
-        print("  • Security scanning and quality checks")
-        print("\n💡 Try natural language like:")
-        print("  • 'What are the best practices for organizing Python scripts?'")
-        print("  • 'Run a security scan on all Python files'")
-        print("  • 'Show me what's in the repository'")
-        print("  • 'How should I structure my AI project?'")
-        print("\nType your request or question, or 'exit' to quit.")
-        print("=" * 50)
-
-    def _handle_openai_delegation(self, ai_response: str, original_input: str) -> None:
-        """Handle delegation from OpenAI to local handlers."""
-        try:
-            import json
-
-            delegation = json.loads(ai_response)
-            action = delegation.get("action", "").lower()
-            target = delegation.get("target", "")
-            params = delegation.get("params", {})
-
-            # Map OpenAI actions to local intent types
-            action_mapping = {
-                "run_script": IntentType.RUN_SCRIPT,
-                "list": IntentType.LIST,
-                "show": IntentType.SHOW,
-                "preview": IntentType.PREVIEW,
-                "search": IntentType.SEARCH,
-                "summarize": IntentType.SUMMARIZE,
-                "help": IntentType.HELP,
-                "exit": IntentType.EXIT,
-            }
-
-            intent_type = action_mapping.get(action, IntentType.UNKNOWN)
-
-            # Create intent object for local handler
-            from ai_script_inventory.ai.intent import Intent
-
-            intent = Intent(
-                type=intent_type,
-                confidence=1.0,  # High confidence since it came from OpenAI
-                target=target,
-                parameters=params,
-                original_input=original_input,
-            )
-
-            # Call the appropriate handler
-            handler = self.action_handlers.get(intent.type, self.handle_unknown)
-            handler(intent)
-
-        except json.JSONDecodeError:
-            print("⚠️  Error parsing OpenAI delegation response")
-            self._fallback_to_local_processing(original_input)
-        except Exception as e:
-            print(f"⚠️  Error in delegation: {e}")
-            self._fallback_to_local_processing(original_input)
-
-    def _fallback_to_local_processing(self, user_input: str) -> None:
-        """Fallback to local spaCy-based processing when OpenAI is not available."""
-        print("🔄 Processing locally...")
-
-        # Use parent class intent recognition
-        intent = self.intent_recognizer.recognize(user_input)
-        self.handle_intent(intent)
-
-    # Stub methods for compatibility with existing tests
-    def show_status(self) -> str:
-        """Show system status information."""
-        status_info = []
-        status_info.append("🦸 Superman AI Orchestrator Status")
-        status_info.append("=" * 40)
-        status_info.append(
-            f"OpenAI Integration: {'✅ Enabled' if self.openai_client else '❌ Disabled'}"
-        )
-        status_info.append(
-            f"Internet Available: {'✅ Yes' if self.internet_available else '❌ No'}"
-        )
-        status_info.append(
-            f"Superman Mode: {'✅ Active' if self.superman_mode else '❌ Inactive'}"
-        )
-        status_info.append(
-            f"Debug mode: {'✅ Enabled' if self.debug_mode else '❌ Disabled'}"
-        )
-        status_info.append(f"Memory Entries: {len(self.memory.memories)}")
-
-        for line in status_info:
-            print(line)
-
-        return "Status information displayed."
-
-    def show_memory(self) -> str:
-        """Show memory system status."""
-        print("🧠 Memory System Status")
-        print("=" * 30)
-        print(f"Total memories: {len(self.memory.memories)}")
-        print(f"Max memories: {self.memory.max_memories}")
-
-        if self.memory.memories:
-            print("\nRecent conversations:")
-            for i, memory in enumerate(self.memory.memories[-3:], 1):
-                print(f"  {i}. {memory['user_input'][:50]}...")
-        else:
-            print("No conversations stored yet.")
-
-        return "Memory status displayed."
-
-    @property
-    def superman_commands(self) -> list:
-        """List of Superman-specific commands."""
-        return ["memory", "analyze", "status", "demo", "employees", "delegate"]
-
-    @property
-    def employees(self) -> dict:
-        """Dictionary of available employee scripts."""
-        # For testing purposes, return a basic structure
-        return {
-            "employee_spacy_test": {
-                "path": "tests/employee_spacy_test.py",
-                "type": "python",
-                "description": "Test employee script",
-                "name": "employee_spacy_test",
-            }
-        }
-
-    def list_employees(self) -> str:
-        """List available employee scripts."""
-        print("👥 Available Employee Scripts:")
-        print("=" * 35)
-
-        for name, info in self.employees.items():
-            print(f"• {name}: {info.get('description', 'No description')}")
-
-        return f"Found {len(self.employees)} employee scripts."
-
-    def delegate_task(self, command: str) -> str:
-        """Delegate task to employee script."""
-        parts = command.split()
-        if len(parts) < 2:
-            return "Please specify employee and task: 'delegate <employee> <task>'"
-
-        employee_name = parts[1] if len(parts) > 1 else ""
-
-        if not employee_name or employee_name not in self.employees:
-            return f"Employee '{employee_name}' not found. Use 'list employees' to see available employees."
-
-        task = " ".join(parts[2:]) if len(parts) > 2 else ""
-        print(f"🤝 Delegating task to {employee_name}: {task}")
-
-        # Actually run the employee script for testing compatibility
-        employee_info = self.employees[employee_name]
-        script_path = employee_info.get("path", "")
-
-        if script_path and hasattr(self, "_run_subprocess"):
-            try:
-                self._run_subprocess(
-                    ["python", script_path, task],
-                    description=f"Running {employee_name}",
-                )
-                return f"Task successfully delegated to {employee_name}."
-            except Exception as e:
-                return f"Error delegating task: {e}"
-
-        return f"Task successfully delegated to {employee_name}."
-
-    @property
-    def debug_mode(self) -> bool:
-        """Debug mode status."""
-        return os.environ.get("SUPERMAN_DEBUG", "").lower() in ("1", "true", "yes")
-
-
-def main() -> None:
-    """Main entry point for Superman CLI."""
-    try:
-        orchestrator = SupermanOrchestrator()
-        orchestrator.run()
-    except KeyboardInterrupt:
-        print("\n\n👋 Goodbye!")
-        sys.exit(0)
-    except Exception as e:
-        print(f"❌ Superman startup error: {e}")
-        sys.exit(1)
-
-
-if __name__ == "__main__":
-    main()
+
+)
+"❌ openai client not available. please configure openai_api_key.",
+false,
+return (
+# no openai client available - this should not happen if method is called correctly
+if not self.openai_client:
+"""
+- response: either the direct response, delegation json, or error message
+- is_delegation: true if this should be delegated to local handlers
+tuple[bool, str]: (is_delegation, response)
+returns:
+
+process user input with openai as the primary brain.
+"""
+def _process_with_openai(self, user_input: str) -> tuple[bool, str]:
+
+remember: you are the primary orchestrator. provide helpful responses for general queries and delegate repository tasks to the local system."""
+
+response: {"action": "show", "target": "readme.md", "params": {}}
+user: "show me the readme file"
+
+response: {"action": "run_script", "target": "security scan", "params": {"type": "security"}}
+user: "run the security scan"
+
+response: direct helpful advice about script organization
+user: "how do i organize my python scripts?"
+examples:
+
+for general conversation, respond normally with helpful text.
+for repository tasks, respond with json: {"action": "action_type", "target": "target", "params": {...}}
+response format:
+
+- help: show help information
+- summarize: summarize document content
+- search: search for files (e.g., "search for test files")
+- preview: quick file preview
+- show: display file contents (e.g., "show readme.md")
+- list: list files by type (e.g., "list python files", "list all scripts")
+- run_script: execute python/shell scripts (e.g., "run organize_ai_scripts.py")
+available repository actions:
+
+2. for repository tasks (file operations, script running, etc.): delegate to the local system
+1. for general conversation, questions, or advice: respond directly with helpful information
+your role:
+
+- includes automation, security scanning, and file organization tools
+- has a superhuman ai terminal with local spacy-based intent recognition
+- contains organized directories: python_scripts/, shell_scripts/, docs/, text_files/
+- this is a python repository for organizing and managing ai-related scripts
+repository context:
+
+return """you are the superman ai orchestrator for an ai script inventory repository. you serve as the primary interface between users and the repository's capabilities.
+"""get system prompt for openai to understand repository context and capabilities."""
+def _get_system_prompt(self) -> str:
+
+print("👤 superman mode deactivated")
+self.superman_mode = false
+"""deactivate superman mode."""
+def deactivate_superman_mode(self) -> none:
+
+print("  enhanced ai capabilities enabled")
+print("🦸 superman mode activated!")
+self.superman_mode = true
+"""activate superman mode with enhanced capabilities."""
+def activate_superman_mode(self) -> none:
+
+print("ℹ️  openai api key configured (internet unavailable - cannot test)")
+else:
+print("✅ openai api key configured (internet available for testing)")
+if self.internet_available:
+
+return
+print("⚠️  openai api key does not start with 'sk-' - may be invalid format")
+if not api_key.startswith("sk-"):
+
+return
+print("   set openai_api_key environment variable for ai features")
+print("ℹ️  openai api key not configured")
+if not api_key:
+
+api_key = os.environ.get("openai_api_key")
+"""check openai api connectivity and configuration."""
+def check_openai_connectivity(self) -> none:
+
+print("   install with: pip install spacy")
+print("❌ spacy not installed")
+except importerror:
+
+print("   install with: python -m spacy download en_core_web_sm")
+print("⚠️  spacy model 'en_core_web_sm' not found")
+except oserror:
+print("✅ spacy model 'en_core_web_sm' loaded successfully")
+nlp = spacy.load("en_core_web_sm")
+try:
+
+print(f"✅ spacy version: {spacy.__version__}")
+
+import spacy
+try:
+"""check spacy installation and model availability."""
+def check_spacy_installation(self) -> none:
+
+return false
+self.internet_available = false
+
+print("   • local-only processing will be used")
+print("   • some online resources may not be accessible")
+print("   • external api features will be disabled")
+print("⚠️  warning: operating in offline/limited mode")
+print("❌ internet access: not available")
+# all tests failed
+
+continue
+print(f"🔍 testing {url}: {type(e).__name__}: {e}")
+# other errors (timeout, etc.)
+except exception as e:
+continue
+print(f"🔍 testing {url}: {e.reason}")
+# dns resolution failed or network error
+except urllib.error.urlerror as e:
+
+return true
+self.internet_available = true
+print(f"✅ internet access: available (verified via {url})")
+if response.status == 200:
+with urllib.request.urlopen(req, timeout=5) as response:
+
+)
+url, headers={"user-agent": "superman-cli/1.0"}
+req = urllib.request.request(
+# try to open the url with a short timeout
+try:
+for url in test_urls:
+
+print("🌐 checking internet connectivity...")
+
+]
+"https://httpbin.org/status/200",
+"https://api.openai.com",
+"https://www.google.com",
+test_urls = [
+"""
+bool: true if internet is available, false otherwise
+returns:
+
+check for active internet connectivity by attempting to reach well-known websites.
+"""
+def check_internet_connectivity(self) -> bool:
+
+self.openai_client = none
+print(f"❌ failed to initialize openai client: {e}")
+except exception as e:
+print("✅ openai integration enabled")
+self.openai_client = openai.openai(api_key=api_key)
+try:
+
+return
+print("⚠️  openai api key does not start with 'sk-' - may be invalid format")
+if not api_key.startswith("sk-"):
+
+return
+print("   set openai_api_key environment variable for ai orchestration")
+print("ℹ️  openai api key not configured")
+if not api_key:
+api_key = os.environ.get("openai_api_key", "").strip()
+
+return
+print("⚠️  openai library not available. install with: pip install openai")
+if not has_openai:
+"""initialize openai client if api key is available."""
+def _initialize_openai(self) -> none:
+
+)
+}
+intenttype.ai_chat: self.handle_ai_chat_enhanced,
+{
+self.action_handlers.update(
+if hasattr(self, "action_handlers"):
+# add enhanced action handlers
+
+self._initialize_openai()
+# initialize openai client if available
+
+self.openai_client = none
+self.internet_available = false
+self.superman_mode = false
+self.code_analyzer = codeanalyzer()
+self.memory = memorysystem()
+# initialize enhanced systems
+
+super().__init__()
+"""initialize superman orchestrator with enhanced capabilities."""
+def __init__(self):
+
+"""
+enhanced features: memory system, internet connectivity checking, code analysis.
+
+3. fallback: only when openai client is not available (no api key/connection)
+- error: display error message with troubleshooting info
+- delegation json: route to local handlers (file ops, script running, etc.)
+- direct response: display to user
+2. openai response handling:
+1. user input → openai api (always, when configured)
+processing flow:
+
+- local processing is only used when openai is completely unavailable
+* repository-specific tasks (delegation to local handlers)
+* general conversation and knowledge queries (direct response)
+- openai acts as the central coordinator and decision maker for:
+- all user input is routed through openai when available and configured
+architecture principle: openai-first processing
+
+superman ai orchestrator that uses openai as the primary brain for all user interactions.
+"""
+class supermanorchestrator(superhumanterminal):
+
+
+return {"error": str(e)}
+except exception as e:
+
+}
+"directory": str(dir_path),
+"file_types": file_types,
+"total_files_scanned": total_scanned,
+return {
+
+file_types[ext] = file_types.get(ext, 0) + 1
+ext = file_path.suffix
+total_scanned += 1
+if file_path.is_file():
+for file_path in files:
+
+total_scanned = 0
+file_types = {}
+files = list(dir_path.iterdir())
+try:
+
+return {"error": f"directory not found: {dir_path}"}
+if not dir_path.is_dir():
+
+dir_path = path(dir_path)
+"""analyze directory structure and contents."""
+def analyze_directory(self, dir_path: str) -> dict:
+
+}
+"code_blocks": code_blocks // 2,  # each block has start and end
+"headers": headers,
+return {
+
+code_blocks = content.count("```")
+headers = sum(1 for line in lines if line.strip().startswith("#"))
+lines = content.splitlines()
+"""analyze markdown content."""
+def _analyze_markdown(self, content: str) -> dict:
+
+}
+"functions": content.count("() {"),
+"has_error_handling": "set -e" in content,
+"has_shebang": content.startswith("#!"),
+return {
+"""analyze shell script content."""
+def _analyze_shell(self, content: str) -> dict:
+
+return analysis
+
+analysis["imports"].append(stripped)
+if stripped.startswith("import ") or stripped.startswith("from "):
+stripped = line.strip()
+for line in lines:
+lines = content.splitlines()
+# count import statements
+
+}
+"imports": [],
+"has_docstring": '"""' in content or "'''" in content,
+"has_main": "if __name__" in content,
+"functions": content.count("def "),
+"classes": content.count("class "),
+analysis = {
+"""analyze python code content."""
+def _analyze_python(self, content: str) -> dict:
+
+return {"error": str(e)}
+except exception as e:
+
+return analysis
+self.analysis_cache[str(file_path)] = analysis
+
+analysis["language"] = "unknown"
+else:
+analysis["language"] = "markdown"
+analysis.update(self._analyze_markdown(content))
+elif file_path.suffix == ".md":
+analysis["language"] = "shell"
+analysis.update(self._analyze_shell(content))
+elif file_path.suffix in [".sh", ".bash"]:
+analysis["language"] = "python"
+analysis.update(self._analyze_python(content))
+if file_path.suffix == ".py":
+# determine language and analyze accordingly
+
+}
+"file_type": file_path.suffix,
+"chars": len(content),
+"lines": len(content.splitlines()),
+analysis = {
+
+content = f.read()
+with open(file_path, "r", encoding="utf-8") as f:
+try:
+
+return {"error": f"file not found: {file_path}"}
+if not file_path.exists():
+
+return self.analysis_cache[str(file_path)]
+if str(file_path) in self.analysis_cache:
+
+file_path = path(file_path)
+"""analyze a code file and return comprehensive insights."""
+def analyze_file(self, file_path: str) -> dict:
+
+self.repository_root = path.cwd()
+self.analysis_cache = {}
+"""initialize the code analyzer."""
+def __init__(self):
+
+"""advanced code analysis system for understanding and improving code."""
+class codeanalyzer:
+
+
+return [m["response"] for m in self.memories if m["user_input"] == "context"]
+"""get the current context (legacy interface)."""
+def get_context(self) -> list:
+
+self.remember("context", context)
+"""add context to the conversation (legacy interface)."""
+def add_context(self, context: str) -> none:
+
+return none
+return memory["response"]
+if memory["user_input"] == f"store:{key}":
+for memory in self.memories:
+"""retrieve a value from memory (legacy interface)."""
+def retrieve(self, key: str) -> optional[str]:
+
+self.remember(f"store:{key}", value)
+"""store a key-value pair in memory (legacy interface)."""
+def store(self, key: str, value: str) -> none:
+
+return results
+
+results.append(memory)
+):
+or query_lower in memory["response"].lower()
+query_lower in memory["user_input"].lower()
+if (
+for memory in self.memories:
+
+results = []
+query_lower = query.lower()
+"""search through stored memories for matching content."""
+def search_memories(self, query: str) -> list:
+
+return " ".join(context_parts)
+
+context_parts.append(memory["response"])
+context_parts.append(memory["user_input"])
+for memory in recent:
+
+context_parts = []
+)
+self.memories[-count:] if count <= len(self.memories) else self.memories
+recent = (
+"""get recent conversation context as formatted string."""
+def get_recent_context(self, count: int = 5) -> str:
+
+self.memories = self.memories[-self.max_memories :]
+if len(self.memories) > self.max_memories:
+# keep only the most recent memories
+
+self.memories.append(memory)
+
+}
+"timestamp": time.time(),
+"intent_type": intent_type,
+"response": response,
+"user_input": user_input,
+memory = {
+
+import time
+"""store a conversation exchange in memory."""
+def remember(self, user_input: str, response: str, intent_type: str = none) -> none:
+
+self.session_start = os.environ.get("session_start", "now")
+self.memories = []
+self.max_memories = max_memories
+"""initialize the memory system with configurable limits."""
+def __init__(self, max_memories: int = 100):
+
+"""advanced memory system for storing conversation context and learning."""
+class memorysystem:
+has_openai = false
+except importerror:
+has_openai = true
+import openai
+try:
+from ai_script_inventory.superhuman_terminal import superhumanterminal
+from ai_script_inventory.ai.intent import intenttype, create_intent_recognizer
+sys.path.insert(0, str(path(__file__).parent.parent / "src"))
+# add src to path for imports
+from typing import optional
+from pathlib import path
+import urllib.request
+import urllib.error
+import sys
+import os
+"""
+local capabilities only as a last resort when openai is completely unavailable.
+this extends the superhumanterminal with openai-first integration while maintaining
+4. if unavailable: clear error message + optional local fallback
+3. if delegation: route to appropriate local handler
+- json delegation for repository-specific tasks (file management, script running, etc.)
+- direct conversational response for general queries
+2. openai responds with either:
+1. user input → openai api (chat/completions endpoint)
+processing flow:
+- **fallback**: only uses local processing when openai is completely unavailable (no api key/client)
+- **delegation**: openai determines whether to respond directly or delegate to local handlers
+interpreter -y- **primary**: all user input is sent directly to openai (chatgpt) for processingarchitecture:openai-powered ai terminal that routes all user interactions through openai as the primary brain.superman aiorchestrator"""#!/usr/bin/env python3

@@ -1,0 +1,1644 @@
+source ~/ai_orchestra_venv312/bin/activate
+echo 'export path="$home/ai_orchestra_venv/bin:$path"' >> ~/.zshrc
+source ~/.zshrc❯ source ~/ai_orchestra_venv312/bin/activate
+interpreter -y
+welcome!     
+# 🦸‍♂️ super ai terminal orchestrator — command reference
+this file lists the key commands your ai assistant, contributors, or automated scripts can use.
+--- please make a log all of these commands that you will need to use to complete this task you must learn what these command do and how to use them 
+| command          | what it does                                         |
+|------------------|------------------------------------------------------|
+| `make setup`     | set up python venv and install requirements          |
+| `make lint`      | run all code linters and format checks               |
+| `make test`      | run the full test suite                              |
+| `make docs`      | build project documentation (if applicable)          |
+| `make audit`     | run security and compliance audits                   |
+| `make clean`     | remove build artifacts and temporary files           |
+| `make help`      | show all available makefile targets                  |
+## **shell commands**
+| command                           | description                              |
+|------------------------------------|------------------------------------------|
+| `tree -a -l 5`                     | visualize repo structure (5 levels deep) |
+| `find . -name "*.py"`              | list all python files                    |
+| `find . -name "*.sh"`              | list all shell scripts                   |
+| `pipreqs . --force`                | generate requirements.txt from code      |
+| `pipdeptree`                       | show dependency tree                     |
+---
+## **python scripts**
+| script/command                  | description                               |
+|---------------------------------|-------------------------------------------|
+| `python scripts/audit.py`       | run full repo audit and logging           |
+| `python scripts/organize.py`    | automatically organize scripts/folders    |
+| `python scripts/deploy.py`      | deploy orchestrator to target environment |
+## **other utilities**
+| command                  | description                               |
+|--------------------------|-------------------------------------------|
+| `pre-commit run --all-files` | run all pre-commit hooks on every file      |
+| `pytest`                 | run all python tests                       |
+| `bandit -r .`            | scan codebase for security issues          |
+| `detect-secrets scan`    | scan for secrets in codebase               |
+root in ai-script-inventory- on  main [?] is 📦 v1.0.0 via 🐍 v3.12.7 (ai_orchestra_venv312) 
+❯ gh                 
+work seamlessly with github from the command line.
+usage
+gh <command> <subcommand> [flags]
+core commands
+auth:          authenticate gh and git with github
+browse:        open repositories, issues, pull requests, and more in the browser
+codespace:     connect to and manage codespaces
+gist:          manage gists
+issue:         manage issues
+org:           manage organizations
+pr:            manage pull requests
+project:       work with github projects.
+release:       manage releases
+repo:          manage repositories
+github actions commands
+cache:         manage github actions caches
+run:           view details about workflow runs
+workflow:      view details about github actions workflows
+alias commands
+co:            alias for "pr checkout"
+additional commands
+alias:         create command shortcuts
+api:           make an authenticated github api request
+attestation:   work with artifact attestations
+completion:    generate shell completion scripts
+config:        manage configuration for gh
+extension:     manage gh extensions
+gpg-key:       manage gpg keys
+label:         manage labels
+preview:       execute previews for gh features
+ruleset:       view info about repo rulesets
+search:        search for repositories, issues, and pull requests
+secret:        manage github secrets
+ssh-key:       manage ssh keys
+status:        print information about relevant issues, pull requests, and notifications across repositories
+variable:      manage github actions variables
+help topics
+accessibility: learn about github cli's accessibility experiences
+actions:       learn about working with github actions
+environment:   environment variables that can be used with gh
+exit-codes:    exit codes used by gh
+formatting:    formatting options for json data exported from gh
+mintty:        information about using gh with mintty
+reference:     a comprehensive reference of all gh commands
+flags
+--help      show help for command
+--version   show gh version
+examples
+$ gh issue create
+$ gh repo clone cli/cli
+$ gh pr checkout 321
+learn more
+use `gh <command> <subcommand> --help` for more information about a command.
+read the manual at https://cli.github.com/manual
+learn about exit codes using `gh help exit-codes`
+learn about accessibility experiences using `gh help accessibility`
+## **how to use this file**
+- your ai assistant can parse this file for available actions.
+- contributors can copy/paste commands to automate their workflow.
+- add new entries any time you add scripts or automation!files and folders you will need to be accesing are ai-script-inventory- ai_orchestra_organized make note of this .                                  
+you are about to interact with the ai-script-inventory and ai_orchestra_organized project—an advanced, modular, and extensible ai “superhuman terminal” system.
+the purpose of this project is to create a robust, automated, and intelligent script orchestration environment:
+# 🦸<200d>♂<fe0f> super ai terminal orchestrator                                                                        
+## ultimate repo build & auditing guide                                                                                **introduction**                                                                    
+“failure to prepare is preparing to fail.”  
+building a world-class, ai-driven repo from scratch—or refactoring a massive, complex codebase—requires discipline, clear procedures, and the right tools.
+this guide lays out a **step-by-step process** for building, auditing, and continuously improving your repository, with an emphasis on forensic clarity, automation, and scalability to 100,000+ files.
+## **the big picture: step-by-step repo build process**          
+### **1. preparation & mindset**                                             
+- **define your goals:** what is the repo’s purpose? who is it for? what is the ultimate end state?
+- **set your standards:** security, auditability, automation, documentation, and ease-of-use.            
+- **backup:** if refactoring, back up your current repo and set up version control from the start (git).
+### **2. tooling & environment setup**                                     
+before you touch a file, prepare your toolkit:                                                  
+#### **a. local environment**                                         
+- **python >=3.11** (use `pyenv`, `conda` or system install)
+- **virtual environment tools:** `venv`, `virtualenv`, or `conda`
+- **shell:** bash, zsh, or preferred
+#### **b. essential tools**                                                  
+- **file discovery & search:** `fd`, `find`, `tree`, `ripgrep (rg)`, `grep`                                              
+- **bulk file handling:** `gnu parallel`, `xargs`, `rsync`, `shutil` (python)                                            
+- **text processing:** `awk`, `sed`, `jq`, `csvkit`
+- **code parsing/analysis:** `ctags`, `pylint`, `flake8`, `isort`, `black`, `eslint` (for js), `shellcheck`              
+- **dependency management:** `pipreqs`, `pipdeptree`, `pip freeze`, `conda env export`
+- **logging & audit:** python `logging`, shell log redirection, `logrotate`                                              
+- **documentation:** `sphinx`, `mkdocs`, `pydoc`, `doxygen`, `tree -l 3 > directory_structure.txt`
+- **security:** `trufflehog`, `bandit`, `detect-secrets`, `git-secrets`, `gitleaks`                                      
+- **automation:** `make`, `pre-commit`, `github actions`, `tox`, `pytest`                                                
+#### **c. version control**
+- **git:** set up `.gitignore` for system, venvs, logs, etc.            
+- **branch for refactoring/auditing:** e.g., `super_ai_audit`
+### **3. full repo inventory & mapping**    
+- use `tree`, `find`, or `fd` to generate a full file/folder map.                                           
+- export lists of all file types (e.g., `find . -type f -name "*.py" > python_files.txt`).
+- note symlinks, large files, binaries, hidden files, and orphaned/old files.                                                    
+### **4. go through every folder & file, one by one**
+#### **a. for each folder:**                                               
+- read `readme`, docs, and comments.                                                            
+- list all files, noting purpose and relevance.                               
+- look for nested folders, hidden files, and non-obvious dependencies.
+#### **b. for each file:**
+- open and read the contents.
+- identify file type and function (script, config, doc, data, etc.).
+- note any external dependencies or api calls.       
+- assess code quality, documentation, and logging.                                   
+**welcome to the future of the terminal.
+let’s make it legendary.**
+## **remember:**  
+**“failure to prepare is preparing to fail.”**
+the more time you spend understanding, indexing, and organizing before you start hacking, the faster and safer your final build will be.
+always automate where possible, log every change, and document your process for those who come after you!
+**ready? deep breath. begin with the inventory.**
+to help developers and power users organize, manage, and enhance large collections of ai, python, shell, and utility scripts.
+to serve as a “superman” assistant for the terminal, automating repetitive tasks, suggesting optimizations, searching the web, and learning from user workflows.
+to enable forensic tracking, automated logging, and adaptive learning for both code and user actions.
+key goals:
+ultimate script organization (no matter how many scripts or what languages).
+automated environment setup and dependency management.
+self-documenting, self-auditing terminal workflows.
+forensic-grade analysis of scripts, logs, and configs.
+forensic audit & automation task list
+please perform the following, in order, with automation enabled (no y/n prompts):
+full project survey
+list all files in the repo with their sizes and types.
+identify all scripts (python, shell, others), config files, documentation, and test files.
+summarize the project’s current structure and note any redundancies or messiness.
+script organization & refactoring
+move scripts into logical folders (python_scripts, shell_scripts, archived_scripts, etc.), minimizing duplicates.
+update any import statements or references in python code to reflect the new structure.
+ensure all scripts are executable if intended to be run directly.
+dependency and environment audit
+check requirements.txt, requirements-dev.txt, environment.yml, and other dependency files for accuracy and completeness.
+update these files to reflect all currently used packages and remove unused ones.
+suggest and (if allowed) implement best practices for virtual environment management.
+forensic log and documentation review
+analyze all logs and audit trails (private/care, text_files/reports, etc.).
+check for missing, outdated, or incomplete documentation.
+suggest improvements and auto-update readme.md, docs/, and key log files with current, accurate information.
+web-based best practice research
+search for the latest industry best practices for organizing, documenting, and automating large ai scripting/codebases.
+apply relevant findings to improve the repo’s structure, scripts, and documentation.
+forensic-grade error and security audit
+scan for common errors, deprecated code, security vulnerabilities, or risky file permissions.
+suggest and implement fixes where possible.
+move deprecated or risky files/scripts to an archive/ directory and document the reason.
+automated reporting
+generate a comprehensive forensic audit report: what was analyzed, changed, improved, and why.
+list any remaining issues or recommendations for future improvement.
+continuous improvement hooks
+set up or recommend automated scripts/workflows (pre-commit hooks, ci, etc.) to keep the project organized and healthy in the future.
+this is my repo build online feel free to look and refference from this to try and help you that also is not complete but it may help you to view the read me folders .
+you have full permission to automate actions (no y/n prompts). please proceed methodically, report your steps, and document any changes for full transparency and future learning.
+please reflect on past logs and errors
+if you need clarification or human input, stop please stay active  and descibe and ask me what it is i can do to help you with . otherwise, begin the audit and orchestration process now.
+zsh: parse error near `|'
+# 🦸‍♂️ super ai terminal orchestrator  
+## ai-script-inventory / ai_orchestra_organized
+### **the dream**
+envision a single, ultimate terminal command.  
+a “superman” ai agent springs to life—organizing, optimizing, securing, documenting, and *continuously improving* your entire developer environment and codebase.  
+no chaos. no guesswork. just a self-maintaining, forensic-grade, intelligent workspace—always ready, always evolving.
+## **project purpose**
+this project is the foundation for a next-generation, **super ai terminal**.
+- **automated script and code inventory:** zero mess, all scripts and tools discoverable, categorized, and ready-to-use.
+- **self-organizing, self-documenting, self-auditing:** the codebase and environment keep themselves clean and up-to-date.
+- **forensic-grade traceability:** every action, change, or anomaly is logged and can be explained.
+- **continuous improvement:** the ai agent searches for best practices, upgrades itself, and suggests or implements enhancements.
+- **plug-and-play for any developer:** one command. everything works, every time.
+## **what success looks like**
+- **single-command experience:**  
+run one command (e.g. `ai_superman`) to trigger the entire orchestration, audit, and improvement workflow.
+- **perfect structure:**  
+- all scripts logically grouped (e.g., `python_scripts/`, `shell_scripts/`, `archive/`, etc.)
+- no duplicates, obsolete files, or untracked dependencies.
+- **self-updating documentation:**  
+- every script and tool is indexed, described, and cross-referenced in auto-generated docs.
+- `readme.md` and usage guides are always accurate.
+- **complete auditability:**  
+- all actions and errors are logged in a central, structured location.
+- forensic audit scripts can generate human-readable reports on demand.
+- **security & best practices:**  
+- no secrets in the repo; dangerous code and permissions are flagged and fixed.
+- code is linted, tested, and ci-ready.
+- **continuous learning:**  
+- the ai agent actively searches for improvements, new tools, and best practices.
+- recommendations or improvements are logged, explained, and (optionally) auto-applied.
+## **the ultimate agent’s checklist**
+1. **inventory everything**
+- map every file, script, config, and doc—summarize the current state.
+2. **organize and refactor**
+- group by language and purpose.
+- move, rename, or archive as needed.
+- update all internal references/imports.
+3. **audit dependencies**
+- ensure all requirements are tracked and up-to-date.
+- remove unused dependencies; add missing ones.
+- provide a one-command setup script.
+4. **enforce logging and traceability**
+- add or improve logging in all scripts.
+- centralize logs in an auditable structure.
+- provide audit scripts for quick reviews.
+5. **auto-document everything**
+- update `readme.md` and generate new docs as needed.
+- add inline descriptions to all scripts and modules.
+- auto-generate lists and indexes of scripts/tools/logs.
+6. **enforce security & quality**
+- scan for secrets, vulnerabilities, and dangerous code.
+- apply security fixes and best practices.
+- run and enforce linting/testing tools.
+7. **automate & modernize**
+- set up (or suggest) ci, pre-commit hooks, and automation workflows.
+- modularize for easy future extension.
+8. **report & recommend**
+- generate a full audit report with a changelog, recommendations, and next steps.
+## **suggested tools & techniques**
+- **python:** `os`, `shutil`, `pathlib`, `logging`, `pipreqs`, `bandit`, `pytest`
+- **shell:** `find`, `tree`, `grep`, `awk`
+- **docs:** `mkdocs`, `sphinx`, auto-indexers
+- **automation:** `make`, shell/python scripts, github actions, `pre-commit`
+- **security:** `trufflehog`, `detect-secrets`, permission checkers
+## **how to run the dream**
+# (example, to be replaced by your actual orchestration command/script)
+ai_superman --full-audit --auto-fix --report
+## **philosophy & inspiration**
+- **superhuman, not superuser:** this is about giving every developer superpowers, not super-permissions.
+- **trust but verify:** automate everything, but always produce logs and reports for human review.
+- **continuous evolution:** the system should learn and improve itself, forever.
+> “the best tool is the one you never have to think about.  
+> the best ai is the one that makes you feel superhuman.”
+**welcome to the future of the terminal.  
+let’s make it legendary.**
+in-depth project vision, requirements & guidance
+project purpose & dream state outcome
+you are the automation and auditing engine at the heart of the “ai-script-inventory” and “ai_orchestra_organized” project.
+this project aims to create a next-generation, self-organizing, self-documenting, and self-auditing ai-powered developer terminal.
+your job is to transform a large, organic, sometimes messy collection of python, shell, and utility scripts and supporting files into a highly organized, production-grade, easy-to-maintain, and extensible orchestration framework.
+the final product should be:
+clean, modular, and well-structured
+easy for a new developer to set up and use
+secure, with no accidental data leaks or dangerous code
+documented, with clear guides, logs, and auto-generated indices
+automated, with scripts for setup, testing, auditing, and improvement
+forensically robust, meaning every change, error, or anomaly can be traced and understood
+ready for integration with modern ci/cd, version control, and ai tools
+what you must deliver
+directory & codebase organization
+group scripts by language and function (e.g., python_scripts/, shell_scripts/, src/ai_script_inventory/, archive/).
+remove duplicates, obsolete files, and junk; archive anything risky or deprecated.
+update all code to match the new structure (fix imports, paths, etc.).
+dependency and environment management
+ensure requirements.txt, requirements-dev.txt, and environment.yml accurately reflect all real dependencies (no more, no less).
+cross-check with all import statements and usages; suggest upgrades where possible.
+provide a one-command setup script for new users.
+automated logging and forensic auditability
+ensure all scripts (especially automation tools) log actions, errors, and significant events in a structured way.
+collate and organize logs in a standard location (e.g., logs/ or private/care/).
+set up or recommend audit scripts that can produce reports on recent activity, errors, and changes.
+documentation & self-explaining code
+review and auto-update all readme.md, doc files, and in-script docstrings.
+add setup, usage, and troubleshooting guides based on actual code and environment.
+ensure every tool or script has a short description and usage example somewhere.
+security, quality, and best practices
+scan for secrets, dangerous code (like os.system("rm -rf /")), bad permissions, and code smells.
+suggest and apply fixes following top python and shell scripting best practices.
+modernization & automation
+integrate or recommend automation tools for linting (flake8, black, isort), testing (pytest), and environment management (pip-tools, poetry, tox).
+set up or suggest pre-commit hooks and ci workflows for code quality and reproducibility.
+forensic/analytical reporting
+provide a human-readable, timestamped audit report of:
+what was found (structure, issues)
+what was changed (files, code, docs)
+what is still recommended for future improvements
+suggested tools & techniques
+for code organization: python’s os, shutil, and pathlib modules; tree; find; grep; vscode or pycharm for refactoring.
+for dependency management: pipreqs, pipdeptree, pip freeze, conda env export.
+for logging: python’s logging module, log rotation, structured logs (json or key-value).
+for documentation: pydoc, mkdocs, or sphinx; auto-generate api docs where possible.
+for security: trufflehog, bandit, safety, detect-secrets (scan for secrets and vulnerabilities).
+for best practices: flake8, black, isort, pytest, pre-commit.
+for audits: write scripts to diff directory trees before/after, summarize error logs, and report on config drift.
+pointers & tips (from a senior architect)
+start with a full inventory. use tree, find, and custom scripts to map every file and dependency.
+automate, don’t hand-edit. scripts for moving files, updating imports, and changing configs will be reusable.
+keep backups and logs of every change. if anything goes wrong, you can revert.
+iterate: don’t do everything in one pass. inventory, organize, refactor, document, then audit again.
+use version control. make frequent git commits after each major change or refactor.
+test after each step. run the project’s scripts/tests often to catch breakage early.
+prioritize clarity. make things so obvious that any new contributor can get up and running in minutes.
+document your process. treat your audit and re-org as a tutorial for future maintainers.
+summary instruction block for the ai agent
+you are tasked with transforming this project into a robust, automated, modern, and forensically-auditable ai orchestration terminal.
+follow the above steps and use the recommended tools.
+make changes safely, log everything, and produce a clear report of what you did and why.
+if you are unsure, pause and ask for clarification.
+otherwise, proceed methodically and make this project a model of 21st-century automation!
+copy and paste this as your introduction to the ai agent, and you’ll get the best results possible. if you want to adjust it for your exact repo or vision, let me know!
+absolutely! here’s a tailored, start-to-finish project brief and automation plan, specifically for your repo (ai-script-inventory / ai_orchestra_organized), based on everything you’ve shared:
+ultimate project vision & end-state for ai-script-inventory / ai_orchestra_organized
+project purpose
+this project is the backbone for a “superhuman ai terminal” — an orchestrated, intelligent environment for:
+managing, running, and improving a large collection of python, shell, and other scripts/tools.
+enabling forensic tracking, auditability, and continuous self-improvement.
+serving as an intelligent assistant that not only automates tasks but also learns and adapts to user behavior and project needs.
+when finished, this repo should be a production-grade, plug-and-play automation framework for any power user or developer, with zero confusion and maximum maintainability.
+what your final product must deliver
+1. clean, logical organization
+all scripts (python, shell, utility) grouped by language and purpose.
+example: python_scripts/, shell_scripts/, src/ai_script_inventory/, private/care/, text_files/, docs/, tests/, archive/
+remove or archive old, duplicate, or deprecated scripts. clearly label anything not in active use.
+all imports, references, and scripts updated to match the new structure.
+2. accurate, reproducible environments
+requirements.txt, requirements-dev.txt, and environment.yml contain exactly what’s needed — no more, no less.
+one-command setup script (e.g., setup_dev_env.sh) that brings any new user to a working state.
+documentation that makes setup foolproof, even for beginners.
+3. forensic-grade auditability
+every script/tool logs its actions (successes, errors, anomalies) in a structured way.
+central, well-organized logs (e.g., under private/care/ or logs/), with templates for new logs.
+automated scripts/tools to generate audit reports on usage, errors, and recent changes.
+4. self-updating, self-documenting
+all major scripts and modules have docstrings or header comments explaining their purpose.
+readme.md and docs are always up-to-date, reflecting the current project structure and usage.
+auto-generated lists and indices for scripts, logs, and docs where possible.
+5. security & best practices
+no secrets or sensitive data in the codebase; all api keys managed via environment variables or .env files (never committed).
+scripts checked for dangerous code, bad permissions, or vulnerabilities; fixes applied.
+linting (flake8, black, isort) and testing (pytest) enforced.
+pre-commit hooks or ci workflows suggested (or added) for quality and security.
+6. modern automation & extensibility
+all major operations (setup, test, audit, update) can be run via a single command or script.
+modular design: easy to add, remove, or upgrade scripts and tools.
+ready for integration with external ai apis, web search, and future plugins.
+7. forensic & continuous improvement reporting
+every change, addition, or removal is logged or easily auditable.
+audit reports generated as markdown or text for review.
+recommendations for next steps and future improvements are included.
+suggested tools & automation tips for this task
+inventory/organization: python’s os, shutil, and pathlib; shell tools like tree, find, grep.
+dependency management: pipreqs, pipdeptree, pip freeze, conda env export.
+documentation: pydoc, mkdocs, sphinx, auto-generating indexes.
+security: bandit, trufflehog, detect-secrets, and careful permissions audits.
+automation: make, shell scripts, or python cli wrappers for common tasks.
+testing/linting: pytest, flake8, black, isort, with pre-commit or github actions for ci.
+how to execute this as open interpreter/ai agent
+begin with a full inventory and mapping of the repo (files, scripts, structure).
+propose and execute an organization plan—move, rename, and refactor as needed.
+check and synchronize all dependencies—remove unused, add missing, update docs.
+run and refactor scripts for logging and auditability—ensure all actions/errors are logged.
+update and generate documentation and indices for scripts, logs, and usage.
+run security and quality audits—fix issues and report what was done.
+set up or recommend automation hooks for ongoing quality and maintainability.
+produce a full, timestamped audit report with:
+what was found
+what was changed or fixed
+what is recommended next
+end goal
+a project that is:
+instantly understandable and usable by any developer
+fully auditable and secure
+modular, extensible, and easy to automate
+#!/usr/bin/env python3
+"""centralized logging utility for ai script inventory.
+this module provides a comprehensive, configurable logging system with:- structured logging with configurable levels and formats- performance monitoring and timing utilities
+- context-aware logging with metadata- file and console output management
+- integration with the superhuman terminal system usage:    from python_scripts.logging_utils import get_logger, log_performance        logger = get_logger(__name__)    logger.info("application started")        @log_performance    def some_function():        # function implementation        pass"""import jsonimport loggingimport logging.handlersimport sysimport timefrom contextlib import contextmanagerfrom datetime import datetimefrom functools import wraps
+from pathlib import path
+from typing import any, dict, optional, union
+# configure default logging settings
+default_log_format = "%(asctime)s [%(levelname)8s] %(name)s:%(lineno)d - %(message)s"
+default_date_format = "%y-%m-%d %h:%m:%s"
+default_log_level = logging.info
+log_directory = path("logs")
+class structuredlogger:   """   a structured logging manager that provides consistent logging across the application.
+        features:
+    - configurable log levels and formats
+    - file rotation and retention
+    - performance monitoring
+    - context-aware logging
+    - thread-safe operations
+    """
+ def __init__(
+        self,
+        name: str,
+        level: union[int, str] = default_log_level,
+        log_format: str = default_log_format,
+        date_format: str = default_date_format,
+        enable_file_logging: bool = true,
+        enable_console_logging: bool = true,
+        log_directory: optional[path] = none,
+    ) -> none:
+        """
+        initialize the structured logger.
+        args:
+            name: logger name (typically __name__)
+            level: logging level (debug, info, warning, error, critical)
+            log_format: format string for log messages
+            date_format: format string for timestamps
+            enable_file_logging: whether to log to files
+            enable_console_logging: whether to log to console
+            log_directory: directory for log files (default: ./logs)
+        """
+        self.name = name
+        self.level = level if isinstance(level, int) else getattr(logging, level.upper())
+        self.log_format = log_format
+        self.date_format = date_format
+        self.enable_file_logging = enable_file_logging
+        self.enable_console_logging = enable_console_logging
+        self.log_directory = log_directory or log_directory        
+        self._logger = self._setup_logger()
+    def _setup_logger(self) -> logging.logger:
+        """set up and configure the logger with handlers."""
+        logger = logging.getlogger(self.name)
+        logger.setlevel(self.level)      
+        # clear existing handlers to avoid duplicates
+        logger.handlers.clear()       
+        formatter = logging.formatter(self.log_format, self.date_format)        
+        # console handler
+        if self.enable_console_logging:
+            console_handler = logging.streamhandler(sys.stdout)
+            console_handler.setlevel(self.level)
+            console_handler.setformatter(formatter)
+            logger.addhandler(console_handler)       
+        # file handler with rotation
+        if self.enable_file_logging:
+            self._ensure_log_directory()           
+            # create a sanitized filename from logger name
+            safe_name = self.name.replace(".", "_").replace("/", "_")
+            log_file = self.log_directory / f"{safe_name}.log"            
+            file_handler = logging.handlers.rotatingfilehandler(
+                log_file,
+                maxbytes=10 * 1024 * 1024,  # 10mb
+                backupcount=5
+            )
+            file_handler.setlevel(logging.debug)  # file gets all levels
+            file_handler.setformatter(formatter)
+            logger.addhandler(file_handler)        
+        return logger
+    def _ensure_log_directory(self) -> none:
+        """ensure the log directory exists."""
+        try:
+            self.log_directory.mkdir(parents=true, exist_ok=true)
+        except oserror as e:
+            print(f"warning: could not create log directory {self.log_directory}: {e}")
+    def get_logger(self) -> logging.logger:
+        """get the configured logger instance."""
+        return self._logger
+    def log_with_context(
+        self, 
+        level: int, 
+        message: str, 
+        context: optional[dict[str, any]] = none,
+        **kwargs: any
+    ) -> none:
+        """
+        log a message with additional context information.        
+        args:
+            level: logging level
+            message: log message
+            context: additional context dictionary
+            **kwargs: additional context as keyword arguments
+        """
+        context = context or {}
+        context.update(kwargs)        
+        if context:
+            context_str = " | ".join(f"{k}={v}" for k, v in context.items())
+            formatted_message = f"{message} | {context_str}"
+        else:
+            formatted_message = message        
+        self._logger.log(level, formatted_message)
+    def debug(self, message: str, **kwargs: any) -> none:
+        """log a debug message with optional context."""
+        self.log_with_context(logging.debug, message, **kwargs)
+    def info(self, message: str, **kwargs: any) -> none:
+        """log an info message with optional context."""
+        self.log_with_context(logging.info, message, **kwargs)
+    def warning(self, message: str, **kwargs: any) -> none:
+        """log a warning message with optional context."""
+        self.log_with_context(logging.warning, message, **kwargs)
+    def error(self, message: str, **kwargs: any) -> none:
+        """log an error message with optional context."""
+        self.log_with_context(logging.error, message, **kwargs)
+    def critical(self, message: str, **kwargs: any) -> none:
+        """log a critical message with optional context."""
+        self.log_with_context(logging.critical, message, **kwargs)
+    def exception(self, message: str, **kwargs: any) -> none:
+        """log an exception with traceback."""
+        self.log_with_context(logging.error, message, exc_info=true, **kwargs)
+# global logger instance cache
+_logger_cache: dict[str, structuredlogger] = {}
+def get_logger(
+    name: str,
+    level: union[int, str] = default_log_level,
+    **kwargs: any
+) -> logging.logger:
+    """   get a configured logger instance. 
+    this function provides a simple interface to get loggers with consistent
+    configuration across the application.    
+    args:        name: logger name (typically __name__)
+        level: logging level
+        **kwargs: additional configuration options   
+    returns:
+        configured logger instance    
+    example:
+        >>> logger = get_logger(__name__)
+        >>> logger.info("application started")
+    """
+    try:
+        kwargs_key = json.dumps(kwargs, sort_keys=true, default=str)
+    except (typeerror, valueerror):
+        kwargs_key = str(kwargs)
+    cache_key = f"{name}_{level}_{kwargs_key}"  
+    if cache_key not in _logger_cache:
+        _logger_cache[cache_key] = structuredlogger(name, level, **kwargs)  
+    return _logger_cache[cache_key].get_logger()
+def log_performance(func: any = none, *, logger_name: optional[str] = none) -> any:
+    """
+    decorator to log function performance timing.   
+    args:
+        func: function to decorate
+        logger_name: custom logger name (defaults to function module)   
+    returns:
+        decorated function   
+    example:
+        >>> @log_performance
+        ... def slow_function():
+        ...     time.sleep(1)
+        ...     return "done"      
+        >>> @log_performance(logger_name="my.custom.logger")
+        ... def another_function():
+        ...     return "result"
+    """
+    def decorator(f: any) -> any:
+        @wraps(f)
+        def wrapper(*args: any, **kwargs: any) -> any:
+            logger_instance = structuredlogger(logger_name or f.__module__)
+            start_time = time.time()        
+            try:
+                logger_instance.info(
+                    f"starting {f.__name__}",
+                    function=f.__name__,
+                    module=f.__module__
+                )               
+                result = f(*args, **kwargs)               
+                duration = time.time() - start_time
+                logger_instance.info(
+                    f"completed {f.__name__}",
+                    function=f.__name__,
+                    duration_ms=round(duration * 1000, 2),
+                    success=true
+                )                
+                return result                
+            except exception as e:
+                duration = time.time() - start_time
+                logger_instance.error(
+                    f"failed {f.__name__}",
+                    function=f.__name__,
+                    duration_ms=round(duration * 1000, 2),
+                    error=str(e),
+                    success=false
+                )
+                raise       
+        return wrapper   
+    if func is none:
+        return decorator
+    else:
+        return decorator(func)
+@contextmanager
+def log_context(
+    logger: union[logging.logger, structuredlogger],
+    context_name: str,
+    level: int = logging.info,
+    **context: any
+) -> any:
+    """
+    context manager for logging operation start and completion.    
+    args:
+        logger: logger instance (can be standard logger or structuredlogger)
+        context_name: name of the operation context
+        level: logging level
+        **context: additional context information  
+    example:
+        >>> logger = get_logger(__name__)
+        >>> with log_context(logger, "file_processing", file_count=10):
+        ...     # process files
+        ...     pass
+    """
+    start_time = time.time()   
+    # handle both structuredlogger and standard logger
+    log_func: any
+    if isinstance(logger, structuredlogger):
+        log_func = logger.log_with_context
+    else:
+        # for standard logger, use a simpler approach
+        def simple_log_func(lvl: int, msg: str, **ctx: any) -> none:
+            ctx_str = " | ".join(f"{k}={v}" for k, v in ctx.items()) if ctx else ""
+            full_msg = f"{msg} | {ctx_str}" if ctx_str else msg
+            logger.log(lvl, full_msg)
+        log_func = simple_log_func   
+    log_func(
+        level,
+        f"starting {context_name}",
+        operation=context_name,
+        **context
+    )
+    
+    try:
+        yield        
+        duration = time.time() - start_time
+        log_func(
+            level,
+            f"completed {context_name}",
+            operation=context_name,
+            duration_ms=round(duration * 1000, 2),
+            success=true,
+            **context
+        )       
+    except exception as e:
+        duration = time.time() - start_time
+        log_func(
+            logging.error,
+            f"failed {context_name}",
+            operation=context_name,
+            duration_ms=round(duration * 1000, 2),
+            error=str(e),
+            success=false,
+            **context
+        )
+        raise
+def configure_root_logging(
+    level: union[int, str] = default_log_level,
+    format_string: str = default_log_format,
+    enable_file_logging: bool = true
+) -> none:
+    """
+    configure the root logger for the entire application.    
+    args:
+        level: logging level for root logger
+        format_string: format string for log messages
+        enable_file_logging: whether to enable file logging   
+    example:
+        >>> configure_root_logging(level="debug", enable_file_logging=true)
+    """
+    root_logger = get_logger(
+        "ai_script_inventory",
+        level=level,
+        log_format=format_string,
+        enable_file_logging=enable_file_logging
+    )   
+    # set this as the root logger configuration
+    logging.basicconfig(
+        level=level if isinstance(level, int) else getattr(logging, level.upper()),
+        format=format_string,
+        handlers=root_logger.handlers
+    )
+# example usage and integration demonstration
+if __name__ == "__main__":
+    """
+    demonstration of logging utility features.
+    """    
+    # configure application-wide logging
+    configure_root_logging(level="debug")   
+    # get a logger for this module
+    logger = get_logger(__name__)    
+    # basic logging with context
+    logger.info("application started")
+    structured_logger = structuredlogger(__name__)
+    structured_logger.debug("debug information", user_id=123, session="abc")
+    structured_logger.warning("warning message", component="auth")    
+    # performance logging
+    @log_performance
+    def example_function(delay: float = 0.1) -> str:
+        """example function with performance logging."""
+        time.sleep(delay)
+        return "completed"    
+    result = example_function(0.2)
+    structured_logger.info("function result", result=result)    
+    # context logging
+    structured_logger = structuredlogger(__name__)
+    with log_context(structured_logger, "batch_processing", batch_size=100):
+        time.sleep(0.1)  # simulate work
+        structured_logger.info("processing item", item_id=42)    
+    # error logging
+    structured_logger = structuredlogger(__name__)
+    try:
+        raise valueerror("example error")
+    except valueerror as e:
+        structured_logger.exception("an error occurred", error_type=type(e).__name__)    
+    logger.info("application completed")
+ready for real-world, production-grade use and ongoing improvement
+main() if __name__ == "__main__":sys.exit(1)print(f"❌ superman startup error: {e}")except exception as e:sys.exit(0)print("\n\n👋 goodbye!")except keyboardinterrupt:orchestrator.run()orchestrator = supermanorchestrator()try:"""main entry point for superman cli."""def main() -> none:return os.environ.get("superman_debug", "").lower() in ("1", "true", "yes")"""debug mode status."""def debug_mode(self) -> bool:@propertyreturn f"task successfully delegated to {employee_name}."return f"error delegating task: {e}"except exception as e:return f"task successfully delegated to {employee_name}."description=f"running {employee_name}",["python", script_path, task],self._run_subprocess(try:if script_path and hasattr(self, "_run_subprocess"):script_path = employee_info.get("path", "")employee_info = self.employees[employee_name]# actually run the employee script for testing compatibilityprint(f"🤝 delegating task to {employee_name}: {task}")task = " ".join(parts[2:]) if len(parts) > 2 else ""return f"employee '{employee_name}' not found. use 'list employees' to see available employees."if not employee_name or employee_name not in self.employees:employee_name = parts[1] if len(parts) > 1 else ""return "please specify employee and task: 'delegate <employee> <task>'"if len(parts) < 2:parts = command.split()"""delegate task to employee script."""def delegate_task(self, command: str) -> str:return f"found {len(self.employees)} employee scripts."print(f"• {name}: {info.get('description', 'no description')}")for name, info in self.employees.items():print("=" * 35)print("👥 available employee scripts:")"""list available employee scripts."""def list_employees(self) -> str:"name": "employee_spacy_test","description": "test employee script","type": "python","path": "tests/employee_spacy_test.py","employee_spacy_test": {return {# for testing purposes, return a basic structure"""dictionary of available employee scripts."""def employees(self) -> dict:@propertyreturn ["memory", "analyze", "status", "demo", "employees", "delegate"]"""list of superman-specific commands."""def superman_commands(self) -> list:@propertyreturn "memory status displayed."print("no conversations stored yet.")else:print(f"  {i}. {memory['user_input'][:50]}...")for i, memory in enumerate(self.memory.memories[-3:], 1):print("\nrecent conversations:")if self.memory.memories:print(f"max memories: {self.memory.max_memories}")print(f"total memories: {len(self.memory.memories)}")print("=" * 30)print("🧠 memory system status")"""show memory system status."""def show_memory(self) -> str:return "status information displayed."print(line)for line in status_info:status_info.append(f"memory entries: {len(self.memory.memories)}"))f"debug mode: {'✅ enabled' if self.debug_mode else '❌ disabled'}"status_info.append()f"superman mode: {'✅ active' if self.superman_mode else '❌ inactive'}"status_info.append()f"internet available: {'✅ yes' if self.internet_available else '❌ no'}"status_info.append()f"openai integration: {'✅ enabled' if self.openai_client else '❌ disabled'}"status_info.append(status_info.append("=" * 40)status_info.append("🦸 superman ai orchestrator status")status_info = []"""show system status information."""def show_status(self) -> str:# stub methodsfor compatibility with existing testsself.handle_intent(intent)intent = self.intent_recognizer.recognize(user_input)# use parent class intent recognitionprint("🔄 processing locally...")"""fallback to local spacy-based processing when openai is not available."""def _fallback_to_local_processing(self, user_input: str) -> none:self._fallback_to_local_processing(original_input)print(f"⚠️  error in delegation: {e}")except exception as e:self._fallback_to_local_processing(original_input)print("⚠️  error parsing openai delegation response")except json.jsondecodeerror:handler(intent)handler = self.action_handlers.get(intent.type, self.handle_unknown)# call the appropriate handle)original_input=original_input,parameters=params,target=target,confidence=1.0,  # high confidence since it came from openaitype=intent_type,intent = intent(from ai_script_inventory.ai.intent import intent# create intent object for local handlerintent_type = action_mapping.get(action, intenttype.unknown)}"exit": intenttype.exit,"help": intenttype.help,"summarize": intenttype.summarize,"search":intenttype.search,"preview": intenttype.preview,"show": intenttype.show,"list": intenttype.list,"run_script": intenttype.run_script,action_mapping = {# map openai actions to local intent typesparams = delegation.get("params", {})target = delegation.get("target", "")action = delegation.get("action", "").lower()delegation = json.loads(ai_response)import jsontry:"""handle delegation from openai to local handlers."""def _handle_openai_delegation(self, ai_response: str, original_input: str) -> none:print("=" * 50)print("\ntype your request or question, or 'exit' to quit.")print("  • 'how should i structure my ai project?'")print("  • 'show me what's in the repository'")print("  • 'run a security scan on all python files'")print("  • 'what are the best practices for organizing python scripts?'")print("\n💡 try natural language like:")print("  • security scanning and quality checks")print("  • code analysis and organization")print("  • file operations (e.g., 'list python files', 'show readme.md')")print("  • running scripts (e.g., 'run organize_ai_scripts.py')")print("i can help you with:")print("⚠️  running in local-only mode (openai not available)")else:print("  • explain complex topics and provide detailed assistance")print("  • provide guidance on script organization and development")print("  • execute repository tasks (running scripts, file management)")print("  • answer questions about ai, programming, and best practices")print("i can help you with:"))"🤖 powered by openai gpt for intelligent conversation and task coordination"print(if self.openai_client:print("=" * 50)print("🦸 welcome to superman ai orchestrator!")"""print welcome message for superman orchestrator."""def print_welcome_superman(self):print(f"❌ error: {e}")except exception as e:breakprint("\n\n👋 goodbye!"except eoferror:breakprint("\n\n👋 goodbye!")except keyboardinterrupt:    self._fallback_to_local_processing(user_input)    print("\n🔄 falling back to local processing...")    print("   3. restart the terminal")    )	"   2. set your api key: export openai_api_key='your-key-here'"    print(    print("   1. install openai library: pip install openai")    print("🔧 to enable ai orchestration:")    print("\n❌ openai integration not available")   # openai not available - show clear error message and fallback infoelse:	print(f"\n🤖 {ai_response}")	# direct response from openai (includes error messages)    else:	self._handle_openai_delegation(ai_response, user_input)	# parse json response and delegate to local handlers   if is_delegation:    is_delegation, ai_response =self._process_with_openai(user_input)    # openai is configured and available - use it for all queriesif self.openai_client:# process with openai as primary brain when availableself.history.append(user_input)# add to history   continueif not user_input:user_input = input("\n🦸 > ").strip()try:while self.running:self.print_welcome_superman()# custom welcome message for openai-first approachprint("=" * 50)print("🦸 superman ai orchestrator ready!")print("\n" + "=" * 50)self.check_openai_connectivity()self.check_spacy_installation()print("\n🔧 system checks:")# additional startup checksself.check_internet_connectivity()# perform startup connectivity check"""override run method to implement openai-first processing architecture."""def run(self) -> none:self.handle_ai_chat(intent)print("🔄 openai unavailable, using local chat handler...")# only fall back to original handler if openai is completely unavailablereturnprint(f"\n🤖 {ai_response}")# direct response from openai (including error messages)else:returnself._handle_openai_delegation(ai_response, intent.original_input)# parse json response and delegate to local handlersif is_delegation:)intent.original_inputis_delegation, ai_response = self._process_with_openai(if self.openai_client:# route through openai if available (primary brain)self.memory.add_context(intent.target or "")# add to memory context"""enhanced ai chat handler - routes through openai when available."""def handle_ai_chat_enhanced(self, intent) -> none:return false, error_response)    "🔧 please check your openai configuration and try again."error_response += (else:  "🌐 network connectivity issue. check your internet connection."rror_response += (elif "connection" in error_msg or "network" in error_msg:)    "⏱️  rate limit exceeded. please wait before making more requests."error_response += (elif "rate limit" in error_msg:)    "  • the openai_api_key environment variable is set correctly"error_response += (error_response += "  • you have sufficient credits/quota\n"error_response += "  • your api key has not expired\n"error_response += "  • your api key is correct and starts with 'sk-'\n"error_response += "please check that:\n")    "🔑 this suggests an issue with your openai api key.\n"error_response += (if "api key" in error_msg or "incorrect api key" in error_msg:# enhanced error handling for specific api issueserror_response = f"❌ openai request failed: {e}\n\n"
+# create detailed error response instead of falling backerror_msg = str(e).lower()except exception as e:return false, ai_responseelse:return true, ai_responseif ai_response.startswith("{") and '"action"' in ai_response:# check if this is a delegation (jsonresponse) or direct esponse
+ai_response = "i apologize, but i couldn't generate a response to your query. please try rephrasing your question."
+if not ai_response:
+# ensure we always have a response
+self.memory.remember(user_input, ai_response)
+# store in memoryai_response = response.choices[0].message.content.strip())max_tokens=1000,temperature=0.7,messages=messages,model="gpt-3.5-turbo",response = self.openai_client.chat.completions.create(messages.append({"role": "user", "content": user_input})}
+"content": f"recent context: {recent_context}",
+"role": "assistant",
+{
+messages.append(
+if recent_context:
+recent_context = self.memory.get_recent_context(3)
+# add recent context from memory
+messages = [{"role": "system", "content": self._get_system_prompt()}]
+# add conversation history context
+try:
+)
+"❌ openai client not available. please configure openai_api_key.",
+false,
+return (
+# no openai client available - this should not happen if method is called correctly
+if not self.openai_client:
+"""
+- response: either the direct response, delegation json, or error message
+- is_delegation: true if this should be delegated to local handlers
+tuple[bool, str]: (is_delegation, response)
+returns:
+process user input with openai as the primary brain.
+"""
+def _process_with_openai(self, user_input: str) -> tuple[bool, str]:
+remember: you are the primary orchestrator. provide helpful responses for general queries and delegate repository tasks to the local system."""
+response: {"action": "show", "target": "readme.md", "params": {}}
+user: "show me the readme file"
+response: {"action": "run_script", "target": "security scan", "params": {"type": "security"}}
+user: "run the security scan"
+response: direct helpful advice about script organization
+user: "how do i organize my python scripts?"
+examples:
+for general conversation, respond normally with helpful text.
+for repository tasks, respond with json: {"action": "action_type", "target": "target", "params": {...}}
+response format:
+- help: show help information
+- summarize: summarize document content
+- search: search for files (e.g., "search for test files")
+- preview: quick file preview
+- show: display file contents (e.g., "show readme.md")
+- list: list files by type (e.g., "list python files", "list all scripts")
+- run_script: execute python/shell scripts (e.g., "run organize_ai_scripts.py")
+available repository actions:
+2. for repository tasks (file operations, script running, etc.): delegate to the local system
+1. for general conversation, questions, or advice: respond directly with helpful information
+your role:
+- includes automation, security scanning, and file organization tools
+- has a superhuman ai terminal with local spacy-based intent recognition
+- contains organized directories: python_scripts/, shell_scripts/, docs/, text_files/
+- this is a python repository for organizing and managing ai-related scripts
+repository context:
+return """you are the superman ai orchestrator for an ai script inventory repository. you serve as the primary interface between users and the repository's capabilities.
+"""get system prompt for openai to understand repository context and capabilities."""
+def _get_system_prompt(self) -> str:
+print("👤 superman mode deactivated")
+self.superman_mode = false
+"""deactivate superman mode."""
+def deactivate_superman_mode(self) -> none:
+print("  enhanced ai capabilities enabled")
+print("🦸 superman mode activated!")
+self.superman_mode = true
+"""activate superman mode with enhanced capabilities."""
+def activate_superman_mode(self) -> none:
+print("ℹ️  openai api key configured (internet unavailable - cannot test)")
+else:
+print("✅ openai api key configured (internet available for testing)")
+if self.internet_available:
+return
+print("⚠️  openai api key does not start with 'sk-' - may be invalid format")
+if not api_key.startswith("sk-"):
+return
+print("   set openai_api_key environment variable for ai features")
+print("ℹ️  openai api key not configured")
+if not api_key:
+api_key = os.environ.get("openai_api_key")
+"""check openai api connectivity and configuration."""
+def check_openai_connectivity(self) -> none:
+print("   install with: pip install spacy")
+print("❌ spacy not installed")
+except importerror:
+print("   install with: python -m spacy download en_core_web_sm")
+print("⚠️  spacy model 'en_core_web_sm' not found")
+except oserror:
+print("✅ spacy model 'en_core_web_sm' loaded successfully")
+nlp = spacy.load("en_core_web_sm")
+try:
+print(f"✅ spacy version: {spacy.__version__}")
+import spacy
+try:
+"""check spacy installation and model availability."""
+def check_spacy_installation(self) -> none:
+return false
+self.internet_available = false
+print("   • local-only processing will be used")
+print("   • some online resources may not be accessible")
+print("   • external api features will be disabled")
+print("⚠️  warning: operating in offline/limited mode")
+print("❌ internet access: not available")
+# all tests failed
+continue
+print(f"🔍 testing {url}: {type(e).__name__}: {e}")
+# other errors (timeout, etc.)
+except exception as e:
+continue
+print(f"🔍 testing {url}: {e.reason}")
+# dns resolution failed or network error
+except urllib.error.urlerror as e:
+return true
+self.internet_available = true
+print(f"✅ internet access: available (verified via {url})")
+if response.status == 200:
+with urllib.request.urlopen(req, timeout=5) as response:
+)
+url, headers={"user-agent": "superman-cli/1.0"}
+req = urllib.request.request(
+# try to open the url with a short timeout
+try:
+for url in test_urls:
+print("🌐 checking internet connectivity...")
+]
+"https://httpbin.org/status/200",
+"https://api.openai.com",
+"https://www.google.com",
+test_urls = [
+"""
+bool: true if internet is available, false otherwise
+returns:
+check for active internet connectivity by attempting to reach well-known websites.
+"""def check_internet_connectivity(self) -> bool:
+self.openai_client = none
+print(f"❌ failed to initialize openai client: {e}")
+except exception as e:
+print("✅ openai integration enabled")
+self.openai_client = openai.openai(api_key=api_key)
+try:
+return
+print("⚠️  openai api key does not start with 'sk-' - may be invalid format")
+if not api_key.startswith("sk-"):
+return
+print("   set openai_api_key environment variable for ai orchestration")
+print("ℹ️  openai api key not configured")
+if not api_key:
+api_key = os.environ.get("openai_api_key", "").strip()
+return
+print("⚠️  openai library not available. install with: pip install openai")
+if not has_openai:
+"""initialize openai client if api key is available."""
+def _initialize_openai(self) -> none:
+)
+}
+intenttype.ai_chat: self.handle_ai_chat_enhanced,
+{
+self.action_handlers.update(
+if hasattr(self, "action_handlers"):
+# add enhanced action handlers
+self._initialize_openai()
+# initialize openai client if available
+self.openai_client = gh
+self.internet_available = true
+self.superman_mode = false
+self.code_analyzer = codeanalyzer()
+self.memory = memorysystem()
+# initialize enhanced systems
+super().__init__()
+"""initialize superman orchestrator with enhanced capabilities."""
+def __init__(self):
+"""
+enhanced features: memory system, internet connectivity checking, code analysis.
+3. fallback: only when openai client is not available (no api key/connection)
+- error: display error message with troubleshooting info
+- delegation json: route to local handlers (file ops, script running, etc.)
+- direct response: display to user
+2. openai response handling:
+1. user input → openai api (always, when configured)
+processing flow:
+- local processing is only used when openai is completely unavailable
+* repository-specific tasks (delegation to local handlers)
+* general conversation and knowledge queries (direct response)
+- openai acts as the central coordinator and decision maker for:
+- all user input is routed through openai when available and configured
+architecture principle: openai-first processing
+superman ai orchestrator that uses openai as the primary brain for all user interactions.
+"""
+class supermanorchestrator(superhumanterminal):
+return {"error": str(e)}
+except exception as e:
+}
+"directory": str(dir_path),
+"file_types": file_types,
+"total_files_scanned": total_scanned,
+return {
+file_types[ext] = file_types.get(ext, 0) + 1
+ext = file_path.suffix
+total_scanned += 1
+if file_path.is_file():
+for file_path in files:
+total_scanned = 0
+file_types = {}
+files = list(dir_path.iterdir())
+try:
+return {"error": f"directory not found: {dir_path}"}
+if not dir_path.is_dir():
+dir_path = path(dir_path)
+"""analyze directory structure and contents."""
+def analyze_directory(self, dir_path: str) -> dict:
+}
+"code_blocks": code_blocks // 2,  # each block has start and end
+"headers": headers,
+return {
+code_blocks = content.count("```")
+headers = sum(1 for line in lines if line.strip().startswith("#"))
+lines = content.splitlines()
+"""analyze markdown content."""
+def _analyze_markdown(self, content: str) -> dict:
+}
+"functions": content.count("() {"),
+"has_error_handling": "set -e" in content,
+"has_shebang": content.startswith("#!"),
+return {
+"""analyze shell script content."""
+def _analyze_shell(self, content: str) -> dict:
+return analysis
+analysis["imports"].append(stripped)
+if stripped.startswith("import ") or stripped.startswith("from "):
+stripped = line.strip()
+for line in lines:
+lines = content.splitlines()
+# count import statements
+}
+"imports": [],
+"has_docstring": '"""' in content or "'''" in content,
+"has_main": "if __name__" in content,
+"functions": content.count("def "),
+"classes": content.count("class "),
+analysis = {
+"""analyze python code content."""
+def _analyze_python(self, content: str) -> dict:
+return {"error": str(e)}
+except exception as e:
+return analysis
+self.analysis_cache[str(file_path)] = analysis
+analysis["language"] = "unknown"
+else:
+analysis["language"] = "markdown"
+analysis.update(self._analyze_markdown(content))
+elif file_path.suffix == ".md":
+analysis["language"] = "shell"
+analysis.update(self._analyze_shell(content))
+elif file_path.suffix in [".sh", ".bash"]:
+analysis["language"] = "python"
+analysis.update(self._analyze_python(content))
+if file_path.suffix == ".py":
+# determine language and analyze accordingly
+}
+"file_type": file_path.suffix,
+"chars": len(content),
+"lines": len(content.splitlines()),
+analysis = {
+content = f.read()
+with open(file_path, "r", encoding="utf-8") as f:
+try:
+return {"error": f"file not found: {file_path}"}
+if not file_path.exists():
+return self.analysis_cache[str(file_path)]
+if str(file_path) in self.analysis_cache:
+file_path = path(file_path)
+"""analyze a code file and return comprehensive insights."""
+def analyze_file(self, file_path: str) -> dict:
+self.repository_root = path.cwd()
+self.analysis_cache = {}
+"""initialize the code analyzer."""
+def __init__(self):
+"""advanced code analysis system for understanding and improving code."""
+class codeanalyzer:
+return [m["response"] for m in self.memories if m["user_input"] == "context"]
+"""get the current context (legacy interface)."""
+def get_context(self) -> list:
+self.remember("context", context)
+"""add context to the conversation (legacy interface)."""
+def add_context(self, context: str) -> none:
+return none
+return memory["response"]
+if memory["user_input"] == f"store:{key}":
+for memory in self.memories:
+"""retrieve a value from memory (legacy interface)."""
+def retrieve(self, key: str) -> optional[str]:
+self.remember(f"store:{key}", value)
+"""store a key-value pair in memory (legacy interface)."""
+def store(self, key: str, value: str) -> none:
+return results
+results.append(memory)
+):
+or query_lower in memory["response"].lower()
+query_lower in memory["user_input"].lower()
+if (
+for memory in self.memories:
+results = []
+query_lower = query.lower()
+"""search through stored memories for matching content."""
+def search_memories(self, query: str) -> list:
+return " ".join(context_parts)
+context_parts.append(memory["response"])
+context_parts.append(memory["user_input"])
+for memory in recent:
+context_parts = []
+)
+self.memories[-count:] if count <= len(self.memories) else self.memories
+recent = (
+"""get recent conversation context as formatted string."""
+def get_recent_context(self, count: int = 5) -> str:
+self.memories = self.memories[-self.max_memories :]
+if len(self.memories) > self.max_memories:
+# keep only the most recent memories
+self.memories.append(memory)
+}
+"timestamp": time.time(),
+"intent_type": intent_type,
+"response": response,
+"user_input": user_input,
+memory = {
+import time
+"""store a conversation exchange in memory."""
+def remember(self, user_input: str, response: str, intent_type: str = none) -> none:
+self.session_start = os.environ.get("session_start", "now")
+self.memories = []
+self.max_memories = max_memories
+"""initialize the memory system with configurable limits."""
+def __init__(self, max_memories: int = 100):
+"""advanced memory system for storing conversation context and learning."""
+class memorysystem:
+has_openai = false
+except importerror:
+has_openai = true
+import openai
+try:
+from ai_script_inventory.superhuman_terminal import superhumanterminal
+from ai_script_inventory.ai.intent import intenttype, create_intent_recognizer
+sys.path.insert(0, str(path(__file__).parent.parent / "src"))
+# add src to path for imports
+from typing import optional
+from pathlib import path
+import urllib.request
+import urllib.error
+import sys
+import os
+"""
+local capabilities only as a last resort when openai is completely unavailable.
+this extends the superhumanterminal with openai-first integration while maintaining
+4. if unavailable: clear error message + optional local fallback
+3. if delegation: route to appropriate local handler
+- json delegation for repository-specific tasks (file management, script running, etc.)
+- direct conversational response for general queries
+2. openai responds with either:
+1. user input → openai api (chat/completions endpoint)
+processing flow:
+- **fallback**: only uses local processing when openai is completely unavailable (no api key/client)
+- **delegation**: openai determines whether to respond directly or delegate to local handlers
+interpreter -y- **primary**: all user input is sent directly to openai (chatgpt) for processingarchitecture:openai-powered ai terminal that routes all user interactions through openai as the primary brain.superman aiorchestrator"""#!/usr/bin/env python3
+#!/usr/bin/env python3
+"""
+superhuman ai terminal launcher
+entry point for the ai script inventory terminal interface.
+this consolidates terminal entry points to provide a single, reliable launcher
+that works both standalone and as part of the package.
+"""
+import sys
+from pathlib import path
+def main():
+    """main entry point for the superhuman ai terminal."""
+    # add src to python path for standalone execution
+    src_path = path(__file__).parent / "src"
+    if str(src_path) not in sys.path:
+        sys.path.insert(0, str(src_path))
+    try:
+        from ai_script_inventory.superhuman_terminal import main as terminal_main
+        terminal_main()
+    except importerror as e:
+        print(f"❌ error importing superhuman_terminal: {e}")
+        print("please ensure dependencies are installed:")
+        print("  pip install -e .")
+        sys.exit(1)
+    except keyboardinterrupt:
+        print("\n\n👋 goodbye!")
+        sys.exit(0)
+if __name__ == "__main__":
+    main()
+#!/usr/bin/env python3
+"""
+common utility functions for ai script inventory.
+this module contains shared utility functions to avoid code duplication
+across different scripts and modules.
+""
+import subprocess
+import sys
+from typing import list, optional
+def run_command(
+    command: list[str], description: str, show_output: bool = false, emoji: str = "🔄"
+) -> bool:
+    """
+    run a command and return success status.
+    args:
+        command: list of command parts to execute
+        description: human-readable description of the operation
+        show_output: whether to print stdout during execution
+        emoji: emoji to use in status messages
+    returns:
+        true if command succeeded, false otherwise
+    """
+    print(f"{emoji} {description}...")
+    try:
+        result = subprocess.run(command, check=true, capture_output=true, text=true)
+        if show_output and result.stdout:
+            print(result.stdout)
+        print(f"✅ {description} completed successfully")
+        return true
+    except subprocess.calledprocesserror as e:
+        print(f"❌ {description} failed")
+        if e.stdout:
+            print("stdout:", e.stdout)
+        if e.stderr:
+            print("stderr:", e.stderr)
+        return false
+def run_command_simple(command: list[str], description: str) -> bool:
+    """
+    simplified version for backward compatibility.
+    args:
+        command: list of command parts to execute
+        description: human-readable description of the operation
+    returns:
+        true if command succeeded, false otherwise
+    """
+    return run_command(command, description, show_output=false, emoji="🔧")
+#!/usr/bin/env python3
+"""
+organize and audit root directory of repository by file type.
+moves files to type-based folders, ensures required templates exist,
+and logs all actions. designed for ci automation and safe local use.
+enhanced with better error handling, validation, and superhuman workflow features.
+"""
+import hashlib
+import json
+import logging
+import os
+import shutil
+from datetime import datetime
+from pathlib import path
+from typing import dict, tuple
+# ================= configuration =================
+# mapping of file extensions to destination folders
+destinations = {
+    ".py": "python_scripts",
+    ".md": "docs",
+    ".sh": "shell_scripts",
+    ".txt": "text_files",
+    ".json": "text_files",
+    ".yaml": "text_files",
+    ".yml": "text_files",
+    ".cfg": "text_files",
+    ".ini": "text_files",
+    ".log": "text_files",
+}
+# required template files and their default content
+required_files = {
+    "readme.md": """# ai script inventory
+this repository contains a collection of ai-related scripts and tools with automated workflow management.
+## 🚀 superhuman ai workflow system
+this repository implements an advanced automation system for managing ai scripts, ensuring code quality, and maintaining documentation.
+### key features
+- **automated code organization**: files are automatically sorted by type into appropriate directories
+- **code quality assurance**: automated linting, formatting, and security scanning
+- **documentation management**: auto-generated and maintained documentation
+- **testing infrastructure**: comprehensive test suite with coverage reporting
+- **security monitoring**: automated vulnerability scanning and dependency checks
+### directory structure
+- `python_scripts/` - python scripts and ai tools
+- `shell_scripts/` - shell scripts and command-line utilities
+- `docs/` - documentation, guides, and reference materials
+- `text_files/` - configuration files, logs, and text-based resources
+- `.github/` - github actions workflows and automation scripts
+### getting started
+1. clone the repository
+2. install development dependencies: `pip install -r requirements-dev.txt`
+3. set up pre-commit hooks: `pre-commit install`
+4. start contributing! the automation will handle organization and quality checks.
+see [workflow.md](workflow.md) for detailed information about the automation system.
+""",
+    "python_scripts/readme.md": """# python scripts
+this folder contains all python scripts related to ai and automation.
+## guidelines
+- all python scripts should be properly documented with docstrings
+- follow pep 8 style guidelines (enforced by automated checks)
+- include type hints where appropriate
+- add tests for new functionality
+## automated checks
+- **syntax validation**: all python files are checked for valid syntax
+- **code formatting**: automatically formatted with black
+- **import sorting**: automatically organized with isort
+- **linting**: checked with flake8 for style and potential issues
+- **security scanning**: scanned with bandit for security vulnerabilities
+- **type checking**: analyzed with mypy for type safety
+""",
+    "shell_scripts/readme.md": """# shell scripts
+this folder contains all shell scripts and command-line utilities for managing or automating tasks.
+## guidelines
+- use `#!/bin/bash` shebang for bash scripts
+- include proper error handling with `set -e` and `set -u`
+- document script purpose and usage in comments
+- make scripts executable with `chmod +x`
+## automated checks
+- **syntax validation**: all shell scripts are validated for syntax errors
+- **shellcheck**: static analysis for common shell scripting issues
+- **security scanning**: checked for potential security issues
+""",
+    "docs/readme.md": """# documentation
+this folder contains documentation, guides, and reference material for this repository.
+## contents
+- **workflow documentation**: information about the automated processes
+- **api references**: documentation for scripts and tools
+- **user guides**: how-to guides for contributors and users
+- **command references**: quick reference materials
+## guidelines
+- use clear, concise language
+- include examples where appropriate
+- keep documentation up-to-date with code changes
+- use markdown for consistency
+""",
+    "text_files/readme.md": """# text files
+this folder contains script inventories, notes, configuration files, and miscellaneous text files.
+## contents
+- configuration files (json, yaml, ini, etc.)
+- log files and output
+- documentation exports
+- script inventories and lists
+- miscellaneous text-based resources
+## guidelines
+- organize files by purpose when possible
+- use descriptive filenames
+- include documentation for configuration files
+- avoid storing sensitive information in plain text
+""",
+}
+# files/directories to skip during organization
+skip = {
+    ".git",
+    ".github",
+    "__pycache__",
+    "organize_ai_scripts.log",
+    "node_modules",
+    ".pytest_cache",
+    ".mypy_cache",
+    ".coverage",
+    "htmlcov",
+    "venv",
+    "env",
+    ".env",
+    ".vscode",
+    ".idea",
+    os.path.basename(__file__),
+}
+# additional files to skip (dynamic)
+dynamic_skip = {
+    ".gitignore",
+    "license",
+    "pyproject.toml",
+    "setup.py",
+    "setup.cfg",
+    "requirements.txt",
+    "requirements-dev.txt",
+    ".pre-commit-config.yaml",
+    "pipfile",
+    "pipfile.lock",
+    "poetry.lock",
+    "package.json",
+    "package-lock.json",
+}
+# log file name for audit trail
+logfile = "organize_ai_scripts.log"
+# set to true for a dry run (no actual moves/writes)
+dry_run = false
+# =============== logging setup ===================
+def setup_logging() -> logging.logger:
+    """set up comprehensive logging."""
+    # create logs directory if it doesn't exist
+    log_dir = path(".") / "logs"
+    if not dry_run:
+        log_dir.mkdir(exist_ok=true)
+    logger = logging.getlogger("organize_ai_scripts")
+    logger.setlevel(logging.debug)
+    # clear existing handlers
+    for handler in logger.handlers[:]:
+        logger.removehandler(handler)
+    # file handler
+    if not dry_run:
+        file_handler = logging.filehandler(logfile, mode="a")
+        file_handler.setlevel(logging.debug)
+        file_format = logging.formatter(
+            "%(asctime)s [%(levelname)s] %(funcname)s:%(lineno)d - %(message)s"
+        )
+        file_handler.setformatter(file_format)
+        logger.addhandler(file_handler)
+    # console handler
+    console_handler = logging.streamhandler()
+    console_handler.setlevel(logging.info)
+    console_format = logging.formatter("%(message)s")
+    console_handler.setformatter(console_format)
+    logger.addhandler(console_handler)
+    return logger
+logger = setup_logging()
+# =============== utility functions ==============
+def get_file_hash(filepath: path) -> str:
+    """get sha256 hash of a file for change detection."""
+    hasher = hashlib.sha256()
+    try:
+        with open(filepath, "rb") as f:
+            for chunk in iter(lambda: f.read(4096), b""):
+                hasher.update(chunk)
+        return hasher.hexdigest()
+    except exception as e:
+        logger.warning(f"could not hash {filepath}: {e}")
+        return ""
+def validate_python_syntax(filepath: path) -> bool:
+    """validate python file syntax."""
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            compile(f.read(), str(filepath), "exec")
+        return true
+    except syntaxerror as e:
+        logger.error(f"syntax error in {filepath}: {e}")
+        return false
+    except exception as e:
+        logger.warning(f"could not validate {filepath}: {e}")
+        return false
+def validate_json_syntax(filepath: path) -> bool:
+    """validate json file syntax."""
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            json.load(f)
+        return true
+    except json.jsondecodeerror as e:
+        logger.error(f"json syntax error in {filepath}: {e}")
+        return false
+    except exception as e:
+        logger.warning(f"could not validate {filepath}: {e}")
+        return false
+def should_skip_file(filename: str) -> bool:
+    """determine if a file should be skipped during organization."""
+    return (
+        filename in skip
+        or filename in dynamic_skip
+        or filename.startswith(".")
+        or filename.endswith(".log")
+        or "__pycache__" in filename)
+# =============== organization logic ==============
+def ensure_dir(path: path) -> bool:
+    """ensure directory exists, create if it doesn't."""
+    try:
+        if not path.exists():
+            if not dry_run:
+                path.mkdir(parents=true, exist_ok=true)
+            logger.info(f"📁 created directory: {path}")
+            return true
+        return true
+    except exception as e:
+        logger.error(f"❌ failed to create directory {path}: {e}")
+        return false
+def safe_move(src: path, dst_folder: path) -> bool:
+    """move file safely, avoiding overwrites by timestamping colliding files."""
+    if not ensure_dir(dst_folder):
+        return false
+    dst = dst_folder / src.name
+    original_dst = dst
+    # handle naming conflicts
+    if dst.exists():
+        # check if files are identical
+        if src.exists() and dst.exists():
+            src_hash = get_file_hash(src)
+            dst_hash = get_file_hash(dst)
+            if src_hash and dst_hash and src_hash == dst_hash:
+                logger.info(f"🔄 identical file exists, removing duplicate: {src}")
+                if not dry_run:
+                    src.unlink()
+                return true
+        # create timestamped name for conflict resolution
+        timestamp = datetime.now().strftime("%y%m%d_%h%m%s")
+        stem = dst.stem
+        suffix = dst.suffix
+        dst = dst_folder / f"{stem}_{timestamp}{suffix}"
+        logger.warning(f"⚠️ collision: renaming {src.name} -> {dst.name}")
+    try:
+        if dry_run:
+            logger.info(f"🔄 [dry-run] would move {src} to {dst}")
+        else:
+            shutil.move(str(src), str(dst))
+            logger.info(f"✅ moved {src} to {dst}")
+        return true
+    except exception as e:
+        logger.error(f"❌ failed to move {src} to {dst}: {e}")
+        return false
+def organize_files() -> tuple[int, int, int]:
+    """organize files in the root directory by type."""
+    root_path = path(".")
+    moved_count = 0
+    skipped_count = 0
+    error_count = 0
+    # get all files in root directory
+    try:
+        root_files = [
+            f
+            for f in root_path.iterdir()
+            if f.is_file() and not should_skip_file(f.name)
+        ]
+    except exception as e:
+        logger.error(f"❌ failed to list root directory: {e}")
+        return 0, 0, 1
+    logger.info(f"📋 found {len(root_files)} files to process")
+    for file_path in root_files:
+        try:
+            suffix = file_path.suffix.lower()
+            if suffix in destinations:
+                dst_folder = path(destinations[suffix])
+                # validate file before moving
+                validation_passed = true
+                if suffix == ".py":
+                    validation_passed = validate_python_syntax(file_path)
+                elif suffix == ".json":
+                    validation_passed = validate_json_syntax(file_path)
+                if validation_passed:
+                    if safe_move(file_path, dst_folder):
+                        moved_count += 1
+                    else:
+                        error_count += 1
+                else:
+                    logger.error(f"❌ validation failed for {file_path}, skipping move")
+                    error_count += 1
+            else:
+                logger.warning(
+                    f"⚠️ no rule for {file_path} (extension: {suffix}), left in place"
+                )
+                skipped_count += 1
+        except exception as e:
+            logger.error(f"❌ error processing {file_path}: {e}")
+            error_count += 1
+    return moved_count, skipped_count, error_count
+def ensure_templates() -> tuple[int, int]:
+    """ensure required template files exist."""
+    created_count = 0
+    error_count = 0
+    for file_path_str, content in required_files.items():
+        file_path = path(file_path_str)
+        try:
+            if not file_path.exists():
+                # ensure parent directory exists
+                if not ensure_dir(file_path.parent):
+                    error_count += 1
+                    continue
+                if dry_run:
+                    logger.info(
+                        f"📝 [dry-run] would create missing template: {file_path}"
+                    )
+                else:
+                    with open(file_path, "w", encoding="utf-8") as f:
+                        f.write(content)
+                    logger.info(f"📝 created missing template: {file_path}")
+                created_count += 1
+            else:
+                logger.debug(f"✅ template already exists: {file_path}")
+        except exception as e:
+            logger.error(f"❌ failed to create template {file_path}: {e}")
+            error_count += 1
+    return created_count, error_count
+def audit_repository_structure() -> dict[str, any]:
+    """audit the repository structure and return a report."""
+    audit_report = {
+        "timestamp": datetime.now().isoformat(),
+        "directories": {},
+        "file_counts": {},
+        "issues": [],
+        "recommendations": [],
+    }
+
+    try:
+        for directory in ["python_scripts", "shell_scripts", "docs", "text_files"]:
+            dir_path = path(directory)
+            if dir_path.exists():
+                files = list(dir_path.iterdir())
+                audit_report["directories"][directory] = {
+                    "exists": true,
+                    "file_count": len([f for f in files if f.is_file()]),
+                    "files": [f.name for f in files if f.is_file()],
+                }
+            else:
+                audit_report["directories"][directory] = {"exists": false}
+                audit_report["issues"].append(f"directory {directory} does not exist")
+        # count files by type
+        for ext, dest in destinations.items():
+            count = len(list(path(".").rglob(f"*{ext}")))
+            audit_report["file_counts"][ext] = count
+        # check for common issues
+        large_files = []
+        for file_path in path(".").rglob("*"):
+            if (
+                file_path.is_file() and file_path.stat().st_size > 10 * 1024 * 1024
+            ):  # 10mb
+                large_files.append(str(file_path))
+        if large_files:
+            audit_report["issues"].append(f"large files detected: {large_files}")
+            audit_report["recommendations"].append(
+                "consider using git lfs for large files"
+            )
+        logger.info(f"📊 repository audit completed")
+    except exception as e:
+        logger.error(f"❌ failed to complete audit: {e}")
+        audit_report["issues"].append(f"audit failed: {e}")
+    return audit_report
+def generate_summary_report(
+    moved: int, skipped: int, errors: int, templates_created: int, template_errors: int
+) -> none:
+    """generate and display a comprehensive summary report."""
+    logger.info("\n" + "=" * 60)
+    logger.info("📊 organization summary report")
+    logger.info("=" * 60)
+    # file organization summary
+    logger.info(f"📁 files moved to appropriate directories: {moved}")
+    logger.info(f"⚠️ files skipped (no rule or excluded): {skipped}")
+    logger.info(f"❌ files with errors: {errors}")
+    logger.info(f"📝 template files created: {templates_created}")
+    logger.info(f"❌ template creation errors: {template_errors}")
+    # directory structure
+    logger.info("\n📂 current directory structure:")
+    try:
+        for root, dirs, files in os.walk("."):
+            # skip hidden directories and common ignore patterns
+            dirs[:] = [d for d in dirs if not d.startswith(".") and d not in skip]
+            level = root.replace(".", "").count(os.sep)
+            indent = " " * 2 * level
+            logger.info(f"{indent}{os.path.basename(root)}/")
+            subindent = " " * 2 * (level + 1)
+            for file in sorted(files):
+                if not file.startswith(".") and file not in skip:
+                    logger.info(f"{subindent}{file}")
+    except exception as e:
+        logger.error(f"❌ failed to generate directory structure: {e}")
+    # generate audit report
+    audit_report = audit_repository_structure()
+    if audit_report["issues"]:
+        logger.info("\n⚠️ issues detected:")
+        for issue in audit_report["issues"]:
+            logger.info(f"  • {issue}")
+    if audit_report["recommendations"]:
+        logger.info("\n💡 recommendations:")
+        for rec in audit_report["recommendations"]:
+            logger.info(f"  • {rec}")
+    # save audit report
+    if not dry_run:
+        try:
+            with open("audit_report.json", "w") as f:
+                json.dump(audit_report, f, indent=2)
+            logger.info(f"\n📊 detailed audit report saved to: audit_report.json")
+        except exception as e:
+            logger.error(f"❌ failed to save audit report: {e}")
+    logger.info("=" * 60 + "\n")
+def main() -> int:
+    """main function with comprehensive error handling and reporting."""
+    start_time = datetime.now()
+    logger.info("🚀 superhuman ai workflow - repository organization")
+    logger.info("=" * 60)
+    logger.info(f"🕐 started at: {start_time.strftime('%y-%m-%d %h:%m:%s')}")
+    if dry_run:
+        logger.warning("🔍 dry run mode: no files will be moved or written!")
+    try:
+        # phase 1: organize files
+        logger.info("\n📁 phase 1: organizing files by type...")
+        moved, skipped, errors = organize_files()
+        # phase 2: ensure templates
+        logger.info("\n📝 phase 2: ensuring required templates exist...")
+        templates_created, template_errors = ensure_templates()
+        # phase 3: generate summary
+        logger.info("\n📊 phase 3: generating summary report...")
+        generate_summary_report(
+            moved, skipped, errors, templates_created, template_errors
+        )
+        # calculate success rate
+        total_operations = (
+            moved + skipped + errors + templates_created + template_errors
+        )
+        success_rate = ((moved + templates_created) / max(total_operations, 1)) * 100
+        end_time = datetime.now()
+        duration = end_time - start_time
+        logger.info(f"✅ organization completed successfully!")
+        logger.info(f"📈 success rate: {success_rate:.1f}%")
+        logger.info(f"⏱️ duration: {duration.total_seconds():.2f} seconds")
+        # return exit code based on errors
+        if errors > 0 or template_errors > 0:
+            logger.warning(f"⚠️ completed with {errors + template_errors} errors")
+            return 1
+        else:
+            logger.info("🎉 all operations completed without errors!")
+            return 0
+    except keyboardinterrupt:
+        logger.warning("\n⚠️ operation cancelled by user")
+        return 130
+    except exception as e:
+        logger.error(f"\n💥 critical error during organization: {e}")
+        logger.exception("full traceback:")
+        return 1
+if __name__ == "__main__":
+    exit_code = main()
+    exit(exit_code)
