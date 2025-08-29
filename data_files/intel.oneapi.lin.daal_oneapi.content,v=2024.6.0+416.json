@@ -1,0 +1,77 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/dal/lin/",
+    "id": "intel.oneapi.lin.daal_oneapi.content",
+    "packages": [
+        {
+            "id": "intel.oneapi.lin.dal.runtime",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dal.runtime,v=2024.6.0+416/manifest.json",
+                    "preDownload": true,
+                    "sha384": "67244d00285f567f7b9d7a17777a9b37725001b3ceb6f85adaf1ee9a6b5834081242351ded8d39645ee93150641cb017",
+                    "size": 3842,
+                    "url": "https://installer.repos.intel.com/oneapi/dal/lin/intel.oneapi.lin.dal.runtime,v=2024.6.0%2B416/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dal.runtime,v=2024.6.0+416/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "b527459a1a0a4be48616dbf543b28dda617a80b08e507443626b5b90947656b31b396b457d6c1de4aa601232fdb40ae7",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/dal/lin/intel.oneapi.lin.dal.runtime,v=2024.6.0%2B416/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.6.0+416"
+        },
+        {
+            "id": "intel.oneapi.lin.dal.product",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dal.product,v=2024.6.0+416/manifest.json",
+                    "preDownload": true,
+                    "sha384": "f19d022afcd476825ca209405b53add27f090e42dba842e96ca9fb7bcfcb9d1ffe58a6736b9d92339d046134489676a7",
+                    "size": 167595,
+                    "url": "https://installer.repos.intel.com/oneapi/dal/lin/intel.oneapi.lin.dal.product,v=2024.6.0%2B416/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dal.product,v=2024.6.0+416/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "42458ea35ebf98ebf05565b9136f6f387d88b47bdf024a8c4b6a3b9c26a4b924444a91dc62722abb26d61d91d1d2109a",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/dal/lin/intel.oneapi.lin.dal.product,v=2024.6.0%2B416/manifest.json.sig"
+                }
+            ],
+            "type": "product",
+            "version": "2024.6.0+416"
+        },
+        {
+            "id": "intel.oneapi.lin.dal.devel",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dal.devel,v=2024.6.0+416/manifest.json",
+                    "preDownload": true,
+                    "sha384": "796ac330f82179532a68f29ad46c008861c860f00a4de1337c378e45f17c1584150dcfee522b6c719eb8bf9cfbe82788",
+                    "size": 3477,
+                    "url": "https://installer.repos.intel.com/oneapi/dal/lin/intel.oneapi.lin.dal.devel,v=2024.6.0%2B416/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dal.devel,v=2024.6.0+416/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "f9f8cec16a1fe1000db4617a04ea7b685fe7aa3f4afb1e9cc19ae67a5f550c15cf24a73623d3176927b82628ab841c0d",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/dal/lin/intel.oneapi.lin.dal.devel,v=2024.6.0%2B416/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.6.0+416"
+        }
+    ],
+    "type": "contentmanifest",
+    "version": "2024.6.0+416"
+}

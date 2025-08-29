@@ -1,0 +1,77 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/ccl/lin/",
+    "id": "intel.oneapi.lin.oneapi_ccl.content",
+    "packages": [
+        {
+            "id": "intel.oneapi.lin.ccl.product",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.ccl.product,v=2021.13.1+31/manifest.json",
+                    "preDownload": true,
+                    "sha384": "66f6e8e8b66bebac8daeac7c76d51ee24b66418bca8df0bb13e056ef59287a63cf477987ee1fd4960f4531cbce3591b4",
+                    "size": 168049,
+                    "url": "https://installer.repos.intel.com/oneapi/ccl/lin/intel.oneapi.lin.ccl.product,v=2021.13.1%2B31/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.ccl.product,v=2021.13.1+31/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "bdacdbde1941473e2509e469941bbbe6030a35d91d58e96961509a60926440c879d0da2cd61aafdc9ad5e0a361d1f29b",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/ccl/lin/intel.oneapi.lin.ccl.product,v=2021.13.1%2B31/manifest.json.sig"
+                }
+            ],
+            "type": "product",
+            "version": "2021.13.1+31"
+        },
+        {
+            "id": "intel.oneapi.lin.ccl.devel",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.ccl.devel,v=2021.13.1+31/manifest.json",
+                    "preDownload": true,
+                    "sha384": "3b9b38791b7944f15b84abd1312a44469e447545eaf2fa176bb130772124e16843ac001ce2e0a410c7348f046bc6f102",
+                    "size": 4089,
+                    "url": "https://installer.repos.intel.com/oneapi/ccl/lin/intel.oneapi.lin.ccl.devel,v=2021.13.1%2B31/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.ccl.devel,v=2021.13.1+31/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "36db93efc0a09a7cc4ef970b8ef62675c6480c699920e95a7466638ff35f72ccafba53e3ebfbd87f11f4a1f115d90740",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/ccl/lin/intel.oneapi.lin.ccl.devel,v=2021.13.1%2B31/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2021.13.1+31"
+        },
+        {
+            "id": "intel.oneapi.lin.ccl.runtime",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.ccl.runtime,v=2021.13.1+31/manifest.json",
+                    "preDownload": true,
+                    "sha384": "ad6088f05149c4634e522734b02ba088515579c64810ffbc613d7250d9a7575f976e0fb1dc981ba0f8982049242f8833",
+                    "size": 3545,
+                    "url": "https://installer.repos.intel.com/oneapi/ccl/lin/intel.oneapi.lin.ccl.runtime,v=2021.13.1%2B31/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.ccl.runtime,v=2021.13.1+31/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "f1e774cd6e7dc36ee5262fbc9f8db752fdb1dbc6fde9bf70d5ce272c0f16934b90b09b0cec2ada460434cf5cef585803",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/ccl/lin/intel.oneapi.lin.ccl.runtime,v=2021.13.1%2B31/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2021.13.1+31"
+        }
+    ],
+    "type": "contentmanifest",
+    "version": "2021.13.1+31"
+}

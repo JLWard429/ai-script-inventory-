@@ -1,0 +1,166 @@
+{
+    "adminRightsRequired": false,
+    "display": {
+        "localized": [
+            {
+                "language": "en-us",
+                "title": "Intel® oneAPI Base Toolkit"
+            }
+        ]
+    },
+    "id": "intel.installer.oneapi.linux.bootstrapper",
+    "logFolderPrefix": "intel_oneapi_installer",
+    "minimalInstallerVersion": "4.3.8.2833",
+    "minimalPackageManagerVersion": "4.3.8-2829",
+    "packages": [
+        {
+            "adminRightsRequired": false,
+            "baseUrl": "https://installer.repos.intel.com/managed/installer/",
+            "display": {
+                "icons": [
+                    {
+                        "fileName": "[InstallerLocation]/app-icon/oneapi-16x16.png",
+                        "mimeType": "image/png"
+                    },
+                    {
+                        "fileName": "[InstallerLocation]/app-icon/oneapi-20x20.png",
+                        "mimeType": "image/png"
+                    },
+                    {
+                        "fileName": "[InstallerLocation]/app-icon/oneapi-24x24.png",
+                        "mimeType": "image/png"
+                    },
+                    {
+                        "fileName": "[InstallerLocation]/app-icon/oneapi-32x32.png",
+                        "mimeType": "image/png"
+                    },
+                    {
+                        "fileName": "[InstallerLocation]/app-icon/oneapi-40x40.png",
+                        "mimeType": "image/png"
+                    },
+                    {
+                        "fileName": "[InstallerLocation]/app-icon/oneapi-48x48.png",
+                        "mimeType": "image/png"
+                    },
+                    {
+                        "fileName": "[InstallerLocation]/app-icon/oneapi-64x64.png",
+                        "mimeType": "image/png"
+                    },
+                    {
+                        "fileName": "[InstallerLocation]/app-icon/oneapi-128x128.png",
+                        "mimeType": "image/png"
+                    },
+                    {
+                        "fileName": "[InstallerLocation]/app-icon/oneapi-256x256.png",
+                        "mimeType": "image/png"
+                    },
+                    {
+                        "fileName": "[InstallerLocation]/app-icon/oneapi-512x512.png",
+                        "mimeType": "image/png"
+                    },
+                    {
+                        "fileName": "[InstallerLocation]/app-icon/oneapi-1024x1024.png",
+                        "mimeType": "image/png"
+                    }
+                ],
+                "localized": [
+                    {
+                        "language": "en-us",
+                        "splashScreen": {
+                            "fileName": "[InstallerLocation]/splash.png",
+                            "mimeType": "image/png",
+                            "scaleFactor": 200
+                        },
+                        "title": "Intel® Software Installer"
+                    }
+                ]
+            },
+            "downloadCacheLocation": {
+                "perMachine": "/var/intel/installercache/downloadcache",
+                "perUser": "[UserHome]/intel/installercache/downloadcache"
+            },
+            "id": "intel.installer.oneapi.linux.installer",
+            "installDir": {
+                "fixed": true,
+                "linux": {
+                    "perMachine": "/opt/intel/oneapi/installer",
+                    "perUser": "[UserHome]/intel/oneapi/installer"
+                }
+            },
+            "installSize": {
+                "installDir": 114040221
+            },
+            "installerCacheLocation": {
+                "perMachine": "/var/intel/installercache",
+                "perUser": "[UserHome]/intel/installercache"
+            },
+            "logFolderPrefix": "intel_oneapi_installer",
+            "payloads": [
+                {
+                    "fileName": "installer.zip",
+                    "sha384": "856703e8ab290fbccc20825d979b82902754dac8a4cf57989791a1bf9eb8fb0af36403686b39891535169c65e71b967e",
+                    "size": 29668921,
+                    "url": "https://installer.repos.intel.com/managed/installer/intel.installer.oneapi.linux.installer,v=4.3.8.2833/installer.zip"
+                }
+            ],
+            "preRequisites": {
+                "requireTempFolder": true,
+                "supportedHostArchitecture": [
+                    "x64"
+                ],
+                "unsupportedFileSystems": [
+                    "cifs",
+                    "fat"
+                ]
+            },
+            "type": "installer",
+            "version": "4.3.8.2833"
+        },
+        {
+            "baseUrl": "https://installer.repos.intel.com/managed/installer/",
+            "dataBaseLocation": {
+                "perMachine": "/var/intel/installercache/packagemanager.db",
+                "perUser": "[UserHome]/intel/installercache/packagemanager.db"
+            },
+            "id": "intel.installer.packagemanager.linux",
+            "installDir": {
+                "fixed": true,
+                "linux": {
+                    "perMachine": "/opt/intel/packagemanager/1.0",
+                    "perUser": "[UserHome]/intel/packagemanager/1.0"
+                }
+            },
+            "installSize": {
+                "installDir": 35767954
+            },
+            "logFolderPrefix": "intel_packagemanager",
+            "payloads": [
+                {
+                    "fileName": "packagemanager.zip",
+                    "sha384": "8856e8d5744f8ca1da15d9535d99773515c42d7e2b58e91d1e1ea68bcf0a8e72aff0abeba3c73165bf35cb48e7b16412",
+                    "size": 9959010,
+                    "url": "https://installer.repos.intel.com/managed/installer/intel.installer.packagemanager.linux,v=4.3.8-2829/packagemanager.zip"
+                }
+            ],
+            "type": "packagemanager",
+            "unifiedPackagesCacheLocation": {
+                "perMachine": "/var/intel/installercache/packagescache",
+                "perUser": "[UserHome]/intel/installercache/packagescache"
+            },
+            "version": "4.3.8-2829"
+        }
+    ],
+    "payloads": [
+        {
+            "fileName": "bootstrapper",
+            "sha384": "be8745f8d298e2b0bc1ad0e488c28eaa40700f1d3bb75fe472c667c3ccb28fa27ef37d20b8e7af938b5cc60f539b3348",
+            "size": 9336712
+        }
+    ],
+    "startupProduct": {
+        "id": "intel.oneapi.lin.basekit.product",
+        "version": "2024.2.1+98"
+    },
+    "type": "bootstrapper",
+    "version": "4.3.8.2833"
+}

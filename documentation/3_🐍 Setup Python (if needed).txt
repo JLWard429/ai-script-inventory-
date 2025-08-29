@@ -1,0 +1,25 @@
+﻿2025-08-25T16:54:14.0353678Z ##[group]Run actions/setup-python@v5
+2025-08-25T16:54:14.0354198Z with:
+2025-08-25T16:54:14.0354388Z   python-version: 3.11
+2025-08-25T16:54:14.0354591Z   cache: pip
+2025-08-25T16:54:14.0354776Z   check-latest: false
+2025-08-25T16:54:14.0355134Z   token: ***
+2025-08-25T16:54:14.0355331Z   update-environment: true
+2025-08-25T16:54:14.0355552Z   allow-prereleases: false
+2025-08-25T16:54:14.0355760Z   freethreaded: false
+2025-08-25T16:54:14.0355940Z env:
+2025-08-25T16:54:14.0356194Z   CODEQL_EXTRACTOR_PYTHON_OPTION_ANALYZE_RAW_STRING_LITERALS: true
+2025-08-25T16:54:14.0356547Z   CODEQL_PYTHON_IGNORE_IMPORT_ERRORS: true
+2025-08-25T16:54:14.0356973Z   CODEQL_ACTION_EXTRA_OPTIONS: {"database": {"finalize": ["--max-disk-cache", "1024"]}}
+2025-08-25T16:54:14.0357349Z ##[endgroup]
+2025-08-25T16:54:14.2054907Z ##[group]Installed versions
+2025-08-25T16:54:14.2446440Z Successfully set up CPython (3.11.13)
+2025-08-25T16:54:14.2447397Z ##[endgroup]
+2025-08-25T16:54:14.3074359Z [command]/opt/hostedtoolcache/Python/3.11.13/x64/bin/pip cache dir
+2025-08-25T16:54:15.6267092Z /home/runner/.cache/pip
+2025-08-25T16:54:15.9767046Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.13-pip-e63c2ef4a98d18fa7f02992ca4ef16873e5951c18ee0a28aaad4af53d56b9211
+2025-08-25T16:54:16.8248492Z Received 372404 of 372404 (100.0%), 0.7 MBs/sec
+2025-08-25T16:54:16.8249109Z Cache Size: ~0 MB (372404 B)
+2025-08-25T16:54:16.8275349Z [command]/usr/bin/tar -xf /home/runner/work/_temp/2018b755-8cbc-41b3-b2cb-0661b7a97492/cache.tzst -P -C /home/runner/work/ai-script-inventory-/ai-script-inventory- --use-compress-program unzstd
+2025-08-25T16:54:16.8362108Z Cache restored successfully
+2025-08-25T16:54:16.8369594Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.13-pip-c15d7ab5111ee8b1a45af3eac0f43aa02584cc87f8ee071532d47b6150e23690

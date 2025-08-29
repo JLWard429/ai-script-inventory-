@@ -1,0 +1,24 @@
+﻿2025-08-25T16:55:53.1742111Z ##[group]Run echo "## 🔐 Professional CodeQL Analysis Complete" >> $GITHUB_STEP_SUMMARY
+2025-08-25T16:55:53.1742778Z [36;1mecho "## 🔐 Professional CodeQL Analysis Complete" >> $GITHUB_STEP_SUMMARY[0m
+2025-08-25T16:55:53.1743204Z [36;1mecho "" >> $GITHUB_STEP_SUMMARY[0m
+2025-08-25T16:55:53.1743570Z [36;1mecho "### 📊 Analysis Statistics:" >> $GITHUB_STEP_SUMMARY[0m
+2025-08-25T16:55:53.1744028Z [36;1mecho "- **Languages Scanned**: python" >> $GITHUB_STEP_SUMMARY[0m
+2025-08-25T16:55:53.1744452Z [36;1mecho "- **Analysis Jobs**: 1" >> $GITHUB_STEP_SUMMARY[0m
+2025-08-25T16:55:53.1744853Z [36;1mecho "- **Total Runtime**: $(date)" >> $GITHUB_STEP_SUMMARY[0m
+2025-08-25T16:55:53.1745229Z [36;1mecho "" >> $GITHUB_STEP_SUMMARY[0m
+2025-08-25T16:55:53.1745584Z [36;1mecho "### 🎯 Key Features Enabled:" >> $GITHUB_STEP_SUMMARY[0m
+2025-08-25T16:55:53.1746021Z [36;1mecho "- ✅ Multi-language auto-detection" >> $GITHUB_STEP_SUMMARY[0m
+2025-08-25T16:55:53.1746499Z [36;1mecho "- ✅ Professional configuration file" >> $GITHUB_STEP_SUMMARY[0m
+2025-08-25T16:55:53.1747017Z [36;1mecho "- ✅ Extended security query suites" >> $GITHUB_STEP_SUMMARY[0m
+2025-08-25T16:55:53.1747481Z [36;1mecho "- ✅ Comprehensive build matrix" >> $GITHUB_STEP_SUMMARY[0m
+2025-08-25T16:55:53.1747945Z [36;1mecho "- ✅ Advanced reporting and artifacts" >> $GITHUB_STEP_SUMMARY[0m
+2025-08-25T16:55:53.1748807Z [36;1mecho "- ✅ Performance optimizations" >> $GITHUB_STEP_SUMMARY[0m
+2025-08-25T16:55:53.1749187Z [36;1mecho "" >> $GITHUB_STEP_SUMMARY[0m
+2025-08-25T16:55:53.1749844Z [36;1mecho "🔗 **View Results**: [Security Tab](https://github.com/JLWard429/ai-script-inventory-/security/code-scanning)" >> $GITHUB_STEP_SUMMARY[0m
+2025-08-25T16:55:53.1750684Z [36;1mecho "📥 **Download Report**: Check workflow artifacts for detailed security report" >> $GITHUB_STEP_SUMMARY[0m
+2025-08-25T16:55:53.1792994Z shell: /usr/bin/bash -e {0}
+2025-08-25T16:55:53.1793285Z env:
+2025-08-25T16:55:53.1793598Z   CODEQL_EXTRACTOR_PYTHON_OPTION_ANALYZE_RAW_STRING_LITERALS: true
+2025-08-25T16:55:53.1794046Z   CODEQL_PYTHON_IGNORE_IMPORT_ERRORS: true
+2025-08-25T16:55:53.1794488Z   CODEQL_ACTION_EXTRA_OPTIONS: {"database": {"finalize": ["--max-disk-cache", "1024"]}}
+2025-08-25T16:55:53.1794932Z ##[endgroup]

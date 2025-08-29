@@ -1,0 +1,100 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/vtune/lin/",
+    "id": "intel.oneapi.lin.oneapi_vtune.content",
+    "packages": [
+        {
+            "id": "intel.oneapi.lin.vtune",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.vtune,v=2024.2.1+66/manifest.json",
+                    "preDownload": true,
+                    "sha384": "201d4eb915c7fafa835164f1d9f11837b1165f8345db43cb179dc223ae0a78b787ea40b2f6a356c6ad1500b3446e85ae",
+                    "size": 23007,
+                    "url": "https://installer.repos.intel.com/oneapi/vtune/lin/intel.oneapi.lin.vtune,v=2024.2.1%2B66/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.vtune,v=2024.2.1+66/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "da77ff0a9004b937aa257c5e4c09c93d3ad0892809be7c8b248284b5aea49ad0b44a8a09dcd32c5568722be0a649e6ea",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/vtune/lin/intel.oneapi.lin.vtune,v=2024.2.1%2B66/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+66"
+        },
+        {
+            "id": "intel.oneapi.lin.vtune.eclipse-plugin",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.vtune.eclipse-plugin,v=2024.2.1+66/manifest.json",
+                    "preDownload": true,
+                    "sha384": "69d5dd648fbce256d3adfaf1cd81c962542b574654cdb38f87499f2b8d3bb93ba2396edcc9a8aea575f121f537780c47",
+                    "size": 3005,
+                    "url": "https://installer.repos.intel.com/oneapi/vtune/lin/intel.oneapi.lin.vtune.eclipse-plugin,v=2024.2.1%2B66/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.vtune.eclipse-plugin,v=2024.2.1+66/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "9e29527000aaf5778a0e88c085fc3977d3f8371eb7b7db6eb7c2cc63c633be4042b0a73e1d360475dc630a913d4d1af9",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/vtune/lin/intel.oneapi.lin.vtune.eclipse-plugin,v=2024.2.1%2B66/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+66"
+        },
+        {
+            "id": "intel.oneapi.lin.vtune.product",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.vtune.product,v=2024.2.1+66/manifest.json",
+                    "preDownload": true,
+                    "sha384": "0b55f7ebcf1bf57e692b156b5e874645f63746537294c3d4a78695959027f8e65013c3817d23058736ef866c2ccf2608",
+                    "size": 162758,
+                    "url": "https://installer.repos.intel.com/oneapi/vtune/lin/intel.oneapi.lin.vtune.product,v=2024.2.1%2B66/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.vtune.product,v=2024.2.1+66/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "a4f653fd6a737803193c6ce9c04c79a463c9062295df9139338128a08ee8376e24e72b5a3d80a7e4a6a38aa2e50c93f0",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/vtune/lin/intel.oneapi.lin.vtune.product,v=2024.2.1%2B66/manifest.json.sig"
+                }
+            ],
+            "type": "product",
+            "version": "2024.2.1+66"
+        },
+        {
+            "id": "intel.oneapi.lin.vtune.eclipse-integration",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.vtune.eclipse-integration,v=2024.2.1+66/manifest.json",
+                    "preDownload": true,
+                    "sha384": "2437e6ab61bf872d673d60c7bc719d0722e2c48957c50423f9d0299e1e7fc4c6ff0bb7e4345e46c044c86956d4d2dbcc",
+                    "size": 1645,
+                    "url": "https://installer.repos.intel.com/oneapi/vtune/lin/intel.oneapi.lin.vtune.eclipse-integration,v=2024.2.1%2B66/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.vtune.eclipse-integration,v=2024.2.1+66/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "d4f19786c47a801c97e16b86b303cc2917f24e3e072aa2fbea936f9b33d90d3f2b7adf668a950374173e721dfd5dc469",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/vtune/lin/intel.oneapi.lin.vtune.eclipse-integration,v=2024.2.1%2B66/manifest.json.sig"
+                }
+            ],
+            "type": "component",
+            "version": "2024.2.1+66"
+        }
+    ],
+    "type": "contentmanifest",
+    "version": "2024.2.1+66"
+}

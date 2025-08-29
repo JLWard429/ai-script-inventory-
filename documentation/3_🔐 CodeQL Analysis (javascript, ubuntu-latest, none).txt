@@ -1,0 +1,171 @@
+﻿2025-08-25T16:54:07.0642288Z Current runner version: '2.328.0'
+2025-08-25T16:54:07.0666481Z ##[group]Runner Image Provisioner
+2025-08-25T16:54:07.0667653Z Hosted Compute Agent
+2025-08-25T16:54:07.0668196Z Version: 20250821.380
+2025-08-25T16:54:07.0668798Z Commit: 438d12cb4fe092871db9867344e3bc0bc5319035
+2025-08-25T16:54:07.0669556Z Build Date: 2025-08-21T20:49:43Z
+2025-08-25T16:54:07.0670166Z ##[endgroup]
+2025-08-25T16:54:07.0670690Z ##[group]Operating System
+2025-08-25T16:54:07.0671547Z Ubuntu
+2025-08-25T16:54:07.0672039Z 24.04.2
+2025-08-25T16:54:07.0672521Z LTS
+2025-08-25T16:54:07.0673049Z ##[endgroup]
+2025-08-25T16:54:07.0673515Z ##[group]Runner Image
+2025-08-25T16:54:07.0674095Z Image: ubuntu-24.04
+2025-08-25T16:54:07.0674614Z Version: 20250818.1.0
+2025-08-25T16:54:07.0675651Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250818.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-08-25T16:54:07.0677197Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250818.1
+2025-08-25T16:54:07.0678248Z ##[endgroup]
+2025-08-25T16:54:07.0679552Z ##[group]GITHUB_TOKEN Permissions
+2025-08-25T16:54:07.0681797Z Actions: read
+2025-08-25T16:54:07.0682372Z Contents: read
+2025-08-25T16:54:07.0682839Z Metadata: read
+2025-08-25T16:54:07.0683453Z PullRequests: read
+2025-08-25T16:54:07.0683994Z SecurityEvents: write
+2025-08-25T16:54:07.0684489Z ##[endgroup]
+2025-08-25T16:54:07.0686848Z Secret source: Actions
+2025-08-25T16:54:07.0687529Z Prepare workflow directory
+2025-08-25T16:54:07.1097803Z Prepare all required actions
+2025-08-25T16:54:07.1154515Z Getting action download info
+2025-08-25T16:54:07.7816762Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-08-25T16:54:07.8500588Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2025-08-25T16:54:07.9377294Z Download action repository 'actions/setup-java@v4' (SHA:c5195efecf7bdfc987ee8bae7a71cb8b11521c00)
+2025-08-25T16:54:08.9712498Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2025-08-25T16:54:09.0639109Z Download action repository 'actions/setup-go@v5' (SHA:d35c59abb061a4a6fb18e82ac0862c26744d6ab5)
+2025-08-25T16:54:09.6434266Z Download action repository 'ruby/setup-ruby@v1' (SHA:efbf473cab83af4468e8606cc33eca9281bb213f)
+2025-08-25T16:54:10.4043009Z Download action repository 'github/codeql-action@v3' (SHA:3c3833e0f8c1c83d449a7478aa59c036a9165498)
+2025-08-25T16:54:16.7023766Z Complete job name: 🔐 CodeQL Analysis (javascript, ubuntu-latest, none)
+2025-08-25T16:54:16.7658483Z ##[group]Run actions/checkout@v5
+2025-08-25T16:54:16.7659057Z with:
+2025-08-25T16:54:16.7659246Z   fetch-depth: 0
+2025-08-25T16:54:16.7659485Z   repository: JLWard429/ai-script-inventory-
+2025-08-25T16:54:16.7659883Z   token: ***
+2025-08-25T16:54:16.7660063Z   ssh-strict: true
+2025-08-25T16:54:16.7660240Z   ssh-user: git
+2025-08-25T16:54:16.7660435Z   persist-credentials: true
+2025-08-25T16:54:16.7660644Z   clean: true
+2025-08-25T16:54:16.7660842Z   sparse-checkout-cone-mode: true
+2025-08-25T16:54:16.7661275Z   fetch-tags: false
+2025-08-25T16:54:16.7661469Z   show-progress: true
+2025-08-25T16:54:16.7661653Z   lfs: false
+2025-08-25T16:54:16.7661810Z   submodules: false
+2025-08-25T16:54:16.7661993Z   set-safe-directory: true
+2025-08-25T16:54:16.7662428Z env:
+2025-08-25T16:54:16.7662701Z   CODEQL_EXTRACTOR_PYTHON_OPTION_ANALYZE_RAW_STRING_LITERALS: true
+2025-08-25T16:54:16.7663044Z   CODEQL_PYTHON_IGNORE_IMPORT_ERRORS: true
+2025-08-25T16:54:16.7663454Z   CODEQL_ACTION_EXTRA_OPTIONS: {"database": {"finalize": ["--max-disk-cache", "1024"]}}
+2025-08-25T16:54:16.7663808Z ##[endgroup]
+2025-08-25T16:54:16.8590548Z Syncing repository: JLWard429/ai-script-inventory-
+2025-08-25T16:54:16.8592270Z ##[group]Getting Git version info
+2025-08-25T16:54:16.8592755Z Working directory is '/home/runner/work/ai-script-inventory-/ai-script-inventory-'
+2025-08-25T16:54:16.8593368Z [command]/usr/bin/git version
+2025-08-25T16:54:16.8615832Z git version 2.51.0
+2025-08-25T16:54:16.8636867Z ##[endgroup]
+2025-08-25T16:54:16.8652621Z Temporarily overriding HOME='/home/runner/work/_temp/fb060b8f-de4d-498d-9ae6-10c158b13feb' before making global git config changes
+2025-08-25T16:54:16.8654024Z Adding repository directory to the temporary git global config as a safe directory
+2025-08-25T16:54:16.8658697Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ai-script-inventory-/ai-script-inventory-
+2025-08-25T16:54:16.8695280Z Deleting the contents of '/home/runner/work/ai-script-inventory-/ai-script-inventory-'
+2025-08-25T16:54:16.8698688Z ##[group]Initializing the repository
+2025-08-25T16:54:16.8703420Z [command]/usr/bin/git init /home/runner/work/ai-script-inventory-/ai-script-inventory-
+2025-08-25T16:54:16.8759952Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-08-25T16:54:16.8760903Z hint: is subject to change. To configure the initial branch name to use in all
+2025-08-25T16:54:16.8761898Z hint: of your new repositories, which will suppress this warning, call:
+2025-08-25T16:54:16.8762564Z hint:
+2025-08-25T16:54:16.8762889Z hint: 	git config --global init.defaultBranch <name>
+2025-08-25T16:54:16.8763172Z hint:
+2025-08-25T16:54:16.8763433Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-08-25T16:54:16.8764208Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-08-25T16:54:16.8764880Z hint:
+2025-08-25T16:54:16.8765229Z hint: 	git branch -m <name>
+2025-08-25T16:54:16.8765625Z hint:
+2025-08-25T16:54:16.8766188Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-08-25T16:54:16.8767330Z Initialized empty Git repository in /home/runner/work/ai-script-inventory-/ai-script-inventory-/.git/
+2025-08-25T16:54:16.8774209Z [command]/usr/bin/git remote add origin https://github.com/JLWard429/ai-script-inventory-
+2025-08-25T16:54:16.8805938Z ##[endgroup]
+2025-08-25T16:54:16.8806550Z ##[group]Disabling automatic garbage collection
+2025-08-25T16:54:16.8810807Z [command]/usr/bin/git config --local gc.auto 0
+2025-08-25T16:54:16.8839818Z ##[endgroup]
+2025-08-25T16:54:16.8840190Z ##[group]Setting up auth
+2025-08-25T16:54:16.8848015Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-08-25T16:54:16.8878406Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-08-25T16:54:16.9141643Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-08-25T16:54:16.9173037Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-08-25T16:54:16.9396668Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-08-25T16:54:16.9432084Z ##[endgroup]
+2025-08-25T16:54:16.9432733Z ##[group]Fetching the repository
+2025-08-25T16:54:16.9441048Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/* +d99966afd10d639723a481583ea8f51d91aff023:refs/remotes/pull/29/merge
+2025-08-25T16:54:17.5548272Z From https://github.com/JLWard429/ai-script-inventory-
+2025-08-25T16:54:17.5549118Z  * [new branch]      add-ci-badge-readme                      -> origin/add-ci-badge-readme
+2025-08-25T16:54:17.5549982Z  * [new branch]      copilot/fix-17                           -> origin/copilot/fix-17
+2025-08-25T16:54:17.5551265Z  * [new branch]      copilot/fix-1780917c-85f5-424d-9294-df3051629bab -> origin/copilot/fix-1780917c-85f5-424d-9294-df3051629bab
+2025-08-25T16:54:17.5552125Z  * [new branch]      copilot/fix-19                           -> origin/copilot/fix-19
+2025-08-25T16:54:17.5552588Z  * [new branch]      copilot/fix-21                           -> origin/copilot/fix-21
+2025-08-25T16:54:17.5553455Z  * [new branch]      copilot/fix-4971ce11-604f-4e6a-b144-8d0d00a0986a -> origin/copilot/fix-4971ce11-604f-4e6a-b144-8d0d00a0986a
+2025-08-25T16:54:17.5554193Z  * [new branch]      copilot/fix-848ca0da-792a-4a84-840d-a8508768ec7d -> origin/copilot/fix-848ca0da-792a-4a84-840d-a8508768ec7d
+2025-08-25T16:54:17.5554930Z  * [new branch]      copilot/fix-9af5e4c2-389d-416f-bab1-3e9267090e64 -> origin/copilot/fix-9af5e4c2-389d-416f-bab1-3e9267090e64
+2025-08-25T16:54:17.5555523Z  * [new branch]      dependencies                             -> origin/dependencies
+2025-08-25T16:54:17.5555910Z  * [new branch]      main                                     -> origin/main
+2025-08-25T16:54:17.5556353Z  * [new branch]      superhuman-ai-terminal                   -> origin/superhuman-ai-terminal
+2025-08-25T16:54:17.5556811Z  * [new ref]         d99966afd10d639723a481583ea8f51d91aff023 -> pull/29/merge
+2025-08-25T16:54:17.5599805Z ##[endgroup]
+2025-08-25T16:54:17.5600443Z ##[group]Determining the checkout info
+2025-08-25T16:54:17.5601558Z ##[endgroup]
+2025-08-25T16:54:17.5607041Z [command]/usr/bin/git sparse-checkout disable
+2025-08-25T16:54:17.5649474Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-08-25T16:54:17.5677359Z ##[group]Checking out the ref
+2025-08-25T16:54:17.5683035Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/29/merge
+2025-08-25T16:54:17.6059540Z Note: switching to 'refs/remotes/pull/29/merge'.
+2025-08-25T16:54:17.6060163Z 
+2025-08-25T16:54:17.6060858Z You are in 'detached HEAD' state. You can look around, make experimental
+2025-08-25T16:54:17.6062237Z changes and commit them, and you can discard any commits you make in this
+2025-08-25T16:54:17.6062902Z state without impacting any branches by switching back to a branch.
+2025-08-25T16:54:17.6063243Z 
+2025-08-25T16:54:17.6063466Z If you want to create a new branch to retain commits you create, you may
+2025-08-25T16:54:17.6064140Z do so (now or later) by using -c with the switch command. Example:
+2025-08-25T16:54:17.6064633Z 
+2025-08-25T16:54:17.6064826Z   git switch -c <new-branch-name>
+2025-08-25T16:54:17.6065144Z 
+2025-08-25T16:54:17.6065298Z Or undo this operation with:
+2025-08-25T16:54:17.6065497Z 
+2025-08-25T16:54:17.6065654Z   git switch -
+2025-08-25T16:54:17.6065797Z 
+2025-08-25T16:54:17.6066051Z Turn off this advice by setting config variable advice.detachedHead to false
+2025-08-25T16:54:17.6066569Z 
+2025-08-25T16:54:17.6067518Z HEAD is now at d99966a Merge bac908e7004cb65eadefb352ddff263c454a9349 into 1c96ddf15b7a32c6f7a5114d385a6787fac88d71
+2025-08-25T16:54:17.6074027Z ##[endgroup]
+2025-08-25T16:54:17.6118039Z [command]/usr/bin/git log -1 --format=%H
+2025-08-25T16:54:17.6176805Z d99966afd10d639723a481583ea8f51d91aff023
+2025-08-25T16:54:17.6425110Z ##[group]Run actions/setup-node@v4
+2025-08-25T16:54:17.6425400Z with:
+2025-08-25T16:54:17.6425584Z   node-version: 18
+2025-08-25T16:54:17.6425771Z   cache: npm
+2025-08-25T16:54:17.6425956Z   always-auth: false
+2025-08-25T16:54:17.6426167Z   check-latest: false
+2025-08-25T16:54:17.6426492Z   token: ***
+2025-08-25T16:54:17.6426670Z env:
+2025-08-25T16:54:17.6426917Z   CODEQL_EXTRACTOR_PYTHON_OPTION_ANALYZE_RAW_STRING_LITERALS: true
+2025-08-25T16:54:17.6427258Z   CODEQL_PYTHON_IGNORE_IMPORT_ERRORS: true
+2025-08-25T16:54:17.6427626Z   CODEQL_ACTION_EXTRA_OPTIONS: {"database": {"finalize": ["--max-disk-cache", "1024"]}}
+2025-08-25T16:54:17.6427980Z ##[endgroup]
+2025-08-25T16:54:17.8208280Z Found in cache @ /opt/hostedtoolcache/node/18.20.8/x64
+2025-08-25T16:54:17.8217157Z ##[group]Environment details
+2025-08-25T16:54:18.2049835Z node: v18.20.8
+2025-08-25T16:54:18.2050643Z npm: 10.8.2
+2025-08-25T16:54:18.2051803Z yarn: 1.22.22
+2025-08-25T16:54:18.2053054Z ##[endgroup]
+2025-08-25T16:54:18.2076688Z [command]/opt/hostedtoolcache/node/18.20.8/x64/bin/npm config get cache
+2025-08-25T16:54:18.3621616Z /home/runner/.npm
+2025-08-25T16:54:18.3726686Z ##[error]Dependencies lock file is not found in /home/runner/work/ai-script-inventory-/ai-script-inventory-. Supported file patterns: package-lock.json,npm-shrinkwrap.json,yarn.lock
+2025-08-25T16:54:18.3930525Z Post job cleanup.
+2025-08-25T16:54:18.4741480Z [command]/usr/bin/git version
+2025-08-25T16:54:18.4778280Z git version 2.51.0
+2025-08-25T16:54:18.4818669Z Temporarily overriding HOME='/home/runner/work/_temp/c43a07c2-802c-409f-9a56-1079ef5e46c1' before making global git config changes
+2025-08-25T16:54:18.4819943Z Adding repository directory to the temporary git global config as a safe directory
+2025-08-25T16:54:18.4825203Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ai-script-inventory-/ai-script-inventory-
+2025-08-25T16:54:18.4862436Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-08-25T16:54:18.4895219Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-08-25T16:54:18.5124352Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-08-25T16:54:18.5148047Z http.https://github.com/.extraheader
+2025-08-25T16:54:18.5159084Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-08-25T16:54:18.5191443Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-08-25T16:54:18.5529385Z Cleaning up orphan processes

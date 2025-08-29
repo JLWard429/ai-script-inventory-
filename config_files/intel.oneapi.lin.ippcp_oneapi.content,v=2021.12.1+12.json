@@ -1,0 +1,54 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/ippcp/lin/",
+    "id": "intel.oneapi.lin.ippcp_oneapi.content",
+    "packages": [
+        {
+            "id": "intel.oneapi.lin.ippcp.product",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.ippcp.product,v=2021.12.1+12/manifest.json",
+                    "preDownload": true,
+                    "sha384": "971c2d97c883ff7c9ac437d975d0ac7c80b35e6611ab845a8daeaf8cf4fd923974c85b7448f048c6e77ab9ae818e15b8",
+                    "size": 163680,
+                    "url": "https://installer.repos.intel.com/oneapi/ippcp/lin/intel.oneapi.lin.ippcp.product,v=2021.12.1%2B12/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.ippcp.product,v=2021.12.1+12/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "3f295ab7f23bcdcc99812510fdc38f4c9c9efa019d3debdba29fffc662a4c6c4e7a7123bb90a2e13f9bf02d9e6fc7a01",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/ippcp/lin/intel.oneapi.lin.ippcp.product,v=2021.12.1%2B12/manifest.json.sig"
+                }
+            ],
+            "type": "product",
+            "version": "2021.12.1+12"
+        },
+        {
+            "id": "intel.oneapi.lin.ippcp.devel",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.ippcp.devel,v=2021.12.1+12/manifest.json",
+                    "preDownload": true,
+                    "sha384": "a7ce0df11d4d0f89cf05bc016cc22b03a742150e7ba3a76ff07201c5b5d9dca0b3e66032318515e5a8bcc283c4d8d6aa",
+                    "size": 4893,
+                    "url": "https://installer.repos.intel.com/oneapi/ippcp/lin/intel.oneapi.lin.ippcp.devel,v=2021.12.1%2B12/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.ippcp.devel,v=2021.12.1+12/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "5847f6f9898259fbee29e0a0fd3f20cc3731bb1ba6bb2130afe7af6c2e9a2e3f7d9493926ee5d1988c10504c410b69f4",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/ippcp/lin/intel.oneapi.lin.ippcp.devel,v=2021.12.1%2B12/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2021.12.1+12"
+        }
+    ],
+    "type": "contentmanifest",
+    "version": "2021.12.1+12"
+}

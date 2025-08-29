@@ -1,0 +1,5 @@
+You can get Qt source code here: 
+
+https://installer.repos.intel.com/sources/installer/4.3.8/qt-6.5.3/qt-src-6.5.3-Linux.tgz
+https://installer.repos.intel.com/sources/installer/4.3.8/qt-6.5.3/qt-src-6.5.3-macOS.tgz
+https://installer.repos.intel.com/sources/installer/4.3.8/qt-6.5.3/qt-src-6.5.3-Windows.7z

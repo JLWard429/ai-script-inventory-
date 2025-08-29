@@ -1,0 +1,54 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/gdb/lin/",
+    "id": "intel.oneapi.lin.dpcpp_dbg.content",
+    "packages": [
+        {
+            "id": "intel.oneapi.lin.dpcpp_dbg",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp_dbg,v=2024.2.1+67/manifest.json",
+                    "preDownload": true,
+                    "sha384": "4d89a2082679638402843a1508938bbc3f5514eaa3b8c8849201874a2ebd03ec1b9ef1b30d7866b2cd3dbaa58bd7e67b",
+                    "size": 4126,
+                    "url": "https://installer.repos.intel.com/oneapi/gdb/lin/intel.oneapi.lin.dpcpp_dbg,v=2024.2.1%2B67/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp_dbg,v=2024.2.1+67/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "6eb15d5df5aa642281da6b762197ba8adc1db38eb1092360318c4465bd057c1313b9c64af93117bb55da89fee8f79842",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/gdb/lin/intel.oneapi.lin.dpcpp_dbg,v=2024.2.1%2B67/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+67"
+        },
+        {
+            "id": "intel.oneapi.lin.dpcpp_dbg.product",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp_dbg.product,v=2024.2.1+67/manifest.json",
+                    "preDownload": true,
+                    "sha384": "1b99fba2e38743d8c516297b5e85b37f0df65410dc0637c36b3c6cd0d6a82ebe890785aa58b28e50fd87786a9ac731d0",
+                    "size": 168379,
+                    "url": "https://installer.repos.intel.com/oneapi/gdb/lin/intel.oneapi.lin.dpcpp_dbg.product,v=2024.2.1%2B67/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp_dbg.product,v=2024.2.1+67/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "c73e79d2ba9146c37049a6aabff2f6a3d14de248b28b05ab16ed7b94f7fa15ae4760eb5c92dda17a82857dede9dd654d",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/gdb/lin/intel.oneapi.lin.dpcpp_dbg.product,v=2024.2.1%2B67/manifest.json.sig"
+                }
+            ],
+            "type": "product",
+            "version": "2024.2.1+67"
+        }
+    ],
+    "type": "contentmanifest",
+    "version": "2024.2.1+67"
+}

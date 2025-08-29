@@ -1,0 +1,50 @@
+﻿2025-08-25T16:54:26.1612507Z ##[warning]Input 'add-snippets' has been deprecated with message: The input "add-snippets" is deprecated and will be removed on the first release in August 2025. When this input is set to true it is expected to add code snippets with an alert to the SARIF file. However, since Code Scanning ignores code snippets provided as part of a SARIF file this is currently a no operation. No alternative is available.
+2025-08-25T16:54:26.1624024Z ##[group]Run github/codeql-action/analyze@v3
+2025-08-25T16:54:26.1624276Z with:
+2025-08-25T16:54:26.1624449Z   category: /language:ruby
+2025-08-25T16:54:26.1624659Z   upload-database: true
+2025-08-25T16:54:26.1625179Z   checkout_path: /home/runner/work/ai-script-inventory-/ai-script-inventory-
+2025-08-25T16:54:26.1625544Z   add-snippets: true
+2025-08-25T16:54:26.1625728Z   ram: 6000
+2025-08-25T16:54:26.1625878Z   threads: 0
+2025-08-25T16:54:26.1626043Z   output: ../results
+2025-08-25T16:54:26.1626219Z   upload: always
+2025-08-25T16:54:26.1626393Z   skip-queries: false
+2025-08-25T16:54:26.1626632Z   wait-for-processing: true
+2025-08-25T16:54:26.1626952Z   token: ***
+2025-08-25T16:54:26.1627230Z   matrix: {
+  "language": "ruby",
+  "os": "ubuntu-latest",
+  "build-mode": "none"
+}
+2025-08-25T16:54:26.1627563Z   expect-error: false
+2025-08-25T16:54:26.1627750Z env:
+2025-08-25T16:54:26.1627989Z   CODEQL_EXTRACTOR_PYTHON_OPTION_ANALYZE_RAW_STRING_LITERALS: true
+2025-08-25T16:54:26.1628322Z   CODEQL_PYTHON_IGNORE_IMPORT_ERRORS: true
+2025-08-25T16:54:26.1628683Z   CODEQL_ACTION_EXTRA_OPTIONS: {"database": {"finalize": ["--max-disk-cache", "1024"]}}
+2025-08-25T16:54:26.1629068Z   CODEQL_ACTION_FEATURE_MULTI_LANGUAGE: false
+2025-08-25T16:54:26.1629333Z   CODEQL_ACTION_FEATURE_SANDWICH: false
+2025-08-25T16:54:26.1629584Z   CODEQL_ACTION_FEATURE_SARIF_COMBINE: true
+2025-08-25T16:54:26.1629842Z   CODEQL_ACTION_FEATURE_WILL_UPLOAD: true
+2025-08-25T16:54:26.1630081Z   CODEQL_ACTION_VERSION: 3.29.11
+2025-08-25T16:54:26.1630332Z   JOB_RUN_UUID: cb9770de-e645-4874-9187-318203aea6bd
+2025-08-25T16:54:26.1630597Z   CODEQL_ACTION_INIT_HAS_RUN: true
+2025-08-25T16:54:26.1630898Z   CODEQL_ACTION_ANALYSIS_KEY: .github/workflows/codeql.yml:analyze
+2025-08-25T16:54:26.1631425Z   CODEQL_WORKFLOW_STARTED_AT: 2025-08-25T16:54:09.706Z
+2025-08-25T16:54:26.1631695Z   CODEQL_RAM: 14581
+2025-08-25T16:54:26.1631872Z   CODEQL_THREADS: 4
+2025-08-25T16:54:26.1632040Z ##[endgroup]
+2025-08-25T16:54:27.3029208Z While resolving threads, found a cgroup CPUs file with 4 CPUs in /sys/fs/cgroup/cpuset.cpus.effective.
+2025-08-25T16:54:27.3066363Z ##[group]Generating diff range extension pack
+2025-08-25T16:54:27.3067958Z Calculating diff ranges for main...JLWard429:copilot/fix-1780917c-85f5-424d-9294-df3051629bab
+2025-08-25T16:54:27.6764615Z Successfully created diff range extension pack at /home/runner/work/_temp/pr-diff-range.
+2025-08-25T16:54:27.6765305Z ##[endgroup]
+2025-08-25T16:54:28.6004119Z ##[group]Extracting ruby
+2025-08-25T16:54:28.6006378Z [command]/opt/hostedtoolcache/CodeQL/2.22.4/x64/codeql/codeql database trace-command --index-traceless-dbs /home/runner/work/_temp/codeql_databases/ruby
+2025-08-25T16:54:29.3753768Z Running command in /home/runner/work/ai-script-inventory-/ai-script-inventory-: [/opt/hostedtoolcache/CodeQL/2.22.4/x64/codeql/ruby/tools/autobuild.sh]
+2025-08-25T16:54:30.1276578Z [2025-08-25 16:54:30] [build-stderr] Scanning for files in /home/runner/work/ai-script-inventory-/ai-script-inventory-...
+2025-08-25T16:54:30.2359786Z ##[endgroup]
+2025-08-25T16:54:30.2366389Z ##[group]Finalizing ruby
+2025-08-25T16:54:30.2370077Z [command]/opt/hostedtoolcache/CodeQL/2.22.4/x64/codeql/codeql database finalize --finalize-dataset --threads=0 --ram=6000 --max-disk-cache 1024 /home/runner/work/_temp/codeql_databases/ruby
+2025-08-25T16:54:31.2757911Z CodeQL detected code written in Python, but not any written in Ruby. Confirm that there is some source code for Ruby in the project. For more information, review our troubleshooting guide at https://gh.io/troubleshooting-code-scanning/no-source-code-seen-during-build .
+2025-08-25T16:54:31.2999354Z ##[error]Encountered a fatal error while running "/opt/hostedtoolcache/CodeQL/2.22.4/x64/codeql/codeql database finalize --finalize-dataset --threads=0 --ram=6000 --max-disk-cache 1024 /home/runner/work/_temp/codeql_databases/ruby". Exit code was 32 and last log line was: CodeQL detected code written in Python, but not any written in Ruby. Confirm that there is some source code for Ruby in the project. For more information, review our troubleshooting guide at https://gh.io/troubleshooting-code-scanning/no-source-code-seen-during-build . See the logs for more details.

@@ -1,0 +1,21 @@
+﻿2025-08-25T16:54:17.6425076Z ##[group]Run actions/setup-node@v4
+2025-08-25T16:54:17.6425396Z with:
+2025-08-25T16:54:17.6425580Z   node-version: 18
+2025-08-25T16:54:17.6425768Z   cache: npm
+2025-08-25T16:54:17.6425953Z   always-auth: false
+2025-08-25T16:54:17.6426165Z   check-latest: false
+2025-08-25T16:54:17.6426489Z   token: ***
+2025-08-25T16:54:17.6426667Z env:
+2025-08-25T16:54:17.6426913Z   CODEQL_EXTRACTOR_PYTHON_OPTION_ANALYZE_RAW_STRING_LITERALS: true
+2025-08-25T16:54:17.6427255Z   CODEQL_PYTHON_IGNORE_IMPORT_ERRORS: true
+2025-08-25T16:54:17.6427623Z   CODEQL_ACTION_EXTRA_OPTIONS: {"database": {"finalize": ["--max-disk-cache", "1024"]}}
+2025-08-25T16:54:17.6427977Z ##[endgroup]
+2025-08-25T16:54:17.8208220Z Found in cache @ /opt/hostedtoolcache/node/18.20.8/x64
+2025-08-25T16:54:17.8217143Z ##[group]Environment details
+2025-08-25T16:54:18.2049764Z node: v18.20.8
+2025-08-25T16:54:18.2050628Z npm: 10.8.2
+2025-08-25T16:54:18.2051792Z yarn: 1.22.22
+2025-08-25T16:54:18.2053042Z ##[endgroup]
+2025-08-25T16:54:18.2076486Z [command]/opt/hostedtoolcache/node/18.20.8/x64/bin/npm config get cache
+2025-08-25T16:54:18.3621508Z /home/runner/.npm
+2025-08-25T16:54:18.3726630Z ##[error]Dependencies lock file is not found in /home/runner/work/ai-script-inventory-/ai-script-inventory-. Supported file patterns: package-lock.json,npm-shrinkwrap.json,yarn.lock

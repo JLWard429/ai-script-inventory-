@@ -1,0 +1,123 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/dpcpp-ct/lin/",
+    "id": "intel.oneapi.lin.dpcpp-ct.content",
+    "packages": [
+        {
+            "id": "intel.oneapi.lin.dpcpp-ct.eclipse-plugin-file",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-ct.eclipse-plugin-file,v=2024.2.1+62/manifest.json",
+                    "preDownload": true,
+                    "sha384": "5cdf2b9a2fd6ff1f9102571ad2602f462e0dbf916673c957dca461d97c6e06491e39ffdfb8b8efdb970e6a0395382d8e",
+                    "size": 2975,
+                    "url": "https://installer.repos.intel.com/oneapi/dpcpp-ct/lin/intel.oneapi.lin.dpcpp-ct.eclipse-plugin-file,v=2024.2.1%2B62/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-ct.eclipse-plugin-file,v=2024.2.1+62/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "1dd8cfa20d4e84368f5b256c23836b024e58db04601ce6ed28cce0a5fc5e50f4039602e1fd56a169578c16263fb170d9",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/dpcpp-ct/lin/intel.oneapi.lin.dpcpp-ct.eclipse-plugin-file,v=2024.2.1%2B62/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+62"
+        },
+        {
+            "id": "intel.oneapi.lin.dpcpp-ct.product",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-ct.product,v=2024.2.1+62/manifest.json",
+                    "preDownload": true,
+                    "sha384": "2cdf8ac5c183ce1f14b846a6d101e37fcf822ba0b2bad7325a4a41a7af4c7d484b01bdff5b6c9dd8063a574a3d11d8da",
+                    "size": 176874,
+                    "url": "https://installer.repos.intel.com/oneapi/dpcpp-ct/lin/intel.oneapi.lin.dpcpp-ct.product,v=2024.2.1%2B62/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-ct.product,v=2024.2.1+62/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "8b2b7898f5c1a36ccf3edd4b1a5859e7d16c909e99440866b833b90a38a572782178f05b4ffef00070aace507fa0c7a8",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/dpcpp-ct/lin/intel.oneapi.lin.dpcpp-ct.product,v=2024.2.1%2B62/manifest.json.sig"
+                }
+            ],
+            "type": "product",
+            "version": "2024.2.1+62"
+        },
+        {
+            "id": "intel.oneapi.lin.dpcpp-ct.eclipse-plugin-integration",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-ct.eclipse-plugin-integration,v=2024.2.1+62/manifest.json",
+                    "preDownload": true,
+                    "sha384": "8ddb3745fa9144db3e90a17d857ceeca57b6d0c23773b525c5c53a0ad6483650104ba629f6beb57076605c39d8dbee2c",
+                    "size": 1569,
+                    "url": "https://installer.repos.intel.com/oneapi/dpcpp-ct/lin/intel.oneapi.lin.dpcpp-ct.eclipse-plugin-integration,v=2024.2.1%2B62/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-ct.eclipse-plugin-integration,v=2024.2.1+62/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "d399e50ea1c343e20d8b0557d53de9a55cafa1afd97d48379667ec5cf79b200a07e9bb6f81a3e9bea7f87a795e47829d",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/dpcpp-ct/lin/intel.oneapi.lin.dpcpp-ct.eclipse-plugin-integration,v=2024.2.1%2B62/manifest.json.sig"
+                }
+            ],
+            "type": "component",
+            "version": "2024.2.1+62"
+        },
+        {
+            "id": "intel.oneapi.lin.dpcpp-ct.eclipse-cfg",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-ct.eclipse-cfg,v=2024.2.1+62/manifest.json",
+                    "preDownload": true,
+                    "sha384": "fe0c0441d7263e3f36ed9a7da00ff40ed24b20a3088245b4e7d3ccd5dd18134b0bfec8cf3ca571a63b2be0f7adb1c7c5",
+                    "size": 2106,
+                    "url": "https://installer.repos.intel.com/oneapi/dpcpp-ct/lin/intel.oneapi.lin.dpcpp-ct.eclipse-cfg,v=2024.2.1%2B62/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-ct.eclipse-cfg,v=2024.2.1+62/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "2e434348adc7c4c574418843e4c219854eda2a0a750590f1ad3e20421f4f379a87cbb2e03effd6bd34d7e76c70a9b105",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/dpcpp-ct/lin/intel.oneapi.lin.dpcpp-ct.eclipse-cfg,v=2024.2.1%2B62/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+62"
+        },
+        {
+            "id": "intel.oneapi.lin.dpcpp-ct",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-ct,v=2024.2.1+62/manifest.json",
+                    "preDownload": true,
+                    "sha384": "a3637c87a522c91719e8dd3a1ba3b9ca5fb44a4dec487c317c8cf927a6ed7803d3dd6d5ef7a4f821e8358927794a8858",
+                    "size": 3078,
+                    "url": "https://installer.repos.intel.com/oneapi/dpcpp-ct/lin/intel.oneapi.lin.dpcpp-ct,v=2024.2.1%2B62/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-ct,v=2024.2.1+62/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "18c49ae4d24bb6b3657a88fabd770f0436f78e913dfaf2d456124c23ebff37a8adbe0ef87a4ff1169401ce87d8115f43",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/dpcpp-ct/lin/intel.oneapi.lin.dpcpp-ct,v=2024.2.1%2B62/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+62"
+        }
+    ],
+    "type": "contentmanifest",
+    "version": "2024.2.1+62"
+}

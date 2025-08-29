@@ -1,0 +1,282 @@
+name: 🚀 Automated Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Trigger on version tags like v1.0.0
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version (e.g., v1.0.0)'
+        required: true
+        type: string
+      prerelease:
+        description: 'Mark as pre-release'
+        required: false
+        default: false
+        type: boolean
+
+env:
+  PYTHON_VERSION: '3.11'
+
+jobs:
+  validate-release:
+    name: 🔍 Validate Release
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      is_prerelease: ${{ steps.version.outputs.is_prerelease }}
+    
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v5
+      with:
+        fetch-depth: 0
+
+    - name: 🏷️ Determine version
+      id: version
+      run: |
+        if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          VERSION="${{ github.event.inputs.version }}"
+          IS_PRERELEASE="${{ github.event.inputs.prerelease }}"
+        else
+          VERSION=${GITHUB_REF#refs/tags/}
+          # Check if this is a pre-release (contains alpha, beta, rc, etc.)
+          if [[ "$VERSION" =~ (alpha|beta|rc|dev) ]]; then
+            IS_PRERELEASE=true
+          else
+            IS_PRERELEASE=false
+          fi
+        fi
+        
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        echo "is_prerelease=$IS_PRERELEASE" >> $GITHUB_OUTPUT
+        
+        echo "## 🏷️ Release Version: $VERSION" >> $GITHUB_STEP_SUMMARY
+        echo "Pre-release: $IS_PRERELEASE" >> $GITHUB_STEP_SUMMARY
+
+    - name: ✅ Validate version format
+      run: |
+        VERSION="${{ steps.version.outputs.version }}"
+        if [[ ! "$VERSION" =~ ^v[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9]+)?$ ]]; then
+          echo "❌ Invalid version format: $VERSION"
+          echo "Expected format: v1.0.0 or v1.0.0-beta"
+          exit 1
+        fi
+        echo "✅ Version format is valid: $VERSION"
+
+  run-tests:
+    name: 🧪 Pre-release Testing
+    runs-on: ubuntu-latest
+    needs: validate-release
+    
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v5
+
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+
+    - name: 📦 Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest flake8 black
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: 🧪 Run comprehensive tests
+      run: |
+        echo "Running pre-release test suite..."
+        
+        # Run organization script test
+        python .github/scripts/organize_ai_scripts.py
+        
+        # Run any Python tests
+        if [ -f "python_scripts/test_script.py" ]; then
+          python python_scripts/test_script.py
+        fi
+        
+        # Basic linting
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        
+        echo "✅ All pre-release tests passed"
+
+  build-artifacts:
+    name: 📦 Build Release Artifacts
+    runs-on: ubuntu-latest
+    needs: [validate-release, run-tests]
+    
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v5
+
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+
+    - name: 📦 Install build tools
+      run: |
+        python -m pip install --upgrade pip
+        pip install build wheel setuptools
+
+    - name: 🔧 Prepare release package
+      run: |
+        VERSION="${{ needs.validate-release.outputs.version }}"
+        
+        # Create release directory
+        mkdir -p release/ai-script-inventory-${VERSION}
+        
+        # Copy essential files
+        cp -r python_scripts release/ai-script-inventory-${VERSION}/
+        cp -r shell_scripts release/ai-script-inventory-${VERSION}/
+        cp -r docs release/ai-script-inventory-${VERSION}/
+        cp -r text_files release/ai-script-inventory-${VERSION}/
+        cp -r .github release/ai-script-inventory-${VERSION}/
+        cp README.md LICENSE .gitignore release/ai-script-inventory-${VERSION}/
+        
+        # Create version file
+        echo "$VERSION" > release/ai-script-inventory-${VERSION}/VERSION
+        echo "$(date -u +"%Y-%m-%d %H:%M:%S UTC")" > release/ai-script-inventory-${VERSION}/BUILD_DATE
+        
+        # Create checksums
+        cd release
+        tar -czf ai-script-inventory-${VERSION}.tar.gz ai-script-inventory-${VERSION}/
+        zip -r ai-script-inventory-${VERSION}.zip ai-script-inventory-${VERSION}/
+        
+        # Generate checksums
+        sha256sum ai-script-inventory-${VERSION}.tar.gz > ai-script-inventory-${VERSION}.tar.gz.sha256
+        sha256sum ai-script-inventory-${VERSION}.zip > ai-script-inventory-${VERSION}.zip.sha256
+
+    - name: 📤 Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: release-artifacts-${{ needs.validate-release.outputs.version }}
+        path: release/
+        retention-days: 90
+
+  generate-changelog:
+    name: 📝 Generate Changelog
+    runs-on: ubuntu-latest
+    needs: validate-release
+    outputs:
+      changelog: ${{ steps.changelog.outputs.changelog }}
+    
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v5
+      with:
+        fetch-depth: 0
+
+    - name: 📝 Generate changelog
+      id: changelog
+      run: |
+        VERSION="${{ needs.validate-release.outputs.version }}"
+        
+        # Get the previous tag
+        PREV_TAG=$(git describe --tags --abbrev=0 HEAD^ 2>/dev/null || echo "")
+        
+        if [ -z "$PREV_TAG" ]; then
+          echo "## What's New in $VERSION" > CHANGELOG.md
+          echo "" >> CHANGELOG.md
+          echo "🎉 Initial release of the AI Script Inventory with superhuman workflow system!" >> CHANGELOG.md
+          echo "" >> CHANGELOG.md
+          echo "### Features:" >> CHANGELOG.md
+          echo "- 🚀 Advanced CI/CD pipeline with multi-platform testing" >> CHANGELOG.md
+          echo "- 🛡️ Comprehensive security scanning (CodeQL, dependency scan)" >> CHANGELOG.md
+          echo "- 📦 Automated dependency management with Dependabot" >> CHANGELOG.md
+          echo "- 📚 Enhanced documentation and organization system" >> CHANGELOG.md
+          echo "- 🔄 Automated release workflow" >> CHANGELOG.md
+        else
+          echo "## What's New in $VERSION" > CHANGELOG.md
+          echo "" >> CHANGELOG.md
+          echo "### Changes since $PREV_TAG:" >> CHANGELOG.md
+          echo "" >> CHANGELOG.md
+          
+          # Get commit messages between tags
+          git log --pretty=format:"- %s" $PREV_TAG..HEAD >> CHANGELOG.md
+        fi
+        
+        # Read changelog into output
+        CHANGELOG_CONTENT=$(cat CHANGELOG.md)
+        echo "changelog<<EOF" >> $GITHUB_OUTPUT
+        echo "$CHANGELOG_CONTENT" >> $GITHUB_OUTPUT
+        echo "EOF" >> $GITHUB_OUTPUT
+
+    - name: 📤 Upload changelog
+      uses: actions/upload-artifact@v4
+      with:
+        name: changelog-${{ needs.validate-release.outputs.version }}
+        path: CHANGELOG.md
+
+  create-release:
+    name: 🎉 Create GitHub Release
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    needs: [validate-release, run-tests, build-artifacts, generate-changelog]
+    
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v5
+
+    - name: 📥 Download artifacts
+      uses: actions/download-artifact@v5
+      with:
+        name: release-artifacts-${{ needs.validate-release.outputs.version }}
+        path: release/
+
+    - name: 📥 Download changelog
+      uses: actions/download-artifact@v5
+      with:
+        name: changelog-${{ needs.validate-release.outputs.version }}
+
+    - name: 🎉 Create GitHub Release
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: ${{ needs.validate-release.outputs.version }}
+        name: AI Script Inventory ${{ needs.validate-release.outputs.version }}
+        body_path: CHANGELOG.md
+        prerelease: ${{ needs.validate-release.outputs.is_prerelease == 'true' }}
+        files: |
+          release/*.tar.gz
+          release/*.zip
+          release/*.sha256
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: 📊 Release summary
+      run: |
+        echo "## 🎉 Release Created Successfully!" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "- **Version**: ${{ needs.validate-release.outputs.version }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Pre-release**: ${{ needs.validate-release.outputs.is_prerelease }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Release URL**: https://github.com/${{ github.repository }}/releases/tag/${{ needs.validate-release.outputs.version }}" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### Artifacts Created:" >> $GITHUB_STEP_SUMMARY
+        echo "- Source code archive (tar.gz)" >> $GITHUB_STEP_SUMMARY
+        echo "- Source code archive (zip)" >> $GITHUB_STEP_SUMMARY
+        echo "- SHA256 checksums" >> $GITHUB_STEP_SUMMARY
+
+  post-release:
+    name: 📢 Post-release Actions
+    runs-on: ubuntu-latest
+    needs: [validate-release, create-release]
+    if: always() && needs.create-release.result == 'success'
+    permissions:
+      contents: read
+    
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v5
+
+    - name: 📢 Post-release notifications
+      run: |
+        echo "## 📢 Post-release Actions" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "✅ Release ${{ needs.validate-release.outputs.version }} has been created successfully!" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### Next Steps:" >> $GITHUB_STEP_SUMMARY
+        echo "- 📦 Packages are available for download" >> $GITHUB_STEP_SUMMARY
+        echo "- 📚 Documentation has been updated" >> $GITHUB_STEP_SUMMARY
+        echo "- 🔔 Consider announcing the release to your community" >> $GITHUB_STEP_SUMMARY

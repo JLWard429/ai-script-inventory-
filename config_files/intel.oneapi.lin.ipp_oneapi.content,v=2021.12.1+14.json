@@ -1,0 +1,77 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/ipp/lin/",
+    "id": "intel.oneapi.lin.ipp_oneapi.content",
+    "packages": [
+        {
+            "id": "intel.oneapi.lin.ipp.product",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.ipp.product,v=2021.12.1+14/manifest.json",
+                    "preDownload": true,
+                    "sha384": "5d0eea7a5d51cc70eb202ca5450f546dc45fdf7a0d06a0171855f7584a0b144200a67f18bf7e5b932e561160d0ef909e",
+                    "size": 163503,
+                    "url": "https://installer.repos.intel.com/oneapi/ipp/lin/intel.oneapi.lin.ipp.product,v=2021.12.1%2B14/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.ipp.product,v=2021.12.1+14/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "d8e849e42fac76c081fb3a98703119c6a41c0b26e321a018a48ac1090c4f93e254d847d3b4354c04f1de9be057c00f31",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/ipp/lin/intel.oneapi.lin.ipp.product,v=2021.12.1%2B14/manifest.json.sig"
+                }
+            ],
+            "type": "product",
+            "version": "2021.12.1+14"
+        },
+        {
+            "id": "intel.oneapi.lin.ipp.devel",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.ipp.devel,v=2021.12.1+14/manifest.json",
+                    "preDownload": true,
+                    "sha384": "bff7e58a7a5856196f6d7a52aa28fe25063ecc11b7d182935883cab551b61066cbe1a6222ea7a0659e2c71deaf65e99d",
+                    "size": 2278,
+                    "url": "https://installer.repos.intel.com/oneapi/ipp/lin/intel.oneapi.lin.ipp.devel,v=2021.12.1%2B14/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.ipp.devel,v=2021.12.1+14/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "12c775d52af6fd143db85e243b62fe6363f62821c195bf57c829f2cfc35b90bf310b350985cf3e86145025511bcdcd04",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/ipp/lin/intel.oneapi.lin.ipp.devel,v=2021.12.1%2B14/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2021.12.1+14"
+        },
+        {
+            "id": "intel.oneapi.lin.ipp.runtime",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.ipp.runtime,v=2021.12.1+14/manifest.json",
+                    "preDownload": true,
+                    "sha384": "6b21a4a3a3553c4a1b608c0555293d17928f1d0415e83b1341b5188f4e859c92227b9fc199964f675d6bcc2755cb7950",
+                    "size": 3720,
+                    "url": "https://installer.repos.intel.com/oneapi/ipp/lin/intel.oneapi.lin.ipp.runtime,v=2021.12.1%2B14/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.ipp.runtime,v=2021.12.1+14/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "9262de03cf225cd0126116ef8133613b7d271062bba963313807ccacd9a033d11f4b4032c7111b7985c6f9b567a758a2",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/ipp/lin/intel.oneapi.lin.ipp.runtime,v=2021.12.1%2B14/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2021.12.1+14"
+        }
+    ],
+    "type": "contentmanifest",
+    "version": "2021.12.1+14"
+}

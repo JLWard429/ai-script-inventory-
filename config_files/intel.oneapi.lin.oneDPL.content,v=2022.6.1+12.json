@@ -1,0 +1,54 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/dpl/lin/",
+    "id": "intel.oneapi.lin.oneDPL.content",
+    "packages": [
+        {
+            "id": "intel.oneapi.lin.dpl",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpl,v=2022.6.1+12/manifest.json",
+                    "preDownload": true,
+                    "sha384": "dd9dc53c99183f22f0630df38c5aea17c7f053b66bcebdd8285cc4ff1e90737a15083b048e491e681023a89e9c4c7583",
+                    "size": 4626,
+                    "url": "https://installer.repos.intel.com/oneapi/dpl/lin/intel.oneapi.lin.dpl,v=2022.6.1%2B12/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpl,v=2022.6.1+12/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "134aa4df62497c8a33cc4a84078399bf0cba6ea0c8199e2a37a15ce52b4c489b68073ffdced52c97a4dc2c82ca67f83d",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/dpl/lin/intel.oneapi.lin.dpl,v=2022.6.1%2B12/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2022.6.1+12"
+        },
+        {
+            "id": "intel.oneapi.lin.dpl.product",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpl.product,v=2022.6.1+12/manifest.json",
+                    "preDownload": true,
+                    "sha384": "82ab9aa3f6b24faab31bc01f68f9319697afc35e30cb11d0d951a2e165b6a809b56d48fc6471e7903d0af1880c4fd347",
+                    "size": 166939,
+                    "url": "https://installer.repos.intel.com/oneapi/dpl/lin/intel.oneapi.lin.dpl.product,v=2022.6.1%2B12/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpl.product,v=2022.6.1+12/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "4a860a5545f482098668358f469e59c6b02249839158d8b61f0d89e2e99ba157bc6884c60cb8784a39a669b0f6139c47",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/dpl/lin/intel.oneapi.lin.dpl.product,v=2022.6.1%2B12/manifest.json.sig"
+                }
+            ],
+            "type": "product",
+            "version": "2022.6.1+12"
+        }
+    ],
+    "type": "contentmanifest",
+    "version": "2022.6.1+12"
+}

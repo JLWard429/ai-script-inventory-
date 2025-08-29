@@ -1,0 +1,77 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/basekit/lin/",
+    "id": "intel.oneapi.lin.BaseKit.content",
+    "packages": [
+        {
+            "id": "intel.oneapi.lin.basekit.product",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.basekit.product,v=2024.2.1+98/manifest.json",
+                    "preDownload": true,
+                    "sha384": "d070d19b90198fe3373a5eb9ef9b4c0b4467d4f92b6898aac9fea969d20209a515e1fee0f608ca4360e0b5870f0e5c1a",
+                    "size": 167995,
+                    "url": "https://installer.repos.intel.com/oneapi/basekit/lin/intel.oneapi.lin.basekit.product,v=2024.2.1%2B98/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.basekit.product,v=2024.2.1+98/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "aef1f939896cb8ffd73c1025201f0cd7c5c42ab2b069833e0af45c0b1ed19a4051f92742b3ba8ae6d28e73387a08395c",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/basekit/lin/intel.oneapi.lin.basekit.product,v=2024.2.1%2B98/manifest.json.sig"
+                }
+            ],
+            "type": "product",
+            "version": "2024.2.1+98"
+        },
+        {
+            "id": "intel.oneapi.lin.basekit.getting_started",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.basekit.getting_started,v=2024.2.1+98/manifest.json",
+                    "preDownload": true,
+                    "sha384": "c48579edd69e455d33633a00729745fa256de30ba53035ef661ba15cfa7300ed780a8be23ada60449dedd5baf25d3ae5",
+                    "size": 3092,
+                    "url": "https://installer.repos.intel.com/oneapi/basekit/lin/intel.oneapi.lin.basekit.getting_started,v=2024.2.1%2B98/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.basekit.getting_started,v=2024.2.1+98/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "950d6f2d53d49bf68152725f62571fdb09d2512fb2d8b2731309e66e2485238f157916843bc55eeec9d9309a156b702a",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/basekit/lin/intel.oneapi.lin.basekit.getting_started,v=2024.2.1%2B98/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+98"
+        },
+        {
+            "id": "intel.oneapi.lin.basekit.tlt_env",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.basekit.tlt_env,v=2024.2.1+98/manifest.json",
+                    "preDownload": true,
+                    "sha384": "1ca2dc48395b1c9d98696780e2adeb55af199812524169d2de34427c10ab8996e5ebed009a1e258cc96230a20f91dc16",
+                    "size": 2065,
+                    "url": "https://installer.repos.intel.com/oneapi/basekit/lin/intel.oneapi.lin.basekit.tlt_env,v=2024.2.1%2B98/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.basekit.tlt_env,v=2024.2.1+98/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "453282e61e20cbb5590b94471fe3ba7331cced6dbf2075cc86c3f4e8d9b1ba708a48e30f71d4ef8b43dab109c862fbd0",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/basekit/lin/intel.oneapi.lin.basekit.tlt_env,v=2024.2.1%2B98/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+98"
+        }
+    ],
+    "type": "contentmanifest",
+    "version": "2024.2.1+98"
+}

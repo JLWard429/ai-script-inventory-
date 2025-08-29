@@ -1,0 +1,54 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/onedg/lin/",
+    "id": "intel.oneapi.lin.onedg_oneapi.content",
+    "packages": [
+        {
+            "id": "intel.oneapi.lin.onedg.product",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.onedg.product,v=2024.2.1+13/manifest.json",
+                    "preDownload": true,
+                    "sha384": "8445bf7e4ade3322b342b13426883ecb6ea6e0b7ff541cf0f39b32b33102800fd6911469062b979d04ef634f25d944b3",
+                    "size": 162706,
+                    "url": "https://installer.repos.intel.com/oneapi/onedg/lin/intel.oneapi.lin.onedg.product,v=2024.2.1%2B13/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.onedg.product,v=2024.2.1+13/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "a2508aa9d5a277a30f740107afcbd74f02a7da15085d110f38d3cdd0b8ea9c7a7104f5f1b33939d2110bfc83f1944f14",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/onedg/lin/intel.oneapi.lin.onedg.product,v=2024.2.1%2B13/manifest.json.sig"
+                }
+            ],
+            "type": "product",
+            "version": "2024.2.1+13"
+        },
+        {
+            "id": "intel.oneapi.lin.onedg",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.onedg,v=2024.2.1+13/manifest.json",
+                    "preDownload": true,
+                    "sha384": "97b44c1064b402b349747827ba5e379d9f22a3ee6c97518752276700451359b9edd990600873983275594d0fe45dc4a8",
+                    "size": 3362,
+                    "url": "https://installer.repos.intel.com/oneapi/onedg/lin/intel.oneapi.lin.onedg,v=2024.2.1%2B13/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.onedg,v=2024.2.1+13/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "d3fa6ae6312a8a747038e6bfdb238b0f4255e883498ba832a1fedee80b8e288de7144064e18532ddf0e6b86736225463",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/onedg/lin/intel.oneapi.lin.onedg,v=2024.2.1%2B13/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+13"
+        }
+    ],
+    "type": "contentmanifest",
+    "version": "2024.2.1+13"
+}

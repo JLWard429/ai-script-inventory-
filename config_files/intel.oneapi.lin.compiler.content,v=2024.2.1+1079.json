@@ -1,0 +1,353 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/compiler/lin/",
+    "id": "intel.oneapi.lin.compiler.content",
+    "packages": [
+        {
+            "id": "intel.oneapi.lin.dpcpp-cpp-compiler-pro.eclipse-plugin-file",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-cpp-compiler-pro.eclipse-plugin-file,v=2024.2.1+1079/manifest.json",
+                    "preDownload": true,
+                    "sha384": "89c109aadf3bf3661e168c3aa1b8610044117d0b093184c2e9aaefd6fb3abe0447224158a05448b05a0ff8de7b22f56f",
+                    "size": 2146,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.dpcpp-cpp-compiler-pro.eclipse-plugin-file,v=2024.2.1%2B1079/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-cpp-compiler-pro.eclipse-plugin-file,v=2024.2.1+1079/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "ff842ea727b35c6e3e813bcc6bdb2d091556d907703184e1e5abe07cdda3bf75a157be53f08b5f3de81dbe804e63c725",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.dpcpp-cpp-compiler-pro.eclipse-plugin-file,v=2024.2.1%2B1079/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+1079"
+        },
+        {
+            "id": "intel.oneapi.lin.dpcpp-cpp-common",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-cpp-common,v=2024.2.1+1079/manifest.json",
+                    "preDownload": true,
+                    "sha384": "f924c660dd95ed603906b1fed4a7ff6e3847ac1f02d5229ca2a1038475d628893369f292513ff92581b8c27d7c12c96a",
+                    "size": 3439,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.dpcpp-cpp-common,v=2024.2.1%2B1079/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-cpp-common,v=2024.2.1+1079/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "2bcc2803cd0d16bf8d9b3d0b25eabcfcee9e0b693e51756a8b9b450abaf1dcd6c36f04c78c147edbef62417ef145946d",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.dpcpp-cpp-common,v=2024.2.1%2B1079/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+1079"
+        },
+        {
+            "id": "intel.oneapi.lin.dpcpp-compiler.eclipse-cfg",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-compiler.eclipse-cfg,v=2024.2.1+1079/manifest.json",
+                    "preDownload": true,
+                    "sha384": "5f847464ef236b1f9be5e318fe4fcb693e25fd6eb3191f261a934a8b1864f54f3f744047c8375f086fa54ae774536ef8",
+                    "size": 2134,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.dpcpp-compiler.eclipse-cfg,v=2024.2.1%2B1079/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-compiler.eclipse-cfg,v=2024.2.1+1079/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "57ebc2f5767ce5ee3e02c35395b1b0948b49d666d9447541820a70a2eae4ec2e83aca34a9f40a2d962c7d51f4d384bb5",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.dpcpp-compiler.eclipse-cfg,v=2024.2.1%2B1079/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+1079"
+        },
+        {
+            "id": "intel.oneapi.lin.compilers-common.runtime",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.compilers-common.runtime,v=2024.2.1+1079/manifest.json",
+                    "preDownload": true,
+                    "sha384": "fc03235f55d24021fa5bf8a0b51089b3228af3cd6da7037243d4f9fb99e40eacade6885ccc64a21c7baddbdecf32acae",
+                    "size": 3661,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.compilers-common.runtime,v=2024.2.1%2B1079/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.compilers-common.runtime,v=2024.2.1+1079/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "706457574c23f23de52806f8074bf405e03a50d0336377f998f64f05aef388cd655cc78fd8360a5046c990ac9eccfcab",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.compilers-common.runtime,v=2024.2.1%2B1079/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+1079"
+        },
+        {
+            "id": "intel.oneapi.lin.dpcpp-cpp-compiler",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-cpp-compiler,v=2024.2.1+1079/manifest.json",
+                    "preDownload": true,
+                    "sha384": "ff08b87290732e3d4ac3179360bf61b2ef30919aa2a0c09c685014672a80c3f1da08d84bb0ea2e18cab1e5c9a76b88cf",
+                    "size": 3297,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.dpcpp-cpp-compiler,v=2024.2.1%2B1079/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-cpp-compiler,v=2024.2.1+1079/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "bee3ae8b98344e341a83dcb613a7ff6d7a9f7ae7bc1410442e1d054d995bd5566857c669cf9c2355c44b09f30cf99ffc",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.dpcpp-cpp-compiler,v=2024.2.1%2B1079/manifest.json.sig"
+                }
+            ],
+            "type": "component",
+            "version": "2024.2.1+1079"
+        },
+        {
+            "id": "intel.oneapi.lin.ifort-compiler",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.ifort-compiler,v=2024.2.1+1079/manifest.json",
+                    "preDownload": true,
+                    "sha384": "c5c738f7fe93d8daf078d79a99ff09537b438bcc6ccae2df5a474481f0e54fe892f7d34eebe06e8d9cf797640ab6b3c7",
+                    "size": 2494,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.ifort-compiler,v=2024.2.1%2B1079/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.ifort-compiler,v=2024.2.1+1079/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "ce387af58c501e4c5cbeeff8157e282805a9bcaa0683e470ea1819ad7f8f34cd2a7e7adbd39bee80d07b69c2461f2d67",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.ifort-compiler,v=2024.2.1%2B1079/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+1079"
+        },
+        {
+            "id": "intel.oneapi.lin.openmp",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.openmp,v=2024.2.1+1079/manifest.json",
+                    "preDownload": true,
+                    "sha384": "46df793fa98ba6497b63ab0e1f8d450e6638a36c77e758a7cedb268e17db6fa75ebd7ddabe0556a69fa943c734446075",
+                    "size": 4997,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.openmp,v=2024.2.1%2B1079/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.openmp,v=2024.2.1+1079/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "b7c57599fcf7660b596c52348ab0f93f538050bce7377acbc8c621b0036e972bf2d872fba078226c9f36779a4d23d5c8",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.openmp,v=2024.2.1%2B1079/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+1079"
+        },
+        {
+            "id": "intel.oneapi.lin.compiler.fpga",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.compiler.fpga,v=2024.2.1+1079/manifest.json",
+                    "preDownload": true,
+                    "sha384": "1fb81f99ac164fef18ea4f02d482405bd4a207f832008521fbabde195556dde122ae5ea70a020f86b4cc7096d4b41452",
+                    "size": 5081,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.compiler.fpga,v=2024.2.1%2B1079/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.compiler.fpga,v=2024.2.1+1079/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "9485ca0289c46faa4b2c0507595ac8690c11af991f65b5a388206c5cc80572935e29f3f6b9a4020a9b5b67117ff881fe",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.compiler.fpga,v=2024.2.1%2B1079/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+1079"
+        },
+        {
+            "id": "intel.oneapi.lin.dpcpp-compiler.eclipse-plugin-integration",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-compiler.eclipse-plugin-integration,v=2024.2.1+1079/manifest.json",
+                    "preDownload": true,
+                    "sha384": "30c5111b60cbf0412ab49d9c99ca10d5545b3eafe6c78e0c04f6c006e82417a651cd1ca39f08e105e89722e8e296a502",
+                    "size": 1611,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.dpcpp-compiler.eclipse-plugin-integration,v=2024.2.1%2B1079/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-compiler.eclipse-plugin-integration,v=2024.2.1+1079/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "67060b6a96ea75f6bcc8382cfab694fb998db1ada0a00d432798075025a5e45909eaaf9a1bbfd8415026a23a86c92c8e",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.dpcpp-compiler.eclipse-plugin-integration,v=2024.2.1%2B1079/manifest.json.sig"
+                }
+            ],
+            "type": "component",
+            "version": "2024.2.1+1079"
+        },
+        {
+            "id": "intel.oneapi.lin.dpcpp-cpp-compiler-pro.eclipse-plugin-integration",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-cpp-compiler-pro.eclipse-plugin-integration,v=2024.2.1+1079/manifest.json",
+                    "preDownload": true,
+                    "sha384": "3a5a380b08c26bc7d9b35e47269a6002e60d1331c406ce26e356eff2e6342d74b2d63be94fd6272d7698f72373c45f6f",
+                    "size": 1616,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.dpcpp-cpp-compiler-pro.eclipse-plugin-integration,v=2024.2.1%2B1079/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-cpp-compiler-pro.eclipse-plugin-integration,v=2024.2.1+1079/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "42435a4a8a2b827ad1b1165ea9b647e8451fc334f2cf86b4d68a45fef7f9e79c1bfb0b72fbf79507ad10ca26bf8f7050",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.dpcpp-cpp-compiler-pro.eclipse-plugin-integration,v=2024.2.1%2B1079/manifest.json.sig"
+                }
+            ],
+            "type": "component",
+            "version": "2024.2.1+1079"
+        },
+        {
+            "id": "intel.oneapi.lin.dpcpp-cpp-common.runtime",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-cpp-common.runtime,v=2024.2.1+1079/manifest.json",
+                    "preDownload": true,
+                    "sha384": "554c071119330d21b4f77e2ec9a40a8f251f9bcafe542fc5af0c429c3e60a6ccaf84b68b6b99db87e849e6772ef9fa74",
+                    "size": 2280,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.dpcpp-cpp-common.runtime,v=2024.2.1%2B1079/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-cpp-common.runtime,v=2024.2.1+1079/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "41fbdb3fdaf192c8bcbbc7b97543020024e3d8a8340c9f57539f772cc70f39234f44c72eb19212c42b5f53cea4af92b3",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.dpcpp-cpp-common.runtime,v=2024.2.1%2B1079/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+1079"
+        },
+        {
+            "id": "intel.oneapi.lin.dpcpp-compiler.eclipse-plugin-file",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-compiler.eclipse-plugin-file,v=2024.2.1+1079/manifest.json",
+                    "preDownload": true,
+                    "sha384": "2580c0742df89ca9535e8e88010828f908a8148096816a0eed898020e46be185b2edcd2f20f32058379f347157c1ce2a",
+                    "size": 2114,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.dpcpp-compiler.eclipse-plugin-file,v=2024.2.1%2B1079/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-compiler.eclipse-plugin-file,v=2024.2.1+1079/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "af3347a0c5cedb7cf883a3db49fea3bfdacc5aecb508dbbfffc593dea34504d45c1ec518cc4775e5b069d99ed4ccea42",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.dpcpp-compiler.eclipse-plugin-file,v=2024.2.1%2B1079/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+1079"
+        },
+        {
+            "id": "intel.oneapi.lin.dpcpp-cpp-compiler-pro.eclipse-cfg",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-cpp-compiler-pro.eclipse-cfg,v=2024.2.1+1079/manifest.json",
+                    "preDownload": true,
+                    "sha384": "df387904dcbf7ed736a05384bd7f150043406d2cadc75d1a984c4ba1848ece008428755443c76953e74eda2f4540b07b",
+                    "size": 2118,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.dpcpp-cpp-compiler-pro.eclipse-cfg,v=2024.2.1%2B1079/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dpcpp-cpp-compiler-pro.eclipse-cfg,v=2024.2.1+1079/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "f7e73e7ea41f5505d104f0a8255001c1c5d48b93388a03f10ce823e1dc6dc2c07459593826f336b526514f59ceb019c8",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.dpcpp-cpp-compiler-pro.eclipse-cfg,v=2024.2.1%2B1079/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+1079"
+        },
+        {
+            "id": "intel.oneapi.lin.compiler.product",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.compiler.product,v=2024.2.1+1079/manifest.json",
+                    "preDownload": true,
+                    "sha384": "e9e2e4728300392555fb5592204bbc712573692bd061a1942786511a3ad06aa5c2a1f3b9c7f23b91a9072e1e729dcd54",
+                    "size": 14836,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.compiler.product,v=2024.2.1%2B1079/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.compiler.product,v=2024.2.1+1079/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "c4762409c618297b12d8358af22a8a85ad9452c9f135847d38caff8bfa2f41131aed0bf26dd85658de90db93e921d395",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.compiler.product,v=2024.2.1%2B1079/manifest.json.sig"
+                }
+            ],
+            "type": "product",
+            "version": "2024.2.1+1079"
+        },
+        {
+            "id": "intel.oneapi.lin.compilers-common",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.compilers-common,v=2024.2.1+1079/manifest.json",
+                    "preDownload": true,
+                    "sha384": "1b5bb76e1cb76318b606aa7ed4602f1348a71b5d9afe26933284b9741632376fcc04f7497f414de2807eddcc5b93152a",
+                    "size": 2428,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.compilers-common,v=2024.2.1%2B1079/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.compilers-common,v=2024.2.1+1079/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "85003be262d9ea0d802455b31516ffbcbe3374ba30df55721c45067853289c579eaf87212d52bae58f670df7aaebdb3b",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/compiler/lin/intel.oneapi.lin.compilers-common,v=2024.2.1%2B1079/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+1079"
+        }
+    ],
+    "type": "contentmanifest",
+    "version": "2024.2.1+1079"
+}

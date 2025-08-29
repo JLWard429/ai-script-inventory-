@@ -1,0 +1,123 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/dev_utilities/lin/",
+    "id": "intel.oneapi.lin.dev_utilities.content",
+    "packages": [
+        {
+            "id": "intel.oneapi.lin.dev-utilities.eclipse-integration",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dev-utilities.eclipse-integration,v=2024.2.1+11/manifest.json",
+                    "preDownload": true,
+                    "sha384": "fa18121e5674fea5e86874a3ab2b4a35ca012dbe593c3b7a73b08d4f37588cffa39d073364a0bad806db06f0c6ee3cba",
+                    "size": 1592,
+                    "url": "https://installer.repos.intel.com/oneapi/dev_utilities/lin/intel.oneapi.lin.dev-utilities.eclipse-integration,v=2024.2.1%2B11/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dev-utilities.eclipse-integration,v=2024.2.1+11/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "e64339a947ddd95adcd17a80116d65d68cbaf3d9cb2c89c1e2826176a32eb4b2b83694e687b3d5333aad2e68ff228d49",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/dev_utilities/lin/intel.oneapi.lin.dev-utilities.eclipse-integration,v=2024.2.1%2B11/manifest.json.sig"
+                }
+            ],
+            "type": "component",
+            "version": "2024.2.1+11"
+        },
+        {
+            "id": "intel.oneapi.lin.dev-utilities.eclipse-file",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dev-utilities.eclipse-file,v=2024.2.1+11/manifest.json",
+                    "preDownload": true,
+                    "sha384": "00a10d62d521f74ca9c31b37d948629aeaa200d2b50128e1493bcc0a45ac26c137b13cd058b5879cdd2db8a1d3fb7401",
+                    "size": 2023,
+                    "url": "https://installer.repos.intel.com/oneapi/dev_utilities/lin/intel.oneapi.lin.dev-utilities.eclipse-file,v=2024.2.1%2B11/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dev-utilities.eclipse-file,v=2024.2.1+11/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "0adc62d02dc7a3b2445a6e72c1ad712dcda7315421471b67524fb1d95c9034bf98f9e672561c112e376d016704fbe699",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/dev_utilities/lin/intel.oneapi.lin.dev-utilities.eclipse-file,v=2024.2.1%2B11/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+11"
+        },
+        {
+            "id": "intel.oneapi.lin.dev-utilities.product",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dev-utilities.product,v=2024.2.1+11/manifest.json",
+                    "preDownload": true,
+                    "sha384": "ebd8ef18c8c4241b53e3339b392f0109a7ebac49a121d9a2ba57be8e3262488d6a982301f52268eb09761c4d18b1b8ea",
+                    "size": 161433,
+                    "url": "https://installer.repos.intel.com/oneapi/dev_utilities/lin/intel.oneapi.lin.dev-utilities.product,v=2024.2.1%2B11/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dev-utilities.product,v=2024.2.1+11/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "2180968c96f0fb41521bd9005ca2cfe5ad20a8d97a5ed61d414b85e3349294d3a9316a6b3e7716a4a81087f6bbee297a",
+                    "size": 11583,
+                    "url": "https://installer.repos.intel.com/oneapi/dev_utilities/lin/intel.oneapi.lin.dev-utilities.product,v=2024.2.1%2B11/manifest.json.sig"
+                }
+            ],
+            "type": "product",
+            "version": "2024.2.1+11"
+        },
+        {
+            "id": "intel.oneapi.lin.dev-utilities",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dev-utilities,v=2024.2.1+11/manifest.json",
+                    "preDownload": true,
+                    "sha384": "fd6004b7afde48ae76982e425e5b9a7fe676c34369c3fbee56be0f343105acac4c2cee08af878d9da0bc1f6ae3884980",
+                    "size": 782,
+                    "url": "https://installer.repos.intel.com/oneapi/dev_utilities/lin/intel.oneapi.lin.dev-utilities,v=2024.2.1%2B11/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dev-utilities,v=2024.2.1+11/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "17f05e58b9ceb4b4db459bec3db58d7c85540ff563405553eae2642863acb312e99abd74ce3772e8668f8858d2668190",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/dev_utilities/lin/intel.oneapi.lin.dev-utilities,v=2024.2.1%2B11/manifest.json.sig"
+                }
+            ],
+            "type": "component",
+            "version": "2024.2.1+11"
+        },
+        {
+            "id": "intel.oneapi.lin.dev-utilities.plugins",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dev-utilities.plugins,v=2024.2.1+11/manifest.json",
+                    "preDownload": true,
+                    "sha384": "284903c8ad0d39f0f9fa5b338325c66458ce1f07923a9fb254fdfd12759e6f761691fb0fda74b773bcc750b2e8be8e4a",
+                    "size": 4185,
+                    "url": "https://installer.repos.intel.com/oneapi/dev_utilities/lin/intel.oneapi.lin.dev-utilities.plugins,v=2024.2.1%2B11/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dev-utilities.plugins,v=2024.2.1+11/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "b6d98e344462e0484a15ef680bcd19b51bd09bf3d6ff2a42f4b86d726fea049b28ef5f1ea2eaa4d6efadbaa290a8cbaa",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/dev_utilities/lin/intel.oneapi.lin.dev-utilities.plugins,v=2024.2.1%2B11/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+11"
+        }
+    ],
+    "type": "contentmanifest",
+    "version": "2024.2.1+11"
+}

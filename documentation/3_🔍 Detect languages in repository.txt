@@ -1,0 +1,73 @@
+﻿2025-08-25T16:53:17.1432436Z ##[group]Run echo "Detecting languages in repository..."
+2025-08-25T16:53:17.1434117Z [36;1mecho "Detecting languages in repository..."[0m
+2025-08-25T16:53:17.1435342Z [36;1m[0m
+2025-08-25T16:53:17.1436062Z [36;1mlanguages=()[0m
+2025-08-25T16:53:17.1436888Z [36;1m[0m
+2025-08-25T16:53:17.1437752Z [36;1m# Check for Python[0m
+2025-08-25T16:53:17.1438970Z [36;1mif find . -name "*.py" -type f | head -1 | grep -q .; then[0m
+2025-08-25T16:53:17.1440373Z [36;1m  languages+=("python")[0m
+2025-08-25T16:53:17.1441426Z [36;1m  echo "✅ Python detected"[0m
+2025-08-25T16:53:17.1442436Z [36;1mfi[0m
+2025-08-25T16:53:17.1443135Z [36;1m[0m
+2025-08-25T16:53:17.1443919Z [36;1m# Check for JavaScript/TypeScript[0m
+2025-08-25T16:53:17.1445762Z [36;1mif find . -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx" -type f | head -1 | grep -q .; then[0m
+2025-08-25T16:53:17.1447801Z [36;1m  languages+=("javascript")[0m
+2025-08-25T16:53:17.1448973Z [36;1m  echo "✅ JavaScript/TypeScript detected"[0m
+2025-08-25T16:53:17.1450207Z [36;1mfi[0m
+2025-08-25T16:53:17.1450936Z [36;1m[0m
+2025-08-25T16:53:17.1451637Z [36;1m# Check for Java[0m
+2025-08-25T16:53:17.1452844Z [36;1mif find . -name "*.java" -type f | head -1 | grep -q .; then[0m
+2025-08-25T16:53:17.1454261Z [36;1m  languages+=("java")[0m
+2025-08-25T16:53:17.1455236Z [36;1m  echo "✅ Java detected"[0m
+2025-08-25T16:53:17.1456220Z [36;1mfi[0m
+2025-08-25T16:53:17.1456909Z [36;1m[0m
+2025-08-25T16:53:17.1457707Z [36;1m# Check for C#[0m
+2025-08-25T16:53:17.1458842Z [36;1mif find . -name "*.cs" -type f | head -1 | grep -q .; then[0m
+2025-08-25T16:53:17.1460208Z [36;1m  languages+=("csharp")[0m
+2025-08-25T16:53:17.1461203Z [36;1m  echo "✅ C# detected"[0m
+2025-08-25T16:53:17.1462147Z [36;1mfi[0m
+2025-08-25T16:53:17.1462839Z [36;1m[0m
+2025-08-25T16:53:17.1463542Z [36;1m# Check for Go[0m
+2025-08-25T16:53:17.1464693Z [36;1mif find . -name "*.go" -type f | head -1 | grep -q .; then[0m
+2025-08-25T16:53:17.1466056Z [36;1m  languages+=("go")[0m
+2025-08-25T16:53:17.1467009Z [36;1m  echo "✅ Go detected"[0m
+2025-08-25T16:53:17.1468045Z [36;1mfi[0m
+2025-08-25T16:53:17.1468738Z [36;1m[0m
+2025-08-25T16:53:17.1469439Z [36;1m# Check for Ruby[0m
+2025-08-25T16:53:17.1470617Z [36;1mif find . -name "*.rb" -type f | head -1 | grep -q .; then[0m
+2025-08-25T16:53:17.1472011Z [36;1m  languages+=("ruby")[0m
+2025-08-25T16:53:17.1473001Z [36;1m  echo "✅ Ruby detected"[0m
+2025-08-25T16:53:17.1473975Z [36;1mfi[0m
+2025-08-25T16:53:17.1474720Z [36;1m[0m
+2025-08-25T16:53:17.1475604Z [36;1m# Default to Python if no languages detected[0m
+2025-08-25T16:53:17.1476960Z [36;1mif [ ${#languages[@]} -eq 0 ]; then[0m
+2025-08-25T16:53:17.1478199Z [36;1m  languages+=("python")[0m
+2025-08-25T16:53:17.1479583Z [36;1m  echo "⚠️ No specific languages detected, defaulting to Python"[0m
+2025-08-25T16:53:17.1481003Z [36;1mfi[0m
+2025-08-25T16:53:17.1481682Z [36;1m[0m
+2025-08-25T16:53:17.1482378Z [36;1m# Handle manual override[0m
+2025-08-25T16:53:17.1483692Z [36;1mif [ "" != "" ] && [ "" != "auto-detect" ]; then[0m
+2025-08-25T16:53:17.1484888Z [36;1m  IFS=',' read -ra ADDR <<< ""[0m
+2025-08-25T16:53:17.1485948Z [36;1m  languages=("${ADDR[@]}")[0m
+2025-08-25T16:53:17.1487470Z [36;1m  echo "🔧 Using manually specified languages: ${languages[*]}"[0m
+2025-08-25T16:53:17.1488858Z [36;1mfi[0m
+2025-08-25T16:53:17.1489525Z [36;1m[0m
+2025-08-25T16:53:17.1490253Z [36;1m# Create JSON array for matrix[0m
+2025-08-25T16:53:17.1491476Z [36;1mprintf -v joined '"%s",' "${languages[@]}"[0m
+2025-08-25T16:53:17.1492696Z [36;1mmatrix_json="[${joined%,}]"[0m
+2025-08-25T16:53:17.1493669Z [36;1m[0m
+2025-08-25T16:53:17.1494599Z [36;1mecho "languages=${languages[*]}" >> $GITHUB_OUTPUT[0m
+2025-08-25T16:53:17.1496090Z [36;1mecho "matrix=${matrix_json}" >> $GITHUB_OUTPUT[0m
+2025-08-25T16:53:17.1497378Z [36;1m[0m
+2025-08-25T16:53:17.1498237Z [36;1mecho "📋 Final language list: ${languages[*]}"[0m
+2025-08-25T16:53:17.1499542Z [36;1mecho "🔄 Matrix JSON: ${matrix_json}"[0m
+2025-08-25T16:53:17.1571554Z shell: /usr/bin/bash -e {0}
+2025-08-25T16:53:17.1572469Z env:
+2025-08-25T16:53:17.1573553Z   CODEQL_EXTRACTOR_PYTHON_OPTION_ANALYZE_RAW_STRING_LITERALS: true
+2025-08-25T16:53:17.1575096Z   CODEQL_PYTHON_IGNORE_IMPORT_ERRORS: true
+2025-08-25T16:53:17.1576763Z   CODEQL_ACTION_EXTRA_OPTIONS: {"database": {"finalize": ["--max-disk-cache", "1024"]}}
+2025-08-25T16:53:17.1578622Z ##[endgroup]
+2025-08-25T16:53:17.1669157Z Detecting languages in repository...
+2025-08-25T16:53:17.1691309Z ✅ Python detected
+2025-08-25T16:53:17.1803408Z 📋 Final language list: python
+2025-08-25T16:53:17.1805515Z 🔄 Matrix JSON: ["python"]

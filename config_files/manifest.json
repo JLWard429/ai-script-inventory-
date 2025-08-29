@@ -1,0 +1,60 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/tlt/lin/",
+    "coexistence": {
+        "upgrades": [
+            {
+                "action": "remove",
+                "version": "[2024.2.0-0,2024.2.0+527)"
+            }
+        ]
+    },
+    "customActions": [
+        {
+            "executionType": "post-install",
+            "fileName": "[Payload]/latest_symlink.sh",
+            "id": "latest_symlink_post_install",
+            "parameters": [
+                "[InstallDir]"
+            ]
+        },
+        {
+            "executionType": "post-remove",
+            "fileName": "[Payload]/latest_symlink.sh",
+            "id": "latest_symlink_post_remove",
+            "parameters": [
+                "[InstallDir]"
+            ]
+        }
+    ],
+    "display": {
+        "localized": [
+            {
+                "description": "Toolkit Linking Tool 2024.2.0",
+                "language": "en-us",
+                "title": "Toolkit Linking Tool",
+                "version": "2024.2.0"
+            }
+        ]
+    },
+    "id": "intel.oneapi.lin.tlt",
+    "installSize": {
+        "installDir": 374976
+    },
+    "payloads": [
+        {
+            "fileName": "cupPayload.cup",
+            "sha384": "c4e173f22a6208d816d05c880c29a847ac244a265a6cfacc0c04bf460ceec607b1d501449690e76a787ed1dc3cbba79d",
+            "size": 136123,
+            "url": "https://installer.repos.intel.com/oneapi/tlt/lin/intel.oneapi.lin.tlt,v=2024.2.0%2B527/cupPayload.cup"
+        },
+        {
+            "cache": true,
+            "fileName": "latest_symlink.sh",
+            "sha384": "d1c5b210d0321124f4dc2923fc72018b186bee1146c6be385d1811ff12a18b185dff254b83052a89816f6dcb7bc8d2e9",
+            "size": 963,
+            "url": "https://installer.repos.intel.com/oneapi/tlt/lin/intel.oneapi.lin.tlt,v=2024.2.0%2B527/latest_symlink.sh"
+        }
+    ],
+    "type": "cup",
+    "version": "2024.2.0+527"
+}

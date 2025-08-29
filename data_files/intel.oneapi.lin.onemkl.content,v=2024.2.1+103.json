@@ -1,0 +1,77 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/mkl/lin/",
+    "id": "intel.oneapi.lin.onemkl.content",
+    "packages": [
+        {
+            "id": "intel.oneapi.lin.mkl.runtime",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.mkl.runtime,v=2024.2.1+103/manifest.json",
+                    "preDownload": true,
+                    "sha384": "b87827e066c7c180126ea77d11da37c61b11928f65fafe2aa4073dedd57c277eb1588eb0a6f5b92dc757bdc5b61e5258",
+                    "size": 3555,
+                    "url": "https://installer.repos.intel.com/oneapi/mkl/lin/intel.oneapi.lin.mkl.runtime,v=2024.2.1%2B103/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.mkl.runtime,v=2024.2.1+103/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "0ee293ae7bfbfcee27c56e776eb7f481df4eff4ec45d964c60b46bbe66b76a6a16e9d806f8029eee0b5b26d84a543386",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/mkl/lin/intel.oneapi.lin.mkl.runtime,v=2024.2.1%2B103/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+103"
+        },
+        {
+            "id": "intel.oneapi.lin.mkl.product",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.mkl.product,v=2024.2.1+103/manifest.json",
+                    "preDownload": true,
+                    "sha384": "6ecc4feb1f509f16ea29b4f2bfefb24e6fbf120bad421be990b8f9c6b003fadcb276a6f098c5a76a6130b5719835d382",
+                    "size": 167604,
+                    "url": "https://installer.repos.intel.com/oneapi/mkl/lin/intel.oneapi.lin.mkl.product,v=2024.2.1%2B103/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.mkl.product,v=2024.2.1+103/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "120987db6623ac84942b13497f8b51c7cb27c47f5dfc930bae7f31c696722e50ab0300231a3c997db812df1b45cf3278",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/mkl/lin/intel.oneapi.lin.mkl.product,v=2024.2.1%2B103/manifest.json.sig"
+                }
+            ],
+            "type": "product",
+            "version": "2024.2.1+103"
+        },
+        {
+            "id": "intel.oneapi.lin.mkl.devel",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.mkl.devel,v=2024.2.1+103/manifest.json",
+                    "preDownload": true,
+                    "sha384": "52f6a6d33d7b81befb0f1ed3b9b641103ba0acc248b7bef41f6a2b3e1b5c2c9f3f7c0a144bfcd6d92ce10d5549ca0aa1",
+                    "size": 3630,
+                    "url": "https://installer.repos.intel.com/oneapi/mkl/lin/intel.oneapi.lin.mkl.devel,v=2024.2.1%2B103/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.mkl.devel,v=2024.2.1+103/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "61ab39477e0c975d15c64a77c17513976384da35fc33e3f9e6a3138f78e1465e120cc9cac5c3f57ddbf69d200a278509",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/mkl/lin/intel.oneapi.lin.mkl.devel,v=2024.2.1%2B103/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+103"
+        }
+    ],
+    "type": "contentmanifest",
+    "version": "2024.2.1+103"
+}

@@ -1,0 +1,80 @@
+"""'Job""","""'Workflow""","""'Failure rate""","""'Avg run time""","""'Avg queue time""","""'Runner type""","""'Runner labels""","""'Job runs"""
+"""'copilot""","""'dynamic/copilot-swe-agent/copilot""",11.43,705975,2916,"""'hosted""","""'ubuntu-latest""",35
+"""'build (3.9)""","""'.github/workflows/python-package.yml""",100.00,211717,48643,"""'hosted""","""'ubuntu-latest""",110
+"""'Codacy Security Scan""","""'.github/workflows/codacy.yml""",2.02,139716,27764,"""'hosted""","""'ubuntu-latest""",99
+"""'build-and-deploy""","""'.github/workflows/azure-functions-app-python.yml""",100.00,131466,49742,"""'hosted""","""'ubuntu-latest""",50
+"""'🔐 CodeQL Python Analysis""","""'.github/workflows/codeql.yml""",30.00,87573,7846,"""'hosted""","""'ubuntu-latest""",20
+"""'🔐 CodeQL Analysis (python, ubuntu-latest)""","""'.github/workflows/codeql.yml""",100.00,86522,31621,"""'hosted""","""'ubuntu-latest""",31
+"""'🔍 CodeQL Analysis (python)""","""'.github/workflows/codeql.yml""",100.00,64672,5296,"""'hosted""","""'ubuntu-latest""",15
+"""'Analyze (python)""","""'dynamic/github-code-scanning/codeql""",0.89,52775,34646,"""'hosted""","""'ubuntu-latest""",112
+"""'Analyze (actions)""","""'dynamic/github-code-scanning/codeql""",0.00,48377,33644,"""'hosted""","""'ubuntu-latest""",112
+"""'🔐 CodeQL Analysis (go, ubuntu-latest, autobuild)""","""'.github/workflows/codeql.yml""",100.00,47121,34587,"""'hosted""","""'ubuntu-latest""",31
+"""'Code Quality Checks (3.9)""","""'.github/workflows/code-quality.yml""",0.00,43874,16813,"""'hosted""","""'ubuntu-latest""",34
+"""'🔐 CodeQL Analysis (cpp, ubuntu-latest, autobuild)""","""'.github/workflows/codeql.yml""",100.00,40356,6177,"""'hosted""","""'ubuntu-latest""",2
+"""'🔐 CodeQL Analysis (ruby, ubuntu-latest, none)""","""'.github/workflows/codeql.yml""",100.00,36961,33235,"""'hosted""","""'ubuntu-latest""",31
+"""'Run Tests (3.8)""","""'.github/workflows/code-quality.yml""",27.27,36543,18856,"""'hosted""","""'ubuntu-latest""",33
+"""'greeting""","""'.github/workflows/greetings.yml""",0.00,36471,6984,"""'hosted""","""'ubuntu-latest""",97
+"""'🧪 Test Suite (windows-latest, 3.10)""","""'.github/workflows/ci-cd.yml""",0.00,36167,4403,"""'hosted""","""'windows-latest""",45
+"""'🧪 Test Suite (windows-latest, 3.11)""","""'.github/workflows/ci-cd.yml""",0.00,36119,4409,"""'hosted""","""'windows-latest""",45
+"""'🔐 CodeQL Analysis (java, ubuntu-latest, autobuild)""","""'.github/workflows/codeql.yml""",100.00,35340,29675,"""'hosted""","""'ubuntu-latest""",31
+"""'🔐 CodeQL Analysis (cpp, ubuntu-latest, manual)""","""'.github/workflows/codeql.yml""",100.00,35303,38572,"""'hosted""","""'ubuntu-latest""",22
+"""'🧪 Test Suite (windows-latest, 3.12)""","""'.github/workflows/ci-cd.yml""",0.00,34931,4619,"""'hosted""","""'windows-latest""",45
+"""'🧪 Test Suite (macos-latest, 3.10)""","""'.github/workflows/ci-cd.yml""",0.00,34315,6356,"""'hosted""","""'macos-latest""",45
+"""'🔐 CodeQL Analysis (csharp, ubuntu-latest, autobuild)""","""'.github/workflows/codeql.yml""",100.00,33980,34290,"""'hosted""","""'ubuntu-latest""",31
+"""'Dependabot""","""'dynamic/dependabot/dependabot-updates""",60.00,33802,3993,"""'hosted""","""'ubuntu-latest""",10
+"""'Code Quality Checks (3.8)""","""'.github/workflows/code-quality.yml""",6.06,32869,17623,"""'hosted""","""'ubuntu-latest""",33
+"""'🛡️ Security Analysis""","""'.github/workflows/ci-cd.yml""",4.44,31039,2977,"""'hosted""","""'ubuntu-latest""",45
+"""'Pre-commit Hooks""","""'.github/workflows/code-quality.yml""",91.67,29635,21424,"""'hosted""","""'ubuntu-latest""",36
+"""'Run Tests (3.11)""","""'.github/workflows/code-quality.yml""",66.67,29625,20132,"""'hosted""","""'ubuntu-latest""",36
+"""'Code Quality Checks (3.10)""","""'.github/workflows/code-quality.yml""",31.43,29079,16991,"""'hosted""","""'ubuntu-latest""",35
+"""'Code Quality Checks (3.11)""","""'.github/workflows/code-quality.yml""",44.12,27031,17648,"""'hosted""","""'ubuntu-latest""",34
+"""'build""","""'.github/workflows/hugo.yml""",100.00,26360,12579,"""'hosted""","""'ubuntu-latest""",14
+"""'Code Quality Checks (3.12)""","""'.github/workflows/code-quality.yml""",17.14,26037,22761,"""'hosted""","""'ubuntu-latest""",35
+"""'🔍 Dependency Vulnerability Scan""","""'.github/workflows/dependency-scan.yml""",0.00,24878,27731,"""'hosted""","""'ubuntu-latest""",160
+"""'build (3.10)""","""'.github/workflows/python-package.yml""",100.00,20670,53156,"""'hosted""","""'ubuntu-latest""",110
+"""'build""","""'.github/workflows/python-app.yml""",100.00,20506,23900,"""'hosted""","""'ubuntu-latest""",111
+"""'build (3.11)""","""'.github/workflows/python-package.yml""",100.00,20084,49731,"""'hosted""","""'ubuntu-latest""",110
+"""'📜 License Compliance Check""","""'.github/workflows/dependency-scan.yml""",0.00,19751,28900,"""'hosted""","""'ubuntu-latest""",160
+"""'build (3.9)""","""'.github/workflows/django.yml""",11.70,19132,30411,"""'hosted""","""'ubuntu-latest""",94
+"""'build-linux""","""'.github/workflows/python-package-conda.yml""",100.00,16959,19940,"""'hosted""","""'ubuntu-latest""",102
+"""'🧪 Test Suite (macos-latest, 3.11)""","""'.github/workflows/ci-cd.yml""",0.00,16636,8690,"""'hosted""","""'macos-latest""",45
+"""'🧪 Test Suite (macos-latest, 3.12)""","""'.github/workflows/ci-cd.yml""",0.00,16585,5915,"""'hosted""","""'macos-latest""",45
+"""'🧪 Test Suite (ubuntu-latest, 3.12)""","""'.github/workflows/ci-cd.yml""",0.00,16380,5054,"""'hosted""","""'ubuntu-latest""",45
+"""'build (3.8)""","""'.github/workflows/pylint.yml""",9.30,16229,23077,"""'hosted""","""'ubuntu-latest""",86
+"""'🧪 Test Suite (ubuntu-latest, 3.9)""","""'.github/workflows/ci-cd.yml""",0.00,15871,5548,"""'hosted""","""'ubuntu-latest""",45
+"""'🧪 Test Suite (ubuntu-latest, 3.11)""","""'.github/workflows/ci-cd.yml""",0.00,15710,3871,"""'hosted""","""'ubuntu-latest""",45
+"""'🧪 Test Suite (ubuntu-latest, 3.10)""","""'.github/workflows/ci-cd.yml""",0.00,15706,4222,"""'hosted""","""'ubuntu-latest""",45
+"""'🔍 Code Quality & Linting""","""'.github/workflows/ci-cd.yml""",100.00,15488,3176,"""'hosted""","""'ubuntu-latest""",46
+"""'build (3.8)""","""'.github/workflows/django.yml""",7.29,15255,29497,"""'hosted""","""'ubuntu-latest""",96
+"""'build (3.10)""","""'.github/workflows/pylint.yml""",57.65,14285,18957,"""'hosted""","""'ubuntu-latest""",85
+"""'build (3.9)""","""'.github/workflows/pylint.yml""",49.46,14172,30861,"""'hosted""","""'ubuntu-latest""",93
+"""'Script Validation""","""'.github/workflows/code-quality.yml""",24.32,13865,25167,"""'hosted""","""'ubuntu-latest""",37
+"""'🔐 CodeQL Analysis (javascript, ubuntu-latest, none)""","""'.github/workflows/codeql.yml""",100.00,12762,32150,"""'hosted""","""'ubuntu-latest""",31
+"""'build""","""'.github/workflows/azure-webapps-python.yml""",100.00,11856,36025,"""'hosted""","""'ubuntu-latest""",49
+"""'test""","""'.github/workflows/rubyonrails.yml""",100.00,10989,40640,"""'hosted""","""'ubuntu-latest""",96
+"""'Setup, Build, Publish, and Deploy""","""'.github/workflows/ibm.yml""",100.00,10637,40394,"""'hosted""","""'ubuntu-latest""",44
+"""'Trigger_APIsec_scan""","""'.github/workflows/apisec-scan.yml""",100.00,10008,26433,"""'hosted""","""'ubuntu-latest""",99
+"""'🗂️ Organize and Audit AI Scripts""","""'.github/workflows/auto_organize.yml""",60.00,8232,4329,"""'hosted""","""'ubuntu-latest""",10
+"""'build""","""'.github/workflows/alibabacloud.yml""",100.00,7829,55473,"""'hosted""","""'ubuntu-latest""",45
+"""'Terraform""","""'.github/workflows/terraform.yml""",100.00,7691,31966,"""'hosted""","""'ubuntu-latest""",105
+"""'build""","""'.github/workflows/ant.yml""",100.00,7114,25504,"""'hosted""","""'ubuntu-latest""",95
+"""'🐚 Shell Script Validation""","""'.github/workflows/ci-cd.yml""",0.00,7101,3381,"""'hosted""","""'ubuntu-latest""",45
+"""'Deploy""","""'.github/workflows/aws.yml""",100.00,6211,51893,"""'hosted""","""'ubuntu-latest""",48
+"""'build""","""'.github/workflows/jekyll.yml""",100.00,6145,6569,"""'hosted""","""'ubuntu-latest""",14
+"""'📋 Python Security Analysis Report""","""'.github/workflows/codeql.yml""",0.00,6082,6579,"""'hosted""","""'ubuntu-latest""",20
+"""'Build""","""'.github/workflows/astro.yml""",100.00,5895,17992,"""'hosted""","""'ubuntu-latest""",12
+"""'dependency-review""","""'.github/workflows/dependency-review.yml""",23.73,5894,19877,"""'hosted""","""'ubuntu-latest""",59
+"""'deploy""","""'.github/workflows/static.yml""",100.00,5814,9112,"""'hosted""","""'ubuntu-latest""",16
+"""'🧹 Cleanup Duplicate Documentation""","""'.github/workflows/auto_organize.yml""",0.00,5690,2961,"""'hosted""","""'ubuntu-latest""",4
+"""'📋 Security Analysis Report""","""'.github/workflows/codeql.yml""",0.00,5455,8015,"""'hosted""","""'ubuntu-latest""",32
+"""'stale""","""'.github/workflows/stale.yml""",0.00,5132,2042,"""'hosted""","""'ubuntu-latest""",1
+"""'build (3.7)""","""'.github/workflows/django.yml""",93.20,4918,30614,"""'hosted""","""'ubuntu-latest""",103
+"""'lint""","""'.github/workflows/rubyonrails.yml""",100.00,4671,40781,"""'hosted""","""'ubuntu-latest""",96
+"""'Organize and Audit AI Scripts""","""'.github/workflows/auto_organize.yml""",100.00,4477,2550,"""'hosted""","""'ubuntu-latest""",3
+"""'📚 Documentation Validation""","""'.github/workflows/ci-cd.yml""",0.00,4344,4385,"""'hosted""","""'ubuntu-latest""",45
+"""'🔍 Validate Repository Structure""","""'.github/workflows/auto_organize.yml""",0.00,4305,2395,"""'hosted""","""'ubuntu-latest""",11
+"""'organize""","""'.github/workflows/auto_organize.yml""",100.00,4231,2471,"""'hosted""","""'ubuntu-latest""",10
+"""'🔍 Detect Repository Languages""","""'.github/workflows/codeql.yml""",3.12,4144,39543,"""'hosted""","""'ubuntu-latest""",32
+"""'label""","""'.github/workflows/label.yml""",69.33,3991,7909,"""'hosted""","""'ubuntu-latest""",75
+"""'Workflow Summary""","""'.github/workflows/code-quality.yml""",0.00,3238,10197,"""'hosted""","""'ubuntu-latest""",46
+"""'📋 Build Summary""","""'.github/workflows/ci-cd.yml""",0.00,3045,3122,"""'hosted""","""'ubuntu-latest""",46

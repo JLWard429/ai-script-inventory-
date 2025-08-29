@@ -1,0 +1,219 @@
+﻿2025-08-25T16:53:15.4179222Z Current runner version: '2.328.0'
+2025-08-25T16:53:15.4203150Z ##[group]Runner Image Provisioner
+2025-08-25T16:53:15.4204184Z Hosted Compute Agent
+2025-08-25T16:53:15.4204742Z Version: 20250821.380
+2025-08-25T16:53:15.4205328Z Commit: 438d12cb4fe092871db9867344e3bc0bc5319035
+2025-08-25T16:53:15.4206052Z Build Date: 2025-08-21T20:49:43Z
+2025-08-25T16:53:15.4206642Z ##[endgroup]
+2025-08-25T16:53:15.4207498Z ##[group]Operating System
+2025-08-25T16:53:15.4208303Z Ubuntu
+2025-08-25T16:53:15.4208744Z 24.04.2
+2025-08-25T16:53:15.4209205Z LTS
+2025-08-25T16:53:15.4209650Z ##[endgroup]
+2025-08-25T16:53:15.4210156Z ##[group]Runner Image
+2025-08-25T16:53:15.4210742Z Image: ubuntu-24.04
+2025-08-25T16:53:15.4211247Z Version: 20250818.1.0
+2025-08-25T16:53:15.4212270Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250818.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-08-25T16:53:15.4213775Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250818.1
+2025-08-25T16:53:15.4214781Z ##[endgroup]
+2025-08-25T16:53:15.4217371Z ##[group]GITHUB_TOKEN Permissions
+2025-08-25T16:53:15.4219640Z Actions: write
+2025-08-25T16:53:15.4220220Z Attestations: write
+2025-08-25T16:53:15.4220803Z Checks: write
+2025-08-25T16:53:15.4221282Z Contents: write
+2025-08-25T16:53:15.4221803Z Deployments: write
+2025-08-25T16:53:15.4222274Z Discussions: write
+2025-08-25T16:53:15.4222888Z Issues: write
+2025-08-25T16:53:15.4223352Z Metadata: read
+2025-08-25T16:53:15.4223835Z Models: read
+2025-08-25T16:53:15.4224367Z Packages: write
+2025-08-25T16:53:15.4224876Z Pages: write
+2025-08-25T16:53:15.4225337Z PullRequests: write
+2025-08-25T16:53:15.4225944Z RepositoryProjects: write
+2025-08-25T16:53:15.4226505Z SecurityEvents: write
+2025-08-25T16:53:15.4227086Z Statuses: write
+2025-08-25T16:53:15.4228048Z ##[endgroup]
+2025-08-25T16:53:15.4230236Z Secret source: Actions
+2025-08-25T16:53:15.4230974Z Prepare workflow directory
+2025-08-25T16:53:15.4629558Z Prepare all required actions
+2025-08-25T16:53:15.4669277Z Getting action download info
+2025-08-25T16:53:15.9960417Z Download action repository 'actions/checkout@v5' (SHA:08c6903cd8c0fde910a37f88322edcfb5dd907a8)
+2025-08-25T16:53:16.1595863Z Complete job name: 🔍 Detect Repository Languages
+2025-08-25T16:53:16.2295058Z ##[group]Run actions/checkout@v5
+2025-08-25T16:53:16.2296000Z with:
+2025-08-25T16:53:16.2296406Z   fetch-depth: 2
+2025-08-25T16:53:16.2296876Z   repository: JLWard429/ai-script-inventory-
+2025-08-25T16:53:16.2297822Z   token: ***
+2025-08-25T16:53:16.2298239Z   ssh-strict: true
+2025-08-25T16:53:16.2298660Z   ssh-user: git
+2025-08-25T16:53:16.2299089Z   persist-credentials: true
+2025-08-25T16:53:16.2299557Z   clean: true
+2025-08-25T16:53:16.2299984Z   sparse-checkout-cone-mode: true
+2025-08-25T16:53:16.2300494Z   fetch-tags: false
+2025-08-25T16:53:16.2300922Z   show-progress: true
+2025-08-25T16:53:16.2301348Z   lfs: false
+2025-08-25T16:53:16.2301762Z   submodules: false
+2025-08-25T16:53:16.2302194Z   set-safe-directory: true
+2025-08-25T16:53:16.2302903Z env:
+2025-08-25T16:53:16.2303510Z   CODEQL_EXTRACTOR_PYTHON_OPTION_ANALYZE_RAW_STRING_LITERALS: true
+2025-08-25T16:53:16.2304233Z   CODEQL_PYTHON_IGNORE_IMPORT_ERRORS: true
+2025-08-25T16:53:16.2305060Z   CODEQL_ACTION_EXTRA_OPTIONS: {"database": {"finalize": ["--max-disk-cache", "1024"]}}
+2025-08-25T16:53:16.2305822Z ##[endgroup]
+2025-08-25T16:53:16.3261897Z Syncing repository: JLWard429/ai-script-inventory-
+2025-08-25T16:53:16.3263805Z ##[group]Getting Git version info
+2025-08-25T16:53:16.3264749Z Working directory is '/home/runner/work/ai-script-inventory-/ai-script-inventory-'
+2025-08-25T16:53:16.3265957Z [command]/usr/bin/git version
+2025-08-25T16:53:16.3303356Z git version 2.51.0
+2025-08-25T16:53:16.3325465Z ##[endgroup]
+2025-08-25T16:53:16.3339872Z Temporarily overriding HOME='/home/runner/work/_temp/7f29051e-be19-4d41-97d9-1bfa8978eafc' before making global git config changes
+2025-08-25T16:53:16.3342186Z Adding repository directory to the temporary git global config as a safe directory
+2025-08-25T16:53:16.3345460Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ai-script-inventory-/ai-script-inventory-
+2025-08-25T16:53:16.3382767Z Deleting the contents of '/home/runner/work/ai-script-inventory-/ai-script-inventory-'
+2025-08-25T16:53:16.3386068Z ##[group]Initializing the repository
+2025-08-25T16:53:16.3390831Z [command]/usr/bin/git init /home/runner/work/ai-script-inventory-/ai-script-inventory-
+2025-08-25T16:53:16.3465993Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-08-25T16:53:16.3467909Z hint: is subject to change. To configure the initial branch name to use in all
+2025-08-25T16:53:16.3469557Z hint: of your new repositories, which will suppress this warning, call:
+2025-08-25T16:53:16.3470761Z hint:
+2025-08-25T16:53:16.3471643Z hint: 	git config --global init.defaultBranch <name>
+2025-08-25T16:53:16.3472348Z hint:
+2025-08-25T16:53:16.3473181Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-08-25T16:53:16.3474958Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-08-25T16:53:16.3475962Z hint:
+2025-08-25T16:53:16.3476424Z hint: 	git branch -m <name>
+2025-08-25T16:53:16.3476953Z hint:
+2025-08-25T16:53:16.3477982Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-08-25T16:53:16.3480235Z Initialized empty Git repository in /home/runner/work/ai-script-inventory-/ai-script-inventory-/.git/
+2025-08-25T16:53:16.3482350Z [command]/usr/bin/git remote add origin https://github.com/JLWard429/ai-script-inventory-
+2025-08-25T16:53:16.3515333Z ##[endgroup]
+2025-08-25T16:53:16.3516146Z ##[group]Disabling automatic garbage collection
+2025-08-25T16:53:16.3519165Z [command]/usr/bin/git config --local gc.auto 0
+2025-08-25T16:53:16.3547757Z ##[endgroup]
+2025-08-25T16:53:16.3548491Z ##[group]Setting up auth
+2025-08-25T16:53:16.3555816Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-08-25T16:53:16.3590469Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-08-25T16:53:16.3881898Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-08-25T16:53:16.3917403Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-08-25T16:53:16.4156791Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-08-25T16:53:16.4194852Z ##[endgroup]
+2025-08-25T16:53:16.4195801Z ##[group]Fetching the repository
+2025-08-25T16:53:16.4205136Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=2 origin +d99966afd10d639723a481583ea8f51d91aff023:refs/remotes/pull/29/merge
+2025-08-25T16:53:17.0578351Z From https://github.com/JLWard429/ai-script-inventory-
+2025-08-25T16:53:17.0579835Z  * [new ref]         d99966afd10d639723a481583ea8f51d91aff023 -> pull/29/merge
+2025-08-25T16:53:17.0610244Z ##[endgroup]
+2025-08-25T16:53:17.0611928Z ##[group]Determining the checkout info
+2025-08-25T16:53:17.0613900Z ##[endgroup]
+2025-08-25T16:53:17.0618861Z [command]/usr/bin/git sparse-checkout disable
+2025-08-25T16:53:17.0659042Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-08-25T16:53:17.0686784Z ##[group]Checking out the ref
+2025-08-25T16:53:17.0690567Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/29/merge
+2025-08-25T16:53:17.1064453Z Note: switching to 'refs/remotes/pull/29/merge'.
+2025-08-25T16:53:17.1065658Z 
+2025-08-25T16:53:17.1066569Z You are in 'detached HEAD' state. You can look around, make experimental
+2025-08-25T16:53:17.1069195Z changes and commit them, and you can discard any commits you make in this
+2025-08-25T16:53:17.1071101Z state without impacting any branches by switching back to a branch.
+2025-08-25T16:53:17.1072397Z 
+2025-08-25T16:53:17.1073017Z If you want to create a new branch to retain commits you create, you may
+2025-08-25T16:53:17.1075100Z do so (now or later) by using -c with the switch command. Example:
+2025-08-25T16:53:17.1076116Z 
+2025-08-25T16:53:17.1076453Z   git switch -c <new-branch-name>
+2025-08-25T16:53:17.1077064Z 
+2025-08-25T16:53:17.1077596Z Or undo this operation with:
+2025-08-25T16:53:17.1078174Z 
+2025-08-25T16:53:17.1078459Z   git switch -
+2025-08-25T16:53:17.1078884Z 
+2025-08-25T16:53:17.1079646Z Turn off this advice by setting config variable advice.detachedHead to false
+2025-08-25T16:53:17.1080868Z 
+2025-08-25T16:53:17.1082166Z HEAD is now at d99966a Merge bac908e7004cb65eadefb352ddff263c454a9349 into 1c96ddf15b7a32c6f7a5114d385a6787fac88d71
+2025-08-25T16:53:17.1086037Z ##[endgroup]
+2025-08-25T16:53:17.1116980Z [command]/usr/bin/git log -1 --format=%H
+2025-08-25T16:53:17.1148584Z d99966afd10d639723a481583ea8f51d91aff023
+2025-08-25T16:53:17.1432467Z ##[group]Run echo "Detecting languages in repository..."
+2025-08-25T16:53:17.1434122Z [36;1mecho "Detecting languages in repository..."[0m
+2025-08-25T16:53:17.1435346Z [36;1m[0m
+2025-08-25T16:53:17.1436067Z [36;1mlanguages=()[0m
+2025-08-25T16:53:17.1436891Z [36;1m[0m
+2025-08-25T16:53:17.1437758Z [36;1m# Check for Python[0m
+2025-08-25T16:53:17.1438975Z [36;1mif find . -name "*.py" -type f | head -1 | grep -q .; then[0m
+2025-08-25T16:53:17.1440377Z [36;1m  languages+=("python")[0m
+2025-08-25T16:53:17.1441431Z [36;1m  echo "✅ Python detected"[0m
+2025-08-25T16:53:17.1442440Z [36;1mfi[0m
+2025-08-25T16:53:17.1443138Z [36;1m[0m
+2025-08-25T16:53:17.1443923Z [36;1m# Check for JavaScript/TypeScript[0m
+2025-08-25T16:53:17.1445768Z [36;1mif find . -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx" -type f | head -1 | grep -q .; then[0m
+2025-08-25T16:53:17.1447807Z [36;1m  languages+=("javascript")[0m
+2025-08-25T16:53:17.1449037Z [36;1m  echo "✅ JavaScript/TypeScript detected"[0m
+2025-08-25T16:53:17.1450211Z [36;1mfi[0m
+2025-08-25T16:53:17.1450939Z [36;1m[0m
+2025-08-25T16:53:17.1451641Z [36;1m# Check for Java[0m
+2025-08-25T16:53:17.1452849Z [36;1mif find . -name "*.java" -type f | head -1 | grep -q .; then[0m
+2025-08-25T16:53:17.1454265Z [36;1m  languages+=("java")[0m
+2025-08-25T16:53:17.1455240Z [36;1m  echo "✅ Java detected"[0m
+2025-08-25T16:53:17.1456223Z [36;1mfi[0m
+2025-08-25T16:53:17.1456912Z [36;1m[0m
+2025-08-25T16:53:17.1457712Z [36;1m# Check for C#[0m
+2025-08-25T16:53:17.1458846Z [36;1mif find . -name "*.cs" -type f | head -1 | grep -q .; then[0m
+2025-08-25T16:53:17.1460212Z [36;1m  languages+=("csharp")[0m
+2025-08-25T16:53:17.1461207Z [36;1m  echo "✅ C# detected"[0m
+2025-08-25T16:53:17.1462151Z [36;1mfi[0m
+2025-08-25T16:53:17.1462842Z [36;1m[0m
+2025-08-25T16:53:17.1463545Z [36;1m# Check for Go[0m
+2025-08-25T16:53:17.1464696Z [36;1mif find . -name "*.go" -type f | head -1 | grep -q .; then[0m
+2025-08-25T16:53:17.1466068Z [36;1m  languages+=("go")[0m
+2025-08-25T16:53:17.1467012Z [36;1m  echo "✅ Go detected"[0m
+2025-08-25T16:53:17.1468049Z [36;1mfi[0m
+2025-08-25T16:53:17.1468742Z [36;1m[0m
+2025-08-25T16:53:17.1469442Z [36;1m# Check for Ruby[0m
+2025-08-25T16:53:17.1470629Z [36;1mif find . -name "*.rb" -type f | head -1 | grep -q .; then[0m
+2025-08-25T16:53:17.1472014Z [36;1m  languages+=("ruby")[0m
+2025-08-25T16:53:17.1473005Z [36;1m  echo "✅ Ruby detected"[0m
+2025-08-25T16:53:17.1473979Z [36;1mfi[0m
+2025-08-25T16:53:17.1474724Z [36;1m[0m
+2025-08-25T16:53:17.1475608Z [36;1m# Default to Python if no languages detected[0m
+2025-08-25T16:53:17.1476969Z [36;1mif [ ${#languages[@]} -eq 0 ]; then[0m
+2025-08-25T16:53:17.1478203Z [36;1m  languages+=("python")[0m
+2025-08-25T16:53:17.1479588Z [36;1m  echo "⚠️ No specific languages detected, defaulting to Python"[0m
+2025-08-25T16:53:17.1481006Z [36;1mfi[0m
+2025-08-25T16:53:17.1481685Z [36;1m[0m
+2025-08-25T16:53:17.1482392Z [36;1m# Handle manual override[0m
+2025-08-25T16:53:17.1483698Z [36;1mif [ "" != "" ] && [ "" != "auto-detect" ]; then[0m
+2025-08-25T16:53:17.1484892Z [36;1m  IFS=',' read -ra ADDR <<< ""[0m
+2025-08-25T16:53:17.1485952Z [36;1m  languages=("${ADDR[@]}")[0m
+2025-08-25T16:53:17.1487476Z [36;1m  echo "🔧 Using manually specified languages: ${languages[*]}"[0m
+2025-08-25T16:53:17.1488861Z [36;1mfi[0m
+2025-08-25T16:53:17.1489528Z [36;1m[0m
+2025-08-25T16:53:17.1490257Z [36;1m# Create JSON array for matrix[0m
+2025-08-25T16:53:17.1491480Z [36;1mprintf -v joined '"%s",' "${languages[@]}"[0m
+2025-08-25T16:53:17.1492700Z [36;1mmatrix_json="[${joined%,}]"[0m
+2025-08-25T16:53:17.1493673Z [36;1m[0m
+2025-08-25T16:53:17.1494603Z [36;1mecho "languages=${languages[*]}" >> $GITHUB_OUTPUT[0m
+2025-08-25T16:53:17.1496094Z [36;1mecho "matrix=${matrix_json}" >> $GITHUB_OUTPUT[0m
+2025-08-25T16:53:17.1497382Z [36;1m[0m
+2025-08-25T16:53:17.1498241Z [36;1mecho "📋 Final language list: ${languages[*]}"[0m
+2025-08-25T16:53:17.1499764Z [36;1mecho "🔄 Matrix JSON: ${matrix_json}"[0m
+2025-08-25T16:53:17.1571582Z shell: /usr/bin/bash -e {0}
+2025-08-25T16:53:17.1572474Z env:
+2025-08-25T16:53:17.1573558Z   CODEQL_EXTRACTOR_PYTHON_OPTION_ANALYZE_RAW_STRING_LITERALS: true
+2025-08-25T16:53:17.1575101Z   CODEQL_PYTHON_IGNORE_IMPORT_ERRORS: true
+2025-08-25T16:53:17.1576768Z   CODEQL_ACTION_EXTRA_OPTIONS: {"database": {"finalize": ["--max-disk-cache", "1024"]}}
+2025-08-25T16:53:17.1578628Z ##[endgroup]
+2025-08-25T16:53:17.1669193Z Detecting languages in repository...
+2025-08-25T16:53:17.1691342Z ✅ Python detected
+2025-08-25T16:53:17.1803461Z 📋 Final language list: python
+2025-08-25T16:53:17.1805526Z 🔄 Matrix JSON: ["python"]
+2025-08-25T16:53:17.1985511Z Post job cleanup.
+2025-08-25T16:53:17.2795806Z [command]/usr/bin/git version
+2025-08-25T16:53:17.2831801Z git version 2.51.0
+2025-08-25T16:53:17.2870767Z Temporarily overriding HOME='/home/runner/work/_temp/2bbd7635-8d65-42d2-9ee3-a33540ae4b7f' before making global git config changes
+2025-08-25T16:53:17.2874965Z Adding repository directory to the temporary git global config as a safe directory
+2025-08-25T16:53:17.2879015Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ai-script-inventory-/ai-script-inventory-
+2025-08-25T16:53:17.2914385Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-08-25T16:53:17.2948334Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-08-25T16:53:17.3175682Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-08-25T16:53:17.3200864Z http.https://github.com/.extraheader
+2025-08-25T16:53:17.3212940Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-08-25T16:53:17.3246668Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-08-25T16:53:17.3598429Z Evaluate and set job outputs
+2025-08-25T16:53:17.3605623Z Set output 'languages'
+2025-08-25T16:53:17.3608383Z Set output 'matrix'
+2025-08-25T16:53:17.3609898Z Cleaning up orphan processes

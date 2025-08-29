@@ -1,0 +1,100 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/oneapi_common/lin/",
+    "id": "intel.oneapi.lin.oneapi-common.content",
+    "packages": [
+        {
+            "id": "intel.oneapi.lin.oneapi-common.licensing",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.oneapi-common.licensing,v=2024.2.1+21/manifest.json",
+                    "preDownload": true,
+                    "sha384": "997ac1af586fd49195209eeeb704dce9258e91562921f452b0e3e6770512d7c6aa20863fa6c2d440766ed7c9290f6cc7",
+                    "size": 2896,
+                    "url": "https://installer.repos.intel.com/oneapi/oneapi_common/lin/intel.oneapi.lin.oneapi-common.licensing,v=2024.2.1%2B21/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.oneapi-common.licensing,v=2024.2.1+21/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "b73065ecf3645e9531827db3fd22e0c6b6b564e6e926cee2f9aa9626134b0b1237b00c0c5ead332b3bf7b52ca357c9af",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/oneapi_common/lin/intel.oneapi.lin.oneapi-common.licensing,v=2024.2.1%2B21/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+21"
+        },
+        {
+            "id": "intel.oneapi.lin.oneapi-common.vars",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.oneapi-common.vars,v=2024.2.1+21/manifest.json",
+                    "preDownload": true,
+                    "sha384": "66b6836cffa53b9d5af193d134a63877eff7fd38558c8e894be20813550c76e19d4d37ed84735e2a1aa399b434b3ebcc",
+                    "size": 1765,
+                    "url": "https://installer.repos.intel.com/oneapi/oneapi_common/lin/intel.oneapi.lin.oneapi-common.vars,v=2024.2.1%2B21/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.oneapi-common.vars,v=2024.2.1+21/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "18f0bdb8a298f4e3818a52ef05c70ee3a9204c113d05f9aa3ce2711bc4c73b6d6ac2f0e889b6e61ce031aa0e46622f57",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/oneapi_common/lin/intel.oneapi.lin.oneapi-common.vars,v=2024.2.1%2B21/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+21"
+        },
+        {
+            "id": "intel.oneapi.lin.oneapi-common.oneapi-vars",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.oneapi-common.oneapi-vars,v=2024.2.1+21/manifest.json",
+                    "preDownload": true,
+                    "sha384": "3d6cc354dd871c2f4f91079e223f32dc71abcec9954eae8fc66434009d697fe5f72a76c9be494d1a6fce91b03cf3ad6a",
+                    "size": 2903,
+                    "url": "https://installer.repos.intel.com/oneapi/oneapi_common/lin/intel.oneapi.lin.oneapi-common.oneapi-vars,v=2024.2.1%2B21/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.oneapi-common.oneapi-vars,v=2024.2.1+21/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "6480d82d7c79ebd028bf382bde006794cdbf9f0319b7ce98beb391de389efa947888ddfed43ba39da3b261646ba73112",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/oneapi_common/lin/intel.oneapi.lin.oneapi-common.oneapi-vars,v=2024.2.1%2B21/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+21"
+        },
+        {
+            "id": "intel.oneapi.lin.oneapi-common.product",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.oneapi-common.product,v=2024.2.1+21/manifest.json",
+                    "preDownload": true,
+                    "sha384": "39cb8220720d3a4535cf09c26ed3dfe593dad31b0c224bcabd5b3e10d563899e694c2884316b4165469ab268ab472f8b",
+                    "size": 162749,
+                    "url": "https://installer.repos.intel.com/oneapi/oneapi_common/lin/intel.oneapi.lin.oneapi-common.product,v=2024.2.1%2B21/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.oneapi-common.product,v=2024.2.1+21/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "5c54f4fa5f194d88c40c60df857c86ebd729e7dc0a27c0689d92693a71da67df2ebb82be1400daa7b94b888face1f42f",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/oneapi_common/lin/intel.oneapi.lin.oneapi-common.product,v=2024.2.1%2B21/manifest.json.sig"
+                }
+            ],
+            "type": "product",
+            "version": "2024.2.1+21"
+        }
+    ],
+    "type": "contentmanifest",
+    "version": "2024.2.1+21"
+}

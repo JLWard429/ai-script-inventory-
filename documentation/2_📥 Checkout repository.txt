@@ -1,0 +1,100 @@
+﻿2025-08-25T16:54:07.9926831Z ##[group]Run actions/checkout@v5
+2025-08-25T16:54:07.9927505Z with:
+2025-08-25T16:54:07.9927734Z   fetch-depth: 0
+2025-08-25T16:54:07.9928019Z   repository: JLWard429/ai-script-inventory-
+2025-08-25T16:54:07.9928504Z   token: ***
+2025-08-25T16:54:07.9928788Z   ssh-strict: true
+2025-08-25T16:54:07.9929010Z   ssh-user: git
+2025-08-25T16:54:07.9929259Z   persist-credentials: true
+2025-08-25T16:54:07.9929521Z   clean: true
+2025-08-25T16:54:07.9929741Z   sparse-checkout-cone-mode: true
+2025-08-25T16:54:07.9930034Z   fetch-tags: false
+2025-08-25T16:54:07.9930254Z   show-progress: true
+2025-08-25T16:54:07.9930473Z   lfs: false
+2025-08-25T16:54:07.9930677Z   submodules: false
+2025-08-25T16:54:07.9930905Z   set-safe-directory: true
+2025-08-25T16:54:07.9931600Z env:
+2025-08-25T16:54:07.9931929Z   CODEQL_EXTRACTOR_PYTHON_OPTION_ANALYZE_RAW_STRING_LITERALS: true
+2025-08-25T16:54:07.9932318Z   CODEQL_PYTHON_IGNORE_IMPORT_ERRORS: true
+2025-08-25T16:54:07.9932735Z   CODEQL_ACTION_EXTRA_OPTIONS: {"database": {"finalize": ["--max-disk-cache", "1024"]}}
+2025-08-25T16:54:07.9933173Z ##[endgroup]
+2025-08-25T16:54:08.0895300Z Syncing repository: JLWard429/ai-script-inventory-
+2025-08-25T16:54:08.0897014Z ##[group]Getting Git version info
+2025-08-25T16:54:08.0897595Z Working directory is '/home/runner/work/ai-script-inventory-/ai-script-inventory-'
+2025-08-25T16:54:08.0898378Z [command]/usr/bin/git version
+2025-08-25T16:54:08.0911978Z git version 2.51.0
+2025-08-25T16:54:08.0932837Z ##[endgroup]
+2025-08-25T16:54:08.0946859Z Temporarily overriding HOME='/home/runner/work/_temp/a40013ee-f47b-4944-9320-a15354fa822b' before making global git config changes
+2025-08-25T16:54:08.0948197Z Adding repository directory to the temporary git global config as a safe directory
+2025-08-25T16:54:08.0951812Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ai-script-inventory-/ai-script-inventory-
+2025-08-25T16:54:08.0984993Z Deleting the contents of '/home/runner/work/ai-script-inventory-/ai-script-inventory-'
+2025-08-25T16:54:08.0988340Z ##[group]Initializing the repository
+2025-08-25T16:54:08.0993009Z [command]/usr/bin/git init /home/runner/work/ai-script-inventory-/ai-script-inventory-
+2025-08-25T16:54:08.1048868Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-08-25T16:54:08.1049903Z hint: is subject to change. To configure the initial branch name to use in all
+2025-08-25T16:54:08.1050778Z hint: of your new repositories, which will suppress this warning, call:
+2025-08-25T16:54:08.1051646Z hint:
+2025-08-25T16:54:08.1052147Z hint: 	git config --global init.defaultBranch <name>
+2025-08-25T16:54:08.1052700Z hint:
+2025-08-25T16:54:08.1053031Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-08-25T16:54:08.1053553Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-08-25T16:54:08.1053932Z hint:
+2025-08-25T16:54:08.1054163Z hint: 	git branch -m <name>
+2025-08-25T16:54:08.1054410Z hint:
+2025-08-25T16:54:08.1054753Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-08-25T16:54:08.1055421Z Initialized empty Git repository in /home/runner/work/ai-script-inventory-/ai-script-inventory-/.git/
+2025-08-25T16:54:08.1063522Z [command]/usr/bin/git remote add origin https://github.com/JLWard429/ai-script-inventory-
+2025-08-25T16:54:08.1098568Z ##[endgroup]
+2025-08-25T16:54:08.1099034Z ##[group]Disabling automatic garbage collection
+2025-08-25T16:54:08.1103863Z [command]/usr/bin/git config --local gc.auto 0
+2025-08-25T16:54:08.1130667Z ##[endgroup]
+2025-08-25T16:54:08.1131724Z ##[group]Setting up auth
+2025-08-25T16:54:08.1138495Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-08-25T16:54:08.1168476Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-08-25T16:54:08.1425669Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-08-25T16:54:08.1456446Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-08-25T16:54:08.1697234Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-08-25T16:54:08.1733839Z ##[endgroup]
+2025-08-25T16:54:08.1734482Z ##[group]Fetching the repository
+2025-08-25T16:54:08.1743320Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/* +d99966afd10d639723a481583ea8f51d91aff023:refs/remotes/pull/29/merge
+2025-08-25T16:54:08.4629070Z From https://github.com/JLWard429/ai-script-inventory-
+2025-08-25T16:54:08.4630943Z  * [new branch]      add-ci-badge-readme                      -> origin/add-ci-badge-readme
+2025-08-25T16:54:08.4632795Z  * [new branch]      copilot/fix-17                           -> origin/copilot/fix-17
+2025-08-25T16:54:08.4633968Z  * [new branch]      copilot/fix-1780917c-85f5-424d-9294-df3051629bab -> origin/copilot/fix-1780917c-85f5-424d-9294-df3051629bab
+2025-08-25T16:54:08.4635050Z  * [new branch]      copilot/fix-19                           -> origin/copilot/fix-19
+2025-08-25T16:54:08.4635848Z  * [new branch]      copilot/fix-21                           -> origin/copilot/fix-21
+2025-08-25T16:54:08.4637240Z  * [new branch]      copilot/fix-4971ce11-604f-4e6a-b144-8d0d00a0986a -> origin/copilot/fix-4971ce11-604f-4e6a-b144-8d0d00a0986a
+2025-08-25T16:54:08.4639794Z  * [new branch]      copilot/fix-848ca0da-792a-4a84-840d-a8508768ec7d -> origin/copilot/fix-848ca0da-792a-4a84-840d-a8508768ec7d
+2025-08-25T16:54:08.4641322Z  * [new branch]      copilot/fix-9af5e4c2-389d-416f-bab1-3e9267090e64 -> origin/copilot/fix-9af5e4c2-389d-416f-bab1-3e9267090e64
+2025-08-25T16:54:08.4642404Z  * [new branch]      dependencies                             -> origin/dependencies
+2025-08-25T16:54:08.4657631Z  * [new branch]      main                                     -> origin/main
+2025-08-25T16:54:08.4658487Z  * [new branch]      superhuman-ai-terminal                   -> origin/superhuman-ai-terminal
+2025-08-25T16:54:08.4659369Z  * [new ref]         d99966afd10d639723a481583ea8f51d91aff023 -> pull/29/merge
+2025-08-25T16:54:08.4702671Z ##[endgroup]
+2025-08-25T16:54:08.4703347Z ##[group]Determining the checkout info
+2025-08-25T16:54:08.4707179Z ##[endgroup]
+2025-08-25T16:54:08.4712682Z [command]/usr/bin/git sparse-checkout disable
+2025-08-25T16:54:08.4764107Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-08-25T16:54:08.4791874Z ##[group]Checking out the ref
+2025-08-25T16:54:08.4797028Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/29/merge
+2025-08-25T16:54:08.5164606Z Note: switching to 'refs/remotes/pull/29/merge'.
+2025-08-25T16:54:08.5165744Z 
+2025-08-25T16:54:08.5167816Z You are in 'detached HEAD' state. You can look around, make experimental
+2025-08-25T16:54:08.5169849Z changes and commit them, and you can discard any commits you make in this
+2025-08-25T16:54:08.5170795Z state without impacting any branches by switching back to a branch.
+2025-08-25T16:54:08.5171564Z 
+2025-08-25T16:54:08.5171943Z If you want to create a new branch to retain commits you create, you may
+2025-08-25T16:54:08.5172753Z do so (now or later) by using -c with the switch command. Example:
+2025-08-25T16:54:08.5173209Z 
+2025-08-25T16:54:08.5173420Z   git switch -c <new-branch-name>
+2025-08-25T16:54:08.5173747Z 
+2025-08-25T16:54:08.5173943Z Or undo this operation with:
+2025-08-25T16:54:08.5174234Z 
+2025-08-25T16:54:08.5174462Z   git switch -
+2025-08-25T16:54:08.5174703Z 
+2025-08-25T16:54:08.5175113Z Turn off this advice by setting config variable advice.detachedHead to false
+2025-08-25T16:54:08.5175657Z 
+2025-08-25T16:54:08.5176322Z HEAD is now at d99966a Merge bac908e7004cb65eadefb352ddff263c454a9349 into 1c96ddf15b7a32c6f7a5114d385a6787fac88d71
+2025-08-25T16:54:08.5182523Z ##[endgroup]
+2025-08-25T16:54:08.5217961Z [command]/usr/bin/git log -1 --format=%H
+2025-08-25T16:54:08.5248259Z d99966afd10d639723a481583ea8f51d91aff023

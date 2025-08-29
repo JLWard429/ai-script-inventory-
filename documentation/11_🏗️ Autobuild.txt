@@ -1,0 +1,75 @@
+﻿2025-08-25T16:54:22.5017532Z ##[group]Run github/codeql-action/autobuild@v3
+2025-08-25T16:54:22.5018014Z with:
+2025-08-25T16:54:22.5018313Z   token: ***
+2025-08-25T16:54:22.5018605Z   matrix: {
+  "language": "java",
+  "os": "ubuntu-latest",
+  "build-mode": "autobuild"
+}
+2025-08-25T16:54:22.5018944Z env:
+2025-08-25T16:54:22.5019189Z   CODEQL_EXTRACTOR_PYTHON_OPTION_ANALYZE_RAW_STRING_LITERALS: true
+2025-08-25T16:54:22.5019529Z   CODEQL_PYTHON_IGNORE_IMPORT_ERRORS: true
+2025-08-25T16:54:22.5019898Z   CODEQL_ACTION_EXTRA_OPTIONS: {"database": {"finalize": ["--max-disk-cache", "1024"]}}
+2025-08-25T16:54:22.5020395Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-25T16:54:22.5020832Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.16-8/x64
+2025-08-25T16:54:22.5021192Z   CODEQL_ACTION_FEATURE_MULTI_LANGUAGE: false
+2025-08-25T16:54:22.5021456Z   CODEQL_ACTION_FEATURE_SANDWICH: false
+2025-08-25T16:54:22.5021704Z   CODEQL_ACTION_FEATURE_SARIF_COMBINE: true
+2025-08-25T16:54:22.5021960Z   CODEQL_ACTION_FEATURE_WILL_UPLOAD: true
+2025-08-25T16:54:22.5022250Z   CODEQL_ACTION_VERSION: 3.29.11
+2025-08-25T16:54:22.5022507Z   JOB_RUN_UUID: e7f8d146-cf02-4e78-9a45-5aed6bd40616
+2025-08-25T16:54:22.5022771Z   CODEQL_ACTION_INIT_HAS_RUN: true
+2025-08-25T16:54:22.5023073Z   CODEQL_ACTION_ANALYSIS_KEY: .github/workflows/codeql.yml:analyze
+2025-08-25T16:54:22.5023431Z   CODEQL_WORKFLOW_STARTED_AT: 2025-08-25T16:54:04.803Z
+2025-08-25T16:54:22.5023697Z   CODEQL_RAM: 14581
+2025-08-25T16:54:22.5023878Z   CODEQL_THREADS: 4
+2025-08-25T16:54:22.5024140Z   CODEQL_SCRATCH_DIR: /home/runner/work/_temp/codeql_databases/working
+2025-08-25T16:54:22.5024467Z   CODEQL_VERBOSITY: warnings
+2025-08-25T16:54:22.5024883Z   CODEQL_DIST: /opt/hostedtoolcache/CodeQL/2.22.4/x64/codeql
+2025-08-25T16:54:22.5025181Z   CODEQL_PLATFORM: linux64
+2025-08-25T16:54:22.5025393Z   CODEQL_PLATFORM_DLL_EXTENSION: .so
+2025-08-25T16:54:22.5025749Z   CODEQL_JAVA_HOME: /opt/hostedtoolcache/CodeQL/2.22.4/x64/codeql/tools/linux64/java
+2025-08-25T16:54:22.5026234Z   CODEQL_EXTRACTOR_JAVA_ROOT: /opt/hostedtoolcache/CodeQL/2.22.4/x64/codeql/java
+2025-08-25T16:54:22.5026903Z   CODEQL_EXTRACTOR_JAVA_WIP_DATABASE: /home/runner/work/_temp/codeql_databases/java
+2025-08-25T16:54:22.5027900Z   CODEQL_EXTRACTOR_JAVA_DIAGNOSTIC_DIR: /home/runner/work/_temp/codeql_databases/java/diagnostic/extractors/java
+2025-08-25T16:54:22.5028511Z   CODEQL_EXTRACTOR_JAVA_LOG_DIR: /home/runner/work/_temp/codeql_databases/java/log
+2025-08-25T16:54:22.5029056Z   CODEQL_EXTRACTOR_JAVA_SCRATCH_DIR: /home/runner/work/_temp/codeql_databases/java/working
+2025-08-25T16:54:22.5029583Z   CODEQL_EXTRACTOR_JAVA_TRAP_DIR: /home/runner/work/_temp/codeql_databases/java/trap/java
+2025-08-25T16:54:22.5030337Z   CODEQL_EXTRACTOR_JAVA_SOURCE_ARCHIVE_DIR: /home/runner/work/_temp/codeql_databases/java/src
+2025-08-25T16:54:22.5030748Z   CODEQL_EXTRACTOR_JAVA_THREADS: 4
+2025-08-25T16:54:22.5030979Z   CODEQL_EXTRACTOR_JAVA_RAM: 14581
+2025-08-25T16:54:22.5032096Z   LGTM_INDEX_FILTERS: exclude:**/*
+include:python_scripts/
+include:.github/scripts/
+include:*.py
+exclude:**/*.md
+exclude:**/*.txt
+exclude:**/*.json
+exclude:**/test_*/
+exclude:**/*_test.py
+exclude:**/*.log
+exclude:.git/
+exclude:node_modules/
+exclude:venv/
+exclude:env/
+exclude:__pycache__/
+exclude:*.pyc
+exclude:.pytest_cache/
+exclude:build/
+exclude:dist/
+exclude:.tox/
+2025-08-25T16:54:22.5033368Z   CODEQL_TRACER_LOG: /home/runner/work/_temp/codeql_databases/log/build-tracer.log
+2025-08-25T16:54:22.5033872Z   CODEQL_TRACER_DIAGNOSTICS_DIR: /home/runner/work/_temp/codeql_databases/diagnostic/tracer
+2025-08-25T16:54:22.5034273Z   CODEQL_TRACER_LANGUAGES: java
+2025-08-25T16:54:22.5034861Z   SEMMLE_PRELOAD_libtrace: /opt/hostedtoolcache/CodeQL/2.22.4/x64/codeql/tools/linux64/${LIB}_${PLATFORM}_trace.so
+2025-08-25T16:54:22.5035536Z   SEMMLE_PRELOAD_libtrace32: /opt/hostedtoolcache/CodeQL/2.22.4/x64/codeql/tools/linux64/lib32trace.so
+2025-08-25T16:54:22.5036164Z   SEMMLE_PRELOAD_libtrace64: /opt/hostedtoolcache/CodeQL/2.22.4/x64/codeql/tools/linux64/lib64trace.so
+2025-08-25T16:54:22.5037062Z   CODEQL_RUNNER: /opt/hostedtoolcache/CodeQL/2.22.4/x64/codeql/tools/linux64/runner
+2025-08-25T16:54:22.5037614Z   LD_PRELOAD: /opt/hostedtoolcache/CodeQL/2.22.4/x64/codeql/tools/linux64/${LIB}_${PLATFORM}_trace.so
+2025-08-25T16:54:22.5038022Z ##[endgroup]
+2025-08-25T16:54:24.8454416Z ##[group]Attempting to automatically build java code
+2025-08-25T16:54:24.8567847Z Picked up JAVA_TOOL_OPTIONS:  -Dhttp.keepAlive=false -Dmaven.wagon.http.pool=false
+2025-08-25T16:54:25.8347089Z [command]/opt/hostedtoolcache/CodeQL/2.22.4/x64/codeql/java/tools/autobuild.sh 
+2025-08-25T16:54:25.8424377Z Picked up JAVA_TOOL_OPTIONS:  -Dhttp.keepAlive=false -Dmaven.wagon.http.pool=false
+2025-08-25T16:54:26.4262788Z ERROR: Could not detect a suitable build command for the source checkout.
+2025-08-25T16:54:26.4384538Z ##[error]We were unable to automatically build your code. Please replace the call to the autobuild action with your custom build steps. Encountered a fatal error while running "/opt/hostedtoolcache/CodeQL/2.22.4/x64/codeql/java/tools/autobuild.sh". Exit code was 1 and last log line was: ERROR: Could not detect a suitable build command for the source checkout. See the logs for more details.

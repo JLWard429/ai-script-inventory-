@@ -1,0 +1,54 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/tcm/lin/",
+    "id": "intel.oneapi.lin.tcm.content",
+    "packages": [
+        {
+            "id": "intel.oneapi.lin.tcm",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.tcm,v=1.1.1+11/manifest.json",
+                    "preDownload": true,
+                    "sha384": "afb6d6814041c83a5d86eb8af3a36422e87d6e3fb1bdd5d5e7e4e4b85eb5d95a55c416a25d1f5ec608921663bd5003d4",
+                    "size": 3463,
+                    "url": "https://installer.repos.intel.com/oneapi/tcm/lin/intel.oneapi.lin.tcm,v=1.1.1%2B11/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.tcm,v=1.1.1+11/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "c49385ec60d24ca3ccb8709c8d11eafc760d4a044b66d45065576dccf37e97c955df19e081a493bf04ce66d22e449dfa",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/tcm/lin/intel.oneapi.lin.tcm,v=1.1.1%2B11/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "1.1.1+11"
+        },
+        {
+            "id": "intel.oneapi.lin.tcm.product",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.tcm.product,v=1.1.1+11/manifest.json",
+                    "preDownload": true,
+                    "sha384": "ddfd30f4890ea703e03aa5dca392a08731991735c0a996eb78f2c362e18fd5d2f5cc0b7036239cff0475a80c80edd78d",
+                    "size": 161573,
+                    "url": "https://installer.repos.intel.com/oneapi/tcm/lin/intel.oneapi.lin.tcm.product,v=1.1.1%2B11/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.tcm.product,v=1.1.1+11/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "e4585eeb0820b0db92d02c892cc2769a90b4b68543585b7d77489684bfaae6decd637ee279f364f19f91f38fe25e6fff",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/tcm/lin/intel.oneapi.lin.tcm.product,v=1.1.1%2B11/manifest.json.sig"
+                }
+            ],
+            "type": "product",
+            "version": "1.1.1+11"
+        }
+    ],
+    "type": "contentmanifest",
+    "version": "1.1.1+11"
+}

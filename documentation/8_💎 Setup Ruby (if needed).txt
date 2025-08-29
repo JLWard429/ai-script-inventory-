@@ -1,0 +1,30 @@
+﻿2025-08-25T16:54:08.5484260Z ##[group]Run ruby/setup-ruby@v1
+2025-08-25T16:54:08.5484690Z with:
+2025-08-25T16:54:08.5485087Z   ruby-version: 3.1
+2025-08-25T16:54:08.5485419Z   bundler-cache: false
+2025-08-25T16:54:08.5485708Z env:
+2025-08-25T16:54:08.5486156Z   CODEQL_EXTRACTOR_PYTHON_OPTION_ANALYZE_RAW_STRING_LITERALS: true
+2025-08-25T16:54:08.5486660Z   CODEQL_PYTHON_IGNORE_IMPORT_ERRORS: true
+2025-08-25T16:54:08.5487176Z   CODEQL_ACTION_EXTRA_OPTIONS: {"database": {"finalize": ["--max-disk-cache", "1024"]}}
+2025-08-25T16:54:08.5487714Z ##[endgroup]
+2025-08-25T16:54:08.7124307Z ##[group]Modifying PATH
+2025-08-25T16:54:08.7128075Z Entries added to PATH to use selected Ruby:
+2025-08-25T16:54:08.7131707Z   /opt/hostedtoolcache/Ruby/3.1.7/x64/bin
+2025-08-25T16:54:08.7142496Z ##[endgroup]
+2025-08-25T16:54:08.7161408Z ##[group]Downloading Ruby
+2025-08-25T16:54:08.7196311Z https://github.com/ruby/ruby-builder/releases/download/toolcache/ruby-3.1.7-ubuntu-24.04.tar.gz
+2025-08-25T16:54:08.9645711Z Took   0.25 seconds
+2025-08-25T16:54:08.9646928Z ##[endgroup]
+2025-08-25T16:54:08.9647635Z ##[group]Extracting  Ruby
+2025-08-25T16:54:08.9693008Z [command]/usr/bin/tar -xz -C /opt/hostedtoolcache/Ruby/3.1.7 -f /home/runner/work/_temp/7c3eb6d3-812c-4af1-99a6-6c98588dbd98
+2025-08-25T16:54:09.3757336Z Took   0.41 seconds
+2025-08-25T16:54:09.3758292Z ##[endgroup]
+2025-08-25T16:54:09.3758695Z ##[group]Print Ruby version
+2025-08-25T16:54:09.3773341Z [command]/opt/hostedtoolcache/Ruby/3.1.7/x64/bin/ruby --version
+2025-08-25T16:54:09.3958416Z ruby 3.1.7p261 (2025-03-26 revision 0a3704f218) [x86_64-linux]
+2025-08-25T16:54:09.3977489Z Took   0.02 seconds
+2025-08-25T16:54:09.3978306Z ##[endgroup]
+2025-08-25T16:54:09.3979475Z ##[group]Installing Bundler
+2025-08-25T16:54:09.3984009Z Using Bundler 2 shipped with ruby-3.1.7
+2025-08-25T16:54:09.3984542Z Took   0.00 seconds
+2025-08-25T16:54:09.3985169Z ##[endgroup]

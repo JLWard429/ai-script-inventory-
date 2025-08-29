@@ -1,0 +1,77 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/tbb/lin/",
+    "id": "intel.oneapi.lin.tbb_oneapi.content",
+    "packages": [
+        {
+            "id": "intel.oneapi.lin.tbb.devel",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.tbb.devel,v=2021.13.1+12/manifest.json",
+                    "preDownload": true,
+                    "sha384": "3502912cca4701ecaac536ccd52aa23e90c4883034794f387939e927e0d3de5a6bc373e32eda04480458f5d2c0266460",
+                    "size": 3680,
+                    "url": "https://installer.repos.intel.com/oneapi/tbb/lin/intel.oneapi.lin.tbb.devel,v=2021.13.1%2B12/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.tbb.devel,v=2021.13.1+12/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "cab210f73562721b774dbf30c4c9aec116bb8459147bf62c42ef8a9244961c3703b48abd14e88feeb51fdfc49bf9886a",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/tbb/lin/intel.oneapi.lin.tbb.devel,v=2021.13.1%2B12/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2021.13.1+12"
+        },
+        {
+            "id": "intel.oneapi.lin.tbb.product",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.tbb.product,v=2021.13.1+12/manifest.json",
+                    "preDownload": true,
+                    "sha384": "9e66db6b4a1d3a24e44540ed0fb1e19a2c64b9664add1149ff0d4e9c5adb079d349546e6cabafe20cdf7bce81258d7b1",
+                    "size": 167703,
+                    "url": "https://installer.repos.intel.com/oneapi/tbb/lin/intel.oneapi.lin.tbb.product,v=2021.13.1%2B12/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.tbb.product,v=2021.13.1+12/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "7446033fbef42d223d9fda85cbdb19e6e4951e568309b96716dbfa11acb87191ea979aeb59291dba35b074a11ce5e9fd",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/tbb/lin/intel.oneapi.lin.tbb.product,v=2021.13.1%2B12/manifest.json.sig"
+                }
+            ],
+            "type": "product",
+            "version": "2021.13.1+12"
+        },
+        {
+            "id": "intel.oneapi.lin.tbb.runtime",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.tbb.runtime,v=2021.13.1+12/manifest.json",
+                    "preDownload": true,
+                    "sha384": "1cdc3d00fadd6575205ed1a86ac59feb0202c701901fa709629d9c5b2bd1174268dc675bdc2c72962e760b7270e47012",
+                    "size": 3438,
+                    "url": "https://installer.repos.intel.com/oneapi/tbb/lin/intel.oneapi.lin.tbb.runtime,v=2021.13.1%2B12/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.tbb.runtime,v=2021.13.1+12/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "8dbd034ab86f0fde19ae04c6baf712d8d9d44976fc0de3154ebfedcdc93bffcb6f4ea10d223ca89d18bf126cfad8928d",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/tbb/lin/intel.oneapi.lin.tbb.runtime,v=2021.13.1%2B12/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2021.13.1+12"
+        }
+    ],
+    "type": "contentmanifest",
+    "version": "2021.13.1+12"
+}

@@ -1,0 +1,4 @@
+﻿2025-08-25T16:55:40.9476067Z Post job cleanup.
+2025-08-25T16:55:42.5424118Z CodeQL job status was configuration error.
+2025-08-25T16:55:42.5533535Z Sending status report for init-post step.
+2025-08-25T16:55:42.7816989Z Status report sent for init-post step.

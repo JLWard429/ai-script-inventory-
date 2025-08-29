@@ -1,0 +1,8 @@
+<qterminal>
+  <group name="Change Directory">
+    <command name="Home" value="cd >
+  </group>
+  <group name="File Manager">
+    <command name="Open here" value="xdg-open >
+  </group>
+</qterminal>

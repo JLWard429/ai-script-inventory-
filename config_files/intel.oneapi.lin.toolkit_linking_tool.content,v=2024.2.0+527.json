@@ -1,0 +1,54 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/tlt/lin/",
+    "id": "intel.oneapi.lin.toolkit_linking_tool.content",
+    "packages": [
+        {
+            "id": "intel.oneapi.lin.tlt.product",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.tlt.product,v=2024.2.0+527/manifest.json",
+                    "preDownload": true,
+                    "sha384": "832387a76829780cf805ed6eddefd449e84029f7041919533c1b532cb8a9bc88970883cbecf3dc3a2c53fa6af161df22",
+                    "size": 161428,
+                    "url": "https://installer.repos.intel.com/oneapi/tlt/lin/intel.oneapi.lin.tlt.product,v=2024.2.0%2B527/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.tlt.product,v=2024.2.0+527/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "3a96de25d3e79fb57793e5e3e81b6df1c031b7001792104817d3cf416bf53523115d7346262f5e692a17b3dfbc013b9c",
+                    "size": 10176,
+                    "url": "https://installer.repos.intel.com/oneapi/tlt/lin/intel.oneapi.lin.tlt.product,v=2024.2.0%2B527/manifest.json.sig"
+                }
+            ],
+            "type": "product",
+            "version": "2024.2.0+527"
+        },
+        {
+            "id": "intel.oneapi.lin.tlt",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.tlt,v=2024.2.0+527/manifest.json",
+                    "preDownload": true,
+                    "sha384": "7693a590c73d5726c07f924b006803d3ffddd765dacd53c26d9951c30590978bb042911b4c72dba40605c27d1f801ed0",
+                    "size": 1903,
+                    "url": "https://installer.repos.intel.com/oneapi/tlt/lin/intel.oneapi.lin.tlt,v=2024.2.0%2B527/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.tlt,v=2024.2.0+527/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "c6eafee749d6296ec14d9a478964d9020450bd9085d2d857d4da87eec517c28605ef19a8c24e3c2fe1e0b71c54ae7081",
+                    "size": 10176,
+                    "url": "https://installer.repos.intel.com/oneapi/tlt/lin/intel.oneapi.lin.tlt,v=2024.2.0%2B527/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.0+527"
+        }
+    ],
+    "type": "contentmanifest",
+    "version": "2024.2.0+527"
+}

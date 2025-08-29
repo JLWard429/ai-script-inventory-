@@ -1,0 +1,54 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/dnnl/lin/",
+    "id": "intel.oneapi.lin.onednn.content",
+    "packages": [
+        {
+            "id": "intel.oneapi.lin.dnnl.product",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dnnl.product,v=2024.2.1+74/manifest.json",
+                    "preDownload": true,
+                    "sha384": "f4e53b59418ea8e207b47a2c8802e1c0491b2c9af596aa172500673d8df9b739ffd7894a20fd83133e2fa5e6df3017ac",
+                    "size": 167478,
+                    "url": "https://installer.repos.intel.com/oneapi/dnnl/lin/intel.oneapi.lin.dnnl.product,v=2024.2.1%2B74/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dnnl.product,v=2024.2.1+74/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "3f7ea1f938eb044b8cea679068ae321cefe5260ed9bcd7812625ed1c8ba9726ea5f4c356db5f8d601c72f27d60a391a3",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/dnnl/lin/intel.oneapi.lin.dnnl.product,v=2024.2.1%2B74/manifest.json.sig"
+                }
+            ],
+            "type": "product",
+            "version": "2024.2.1+74"
+        },
+        {
+            "id": "intel.oneapi.lin.dnnl",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dnnl,v=2024.2.1+74/manifest.json",
+                    "preDownload": true,
+                    "sha384": "87bee85b409cfed04ebb5a8109c607efb359194db9f028bd162b85fe4fed6ce8961b4f7e7cd42c14559102fb6c9bd864",
+                    "size": 5134,
+                    "url": "https://installer.repos.intel.com/oneapi/dnnl/lin/intel.oneapi.lin.dnnl,v=2024.2.1%2B74/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.dnnl,v=2024.2.1+74/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "1c7d6b8c3998761d5edde7cb3e506dc92507a4029c0f50a464237fe07fd78e18a5c5c6cb67c3c394230c4ef3ef346c30",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/dnnl/lin/intel.oneapi.lin.dnnl,v=2024.2.1%2B74/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+74"
+        }
+    ],
+    "type": "contentmanifest",
+    "version": "2024.2.1+74"
+}

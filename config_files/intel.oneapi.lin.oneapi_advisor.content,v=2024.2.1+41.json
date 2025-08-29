@@ -1,0 +1,100 @@
+{
+    "baseUrl": "https://installer.repos.intel.com/oneapi/advisor/lin/",
+    "id": "intel.oneapi.lin.oneapi_advisor.content",
+    "packages": [
+        {
+            "id": "intel.oneapi.lin.advisor",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.advisor,v=2024.2.1+41/manifest.json",
+                    "preDownload": true,
+                    "sha384": "a543ad439c529493c0ee0e0af03acbe68961327f2a7f72975870eee87223c1d3bf38bf0b32148efe5f595fd096f2719f",
+                    "size": 4784,
+                    "url": "https://installer.repos.intel.com/oneapi/advisor/lin/intel.oneapi.lin.advisor,v=2024.2.1%2B41/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.advisor,v=2024.2.1+41/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "5af8bd919e9358ff11f01d64aade5c35cb3e48cf6223d82873e4637d0798abdefb77bc49a05fe792af7f1eb0998e2324",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/advisor/lin/intel.oneapi.lin.advisor,v=2024.2.1%2B41/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+41"
+        },
+        {
+            "id": "intel.oneapi.lin.advisor.eclipse-plugin",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.advisor.eclipse-plugin,v=2024.2.1+41/manifest.json",
+                    "preDownload": true,
+                    "sha384": "12ac570db317154cdba4869b3f16cacd999091f7753a6b52e753ca6c5212560ad9074ed7c76daa6bfe1190859eeee000",
+                    "size": 2958,
+                    "url": "https://installer.repos.intel.com/oneapi/advisor/lin/intel.oneapi.lin.advisor.eclipse-plugin,v=2024.2.1%2B41/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.advisor.eclipse-plugin,v=2024.2.1+41/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "58299b6086a2e5b79003922b525f725945daa473356bb7f6ea6b732c946dfec7b82e65ebc23fd8a0de4749650a10da51",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/advisor/lin/intel.oneapi.lin.advisor.eclipse-plugin,v=2024.2.1%2B41/manifest.json.sig"
+                }
+            ],
+            "type": "cup",
+            "version": "2024.2.1+41"
+        },
+        {
+            "id": "intel.oneapi.lin.advisor.eclipse-integration",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.advisor.eclipse-integration,v=2024.2.1+41/manifest.json",
+                    "preDownload": true,
+                    "sha384": "d2379188bd15a6c38ed5bb715822e24b17db1dc0a29e830fddc72d0901b4fa4bb5c5f581b0e4fb69d4c4a92a1f7e2890",
+                    "size": 1600,
+                    "url": "https://installer.repos.intel.com/oneapi/advisor/lin/intel.oneapi.lin.advisor.eclipse-integration,v=2024.2.1%2B41/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.advisor.eclipse-integration,v=2024.2.1+41/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "af8654ae966f6711bf363c780772c69b796b83c3ad69e1ecfbc0559952dc593e9a727f03082baecb0846b170e27e8670",
+                    "size": 11585,
+                    "url": "https://installer.repos.intel.com/oneapi/advisor/lin/intel.oneapi.lin.advisor.eclipse-integration,v=2024.2.1%2B41/manifest.json.sig"
+                }
+            ],
+            "type": "component",
+            "version": "2024.2.1+41"
+        },
+        {
+            "id": "intel.oneapi.lin.advisor.product",
+            "payloads": [
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.advisor.product,v=2024.2.1+41/manifest.json",
+                    "preDownload": true,
+                    "sha384": "ae0a895a5aadbbd43dd6ab6124cba371df1dcd56c35469de79f43a6269bc5845a39dbf52349a96c00c6fd766c9b0215e",
+                    "size": 163393,
+                    "url": "https://installer.repos.intel.com/oneapi/advisor/lin/intel.oneapi.lin.advisor.product,v=2024.2.1%2B41/manifest.json"
+                },
+                {
+                    "cache": true,
+                    "fileName": "intel.oneapi.lin.advisor.product,v=2024.2.1+41/manifest.json.sig",
+                    "preDownload": true,
+                    "sha384": "87b2c80b74812c68def3f6bea4bf470322bc1641ab98117938a4ad0803f9a1e9cda7a8d30143df860b80aa7e50e2a00c",
+                    "size": 11586,
+                    "url": "https://installer.repos.intel.com/oneapi/advisor/lin/intel.oneapi.lin.advisor.product,v=2024.2.1%2B41/manifest.json.sig"
+                }
+            ],
+            "type": "product",
+            "version": "2024.2.1+41"
+        }
+    ],
+    "type": "contentmanifest",
+    "version": "2024.2.1+41"
+}
