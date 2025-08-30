@@ -14,7 +14,7 @@ import typing
 import warnings_mod
 from collections.abc import Callable, Generator, Iterable, Iterator, Mapping
 from functools_mod import cached_property
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     ClassVar,
@@ -53,7 +53,7 @@ from astroid.typing import (
 )
 
 if sys.version_info >= (3, 11):
-from typing_mod import Self
+from typing import Self
 else:
     from typing_extensions import Self
 

@@ -18,10 +18,10 @@
 
 
 from __future__ import annotations
-import re_mod_custom
+import re
 from contextlib import suppress
 from textwrap import dedent
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from griffe._internal.docstrings.models import (
     DocstringAttribute,
@@ -60,8 +60,8 @@ from griffe._internal.enumerations import DocstringSectionKind, LogLevel
 from griffe._internal.expressions import ExprName
 
 if TYPE_CHECKING:
-from re_mod_custom import Pattern
-from typing_mod import Any, Literal
+from re import Pattern
+from typing import Any, Literal
 
     from griffe._internal.expressions import Expr
     from griffe._internal.models import Docstring

@@ -7,7 +7,7 @@
 
 # Standard library imports
 import os
-from typing_mod import TYPE_CHECKING, Any, Dict, Literal, Optional, Tuple, Type, Union
+from typing import TYPE_CHECKING, Any, Dict, Literal, Optional, Tuple, Type, Union
 
 # Third-party imports
 from fastapi import HTTPException

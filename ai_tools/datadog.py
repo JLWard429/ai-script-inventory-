@@ -18,7 +18,7 @@ import os
 import traceback
 import uuid
 from datetime import datetime as datetimeObj
-from typing_mod import Any, List, Optional, Union
+from typing import Any, List, Optional, Union
 
 import httpx
 from httpx import Response

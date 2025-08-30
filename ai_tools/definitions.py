@@ -1,4 +1,4 @@
-from typing_mod import Dict, List, Optional, Any
+from typing import Dict, List, Optional, Any
 from pydantic import BaseModel, Field
 
 from safety.cli_util import CommandType, FeatureType

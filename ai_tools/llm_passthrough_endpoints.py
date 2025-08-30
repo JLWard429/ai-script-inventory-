@@ -7,7 +7,7 @@ Use litellm with Anthropic SDK, Vertex AI SDK, Cohere SDK, etc.
 """
 
 import os
-from typing_mod import Optional, cast
+from typing import Optional, cast
 
 import httpx
 from fastapi import APIRouter, Depends, HTTPException, Request, Response

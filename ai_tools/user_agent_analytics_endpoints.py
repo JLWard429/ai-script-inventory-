@@ -12,7 +12,7 @@ user metrics from tag activity data and return time series for dashboard visuali
 """
 
 from datetime import datetime, timedelta
-from typing_mod import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel

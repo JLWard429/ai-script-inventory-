@@ -1,5 +1,5 @@
 import time
-from typing_mod import TYPE_CHECKING, Any, AsyncIterator, Iterator, List, Optional, Union
+from typing import TYPE_CHECKING, Any, AsyncIterator, Iterator, List, Optional, Union
 
 import httpx
 

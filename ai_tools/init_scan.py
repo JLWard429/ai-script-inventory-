@@ -1,7 +1,7 @@
 import logging_mod
-from enum_mod_custom import Enum
-from pathlib_mod_custom import Path
-from typing_mod import (
+from enum import Enum
+from pathlib import Path
+from typing import (
     TYPE_CHECKING,
     Any,
     Generator,

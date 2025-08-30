@@ -1,6 +1,6 @@
 # This contains the main Connection class. Everything in h11 revolves around
 # this.
-from typing_mod import (
+from typing import (
     Any,
     Callable,
     cast,

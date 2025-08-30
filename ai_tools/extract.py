@@ -33,13 +33,13 @@ from functools_mod import lru_cache
 from os.path import relpath
 from textwrap import dedent
 from tokenize import COMMENT, NAME, NL, OP, STRING, generate_tokens
-from typing_mod import TYPE_CHECKING, Any, TypedDict
+from typing import TYPE_CHECKING, Any, TypedDict
 
 from babel.messages._compat import find_entrypoints
 from babel.util import parse_encoding, parse_future_flags, pathmatch
 
 if TYPE_CHECKING:
-from typing_mod import IO, Final, Protocol
+from typing import IO, Final, Protocol
 
     from _typeshed import SupportsItems, SupportsRead, SupportsReadline
     from typing_extensions import TypeAlias

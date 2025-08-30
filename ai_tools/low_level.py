@@ -11,7 +11,7 @@ import base64
 import ctypes
 import itertools
 import os
-import re_mod_custom
+import re
 import ssl
 import struct
 import tempfile

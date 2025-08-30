@@ -1,4 +1,4 @@
-from typing_mod import Any, Callable, Dict, Mapping, Optional, Union, cast
+from typing import Any, Callable, Dict, Mapping, Optional, Union, cast
 
 import wrapt  # type: ignore[import-untyped]
 from opentelemetry.trace import Span

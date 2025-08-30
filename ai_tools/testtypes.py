@@ -1,7 +1,7 @@
 """Test cases for mypy types and type operations."""
 
 from __future__ import annotations
-import re_mod_custom
+import re
 from unittest_mod import TestCase, skipUnless
 
 from mypy.erasetype import erase_type, remove_instance_last_known_values

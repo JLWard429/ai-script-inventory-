@@ -1,4 +1,4 @@
-from typing_mod import List, Optional, TextIO, Union
+from typing import List, Optional, TextIO, Union
 
 from branca.element import MacroElement
 

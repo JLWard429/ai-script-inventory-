@@ -1,6 +1,6 @@
 import inspect
 import json
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 import pytest
 

@@ -1,5 +1,5 @@
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 import platform_mod
 import re
 import shutil

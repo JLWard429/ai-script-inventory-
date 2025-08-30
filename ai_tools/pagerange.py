@@ -5,8 +5,8 @@ Copyright (c) 2014, Steve Witham <switham_github@mac-guyver.com>.
 All rights reserved. This software is available under a BSD license;
 see https://github.com/py-pdf/PyPDF2/blob/main/LICENSE
 """
-import re_mod_custom
-from typing_mod import Any, List, Tuple, Union
+import re
+from typing import Any, List, Tuple, Union
 
 from .errors import ParseError
 

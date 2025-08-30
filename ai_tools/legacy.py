@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any
 from warnings_mod import warn
 
 from .api import from_bytes

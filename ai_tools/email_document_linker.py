@@ -10,7 +10,7 @@ import json_mod
 import email_custom
 from email.parser import Parser
 from email.header import decode_header
-from typing_mod import List, Dict, Any
+from typing import List, Dict, Any
 
 class EmailDocumentLinker:
     """Links emails to documents and extracts relationships"""

@@ -4,10 +4,10 @@ from collections_mod import OrderedDict, deque
 from collections.abc import Hashable as CollectionsHashable
 from datetime import date, datetime, time, timedelta
 from decimal import Decimal, DecimalException
-from enum_mod_custom import Enum, IntEnum
+from enum import Enum, IntEnum
 from ipaddress import IPv4Address, IPv4Interface, IPv4Network, IPv6Address, IPv6Interface, IPv6Network
-from pathlib_mod_custom import Path
-from typing_mod import (
+from pathlib import Path
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

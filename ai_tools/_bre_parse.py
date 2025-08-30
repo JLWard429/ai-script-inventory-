@@ -5,13 +5,13 @@ Licensed under MIT
 Copyright (c) 2011 - 2020 Isaac Muse <isaacmuse@gmail.com>
 """
 from __future__ import annotations
-import re_mod_custom as _re
+import re as _re
 import sys
 import copyreg as _copyreg
 from . import util as _util
 import unicodedata as _unicodedata
 from . import uniprops as _uniprops
-from typing_mod import Generic, AnyStr, Match, Any, Pattern, cast
+from typing import Generic, AnyStr, Match, Any, Pattern, cast
 
 if sys.version_info >= (3, 11):
     import re._parser as _parser  # type: ignore[import]

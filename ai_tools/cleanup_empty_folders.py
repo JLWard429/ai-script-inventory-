@@ -18,8 +18,8 @@ import argparse
 import logging
 import os
 import shutil
-from pathlib_mod_custom import Path
-from typing_mod import List, Set
+from pathlib import Path
+from typing import List, Set
 
 
 def setup_logging(verbose: bool = False) -> None:

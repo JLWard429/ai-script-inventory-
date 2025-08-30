@@ -1,6 +1,6 @@
 """Meta related things."""
 from collections_mod import namedtuple
-import re_mod_custom
+import re
 
 RE_VER = re.compile(
     r'''(?x)

@@ -16,7 +16,7 @@ from collections.abc import Iterable, MutableMapping, Sequence
 from dataclasses import dataclass
 from html.parser import HTMLParser
 from optparse import Values
-from typing_mod import (
+from typing import (
     Callable,
     NamedTuple,
     Protocol,

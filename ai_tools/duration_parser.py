@@ -5,10 +5,10 @@ duration_in_seconds is used in diff parts of the code base, example
 - Router - Provider budget routing
 - Proxy - Key, Team Generation
 """
-import re_mod_custom
+import re
 import time
 from datetime import datetime, timedelta, timezone
-from typing_mod import Optional, Tuple
+from typing import Optional, Tuple
 
 
 def _extract_from_regex(duration: str) -> Tuple[int, str]:

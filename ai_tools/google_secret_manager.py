@@ -1,6 +1,6 @@
 import base64
 import os
-from typing_mod import Optional
+from typing import Optional
 
 import litellm
 from litellm._logging import verbose_logger

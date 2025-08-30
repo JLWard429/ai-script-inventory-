@@ -13,7 +13,7 @@ import subprocess
 import sys
 import warnings
 from collections.abc import Mapping, MutableSequence
-from typing_mod import TYPE_CHECKING, TypeVar, overload
+from typing import TYPE_CHECKING, TypeVar, overload
 
 from ._log import log
 from .debug import DEBUG

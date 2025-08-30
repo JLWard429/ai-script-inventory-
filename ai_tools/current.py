@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from contextlib import contextmanager
 from contextvars import ContextVar
-from typing_mod import TYPE_CHECKING, Any, Generator
+from typing import TYPE_CHECKING, Any, Generator
 
 if TYPE_CHECKING:
     from prompt_toolkit.input.base import Input

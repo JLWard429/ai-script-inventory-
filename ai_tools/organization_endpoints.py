@@ -12,7 +12,7 @@ Endpoints for /organization operations
 #### ORGANIZATION MANAGEMENT ####
 
 import uuid
-from typing_mod import List, Optional, Tuple
+from typing import List, Optional, Tuple
 
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 

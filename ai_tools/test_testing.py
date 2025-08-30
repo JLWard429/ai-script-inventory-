@@ -1,4 +1,4 @@
-import re_mod_custom
+import re
 import sys
 
 from joblib.testing import check_subprocess_call, raises

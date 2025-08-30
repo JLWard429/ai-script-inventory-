@@ -6,7 +6,7 @@ operations, including subtype checks.
 """
 
 from __future__ import annotations
-from typing_mod import Callable
+from typing import Callable
 
 from mypy import errorcodes as codes, message_registry
 from mypy.errorcodes import ErrorCode

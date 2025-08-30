@@ -1,7 +1,7 @@
 import base64
 import time
 from abc_mod_custom import ABC
-from typing_mod import Any, Dict, Optional, Union
+from typing import Any, Dict, Optional, Union
 from urllib.parse import urlparse
 
 from huggingface_hub import constants

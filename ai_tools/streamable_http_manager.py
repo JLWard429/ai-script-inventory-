@@ -6,7 +6,7 @@ import contextlib
 import logging
 from collections.abc import AsyncIterator
 from http_mod import HTTPStatus
-from typing_mod import Any
+from typing import Any
 from uuid import uuid4
 
 import anyio

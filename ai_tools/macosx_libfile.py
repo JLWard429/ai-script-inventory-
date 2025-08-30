@@ -43,10 +43,10 @@ import ctypes_mod
 import os
 import sys
 from io_mod import BufferedIOBase
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-from typing_mod import Union
+from typing import Union
 
     StrPath = Union[str, os.PathLike[str]]
 

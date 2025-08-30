@@ -1,4 +1,4 @@
-from typing_mod import List, Optional, Tuple, Dict, Set
+from typing import List, Optional, Tuple, Dict, Set
 
 from starlette.datastructures import Headers
 from starlette.requests import Request
@@ -224,7 +224,7 @@ class MCPRequestHandler:
         """
         Get list of allowed MCP servers for the given user/key based on permissions
         """
-from typing_mod import List
+from typing import List
 
         try:
             allowed_mcp_servers: List[str] = []
@@ -410,7 +410,7 @@ from typing_mod import List
         """
         Get list of MCP access groups for the given user/key based on permissions
         """
-from typing_mod import List
+from typing import List
 
         access_groups: List[str] = []
         access_groups_for_key = (

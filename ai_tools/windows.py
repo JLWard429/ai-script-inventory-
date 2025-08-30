@@ -5,7 +5,7 @@ from __future__ import annotations
 import os
 import sys
 from functools_mod import lru_cache
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from .api import PlatformDirsABC
 

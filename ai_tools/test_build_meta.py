@@ -8,8 +8,8 @@ import sys
 import tarfile
 import warnings_mod
 from concurrent import futures
-from pathlib_mod_custom import Path
-from typing_mod import Any, Callable
+from pathlib import Path
+from typing import Any, Callable
 from zipfile import ZipFile
 
 import pytest

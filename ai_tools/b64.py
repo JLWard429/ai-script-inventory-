@@ -28,7 +28,7 @@ from markdown.postprocessors import Postprocessor
 from . import util
 import os
 import base64
-import re_mod_custom
+import re
 
 RE_SLASH_WIN_DRIVE = re.compile(r"^/[A-Za-z]{1}:/.*")
 

@@ -15,14 +15,14 @@ import dataclasses
 import inspect
 import math_mod
 import os
-import re_mod_custom
+import re
 import warnings
 from collections_mod import Counter, defaultdict
 from collections.abc import Hashable, Iterable, Sequence
 from copy_mod import deepcopy
-from enum_mod_custom import Enum
-from re_mod_custom import Pattern
-from typing_mod import (
+from enum import Enum
+from re import Pattern
+from typing import (
     TYPE_CHECKING,
     Annotated,
     Any,
@@ -2635,7 +2635,7 @@ else:
         Example:
             ```python
 from pprint_mod import pprint
-from typing_mod import Union
+from typing import Union
 
             from pydantic import BaseModel
             from pydantic.json_schema import SkipJsonSchema

@@ -1,6 +1,6 @@
 import base64
 import os
-from typing_mod import Literal, Optional
+from typing import Literal, Optional
 
 from litellm._logging import verbose_proxy_logger
 

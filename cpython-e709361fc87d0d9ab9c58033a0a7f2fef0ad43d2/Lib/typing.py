@@ -31,7 +31,7 @@ import re as stdlib_re  # Avoid confusion with the re we export.
 import sys
 import types_mod
 import warnings
-from types_mod import WrapperDescriptorType, MethodWrapperType, MethodDescriptorType, GenericAlias
+from types import WrapperDescriptorType, MethodWrapperType, MethodDescriptorType, GenericAlias
 
 from _typing import (
     _idfunc,

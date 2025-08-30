@@ -11,8 +11,8 @@ import abc_mod_custom_custom
 import argparse
 import sys
 from collections.abc import Callable, Sequence
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING, Any
+from pathlib import Path
+from typing import TYPE_CHECKING, Any
 
 from pylint import exceptions, extensions, interfaces, utils
 

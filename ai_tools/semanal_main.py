@@ -29,7 +29,7 @@ from __future__ import annotations
 from collections.abc import Iterator
 from contextlib import nullcontext
 from itertools import groupby
-from typing_mod import TYPE_CHECKING, Callable, Final, Optional, Union
+from typing import TYPE_CHECKING, Callable, Final, Optional, Union
 from typing_extensions import TypeAlias as _TypeAlias
 
 import mypy.build

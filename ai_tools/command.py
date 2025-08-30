@@ -1,10 +1,10 @@
 # type: ignore
-from enum_mod_custom import Enum
+from enum import Enum
 import logging_mod
-from pathlib_mod_custom import Path
+from pathlib import Path
 import json_mod
 import sys
-from typing_mod import Any, Dict, List, Optional, Set, Tuple, Callable
+from typing import Any, Dict, List, Optional, Set, Tuple, Callable
 
 from safety.constants import EXIT_CODE_VULNERABILITIES_FOUND, DEFAULT_EPILOG
 from safety.safety import process_fixes_scan
@@ -77,7 +77,7 @@ from safety_schemas.models import (
 from safety.scan.fun_mode.easter_eggs import run_easter_egg
 
 try:
-from typing_mod import Annotated
+from typing import Annotated
 except ImportError:
     from typing_extensions import Annotated
 

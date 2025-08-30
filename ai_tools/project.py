@@ -1,6 +1,6 @@
 from dataclasses import asdict, field
-from pathlib_mod_custom import Path
-from typing_mod import List, Optional, Union
+from pathlib import Path
+from typing import List, Optional, Union
 
 from pydantic.dataclasses import dataclass
 from typing_extensions import Self

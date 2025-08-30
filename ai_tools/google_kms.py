@@ -9,7 +9,7 @@ Requires:
 """
 
 import os
-from typing_mod import Optional
+from typing import Optional
 
 import litellm
 from litellm.proxy._types import KeyManagementSystem

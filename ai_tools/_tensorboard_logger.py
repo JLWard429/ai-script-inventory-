@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """Contains a logger to push training logs to the Hub, using Tensorboard."""
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING, List, Optional, Union
+from pathlib import Path
+from typing import TYPE_CHECKING, List, Optional, Union
 
 from ._commit_scheduler import CommitScheduler
 from .errors import EntryNotFoundError

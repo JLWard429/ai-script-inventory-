@@ -262,7 +262,7 @@ Options:
                 import importlib_resources as resources
             except ImportError:
                 from importlib import resources
-from pathlib_mod_custom import Path
+from pathlib import Path
 
             def cp(name, dst):
                 """copy resource `name` to `dst`"""

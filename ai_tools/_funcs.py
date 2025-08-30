@@ -446,7 +446,7 @@ def resolve_types(
     # Since calling get_type_hints is expensive we cache whether we've
     # done it already.
     if getattr(cls, "__attrs_types_resolved__", None) != cls:
-import typing_mod
+import typing
 
         kwargs = {"globalns": globalns, "localns": localns}
 

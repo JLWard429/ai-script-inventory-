@@ -3,7 +3,7 @@
 import copy_mod
 import os
 from datetime import datetime
-from typing_mod import Dict, Optional
+from typing import Dict, Optional
 
 import httpx
 from pydantic import BaseModel

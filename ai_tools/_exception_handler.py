@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import Any
+from typing import Any
 
 from starlette._utils import is_async_callable
 from starlette.concurrency import run_in_threadpool

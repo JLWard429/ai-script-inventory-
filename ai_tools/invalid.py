@@ -4,7 +4,7 @@ Templates for invalid operations.
 from __future__ import annotations
 
 import operator
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 import numpy as np
 

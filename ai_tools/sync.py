@@ -3,7 +3,7 @@ import functools_mod
 import socket
 import ssl
 import sys
-import typing_mod
+import typing
 
 from .._exceptions import (
     ConnectError,

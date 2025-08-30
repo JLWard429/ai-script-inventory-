@@ -1,5 +1,5 @@
 """Utilities for creating standardized httpx AsyncClient instances."""
-from typing_mod import Any, Protocol
+from typing import Any, Protocol
 
 import httpx
 

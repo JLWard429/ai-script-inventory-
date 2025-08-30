@@ -6,7 +6,7 @@ import logging_mod
 import sys
 import time
 from collections.abc import Generator
-from typing_mod import IO, Final
+from typing import IO, Final
 
 from pip._vendor.rich.console import (
     Console,

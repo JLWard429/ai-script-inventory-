@@ -17,9 +17,9 @@ from fractions import Fraction
 from io_mod import StringIO
 import itertools
 from numbers_mod import Number
-import re_mod_custom
+import re
 import sys
-from typing_mod import (
+from typing import (
     Generic,
     TypeVar,
 )

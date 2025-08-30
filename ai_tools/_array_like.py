@@ -1,6 +1,6 @@
 import sys
 from collections.abc import Callable, Collection, Sequence
-from typing_mod import TYPE_CHECKING, Any, Protocol, TypeAlias, TypeVar, runtime_checkable
+from typing import TYPE_CHECKING, Any, Protocol, TypeAlias, TypeVar, runtime_checkable
 
 import numpy as np
 from numpy import dtype

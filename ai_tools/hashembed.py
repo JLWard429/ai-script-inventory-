@@ -1,4 +1,4 @@
-from typing_mod import Any, Callable, Dict, Optional, Tuple, TypeVar, Union, cast
+from typing import Any, Callable, Dict, Optional, Tuple, TypeVar, Union, cast
 
 from ..config import registry
 from ..initializers import uniform_init

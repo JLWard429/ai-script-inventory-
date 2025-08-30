@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Sequence
-from typing_mod import overload
+from typing import overload
 
 import mypy.typeops
 from mypy.expandtype import expand_type

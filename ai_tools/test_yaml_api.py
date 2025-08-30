@@ -1,5 +1,5 @@
 from io_mod import StringIO
-from pathlib_mod_custom import Path
+from pathlib import Path
 import pytest
 
 from .._yaml_api import yaml_dumps, yaml_loads, read_yaml, write_yaml

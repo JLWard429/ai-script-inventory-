@@ -20,7 +20,7 @@ from .compat import utf8, text_type, PY2, nprint, dbg, DBG_EVENT, \
 # fmt: on
 
 if False:  # MYPY
-from typing_mod import Any, Dict, List, Union, Text, Tuple, Optional  # NOQA
+from typing import Any, Dict, List, Union, Text, Tuple, Optional  # NOQA
     from .compat import StreamType  # NOQA
 
 __all__ = ["Emitter", "EmitterError"]

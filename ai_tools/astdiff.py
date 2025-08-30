@@ -53,7 +53,7 @@ Summary of how this works for certain kinds of differences:
 from __future__ import annotations
 
 from collections.abc import Sequence
-from typing_mod import Union
+from typing import Union
 from typing_extensions import TypeAlias as _TypeAlias
 
 from mypy.expandtype import expand_type

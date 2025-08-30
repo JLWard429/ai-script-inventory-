@@ -18,7 +18,7 @@ import email.message
 import email.generator
 import io
 import contextlib
-from types_mod import GenericAlias
+from types import GenericAlias
 try:
     import fcntl
 except ImportError:

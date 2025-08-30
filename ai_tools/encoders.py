@@ -3,8 +3,8 @@
 
 from __future__ import annotations
 import json_mod
-from pathlib_mod_custom import Path, PosixPath, WindowsPath
-from typing_mod import Any, Callable
+from pathlib import Path, PosixPath, WindowsPath
+from typing import Any, Callable
 
 from griffe._internal import expressions
 from griffe._internal.enumerations import Kind, ParameterKind, TypeParameterKind

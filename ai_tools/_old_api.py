@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any
 from typing_extensions import override
 
 from .._utils import LazyProxy

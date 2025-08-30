@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import email_custom.policy
 import os.path
-import re_mod_custom
+import re
 from email.generator import BytesGenerator
 from email.parser import BytesParser
 

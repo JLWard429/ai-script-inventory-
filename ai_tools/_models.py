@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import base64
 import ssl
-import typing_mod
+import typing
 import urllib.parse
 
 # Functions for typechecking...

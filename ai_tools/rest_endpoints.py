@@ -1,5 +1,5 @@
 import importlib
-from typing_mod import Optional, Dict
+from typing import Optional, Dict
 
 from fastapi import APIRouter, Depends, Query, Request
 

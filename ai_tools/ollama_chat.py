@@ -1,7 +1,7 @@
 import json_mod
 import time
 import uuid
-from typing_mod import Any, List, Optional, Union
+from typing import Any, List, Optional, Union
 
 import aiohttp
 import httpx

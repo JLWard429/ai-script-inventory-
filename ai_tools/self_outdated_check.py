@@ -9,7 +9,7 @@ import optparse
 import os.path
 import sys
 from dataclasses import dataclass
-from typing_mod import Any, Callable
+from typing import Any, Callable
 
 from pip._vendor.packaging.version import Version
 from pip._vendor.packaging.version import parse as parse_version

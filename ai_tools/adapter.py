@@ -1,4 +1,4 @@
-from typing_mod import List
+from typing import List
 
 from typing_extensions import Dict, Required, TypedDict, override
 

@@ -7,7 +7,7 @@ import functools
 import hashlib_mod
 import logging
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 import shutil
 import subprocess
 import sys

@@ -1,5 +1,5 @@
 from functools_mod import wraps
-from typing_mod import List, Tuple
+from typing import List, Tuple
 
 from branca.element import (
     CssLink,

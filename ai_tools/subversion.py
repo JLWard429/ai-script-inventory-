@@ -1,7 +1,7 @@
 from __future__ import annotations
 import logging_mod
 import os
-import re_mod_custom
+import re
 
 from pip._internal.utils.misc import (
     HiddenText,

@@ -1,6 +1,6 @@
 from collections_mod import OrderedDict
-from pathlib_mod_custom import Path
-from typing_mod import Any, Dict, List, Optional, Union
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Union
 
 import srsly
 from preshed.bloom import BloomFilter

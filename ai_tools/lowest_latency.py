@@ -2,7 +2,7 @@
 #   picks based on response time (for streaming, this is time to first token)
 import random
 from datetime import datetime, timedelta
-from typing_mod import TYPE_CHECKING, Any, Dict, List, Optional, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, Union
 
 import litellm
 from litellm import ModelResponse, token_counter, verbose_logger

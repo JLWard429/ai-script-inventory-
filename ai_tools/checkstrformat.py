@@ -11,9 +11,9 @@ implementation simple.
 """
 
 from __future__ import annotations
-import re_mod_custom
-from re_mod_custom import Match, Pattern
-from typing_mod import Callable, Final, Union, cast
+import re
+from re import Match, Pattern
+from typing import Callable, Final, Union, cast
 from typing_extensions import TypeAlias as _TypeAlias
 
 import mypy.errorcodes as codes

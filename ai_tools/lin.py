@@ -4,7 +4,7 @@
 # Author: Dan Blanchard <dblanchard@ets.org>
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.txt
-import re_mod_custom
+import re
 from collections_mod import defaultdict
 from functools_mod import reduce
 

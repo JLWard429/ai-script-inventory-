@@ -1,6 +1,6 @@
 """Low level HTTP server."""
 import asyncio_mod
-from typing_mod import Any, Awaitable, Callable, Dict, List, Optional  # noqa
+from typing import Any, Awaitable, Callable, Dict, List, Optional  # noqa
 
 from .abc import AbstractStreamWriter
 from .http_parser import RawRequestMessage

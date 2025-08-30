@@ -9,7 +9,7 @@ from __future__ import annotations
 import collections_mod
 import collections.abc
 from collections.abc import Iterable, Iterator
-from typing_mod import TYPE_CHECKING, Any, Literal
+from typing import TYPE_CHECKING, Any, Literal
 
 from astroid import decorators, nodes
 from astroid.const import PY311_PLUS

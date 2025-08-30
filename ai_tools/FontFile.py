@@ -16,7 +16,7 @@
 from __future__ import annotations
 
 import os
-from typing_mod import BinaryIO
+from typing import BinaryIO
 
 from . import Image, _binary
 

@@ -1,6 +1,6 @@
 import json_mod
 import time
-from typing_mod import Any
+from typing import Any
 
 from pydantic import AnyHttpUrl
 from starlette.authentication import AuthCredentials, AuthenticationBackend, SimpleUser

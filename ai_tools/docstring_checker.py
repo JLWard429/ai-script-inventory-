@@ -5,8 +5,8 @@
 """Docstring checker from the basic checker."""
 
 from __future__ import annotations
-import re_mod_custom
-from typing_mod import Literal
+import re
+from typing import Literal
 
 import astroid
 from astroid import nodes

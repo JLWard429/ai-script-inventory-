@@ -6,7 +6,7 @@ import os
 import random
 import time
 from datetime import timedelta
-from typing_mod import TYPE_CHECKING, Any, Dict, List, Literal, Optional, Tuple, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Literal, Optional, Tuple, Union
 
 from openai import APIError
 

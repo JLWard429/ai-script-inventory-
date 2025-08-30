@@ -1,6 +1,6 @@
 import asyncio_mod
 from datetime import datetime
-from typing_mod import List, Optional
+from typing import List, Optional
 
 import httpx
 

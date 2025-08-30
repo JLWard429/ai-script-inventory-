@@ -53,7 +53,7 @@ class E[Eggs]:
 
 
 def nested():
-    from types_mod import SimpleNamespace
+    from types import SimpleNamespace
     from inspect import get_annotations
 
     Eggs = bytes

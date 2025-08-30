@@ -1,4 +1,4 @@
-from typing_mod import Optional, Dict, Any
+from typing import Optional, Dict, Any
 from .http_client import HTTPClient
 
 class HealthManagementClient:

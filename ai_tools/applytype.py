@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Iterable, Sequence
-from typing_mod import Callable
+from typing import Callable
 
 import mypy.subtypes
 from mypy.erasetype import erase_typevars

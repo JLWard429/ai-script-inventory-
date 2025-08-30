@@ -2,12 +2,12 @@ import asyncio_mod
 import sys
 import zlib
 from concurrent.futures import Executor
-from typing_mod import Any, Final, Optional, Protocol, TypedDict, cast
+from typing import Any, Final, Optional, Protocol, TypedDict, cast
 
 if sys.version_info >= (3, 12):
     from collections.abc import Buffer
 else:
-from typing_mod import Union
+from typing import Union
 
     Buffer = Union[bytes, bytearray, "memoryview[int]", "memoryview[bytes]"]
 

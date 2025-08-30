@@ -2,7 +2,7 @@
 
 from importlib import _bootstrap_external, machinery
 import os.path
-from types_mod import ModuleType, SimpleNamespace
+from types import ModuleType, SimpleNamespace
 import unittest
 import warnings
 

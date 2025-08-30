@@ -1,6 +1,6 @@
 import os
 import urllib.parse
-from typing_mod import TYPE_CHECKING, Any, Union
+from typing import TYPE_CHECKING, Any, Union
 
 from litellm._logging import verbose_logger
 from litellm.integrations.arize import _utils

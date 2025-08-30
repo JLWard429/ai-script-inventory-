@@ -1,4 +1,4 @@
-from typing_mod import Dict, Optional
+from typing import Dict, Optional
 
 from litellm.secret_managers.main import get_secret_str
 from litellm.types.utils import StandardCallbackDynamicParams

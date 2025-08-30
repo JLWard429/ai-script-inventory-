@@ -4,7 +4,7 @@ This module provides commands for clearing conversation history.
 """
 
 import os
-from typing_mod import Dict, List, Optional
+from typing import Dict, List, Optional
 
 from rich.console import Console  # pylint: disable=import-error
 from rich.panel import Panel  # pylint: disable=import-error

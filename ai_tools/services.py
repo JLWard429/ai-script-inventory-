@@ -1,6 +1,6 @@
-import enum_mod_custom
+import enum
 import uuid
-from typing_mod import List, Optional
+from typing import List, Optional
 
 from pydantic import BaseModel, Field
 from typing_extensions import TypedDict

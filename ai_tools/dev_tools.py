@@ -11,8 +11,8 @@ This script provides common development tasks automation including:
 
 import argparse
 import sys
-from pathlib_mod_custom import Path
-from typing_mod import List
+from pathlib import Path
+from typing import List
 
 # Import shared utilities
 from utils import run_command

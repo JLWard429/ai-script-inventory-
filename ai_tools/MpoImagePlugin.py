@@ -21,7 +21,7 @@ from __future__ import annotations
 
 import os
 import struct
-from typing_mod import IO, Any, cast
+from typing import IO, Any, cast
 
 from . import (
     Image,

@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 from abc_mod_custom import ABC, abstractmethod
-from typing_mod import Union
+from typing import Union
 
 from opentelemetry import trace
 from opentelemetry.context import Context

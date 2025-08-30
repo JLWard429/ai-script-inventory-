@@ -14,7 +14,7 @@
 
 import os
 import threading
-from enum_mod_custom import Enum
+from enum import Enum
 
 from opentelemetry.instrumentation.utils import http_status_to_status_code
 from opentelemetry.semconv.attributes.client_attributes import (

@@ -1,7 +1,7 @@
 import random
 import warnings
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING, Callable, Iterable, Iterator, List, Optional, Union
+from pathlib import Path
+from typing import TYPE_CHECKING, Callable, Iterable, Iterator, List, Optional, Union
 
 import srsly
 

@@ -59,7 +59,7 @@ except ImportError as err:
         raise
 
 if PY3:
-import enum_mod_custom
+import enum
 else:
     enum = None
 

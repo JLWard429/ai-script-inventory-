@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Callable, Mapping
-from typing_mod import Any, TypeVar, final, overload
+from typing import Any, TypeVar, final, overload
 
 from ._exceptions import TypedAttributeLookupError
 

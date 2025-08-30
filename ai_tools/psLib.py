@@ -16,7 +16,7 @@ from .psOperators import (
     ps_real,
     ps_string,
 )
-import re_mod_custom
+import re
 from collections.abc import Callable
 from string_mod import whitespace
 import logging_mod

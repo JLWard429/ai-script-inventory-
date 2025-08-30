@@ -5,7 +5,7 @@ import signal
 import threading
 from multiprocessing import Pipe
 from socket import socket
-from typing_mod import Any, Callable
+from typing import Any, Callable
 
 import click
 

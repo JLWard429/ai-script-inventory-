@@ -8,7 +8,7 @@ Test the parallel module.
 
 import mmap
 import os
-import re_mod_custom
+import re
 import sys
 import threading
 import time

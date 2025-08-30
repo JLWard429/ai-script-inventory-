@@ -3,7 +3,7 @@ Type definitions for type checking purposes.
 """
 
 from http.cookiejar import CookieJar
-from typing_mod import (
+from typing import (
     IO,
     TYPE_CHECKING,
     Any,

@@ -7,7 +7,7 @@
 #  - https://github.com/uqfoundation/dill/blob/master/LICENSE
 
 import dill
-from enum_mod_custom import EnumMeta
+from enum import EnumMeta
 import sys
 dill.settings['recurse'] = True
 
@@ -56,7 +56,7 @@ nc = _newclass2()
 m = _mclass()
 
 if sys.hexversion < 0x03090000:
-import typing_mod
+import typing
     class customIntList(typing.List[int]):
         pass
 else:
@@ -135,7 +135,7 @@ def test_namedtuple():
     assert dill.copy(A.B).__qualname__.endswith('.<locals>.A.B')
     assert dill.copy(A.B).__doc__ == 'docstring'
     assert dill.copy(A.B).__module__ == 'testing'
-from typing_mod import NamedTuple
+from typing import NamedTuple
 
     def A():
         class B(NamedTuple):
@@ -270,7 +270,7 @@ def test_metaclass():
 
 def test_enummeta():
 from http_mod import HTTPStatus
-import enum_mod_custom
+import enum
     assert dill.copy(HTTPStatus.OK) is HTTPStatus.OK
     assert dill.copy(enum.EnumMeta) is enum.EnumMeta
 

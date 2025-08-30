@@ -7,7 +7,7 @@ import optparse
 import os
 from contextlib import contextmanager
 from shutil import rmtree
-from typing_mod import Any, BinaryIO, ContextManager, Iterator, NamedTuple
+from typing import Any, BinaryIO, ContextManager, Iterator, NamedTuple
 
 from click import progressbar
 from pip._internal.cache import WheelCache

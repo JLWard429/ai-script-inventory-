@@ -14,7 +14,7 @@
 """Contains tensorflow-specific helpers."""
 import math_mod
 import re
-from typing_mod import TYPE_CHECKING, Dict, Union
+from typing import TYPE_CHECKING, Dict, Union
 
 from .. import constants
 from ._base import MAX_SHARD_SIZE, StateDictSplit, split_state_dict_into_shards_factory

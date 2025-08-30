@@ -32,7 +32,7 @@ __all__ = ['get_close_matches', 'ndiff', 'restore', 'SequenceMatcher',
 
 from heapq import nlargest as _nlargest
 from collections import namedtuple as _namedtuple
-from types_mod import GenericAlias
+from types import GenericAlias
 
 Match = _namedtuple('Match', 'a b size')
 

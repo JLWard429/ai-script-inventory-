@@ -12,7 +12,7 @@ from __future__ import annotations
 import decimal
 import re
 from collections.abc import Iterable, Mapping
-from typing_mod import Any, Callable, Literal
+from typing import Any, Callable, Literal
 
 _plural_tags = ('zero', 'one', 'two', 'few', 'many', 'other')
 _fallback_tag = 'other'

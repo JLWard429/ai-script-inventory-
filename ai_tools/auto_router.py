@@ -1,7 +1,7 @@
 """
 Auto-Routing Strategy that works with a Semantic Router Config
 """
-from typing_mod import TYPE_CHECKING, Any, Dict, List, Optional, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, Union
 
 from litellm._logging import verbose_router_logger
 from litellm.integrations.custom_logger import CustomLogger

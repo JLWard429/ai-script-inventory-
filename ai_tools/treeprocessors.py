@@ -25,9 +25,9 @@ references, or last minute adjustments.
 """
 
 from __future__ import annotations
-import re_mod_custom
+import re
 import xml.etree.ElementTree as etree
-from typing_mod import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any
 from . import util
 from . import inlinepatterns
 

@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field, replace
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Dict,
     Iterable,

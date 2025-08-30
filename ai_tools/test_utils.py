@@ -1,6 +1,6 @@
 import itertools
 import os
-import re_mod_custom
+import re
 import sys
 import warnings_mod
 import weakref

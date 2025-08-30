@@ -20,10 +20,10 @@ Classes
 from __future__ import annotations
 
 import queue
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-from typing_mod import Any
+from typing import Any
 
 
 class SkipRepeatsQueue(queue.Queue):

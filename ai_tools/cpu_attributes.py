@@ -11,8 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from enum_mod_custom import Enum
-from typing_mod import Final
+from enum import Enum
+from typing import Final
 
 CPU_LOGICAL_NUMBER: Final = "cpu.logical_number"
 """

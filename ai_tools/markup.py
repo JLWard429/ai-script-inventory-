@@ -1,7 +1,7 @@
-import re_mod_custom
+import re
 from ast_mod import literal_eval
 from operator import attrgetter
-from typing_mod import Callable, Iterable, List, Match, NamedTuple, Optional, Tuple, Union
+from typing import Callable, Iterable, List, Match, NamedTuple, Optional, Tuple, Union
 
 from ._emoji_replace import _emoji_replace
 from .emoji import EmojiVariant

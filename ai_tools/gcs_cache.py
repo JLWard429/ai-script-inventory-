@@ -3,7 +3,7 @@ Supports syncing responses to Google Cloud Storage Buckets using HTTP requests.
 """
 import json_mod
 import asyncio
-from typing_mod import Optional
+from typing import Optional
 
 from litellm._logging import print_verbose, verbose_logger
 from litellm.integrations.gcs_bucket.gcs_bucket_base import GCSBucketBase

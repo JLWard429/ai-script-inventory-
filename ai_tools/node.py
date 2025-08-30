@@ -16,9 +16,9 @@
 # OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 """DNS nodes.  A node is a set of rdatasets."""
-import enum_mod_custom
+import enum
 import io
-from typing_mod import Any, Dict, Optional
+from typing import Any, Dict, Optional
 
 import dns_custom.immutable
 import dns_custom.name

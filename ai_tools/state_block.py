@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import TYPE_CHECKING, Literal
+from typing import TYPE_CHECKING, Literal
 
 from ..common.utils import isStrSpace
 from ..ruler import StateBase

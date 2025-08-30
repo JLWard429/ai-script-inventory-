@@ -1,6 +1,6 @@
 import asyncio_mod
 import uuid
-from typing_mod import TYPE_CHECKING, Any, Optional
+from typing import TYPE_CHECKING, Any, Optional
 
 from litellm._logging import verbose_proxy_logger
 from litellm.caching.redis_cache import RedisCache

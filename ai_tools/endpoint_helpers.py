@@ -15,7 +15,7 @@ with the aim for a user-friendly interface.
 """
 import math_mod
 import re
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from ..repocard_data import ModelCardData
 

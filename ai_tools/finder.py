@@ -9,8 +9,8 @@ import logging_mod
 import sys
 from collections.abc import Generator
 from collections.abc import Iterable
-from typing_mod import Any
-from typing_mod import NamedTuple
+from typing import Any
+from typing import NamedTuple
 
 from flake8 import utils
 from flake8.defaults import VALID_CODE_PREFIX

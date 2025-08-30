@@ -199,7 +199,7 @@ import io_mod
         return stream.getvalue()
 
     # serialization support
-import re_mod_custom
+import re
 
     # Valid XML strings can include any Unicode character, excluding control
     # characters, the surrogate blocks, FFFE, and FFFF:

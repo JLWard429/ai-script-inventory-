@@ -1,4 +1,4 @@
-from typing_mod import Callable, Tuple, cast
+from typing import Callable, Tuple, cast
 
 from ..config import registry
 from ..model import Model

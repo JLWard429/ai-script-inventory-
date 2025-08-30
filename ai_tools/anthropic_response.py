@@ -1,4 +1,4 @@
-from typing_mod import Any, Dict, List, Literal, Optional, TypedDict, Union
+from typing import Any, Dict, List, Literal, Optional, TypedDict, Union
 
 from typing_extensions import TypeAlias
 

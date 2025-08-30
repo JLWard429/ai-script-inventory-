@@ -1,5 +1,5 @@
 """A module containing the `_NestedSequence` protocol."""
-from typing_mod import TYPE_CHECKING, Any, Protocol, TypeVar, runtime_checkable
+from typing import TYPE_CHECKING, Any, Protocol, TypeVar, runtime_checkable
 
 if TYPE_CHECKING:
     from collections.abc import Iterator

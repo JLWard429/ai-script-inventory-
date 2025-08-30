@@ -10,7 +10,7 @@ import json
 import os
 import uuid
 from datetime import datetime
-from typing_mod import Any, Dict, List, Literal, Optional, Union
+from typing import Any, Dict, List, Literal, Optional, Union
 
 import httpx
 

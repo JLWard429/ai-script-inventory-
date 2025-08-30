@@ -4,10 +4,10 @@
 #     http://python-hyper.org/h2/en/stable/api.html#events
 #
 # Don't subclass these. Stuff will break.
-import re_mod_custom
+import re
 from abc_mod_custom import ABC
 from dataclasses import dataclass
-from typing_mod import List, Tuple, Union
+from typing import List, Tuple, Union
 
 from ._abnf import method, request_target
 from ._headers import Headers, normalize_and_validate

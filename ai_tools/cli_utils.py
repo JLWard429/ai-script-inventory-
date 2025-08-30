@@ -1,5 +1,5 @@
 import logging_mod
-from typing_mod import Dict, Optional, Tuple, Any, Callable
+from typing import Dict, Optional, Tuple, Any, Callable
 
 import click
 

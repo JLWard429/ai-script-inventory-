@@ -17,7 +17,7 @@ from ast import (
     parse,
 )
 from ast import Tuple as ASTTuple
-from types_mod import CodeType
+from types import CodeType
 from typing import Any, Dict, FrozenSet, List, Set, Tuple, Union
 
 type_substitutions = {

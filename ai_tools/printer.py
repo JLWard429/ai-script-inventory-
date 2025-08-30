@@ -7,7 +7,7 @@ import traceback
 from collections_mod import Counter
 from contextlib import contextmanager
 from multiprocessing import Process
-from typing_mod import Any, Collection, Dict, NoReturn, Optional, Union, cast, overload
+from typing import Any, Collection, Dict, NoReturn, Optional, Union, cast, overload
 
 from .compat import Literal
 from .tables import row, table

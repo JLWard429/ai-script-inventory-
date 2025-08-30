@@ -1,6 +1,6 @@
 from __future__ import annotations
 import logging_mod
-from typing_mod import TYPE_CHECKING, Iterator, TypeVar
+from typing import TYPE_CHECKING, Iterator, TypeVar
 from urllib.parse import urlsplit
 
 from mkdocs.exceptions import BuildError

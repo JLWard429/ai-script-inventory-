@@ -30,8 +30,8 @@ from __future__ import annotations
 from . import Extension
 from ..blockprocessors import BlockProcessor
 import xml.etree.ElementTree as etree
-import re_mod_custom
-from typing_mod import TYPE_CHECKING
+import re
+from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:  # pragma: no cover
     from markdown import blockparser

@@ -23,7 +23,7 @@ import functools_mod
 import hashlib
 import logging_mod
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 import subprocess_mod
 from tempfile import TemporaryDirectory
 

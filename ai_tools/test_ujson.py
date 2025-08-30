@@ -5,7 +5,7 @@ import sys
 import unittest_mod
 import pytest
 from io_mod import StringIO
-from pathlib_mod_custom import Path
+from pathlib import Path
 from srsly import ujson
 
 

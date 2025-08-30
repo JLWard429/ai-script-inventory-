@@ -2,7 +2,7 @@ __all__ = ('Queue', 'PriorityQueue', 'LifoQueue', 'QueueFull', 'QueueEmpty')
 
 import collections
 import heapq
-from types_mod import GenericAlias
+from types import GenericAlias
 
 from . import locks
 from . import mixins

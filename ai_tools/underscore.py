@@ -1,6 +1,6 @@
 import copy_mod
 import functools
-from typing_mod import TYPE_CHECKING, Any, Dict, List, Optional, Tuple, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, Tuple, Union
 
 from ..errors import Errors
 

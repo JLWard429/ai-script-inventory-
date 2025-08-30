@@ -2,7 +2,7 @@
 #   identifies lowest tpm deployment
 import traceback_mod
 from datetime import datetime
-from typing_mod import Dict, List, Optional, Union
+from typing import Dict, List, Optional, Union
 
 from litellm import token_counter
 from litellm._logging import verbose_router_logger

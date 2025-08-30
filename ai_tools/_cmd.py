@@ -4,7 +4,7 @@
 from __future__ import annotations
 import logging_mod
 from argparse import ArgumentParser
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from pip._vendor import requests
 

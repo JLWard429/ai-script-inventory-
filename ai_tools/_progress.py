@@ -1,6 +1,6 @@
 from __future__ import annotations
 import io_mod
-from typing_mod import Callable
+from typing import Callable
 from typing_extensions import override
 
 

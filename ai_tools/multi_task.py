@@ -1,5 +1,5 @@
 from functools_mod import partial
-from typing_mod import TYPE_CHECKING, Any, Callable, Iterable, List, Optional, Tuple, cast
+from typing import TYPE_CHECKING, Any, Callable, Iterable, List, Optional, Tuple, cast
 
 import numpy
 from thinc.api import (

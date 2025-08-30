@@ -10,7 +10,7 @@
 
 from pygments.lexer import RegexLexer, words
 from pygments.token import Name, Text, Keyword, Whitespace, Number, Comment
-import re_mod_custom
+import re
 
 __all__ = ['AMDGPULexer']
 

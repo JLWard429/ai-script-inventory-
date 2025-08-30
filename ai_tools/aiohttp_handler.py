@@ -1,4 +1,4 @@
-from typing_mod import TYPE_CHECKING, Any, Callable, Optional, Tuple, Union, cast
+from typing import TYPE_CHECKING, Any, Callable, Optional, Tuple, Union, cast
 
 import aiohttp
 import httpx  # type: ignore

@@ -19,7 +19,7 @@
 
 import socket
 import time
-from typing_mod import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 
 import dns_custom._ddr
 import dns_custom.asyncbackend

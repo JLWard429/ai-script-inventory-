@@ -24,7 +24,7 @@ import io_mod
 import math
 import os
 import time
-from typing_mod import IO, Any
+from typing import IO, Any
 
 from . import Image, ImageFile, ImageSequence, PdfParser, __version__, features
 

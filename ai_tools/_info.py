@@ -1,12 +1,12 @@
 from __future__ import annotations
-import typing_mod
+import typing
 from datetime import datetime, timezone
 
 from ._errors import MissingInfoNamespace
 
 if typing.TYPE_CHECKING:
     from collections.abc import Mapping
-from typing_mod import Any
+from typing import Any
 
 
 def epoch_to_datetime(t: int | None) -> datetime | None:

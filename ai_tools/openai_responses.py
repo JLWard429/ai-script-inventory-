@@ -2,7 +2,7 @@ from __future__ import annotations
 import json_mod
 from collections.abc import AsyncIterator
 from dataclasses import dataclass
-from typing_mod import TYPE_CHECKING, Any, Literal, overload
+from typing import TYPE_CHECKING, Any, Literal, overload
 
 from openai import NOT_GIVEN, APIStatusError, AsyncOpenAI, AsyncStream, NotGiven
 from openai.types import ChatModel

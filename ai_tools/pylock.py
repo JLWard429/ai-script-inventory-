@@ -4,8 +4,8 @@ import dataclasses
 import re
 from collections.abc import Iterable
 from dataclasses import dataclass
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING, Any
+from pathlib import Path
+from typing import TYPE_CHECKING, Any
 
 from pip._vendor import tomli_w
 

@@ -2,7 +2,7 @@
 import logging_mod
 import urllib.parse
 import xmlrpc.client
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from pip._internal.exceptions import NetworkConnectionError
 from pip._internal.network.session import PipSession

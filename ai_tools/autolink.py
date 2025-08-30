@@ -1,5 +1,5 @@
 # Process autolinks '<protocol:...>'
-import re_mod_custom
+import re
 
 from .state_inline import StateInline
 

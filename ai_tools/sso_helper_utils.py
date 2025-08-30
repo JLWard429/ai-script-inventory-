@@ -1,4 +1,4 @@
-from typing_mod import Dict, Union
+from typing import Dict, Union
 
 from litellm.proxy._types import LitellmUserRoles
 

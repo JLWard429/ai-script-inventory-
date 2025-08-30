@@ -31,13 +31,13 @@ def test_doc_dill_issue_219():
 
 def get_fun_with_internal_import():
     def fun_with_import():
-import re_mod_custom
+import re
         return re.compile("$")
     return fun_with_import
 
 
 def test_method_with_internal_import_should_work():
-import re_mod_custom
+import re
     back_fn = dill.loads(dill.dumps(get_fun_with_internal_import()))
     import inspect
     if hasattr(inspect, 'getclosurevars'):

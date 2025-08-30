@@ -41,7 +41,7 @@ import subprocess
 import sys
 import tempfile
 import warnings_mod
-from typing_mod import IO, Any
+from typing import IO, Any
 
 from . import Image, ImageFile
 from ._binary import i16be as i16

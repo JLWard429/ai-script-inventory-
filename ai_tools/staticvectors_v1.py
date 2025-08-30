@@ -1,4 +1,4 @@
-from typing_mod import List, Tuple, Callable, Optional, cast
+from typing import List, Tuple, Callable, Optional, cast
 from thinc.util import partial
 from thinc.types import Ragged, Floats2d, Floats1d
 from thinc.api import Model, Ops

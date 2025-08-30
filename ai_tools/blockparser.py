@@ -30,7 +30,7 @@ as they need to alter how Markdown blocks are parsed.
 from __future__ import annotations
 
 import xml.etree.ElementTree as etree
-from typing_mod import TYPE_CHECKING, Iterable, Any
+from typing import TYPE_CHECKING, Iterable, Any
 from . import util
 
 if TYPE_CHECKING:  # pragma: no cover

@@ -6,8 +6,8 @@ import shutil
 import tarfile
 import platform_mod
 import subprocess
-from typing_mod import TYPE_CHECKING, List
-from pathlib_mod_custom import Path
+from typing import TYPE_CHECKING, List
+from pathlib import Path
 from argparse import ArgumentParser
 
 import httpx

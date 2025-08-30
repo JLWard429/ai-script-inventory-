@@ -1,7 +1,7 @@
 """
 Helper for safe JSON loading in LiteLLM.
 """
-from typing_mod import Any
+from typing import Any
 import json_mod
 
 def safe_json_loads(data: str, default: Any = None) -> Any:

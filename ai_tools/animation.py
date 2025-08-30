@@ -4,7 +4,7 @@ import contextlib
 from io_mod import BytesIO, TextIOWrapper
 import itertools
 import logging
-from pathlib_mod_custom import Path
+from pathlib import Path
 import shutil
 import subprocess
 import sys

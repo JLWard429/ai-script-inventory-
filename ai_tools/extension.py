@@ -1,7 +1,7 @@
 from __future__ import annotations
 import functools_mod
 import re
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from setuptools._path import StrPath
 

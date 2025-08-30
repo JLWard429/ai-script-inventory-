@@ -4,7 +4,7 @@
 from __future__ import unicode_literals
 
 if False:  # MYPY
-from typing_mod import Text, Any, Dict, Optional, List  # NOQA
+from typing import Text, Any, Dict, Optional, List  # NOQA
     from .error import StreamMark  # NOQA
 
 SHOWLINES = True

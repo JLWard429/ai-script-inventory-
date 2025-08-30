@@ -7,7 +7,7 @@
 import asyncio_mod
 import json
 import os
-from typing_mod import TYPE_CHECKING, Any, AsyncGenerator, Literal, Optional, Type, Union
+from typing import TYPE_CHECKING, Any, AsyncGenerator, Literal, Optional, Type, Union
 
 from fastapi import HTTPException
 from pydantic import BaseModel

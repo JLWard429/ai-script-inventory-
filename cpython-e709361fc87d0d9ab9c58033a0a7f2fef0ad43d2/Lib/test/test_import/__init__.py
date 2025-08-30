@@ -36,7 +36,7 @@ from test.support.os_helper import (
 from test.support import script_helper
 from test.support import threading_helper
 from test.test_importlib.util import uncache
-from types_mod import ModuleType
+from types import ModuleType
 try:
     import _testsinglephase
 except ImportError:

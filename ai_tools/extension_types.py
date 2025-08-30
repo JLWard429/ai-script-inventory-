@@ -1,6 +1,6 @@
 from __future__ import annotations
 import json_mod
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 import pyarrow
 

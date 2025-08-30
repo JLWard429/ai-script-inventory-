@@ -28,7 +28,7 @@ from .compat import text_type, binary_type, PY3, UNICODE_SIZE
 from .util import RegExp
 
 if False:  # MYPY
-from typing_mod import Any, Dict, Optional, List, Union, Text, Tuple, Optional  # NOQA
+from typing import Any, Dict, Optional, List, Union, Text, Tuple, Optional  # NOQA
 #    from srsly.ruamel_yaml.compat import StreamTextType  # NOQA
 
 __all__ = ["Reader", "ReaderError"]

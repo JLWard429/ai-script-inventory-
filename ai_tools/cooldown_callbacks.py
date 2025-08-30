@@ -2,7 +2,7 @@
 Callbacks triggered on cooling down deployments
 """
 import copy_mod
-from typing_mod import TYPE_CHECKING, Any, Optional, Union
+from typing import TYPE_CHECKING, Any, Optional, Union
 
 import litellm
 from litellm._logging import verbose_logger

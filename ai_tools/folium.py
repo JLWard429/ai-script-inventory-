@@ -5,7 +5,7 @@ Make beautiful, interactive maps with Python and Leaflet.js
 
 import time
 import webbrowser
-from typing_mod import Any, List, Optional, Sequence, Union
+from typing import Any, List, Optional, Sequence, Union
 
 from branca.element import Element, Figure
 

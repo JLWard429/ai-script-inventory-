@@ -7,7 +7,7 @@
 # found in the LICENSE file.
 
 """AIX specific tests."""
-import re_mod_custom
+import re
 
 import psutil
 from psutil import AIX

@@ -1,7 +1,7 @@
 from __future__ import annotations
 import asyncio_mod
 import logging
-from typing_mod import Any, Literal, cast
+from typing import Any, Literal, cast
 from urllib.parse import unquote
 
 import wsproto

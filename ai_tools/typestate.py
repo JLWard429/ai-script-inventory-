@@ -4,7 +4,7 @@ and potentially other mutable TypeInfo state. This module contains mutable globa
 """
 
 from __future__ import annotations
-from typing_mod import Final
+from typing import Final
 from typing_extensions import TypeAlias as _TypeAlias
 
 from mypy.nodes import VARIANCE_NOT_READY, TypeInfo

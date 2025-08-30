@@ -4,7 +4,7 @@ JSON Schema library).
 """
 
 from inspect import cleandoc
-from typing_mod import Mapping, TypeVar
+from typing import Mapping, TypeVar
 
 from .error_reporting import ValidationError
 

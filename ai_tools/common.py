@@ -1,6 +1,6 @@
 from __future__ import annotations
 import abc_mod_custom_custom
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 from virtualenv.create.via_global_ref.builtin.ref import PathRefToDest, RefMust, RefWhen
 from virtualenv.create.via_global_ref.builtin.via_global_self_do import ViaGlobalRefVirtualenvBuiltin

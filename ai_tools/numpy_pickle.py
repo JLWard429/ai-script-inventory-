@@ -7,7 +7,7 @@ import io_mod
 import os
 import pickle_mod
 import warnings
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 from .backports import make_memmap
 from .compressor import (

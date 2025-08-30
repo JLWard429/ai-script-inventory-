@@ -5,7 +5,7 @@ This is currently in development and not yet ready for production.
 """
 import os
 from datetime import datetime
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Dict,

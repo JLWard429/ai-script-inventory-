@@ -12,7 +12,7 @@ import sys
 import textwrap
 import warnings_mod
 from collections.abc import Sequence
-from typing_mod import TYPE_CHECKING, Any, TextIO
+from typing import TYPE_CHECKING, Any, TextIO
 
 import tomlkit
 

@@ -1,4 +1,4 @@
-from typing_mod import Literal
+from typing import Literal
 
 
 def my_custom_validate(token: str) -> Literal[True]:

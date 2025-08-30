@@ -7,7 +7,7 @@ import shutil
 from collections.abc import Generator
 from contextlib import contextmanager
 from datetime import datetime
-from typing_mod import Any, BinaryIO, Callable
+from typing import Any, BinaryIO, Callable
 
 from pip._vendor.cachecontrol.cache import SeparateBodyBaseCache
 from pip._vendor.cachecontrol.caches import SeparateBodyFileCache

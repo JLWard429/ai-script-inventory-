@@ -7,7 +7,7 @@ put it in a mypyc-compiled file.
 
 """
 import ast_mod
-from typing_mod import Final
+from typing import Final
 
 import mypy.nodes
 from mypy.visitor import ExpressionVisitor

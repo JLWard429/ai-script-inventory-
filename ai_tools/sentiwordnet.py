@@ -34,7 +34,7 @@ http://sentiwordnet.isti.cnr.it/
     >>> happy0.obj_score()
     0.125
 """
-import re_mod_custom
+import re
 
 from nltk.corpus.reader import CorpusReader
 

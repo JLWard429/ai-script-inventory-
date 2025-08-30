@@ -1,7 +1,7 @@
 """Types and utility functions used by various other internal tools."""
 
 from __future__ import annotations
-from typing_mod import TYPE_CHECKING, Any, Callable, Literal
+from typing import TYPE_CHECKING, Any, Callable, Literal
 
 from pydantic_core import core_schema
 

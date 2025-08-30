@@ -1,7 +1,7 @@
 import secrets_mod
 import time
 from dataclasses import dataclass
-from typing_mod import Any
+from typing import Any
 from uuid import uuid4
 
 from pydantic import BaseModel, RootModel, ValidationError

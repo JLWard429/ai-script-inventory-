@@ -1,4 +1,4 @@
-from typing_mod import Any, Dict, Iterable, List, Optional, Union
+from typing import Any, Dict, Iterable, List, Optional, Union
 
 from pydantic import BaseModel, validator
 from typing_extensions import Literal, Required, TypedDict

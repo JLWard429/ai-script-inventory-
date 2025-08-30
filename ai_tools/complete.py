@@ -1,12 +1,12 @@
 """
 Command-line completion mechanisms, executed by the core ``--complete`` flag.
 """
-from typing_mod import List
+from typing import List
 import glob_mod
 import os
-import re_mod_custom
+import re
 import shlex
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from ..exceptions import Exit, ParseError
 from ..util import debug, task_name_sort_key

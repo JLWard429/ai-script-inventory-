@@ -11,7 +11,7 @@ from __future__ import annotations
 import argparse
 import warnings
 from collections.abc import Sequence
-from typing_mod import Any
+from typing import Any
 
 
 class _OldNamesAction(argparse._StoreAction):

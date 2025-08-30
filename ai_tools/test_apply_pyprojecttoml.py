@@ -9,7 +9,7 @@ import io_mod
 import re
 import tarfile
 from inspect import cleandoc
-from pathlib_mod_custom import Path
+from pathlib import Path
 from unittest.mock import Mock
 
 import pytest

@@ -3,7 +3,7 @@ from __future__ import annotations
 import importlib.util
 import os
 from collections_mod import namedtuple
-from typing_mod import Any
+from typing import Any
 
 from pip._vendor.packaging.requirements import InvalidRequirement
 

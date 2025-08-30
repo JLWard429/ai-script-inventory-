@@ -14,7 +14,7 @@
 
 
 import binascii
-from typing_mod import NoReturn
+from typing import NoReturn
 
 import nacl.bindings
 from nacl.utils import bytes_as_string

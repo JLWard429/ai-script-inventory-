@@ -9,8 +9,8 @@ from __future__ import annotations
 import os
 import subprocess
 import tempfile
-from enum_mod_custom import Enum
-from pathlib_mod_custom import Path
+from enum import Enum
+from pathlib import Path
 
 from astroid import nodes
 

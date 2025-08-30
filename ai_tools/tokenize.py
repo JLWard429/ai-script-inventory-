@@ -30,8 +30,8 @@ each time a new token is found."""
 import builtins
 import sys
 from collections.abc import Callable, Iterable, Iterator
-from re_mod_custom import Pattern
-from typing_mod import Final, Optional, Union
+from re import Pattern
+from typing import Final, Optional, Union
 
 from blib2to3.pgen2.grammar import Grammar
 from blib2to3.pgen2.token import (
@@ -58,7 +58,7 @@ from blib2to3.pgen2.token import (
 
 __author__ = "Ka-Ping Yee <ping@lfw.org>"
 __credits__ = "GvR, ESR, Tim Peters, Thomas Wouters, Fred Drake, Skip Montanaro"
-import re_mod_custom
+import re
 from codecs import BOM_UTF8, lookup
 
 from . import token

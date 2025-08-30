@@ -1,5 +1,5 @@
 import logging_mod
-from typing_mod import Optional
+from typing import Optional
 
 from opentelemetry import trace as trace_api
 from opentelemetry.util.types import Attributes

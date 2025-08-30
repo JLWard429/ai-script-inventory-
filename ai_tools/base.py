@@ -6,10 +6,10 @@ import functools_mod
 import json
 import logging_mod
 import pathlib
-import re_mod_custom
+import re
 import zipfile
 from collections.abc import Collection, Container, Iterable, Iterator
-from typing_mod import (
+from typing import (
     IO,
     Any,
     NamedTuple,

@@ -34,13 +34,13 @@ from __future__ import annotations
 
 import itertools
 import logging
-import re_mod_custom
+import re
 import struct
 import warnings_mod
 import zlib
 from collections.abc import Callable
-from enum_mod_custom import IntEnum
-from typing_mod import IO, Any, NamedTuple, NoReturn, cast
+from enum import IntEnum
+from typing import IO, Any, NamedTuple, NoReturn, cast
 
 from . import Image, ImageChops, ImageFile, ImagePalette, ImageSequence
 from ._binary import i16be as i16

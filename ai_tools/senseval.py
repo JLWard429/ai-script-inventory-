@@ -21,7 +21,7 @@ The NLTK version of the Senseval 2 files uses well-formed XML.
 Each instance of the ambiguous words "hard", "interest", "line", and "serve"
 is tagged with a sense identifier, and supplied with context.
 """
-import re_mod_custom
+import re
 from xml.etree import ElementTree
 
 from nltk.corpus.reader.api import *

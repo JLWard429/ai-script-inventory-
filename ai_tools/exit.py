@@ -3,7 +3,7 @@ Exit command for CAI REPL.
 This module provides the command to exit the REPL.
 """
 import sys
-from typing_mod import List, Optional
+from typing import List, Optional
 
 from cai.repl.commands.base import Command, register_command
 from cai.sdk.agents.global_usage_tracker import GLOBAL_USAGE_TRACKER

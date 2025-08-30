@@ -28,7 +28,7 @@ Additional adjustments were made to improve the algorithm:
 increases the word ambiguities and changes the original root.
 
 """
-import re_mod_custom
+import re
 
 from nltk.stem.api import StemmerI
 

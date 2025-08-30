@@ -11,7 +11,7 @@ import os
 import threading
 import time
 import unicodedata
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 import _watchdog_fsevents as _fsevents
 

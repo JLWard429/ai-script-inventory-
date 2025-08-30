@@ -16,7 +16,7 @@ from .constructor import (
 from .resolver import VersionedResolver
 
 if False:  # MYPY
-from typing_mod import Any, Dict, List, Union, Optional  # NOQA
+from typing import Any, Dict, List, Union, Optional  # NOQA
     from .compat import StreamTextType, VersionType  # NOQA
 
 __all__ = ["BaseLoader", "SafeLoader", "Loader", "RoundTripLoader"]

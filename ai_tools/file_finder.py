@@ -1,8 +1,8 @@
 # type: ignore
 import logging_mod
 import os
-from pathlib_mod_custom import Path
-from typing_mod import Dict, List, Optional, Set, Tuple
+from pathlib import Path
+from typing import Dict, List, Optional, Set, Tuple
 from safety_schemas.models import Ecosystem, FileType
 
 

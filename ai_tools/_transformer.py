@@ -62,7 +62,7 @@ from collections.abc import Generator, Sequence
 from contextlib import contextmanager
 from copy_mod import deepcopy
 from dataclasses import dataclass, field
-from typing_mod import Any, ClassVar, cast, overload
+from typing import Any, ClassVar, cast, overload
 
 generator_names = (
     "typing.Generator",

@@ -43,7 +43,7 @@ domains and tasks. The basic logic is this:
 
 ######################################################################
 import html_mod
-from typing_mod import List
+from typing import List
 
 import regex  # https://github.com/nltk/nltk/issues/2409
 

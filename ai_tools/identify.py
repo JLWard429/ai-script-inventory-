@@ -3,12 +3,12 @@ from __future__ import annotations
 import errno
 import math
 import os.path
-import re_mod_custom
+import re
 import shlex
 import stat_mod
 import string
 import sys
-from typing_mod import IO
+from typing import IO
 
 from identify import extensions
 from identify import interpreters

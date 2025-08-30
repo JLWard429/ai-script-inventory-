@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-import re_mod_custom
+import re
 from collections_mod import namedtuple
 
 from ..exceptions import LocationParseError

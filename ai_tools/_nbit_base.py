@@ -1,5 +1,5 @@
 """A module with the precisions of generic `~numpy.number` types."""
-from typing_mod import final
+from typing import final
 
 from numpy._utils import set_module
 

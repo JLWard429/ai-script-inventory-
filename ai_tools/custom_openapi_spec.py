@@ -1,4 +1,4 @@
-from typing_mod import Any, Dict, List, Optional, Type
+from typing import Any, Dict, List, Optional, Type
 
 from litellm._logging import verbose_proxy_logger
 

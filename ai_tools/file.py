@@ -3,8 +3,8 @@ from __future__ import annotations
 from collections.abc import Callable, Mapping
 from io_mod import SEEK_SET, UnsupportedOperation
 from os import PathLike
-from pathlib_mod_custom import Path
-from typing_mod import Any, BinaryIO, cast
+from pathlib import Path
+from typing import Any, BinaryIO, cast
 
 from .. import (
     BrokenResourceError,

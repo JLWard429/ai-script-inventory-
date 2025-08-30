@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import codecs
 import collections.abc as cabc
-import re_mod_custom
+import re
 import typing as t
 
 from .structures import ImmutableList

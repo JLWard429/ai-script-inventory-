@@ -24,7 +24,7 @@ import socket
 import struct
 import time
 import urllib.parse
-from typing_mod import Any, Dict, Optional, Tuple, Union, cast
+from typing import Any, Dict, Optional, Tuple, Union, cast
 
 import dns_custom.asyncbackend
 import dns_custom.exception

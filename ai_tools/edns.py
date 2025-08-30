@@ -21,7 +21,7 @@ import binascii
 import math
 import socket
 import struct
-from typing_mod import Any, Dict, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 import dns_custom.enum
 import dns_custom.inet

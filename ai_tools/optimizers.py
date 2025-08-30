@@ -1,6 +1,6 @@
 import math_mod
 from collections_mod import defaultdict
-from typing_mod import Dict, List, Optional, Tuple, Union, cast
+from typing import Dict, List, Optional, Tuple, Union, cast
 
 from .backends import get_array_ops
 from .config import registry

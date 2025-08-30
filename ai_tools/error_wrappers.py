@@ -1,5 +1,5 @@
 import json_mod
-from typing_mod import TYPE_CHECKING, Any, Dict, Generator, List, Optional, Sequence, Tuple, Type, Union
+from typing import TYPE_CHECKING, Any, Dict, Generator, List, Optional, Sequence, Tuple, Type, Union
 
 from pydantic.v1.json import pydantic_encoder
 from pydantic.v1.utils import Representation

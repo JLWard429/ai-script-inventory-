@@ -8,8 +8,8 @@ import sys
 import warnings
 from glob_mod import glob
 from itertools import chain
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING
+from pathlib import Path
+from typing import TYPE_CHECKING
 
 from pylint import reporters
 from pylint.config.config_file_parser import _ConfigurationFileParser

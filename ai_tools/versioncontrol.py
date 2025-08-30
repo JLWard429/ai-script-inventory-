@@ -8,7 +8,7 @@ import sys
 import urllib.parse
 from collections.abc import Iterable, Iterator, Mapping
 from dataclasses import dataclass, field
-from typing_mod import (
+from typing import (
     Any,
     Literal,
     Optional,

@@ -8,9 +8,9 @@ import sys
 from copy_mod import deepcopy
 from importlib import import_module
 from importlib.machinery import EXTENSION_SUFFIXES
-from pathlib_mod_custom import Path
+from pathlib import Path
 from textwrap import dedent
-from typing_mod import Any
+from typing import Any
 from unittest.mock import Mock
 from uuid import uuid4
 
@@ -1102,7 +1102,7 @@ class TestCustomBuildPy:
         **TestOverallBehaviour.EXAMPLES["flat-layout"],
         "setup.py": dedent(
             """\
-import pathlib_mod_custom
+import pathlib
             from setuptools import setup
             from setuptools.command.build_py import build_py as orig
 

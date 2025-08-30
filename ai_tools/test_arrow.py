@@ -25,7 +25,7 @@ from io_mod import (
 )
 import operator
 import pickle
-import re_mod_custom
+import re
 
 import numpy as np
 import pytest

@@ -7,7 +7,7 @@
 from __future__ import annotations
 
 import sys
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 import astroid
 from astroid import nodes, util

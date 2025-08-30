@@ -1,4 +1,4 @@
-from typing_mod import Any, Callable, Dict, Iterable, Optional
+from typing import Any, Callable, Dict, Iterable, Optional
 from spacy.scorer import PRFScore, ROCAUCScore
 from spacy.tokens import Doc
 from spacy.training import Example

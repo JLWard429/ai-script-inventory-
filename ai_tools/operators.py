@@ -1,7 +1,7 @@
 """Information about Python operators"""
 
 from __future__ import annotations
-from typing_mod import Final
+from typing import Final
 
 # Map from binary operator id to related method name (in Python 3).
 op_methods: Final = {

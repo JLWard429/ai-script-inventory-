@@ -6,7 +6,7 @@ this file has Arize ai specific helper functions
 
 import os
 from datetime import datetime
-from typing_mod import TYPE_CHECKING, Any, Optional, Union
+from typing import TYPE_CHECKING, Any, Optional, Union
 
 from litellm.integrations.arize import _utils
 from litellm.integrations.opentelemetry import OpenTelemetry

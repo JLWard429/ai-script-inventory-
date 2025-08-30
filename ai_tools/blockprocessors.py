@@ -28,7 +28,7 @@ from __future__ import annotations
 import logging_mod
 import re
 import xml.etree.ElementTree as etree
-from typing_mod import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any
 from . import util
 from .blockparser import BlockParser
 

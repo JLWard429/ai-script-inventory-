@@ -962,7 +962,7 @@ def newTable(tag):
 
 def _escapechar(c):
     """Helper function for tagToIdentifier()"""
-import re_mod_custom
+import re
 
     if re.match("[a-z0-9]", c):
         return "_" + c
@@ -991,7 +991,7 @@ def tagToIdentifier(tag):
         >> tagToIdentifier('OS/2')
         'O_S_2f_2'
     """
-import re_mod_custom
+import re
 
     tag = Tag(tag)
     if tag == "GlyphOrder":
@@ -1033,7 +1033,7 @@ def tagToXML(tag):
     to a valid XML element name. Since XML element names are
     case sensitive, this is a fairly simple/readable translation.
     """
-import re_mod_custom
+import re
 
     tag = Tag(tag)
     if tag == "OS/2":

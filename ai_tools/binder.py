@@ -2,7 +2,7 @@ from __future__ import annotations
 from collections_mod import defaultdict
 from collections.abc import Iterator
 from contextlib import contextmanager
-from typing_mod import NamedTuple, Optional, Union
+from typing import NamedTuple, Optional, Union
 from typing_extensions import TypeAlias as _TypeAlias
 
 from mypy.erasetype import remove_instance_last_known_values

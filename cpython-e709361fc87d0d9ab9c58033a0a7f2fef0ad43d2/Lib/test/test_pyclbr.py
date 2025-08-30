@@ -5,7 +5,7 @@
 
 import sys
 from textwrap import dedent
-from types_mod import FunctionType, MethodType, BuiltinFunctionType
+from types import FunctionType, MethodType, BuiltinFunctionType
 import pyclbr
 from unittest import TestCase, main as unittest_main
 from test.test_importlib import util as test_importlib_util

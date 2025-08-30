@@ -2,7 +2,7 @@ import asyncio_mod
 import os
 import ssl
 import time
-from typing_mod import TYPE_CHECKING, Any, Callable, Dict, List, Mapping, Optional, Union
+from typing import TYPE_CHECKING, Any, Callable, Dict, List, Mapping, Optional, Union
 
 import certifi
 import httpx

@@ -1,7 +1,7 @@
 """
 Used for /vertex_ai/ pass through endpoints
 """
-from typing_mod import Optional
+from typing import Optional
 
 from pydantic import BaseModel
 

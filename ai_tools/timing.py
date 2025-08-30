@@ -14,7 +14,7 @@ from datetime import timezone
 from time import perf_counter
 from time import sleep
 from time import time
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 
 if TYPE_CHECKING:

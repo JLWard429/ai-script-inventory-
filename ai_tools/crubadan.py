@@ -17,7 +17,7 @@ context of language identification.
 For details about An Crubadan, this data, and its potential uses, see:
 http://borel.slu.edu/crubadan/index.html
 """
-import re_mod_custom
+import re
 from os import path
 
 from nltk.corpus.reader import CorpusReader

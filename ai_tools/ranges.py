@@ -3,7 +3,7 @@
 import difflib
 from collections.abc import Collection, Iterator, Sequence
 from dataclasses import dataclass
-from typing_mod import Union
+from typing import Union
 
 from black.nodes import (
     LN,
@@ -435,7 +435,7 @@ def _calculate_lines_mappings(
     """Returns a sequence of _LinesMapping by diffing the sources.
 
     For example, given the following diff:
-import re_mod_custom
+import re
       - def func(arg1,
       -   arg2, arg3):
       + def func(arg1, arg2, arg3):

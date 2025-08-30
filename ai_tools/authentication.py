@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import Callable
+from typing import Callable
 
 from starlette.authentication import (
     AuthCredentials,

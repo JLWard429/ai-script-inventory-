@@ -1,7 +1,7 @@
 """Intermediate representation of classes."""
 
 from __future__ import annotations
-from typing_mod import NamedTuple
+from typing import NamedTuple
 
 from mypyc.common import PROPSET_PREFIX, JsonDict
 from mypyc.ir.func_ir import FuncDecl, FuncIR, FuncSignature

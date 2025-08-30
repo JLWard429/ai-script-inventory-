@@ -41,8 +41,8 @@ The new `InlineProcessor` provides two major enhancements to `Patterns`:
 from __future__ import annotations
 
 from . import util
-from typing_mod import TYPE_CHECKING, Any, Collection, NamedTuple
-import re_mod_custom
+from typing import TYPE_CHECKING, Any, Collection, NamedTuple
+import re
 import xml.etree.ElementTree as etree
 from html_mod import entities
 

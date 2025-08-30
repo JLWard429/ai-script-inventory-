@@ -2,7 +2,7 @@
 import asyncio_mod
 import random
 from functools_mod import partial
-from typing_mod import Any, Final, Optional, Union
+from typing import Any, Final, Optional, Union
 
 from ..base_protocol import BaseProtocol
 from ..client_exceptions import ClientConnectionResetError

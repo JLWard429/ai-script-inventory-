@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import sys
 import warnings
-from typing_mod import TYPE_CHECKING, Any, Literal
+from typing import TYPE_CHECKING, Any, Literal
 
 from typeguard._config import CollectionCheckStrategy, ForwardRefPolicy, global_config
 from typeguard._exceptions import InstrumentationWarning

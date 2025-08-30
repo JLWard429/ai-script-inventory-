@@ -3,7 +3,7 @@ Humanloop integration
 
 https://humanloop.com/
 """
-from typing_mod import Any, Dict, List, Optional, Tuple, TypedDict, Union, cast
+from typing import Any, Dict, List, Optional, Tuple, TypedDict, Union, cast
 
 import httpx
 

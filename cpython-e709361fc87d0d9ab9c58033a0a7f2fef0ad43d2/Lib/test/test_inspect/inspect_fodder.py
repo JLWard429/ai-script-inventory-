@@ -86,7 +86,7 @@ class Callable:
         return args
 
     def as_method_of(self, obj):
-        from types_mod import MethodType
+        from types import MethodType
         return MethodType(self, obj)
 
 custom_method = Callable().as_method_of(42)

@@ -13,7 +13,7 @@ from io_mod import BytesIO, StringIO
 import json_mod
 import logging
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 import numpy as np
 from PIL import Image

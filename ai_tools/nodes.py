@@ -5,7 +5,7 @@ to normalize nodes.
 
 import inspect
 import operator
-import typing_mod as t
+import typing as t
 from collections_mod import deque
 
 from markupsafe import Markup

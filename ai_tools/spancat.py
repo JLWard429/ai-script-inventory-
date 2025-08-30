@@ -1,4 +1,4 @@
-from typing_mod import List, Tuple, cast
+from typing import List, Tuple, cast
 
 from thinc.api import (
     Linear,

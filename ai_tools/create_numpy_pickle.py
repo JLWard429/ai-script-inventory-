@@ -1,7 +1,7 @@
 """
 This script is used to generate test data for joblib/test/test_numpy_pickle.py
 """
-import re_mod_custom
+import re
 import sys
 
 # pytest needs to be able to import this module even when numpy is

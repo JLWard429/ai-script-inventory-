@@ -1,7 +1,7 @@
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 from tempfile import TemporaryDirectory
-from typing_mod import TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING, Optional
 
 from ..cloudpath import CloudPath, NoStatError, register_path_class
 

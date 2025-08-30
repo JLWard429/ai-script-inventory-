@@ -1,6 +1,6 @@
 import itertools
 from functools_mod import partial
-from typing_mod import (
+from typing import (
     Any,
     Callable,
     Iterable,

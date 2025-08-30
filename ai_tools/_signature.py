@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import dataclasses
 from inspect import Parameter, Signature, signature
-from typing_mod import TYPE_CHECKING, Any, Callable
+from typing import TYPE_CHECKING, Any, Callable
 
 from pydantic_core import PydanticUndefined
 

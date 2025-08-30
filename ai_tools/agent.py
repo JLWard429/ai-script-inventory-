@@ -6,7 +6,7 @@ Provides commands for managing and switching between agents.
 
 # Standard library imports
 import os
-from typing_mod import List, Optional
+from typing import List, Optional
 
 # Third-party imports
 from rich.console import Console  # pylint: disable=import-error

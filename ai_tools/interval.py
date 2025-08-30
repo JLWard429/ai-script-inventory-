@@ -6,7 +6,7 @@ from operator import (
     lt,
 )
 import textwrap
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Literal,

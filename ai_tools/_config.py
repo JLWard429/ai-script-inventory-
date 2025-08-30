@@ -1,8 +1,8 @@
 from __future__ import annotations as _annotations
 import warnings_mod
 from contextlib import contextmanager
-from re_mod_custom import Pattern
-from typing_mod import (
+from re import Pattern
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

@@ -1,6 +1,6 @@
 import json_mod
 from datetime import datetime
-from typing_mod import Any, Optional, Union
+from typing import Any, Optional, Union
 from urllib.parse import urlparse
 
 import httpx

@@ -1,4 +1,4 @@
-from typing_mod import Any, Callable, Optional, Tuple, Type
+from typing import Any, Callable, Optional, Tuple, Type
 
 from ..config import registry
 from ..model import Model

@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 from json_mod import dumps
-from typing_mod import Optional
+from typing import Optional
 
 from typing_extensions import deprecated
 

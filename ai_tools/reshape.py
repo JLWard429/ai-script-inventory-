@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import itertools
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     cast,
 )

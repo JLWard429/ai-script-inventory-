@@ -1,5 +1,5 @@
 # File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
-from typing_mod import Dict, Optional
+from typing import Dict, Optional
 
 from pydantic import Field as FieldInfo
 

@@ -4,7 +4,7 @@ import os
 import textwrap
 from dataclasses import asdict
 from datetime import datetime
-from typing_mod import Any, Dict, List, Optional, Tuple, Union
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 import click
 from jinja2 import Environment, PackageLoader

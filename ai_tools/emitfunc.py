@@ -1,7 +1,7 @@
 """Code generation for native function bodies."""
 
 from __future__ import annotations
-from typing_mod import Final
+from typing import Final
 
 from mypyc.analysis.blockfreq import frequently_executed_blocks
 from mypyc.codegen.emit import DEBUG_ERRORS, Emitter, TracebackAndGotoHandler, c_array_initializer

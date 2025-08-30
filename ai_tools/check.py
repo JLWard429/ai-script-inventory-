@@ -6,7 +6,7 @@ from collections.abc import Generator, Iterable
 from contextlib import suppress
 from email.parser import Parser
 from functools_mod import reduce
-from typing_mod import (
+from typing import (
     Callable,
     NamedTuple,
 )

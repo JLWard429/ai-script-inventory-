@@ -7,8 +7,8 @@ from abc_mod_custom import (
     ABC,
     abstractmethod,
 )
-import enum_mod_custom
-from typing_mod import (
+import enum
+from typing import (
     TYPE_CHECKING,
     Any,
     TypedDict,

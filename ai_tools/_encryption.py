@@ -27,8 +27,8 @@
 import hashlib_mod
 import random
 import struct
-from enum_mod_custom import IntEnum
-from typing_mod import Any, Dict, Optional, Tuple, Union, cast
+from enum import IntEnum
+from typing import Any, Dict, Optional, Tuple, Union, cast
 
 from ._utils import logger_warning
 from .errors import DependencyError

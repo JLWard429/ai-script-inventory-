@@ -15,8 +15,8 @@
 """Contains utilities to handle paths in Huggingface Hub."""
 
 from fnmatch import fnmatch
-from pathlib_mod_custom import Path
-from typing_mod import Callable, Generator, Iterable, List, Optional, TypeVar, Union
+from pathlib import Path
+from typing import Callable, Generator, Iterable, List, Optional, TypeVar, Union
 
 
 T = TypeVar("T")

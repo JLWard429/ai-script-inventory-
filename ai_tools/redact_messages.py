@@ -7,7 +7,7 @@
 #
 #  Thank you users! We ❤️ you! - Krrish & Ishaan
 import copy_mod
-from typing_mod import TYPE_CHECKING, Any, Optional
+from typing import TYPE_CHECKING, Any, Optional
 
 import litellm
 from litellm.integrations.custom_logger import CustomLogger

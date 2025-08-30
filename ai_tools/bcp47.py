@@ -4,7 +4,7 @@
 # Author: Eric Kafe <kafe.eric@gmail.com>
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.TXT
-import re_mod_custom
+import re
 from warnings_mod import warn
 from xml.etree import ElementTree as et
 

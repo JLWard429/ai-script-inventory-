@@ -9,8 +9,8 @@ import os
 import shutil
 from collections.abc import Iterable
 from dataclasses import dataclass
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING
+from pathlib import Path
+from typing import TYPE_CHECKING
 
 from pip._vendor.packaging.utils import canonicalize_name
 

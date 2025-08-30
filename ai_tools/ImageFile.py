@@ -33,7 +33,7 @@ import itertools
 import logging
 import os
 import struct
-from typing_mod import IO, Any, NamedTuple, cast
+from typing import IO, Any, NamedTuple, cast
 
 from . import ExifTags, Image
 from ._deprecate import deprecate

@@ -19,8 +19,8 @@ import shutil
 import time
 from collections_mod import defaultdict
 from dataclasses import dataclass
-from pathlib_mod_custom import Path
-from typing_mod import Dict, FrozenSet, List, Literal, Optional, Set, Union
+from pathlib import Path
+from typing import Dict, FrozenSet, List, Literal, Optional, Set, Union
 
 from huggingface_hub.errors import CacheNotFound, CorruptedCacheException
 

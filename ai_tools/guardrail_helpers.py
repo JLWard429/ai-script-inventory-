@@ -1,6 +1,6 @@
 import os
 import sys
-from typing_mod import Dict
+from typing import Dict
 
 import litellm
 from litellm._logging import verbose_proxy_logger

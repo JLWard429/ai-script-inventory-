@@ -5,7 +5,7 @@ import logging_mod
 import sys
 import traceback_mod
 from contextlib import contextmanager
-from pathlib_mod_custom import Path
+from pathlib import Path
 from subprocess_mod import CalledProcessError
 from threading import Lock, Thread
 

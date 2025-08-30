@@ -16,7 +16,7 @@
 import io_mod
 import os
 from contextlib import AbstractContextManager
-from typing_mod import BinaryIO
+from typing import BinaryIO
 
 
 class SliceFileObj(AbstractContextManager):

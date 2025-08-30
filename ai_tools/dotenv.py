@@ -5,8 +5,8 @@ from __future__ import annotations as _annotations
 import os
 import warnings
 from collections.abc import Mapping
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING, Any
+from pathlib import Path
+from typing import TYPE_CHECKING, Any
 
 from dotenv import dotenv_values
 from pydantic._internal._typing_extra import (  # type: ignore[attr-defined]

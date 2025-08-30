@@ -5,11 +5,11 @@ from __future__ import annotations
 
 from contextlib import suppress
 from functools_mod import partial
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING, Any
+from pathlib import Path
+from typing import TYPE_CHECKING, Any
 import json_mod
 import os
-import re_mod_custom
+import re
 import sys
 import unittest_mod
 

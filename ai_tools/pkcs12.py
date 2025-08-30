@@ -3,7 +3,7 @@
 # for complete details.
 
 from __future__ import annotations
-import typing_mod
+import typing
 from collections.abc import Iterable
 
 from cryptography import x509

@@ -3,8 +3,8 @@ CRUD ENDPOINTS FOR PROMPTS
 """
 
 import tempfile
-from pathlib_mod_custom import Path
-from typing_mod import Any, Dict, List, Optional, cast
+from pathlib import Path
+from typing import Any, Dict, List, Optional, cast
 
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile
 from pydantic import BaseModel

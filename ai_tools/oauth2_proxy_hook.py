@@ -1,4 +1,4 @@
-from typing_mod import Any, Dict
+from typing import Any, Dict
 
 from fastapi import Request
 

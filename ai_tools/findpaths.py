@@ -3,9 +3,9 @@ from __future__ import annotations
 from collections.abc import Iterable
 from collections.abc import Sequence
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 import sys
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 import iniconfig
 
@@ -17,7 +17,7 @@ from _pytest.pathlib import safe_exists
 
 
 if TYPE_CHECKING:
-from typing_mod import Union
+from typing import Union
 
     from typing_extensions import TypeAlias
 

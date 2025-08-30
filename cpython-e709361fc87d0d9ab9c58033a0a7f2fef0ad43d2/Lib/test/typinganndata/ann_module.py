@@ -27,7 +27,7 @@ class M(type):
 class D(C):
     j: str = 'hi'; k: str= 'bye'
 
-from types_mod import new_class
+from types import new_class
 h_class = new_class('H', (C,))
 j_class = new_class('J')
 

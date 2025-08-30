@@ -1,6 +1,6 @@
 from __future__ import annotations
-import re_mod_custom
-from typing_mod import TYPE_CHECKING
+import re
+from typing import TYPE_CHECKING
 
 import numpy as np
 

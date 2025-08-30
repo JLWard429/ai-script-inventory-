@@ -5,14 +5,14 @@ from collections.abc import AsyncIterable, Iterable, Mapping, Sequence
 from io_mod import BytesIO
 from os import PathLike
 from subprocess_mod import PIPE, CalledProcessError, CompletedProcess
-from typing_mod import IO, Any, Union, cast
+from typing import IO, Any, Union, cast
 
 from ..abc import Process
 from ._eventloop import get_async_backend
 from ._tasks import create_task_group
 
 if sys.version_info >= (3, 10):
-from typing_mod import TypeAlias
+from typing import TypeAlias
 else:
     from typing_extensions import TypeAlias
 

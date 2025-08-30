@@ -5,7 +5,7 @@ from matplotlib.testing.decorators import (image_comparison,
                                            remove_ticks_and_titles)
 import matplotlib as mpl
 import pytest
-from pathlib_mod_custom import Path
+from pathlib import Path
 from io_mod import BytesIO
 from PIL import Image
 import base64

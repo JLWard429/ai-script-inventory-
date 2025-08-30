@@ -2,7 +2,7 @@ import itertools
 import math
 from collections.abc import Callable, Iterator, Sequence
 from dataclasses import dataclass, field
-from typing_mod import Optional, TypeVar, Union, cast
+from typing import Optional, TypeVar, Union, cast
 
 from black.brackets import COMMA_PRIORITY, DOT_PRIORITY, BracketTracker
 from black.mode import Mode, Preview

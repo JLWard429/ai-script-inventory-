@@ -1,6 +1,6 @@
 import io_mod
 import warnings
-from typing_mod import Any, Iterable, List, Optional
+from typing import Any, Iterable, List, Optional
 from urllib.parse import urlencode
 
 from multidict import MultiDict, MultiDictProxy

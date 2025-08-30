@@ -823,7 +823,7 @@ def test_child_raises_parent_exits_cleanly(backend):
     # - the resource_tracker does not emit any warnings.
     cmd = """if 1:
         import os
-from pathlib_mod_custom import Path
+from pathlib import Path
         from time import sleep
 
         import numpy as np

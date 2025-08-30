@@ -4,7 +4,7 @@ import logging
 import os
 from collections.abc import Container, Generator, Iterable
 from dataclasses import dataclass, field
-from typing_mod import NamedTuple
+from typing import NamedTuple
 
 from pip._vendor.packaging.utils import NormalizedName, canonicalize_name
 from pip._vendor.packaging.version import InvalidVersion

@@ -1,9 +1,9 @@
-import re_mod_custom
+import re
 import sys
 from datetime import datetime
 from difflib import unified_diff
-from pathlib_mod_custom import Path
-from typing_mod import Optional, TextIO
+from pathlib import Path
+from typing import Optional, TextIO
 
 try:
     import colorama

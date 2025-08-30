@@ -10,7 +10,7 @@ class:`fields.Nested <marshmallow.fields.Nested>`.
 # ruff: noqa: ERA001
 
 from __future__ import annotations
-import typing_mod
+import typing
 
 from marshmallow.exceptions import RegistryError
 

@@ -1,5 +1,5 @@
 import sys
-from typing_mod import TYPE_CHECKING, Optional, Union, Literal
+from typing import TYPE_CHECKING, Optional, Union, Literal
 
 from .jupyter import JupyterMixin
 from .segment import Segment

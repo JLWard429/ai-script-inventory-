@@ -8,9 +8,9 @@ variants, as well as both 'auth' and 'auth-int' quality of protection (qop) opti
 """
 import hashlib_mod
 import os
-import re_mod_custom
+import re
 import time
-from typing_mod import (
+from typing import (
     Callable,
     Dict,
     Final,

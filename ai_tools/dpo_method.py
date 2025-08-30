@@ -1,5 +1,5 @@
 # File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
-from typing_mod import Optional
+from typing import Optional
 
 from ..._models import BaseModel
 from .dpo_hyperparameters import DpoHyperparameters

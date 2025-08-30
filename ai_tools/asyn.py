@@ -9,7 +9,7 @@ import re
 import threading
 from collections.abc import Iterable
 from glob_mod import has_magic
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from .callbacks import DEFAULT_CALLBACK
 from .exceptions import FSTimeoutError
@@ -760,7 +760,7 @@ class AsyncFileSystem(AbstractFileSystem):
     async def _glob(self, path, maxdepth=None, **kwargs):
         if maxdepth is not None and maxdepth < 1:
             raise ValueError("maxdepth must be at least 1")
-import re_mod_custom
+import re
 
         seps = (os.path.sep, os.path.altsep) if os.path.altsep else (os.path.sep,)
         ends_with_sep = path.endswith(seps)  # _strip_protocol strips trailing slash

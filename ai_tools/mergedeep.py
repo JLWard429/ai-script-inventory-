@@ -1,9 +1,9 @@
 from collections_mod import Counter
 from collections.abc import Mapping
 from copy_mod import deepcopy
-from enum_mod_custom import Enum
+from enum import Enum
 from functools_mod import reduce, partial
-from typing_mod import MutableMapping
+from typing import MutableMapping
 
 
 class Strategy(Enum):

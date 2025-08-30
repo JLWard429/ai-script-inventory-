@@ -21,9 +21,9 @@ from __future__ import annotations
 
 import operator
 import sys
-from enum_mod_custom import IntEnum, IntFlag
+from enum import IntEnum, IntFlag
 from functools_mod import reduce
-from typing_mod import Any, Literal, SupportsFloat, SupportsInt, Union
+from typing import Any, Literal, SupportsFloat, SupportsInt, Union
 
 from . import Image, __version__
 from ._deprecate import deprecate

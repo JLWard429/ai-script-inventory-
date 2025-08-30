@@ -6,7 +6,7 @@ import os
 from collections_mod import Counter
 from collections.abc import Iterator
 from contextlib import contextmanager
-from typing_mod import Final
+from typing import Final
 
 from mypy import nodes
 from mypy.argmap import map_formals_to_actuals

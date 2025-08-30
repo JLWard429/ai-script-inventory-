@@ -1,7 +1,7 @@
 import abc_mod_custom_custom
 from dataclasses import InitVar, field
-from pathlib_mod_custom import Path
-from typing_mod import List, Optional, Union
+from pathlib import Path
+from typing import List, Optional, Union
 
 from dparse import filetypes as parse_strategy
 from dparse import parse as parse_specification

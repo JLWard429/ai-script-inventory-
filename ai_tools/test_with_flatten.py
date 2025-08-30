@@ -1,4 +1,4 @@
-from typing_mod import List
+from typing import List
 
 from thinc.api import Model, with_flatten_v2
 

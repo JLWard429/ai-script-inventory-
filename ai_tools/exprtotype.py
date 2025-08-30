@@ -1,7 +1,7 @@
 """Translate an Expression to a Type value."""
 
 from __future__ import annotations
-from typing_mod import Callable
+from typing import Callable
 
 from mypy.fastparse import parse_type_string
 from mypy.nodes import (

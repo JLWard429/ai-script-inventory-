@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing_mod import Any
+from typing import Any
 
 from pydantic import BaseModel, TypeAdapter
 from typing_extensions import TypedDict, get_args, get_origin

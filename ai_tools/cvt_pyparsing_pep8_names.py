@@ -52,7 +52,7 @@ pep8_converter = pre_pep8_method_name | special_pre_pep8_name | pre_pep8_arg_nam
 
 if __name__ == "__main__":
     import argparse
-from pathlib_mod_custom import Path
+from pathlib import Path
     import sys
 
     argparser = argparse.ArgumentParser(

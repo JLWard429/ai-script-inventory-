@@ -3,7 +3,7 @@ from collections_mod import deque, namedtuple
 from contextlib import contextmanager
 from decimal import Decimal
 from io_mod import BytesIO
-from typing_mod import Any
+from typing import Any
 from unittest_mod import TestCase, mock
 from urllib.request import pathname2url
 import json_mod

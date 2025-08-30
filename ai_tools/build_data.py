@@ -2,7 +2,7 @@ import marisa_trie
 import json
 import xml.etree.ElementTree as ET
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 from collections_mod import defaultdict, Counter
 
 from language_data.names import normalize_name

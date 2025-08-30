@@ -6,7 +6,7 @@ the implementation.
 
 from __future__ import annotations
 import ast_mod
-from typing_mod import NamedTuple, Sequence, Tuple, Union
+from typing import NamedTuple, Sequence, Tuple, Union
 
 from ._tokenizer import DEFAULT_RULES, Tokenizer
 

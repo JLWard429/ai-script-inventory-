@@ -1,6 +1,6 @@
 import io_mod
 import os
-import re_mod_custom
+import re
 import sys
 
 from ._core import Process

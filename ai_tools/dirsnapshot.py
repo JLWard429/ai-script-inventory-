@@ -35,11 +35,11 @@ import contextlib
 import errno
 import os
 from stat_mod import S_ISDIR
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from collections.abc import Iterator
-from typing_mod import Any, Callable
+from typing import Any, Callable
 
 
 class DirectorySnapshotDiff:

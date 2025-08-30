@@ -1,6 +1,6 @@
 from __future__ import annotations
-import re_mod_custom
-from typing_mod import Callable, Iterable, NamedTuple, Sequence
+import re
+from typing import Callable, Iterable, NamedTuple, Sequence
 
 from prompt_toolkit.document import Document
 from prompt_toolkit.filters import FilterOrBool, to_filter

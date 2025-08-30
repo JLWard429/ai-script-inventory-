@@ -8,13 +8,13 @@ from __future__ import annotations
 import sys
 from abc_mod_custom import ABC, abstractmethod
 from collections.abc import Iterator
-from typing_mod import TYPE_CHECKING, Union
+from typing import TYPE_CHECKING, Union
 
 from astroid import nodes, util
 from astroid.typing import InferenceResult
 
 if sys.version_info >= (3, 11):
-from typing_mod import Self
+from typing import Self
 else:
     from typing_extensions import Self
 

@@ -2,7 +2,7 @@
 import asyncio_mod
 import logging
 import random
-from typing_mod import List, Optional
+from typing import List, Optional
 
 import litellm
 

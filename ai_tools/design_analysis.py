@@ -5,10 +5,10 @@
 """Check for signs of poor design."""
 
 from __future__ import annotations
-import re_mod_custom
+import re
 from collections_mod import defaultdict
 from collections.abc import Iterator
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 import astroid
 from astroid import nodes

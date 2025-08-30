@@ -5,7 +5,7 @@
 """Looks for overlapping exceptions."""
 
 from __future__ import annotations
-from typing_mod import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any
 
 import astroid
 from astroid import nodes, util

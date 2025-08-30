@@ -19,7 +19,7 @@ import os
 import random
 import threading
 import time
-from typing_mod import Any, Optional
+from typing import Any, Optional
 
 
 class EntropyPool:

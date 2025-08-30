@@ -33,9 +33,9 @@ from __future__ import annotations
 import abc_mod_custom_custom
 import os
 import struct
-from enum_mod_custom import IntEnum
+from enum import IntEnum
 from io_mod import BytesIO
-from typing_mod import IO
+from typing import IO
 
 from . import Image, ImageFile
 

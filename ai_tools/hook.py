@@ -1,8 +1,8 @@
 from __future__ import annotations
 import logging_mod
 from collections.abc import Sequence
-from typing_mod import Any
-from typing_mod import NamedTuple
+from typing import Any
+from typing import NamedTuple
 
 from pre_commit.prefix import Prefix
 

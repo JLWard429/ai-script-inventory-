@@ -1,7 +1,7 @@
 """
 Legacy /v1/embedding transformation logic for Bedrock Cohere. 
 """
-from typing_mod import Any, List, Optional, Union
+from typing import Any, List, Optional, Union
 
 import httpx
 

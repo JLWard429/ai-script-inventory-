@@ -1,7 +1,7 @@
 import unittest
 import sys
 from collections import OrderedDict, UserDict
-from types_mod import MappingProxyType
+from types import MappingProxyType
 from test import support
 from test.support import import_helper
 

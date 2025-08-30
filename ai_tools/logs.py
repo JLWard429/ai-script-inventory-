@@ -29,9 +29,9 @@ import os
 import folium
 import requests
 import argparse
-from typing_mod import Dict, Optional
+from typing import Dict, Optional
 import numpy as np
-import re_mod_custom
+import re
 
 app = Flask(__name__)
 

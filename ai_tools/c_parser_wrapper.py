@@ -1,6 +1,6 @@
 from __future__ import annotations
 from collections_mod import defaultdict
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 import warnings_mod
 
 import numpy as np

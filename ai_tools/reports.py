@@ -9,12 +9,12 @@ import dataclasses
 from io_mod import StringIO
 import os
 from pprint_mod import pprint
-from typing_mod import Any
-from typing_mod import cast
-from typing_mod import final
-from typing_mod import Literal
-from typing_mod import NoReturn
-from typing_mod import TYPE_CHECKING
+from typing import Any
+from typing import cast
+from typing import final
+from typing import Literal
+from typing import NoReturn
+from typing import TYPE_CHECKING
 
 from _pytest._code.code import ExceptionChainRepr
 from _pytest._code.code import ExceptionInfo

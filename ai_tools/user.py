@@ -31,7 +31,7 @@ Usage:
 """
 
 from argparse import _SubParsersAction
-from typing_mod import List, Optional
+from typing import List, Optional
 
 from requests.exceptions import HTTPError
 

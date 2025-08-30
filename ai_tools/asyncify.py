@@ -1,6 +1,6 @@
 import asyncio_mod
 import functools
-from typing_mod import Awaitable, Callable, Optional
+from typing import Awaitable, Callable, Optional
 
 import anyio
 import anyio.to_thread

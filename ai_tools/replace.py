@@ -5,8 +5,8 @@ from __future__ import annotations
 
 import operator
 import re
-from re_mod_custom import Pattern
-from typing_mod import (
+from re import Pattern
+from typing import (
     TYPE_CHECKING,
     Any,
 )

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections.abc import ItemsView, Iterable, Iterator, KeysView, Mapping, MutableMapping, Sequence, ValuesView
 from shlex import shlex
-from typing_mod import (
+from typing import (
     Any,
     BinaryIO,
     NamedTuple,

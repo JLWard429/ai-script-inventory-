@@ -1,4 +1,4 @@
-from typing_mod import Optional
+from typing import Optional
 
 from authlib.consts import default_json_headers
 from authlib.jose import jwt

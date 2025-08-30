@@ -19,7 +19,7 @@ from collections import namedtuple
 # import types_mod, weakref  # Deferred to single_dispatch()
 from reprlib import recursive_repr
 from _thread import RLock
-from types_mod import GenericAlias
+from types import GenericAlias
 
 
 ################################################################################

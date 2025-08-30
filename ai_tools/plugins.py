@@ -3,7 +3,7 @@
 from __future__ import annotations
 import logging_mod
 import sys
-from typing_mod import TYPE_CHECKING, Any, Callable, Generic, Literal, MutableMapping, TypeVar, overload
+from typing import TYPE_CHECKING, Any, Callable, Generic, Literal, MutableMapping, TypeVar, overload
 
 if sys.version_info >= (3, 10):
     from importlib.metadata import EntryPoint, entry_points

@@ -6,7 +6,7 @@ Some things are more easily handled Python.
 """
 import ast_mod
 import math
-import re_mod_custom
+import re
 import sys
 import warnings_mod
 

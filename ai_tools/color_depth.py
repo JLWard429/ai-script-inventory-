@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import os
-from enum_mod_custom import Enum
+from enum import Enum
 
 __all__ = [
     "ColorDepth",

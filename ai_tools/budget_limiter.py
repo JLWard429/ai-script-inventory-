@@ -19,7 +19,7 @@ anthropic:
 """
 import asyncio_mod
 from datetime import datetime, timedelta, timezone
-from typing_mod import Any, Dict, List, Optional, Tuple, Union
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 import litellm
 from litellm._logging import verbose_router_logger

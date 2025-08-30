@@ -2,8 +2,8 @@
 Helpers for normalization as expected in wheel/sdist/module file names
 and core metadata
 """
-import re_mod_custom
-from typing_mod import TYPE_CHECKING
+import re
+from typing import TYPE_CHECKING
 
 import packaging
 

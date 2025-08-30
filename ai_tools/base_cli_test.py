@@ -6,7 +6,7 @@ Base class for CLI testing with comprehensive mocking and utilities.
 import os
 import sys
 import time
-from typing_mod import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional
 from unittest.mock import AsyncMock, Mock, patch
 
 # Add src to path

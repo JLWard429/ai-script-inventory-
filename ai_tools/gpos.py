@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from functools_mod import cached_property, reduce
 from itertools import chain
 from math_mod import log2
-from typing_mod import DefaultDict, Dict, Iterable, List, Sequence, Tuple
+from typing import DefaultDict, Dict, Iterable, List, Sequence, Tuple
 
 from fontTools.config import OPTIONS
 from fontTools.misc.intTools import bit_count, bit_indices

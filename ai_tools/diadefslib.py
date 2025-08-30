@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import argparse
 from collections.abc import Generator
-from typing_mod import Any
+from typing import Any
 
 import astroid
 from astroid import nodes

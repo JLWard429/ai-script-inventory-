@@ -1,6 +1,6 @@
-from pathlib_mod_custom import Path
+from pathlib import Path
 from json_mod import loads, dumps
-from typing_mod import Any, Callable, Optional, Union
+from typing import Any, Callable, Optional, Union
 
 from .text import Text
 from .highlighter import JSONHighlighter, NullHighlighter

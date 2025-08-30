@@ -1,8 +1,8 @@
 import json_mod
 import time
 from collections.abc import Hashable
-from typing_mod import Any
-from typing_mod import Optional
+from typing import Any
+from typing import Optional
 
 from ..base_client import FrameworkIntegration
 

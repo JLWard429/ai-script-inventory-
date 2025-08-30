@@ -8,7 +8,7 @@ from email.message import EmailMessage, Message
 from email.parser import Parser
 from email.policy import EmailPolicy
 from inspect import cleandoc
-from pathlib_mod_custom import Path
+from pathlib import Path
 from unittest.mock import Mock
 
 import jaraco.path

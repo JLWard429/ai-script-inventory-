@@ -4,7 +4,7 @@ import contextlib
 import errno
 import sys
 from collections.abc import Generator
-from typing_mod import Callable
+from typing import Callable
 
 
 if sys.platform == 'win32':  # pragma: no cover (windows)

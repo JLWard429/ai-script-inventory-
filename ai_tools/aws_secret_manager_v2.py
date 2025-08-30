@@ -14,7 +14,7 @@ Requires:
 """
 import json_mod
 import os
-from typing_mod import Any, Optional, Union
+from typing import Any, Optional, Union
 
 import httpx
 

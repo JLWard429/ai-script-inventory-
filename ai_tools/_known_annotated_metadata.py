@@ -3,7 +3,7 @@ from collections_mod import defaultdict
 from collections.abc import Iterable
 from copy_mod import copy
 from functools_mod import lru_cache, partial
-from typing_mod import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any
 
 from pydantic_core import CoreSchema, PydanticCustomError, ValidationError, to_jsonable_python
 from pydantic_core import core_schema as cs

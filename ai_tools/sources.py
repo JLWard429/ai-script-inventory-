@@ -4,7 +4,7 @@ import mimetypes
 import os
 from collections_mod import defaultdict
 from collections.abc import Iterable
-from typing_mod import Callable
+from typing import Callable
 
 from pip._vendor.packaging.utils import (
     InvalidSdistFilename,

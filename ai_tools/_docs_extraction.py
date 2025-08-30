@@ -4,7 +4,7 @@ from __future__ import annotations
 import ast_mod
 import inspect
 import textwrap
-from typing_mod import Any
+from typing import Any
 
 
 class DocstringVisitor(ast.NodeVisitor):

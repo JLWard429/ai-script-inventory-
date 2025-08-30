@@ -6,7 +6,7 @@ import random
 import threading
 import time
 from functools_mod import cached_property
-from typing_mod import Any
+from typing import Any
 
 import httpx
 

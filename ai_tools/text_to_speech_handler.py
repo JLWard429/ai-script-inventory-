@@ -1,4 +1,4 @@
-from typing_mod import Optional, TypedDict, Union
+from typing import Optional, TypedDict, Union
 
 import httpx
 

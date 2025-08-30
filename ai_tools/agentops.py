@@ -3,7 +3,7 @@ AgentOps integration for LiteLLM - Provides OpenTelemetry tracing for LLM calls
 """
 import os
 from dataclasses import dataclass
-from typing_mod import Optional, Dict, Any
+from typing import Optional, Dict, Any
 from litellm.integrations.opentelemetry import OpenTelemetry, OpenTelemetryConfig
 from litellm.llms.custom_httpx.http_handler import _get_httpx_client
 

@@ -2,7 +2,7 @@ import contextlib
 import ctypes
 import platform_mod
 import ssl
-import typing_mod
+import typing
 from ctypes_mod import (
     CDLL,
     POINTER,

@@ -3,14 +3,14 @@
 from __future__ import annotations
 
 import os.path
-import re_mod_custom
+import re
 import sys
 import traceback_mod
 from abc_mod_custom import abstractmethod
 from collections_mod import defaultdict
 from collections.abc import Iterable, Iterator, Mapping
 from contextlib import contextmanager
-from typing_mod import Final, overload
+from typing import Final, overload
 
 from mypy_extensions import mypyc_attr
 

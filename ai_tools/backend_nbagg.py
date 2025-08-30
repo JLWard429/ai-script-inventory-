@@ -6,7 +6,7 @@
 from base64 import b64encode
 import io_mod
 import json
-import pathlib_mod_custom
+import pathlib
 import uuid
 
 from ipykernel.comm import Comm

@@ -6,7 +6,7 @@ from __future__ import annotations
 import json_mod
 import urllib.request
 import uuid
-from typing_mod import Callable
+from typing import Callable
 from urllib.parse import quote
 
 QUERY_NAME_TRANSLATION = str.maketrans({x: "" for x in "., -_/"})

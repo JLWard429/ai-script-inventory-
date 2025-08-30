@@ -5,8 +5,8 @@
 from __future__ import annotations
 import abc_mod_custom_custom
 import argparse
-from pathlib_mod_custom import Path
-from typing_mod import TypedDict
+from pathlib import Path
+from typing import TypedDict
 
 from pylint.reporters.json_reporter import OldJsonExport
 from pylint.testutils._primer import PackageToLint

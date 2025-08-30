@@ -2,8 +2,8 @@ import importlib
 import sys
 import warnings_mod
 from functools_mod import partial
-from pathlib_mod_custom import Path
-from typing_mod import (
+from pathlib import Path
+from typing import (
     Any,
     Callable,
     Dict,

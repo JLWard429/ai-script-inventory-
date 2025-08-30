@@ -1,6 +1,6 @@
 from __future__ import annotations
 import json_mod
-from typing_mod import TYPE_CHECKING, Any, List, Iterable, cast
+from typing import TYPE_CHECKING, Any, List, Iterable, cast
 from typing_extensions import TypeVar, assert_never
 
 import pydantic

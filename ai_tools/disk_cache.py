@@ -1,5 +1,5 @@
 import json_mod
-from typing_mod import TYPE_CHECKING, Any, Optional, Union
+from typing import TYPE_CHECKING, Any, Optional, Union
 
 from .base_cache import BaseCache
 

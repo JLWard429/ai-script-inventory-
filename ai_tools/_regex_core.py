@@ -12,7 +12,7 @@
 # other compatibility work.
 #
 # 2010-01-16 mrab Python front-end re-written and extended
-import enum_mod_custom
+import enum
 import string
 import unicodedata
 from collections_mod import defaultdict

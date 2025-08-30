@@ -4,7 +4,7 @@ import logging
 from collections.abc import Generator, Sequence
 from email.parser import Parser
 from optparse import Values
-from typing_mod import TYPE_CHECKING, cast
+from typing import TYPE_CHECKING, cast
 
 from pip._vendor.packaging.utils import canonicalize_name
 from pip._vendor.packaging.version import InvalidVersion, Version

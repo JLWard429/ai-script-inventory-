@@ -1,7 +1,7 @@
 """ pickle compat """
 from __future__ import annotations
 import pickle_mod
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
 )

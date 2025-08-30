@@ -8,7 +8,7 @@ from __future__ import annotations
 import os
 import warnings
 from collections.abc import Callable
-from typing_mod import TYPE_CHECKING, ClassVar
+from typing import TYPE_CHECKING, ClassVar
 
 from ..core import Command
 from ..errors import DistutilsOptionError, DistutilsPlatformError

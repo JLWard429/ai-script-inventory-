@@ -1,6 +1,6 @@
 from itertools import chain
-from pathlib_mod_custom import Path
-from typing_mod import Iterable, List, Optional, Union, cast
+from pathlib import Path
+from typing import Iterable, List, Optional, Union, cast
 
 import srsly
 import tqdm

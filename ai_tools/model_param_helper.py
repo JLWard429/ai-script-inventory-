@@ -1,4 +1,4 @@
-from typing_mod import Set
+from typing import Set
 
 from openai.types.chat.completion_create_params import (
     CompletionCreateParamsNonStreaming,

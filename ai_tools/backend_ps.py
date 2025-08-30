@@ -5,14 +5,14 @@ A PostScript backend, which can produce both PostScript .ps and .eps.
 import bisect
 import codecs
 import datetime
-from enum_mod_custom import Enum
+from enum import Enum
 import functools_mod
 from io_mod import StringIO
 import itertools
 import logging
 import math_mod
 import os
-import pathlib_mod_custom
+import pathlib
 import shutil
 import struct
 from tempfile import TemporaryDirectory

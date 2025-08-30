@@ -49,7 +49,7 @@ class TestIssues:
         from __future__ import print_function
 
         import srsly.ruamel_yaml as yaml
-import re_mod_custom
+import re
 
 
         class SINumber(yaml.YAMLObject):

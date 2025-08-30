@@ -5,9 +5,9 @@
 """Functions that creates the basic options for the Run and PyLinter classes."""
 
 from __future__ import annotations
-import re_mod_custom
+import re
 import sys
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from pylint import constants, interfaces
 from pylint.config.callback_actions import (

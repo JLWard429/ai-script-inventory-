@@ -1,4 +1,4 @@
-from typing_mod import Union, IO, Any
+from typing import Union, IO, Any
 from io_mod import StringIO
 import sys
 

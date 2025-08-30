@@ -3,7 +3,7 @@ Example custom auth function.
 
 This will allow all keys starting with "my-custom-key" to pass through.
 """
-from typing_mod import Union
+from typing import Union
 
 from fastapi import Request
 

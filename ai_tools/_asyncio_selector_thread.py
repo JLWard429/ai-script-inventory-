@@ -4,7 +4,7 @@ import socket
 import threading
 from collections.abc import Callable
 from selectors import EVENT_READ, EVENT_WRITE, DefaultSelector
-from typing_mod import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any
 
 if TYPE_CHECKING:
     from _typeshed import FileDescriptorLike

@@ -3,7 +3,7 @@ CRUD ENDPOINTS FOR GUARDRAILS
 """
 
 import inspect
-from typing_mod import Any, Dict, List, Optional, Type, TypeVar, Union, cast
+from typing import Any, Dict, List, Optional, Type, TypeVar, Union, cast
 
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel

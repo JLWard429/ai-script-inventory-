@@ -1,6 +1,6 @@
 import zlib
-from pathlib_mod_custom import Path
-from typing_mod import Dict, Iterable, Iterator, List, Optional, Set, Union
+from pathlib import Path
+from typing import Dict, Iterable, Iterator, List, Optional, Set, Union
 
 import numpy
 import srsly

@@ -6,7 +6,7 @@ import time
 import urllib.parse
 import warnings_mod
 from dataclasses import dataclass
-from typing_mod import TYPE_CHECKING, Dict, List, Literal, Optional, Tuple, Union
+from typing import TYPE_CHECKING, Dict, List, Literal, Optional, Tuple, Union
 
 from . import constants
 from .hf_api import whoami

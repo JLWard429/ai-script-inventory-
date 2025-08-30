@@ -7,7 +7,7 @@ Example:
     "datadog" -> DataDogLogger
     "prometheus" -> PrometheusLogger
 """
-from typing_mod import Union
+from typing import Union
 
 from litellm import _custom_logger_compatible_callbacks_literal
 from litellm.integrations.agentops import AgentOps

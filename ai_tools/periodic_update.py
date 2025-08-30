@@ -8,7 +8,7 @@ import ssl
 import sys
 from datetime import datetime, timedelta, timezone
 from itertools import groupby
-from pathlib_mod_custom import Path
+from pathlib import Path
 from shutil import copy2
 from subprocess_mod import DEVNULL, Popen
 from textwrap import dedent

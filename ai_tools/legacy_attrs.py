@@ -29,10 +29,10 @@ years. This extension can be used to continue to render those documents correctl
 """
 
 from __future__ import annotations
-import re_mod_custom
+import re
 from markdown.treeprocessors import Treeprocessor, isString
 from markdown.extensions import Extension
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:  # pragma: no cover
     import xml.etree.ElementTree as etree

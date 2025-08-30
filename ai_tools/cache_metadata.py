@@ -3,7 +3,7 @@ from __future__ import annotations
 import os
 import pickle
 import time
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from fsspec.utils import atomic_write
 
@@ -15,7 +15,7 @@ import json_mod
 
 if TYPE_CHECKING:
     from collections.abc import Iterator
-from typing_mod import Any, Literal
+from typing import Any, Literal
 
     from typing_extensions import TypeAlias
 

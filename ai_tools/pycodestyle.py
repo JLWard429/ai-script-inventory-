@@ -52,7 +52,7 @@ import inspect
 import io
 import keyword
 import os
-import re_mod_custom
+import re
 import sys
 import time
 import tokenize

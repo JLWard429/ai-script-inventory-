@@ -16,9 +16,9 @@ The Treebank tokenizer uses regular expressions to tokenize text as in Penn Tree
 This implementation is a port of the tokenizer sed script written by Robert McIntyre
 and available at http://www.cis.upenn.edu/~treebank/tokenizer.sed.
 """
-import re_mod_custom
+import re
 import warnings
-from typing_mod import Iterator, List, Tuple
+from typing import Iterator, List, Tuple
 
 from nltk.tokenize.api import TokenizerI
 from nltk.tokenize.destructive import MacIntyreContractions

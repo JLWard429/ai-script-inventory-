@@ -1,4 +1,4 @@
-from typing_mod import TYPE_CHECKING, Dict, ItemsView, Iterable, List, Set, Union
+from typing import TYPE_CHECKING, Dict, ItemsView, Iterable, List, Set, Union
 
 from wasabi import msg
 

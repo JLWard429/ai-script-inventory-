@@ -4,7 +4,7 @@ Merge command for CAI CLI - alias for /parallel merge.
 Provides a shortcut to merge agent message histories without
 typing the full /parallel merge command.
 """
-from typing_mod import List, Optional
+from typing import List, Optional
 
 from rich.console import Console
 

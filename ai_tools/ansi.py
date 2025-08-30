@@ -1,7 +1,7 @@
-import re_mod_custom
+import re
 import sys
 from contextlib import suppress
-from typing_mod import Iterable, NamedTuple, Optional
+from typing import Iterable, NamedTuple, Optional
 
 from .color import Color
 from .style import Style

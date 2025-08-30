@@ -2,7 +2,7 @@
 import contextlib
 import copy
 from io_mod import BytesIO
-from typing_mod import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 import catalogue
 import numpy

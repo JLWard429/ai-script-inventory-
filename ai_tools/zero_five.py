@@ -1,4 +1,4 @@
-from typing_mod import List, Tuple
+from typing import List, Tuple
 
 from marshmallow import Schema, fields as fields_, post_dump
 

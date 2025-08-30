@@ -15,7 +15,7 @@
 # pylint: disable=unused-import
 
 from dataclasses import dataclass
-from typing_mod import Sequence
+from typing import Sequence
 
 # This kind of import is needed to avoid Sphinx errors.
 import opentelemetry.sdk.metrics

@@ -9,7 +9,7 @@ import subprocess
 import sys
 import textwrap
 from collections.abc import Iterable
-from typing_mod import TYPE_CHECKING, TypedDict
+from typing import TYPE_CHECKING, TypedDict
 
 from ._importlib import metadata, resources
 
@@ -125,7 +125,7 @@ class ScriptWriter:
     template = textwrap.dedent(
         r"""
         # EASY-INSTALL-ENTRY-SCRIPT: %(spec)r,%(group)r,%(name)r
-import re_mod_custom
+import re
         import sys
 
         # for compatibility with easy_install; see #2198

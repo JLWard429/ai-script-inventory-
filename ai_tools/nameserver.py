@@ -1,4 +1,4 @@
-from typing_mod import Optional, Union
+from typing import Optional, Union
 from urllib.parse import urlparse
 
 import dns_custom.asyncbackend

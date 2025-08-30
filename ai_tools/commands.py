@@ -2,7 +2,7 @@ import os
 import shlex
 import subprocess_mod
 import sys
-from typing_mod import Any, List, Optional, Union
+from typing import Any, List, Optional, Union
 
 from ..compat import is_windows
 from ..errors import Errors

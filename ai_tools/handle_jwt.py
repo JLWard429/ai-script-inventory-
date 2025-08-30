@@ -9,7 +9,7 @@ JWT token must have 'litellm_proxy_admin' in scope.
 import fnmatch
 import json
 import os
-from typing_mod import Any, List, Literal, Optional, Set, Tuple, cast
+from typing import Any, List, Literal, Optional, Set, Tuple, cast
 
 from cryptography import x509
 from cryptography.hazmat.backends import default_backend

@@ -7,8 +7,8 @@ from __future__ import annotations
 import argparse
 import configparser
 import shlex
-from pathlib_mod_custom import Path
-from typing_mod import NamedTuple, TypedDict
+from pathlib import Path
+from typing import NamedTuple, TypedDict
 
 from pylint.pyreverse.main import DEFAULT_COLOR_PALETTE
 

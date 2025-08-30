@@ -1,8 +1,8 @@
 import sys
 from configparser import InterpolationError
 from contextlib import contextmanager
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING, Any, Dict, Optional, Union
+from pathlib import Path
+from typing import TYPE_CHECKING, Any, Dict, Optional, Union
 
 from confection import ConfigValidationError
 from wasabi import msg

@@ -8,7 +8,7 @@ import re
 import urllib.parse
 from collections.abc import Mapping
 from dataclasses import dataclass
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     NamedTuple,

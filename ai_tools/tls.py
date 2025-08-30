@@ -7,7 +7,7 @@ from collections.abc import Callable, Mapping
 from dataclasses import dataclass
 from functools_mod import wraps
 from ssl import SSLContext
-from typing_mod import Any, TypeVar
+from typing import Any, TypeVar
 
 from .. import (
     BrokenResourceError,
@@ -27,17 +27,17 @@ from ..abc import (
 )
 
 if sys.version_info >= (3, 10):
-from typing_mod import TypeAlias
+from typing import TypeAlias
 else:
     from typing_extensions import TypeAlias
 
 if sys.version_info >= (3, 11):
-from typing_mod import TypeVarTuple, Unpack
+from typing import TypeVarTuple, Unpack
 else:
     from typing_extensions import TypeVarTuple, Unpack
 
 if sys.version_info >= (3, 12):
-from typing_mod import override
+from typing import override
 else:
     from typing_extensions import override
 

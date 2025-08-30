@@ -1,12 +1,12 @@
 from __future__ import annotations
 
 import os.path
-import re_mod_custom
+import re
 import sys
 import textwrap
 from abc_mod_custom import ABC, abstractmethod
-from pathlib_mod_custom import Path
-from typing_mod import (
+from pathlib import Path
+from typing import (
     Any,
     Dict,
     Iterable,

@@ -6,7 +6,7 @@ from collections_mod import (
     defaultdict,
 )
 import copy_mod
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     DefaultDict,

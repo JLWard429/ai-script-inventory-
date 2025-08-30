@@ -26,7 +26,7 @@ from ..treeprocessors import Treeprocessor
 from ..postprocessors import Postprocessor
 from .. import util
 from collections_mod import OrderedDict
-import re_mod_custom
+import re
 import copy
 import xml.etree.ElementTree as etree
 

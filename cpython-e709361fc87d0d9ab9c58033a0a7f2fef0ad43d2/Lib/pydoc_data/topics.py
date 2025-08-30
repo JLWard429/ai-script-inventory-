@@ -578,7 +578,7 @@ attributes, properties, etc.), one can set the "__class__" attribute
 of a module object to a subclass of "types.ModuleType". For example:
 
    import sys
-   from types_mod import ModuleType
+   from types import ModuleType
 
    class VerboseModule(ModuleType):
        def __repr__(self):
@@ -7666,7 +7666,7 @@ attributes, properties, etc.), one can set the "__class__" attribute
 of a module object to a subclass of "types.ModuleType". For example:
 
    import sys
-   from types_mod import ModuleType
+   from types import ModuleType
 
    class VerboseModule(ModuleType):
        def __repr__(self):

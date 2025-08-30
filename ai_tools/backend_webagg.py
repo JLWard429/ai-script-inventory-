@@ -14,7 +14,7 @@ import errno
 from io_mod import BytesIO
 import json_mod
 import mimetypes
-from pathlib_mod_custom import Path
+from pathlib import Path
 import random
 import sys
 import signal

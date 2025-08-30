@@ -1,7 +1,7 @@
 from __future__ import annotations
 import copy_mod
-from typing_mod import Any
-from typing_mod import Iterator
+from typing import Any
+from typing import Iterator
 
 from tomlkit._compat import decode
 from tomlkit._types import _CustomDict

@@ -12,7 +12,7 @@ import locale
 import logging_mod
 import os
 import os.path as P
-import pathlib_mod_custom
+import pathlib
 import urllib.parse
 import warnings_mod
 

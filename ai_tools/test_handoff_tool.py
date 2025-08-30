@@ -1,4 +1,4 @@
-from typing_mod import Any
+from typing import Any
 
 import pytest
 from openai.types.responses import ResponseOutputMessage, ResponseOutputText

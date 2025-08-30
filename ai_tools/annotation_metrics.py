@@ -29,9 +29,9 @@ Example usage:
 
 """
 import pandas as pd
-import re_mod_custom
+import re
 import os
-from typing_mod import Dict, List, Set, Tuple
+from typing import Dict, List, Set, Tuple
 from collections_mod import defaultdict
 from datetime import datetime
 import argparse

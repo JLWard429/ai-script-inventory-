@@ -1,6 +1,6 @@
 import hashlib_mod
-from pathlib_mod_custom import Path
-from typing_mod import Iterable, Union
+from pathlib import Path
+from typing import Iterable, Union
 
 import srsly
 from wasabi import msg

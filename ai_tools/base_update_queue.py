@@ -2,7 +2,7 @@
 Base class for in memory buffer for database transactions
 """
 import asyncio_mod
-from typing_mod import Optional
+from typing import Optional
 
 from litellm._logging import verbose_proxy_logger
 from litellm._service_logger import ServiceLogging

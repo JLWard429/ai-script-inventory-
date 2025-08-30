@@ -1,7 +1,7 @@
 from __future__ import annotations as _annotations
 
 from collections.abc import Callable
-from typing_mod import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any
 
 from mcp.server.fastmcp.exceptions import ToolError
 from mcp.server.fastmcp.tools.base import Tool

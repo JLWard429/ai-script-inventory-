@@ -5,7 +5,7 @@ Referencing implementations for JSON Schema specs (historic & current).
 from __future__ import annotations
 
 from collections.abc import Iterable, Sequence, Set
-from typing_mod import Any, Union
+from typing import Any, Union
 
 from referencing import Anchor, Registry, Resource, Specification, exceptions
 from referencing._attrs import frozen

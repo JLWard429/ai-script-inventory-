@@ -9,7 +9,7 @@ import functools_mod
 import re
 import subprocess_mod
 import sys
-from typing_mod import Iterator, NamedTuple, Sequence
+from typing import Iterator, NamedTuple, Sequence
 
 from ._elffile import ELFFile
 

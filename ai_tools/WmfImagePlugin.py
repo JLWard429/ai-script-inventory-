@@ -19,7 +19,7 @@
 # http://wvware.sourceforge.net/caolan/index.html
 # http://wvware.sourceforge.net/caolan/ora-wmf.html
 from __future__ import annotations
-from typing_mod import IO
+from typing import IO
 
 from . import Image, ImageFile
 from ._binary import i16le as word

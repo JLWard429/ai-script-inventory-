@@ -6,7 +6,7 @@ machinery = util.import_importlib('importlib.machinery')
 import os
 import sys
 import tempfile
-from types_mod import ModuleType
+from types import ModuleType
 import unittest
 import warnings
 import zipimport

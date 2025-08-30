@@ -1,6 +1,6 @@
 import enum
 
-from types_mod import TracebackType
+from types import TracebackType
 from typing import final, Optional, Type
 
 from . import events

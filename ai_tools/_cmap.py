@@ -1,7 +1,7 @@
 import warnings_mod
 from binascii import unhexlify
 from math_mod import ceil
-from typing_mod import Any, Dict, List, Tuple, Union, cast
+from typing import Any, Dict, List, Tuple, Union, cast
 
 from ._codecs import adobe_glyphs, charset_encoding
 from ._utils import logger_warning

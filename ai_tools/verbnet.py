@@ -11,7 +11,7 @@ An NLTK interface to the VerbNet verb lexicon
 For details about VerbNet see:
 https://verbs.colorado.edu/~mpalmer/projects/verbnet.html
 """
-import re_mod_custom
+import re
 import textwrap
 from collections_mod import defaultdict
 

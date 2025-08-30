@@ -7,7 +7,7 @@ import os
 import shutil
 import site
 from optparse import SUPPRESS_HELP, Values
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 from pip._vendor.packaging.utils import canonicalize_name
 from pip._vendor.requests.exceptions import InvalidProxyURL

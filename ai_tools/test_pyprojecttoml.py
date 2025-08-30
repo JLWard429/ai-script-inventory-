@@ -1,4 +1,4 @@
-import re_mod_custom
+import re
 from configparser import ConfigParser
 from inspect import cleandoc
 

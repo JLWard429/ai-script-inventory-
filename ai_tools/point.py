@@ -16,7 +16,7 @@
 
 from dataclasses import asdict, dataclass, field
 from json_mod import dumps, loads
-from typing_mod import Optional, Sequence, Union
+from typing import Optional, Sequence, Union
 
 # This kind of import is needed to avoid Sphinx errors.
 import opentelemetry.sdk.metrics._internal

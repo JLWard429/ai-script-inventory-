@@ -19,7 +19,7 @@
 
 import binascii
 import re
-from typing_mod import List, Union
+from typing import List, Union
 
 import dns_custom.exception
 import dns_custom.ipv4

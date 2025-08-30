@@ -1,5 +1,5 @@
 from functools_mod import lru_cache
-from typing_mod import Callable, Optional, TypeVar
+from typing import Callable, Optional, TypeVar
 
 T = TypeVar("T")
 

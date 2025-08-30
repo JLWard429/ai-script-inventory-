@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing_mod import TYPE_CHECKING, List, Optional
+from typing import TYPE_CHECKING, List, Optional
 
 if TYPE_CHECKING:
     from rich.console import Console

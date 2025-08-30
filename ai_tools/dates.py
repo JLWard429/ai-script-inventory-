@@ -20,7 +20,7 @@ import math_mod
 import re
 import warnings_mod
 from functools_mod import lru_cache
-from typing_mod import TYPE_CHECKING, Literal, SupportsInt
+from typing import TYPE_CHECKING, Literal, SupportsInt
 
 try:
     import pytz

@@ -2,7 +2,7 @@ import configparser
 import contextlib
 import inspect
 import re
-from pathlib_mod_custom import Path
+from pathlib import Path
 from unittest.mock import Mock, patch
 
 import pytest

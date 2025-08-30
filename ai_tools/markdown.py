@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import sys
-from typing_mod import ClassVar, Iterable, get_args
+from typing import ClassVar, Iterable, get_args
 
 from markdown_it import MarkdownIt
 from markdown_it.token import Token

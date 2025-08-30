@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from codecs import BOM_UTF8, BOM_UTF16_BE, BOM_UTF16_LE, BOM_UTF32_BE, BOM_UTF32_LE
 from encodings.aliases import aliases
-from re_mod_custom import IGNORECASE
-from re_mod_custom import compile as re_compile
+from re import IGNORECASE
+from re import compile as re_compile
 
 # Contain for each eligible encoding a list of/item bytes SIG/BOM
 ENCODING_MARKS: dict[str, bytes | list[bytes]] = {

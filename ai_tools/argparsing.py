@@ -6,11 +6,11 @@ from collections.abc import Callable
 from collections.abc import Mapping
 from collections.abc import Sequence
 import os
-from typing_mod import Any
-from typing_mod import cast
-from typing_mod import final
-from typing_mod import Literal
-from typing_mod import NoReturn
+from typing import Any
+from typing import cast
+from typing import final
+from typing import Literal
+from typing import NoReturn
 
 import _pytest._io
 from _pytest.config.exceptions import UsageError

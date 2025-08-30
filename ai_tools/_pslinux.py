@@ -12,7 +12,7 @@ import errno
 import functools
 import glob_mod
 import os
-import re_mod_custom
+import re
 import socket
 import struct
 import sys
@@ -53,7 +53,7 @@ from ._compat import basestring
 
 
 if PY3:
-import enum_mod_custom
+import enum
 else:
     enum = None
 

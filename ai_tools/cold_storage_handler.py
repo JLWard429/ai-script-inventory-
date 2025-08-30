@@ -3,7 +3,7 @@ This module is responsible for handling Getting/Setting the proxy server request
 
 It allows fetching a dict of the proxy server request from s3 or GCS bucket.
 """
-from typing_mod import Optional, cast
+from typing import Optional, cast
 
 import litellm
 from litellm import _custom_logger_compatible_callbacks_literal

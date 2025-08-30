@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import dataclasses
-from typing_mod import Any, Callable, Literal
+from typing import Any, Callable, Literal
 
 from pydantic_core import PydanticUndefined
 

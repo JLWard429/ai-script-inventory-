@@ -53,7 +53,7 @@ def ssl_transform():
     return parse(
         f"""
     # Import necessary for conversion of objects defined in C into enums
-from enum_mod_custom import IntEnum as _IntEnum, IntFlag as _IntFlag
+from enum import IntEnum as _IntEnum, IntFlag as _IntFlag
 
     from _ssl import OPENSSL_VERSION_NUMBER, OPENSSL_VERSION_INFO, OPENSSL_VERSION
     from _ssl import _SSLContext, MemoryBIO

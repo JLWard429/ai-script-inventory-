@@ -1,7 +1,7 @@
 """ io on the clipboard """
 from __future__ import annotations
 from io_mod import StringIO
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 import warnings_mod
 
 from pandas._libs import lib

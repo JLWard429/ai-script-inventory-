@@ -1,7 +1,7 @@
 from __future__ import annotations as _annotations  # important for BaseSettings import to work
 import json_mod
 from collections.abc import Mapping
-from typing_mod import TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING, Optional
 
 from ..utils import parse_env_vars
 from .env import EnvSettingsSource

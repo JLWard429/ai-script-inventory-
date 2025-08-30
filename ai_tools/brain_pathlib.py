@@ -13,7 +13,7 @@ from astroid.exceptions import InferenceError, UseInferenceDefault
 from astroid.manager import AstroidManager
 
 PATH_TEMPLATE = """
-from pathlib_mod_custom import Path
+from pathlib import Path
 Path
 """
 

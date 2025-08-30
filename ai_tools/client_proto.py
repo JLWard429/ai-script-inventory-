@@ -1,6 +1,6 @@
 import asyncio_mod
 from contextlib import suppress
-from typing_mod import Any, Optional, Tuple, Union
+from typing import Any, Optional, Tuple, Union
 
 from .base_protocol import BaseProtocol
 from .client_exceptions import (

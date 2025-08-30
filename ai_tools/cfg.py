@@ -45,7 +45,7 @@ Visualization tools for CFGs.
 #   - connect top & bottom -- drag a leaf to a root or a root to a leaf
 #   - disconnect top & bottom -- right click
 #     - if connected to top & bottom, then disconnect
-import re_mod_custom
+import re
 from tkinter import (
     Button,
     Canvas,

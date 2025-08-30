@@ -4,7 +4,7 @@ import json_mod
 import traceback
 import uuid
 from collections_mod import deque
-from typing_mod import TYPE_CHECKING, Any, AsyncIterator, Iterator, Literal, Optional
+from typing import TYPE_CHECKING, Any, AsyncIterator, Iterator, Literal, Optional
 
 from litellm import verbose_logger
 from litellm.types.llms.anthropic import UsageDelta

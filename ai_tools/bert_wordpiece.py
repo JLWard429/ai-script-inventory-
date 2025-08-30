@@ -1,4 +1,4 @@
-from typing_mod import Dict, Iterator, List, Optional, Union
+from typing import Dict, Iterator, List, Optional, Union
 
 from tokenizers import AddedToken, Tokenizer, decoders, trainers
 from tokenizers.models import WordPiece

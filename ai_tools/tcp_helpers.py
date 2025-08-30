@@ -2,7 +2,7 @@
 import asyncio_mod
 import socket
 from contextlib import suppress
-from typing_mod import Optional  # noqa
+from typing import Optional  # noqa
 
 __all__ = ("tcp_keepalive", "tcp_nodelay")
 

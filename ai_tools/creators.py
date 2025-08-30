@@ -1,6 +1,6 @@
 from __future__ import annotations
 from collections_mod import OrderedDict, defaultdict
-from typing_mod import TYPE_CHECKING, NamedTuple
+from typing import TYPE_CHECKING, NamedTuple
 
 from virtualenv.create.describe import Describe
 from virtualenv.create.via_global_ref.builtin.builtin_way import VirtualenvBuiltin

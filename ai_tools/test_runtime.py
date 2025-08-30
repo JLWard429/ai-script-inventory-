@@ -1,5 +1,5 @@
 """Test the runtime usage of `numpy.typing`."""
-from typing_mod import (
+from typing import (
     Any,
     NamedTuple,
     Union,  # pyright: ignore[reportDeprecated]

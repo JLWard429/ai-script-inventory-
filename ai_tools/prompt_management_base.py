@@ -1,5 +1,5 @@
 from abc_mod_custom import ABC, abstractmethod
-from typing_mod import Any, Dict, List, Optional, Tuple, TypedDict
+from typing import Any, Dict, List, Optional, Tuple, TypedDict
 
 from litellm.types.llms.openai import AllMessageValues
 from litellm.types.utils import StandardCallbackDynamicParams

@@ -1,7 +1,7 @@
 import io_mod
 import re
 import json_mod
-from typing_mod import Optional, Any, Union
+from typing import Optional, Any, Union
 
 
 class ServerSentEvent:

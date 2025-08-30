@@ -1,4 +1,4 @@
-from typing_mod import List, Optional, Union
+from typing import List, Optional, Union
 from thinc.api import Model
 from thinc.types import Floats2d
 from spacy.attrs import intify_attr

@@ -2,14 +2,14 @@ from __future__ import annotations
 
 import sys
 from collections.abc import Callable
-from typing_mod import TypeVar
+from typing import TypeVar
 from warnings_mod import warn
 
 from ._core._eventloop import get_async_backend
 from .abc import CapacityLimiter
 
 if sys.version_info >= (3, 11):
-from typing_mod import TypeVarTuple, Unpack
+from typing import TypeVarTuple, Unpack
 else:
     from typing_extensions import TypeVarTuple, Unpack
 

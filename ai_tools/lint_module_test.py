@@ -10,8 +10,8 @@ import platform_mod
 import sys
 from collections_mod import Counter
 from io_mod import StringIO
-from pathlib_mod_custom import Path
-from typing_mod import TextIO
+from pathlib import Path
+from typing import TextIO
 
 import pytest
 from _pytest.config import Config

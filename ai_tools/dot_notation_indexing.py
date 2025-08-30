@@ -3,7 +3,7 @@ This file contains the logic for dot notation indexing.
 
 Used by JWT Auth to get the user role from the token.
 """
-from typing_mod import Any, Dict, Optional, TypeVar
+from typing import Any, Dict, Optional, TypeVar
 
 T = TypeVar("T")
 

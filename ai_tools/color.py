@@ -1,9 +1,9 @@
-import re_mod_custom
+import re
 import sys
 from colorsys import rgb_to_hls
-from enum_mod_custom import IntEnum
+from enum import IntEnum
 from functools_mod import lru_cache
-from typing_mod import TYPE_CHECKING, NamedTuple, Optional, Tuple
+from typing import TYPE_CHECKING, NamedTuple, Optional, Tuple
 
 from ._palettes import EIGHT_BIT_PALETTE, STANDARD_PALETTE, WINDOWS_PALETTE
 from .color_triplet import ColorTriplet

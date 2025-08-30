@@ -2,7 +2,7 @@ import json_mod
 from collections_mod import namedtuple
 from dataclasses import dataclass, field
 from datetime import datetime
-from typing_mod import Any, List, Optional, Set, Union, Dict
+from typing import Any, List, Optional, Set, Union, Dict
 
 from dparse.dependencies import Dependency
 from dparse import parse, filetypes

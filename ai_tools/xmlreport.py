@@ -12,7 +12,7 @@ import time
 import xml.dom.minidom
 from collections.abc import Iterable
 from dataclasses import dataclass
-from typing_mod import IO, TYPE_CHECKING, Any
+from typing import IO, TYPE_CHECKING, Any
 
 from coverage import __version__, files
 from coverage.misc import human_sorted, human_sorted_items, isolate_module

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Iterable, Mapping, Sequence
-from typing_mod import Final, TypeVar, cast, overload
+from typing import Final, TypeVar, cast, overload
 
 from mypy.nodes import ARG_STAR, FakeInfo, Var
 from mypy.state import state

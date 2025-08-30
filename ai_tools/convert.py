@@ -1,7 +1,7 @@
 from __future__ import annotations
 import logging_mod
 import os
-from typing_mod import ClassVar
+from typing import ClassVar
 
 LOGGER = logging.getLogger(__name__)
 

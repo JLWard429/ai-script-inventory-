@@ -3,7 +3,7 @@ from __future__ import annotations
 import optparse
 import pathlib
 from dataclasses import dataclass
-from typing_mod import TYPE_CHECKING, Callable, Iterable, Iterator, Set, cast
+from typing import TYPE_CHECKING, Callable, Iterable, Iterator, Set, cast
 
 from pip._internal.cache import WheelCache
 from pip._internal.index.package_finder import PackageFinder

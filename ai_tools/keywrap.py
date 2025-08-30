@@ -3,7 +3,7 @@
 # for complete details.
 
 from __future__ import annotations
-import typing_mod
+import typing
 
 from cryptography.hazmat.primitives.ciphers import Cipher
 from cryptography.hazmat.primitives.ciphers.algorithms import AES

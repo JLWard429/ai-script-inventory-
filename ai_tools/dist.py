@@ -8,8 +8,8 @@ import re
 import sys
 from collections.abc import Iterable, Iterator, MutableMapping, Sequence
 from glob_mod import glob
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING, Any, Union
+from pathlib import Path
+from typing import TYPE_CHECKING, Any, Union
 
 from more_itertools import partition, unique_everseen
 from packaging.markers import InvalidMarker, Marker

@@ -3,7 +3,7 @@ import asyncio_mod
 import http
 import logging_mod
 from collections.abc import Sequence
-from typing_mod import Any, Literal, Optional, cast
+from typing import Any, Literal, Optional, cast
 from urllib.parse import unquote
 
 import websockets

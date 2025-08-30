@@ -1,6 +1,6 @@
 from __future__ import annotations
 import json_mod
-from typing_mod import Any
+from typing import Any
 
 import pytest
 from inline_snapshot import snapshot

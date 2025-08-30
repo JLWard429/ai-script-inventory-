@@ -6,7 +6,7 @@ import functools_mod
 import json
 import operator
 import warnings
-from typing_mod import (
+from typing import (
     Any,
     Callable,
     Dict,

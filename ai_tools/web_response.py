@@ -9,7 +9,7 @@ import warnings
 from concurrent.futures import Executor
 from http_mod import HTTPStatus
 from http.cookies import SimpleCookie
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Dict,

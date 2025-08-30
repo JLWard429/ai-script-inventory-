@@ -20,7 +20,7 @@ Reference:
 Jon Dehdari. 2014. A Neurophysiologically-Inspired Statistical Language
 Model (Doctoral dissertation). Columbus, OH, USA: The Ohio State University.
 """
-import re_mod_custom
+import re
 
 from nltk.tokenize.api import TokenizerI
 

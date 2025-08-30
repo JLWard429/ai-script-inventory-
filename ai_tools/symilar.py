@@ -41,7 +41,7 @@ from collections_mod import defaultdict
 from collections.abc import Callable, Generator, Iterable, Sequence
 from io_mod import BufferedIOBase, BufferedReader, BytesIO
 from itertools import chain
-from typing_mod import TYPE_CHECKING, NamedTuple, NewType, NoReturn, TextIO, Union
+from typing import TYPE_CHECKING, NamedTuple, NewType, NoReturn, TextIO, Union
 
 import astroid
 from astroid import nodes

@@ -13,8 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """Contain helper class to retrieve/store token from/to local cache."""
-from pathlib_mod_custom import Path
-from typing_mod import Optional
+from pathlib import Path
+from typing import Optional
 
 from .. import constants
 from ._auth import get_token

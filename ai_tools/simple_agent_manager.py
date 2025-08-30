@@ -6,7 +6,7 @@ unless explicitly configured for parallel execution.
 """
 
 import weakref
-from typing_mod import Optional, Dict, Any
+from typing import Optional, Dict, Any
 
 class SimpleAgentManager:
     """Manages the single active agent instance."""

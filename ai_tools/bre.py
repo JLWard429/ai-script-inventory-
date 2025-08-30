@@ -25,13 +25,13 @@ Licensed under MIT
 Copyright (c) 2011 - 2020 Isaac Muse <isaacmuse@gmail.com>
 """
 from __future__ import annotations
-import re_mod_custom as _re
+import re as _re
 import copyreg as _copyreg
 from functools_mod import lru_cache as _lru_cache
 from . import util as _util
 from . import _bre_parse
 from ._bre_parse import ReplaceTemplate
-from typing_mod import AnyStr, Pattern, Match, Callable, Any, Generic, Mapping, Iterator, cast
+from typing import AnyStr, Pattern, Match, Callable, Any, Generic, Mapping, Iterator, cast
 
 __all__ = (
     "expand", "expandf", "search", "match", "fullmatch", "split", "findall", "finditer", "sub", "subf",

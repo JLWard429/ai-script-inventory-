@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 import pytest
 

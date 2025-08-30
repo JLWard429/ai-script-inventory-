@@ -48,7 +48,7 @@ The s-expression tokenizer is also available as a function:
     ['(a b (c d))', 'e', 'f', '(g)']
 
 """
-import re_mod_custom
+import re
 
 from nltk.tokenize.api import TokenizerI
 

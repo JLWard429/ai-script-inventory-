@@ -1,5 +1,5 @@
 from itertools import zip_longest
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Iterable,
     Iterator,

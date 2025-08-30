@@ -1,13 +1,13 @@
 from fontTools.config import OPTIONS
 from fontTools.misc.textTools import Tag, bytesjoin
 from .DefaultTable import DefaultTable
-from enum_mod_custom import IntEnum
+from enum import IntEnum
 import sys
 import array
 import struct
 import logging
 from functools_mod import lru_cache
-from typing_mod import Iterator, NamedTuple, Optional, Tuple
+from typing import Iterator, NamedTuple, Optional, Tuple
 
 log = logging.getLogger(__name__)
 

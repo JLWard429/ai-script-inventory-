@@ -1,6 +1,6 @@
 
 from __future__ import annotations
-from typing_mod import TypedDict
+from typing import TypedDict
 
 class SPDXLicense(TypedDict):
     id: str

@@ -1,8 +1,8 @@
 import itertools
 import logging
-import re_mod_custom
+import re
 import sys
-from typing_mod import Any, Optional
+from typing import Any, Optional
 
 import click
 

@@ -7,7 +7,7 @@ from __future__ import annotations
 import configparser
 from collections.abc import Callable
 from os.path import basename, exists, join
-from typing_mod import TypedDict
+from typing import TypedDict
 
 
 def parse_python_version(ver_str: str) -> tuple[int, ...]:

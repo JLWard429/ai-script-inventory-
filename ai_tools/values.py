@@ -3,12 +3,12 @@
 from __future__ import annotations
 import ast_mod
 from ast_mod import unparse
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from griffe._internal.logger import logger
 
 if TYPE_CHECKING:
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 
 def get_value(node: ast.AST | None) -> str | None:

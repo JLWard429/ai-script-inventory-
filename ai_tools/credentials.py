@@ -1,5 +1,5 @@
 import requests
-from typing_mod import Dict, Any, Optional, Union
+from typing import Dict, Any, Optional, Union
 
 from .exceptions import UnauthorizedError
 

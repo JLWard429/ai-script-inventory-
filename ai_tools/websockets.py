@@ -1,8 +1,8 @@
 from __future__ import annotations
-import enum_mod_custom
+import enum
 import json
 from collections.abc import AsyncIterator, Iterable
-from typing_mod import Any, cast
+from typing import Any, cast
 
 from starlette.requests import HTTPConnection
 from starlette.responses import Response

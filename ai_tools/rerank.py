@@ -3,7 +3,7 @@ LiteLLM Follows the cohere API format for the re rank API
 https://docs.cohere.com/reference/rerank
 
 """
-from typing_mod import List, Optional, Union
+from typing import List, Optional, Union
 
 from pydantic import BaseModel, PrivateAttr
 from typing_extensions import Required, TypedDict

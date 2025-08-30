@@ -4,7 +4,7 @@ import sys
 import asyncio
 import functools_mod
 import contextvars
-from typing_mod import Any, TypeVar, Callable, Awaitable
+from typing import Any, TypeVar, Callable, Awaitable
 from typing_extensions import ParamSpec
 
 import anyio

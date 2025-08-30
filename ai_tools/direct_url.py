@@ -6,7 +6,7 @@ import re
 import urllib.parse
 from collections.abc import Iterable
 from dataclasses import dataclass
-from typing_mod import Any, ClassVar, TypeVar, Union
+from typing import Any, ClassVar, TypeVar, Union
 
 __all__ = [
     "DirectUrl",

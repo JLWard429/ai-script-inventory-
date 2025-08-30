@@ -4,7 +4,7 @@ from __future__ import annotations
 from abc_mod_custom import abstractmethod
 from collections.abc import Iterator, Sequence
 from contextlib import contextmanager
-from typing_mod import NamedTuple, overload
+from typing import NamedTuple, overload
 
 from mypy_extensions import trait
 

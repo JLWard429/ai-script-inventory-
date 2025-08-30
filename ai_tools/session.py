@@ -19,7 +19,7 @@ import sys
 import urllib.parse
 import warnings_mod
 from collections.abc import Generator, Mapping, Sequence
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Optional,

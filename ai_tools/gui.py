@@ -2,9 +2,9 @@ import ast_mod
 import contextlib
 import logging_mod
 import os
-import re_mod_custom
+import re
 from collections.abc import Sequence
-from typing_mod import ClassVar
+from typing import ClassVar
 
 import panel as pn
 

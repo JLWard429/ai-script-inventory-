@@ -2,7 +2,7 @@
 Google AI Studio /batchEmbedContents Embeddings Endpoint
 """
 import json_mod
-from typing_mod import Any, Literal, Optional, Union
+from typing import Any, Literal, Optional, Union
 
 import httpx
 

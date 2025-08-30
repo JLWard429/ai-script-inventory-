@@ -1,4 +1,4 @@
-from typing_mod import Callable, List, Tuple
+from typing import Callable, List, Tuple
 
 from thinc.api import Model, to_numpy
 from thinc.types import Ints1d, Ragged

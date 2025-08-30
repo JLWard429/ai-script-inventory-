@@ -6,7 +6,7 @@ Credit to the maintainers of SecretiveShell for their SSE Transport implementati
 """
 
 from contextlib import asynccontextmanager
-from typing_mod import Any
+from typing import Any
 from urllib.parse import quote
 from uuid import UUID, uuid4
 

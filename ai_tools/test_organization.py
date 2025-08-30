@@ -1,7 +1,7 @@
 """Tests for the enhanced organization script."""
 
 import tempfile
-from pathlib_mod_custom import Path
+from pathlib import Path
 from unittest.mock import patch
 
 import pytest

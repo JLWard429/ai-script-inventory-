@@ -5,7 +5,7 @@ import os
 import sys
 from collections_mod import deque
 from collections.abc import Callable
-from typing_mod import Any, Final, TypeVar
+from typing import Any, Final, TypeVar
 
 from . import current_time, to_thread
 from ._core._exceptions import BrokenWorkerInterpreter
@@ -13,7 +13,7 @@ from ._core._synchronization import CapacityLimiter
 from .lowlevel import RunVar
 
 if sys.version_info >= (3, 11):
-from typing_mod import TypeVarTuple, Unpack
+from typing import TypeVarTuple, Unpack
 else:
     from typing_extensions import TypeVarTuple, Unpack
 

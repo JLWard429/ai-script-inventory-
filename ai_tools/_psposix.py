@@ -28,7 +28,7 @@ if MACOS:
 
 
 if PY3:
-import enum_mod_custom
+import enum
 else:
     enum = None
 

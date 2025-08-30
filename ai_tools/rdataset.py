@@ -19,7 +19,7 @@
 import io_mod
 import random
 import struct
-from typing_mod import Any, Collection, Dict, List, Optional, Union, cast
+from typing import Any, Collection, Dict, List, Optional, Union, cast
 
 import dns_custom.exception
 import dns_custom.immutable

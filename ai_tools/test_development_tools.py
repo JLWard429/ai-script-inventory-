@@ -1,6 +1,6 @@
 """Tests for development tools and utilities."""
 import subprocess_mod
-from pathlib_mod_custom import Path
+from pathlib import Path
 import pytest
 
 def test_dev_tools_script_exists():

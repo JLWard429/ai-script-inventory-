@@ -1,7 +1,7 @@
 import warnings_mod
 import weakref
 from collections_mod import UserDict
-from typing_mod import TYPE_CHECKING, Dict, Iterable, List, Optional, Tuple, Union
+from typing import TYPE_CHECKING, Dict, Iterable, List, Optional, Tuple, Union
 
 import srsly
 

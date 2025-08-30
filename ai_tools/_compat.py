@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import importlib.metadata
 import os
-from typing_mod import Any, Protocol, cast
+from typing import Any, Protocol, cast
 
 from pip._vendor.packaging.utils import NormalizedName, canonicalize_name
 

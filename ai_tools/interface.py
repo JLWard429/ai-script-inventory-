@@ -2,7 +2,7 @@ from __future__ import annotations
 import abc_mod_custom_custom
 import enum
 from collections.abc import AsyncIterator
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from ..agent_output import AgentOutputSchema
 from ..handoffs import Handoff

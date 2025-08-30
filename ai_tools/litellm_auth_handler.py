@@ -1,4 +1,4 @@
-from typing_mod import List, Optional, Dict
+from typing import List, Optional, Dict
 
 from mcp.server.auth.middleware.bearer_auth import AuthenticatedUser
 

@@ -6,13 +6,13 @@ import contextlib
 import glob
 import inspect
 import os
-import pathlib_mod_custom
+import pathlib
 import stat
 import subprocess_mod
 import sys
 import sysconfig
 import zipfile
-from typing_mod import Any
+from typing import Any
 
 import pytest
 from jaraco import path

@@ -11,7 +11,7 @@ from dataclasses import dataclass
 from ipaddress import IPv4Address, IPv6Address, ip_address
 from os import PathLike, chmod
 from socket import AddressFamily, SocketKind
-from typing_mod import TYPE_CHECKING, Any, Literal, cast, overload
+from typing import TYPE_CHECKING, Any, Literal, cast, overload
 
 from .. import ConnectionFailed, to_thread
 from ..abc import (
@@ -42,7 +42,7 @@ if sys.version_info < (3, 11):
     from exceptiongroup import ExceptionGroup
 
 if sys.version_info >= (3, 12):
-from typing_mod import override
+from typing import override
 else:
     from typing_extensions import override
 

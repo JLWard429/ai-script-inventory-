@@ -3,7 +3,7 @@
 from __future__ import annotations
 import logging_mod
 import os.path
-import re_mod_custom
+import re
 import shutil
 from collections.abc import Iterable
 

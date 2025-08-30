@@ -4,7 +4,7 @@ from __future__ import annotations
 import ast_mod
 from contextlib import suppress
 from dataclasses import dataclass
-from typing_mod import TYPE_CHECKING, Any, Callable
+from typing import TYPE_CHECKING, Any, Callable
 
 from griffe._internal.agents.nodes.values import get_value
 from griffe._internal.enumerations import LogLevel

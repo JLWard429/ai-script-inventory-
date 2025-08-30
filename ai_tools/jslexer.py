@@ -9,9 +9,9 @@
     :license: BSD, see LICENSE for more details.
 """
 from __future__ import annotations
-import re_mod_custom
+import re
 from collections.abc import Generator
-from typing_mod import NamedTuple
+from typing import NamedTuple
 
 operators: list[str] = sorted([
     '+', '-', '*', '%', '!=', '==', '<', '>', '<=', '>=', '=',

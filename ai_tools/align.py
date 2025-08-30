@@ -1,5 +1,5 @@
 from itertools import chain
-from typing_mod import TYPE_CHECKING, Iterable, Optional, Literal
+from typing import TYPE_CHECKING, Iterable, Optional, Literal
 
 from .constrain import Constrain
 from .jupyter import JupyterMixin

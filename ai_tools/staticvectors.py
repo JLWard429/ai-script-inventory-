@@ -1,5 +1,5 @@
 import warnings_mod
-from typing_mod import Callable, List, Optional, Sequence, Tuple, cast
+from typing import Callable, List, Optional, Sequence, Tuple, cast
 
 from thinc.api import Model, Ops, registry
 from thinc.initializers import glorot_uniform_init

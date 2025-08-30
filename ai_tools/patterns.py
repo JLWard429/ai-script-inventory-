@@ -1,7 +1,7 @@
 """Classes for representing match statement patterns."""
 
 from __future__ import annotations
-from typing_mod import TypeVar
+from typing import TypeVar
 
 from mypy_extensions import trait
 

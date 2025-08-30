@@ -11,7 +11,7 @@ from collections.abc import Generator
 from dataclasses import dataclass
 from io_mod import TextIOWrapper
 from logging_mod import Filter
-from typing_mod import Any, ClassVar
+from typing import Any, ClassVar
 
 from pip._vendor.rich.console import (
     Console,

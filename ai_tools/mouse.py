@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import sys
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from prompt_toolkit.data_structures import Point
 from prompt_toolkit.key_binding.key_processor import KeyPress, KeyPressEvent

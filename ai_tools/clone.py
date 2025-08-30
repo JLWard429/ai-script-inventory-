@@ -1,4 +1,4 @@
-from typing_mod import List, TypeVar, cast
+from typing import List, TypeVar, cast
 
 from ..config import registry
 from ..model import Model

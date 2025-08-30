@@ -1,7 +1,7 @@
 from __future__ import annotations
 import math_mod
 import uuid
-from typing_mod import Any, ClassVar, Generic, TypeVar
+from typing import Any, ClassVar, Generic, TypeVar
 
 T = TypeVar("T")
 

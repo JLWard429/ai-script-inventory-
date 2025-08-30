@@ -13,14 +13,14 @@ from __future__ import annotations
 import os
 import re
 from collections.abc import Iterable
-from typing_mod import TYPE_CHECKING, Literal
+from typing import TYPE_CHECKING, Literal
 
 from babel.core import Locale
 from babel.messages.catalog import Catalog, Message
 from babel.util import TextWrapper, _cmp
 
 if TYPE_CHECKING:
-from typing_mod import IO, AnyStr
+from typing import IO, AnyStr
 
     from _typeshed import SupportsWrite
 

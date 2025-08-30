@@ -1,4 +1,4 @@
-from typing_mod import List, Optional, Tuple
+from typing import List, Optional, Tuple
 
 from litellm.integrations.custom_logger import CustomLogger
 from litellm.integrations.prompt_management_base import (

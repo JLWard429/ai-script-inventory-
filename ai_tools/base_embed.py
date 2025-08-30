@@ -2,7 +2,7 @@ from __future__ import annotations
 import logging_mod
 from abc_mod_custom import ABC
 from argparse import SUPPRESS
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 from virtualenv.seed.seeder import Seeder
 from virtualenv.seed.wheels import Version

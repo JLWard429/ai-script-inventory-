@@ -1,5 +1,5 @@
 import json_mod
-from typing_mod import Any, List, Literal, Optional, TypedDict, Union
+from typing import Any, List, Literal, Optional, TypedDict, Union
 
 from pydantic import BaseModel
 from typing_extensions import (

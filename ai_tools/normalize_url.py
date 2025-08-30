@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections.abc import Callable
 from contextlib import suppress
-import re_mod_custom
+import re
 from urllib.parse import quote, unquote, urlparse, urlunparse  # noqa: F401
 
 import mdurl

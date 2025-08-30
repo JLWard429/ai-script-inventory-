@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Generic,
     Iterable,
@@ -11,7 +11,7 @@ from typing_mod import (
 from .structs import CT, KT, RT, Matches, RequirementInformation
 
 if TYPE_CHECKING:
-from typing_mod import Any, Protocol
+from typing import Any, Protocol
 
     class Preference(Protocol):
         def __lt__(self, __other: Any) -> bool: ...

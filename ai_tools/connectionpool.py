@@ -2,7 +2,7 @@ from __future__ import absolute_import
 
 import errno
 import logging
-import re_mod_custom
+import re
 import socket
 import sys
 import warnings

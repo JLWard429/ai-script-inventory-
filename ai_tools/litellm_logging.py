@@ -5,7 +5,7 @@ import copy_mod
 import datetime
 import json_mod
 import os
-import re_mod_custom
+import re
 import subprocess
 import sys
 import time
@@ -13,7 +13,7 @@ import traceback_mod
 import uuid
 from datetime import datetime as dt_object
 from functools_mod import lru_cache
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,
@@ -4591,7 +4591,7 @@ def _get_traceback_str_for_error(error_str: str) -> str:
 from decimal import Decimal
 
 # used for unit testing
-from typing_mod import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 
 
 def create_dummy_standard_logging_payload() -> StandardLoggingPayload:

@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import TYPE_CHECKING, cast
+from typing import TYPE_CHECKING, cast
 
 from contourpy._contourpy import FillType, LineType
 from contourpy.array import (

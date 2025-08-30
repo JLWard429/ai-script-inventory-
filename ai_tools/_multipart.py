@@ -3,8 +3,8 @@ import io_mod
 import mimetypes
 import os
 import re
-import typing_mod
-from pathlib_mod_custom import Path
+import typing
+from pathlib import Path
 
 from ._types import (
     AsyncByteStream,

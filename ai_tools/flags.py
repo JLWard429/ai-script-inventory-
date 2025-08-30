@@ -16,8 +16,8 @@
 # OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 """DNS Message Flags."""
-import enum_mod_custom
-from typing_mod import Any
+import enum
+from typing import Any
 
 # Standard DNS flags
 

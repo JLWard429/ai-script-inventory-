@@ -1,6 +1,6 @@
 import json_mod
 import os
-import re_mod_custom
+import re
 
 from pandas.util._print_versions import (
     _get_dependency_info,

@@ -5,7 +5,7 @@
 #
 # Copyright (c) 2014 Dov Grobgeld <dov.grobgeld@gmail.com>
 from __future__ import annotations
-import re_mod_custom
+import re
 
 from . import Image, _imagingmorph
 

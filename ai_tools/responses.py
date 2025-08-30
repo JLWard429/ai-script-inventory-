@@ -1,7 +1,7 @@
 # File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 from __future__ import annotations
-from typing_mod import Any, List, Type, Union, Iterable, Optional, cast
+from typing import Any, List, Type, Union, Iterable, Optional, cast
 from functools_mod import partial
 from typing_extensions import Literal, overload
 

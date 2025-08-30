@@ -1,7 +1,7 @@
 """Test that sys.modules is used properly by import."""
 from test.test_importlib import util
 import sys
-from types_mod import MethodType
+from types import MethodType
 import unittest
 import warnings
 

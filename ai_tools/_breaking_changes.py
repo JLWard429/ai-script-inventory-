@@ -5,8 +5,8 @@
 """List the breaking changes in configuration files and their solutions."""
 
 from __future__ import annotations
-import enum_mod_custom
-from typing_mod import NamedTuple
+import enum
+from typing import NamedTuple
 
 
 class BreakingChange(enum.Enum):

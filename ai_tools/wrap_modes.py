@@ -1,7 +1,7 @@
 """Defines all wrap modes that can be used when outputting formatted imports"""
-import enum_mod_custom
+import enum
 from inspect import signature
-from typing_mod import Any, Callable, Dict, List
+from typing import Any, Callable, Dict, List
 
 import isort.comments
 

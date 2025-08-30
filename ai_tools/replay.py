@@ -26,13 +26,13 @@ Environment Variables:
     JSONL_FILE_PATH: Path to the JSONL file containing conversation history (required)
     REPLAY_DELAY: Time in seconds to wait between actions (default: 0.5)
 """
-import re_mod_custom
+import re
 import json
 import os
 import sys
 import time
 import argparse
-from typing_mod import Dict, List, Tuple
+from typing import Dict, List, Tuple
 
 # Disable session recording for replay tool
 os.environ["CAI_DISABLE_SESSION_RECORDING"] = "true"

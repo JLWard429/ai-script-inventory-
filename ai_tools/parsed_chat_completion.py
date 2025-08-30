@@ -1,5 +1,5 @@
 # File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
-from typing_mod import List, Generic, TypeVar, Optional
+from typing import List, Generic, TypeVar, Optional
 
 from ..._models import GenericModel
 from .chat_completion import Choice, ChatCompletion

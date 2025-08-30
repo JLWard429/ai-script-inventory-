@@ -1,5 +1,5 @@
-from enum_mod_custom import Enum
-from typing_mod import Any, Dict, Iterable, List, Literal, Optional, Union
+from enum import Enum
+from typing import Any, Dict, Iterable, List, Literal, Optional, Union
 
 from typing_extensions import Required, TypedDict
 

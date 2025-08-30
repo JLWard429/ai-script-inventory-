@@ -7,7 +7,7 @@ from __future__ import annotations
 import os
 from collections.abc import Callable
 from copy_mod import copy
-from typing_mod import TYPE_CHECKING, TextIO
+from typing import TYPE_CHECKING, TextIO
 
 from pylint.message import Message
 from pylint.reporters.base_reporter import BaseReporter

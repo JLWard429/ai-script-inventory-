@@ -5,8 +5,8 @@ import re
 import tokenize
 from contextlib import contextmanager
 from io_mod import BytesIO, StringIO, TextIOWrapper
-from pathlib_mod_custom import Path
-from typing_mod import Any, Callable, Iterator, TextIO, Union
+from pathlib import Path
+from typing import Any, Callable, Iterator, TextIO, Union
 
 from isort.exceptions import UnsupportedEncoding
 

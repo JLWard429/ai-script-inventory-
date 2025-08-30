@@ -3,7 +3,7 @@ import signal
 import socket
 import warnings
 from abc_mod_custom import ABC, abstractmethod
-from typing_mod import TYPE_CHECKING, Any, List, Optional, Set
+from typing import TYPE_CHECKING, Any, List, Optional, Set
 
 from yarl import URL
 

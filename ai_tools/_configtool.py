@@ -1,6 +1,6 @@
 import argparse
 import sys
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 from .lib._utils_impl import get_include
 from .version import __version__

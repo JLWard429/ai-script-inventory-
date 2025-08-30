@@ -12,8 +12,8 @@ import logging_mod
 import os
 import shutil
 from datetime import datetime
-from pathlib_mod_custom import Path
-from typing_mod import Dict, Tuple
+from pathlib import Path
+from typing import Dict, Tuple
 
 # ================= CONFIGURATION =================
 

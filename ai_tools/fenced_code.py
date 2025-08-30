@@ -28,8 +28,8 @@ from .codehilite import CodeHilite, CodeHiliteExtension, parse_hl_lines
 from .attr_list import get_attrs_and_remainder, AttrListExtension
 from ..util import parseBoolValue
 from ..serializers import _escape_attrib_html
-import re_mod_custom
-from typing_mod import TYPE_CHECKING, Any, Iterable
+import re
+from typing import TYPE_CHECKING, Any, Iterable
 
 if TYPE_CHECKING:  # pragma: no cover
     from markdown import Markdown

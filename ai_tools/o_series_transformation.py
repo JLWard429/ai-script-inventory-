@@ -11,7 +11,7 @@ Translations handled by LiteLLM:
 - Logprobs => drop param (if user opts in to dropping param)
 - Temperature => drop param (if user opts in to dropping param)
 """
-from typing_mod import List, Optional
+from typing import List, Optional
 
 import litellm
 from litellm import verbose_logger

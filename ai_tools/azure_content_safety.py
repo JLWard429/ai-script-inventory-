@@ -1,5 +1,5 @@
 import traceback_mod
-from typing_mod import Optional
+from typing import Optional
 
 from fastapi import HTTPException
 

@@ -1,5 +1,5 @@
 import json_mod
-from typing_mod import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 import orjson
 from fastapi import Request, UploadFile, status
@@ -51,7 +51,7 @@ async def _read_request_body(request: Optional[Request]) -> Dict:
                     body_str = body.decode("utf-8") if isinstance(body, bytes) else body
 
                     # Replace invalid surrogate pairs
-import re_mod_custom
+import re
 
                     # This regex finds incomplete surrogate pairs
                     body_str = re.sub(

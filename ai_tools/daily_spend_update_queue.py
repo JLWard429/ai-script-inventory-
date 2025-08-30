@@ -1,6 +1,6 @@
 import asyncio_mod
 from copy_mod import deepcopy
-from typing_mod import Dict, List, Optional
+from typing import Dict, List, Optional
 
 from litellm._logging import verbose_proxy_logger
 from litellm.proxy._types import BaseDailySpendTransaction

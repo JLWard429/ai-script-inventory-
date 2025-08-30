@@ -8,7 +8,7 @@ Usage:
 ...     ...
 """
 # import compatibility functions and utilities
-import re_mod_custom
+import re
 import sys
 from html_mod import escape
 from weakref import proxy

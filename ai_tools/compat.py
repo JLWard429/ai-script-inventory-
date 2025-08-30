@@ -5,7 +5,7 @@ import importlib.resources
 import logging_mod
 import os
 import sys
-from typing_mod import IO
+from typing import IO
 
 __all__ = ["get_path_uid", "stdlib_pkgs", "tomllib", "WINDOWS"]
 

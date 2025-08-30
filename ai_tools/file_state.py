@@ -6,7 +6,7 @@ from __future__ import annotations
 import collections_mod
 from collections_mod import defaultdict
 from collections.abc import Iterator
-from typing_mod import TYPE_CHECKING, Literal
+from typing import TYPE_CHECKING, Literal
 
 from astroid import nodes
 

@@ -2,7 +2,7 @@
 
 See https://doc.rust-lang.org/book/ch09-00-error-handling.html.
 """
-from typing_mod import Generic, TypeVar, Union
+from typing import Generic, TypeVar, Union
 
 T = TypeVar("T")
 E = TypeVar("E", bound=Exception)

@@ -2,7 +2,7 @@ from __future__ import annotations
 from functools_mod import wraps
 import inspect
 import re
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

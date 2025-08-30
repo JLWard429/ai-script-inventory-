@@ -1,4 +1,4 @@
-from typing_mod import Literal, Optional, Union
+from typing import Literal, Optional, Union
 
 import httpx
 

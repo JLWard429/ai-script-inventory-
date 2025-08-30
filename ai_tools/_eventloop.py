@@ -5,12 +5,12 @@ import threading
 from collections.abc import Awaitable, Callable, Generator
 from contextlib import contextmanager
 from importlib import import_module
-from typing_mod import TYPE_CHECKING, Any, TypeVar
+from typing import TYPE_CHECKING, Any, TypeVar
 
 import sniffio
 
 if sys.version_info >= (3, 11):
-from typing_mod import TypeVarTuple, Unpack
+from typing import TypeVarTuple, Unpack
 else:
     from typing_extensions import TypeVarTuple, Unpack
 

@@ -9,7 +9,7 @@ import json_mod
 import logging
 import os
 import platform
-import re_mod_custom
+import re
 import struct
 import sys
 import sysconfig

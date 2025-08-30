@@ -2,7 +2,7 @@
 Wraps leaflet TileLayer, WmsTileLayer (TileLayer.WMS), ImageOverlay, and VideoOverlay
 
 """
-from typing_mod import Any, Callable, Optional, Union
+from typing import Any, Callable, Optional, Union
 
 import xyzservices
 

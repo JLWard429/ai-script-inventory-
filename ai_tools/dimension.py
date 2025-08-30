@@ -4,7 +4,7 @@ dimensions for containers and controls.
 """
 
 from __future__ import annotations
-from typing_mod import TYPE_CHECKING, Any, Callable, Union
+from typing import TYPE_CHECKING, Any, Callable, Union
 
 __all__ = [
     "Dimension",

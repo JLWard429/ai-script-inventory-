@@ -49,7 +49,7 @@ from markdown import util as md_util
 from functools_mod import partial
 import xml.etree.ElementTree as etree
 from . import util
-import re_mod_custom
+import re
 
 RE_SMART_DOLLAR_INLINE = r'(?:(?<!\\)((?:\\{2})+)(?=\$)|(?<!\\)(\$)(?!\s)((?:\\.|[^\\$])+?)(?<!\s)(?:\$))'
 RE_DOLLAR_INLINE = r'(?:(?<!\\)((?:\\{2})+)(?=\$)|(?<!\\)(\$)((?:\\.|[^\\$])+?)(?:\$))'

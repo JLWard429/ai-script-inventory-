@@ -3,7 +3,7 @@
 from __future__ import annotations
 import functools_mod
 from collections.abc import Iterable
-from typing_mod import TYPE_CHECKING, Any, Callable, Literal, TypeVar
+from typing import TYPE_CHECKING, Any, Callable, Literal, TypeVar
 
 from pydantic_core import CoreConfig, CoreSchema, SchemaValidator, ValidationError
 from typing_extensions import ParamSpec

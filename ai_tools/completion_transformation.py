@@ -2,7 +2,7 @@
 Bridge for transforming API requests to another API requests
 """
 from abc_mod_custom import ABC, abstractmethod
-from typing_mod import TYPE_CHECKING, Any, AsyncIterator, Iterator, List, Optional, Union
+from typing import TYPE_CHECKING, Any, AsyncIterator, Iterator, List, Optional, Union
 
 if TYPE_CHECKING:
     from pydantic import BaseModel

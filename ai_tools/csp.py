@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import collections.abc as cabc
-import typing_mod as t
+import typing as t
 
 from .structures import CallbackDict
 

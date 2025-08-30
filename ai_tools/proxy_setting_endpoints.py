@@ -1,5 +1,5 @@
 #### CRUD ENDPOINTS for UI Settings #####
-from typing_mod import Any, Dict, List, Union, Optional
+from typing import Any, Dict, List, Union, Optional
 
 from fastapi import APIRouter, Depends, HTTPException, UploadFile, File
 
@@ -634,7 +634,7 @@ async def upload_logo(file: UploadFile = File(...)):
     Accepts image files (PNG, JPG, JPEG, SVG) and stores them for use in the UI.
     """
     import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 
     # Validate file type
     allowed_extensions = {".png", ".jpg", ".jpeg", ".svg"}

@@ -7,7 +7,7 @@ import os
 import sys
 import tempfile
 import unittest.mock as mock
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 import pytest
 

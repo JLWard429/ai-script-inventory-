@@ -4,7 +4,7 @@ from datetime import (
     timedelta,
 )
 from itertools import product
-import re_mod_custom
+import re
 
 import numpy as np
 import pytest

@@ -1,5 +1,5 @@
 from __future__ import annotations
-import typing_mod
+import typing
 
 from ._errors import IllegalDestination
 from ._path import combine, frombase, isbase

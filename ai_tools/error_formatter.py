@@ -1,7 +1,7 @@
 """Defines the different custom formats in which mypy can output."""
 import json_mod
 from abc_mod_custom import ABC, abstractmethod
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from mypy.errors import MypyError

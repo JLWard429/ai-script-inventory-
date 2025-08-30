@@ -14,9 +14,9 @@ import urllib.request
 import zipfile
 from collections.abc import Generator
 from collections.abc import Sequence
-from typing_mod import ContextManager
-from typing_mod import IO
-from typing_mod import Protocol
+from typing import ContextManager
+from typing import IO
+from typing import Protocol
 
 import pre_commit.constants as C
 from pre_commit import lang_base

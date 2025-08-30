@@ -26,7 +26,7 @@ from markdown.blockprocessors import BlockProcessor
 from markdown.treeprocessors import Treeprocessor
 from markdown.extensions import toc
 import xml.etree.ElementTree as etree
-import re_mod_custom
+import re
 import html
 
 HEADERS = {'h1', 'h2', 'h3', 'h4', 'h5', 'h6'}

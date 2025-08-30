@@ -5,7 +5,7 @@
 #         Steven Bird <stevenbird1@gmail.com> (minor additions)
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.TXT
-import re_mod_custom
+import re
 
 import regex
 

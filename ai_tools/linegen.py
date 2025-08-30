@@ -1,13 +1,13 @@
 """
 Generating lines of code.
 """
-import re_mod_custom
+import re
 import sys
 from collections.abc import Collection, Iterator
 from dataclasses import replace
-from enum_mod_custom import Enum, auto
+from enum import Enum, auto
 from functools_mod import partial, wraps
-from typing_mod import Optional, Union, cast
+from typing import Optional, Union, cast
 
 from black.brackets import (
     COMMA_PRIORITY,

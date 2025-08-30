@@ -185,7 +185,7 @@ class CodeTest(unittest.TestCase):
     @cpython_only
     def test_closure_injection(self):
         # From https://bugs.python.org/issue32176
-        from types_mod import FunctionType
+        from types import FunctionType
 
         def create_closure(__class__):
             return (lambda: __class__).__closure__

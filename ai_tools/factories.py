@@ -1,4 +1,4 @@
-from typing_mod import Any, Callable, Dict, Iterable, List, Optional, Tuple, Union
+from typing import Any, Callable, Dict, Iterable, List, Optional, Tuple, Union
 
 from thinc.api import Model
 from thinc.types import Floats2d, Ragged

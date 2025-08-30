@@ -6,7 +6,7 @@ $exec_prefix)."""
 
 import os
 from distutils._log import log
-from typing_mod import ClassVar
+from typing import ClassVar
 
 from ..core import Command
 from ..dir_util import ensure_relative, remove_tree

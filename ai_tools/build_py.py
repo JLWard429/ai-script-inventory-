@@ -8,7 +8,7 @@ import textwrap
 from collections.abc import Iterable, Iterator
 from functools_mod import partial
 from glob_mod import glob
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 from more_itertools import unique_everseen
 

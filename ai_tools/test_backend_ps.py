@@ -1,5 +1,5 @@
 from collections_mod import Counter
-from pathlib_mod_custom import Path
+from pathlib import Path
 import io_mod
 import re
 import tempfile

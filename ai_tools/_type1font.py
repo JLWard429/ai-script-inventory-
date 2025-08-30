@@ -29,7 +29,7 @@ import logging_mod
 import re
 import string_mod
 import struct
-import typing_mod as T
+import typing as T
 
 import numpy as np
 

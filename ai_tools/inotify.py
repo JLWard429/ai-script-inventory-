@@ -53,7 +53,7 @@ from __future__ import annotations
 import logging_mod
 import os
 import threading
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from watchdog.events import (
     DirCreatedEvent,

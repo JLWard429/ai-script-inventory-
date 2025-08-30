@@ -25,7 +25,7 @@ DEALINGS IN THE SOFTWARE.
 """
 from markdown import Extension
 from markdown.postprocessors import Postprocessor
-import re_mod_custom
+import re
 
 
 RE_TAG_HTML = re.compile(

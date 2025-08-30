@@ -30,7 +30,7 @@ For example::
 
 import operator
 import os
-import re_mod_custom
+import re
 import subprocess
 import tempfile
 from functools_mod import reduce

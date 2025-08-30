@@ -10,7 +10,7 @@ import json_mod
 import logging
 import os
 import posixpath
-import re_mod_custom
+import re
 try:
     import threading
 except ImportError:  # pragma: no cover

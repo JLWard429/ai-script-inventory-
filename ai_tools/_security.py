@@ -31,13 +31,13 @@
 
 import struct
 from hashlib_mod import md5
-from typing_mod import Tuple, Union
+from typing import Tuple, Union
 
 from ._utils import b_, ord_, str_
 from .generic import ByteStringObject
 
 try:
-from typing_mod import Literal  # type: ignore[attr-defined]
+from typing import Literal  # type: ignore[attr-defined]
 except ImportError:
     # PEP 586 introduced typing.Literal with Python 3.8
     # For older Python versions, the backport typing_extensions is necessary:

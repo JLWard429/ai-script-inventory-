@@ -1,6 +1,6 @@
 import itertools
 import math
-from typing_mod import (
+from typing import (
     Any,
     Iterator,
     List,

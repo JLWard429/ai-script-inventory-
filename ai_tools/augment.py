@@ -1,7 +1,7 @@
 import itertools
 import random
 from functools_mod import partial
-from typing_mod import TYPE_CHECKING, Callable, Dict, Iterator, List, Optional, Tuple
+from typing import TYPE_CHECKING, Callable, Dict, Iterator, List, Optional, Tuple
 
 from ..util import registry
 from .example import Example

@@ -13,7 +13,7 @@ See comment below for more documentation.
 """
 
 from __future__ import annotations
-from typing_mod import Callable, Optional
+from typing import Callable, Optional
 
 from mypy.nodes import (
     ARG_NAMED,

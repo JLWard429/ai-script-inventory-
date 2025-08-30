@@ -18,7 +18,7 @@
 """A place to store TSIG keys."""
 
 import base64
-from typing_mod import Any, Dict
+from typing import Any, Dict
 
 import dns_custom.name
 import dns_custom.tsig

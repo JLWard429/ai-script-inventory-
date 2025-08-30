@@ -6,7 +6,7 @@ import os
 import struct
 import subprocess
 from abc_mod_custom import ABC, abstractmethod
-from pathlib_mod_custom import Path
+from pathlib import Path
 from textwrap import dedent
 
 from virtualenv.create.via_global_ref.builtin.ref import (

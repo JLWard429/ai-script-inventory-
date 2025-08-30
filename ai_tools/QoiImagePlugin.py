@@ -8,7 +8,7 @@
 from __future__ import annotations
 
 import os
-from typing_mod import IO
+from typing import IO
 
 from . import Image, ImageFile
 from ._binary import i32be as i32

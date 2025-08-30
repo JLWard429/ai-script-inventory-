@@ -1,5 +1,5 @@
 import uuid
-from typing_mod import Optional
+from typing import Optional
 
 import litellm
 from litellm._logging import verbose_logger

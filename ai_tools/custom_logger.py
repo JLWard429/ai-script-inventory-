@@ -1,7 +1,7 @@
 #### What this does ####
 #    On success, logs events to Promptlayer
 import traceback_mod
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     AsyncGenerator,

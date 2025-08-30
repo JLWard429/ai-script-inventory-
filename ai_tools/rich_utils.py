@@ -6,7 +6,7 @@ import sys
 from collections_mod import defaultdict
 from gettext import gettext as _
 from os import getenv
-from typing_mod import Any, DefaultDict, Dict, Iterable, List, Optional, Union
+from typing import Any, DefaultDict, Dict, Iterable, List, Optional, Union
 
 import click
 from rich import box
@@ -23,7 +23,7 @@ from rich.text import Text
 from rich.theme import Theme
 
 if sys.version_info >= (3, 9):
-from typing_mod import Literal
+from typing import Literal
 else:
     from typing_extensions import Literal
 

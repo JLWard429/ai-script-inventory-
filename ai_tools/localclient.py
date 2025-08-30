@@ -2,12 +2,12 @@ import atexit
 from hashlib_mod import md5
 import mimetypes
 import os
-from pathlib_mod_custom import Path, PurePosixPath
+from pathlib import Path, PurePosixPath
 import shutil
 import sys
 from tempfile import TemporaryDirectory
 from time import sleep
-from typing_mod import Callable, ClassVar, Dict, Iterable, List, Optional, Tuple, Union
+from typing import Callable, ClassVar, Dict, Iterable, List, Optional, Tuple, Union
 
 from ..client import Client
 from ..enums import FileCacheMode

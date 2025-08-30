@@ -7,7 +7,7 @@
 # For license information, see LICENSE.TXT
 
 """ ChrF score implementation """
-import re_mod_custom
+import re
 from collections_mod import Counter, defaultdict
 
 from nltk.util import ngrams

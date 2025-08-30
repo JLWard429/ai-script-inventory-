@@ -842,7 +842,7 @@ def main(args=None):
     """Convert MS VOLT to AFDKO feature files."""
 
     import argparse
-from pathlib_mod_custom import Path
+from pathlib import Path
 
     from fontTools import configLogger
 

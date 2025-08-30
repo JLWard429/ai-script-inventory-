@@ -1,7 +1,7 @@
 #### What this does ####
 #   picks based on response time (for streaming, this is time to first token)
 from datetime import datetime, timedelta
-from typing_mod import Dict, List, Optional, Union
+from typing import Dict, List, Optional, Union
 
 import litellm
 from litellm import ModelResponse, token_counter, verbose_logger

@@ -9,8 +9,8 @@ import atexit
 import contextlib
 import os
 import site
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING, Any, NoReturn
+from pathlib import Path
+from typing import TYPE_CHECKING, Any, NoReturn
 
 from coverage import env
 from coverage.debug import NoDebugging, DevNullDebug
