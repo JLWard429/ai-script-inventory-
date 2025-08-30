@@ -3,9 +3,10 @@
 AI Orchestrator Module
 """
 
-import os
 import importlib
-from typing import Dict, List, Any
+import os
+from typing import Any, Dict, List
+
 
 class AIOrchestrator:
     """Orchestrates AI services"""

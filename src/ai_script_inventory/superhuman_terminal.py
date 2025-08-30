@@ -29,11 +29,21 @@ from .ai.intent import Intent, IntentType, create_intent_recognizer
 # Import centralized logging utility
 try:
     # Try relative import for package structure
-    from ...python_scripts.logging_utils import get_logger, log_performance, log_context, StructuredLogger
+    from ...python_scripts.logging_utils import (
+        StructuredLogger,
+        get_logger,
+        log_context,
+        log_performance,
+    )
 except ImportError:
     # Fallback for direct execution
     sys.path.append(str(Path(__file__).parent.parent.parent))
-    from python_scripts.logging_utils import get_logger, log_performance, log_context, StructuredLogger
+    from python_scripts.logging_utils import (
+        StructuredLogger,
+        get_logger,
+        log_context,
+        log_performance,
+    )
 
 
 class SuperhumanTerminal:
