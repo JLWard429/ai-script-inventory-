@@ -1545,7 +1545,7 @@ from typing_mod import Any
             stub="",
             runtime="""
 import sys
-import types_mod_mod
+import types_mod
 import __future__
 _m = types.SimpleNamespace()
 _m.annotations = __future__.annotations

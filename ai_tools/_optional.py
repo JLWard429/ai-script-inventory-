@@ -10,7 +10,7 @@ from pandas.util._exceptions import find_stack_level
 from pandas.util.version import Version
 
 if TYPE_CHECKING:
-import types_mod_mod
+import types_mod
 
 # Update install.rst & setup.cfg when updating versions!
 

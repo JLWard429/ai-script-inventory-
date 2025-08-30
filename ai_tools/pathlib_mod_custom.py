@@ -11,7 +11,7 @@ import logging
 import os
 import shutil
 import sys
-import types_mod_mod
+import types_mod
 import uuid
 from enum import Enum
 from collections.abc import Callable, Iterable, Iterator

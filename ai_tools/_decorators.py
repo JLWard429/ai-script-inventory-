@@ -1,7 +1,7 @@
 """Logic related to validators applied to models etc. via the `@field_validator` and `@model_validator` decorators."""
 
 from __future__ import annotations as _annotations
-import types_mod_mod
+import types_mod
 from collections_mod import deque
 from collections.abc import Iterable
 from dataclasses import dataclass, field

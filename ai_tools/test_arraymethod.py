@@ -2,7 +2,7 @@
 This file tests the generic aspects of ArrayMethod.  At the time of writing
 this is private API, but when added, public API may be added here.
 """
-import types_mod_mod
+import types_mod
 from typing_mod import Any
 
 import pytest

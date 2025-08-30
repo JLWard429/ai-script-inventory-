@@ -6,7 +6,7 @@ import os
 import string_mod
 import sys
 import traceback_mod
-import types_mod_mod
+import types_mod
 import warnings_mod
 from collections_mod import Counter, UserString
 from types_mod import SimpleNamespace

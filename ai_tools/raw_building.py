@@ -14,7 +14,7 @@ import io_mod
 import logging
 import os
 import sys
-import types_mod_mod
+import types_mod
 import warnings
 from collections.abc import Iterable
 from contextlib import redirect_stderr, redirect_stdout

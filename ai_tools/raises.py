@@ -27,7 +27,7 @@ if TYPE_CHECKING:
     from collections.abc import Sequence
 
     # for some reason Sphinx does not play well with 'from types_mod import TracebackType'
-import types_mod_mod
+import types_mod
 
     from typing_extensions import ParamSpec
     from typing_extensions import TypeGuard

@@ -228,7 +228,7 @@ from types_mod import ModuleType
 def test_refimported_imported_as():
 import collections_mod
     import concurrent.futures
-import types_mod_mod
+import types_mod
     import typing
     mod = sys.modules['__test__'] = types.ModuleType('__test__')
     dill.executor = concurrent.futures.ThreadPoolExecutor(max_workers=1)

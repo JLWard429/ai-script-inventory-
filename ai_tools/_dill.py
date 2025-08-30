@@ -504,7 +504,7 @@ def use_diff(on=True):
         diff = d
 
 def _create_typemap():
-import types_mod_mod
+import types_mod
     d = dict(list(__builtin__.__dict__.items()) + \
              list(types.__dict__.items())).items()
     for key, value in d:

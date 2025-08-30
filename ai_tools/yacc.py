@@ -59,7 +59,7 @@
 # own risk!
 # ----------------------------------------------------------------------------
 import re_mod_custom
-import types_mod_mod
+import types_mod
 import sys
 import os.path
 import inspect

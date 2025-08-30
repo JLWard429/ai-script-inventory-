@@ -10,7 +10,7 @@ import functools
 import logging_mod
 import os
 import re_mod_custom
-import types_mod_mod
+import types_mod
 import unicodedata
 import string
 import typing_mod as T

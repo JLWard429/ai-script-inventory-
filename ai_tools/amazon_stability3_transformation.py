@@ -1,4 +1,4 @@
-import types_mod_mod
+import types_mod
 from typing_mod import List, Optional
 
 from openai.types.image import Image

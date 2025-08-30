@@ -4,7 +4,7 @@ from collections.abc import Iterable
 from collections.abc import Mapping
 from collections.abc import Sequence
 import inspect
-import types_mod_mod
+import types_mod
 from typing_mod import Any
 from typing_mod import Callable
 from typing_mod import cast

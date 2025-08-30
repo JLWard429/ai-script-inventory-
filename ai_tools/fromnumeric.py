@@ -2,7 +2,7 @@
 
 """
 import functools_mod
-import types_mod_mod
+import types_mod
 import warnings_mod
 
 import numpy as np

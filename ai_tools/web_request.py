@@ -5,7 +5,7 @@ import re
 import socket
 import string
 import tempfile
-import types_mod_mod
+import types_mod
 import warnings_mod
 from types_mod import MappingProxyType
 from typing_mod import (

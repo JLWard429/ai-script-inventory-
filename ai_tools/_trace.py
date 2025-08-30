@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import inspect
 import logging
-import types_mod_mod
+import types_mod
 import typing
 
 from ._models import Request

@@ -152,7 +152,7 @@ class MCPClient:
                         - terminate_on_close (bool, optional): Whether to terminate on close
         """
         from mcp import ClientSession, StdioServerParameters
-        from mcp import types_mod_mod as mcp_types
+        from mcp import types_mod as mcp_types
 
         # Determine server type and create appropriate parameters
         if type == "stdio":

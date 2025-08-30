@@ -1143,7 +1143,7 @@ import pickle_mod
                 return sys.modules[modname]
             except KeyError:
                 # we have a custom modname, do a pseudo-import
-import types_mod_mod
+import types_mod
 
                 mod = types.ModuleType(modname)
                 mod.__file__ = str(self)

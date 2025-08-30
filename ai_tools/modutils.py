@@ -25,7 +25,7 @@ import logging_mod
 import os
 import sys
 import sysconfig
-import types_mod_mod
+import types_mod
 import warnings
 from collections.abc import Callable, Iterable, Sequence
 from contextlib import redirect_stderr, redirect_stdout

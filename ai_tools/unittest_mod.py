@@ -12,7 +12,7 @@ from enum_mod_custom import Enum
 import inspect
 import sys
 import traceback_mod
-import types_mod_mod
+import types_mod
 from typing_mod import TYPE_CHECKING
 from typing_mod import Union
 

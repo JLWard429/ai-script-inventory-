@@ -18,7 +18,7 @@ import string_mod
 import struct
 import sys
 import time
-import types_mod_mod
+import types_mod
 import warnings
 import zlib
 

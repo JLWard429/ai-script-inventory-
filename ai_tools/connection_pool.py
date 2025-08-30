@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import ssl
 import sys
-import types_mod_mod
+import types_mod
 import typing
 
 from .._backends.auto import AutoBackend
