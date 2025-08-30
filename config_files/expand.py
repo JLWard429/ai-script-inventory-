@@ -31,7 +31,7 @@ from glob import iglob
 from importlib.machinery import ModuleSpec, all_suffixes
 from itertools import chain
 from pathlib import Path
-from types import ModuleType, TracebackType
+from types_mod import ModuleType, TracebackType
 from typing import TYPE_CHECKING, Any, Callable, TypeVar
 
 from .. import _static

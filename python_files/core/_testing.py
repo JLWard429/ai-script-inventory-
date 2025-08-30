@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import types
+import types_mod
 from abc import ABCMeta, abstractmethod
 from collections.abc import AsyncGenerator, Callable, Coroutine, Iterable
 from typing import Any, TypeVar

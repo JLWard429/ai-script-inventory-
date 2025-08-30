@@ -7,10 +7,10 @@ import os
 import string
 import sys
 import traceback
-import types
+import types_mod
 import warnings
 from collections import Counter, UserString
-from types import SimpleNamespace
+from types_mod import SimpleNamespace
 from typing import (
     Any,
     Callable,

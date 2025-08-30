@@ -20,7 +20,7 @@ hashable (#126).
 
 import importlib
 import sys
-import types
+import types_mod
 
 import zipp
 

@@ -1,4 +1,4 @@
-from types import TracebackType
+from types_mod import TracebackType
 from typing import IO, Iterable, Iterator, List, Optional, Type
 
 

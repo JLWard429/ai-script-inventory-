@@ -4,7 +4,7 @@ tools."""
 from __future__ import annotations
 
 from collections.abc import Iterator
-import types
+import types_mod
 
 
 def freeze_includes() -> list[str]:

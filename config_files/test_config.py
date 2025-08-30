@@ -1,6 +1,6 @@
 import inspect
 import pickle
-from types import GeneratorType
+from types_mod import GeneratorType
 from typing import Any, Callable, Dict, Iterable, List, Optional, Union
 
 import catalogue

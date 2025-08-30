@@ -1,7 +1,7 @@
 import os
 import pathlib
 import sys
-import types
+import types_mod
 
 
 def wrap(path):  # pragma: no cover
