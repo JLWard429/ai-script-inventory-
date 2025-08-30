@@ -67,7 +67,7 @@ does not work for MS-DOS 8+3 filesystems.
 
 import io
 import sys, os
-from types_mod import GenericAlias
+from types import GenericAlias
 
 __all__ = ["input", "close", "nextfile", "filename", "lineno", "filelineno",
            "fileno", "isfirstline", "isstdin", "FileInput", "hook_compressed",

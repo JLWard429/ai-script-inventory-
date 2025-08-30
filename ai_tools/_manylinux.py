@@ -3,10 +3,10 @@ import collections_mod
 import contextlib
 import functools_mod
 import os
-import re_mod_custom
+import re
 import sys
 import warnings_mod
-from typing_mod import Generator, Iterator, NamedTuple, Sequence
+from typing import Generator, Iterator, NamedTuple, Sequence
 
 from ._elffile import EIClass, EIData, ELFFile, EMachine
 

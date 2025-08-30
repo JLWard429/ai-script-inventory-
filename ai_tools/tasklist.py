@@ -25,7 +25,7 @@ DEALINGS IN THE SOFTWARE.
 """
 from markdown import Extension
 from markdown.treeprocessors import Treeprocessor
-import re_mod_custom
+import re
 
 RE_CHECKBOX = re.compile(r"^(?P<checkbox> *\[(?P<state>(?:x|X| ){1})\] +)(?P<line>.*)", re.DOTALL)
 

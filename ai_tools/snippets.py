@@ -26,7 +26,7 @@ from markdown import Extension
 from markdown.preprocessors import Preprocessor
 import functools_mod
 import urllib
-import re_mod_custom
+import re
 import os
 from . import util
 import textwrap

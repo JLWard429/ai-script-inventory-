@@ -7,8 +7,8 @@ from __future__ import annotations
 from collections.abc import Generator
 from collections.abc import Mapping
 from collections.abc import Sequence
-from typing_mod import cast
-from typing_mod import NoReturn
+from typing import cast
+from typing import NoReturn
 import warnings_mod
 
 from ._hooks import HookImpl

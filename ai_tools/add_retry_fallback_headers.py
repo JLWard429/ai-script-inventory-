@@ -1,4 +1,4 @@
-from typing_mod import Any, Optional, Union
+from typing import Any, Optional, Union
 
 from pydantic import BaseModel
 

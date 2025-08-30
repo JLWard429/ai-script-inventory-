@@ -16,7 +16,7 @@
 # along with autocommand.  If not, see <http://www.gnu.org/licenses/>.
 
 import sys
-from re_mod_custom import compile as compile_regex
+from re import compile as compile_regex
 from inspect import signature, getdoc, Parameter
 from argparse import ArgumentParser
 from contextlib import contextmanager

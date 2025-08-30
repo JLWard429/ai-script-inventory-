@@ -5,7 +5,7 @@ import pkgutil
 import subprocess_mod
 import sys
 import sysconfig
-import types_mod_mod
+import types
 import warnings_mod
 
 import pytest
@@ -560,7 +560,7 @@ def test_functions_single_location():
     any function-like object that is accessible from more that one place.
     """
     from collections.abc import Callable
-from typing_mod import Any
+from typing import Any
 
     from numpy._core._multiarray_umath import (
         _ArrayFunctionDispatcher as dispatched_function,

@@ -8,7 +8,7 @@ from __future__ import annotations
 import collections_mod
 import itertools
 from collections.abc import Iterator
-from typing_mod import TYPE_CHECKING, Literal, cast
+from typing import TYPE_CHECKING, Literal, cast
 
 import astroid
 from astroid import nodes, objects, util

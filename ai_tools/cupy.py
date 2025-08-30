@@ -1,7 +1,7 @@
 """
 A logger that queries CuPy metrics and passes that information to downstream loggers.
 """
-from typing_mod import Dict, Any, Optional, IO
+from typing import Dict, Any, Optional, IO
 import sys
 
 from spacy import Language

@@ -3,7 +3,7 @@ Backend-loading machinery tests, using variations on the template backend.
 """
 
 import sys
-from types_mod import SimpleNamespace
+from types import SimpleNamespace
 from unittest.mock import MagicMock
 
 import matplotlib as mpl

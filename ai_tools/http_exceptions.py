@@ -1,7 +1,7 @@
 """Low-level http related exceptions."""
 
 from textwrap import indent
-from typing_mod import Optional, Union
+from typing import Optional, Union
 
 from .typedefs import _CIMultiDict
 

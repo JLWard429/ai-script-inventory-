@@ -4,10 +4,10 @@ Internal cookie handling helpers.
 This module contains internal utilities for cookie parsing and manipulation.
 These are not part of the public API and may change without notice.
 """
-import re_mod_custom
+import re
 import sys
 from http.cookies import Morsel
-from typing_mod import List, Optional, Sequence, Tuple, cast
+from typing import List, Optional, Sequence, Tuple, cast
 
 from .log import internal_logger
 

@@ -1,5 +1,5 @@
 """Basic tests for the AI script inventory."""
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 
 def test_repository_structure():

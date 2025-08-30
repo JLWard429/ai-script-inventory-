@@ -3,7 +3,7 @@
 # After changing the file content call ./tools/gen.py
 # to regenerate the headers parser
 import itertools
-from typing_mod import Final, Set
+from typing import Final, Set
 
 from multidict import istr
 

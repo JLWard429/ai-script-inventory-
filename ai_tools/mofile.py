@@ -10,7 +10,7 @@
 from __future__ import annotations
 import array_mod
 import struct
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from babel.messages.catalog import Catalog, Message
 

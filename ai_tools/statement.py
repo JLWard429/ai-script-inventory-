@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import importlib.util
 from collections.abc import Sequence
-from typing_mod import Callable
+from typing import Callable
 
 import mypy.nodes
 from mypy.nodes import (

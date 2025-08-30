@@ -1,6 +1,6 @@
 import logging_mod
 from dataclasses import dataclass
-from typing_mod import Any, Literal
+from typing import Any, Literal
 
 from pydantic import AnyUrl, BaseModel, Field, RootModel, ValidationError
 from starlette.datastructures import FormData, QueryParams

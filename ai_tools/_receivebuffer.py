@@ -1,6 +1,6 @@
-import re_mod_custom
+import re
 import sys
-from typing_mod import List, Optional, Union
+from typing import List, Optional, Union
 
 __all__ = ["ReceiveBuffer"]
 

@@ -1,6 +1,6 @@
 # mypy: ignore-errors
 import copy_mod
-from typing_mod import Any, cast
+from typing import Any, cast
 
 import srsly
 

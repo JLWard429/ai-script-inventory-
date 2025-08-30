@@ -1,4 +1,4 @@
-from typing_mod import Dict
+from typing import Dict
 
 from .style import Style
 

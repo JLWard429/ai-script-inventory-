@@ -1,4 +1,4 @@
-from typing_mod import Optional, Union
+from typing import Optional, Union
 
 from folium.elements import JSCSSMixin
 from folium.map import Layer

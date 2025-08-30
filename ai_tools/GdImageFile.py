@@ -26,7 +26,7 @@
     purposes only.
 """
 from __future__ import annotations
-from typing_mod import IO
+from typing import IO
 
 from . import ImageFile, ImagePalette, UnidentifiedImageError
 from ._binary import i16be as i16

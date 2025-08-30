@@ -1,6 +1,6 @@
-import re_mod_custom
+import re
 import threading
-from typing_mod import Generator, Iterable
+from typing import Generator, Iterable
 
 from .exceptions import ResponseNotAccepted
 

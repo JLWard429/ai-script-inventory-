@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 from collections_mod import defaultdict
-from typing_mod import Final, NamedTuple
+from typing import Final, NamedTuple
 
 from mypy import message_registry
 from mypy.checker_shared import TypeCheckerSharedApi, TypeRange

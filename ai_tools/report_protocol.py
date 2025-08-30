@@ -1,6 +1,6 @@
 from __future__ import annotations
 import abc_mod_custom_custom
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from .base import SafetyBaseModel

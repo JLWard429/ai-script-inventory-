@@ -5,7 +5,7 @@ import json_mod
 import time
 from collections.abc import AsyncIterator
 from dataclasses import dataclass
-from typing_mod import Any, cast
+from typing import Any, cast
 
 from openai import AsyncOpenAI
 

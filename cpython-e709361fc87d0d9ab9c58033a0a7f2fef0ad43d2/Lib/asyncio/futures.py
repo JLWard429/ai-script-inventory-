@@ -8,7 +8,7 @@ import concurrent.futures
 import contextvars
 import logging
 import sys
-from types_mod import GenericAlias
+from types import GenericAlias
 
 from . import base_futures
 from . import events

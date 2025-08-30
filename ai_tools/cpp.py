@@ -82,7 +82,7 @@ def t_error(t):
     t.value = t.value[0]
     t.lexer.skip(1)
     return t
-import re_mod_custom
+import re
 import copy
 import time
 import os.path

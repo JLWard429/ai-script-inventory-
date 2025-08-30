@@ -5,8 +5,8 @@ from collections_mod import deque
 from dataclasses import dataclass, field
 from datetime import datetime
 from itertools import chain
-from pathlib_mod_custom import Path
-from typing_mod import Any, Dict, Iterator, List, NoReturn, Optional, Tuple, Union
+from pathlib import Path
+from typing import Any, Dict, Iterator, List, NoReturn, Optional, Tuple, Union
 from urllib.parse import quote, unquote
 
 import fsspec

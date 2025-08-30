@@ -10,7 +10,7 @@ import gc
 import sys
 from collections_mod import defaultdict
 from collections.abc import Iterable
-from typing_mod import cast
+from typing import cast
 
 from mypy.nodes import FakeInfo, Node
 from mypy.types import Type

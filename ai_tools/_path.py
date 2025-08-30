@@ -3,7 +3,7 @@ from __future__ import annotations
 import contextlib
 import os
 import sys
-from typing_mod import TYPE_CHECKING, TypeVar, Union
+from typing import TYPE_CHECKING, TypeVar, Union
 
 from more_itertools import unique_everseen
 

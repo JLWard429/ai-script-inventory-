@@ -1,9 +1,9 @@
 from __future__ import annotations
-import enum_mod_custom
+import enum
 import logging
 import ssl
 import time
-import types_mod_mod
+import types
 import typing
 
 import h11

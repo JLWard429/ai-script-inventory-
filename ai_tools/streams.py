@@ -1,7 +1,7 @@
 import asyncio_mod
 import collections
 import warnings_mod
-from typing_mod import (
+from typing import (
     Awaitable,
     Callable,
     Deque,

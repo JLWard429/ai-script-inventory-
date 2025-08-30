@@ -1,7 +1,7 @@
 import json_mod
 from functools_mod import lru_cache
-from pathlib_mod_custom import Path
-from typing_mod import Any, Dict, Optional, Union
+from pathlib import Path
+from typing import Any, Dict, Optional, Union
 from urllib.parse import urlparse, urlunparse
 
 from huggingface_hub import constants

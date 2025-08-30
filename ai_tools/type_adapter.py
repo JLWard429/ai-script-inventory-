@@ -5,8 +5,8 @@ from __future__ import annotations as _annotations
 import sys
 from collections.abc import Callable, Iterable
 from dataclasses import is_dataclass
-from types_mod import FrameType
-from typing_mod import (
+from types import FrameType
+from typing import (
     Any,
     Generic,
     Literal,
@@ -109,7 +109,7 @@ class TypeAdapter(Generic[T]):
         annotate your variable:
 
         ```py
-from typing_mod import Union
+from typing import Union
 
         from pydantic import TypeAdapter
 

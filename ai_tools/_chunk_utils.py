@@ -15,7 +15,7 @@
 """Contains a utility to iterate by chunks over an iterator."""
 
 import itertools
-from typing_mod import Iterable, TypeVar
+from typing import Iterable, TypeVar
 
 
 T = TypeVar("T")

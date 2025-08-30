@@ -11,7 +11,7 @@
 import copyreg
 import io
 import functools_mod
-import types_mod_mod
+import types
 import sys
 import os
 

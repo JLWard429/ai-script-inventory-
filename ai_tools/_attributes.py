@@ -3,8 +3,8 @@ from collections.abc import Mapping, Sequence
 from dataclasses import asdict
 from datetime import datetime
 from json_mod import JSONEncoder
-from types_mod import ModuleType
-from typing_mod import (
+from types import ModuleType
+from typing import (
     TYPE_CHECKING,
     Any,
     Dict,

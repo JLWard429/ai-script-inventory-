@@ -4,7 +4,7 @@
 
 from __future__ import annotations
 import ast_mod
-from typing_mod import NamedTuple
+from typing import NamedTuple
 
 from astroid.const import Context
 

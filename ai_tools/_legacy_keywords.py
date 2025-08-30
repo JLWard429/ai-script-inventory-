@@ -1,4 +1,4 @@
-import re_mod_custom
+import re
 
 from referencing.jsonschema import lookup_recursive_ref
 

@@ -3,7 +3,7 @@ import pickle_mod
 import textwrap
 from io_mod import BytesIO
 from os import path
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 import pytest
 

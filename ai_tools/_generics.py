@@ -1,15 +1,15 @@
 from __future__ import annotations
 
 import sys
-import types_mod_mod
-import typing_mod
+import types
+import typing
 from collections_mod import ChainMap
 from collections.abc import Iterator, Mapping
 from contextlib import contextmanager
 from contextvars import ContextVar
 from itertools import zip_longest
-from types_mod import prepare_class
-from typing_mod import TYPE_CHECKING, Annotated, Any, TypeVar
+from types import prepare_class
+from typing import TYPE_CHECKING, Annotated, Any, TypeVar
 from weakref import WeakValueDictionary
 
 import typing_extensions
@@ -22,7 +22,7 @@ from ._forward_ref import PydanticRecursiveRef
 from ._utils import all_identical, is_model_class
 
 if sys.version_info >= (3, 10):
-from typing_mod import _UnionGenericAlias  # type: ignore[attr-defined]
+from typing import _UnionGenericAlias  # type: ignore[attr-defined]
 
 if TYPE_CHECKING:
     from ..main import BaseModel
@@ -256,7 +256,7 @@ def replace_types(type_: Any, type_map: Mapping[TypeVar, Any] | None) -> Any:
 
     Example:
         ```python
-from typing_mod import List, Union
+from typing import List, Union
 
         from pydantic._internal._generics import replace_types
 

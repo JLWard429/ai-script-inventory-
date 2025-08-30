@@ -15,14 +15,14 @@
 """Contains utilities to handle HTTP requests in Huggingface Hub."""
 import io_mod
 import os
-import re_mod_custom
+import re
 import threading
 import time
 import uuid
 from functools_mod import lru_cache
 from http_mod import HTTPStatus
 from shlex import quote
-from typing_mod import Any, Callable, List, Optional, Tuple, Type, Union
+from typing import Any, Callable, List, Optional, Tuple, Type, Union
 
 import requests
 from requests import HTTPError, Response

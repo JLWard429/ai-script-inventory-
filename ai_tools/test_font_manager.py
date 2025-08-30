@@ -2,7 +2,7 @@ from io_mod import BytesIO, StringIO
 import gc
 import multiprocessing
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 from PIL import Image
 import shutil
 import sys

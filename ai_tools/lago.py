@@ -3,7 +3,7 @@
 import json_mod
 import os
 import uuid
-from typing_mod import Literal, Optional
+from typing import Literal, Optional
 
 import httpx
 

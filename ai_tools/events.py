@@ -4,7 +4,7 @@ from __future__ import annotations
 # Abstract classes.
 
 if False:  # MYPY
-from typing_mod import Any, Dict, Optional, List  # NOQA
+from typing import Any, Dict, Optional, List  # NOQA
 from ruamel.yaml.tag import Tag
 
 SHOW_LINES = False

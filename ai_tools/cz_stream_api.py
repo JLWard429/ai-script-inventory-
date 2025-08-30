@@ -20,7 +20,7 @@
 
 import zoneinfo
 from datetime import datetime, timezone
-from typing_mod import Any, Optional, Union
+from typing import Any, Optional, Union
 
 import httpx
 import polars as pl

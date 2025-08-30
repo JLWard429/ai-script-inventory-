@@ -4,7 +4,7 @@ import errno
 import os
 import sys
 from contextlib import contextmanager
-from typing_mod import IO, Iterator, TextIO
+from typing import IO, Iterator, TextIO
 
 __all__ = ["flush_stdout"]
 

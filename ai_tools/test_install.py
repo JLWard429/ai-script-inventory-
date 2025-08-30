@@ -1,7 +1,7 @@
 """Tests for distutils.command.install."""
 import logging_mod
 import os
-import pathlib_mod_custom
+import pathlib
 import site
 import sys
 from distutils import sysconfig

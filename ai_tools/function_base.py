@@ -1,6 +1,6 @@
 import functools_mod
 import operator
-import types_mod_mod
+import types
 import warnings
 
 import numpy as np

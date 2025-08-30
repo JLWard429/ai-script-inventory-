@@ -10,8 +10,8 @@ from contextlib import suppress
 from http_mod import HTTPStatus
 from itertools import chain, cycle, islice
 from time import monotonic
-from types_mod import TracebackType
-from typing_mod import (
+from types import TracebackType
+from typing import (
     TYPE_CHECKING,
     Any,
     Awaitable,

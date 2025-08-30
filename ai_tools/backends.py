@@ -26,7 +26,7 @@ import inspect
 import itertools
 import logging_mod
 import os
-import typing_mod
+import typing
 import warnings
 from functools_mod import partial
 from importlib.metadata import entry_points

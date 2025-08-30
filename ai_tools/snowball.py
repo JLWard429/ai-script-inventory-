@@ -22,7 +22,7 @@ developed by Martin Porter.
 There is also a demo function: `snowball.demo()`.
 
 """
-import re_mod_custom
+import re
 
 from nltk.corpus import stopwords
 from nltk.stem import porter

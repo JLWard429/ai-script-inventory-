@@ -1,5 +1,5 @@
 import os
-from typing_mod import Optional, Tuple, Union
+from typing import Optional, Tuple, Union
 
 from .util import NO_UTF8, color, supports_ansi
 

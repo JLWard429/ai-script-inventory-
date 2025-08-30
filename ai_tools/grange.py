@@ -16,7 +16,7 @@
 # OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 """DNS GENERATE range conversion."""
-from typing_mod import Tuple
+from typing import Tuple
 
 import dns_custom
 

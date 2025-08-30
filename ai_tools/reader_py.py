@@ -2,7 +2,7 @@
 import asyncio_mod
 import builtins
 from collections_mod import deque
-from typing_mod import Deque, Final, Optional, Set, Tuple, Union
+from typing import Deque, Final, Optional, Set, Tuple, Union
 
 from ..base_protocol import BaseProtocol
 from ..compression_utils import ZLibDecompressor

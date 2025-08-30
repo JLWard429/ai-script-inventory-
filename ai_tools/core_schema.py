@@ -10,20 +10,20 @@ import warnings
 from collections.abc import Hashable, Mapping
 from datetime import date, datetime, time, timedelta
 from decimal import Decimal
-from re_mod_custom import Pattern
-from typing_mod import TYPE_CHECKING, Any, Callable, Literal, Union
+from re import Pattern
+from typing import TYPE_CHECKING, Any, Callable, Literal, Union
 
 from typing_extensions import deprecated
 
 if sys.version_info < (3, 12):
     from typing_extensions import TypedDict
 else:
-from typing_mod import TypedDict
+from typing import TypedDict
 
 if sys.version_info < (3, 11):
     from typing_extensions import Protocol, Required, TypeAlias
 else:
-from typing_mod import Protocol, Required, TypeAlias
+from typing import Protocol, Required, TypeAlias
 
 if TYPE_CHECKING:
     from pydantic_core import PydanticUndefined
@@ -1280,7 +1280,7 @@ def enum_schema(
     Returns a schema that matches an enum value, e.g.:
 
     ```py
-from enum_mod_custom import Enum
+from enum import Enum
     from pydantic_core import SchemaValidator, core_schema
 
     class Color(Enum):
@@ -1829,7 +1829,7 @@ def generator_schema(
     Returns a schema that matches a generator value, e.g.:
 
     ```py
-from typing_mod import Iterator
+from typing import Iterator
     from pydantic_core import SchemaValidator, core_schema
 
     def gen() -> Iterator[int]:

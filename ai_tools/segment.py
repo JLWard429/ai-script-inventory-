@@ -1,9 +1,9 @@
-from enum_mod_custom import IntEnum
+from enum import IntEnum
 from functools_mod import lru_cache
 from itertools import filterfalse
 from logging_mod import getLogger
 from operator import attrgetter
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Dict,
     Iterable,

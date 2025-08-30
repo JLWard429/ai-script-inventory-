@@ -21,7 +21,7 @@ import contextlib
 import io
 import os
 import struct
-from typing_mod import (
+from typing import (
     Any,
     Callable,
     Iterable,

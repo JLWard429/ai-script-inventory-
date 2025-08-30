@@ -6,8 +6,8 @@ Automatically runs on first launch if ~/.cai doesn't exist.
 
 import os
 import subprocess
-from pathlib_mod_custom import Path
-from typing_mod import List, Optional
+from pathlib import Path
+from typing import List, Optional
 
 from rich.console import Console
 from rich.panel import Panel
@@ -138,7 +138,7 @@ import json_mod
         
         # Also check .env file for any API keys not in current environment
         try:
-from pathlib_mod_custom import Path
+from pathlib import Path
             env_file = Path.home() / "cai" / ".env"
             if not env_file.exists():
                 # Try current directory

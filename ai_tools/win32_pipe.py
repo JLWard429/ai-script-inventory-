@@ -7,7 +7,7 @@ assert sys.platform == "win32"
 from contextlib import contextmanager
 from ctypes_mod import windll
 from ctypes.wintypes import HANDLE
-from typing_mod import Callable, ContextManager, Iterator
+from typing import Callable, ContextManager, Iterator
 
 from prompt_toolkit.eventloop.win32 import create_win32_event
 

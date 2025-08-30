@@ -108,7 +108,7 @@ import math_mod
 import re
 import string_mod
 from collections_mod import defaultdict
-from typing_mod import Any, Dict, Iterator, List, Match, Optional, Tuple, Union
+from typing import Any, Dict, Iterator, List, Match, Optional, Tuple, Union
 
 from nltk.probability import FreqDist
 from nltk.tokenize.api import TokenizerI

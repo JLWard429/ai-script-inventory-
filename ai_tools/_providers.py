@@ -13,7 +13,7 @@
 # limitations under the License.
 from logging_mod import getLogger
 from os import environ
-from typing_mod import TYPE_CHECKING, TypeVar, cast
+from typing import TYPE_CHECKING, TypeVar, cast
 
 from opentelemetry.util._importlib_metadata import entry_points
 

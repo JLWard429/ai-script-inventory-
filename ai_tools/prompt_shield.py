@@ -2,7 +2,7 @@
 """
 Azure Prompt Shield Native Guardrail Integrationfor LiteLLM
 """
-from typing_mod import TYPE_CHECKING, Any, Dict, List, Literal, Optional, Type, cast
+from typing import TYPE_CHECKING, Any, Dict, List, Literal, Optional, Type, cast
 
 from fastapi import HTTPException
 

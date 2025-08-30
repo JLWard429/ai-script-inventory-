@@ -1,5 +1,5 @@
 from io_mod import BytesIO
-from typing_mod import Any, Optional
+from typing import Any, Optional
 
 import srsly
 

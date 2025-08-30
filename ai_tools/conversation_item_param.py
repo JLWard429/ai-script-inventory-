@@ -1,7 +1,7 @@
 # File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 from __future__ import annotations
-from typing_mod import Iterable
+from typing import Iterable
 from typing_extensions import Literal, TypedDict
 
 from .conversation_item_content_param import ConversationItemContentParam

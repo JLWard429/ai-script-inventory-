@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import os
-from typing_mod import ClassVar
+from typing import ClassVar
 
 from .. import Command, _shutil
 

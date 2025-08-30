@@ -11,7 +11,7 @@ from __future__ import annotations
 import weakref
 from asyncio_mod import Task, sleep
 from collections_mod import deque
-from typing_mod import TYPE_CHECKING, Any, Generator
+from typing import TYPE_CHECKING, Any, Generator
 
 from prompt_toolkit.application.current import get_app
 from prompt_toolkit.enums import EditingMode

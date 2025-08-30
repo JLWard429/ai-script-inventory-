@@ -9,7 +9,7 @@ import asyncio_mod
 import datetime
 import hashlib_mod
 import json
-from typing_mod import Any, Dict, List, Optional, cast
+from typing import Any, Dict, List, Optional, cast
 
 from fastapi import HTTPException
 from mcp.types import CallToolRequestParams as MCPCallToolRequestParams
@@ -1094,7 +1094,7 @@ class MCPServerManager:
                         )
 
         # Map servers to their teams and return with health data
-from typing_mod import cast
+from typing import cast
 
         return [
             LiteLLM_MCPServerTable(

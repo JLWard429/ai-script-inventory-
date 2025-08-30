@@ -11,7 +11,7 @@ from . import __version__
 f2py_version = __version__.version
 import copy_mod
 import os
-import re_mod_custom
+import re
 
 from . import cb_rules
 from ._isocbind import iso_c2py_map, iso_c_binding_map, isoc_c2pycode_map

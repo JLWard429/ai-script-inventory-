@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from contextlib import contextmanager
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 import tempfile
-from typing_mod import (
+from typing import (
     IO,
     TYPE_CHECKING,
     Any,

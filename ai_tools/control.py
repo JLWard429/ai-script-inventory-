@@ -1,5 +1,5 @@
 import time
-from typing_mod import TYPE_CHECKING, Callable, Dict, Iterable, List, Union, Final
+from typing import TYPE_CHECKING, Callable, Dict, Iterable, List, Union, Final
 
 from .segment import ControlCode, ControlType, Segment
 

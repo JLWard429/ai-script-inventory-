@@ -6,7 +6,7 @@ and saves the data to $HOME/.cai/usage.json
 """
 import json_mod
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 def display_usage_stats():
     """Display the current global usage statistics"""

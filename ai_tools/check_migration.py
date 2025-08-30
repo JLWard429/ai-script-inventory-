@@ -2,7 +2,7 @@
 
 import os
 import subprocess
-from typing_mod import List, Optional, Tuple
+from typing import List, Optional, Tuple
 
 from litellm._logging import verbose_logger
 

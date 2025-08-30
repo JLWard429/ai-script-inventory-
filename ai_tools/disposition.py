@@ -4,7 +4,7 @@
 """Simple value objects for tracking what to do with files."""
 
 from __future__ import annotations
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from coverage.types import TFileDisposition
 

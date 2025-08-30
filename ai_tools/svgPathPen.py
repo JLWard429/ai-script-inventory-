@@ -1,4 +1,4 @@
-from typing_mod import Callable
+from typing import Callable
 from fontTools.pens.basePen import BasePen
 
 

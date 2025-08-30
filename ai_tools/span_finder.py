@@ -1,4 +1,4 @@
-from typing_mod import Callable, List, Tuple
+from typing import Callable, List, Tuple
 
 from thinc.api import Model, chain, with_array
 from thinc.types import Floats1d, Floats2d

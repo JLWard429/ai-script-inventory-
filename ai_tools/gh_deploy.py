@@ -1,9 +1,9 @@
 from __future__ import annotations
 import logging_mod
 import os
-import re_mod_custom
+import re
 import subprocess
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 import ghp_import  # type: ignore
 from packaging import version

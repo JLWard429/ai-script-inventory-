@@ -1,6 +1,6 @@
 import os
 import sys
-import types_mod_mod
+import types
 
 from setuptools import Command
 

@@ -19,7 +19,7 @@ import os
 import platform
 import sys
 import warnings
-from typing_mod import Any, Dict
+from typing import Any, Dict
 
 from .. import __version__, constants
 

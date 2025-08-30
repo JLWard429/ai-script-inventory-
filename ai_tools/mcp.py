@@ -54,7 +54,7 @@ import atexit
 import functools_mod
 import warnings
 import logging_mod
-from typing_mod import Dict, List, Optional
+from typing import Dict, List, Optional
 
 # Third-party imports
 from rich.console import Console

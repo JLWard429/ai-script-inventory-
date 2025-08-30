@@ -25,7 +25,7 @@ results showed that the new version considerably improves the under-stemming
 errors that are common to light stemmers. Both ARLSTem and ARLSTem2 can be run
 online and do not use any dictionary.
 """
-import re_mod_custom
+import re
 
 from nltk.stem.api import StemmerI
 

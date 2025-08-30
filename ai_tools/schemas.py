@@ -1,5 +1,5 @@
 from collections_mod import defaultdict
-from typing_mod import Any, Dict, List, Optional, Type, Union
+from typing import Any, Dict, List, Optional, Type, Union
 
 try:
     from pydantic.v1 import BaseModel, Field, StrictStr, ValidationError, root_validator

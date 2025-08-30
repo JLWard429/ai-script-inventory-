@@ -5,7 +5,7 @@ If the ddtrace package is not installed, the tracer will be a no-op.
 """
 
 from contextlib import contextmanager
-from typing_mod import TYPE_CHECKING, Any, Union
+from typing import TYPE_CHECKING, Any, Union
 
 from litellm.secret_managers.main import get_secret_bool
 

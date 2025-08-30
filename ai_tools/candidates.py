@@ -2,7 +2,7 @@ from __future__ import annotations
 import logging_mod
 import sys
 from collections.abc import Iterable
-from typing_mod import TYPE_CHECKING, Any, Union, cast
+from typing import TYPE_CHECKING, Any, Union, cast
 
 from pip._vendor.packaging.requirements import InvalidRequirement
 from pip._vendor.packaging.utils import NormalizedName, canonicalize_name

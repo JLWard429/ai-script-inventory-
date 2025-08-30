@@ -12,11 +12,11 @@ Email:        <fdrake@acm.org>
 from __future__ import annotations
 import functools_mod
 import os
-import pathlib_mod_custom
+import pathlib
 import re
 import sys
 import sysconfig
-from typing_mod import TYPE_CHECKING, Literal, overload
+from typing import TYPE_CHECKING, Literal, overload
 
 from jaraco.functools import pass_none
 

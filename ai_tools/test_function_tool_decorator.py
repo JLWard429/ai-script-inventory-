@@ -1,6 +1,6 @@
 import asyncio_mod
 import json
-from typing_mod import Any, Optional
+from typing import Any, Optional
 
 import pytest
 

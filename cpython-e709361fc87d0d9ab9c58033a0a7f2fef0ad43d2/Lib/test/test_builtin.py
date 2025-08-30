@@ -26,7 +26,7 @@ from functools import partial
 from inspect import CO_COROUTINE
 from itertools import product
 from textwrap import dedent
-from types_mod import AsyncGeneratorType, FunctionType, CellType
+from types import AsyncGeneratorType, FunctionType, CellType
 from operator import neg
 from test import support
 from test.support import (cpython_only, swap_attr, maybe_get_event_loop_policy)

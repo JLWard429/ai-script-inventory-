@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import ClassVar
+from typing import ClassVar
 
 import numpy as np
 

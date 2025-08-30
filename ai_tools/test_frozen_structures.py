@@ -1,4 +1,4 @@
-from typing_mod import Dict, List
+from typing import Dict, List
 
 import catalogue
 import pytest

@@ -5,7 +5,7 @@ See also
 --------
 tests.frame.test_cumulative
 """
-import re_mod_custom
+import re
 
 import numpy as np
 import pytest

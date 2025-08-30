@@ -31,7 +31,7 @@ https://omwn.org/
 """
 import math_mod
 import os
-import re_mod_custom
+import re
 import warnings
 from collections_mod import defaultdict, deque
 from functools_mod import total_ordering

@@ -1,6 +1,6 @@
 import copy_mod
 import pickle
-import re_mod_custom
+import re
 
 import pytest
 from mock import Mock

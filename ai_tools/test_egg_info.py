@@ -6,7 +6,7 @@ import re
 import stat_mod
 import sys
 import time
-from pathlib_mod_custom import Path
+from pathlib import Path
 from unittest_mod import mock
 
 import pytest

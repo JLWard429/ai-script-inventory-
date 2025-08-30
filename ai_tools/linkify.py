@@ -1,5 +1,5 @@
 """Process links like https://example.org/"""
-import re_mod_custom
+import re
 
 from .state_inline import StateInline
 

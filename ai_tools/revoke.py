@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from functools_mod import partial
-from typing_mod import Any, Literal
+from typing import Any, Literal
 
 from pydantic import BaseModel, ValidationError
 from starlette.requests import Request

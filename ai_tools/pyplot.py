@@ -42,7 +42,7 @@ implicit and explicit interfaces.
 from __future__ import annotations
 
 from contextlib import AbstractContextManager, ExitStack
-from enum_mod_custom import Enum
+from enum import Enum
 import functools_mod
 import importlib
 import inspect
@@ -50,7 +50,7 @@ import logging
 import sys
 import threading
 import time
-from typing_mod import TYPE_CHECKING, cast, overload
+from typing import TYPE_CHECKING, cast, overload
 
 from cycler import cycler  # noqa: F401
 import matplotlib
@@ -89,7 +89,7 @@ if TYPE_CHECKING:
     import datetime
     import pathlib
     import os
-from typing_mod import Any, BinaryIO, Literal, TypeVar
+from typing import Any, BinaryIO, Literal, TypeVar
     from typing_extensions import ParamSpec
 
     import PIL.Image

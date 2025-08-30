@@ -1,6 +1,6 @@
 from __future__ import annotations
 import math_mod
-from typing_mod import TypeVar
+from typing import TypeVar
 from warnings_mod import warn
 
 from ..streams.memory import (

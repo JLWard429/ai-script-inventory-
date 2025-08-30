@@ -13,7 +13,7 @@ from __future__ import annotations
 import sys
 from collections.abc import Iterator
 from io_mod import StringIO
-from typing_mod import TYPE_CHECKING, TextIO
+from typing import TYPE_CHECKING, TextIO
 
 if TYPE_CHECKING:
     from pylint.reporters.ureports.nodes import (

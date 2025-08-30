@@ -1,8 +1,8 @@
 from __future__ import annotations
-from typing_mod import Any
-from typing_mod import cast
-from typing_mod import Generic
-from typing_mod import TypeVar
+from typing import Any
+from typing import cast
+from typing import Generic
+from typing import TypeVar
 
 
 __all__ = ["Stash", "StashKey"]

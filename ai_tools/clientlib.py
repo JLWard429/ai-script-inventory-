@@ -2,12 +2,12 @@ from __future__ import annotations
 import functools_mod
 import logging
 import os.path
-import re_mod_custom
+import re
 import shlex
 import sys
 from collections.abc import Sequence
-from typing_mod import Any
-from typing_mod import NamedTuple
+from typing import Any
+from typing import NamedTuple
 
 import cfgv
 from identify.identify import ALL_TAGS

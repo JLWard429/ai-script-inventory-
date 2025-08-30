@@ -2,11 +2,11 @@ from __future__ import annotations
 
 import dataclasses
 import inspect
-from types_mod import FunctionType
-from typing_mod import Any
-from typing_mod import final
-from typing_mod import Generic
-from typing_mod import TypeVar
+from types import FunctionType
+from typing import Any
+from typing import final
+from typing import Generic
+from typing import TypeVar
 import warnings_mod
 
 

@@ -3,9 +3,9 @@
 # Copyright (c) https://github.com/pylint-dev/pylint/blob/main/CONTRIBUTORS.txt
 
 from __future__ import annotations
-import re_mod_custom
+import re
 from collections.abc import Generator
-from typing_mod import NamedTuple
+from typing import NamedTuple
 
 # Allow stopping after the first semicolon/hash encountered,
 # so that an option can be continued with the reasons

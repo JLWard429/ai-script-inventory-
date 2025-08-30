@@ -2,8 +2,8 @@ from __future__ import annotations
 import logging_mod
 import os
 from configparser import ConfigParser
-from pathlib_mod_custom import Path
-from typing_mod import ClassVar
+from pathlib import Path
+from typing import ClassVar
 
 from platformdirs import user_config_dir
 

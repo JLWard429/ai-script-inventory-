@@ -8,7 +8,7 @@ Offer fast expression evaluation through numexpr
 from __future__ import annotations
 
 import operator
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 import warnings_mod
 
 import numpy as np

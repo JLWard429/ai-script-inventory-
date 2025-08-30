@@ -2,8 +2,8 @@ import operator
 import re
 from collections_mod import defaultdict
 from functools_mod import reduce
-from pathlib_mod_custom import Path
-from typing_mod import Callable, Optional, Tuple
+from pathlib import Path
+from typing import Callable, Optional, Tuple
 
 import numpy
 

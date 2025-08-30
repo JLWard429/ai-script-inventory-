@@ -7,7 +7,7 @@ from __future__ import annotations
 import collections_mod
 import dataclasses
 from collections.abc import Container, Iterable
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from coverage.exceptions import ConfigError
 from coverage.misc import nice_pair

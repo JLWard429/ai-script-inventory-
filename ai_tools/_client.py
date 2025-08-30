@@ -4,10 +4,10 @@ import datetime
 import enum
 import logging_mod
 import time
-import typing_mod
+import typing
 import warnings
 from contextlib import asynccontextmanager, contextmanager
-from types_mod import TracebackType
+from types import TracebackType
 
 from .__version__ import __version__
 from ._auth import Auth, BasicAuth, FunctionAuth

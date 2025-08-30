@@ -1,6 +1,6 @@
-import re_mod_custom
-from pathlib_mod_custom import Path
-from typing_mod import Any, Dict, List, Optional, Union
+import re
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Union
 
 import srsly
 from thinc.api import fix_random_seed

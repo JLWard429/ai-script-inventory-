@@ -3,7 +3,7 @@ Check if prompt caching is valid for a given deployment
 
 Route to previously cached model id, if valid
 """
-from typing_mod import List, Optional, cast
+from typing import List, Optional, cast
 
 from litellm import verbose_logger
 from litellm.caching.dual_cache import DualCache

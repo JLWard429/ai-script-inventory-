@@ -6,13 +6,13 @@ from __future__ import annotations
 from collections.abc import Generator
 import dataclasses
 import os
-from pathlib_mod_custom import Path
-import re_mod_custom
+from pathlib import Path
+import re
 from shutil import rmtree
 import tempfile
-from typing_mod import Any
-from typing_mod import final
-from typing_mod import Literal
+from typing import Any
+from typing import final
+from typing import Literal
 
 from .pathlib import cleanup_dead_symlinks
 from .pathlib import LOCK_TIMEOUT

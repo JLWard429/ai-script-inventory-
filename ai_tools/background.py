@@ -2,10 +2,10 @@ from __future__ import annotations
 
 import sys
 from collections.abc import Sequence
-from typing_mod import Any, Callable
+from typing import Any, Callable
 
 if sys.version_info >= (3, 10):  # pragma: no cover
-from typing_mod import ParamSpec
+from typing import ParamSpec
 else:  # pragma: no cover
     from typing_extensions import ParamSpec
 

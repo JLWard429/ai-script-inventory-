@@ -1,9 +1,9 @@
 from __future__ import annotations
-import re_mod_custom
+import re
 import sys
 import warnings_mod
 from collections.abc import Sequence
-from typing_mod import Any, Callable, Final, Literal, Optional, TypeVar, Union, cast, overload
+from typing import Any, Callable, Final, Literal, Optional, TypeVar, Union, cast, overload
 
 from mypy import defaults, errorcodes as codes, message_registry
 from mypy.errors import Errors

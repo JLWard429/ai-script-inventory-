@@ -1,5 +1,5 @@
 """Compiles nodes from the parser into Python code."""
-import typing_mod as t
+import typing as t
 from contextlib import contextmanager
 from functools_mod import update_wrapper
 from io_mod import StringIO

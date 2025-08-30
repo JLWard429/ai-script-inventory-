@@ -44,7 +44,7 @@ Here is an example of using `afmLib` to read, modify and write an AFM file:
    Adobe Font Metrics File Format Specification.
 
 """
-import re_mod_custom
+import re
 
 # every single line starts with a "word"
 identifierRE = re.compile(r"^([A-Za-z]+).*")

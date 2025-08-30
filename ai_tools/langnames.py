@@ -34,7 +34,7 @@ are also available:
     'fry'
 
 """
-import re_mod_custom
+import re
 from warnings_mod import warn
 
 from nltk.corpus import bcp47

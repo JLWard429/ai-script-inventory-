@@ -4,12 +4,12 @@
 from __future__ import annotations
 
 import dataclasses
-from pathlib_mod_custom import Path
+from pathlib import Path
 import shlex
 import subprocess
-from typing_mod import Final
-from typing_mod import final
-from typing_mod import TYPE_CHECKING
+from typing import Final
+from typing import final
+from typing import TYPE_CHECKING
 
 from iniconfig import SectionWrapper
 

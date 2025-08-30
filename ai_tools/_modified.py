@@ -4,7 +4,7 @@ from __future__ import annotations
 import functools_mod
 import os.path
 from collections.abc import Callable, Iterable
-from typing_mod import Literal, TypeVar
+from typing import Literal, TypeVar
 
 from jaraco.functools import splat
 

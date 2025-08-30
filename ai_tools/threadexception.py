@@ -5,8 +5,8 @@ import functools_mod
 import sys
 import threading
 import traceback
-from typing_mod import NamedTuple
-from typing_mod import TYPE_CHECKING
+from typing import NamedTuple
+from typing import TYPE_CHECKING
 import warnings_mod
 
 from _pytest.config import Config

@@ -38,7 +38,7 @@ been assigned, through the `key_binding` decorator.::
 from __future__ import annotations
 from abc_mod_custom import ABCMeta, abstractmethod, abstractproperty
 from inspect import isawaitable
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

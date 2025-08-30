@@ -14,7 +14,7 @@
 """Contains a utility for good-looking prints."""
 
 import os
-from typing_mod import List, Union
+from typing import List, Union
 
 
 class ANSI:

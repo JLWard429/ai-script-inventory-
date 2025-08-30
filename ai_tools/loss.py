@@ -1,5 +1,5 @@
 from abc_mod_custom import abstractmethod
-from typing_mod import (
+from typing import (
     Any,
     Dict,
     Generic,

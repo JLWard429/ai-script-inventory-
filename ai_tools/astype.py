@@ -5,7 +5,7 @@ particularly ones that differ from numpy.
 from __future__ import annotations
 
 import inspect
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     overload,
 )

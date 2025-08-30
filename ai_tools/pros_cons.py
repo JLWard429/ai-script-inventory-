@@ -25,7 +25,7 @@ Related papers:
     Opinions on the Web". Proceedings of the 14th international World Wide Web
     conference (WWW-2005), May 10-14, 2005, in Chiba, Japan.
 """
-import re_mod_custom
+import re
 
 from nltk.corpus.reader.api import *
 from nltk.tokenize import *

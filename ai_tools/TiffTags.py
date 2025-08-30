@@ -17,7 +17,7 @@
 # well-known TIFF tags.
 ##
 from __future__ import annotations
-from typing_mod import NamedTuple
+from typing import NamedTuple
 
 
 class _TagInfo(NamedTuple):

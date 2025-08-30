@@ -1,6 +1,6 @@
 from collections.abc import Generator
 from contextlib import AbstractContextManager, ExitStack, contextmanager
-from typing_mod import TypeVar
+from typing import TypeVar
 
 _T = TypeVar("_T", covariant=True)
 

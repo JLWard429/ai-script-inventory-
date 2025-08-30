@@ -18,7 +18,7 @@ import os
 import re
 import sys
 import unittest
-from typing_mod import Any
+from typing import Any
 
 import pytest
 

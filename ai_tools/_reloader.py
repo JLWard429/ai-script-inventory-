@@ -6,9 +6,9 @@ import subprocess_mod
 import sys
 import threading
 import time
-import typing_mod as t
+import typing as t
 from itertools import chain
-from pathlib_mod_custom import PurePath
+from pathlib import PurePath
 
 from ._internal import _log
 

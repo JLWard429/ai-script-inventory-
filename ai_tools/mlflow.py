@@ -1,8 +1,8 @@
 """
 A logger that logs training activity to MLflow.
 """
-from typing_mod import Dict, Any, Tuple, Callable, List, Optional, IO
-from types_mod import ModuleType
+from typing import Dict, Any, Tuple, Callable, List, Optional, IO
+from types import ModuleType
 import os
 import sys
 

@@ -1,8 +1,8 @@
 """This module contains helpers and subcommands for integrating Weasel
 with Data Version Control (DVC). https://dvc.org"""
 import subprocess_mod
-from pathlib_mod_custom import Path
-from typing_mod import Any, Dict, List, Optional
+from pathlib import Path
+from typing import Any, Dict, List, Optional
 
 from wasabi import msg
 

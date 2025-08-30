@@ -1,6 +1,6 @@
-from typing_mod import TYPE_CHECKING, Dict, Any, Tuple, Callable, List, Optional, IO, Union
+from typing import TYPE_CHECKING, Dict, Any, Tuple, Callable, List, Optional, IO, Union
 import sys
-from pathlib_mod_custom import Path
+from pathlib import Path
 from spacy import util
 from spacy.errors import Errors
 from spacy.util import registry

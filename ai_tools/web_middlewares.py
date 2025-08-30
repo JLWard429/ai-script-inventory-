@@ -1,5 +1,5 @@
-import re_mod_custom
-from typing_mod import TYPE_CHECKING, Tuple, Type, TypeVar
+import re
+from typing import TYPE_CHECKING, Tuple, Type, TypeVar
 
 from .typedefs import Handler, Middleware
 from .web_exceptions import HTTPMove, HTTPPermanentRedirect

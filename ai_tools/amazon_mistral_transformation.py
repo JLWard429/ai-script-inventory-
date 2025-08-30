@@ -1,5 +1,5 @@
-import types_mod_mod
-from typing_mod import List, Optional, TYPE_CHECKING
+import types
+from typing import List, Optional, TYPE_CHECKING
 
 from litellm.llms.base_llm.chat.transformation import BaseConfig
 from litellm.llms.bedrock.chat.invoke_transformations.base_invoke_transformation import (

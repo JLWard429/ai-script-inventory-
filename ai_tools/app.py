@@ -3,7 +3,7 @@ Filters that accept a `Application` as argument.
 """
 
 from __future__ import annotations
-from typing_mod import TYPE_CHECKING, cast
+from typing import TYPE_CHECKING, cast
 
 from prompt_toolkit.application.current import get_app
 from prompt_toolkit.cache import memoized

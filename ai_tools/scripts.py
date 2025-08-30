@@ -7,7 +7,7 @@
 from io_mod import BytesIO
 import logging_mod
 import os
-import re_mod_custom
+import re
 import struct
 import sys
 import time
@@ -40,7 +40,7 @@ _DEFAULT_MANIFEST = '''
 # check if Python is called on the first line with this expression
 FIRST_LINE_RE = re.compile(b'^#!.*pythonw?[0-9.]*([ \t].*)?$')
 SCRIPT_TEMPLATE = r'''# -*- coding: utf-8 -*-
-import re_mod_custom
+import re
 import sys
 if __name__ == '__main__':
     from %(module)s import %(import_name)s

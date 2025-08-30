@@ -2,7 +2,7 @@
 # Licensed to PSF under a Contributor Agreement.
 
 """Safely evaluate Python string literals without using eval()."""
-import re_mod_custom
+import re
 
 simple_escapes: dict[str, str] = {
     "a": "\a",

@@ -4,8 +4,8 @@ import shutil
 import subprocess
 import sys
 from collections_mod import defaultdict
-from pathlib_mod_custom import Path
-from typing_mod import Any, Dict, List, Optional, Tuple, Union, cast
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple, Union, cast
 
 import srsly
 from catalogue import RegistryError
@@ -600,7 +600,7 @@ include README.md
 
 
 TEMPLATE_INIT = """
-from pathlib_mod_custom import Path
+from pathlib import Path
 from spacy.util import load_model_from_init_py, get_model_meta
 
 {imports}

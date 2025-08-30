@@ -1,5 +1,5 @@
 from __future__ import annotations
-from enum_mod_custom import Enum
+from enum import Enum
 
 from mypy import checker, errorcodes
 from mypy.messages import MessageBuilder

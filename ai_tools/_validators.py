@@ -8,11 +8,11 @@ from __future__ import annotations as _annotations
 import collections.abc
 import math_mod
 import re
-import typing_mod
+import typing
 from decimal import Decimal
 from fractions import Fraction
 from ipaddress import IPv4Address, IPv4Interface, IPv4Network, IPv6Address, IPv6Interface, IPv6Network
-from typing_mod import Any, Callable, Union, cast, get_origin
+from typing import Any, Callable, Union, cast, get_origin
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 import typing_extensions

@@ -5,7 +5,7 @@
 from __future__ import annotations
 
 import tokenize
-from typing_mod import TYPE_CHECKING, Any, Literal, cast
+from typing import TYPE_CHECKING, Any, Literal, cast
 
 from pylint.checkers import BaseTokenChecker
 from pylint.reporters.ureports.nodes import Paragraph, Section, Table, Text

@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import Any, List, Tuple, Union, Mapping, TypeVar
+from typing import Any, List, Tuple, Union, Mapping, TypeVar
 from urllib.parse import parse_qs, urlencode
 from typing_extensions import Literal, get_args
 

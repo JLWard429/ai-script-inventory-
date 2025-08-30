@@ -2,7 +2,7 @@ from abc_mod_custom import ABC, abstractmethod
 from itertools import islice
 from operator import itemgetter
 from threading import RLock
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Dict,
     Iterable,

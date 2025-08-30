@@ -2,7 +2,7 @@
 
 import asyncio
 import unittest
-from types_mod import GenericAlias
+from types import GenericAlias
 
 
 def tearDownModule():

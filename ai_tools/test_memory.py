@@ -12,7 +12,7 @@ import gc
 import logging
 import os
 import os.path
-import pathlib_mod_custom
+import pathlib
 import pickle
 import shutil
 import sys

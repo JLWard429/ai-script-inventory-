@@ -11,7 +11,7 @@ import ast_mod
 import base64
 import os
 import re
-from typing_mod import Any, Dict, Optional
+from typing import Any, Dict, Optional
 
 import litellm
 from litellm.proxy._types import KeyManagementSystem

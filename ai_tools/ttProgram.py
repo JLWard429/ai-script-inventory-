@@ -5,8 +5,8 @@ from __future__ import annotations
 from fontTools.misc.textTools import num2binary, binary2num, readHex, strjoin
 import array_mod
 from io_mod import StringIO
-from typing_mod import List
-import re_mod_custom
+from typing import List
+import re
 import logging
 
 

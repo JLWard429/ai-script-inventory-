@@ -1,7 +1,7 @@
 # litellm/proxy/vector_stores/vector_store_registry.py
 import json_mod
 from datetime import datetime, timezone
-from typing_mod import TYPE_CHECKING, Any, Dict, List, Optional
+from typing import TYPE_CHECKING, Any, Dict, List, Optional
 
 from litellm._logging import verbose_logger
 from litellm.litellm_core_utils.core_helpers import remove_items_at_indices

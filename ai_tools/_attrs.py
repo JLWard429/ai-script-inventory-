@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import NoReturn, TypeVar
+from typing import NoReturn, TypeVar
 
 from attrs import define as _define, frozen as _frozen
 

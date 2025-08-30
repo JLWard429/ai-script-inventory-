@@ -1,7 +1,7 @@
 """Extra methods for DesignSpaceDocument to generate its STAT table data."""
 
 from __future__ import annotations
-from typing_mod import Dict, List, Union
+from typing import Dict, List, Union
 
 import fontTools.otlLib.builder
 from fontTools.designspaceLib import (

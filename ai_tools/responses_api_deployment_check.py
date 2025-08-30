@@ -9,7 +9,7 @@ This is different from the normal behavior of the router, which does not have ro
 
 If previous_response_id is provided, route to the deployment that returned the previous response
 """
-from typing_mod import List, Optional
+from typing import List, Optional
 
 from litellm.integrations.custom_logger import CustomLogger, Span
 from litellm.responses.utils import ResponsesAPIRequestUtils

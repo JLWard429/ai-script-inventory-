@@ -3,7 +3,7 @@ from __future__ import annotations
 import datetime
 from functools_mod import partial
 from textwrap import dedent
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 import numpy as np
 

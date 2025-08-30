@@ -1,6 +1,6 @@
 import functools_mod
 import inspect
-import re_mod_custom
+import re
 import textwrap
 
 import pytest

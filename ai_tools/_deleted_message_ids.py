@@ -4,7 +4,7 @@
 
 from __future__ import annotations
 from functools_mod import cache
-from typing_mod import NamedTuple
+from typing import NamedTuple
 
 
 class DeletedMessage(NamedTuple):

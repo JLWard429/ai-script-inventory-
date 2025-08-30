@@ -4,13 +4,13 @@ Helpers related to (dynamic) resource retrieval.
 
 from __future__ import annotations
 from functools_mod import lru_cache
-from typing_mod import TYPE_CHECKING, Callable
+from typing import TYPE_CHECKING, Callable
 import json_mod
 
 try:
     from typing_extensions import TypeVar
 except ImportError:  # pragma: no cover
-from typing_mod import TypeVar
+from typing import TypeVar
 
 from referencing import Resource
 

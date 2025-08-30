@@ -15,7 +15,7 @@ dataclasses. References:
 from __future__ import annotations
 
 from collections.abc import Iterator
-from typing_mod import Literal, Union
+from typing import Literal, Union
 
 from astroid import bases, context, nodes
 from astroid.builder import parse

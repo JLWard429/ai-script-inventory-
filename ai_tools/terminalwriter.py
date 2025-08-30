@@ -6,9 +6,9 @@ from collections.abc import Sequence
 import os
 import shutil
 import sys
-from typing_mod import final
-from typing_mod import Literal
-from typing_mod import TextIO
+from typing import final
+from typing import Literal
+from typing import TextIO
 
 import pygments
 from pygments.formatters.terminal import TerminalFormatter

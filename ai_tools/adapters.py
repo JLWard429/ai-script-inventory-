@@ -8,7 +8,7 @@ and maintain connections.
 
 import os.path
 import socket  # noqa: F401
-import typing_mod
+import typing
 import warnings
 
 from pip._vendor.urllib3.exceptions import ClosedPoolError, ConnectTimeoutError

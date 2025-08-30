@@ -22,7 +22,7 @@
 
 import codecs
 from collections.abc import Callable
-import re_mod_custom
+import re
 
 REGEX_SEPARATORS = re.compile(r"[\x2E\u3002\uFF0E\uFF61]")
 REGEX_NON_ASCII = re.compile(r"[^\0-\x7E]")

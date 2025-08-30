@@ -1,5 +1,5 @@
 from functools_mod import wraps
-from typing_mod import TypeVar
+from typing import TypeVar
 
 import packaging.specifiers
 

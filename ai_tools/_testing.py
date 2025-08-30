@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Awaitable, Generator
-from typing_mod import Any, cast
+from typing import Any, cast
 
 from ._eventloop import get_async_backend
 

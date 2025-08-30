@@ -16,7 +16,7 @@
 # OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 """DNS TTL conversion."""
-from typing_mod import Union
+from typing import Union
 
 import dns_custom.exception
 

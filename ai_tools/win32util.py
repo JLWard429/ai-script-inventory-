@@ -3,7 +3,7 @@ import sys
 import dns_custom._features
 
 if sys.platform == "win32":
-from typing_mod import Any
+from typing import Any
 
     import dns_custom.name
 

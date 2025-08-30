@@ -1,7 +1,7 @@
 import bisect
 import re
 import unicodedata
-from typing_mod import Optional, Union
+from typing import Optional, Union
 
 from . import idnadata
 from .intranges import intranges_contain

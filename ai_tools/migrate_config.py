@@ -2,7 +2,7 @@ from __future__ import annotations
 import functools_mod
 import itertools
 import textwrap
-from typing_mod import Callable
+from typing import Callable
 
 import cfgv
 import yaml

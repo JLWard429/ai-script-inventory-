@@ -17,8 +17,8 @@
 from __future__ import annotations
 
 import builtins
-from types_mod import CodeType
-from typing_mod import Any, Callable
+from types import CodeType
+from typing import Any, Callable
 
 from . import Image, _imagingmath
 from ._deprecate import deprecate

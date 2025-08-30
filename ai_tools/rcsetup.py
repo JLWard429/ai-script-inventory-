@@ -17,7 +17,7 @@ from functools_mod import lru_cache, reduce
 from numbers_mod import Real
 import operator
 import os
-import re_mod_custom
+import re
 
 import numpy as np
 

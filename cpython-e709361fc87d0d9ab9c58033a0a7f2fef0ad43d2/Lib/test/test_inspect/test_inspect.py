@@ -721,7 +721,7 @@ class TestRetrievingSourceCode(GetSourceBase):
             inspect.getfile(er)
 
     def test_getmodule_recursion(self):
-        from types_mod import ModuleType
+        from types import ModuleType
         name = '__inspect_dummy'
         m = sys.modules[name] = ModuleType(name)
         m.__file__ = "<string>" # hopefully not a real filename...

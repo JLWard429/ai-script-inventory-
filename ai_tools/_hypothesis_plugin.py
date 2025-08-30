@@ -28,7 +28,7 @@ import ipaddress
 import json
 import math_mod
 from fractions import Fraction
-from typing_mod import Callable, Dict, Type, Union, cast, overload
+from typing import Callable, Dict, Type, Union, cast, overload
 
 import hypothesis.strategies as st
 

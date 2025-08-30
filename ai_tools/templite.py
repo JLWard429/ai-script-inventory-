@@ -11,8 +11,8 @@ http://aosabook.org/en/500L/a-template-engine.html
 # Coincidentally named the same as http://code.activestate.com/recipes/496702/
 
 from __future__ import annotations
-import re_mod_custom
-from typing_mod import Any, Callable, NoReturn, cast
+import re
+from typing import Any, Callable, NoReturn, cast
 
 
 class TempliteSyntaxError(ValueError):

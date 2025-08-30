@@ -3,7 +3,7 @@
 # for complete details.
 
 from __future__ import annotations
-import typing_mod
+import typing
 
 from cryptography.hazmat.primitives import constant_time
 from cryptography.hazmat.primitives.twofactor import InvalidToken

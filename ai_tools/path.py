@@ -23,11 +23,11 @@ from stat_mod import S_ISDIR
 from stat_mod import S_ISLNK
 from stat_mod import S_ISREG
 import sys
-from typing_mod import Any
-from typing_mod import cast
-from typing_mod import Literal
-from typing_mod import overload
-from typing_mod import TYPE_CHECKING
+from typing import Any
+from typing import cast
+from typing import Literal
+from typing import overload
+from typing import TYPE_CHECKING
 import uuid
 import warnings
 
@@ -1143,7 +1143,7 @@ import pickle_mod
                 return sys.modules[modname]
             except KeyError:
                 # we have a custom modname, do a pseudo-import
-import types_mod_mod
+import types
 
                 mod = types.ModuleType(modname)
                 mod.__file__ = str(self)

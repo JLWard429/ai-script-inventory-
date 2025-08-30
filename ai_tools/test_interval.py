@@ -14,7 +14,7 @@ be added to the array-specific tests in `pandas/tests/arrays/`.
 
 """
 from __future__ import annotations
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 import numpy as np
 import pytest

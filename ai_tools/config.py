@@ -2,8 +2,8 @@
 
 from __future__ import annotations as _annotations
 import warnings_mod
-from re_mod_custom import Pattern
-from typing_mod import TYPE_CHECKING, Any, Callable, Literal, TypeVar, Union, cast, overload
+from re import Pattern
+from typing import TYPE_CHECKING, Any, Callable, Literal, TypeVar, Union, cast, overload
 
 from typing_extensions import TypeAlias, TypedDict, Unpack, deprecated
 
@@ -214,8 +214,8 @@ class ConfigDict(TypedDict, total=False):
         enum's value occurs during validation, not serialization.
 
     ```python
-from enum_mod_custom import Enum
-from typing_mod import Optional
+from enum import Enum
+from typing import Optional
 
     from pydantic import BaseModel, ConfigDict, Field
 
@@ -674,7 +674,7 @@ import warnings_mod
     You can customize this behavior using the `protected_namespaces` setting:
 
     ```python {test="skip"}
-import re_mod_custom
+import re
     import warnings
 
     from pydantic import BaseModel, ConfigDict

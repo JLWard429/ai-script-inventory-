@@ -12,7 +12,7 @@ instance:
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing_mod import Dict, Literal, Optional, Tuple, Union
+from typing import Dict, Literal, Optional, Tuple, Union
 import logging_mod
 
 from fontTools.designspaceLib import (

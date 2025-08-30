@@ -5,7 +5,7 @@
 """Variables checkers for Python code."""
 
 from __future__ import annotations
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 import astroid
 from astroid import arguments, bases, nodes

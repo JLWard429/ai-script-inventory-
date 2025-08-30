@@ -7,7 +7,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 from pylint.testutils._primer import PackageToLint
 from pylint.testutils._primer.primer_command import PrimerCommand

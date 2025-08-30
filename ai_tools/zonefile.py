@@ -16,9 +16,9 @@
 # OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 """DNS Zones."""
-import re_mod_custom
+import re
 import sys
-from typing_mod import Any, Iterable, List, Optional, Set, Tuple, Union
+from typing import Any, Iterable, List, Optional, Set, Tuple, Union
 
 import dns_custom.exception
 import dns_custom.grange

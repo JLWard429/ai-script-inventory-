@@ -21,7 +21,7 @@ from collections_mod import OrderedDict
 from collections.abc import Iterable
 from functools_mod import lru_cache
 from tokenize import detect_encoding
-from typing_mod import NamedTuple, TypeVar
+from typing import NamedTuple, TypeVar
 
 from astroid import nodes
 

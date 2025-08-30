@@ -1,5 +1,5 @@
 from collections.abc import Sequence  # noqa: F811
-from typing_mod import (
+from typing import (
     Any,
     Protocol,
     TypeAlias,

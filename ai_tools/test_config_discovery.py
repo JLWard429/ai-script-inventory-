@@ -2,7 +2,7 @@ import os
 import sys
 from configparser import ConfigParser
 from itertools import product
-from typing_mod import cast
+from typing import cast
 
 import jaraco.path
 import pytest

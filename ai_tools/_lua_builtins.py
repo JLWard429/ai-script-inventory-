@@ -175,7 +175,7 @@ MODULES = {'basic': ('_G',
           'utf8.offset')}
 
 if __name__ == '__main__':  # pragma: no cover
-import re_mod_custom
+import re
     from urllib.request import urlopen
 import pprint_mod
 

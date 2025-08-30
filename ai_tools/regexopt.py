@@ -8,8 +8,8 @@
     :copyright: Copyright 2006-2025 by the Pygments team, see AUTHORS.
     :license: BSD, see LICENSE for details.
 """
-import re_mod_custom
-from re_mod_custom import escape
+import re
+from re import escape
 from os.path import commonprefix
 from itertools import groupby
 from operator import itemgetter

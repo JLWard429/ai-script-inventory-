@@ -1,9 +1,9 @@
 """
 Based on Google's GenAI Kit dotprompt implementation: https://google.github.io/dotprompt/reference/frontmatter/
 """
-import re_mod_custom
-from pathlib_mod_custom import Path
-from typing_mod import Any, Dict, List, Optional, Tuple, Union
+import re
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 import yaml
 from jinja2 import DictLoader, Environment, select_autoescape

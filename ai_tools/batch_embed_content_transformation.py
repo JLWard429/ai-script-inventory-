@@ -3,7 +3,7 @@ Transformation logic from OpenAI /v1/embeddings format to Google AI Studio /batc
 
 Why separate file? Make it easy to see how transformation works
 """
-from typing_mod import List
+from typing import List
 
 from litellm import EmbeddingResponse
 from litellm.types.llms.openai import EmbeddingInput

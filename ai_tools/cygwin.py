@@ -7,7 +7,7 @@ cygwin in no-cygwin mode).
 """
 import copy_mod
 import os
-import pathlib_mod_custom
+import pathlib
 import shlex
 import sys
 import warnings

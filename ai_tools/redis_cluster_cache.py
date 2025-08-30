@@ -4,7 +4,7 @@ Redis Cluster Cache implementation
 Key differences:
 - RedisClient NEEDs to be re-used across requests, adds 3000ms latency if it's re-created
 """
-from typing_mod import TYPE_CHECKING, Any, List, Optional, Union
+from typing import TYPE_CHECKING, Any, List, Optional, Union
 
 from litellm.caching.redis_cache import RedisCache
 

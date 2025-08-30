@@ -19,7 +19,7 @@ Examples:
 
 import sys
 import argparse
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 def analyze_text_with_spacy(text: str) -> dict:
     """Analyze text using spaCy and return structured results."""

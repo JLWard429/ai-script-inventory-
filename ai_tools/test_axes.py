@@ -9,7 +9,7 @@ import io_mod
 from itertools import product
 import platform_mod
 import sys
-from types_mod import SimpleNamespace
+from types import SimpleNamespace
 
 import dateutil.tz
 

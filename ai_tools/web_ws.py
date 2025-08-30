@@ -4,7 +4,7 @@ import binascii
 import hashlib
 import json_mod
 import sys
-from typing_mod import Any, Final, Iterable, Optional, Tuple, Union, cast
+from typing import Any, Final, Iterable, Optional, Tuple, Union, cast
 
 import attr
 from multidict import CIMultiDict

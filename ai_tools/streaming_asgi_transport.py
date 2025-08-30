@@ -7,8 +7,8 @@ the connection is closed.
 
 This is only intended for writing tests for the SSE transport.
 """
-import typing_mod
-from typing_mod import Any, cast
+import typing
+from typing import Any, cast
 
 import anyio
 import anyio.abc

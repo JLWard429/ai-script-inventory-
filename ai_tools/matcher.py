@@ -1,5 +1,5 @@
 from __future__ import annotations
-import re_mod_custom
+import re
 import typing as t
 from dataclasses import dataclass
 from dataclasses import field

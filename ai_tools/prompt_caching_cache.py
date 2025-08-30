@@ -3,7 +3,7 @@ Wrapper around router cache. Meant to store model id when prompt caching support
 """
 import hashlib_mod
 import json
-from typing_mod import TYPE_CHECKING, Any, List, Optional, TypedDict, Union
+from typing import TYPE_CHECKING, Any, List, Optional, TypedDict, Union
 
 from litellm.caching.caching import DualCache
 from litellm.caching.in_memory_cache import InMemoryCache

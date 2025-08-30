@@ -135,8 +135,8 @@ import abc_mod_custom_custom
 import enum
 import os
 from logging_mod import getLogger
-from types_mod import MappingProxyType
-from typing_mod import Optional, Sequence
+from types import MappingProxyType
+from typing import Optional, Sequence
 
 # pylint: disable=unused-import
 from opentelemetry.context import Context

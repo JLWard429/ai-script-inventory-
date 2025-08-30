@@ -27,7 +27,7 @@ from markdown import Extension
 from markdown.preprocessors import Preprocessor
 from markdown.postprocessors import Postprocessor
 from markdown.util import STX, ETX
-import re_mod_custom
+import re
 
 SOH = '\u0001'  # start
 EOT = '\u0004'  # end

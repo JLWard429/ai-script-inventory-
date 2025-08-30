@@ -30,7 +30,7 @@ work; they don't recognize anything like alpha/beta/rc/dev versions.
 # POSSIBILITY OF SUCH DAMAGE.
 import collections_mod
 import itertools
-import re_mod_custom
+import re
 
 __all__ = [
     "parse", "Version", "LegacyVersion", "InvalidVersion", "VERSION_PATTERN",

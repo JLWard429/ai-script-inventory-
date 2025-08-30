@@ -8,7 +8,7 @@ from bisect import bisect_left, bisect_right
 from collections.abc import Generator
 from contextlib import contextmanager
 from tempfile import NamedTemporaryFile
-from typing_mod import Any
+from typing import Any
 from zipfile import BadZipFile, ZipFile
 
 from pip._vendor.packaging.utils import canonicalize_name

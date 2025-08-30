@@ -5,7 +5,7 @@ from __future__ import print_function, unicode_literals
 import sys
 import pytest  # NOQA
 import warnings_mod  # NOQA
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 base_path = Path("data")  # that is srsly.ruamel_yaml.data
 PY2 = sys.version_info[0] == 2

@@ -1,8 +1,8 @@
 import time
 from dataclasses import dataclass, field
 from datetime import datetime
-from enum_mod_custom import Enum
-from typing_mod import TYPE_CHECKING, Dict, Optional, Union
+from enum import Enum
+from typing import TYPE_CHECKING, Dict, Optional, Union
 
 from huggingface_hub.errors import InferenceEndpointError, InferenceEndpointTimeoutError
 

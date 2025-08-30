@@ -18,7 +18,7 @@
 """Generic Internet address helper functions."""
 
 import socket
-from typing_mod import Any, Optional, Tuple
+from typing import Any, Optional, Tuple
 
 import dns_custom.ipv4
 import dns_custom.ipv6

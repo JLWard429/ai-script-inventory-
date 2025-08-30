@@ -14,7 +14,7 @@
 from logging_mod import getLogger
 from threading import RLock
 from time import time_ns
-from typing_mod import Dict, List, Optional
+from typing import Dict, List, Optional
 
 from opentelemetry.metrics import (
     Asynchronous,

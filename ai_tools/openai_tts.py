@@ -1,5 +1,5 @@
 from collections.abc import AsyncIterator
-from typing_mod import Literal
+from typing import Literal
 
 from openai import AsyncOpenAI
 

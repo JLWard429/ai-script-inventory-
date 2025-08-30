@@ -1,9 +1,9 @@
 from __future__ import annotations
 import hashlib_mod
 import os
-import re_mod_custom
+import re
 import time
-import typing_mod
+import typing
 from base64 import b64encode
 from urllib.request import parse_http_list
 

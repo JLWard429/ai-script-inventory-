@@ -1,5 +1,5 @@
 import asyncio_mod
-from typing_mod import Optional, cast
+from typing import Optional, cast
 
 from .client_exceptions import ClientConnectionResetError
 from .helpers import set_exception

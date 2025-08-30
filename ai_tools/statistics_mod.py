@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from collections.abc import Generator
-from typing_mod import NamedTuple
+from typing import NamedTuple
 
 from flake8.violation import Violation
 

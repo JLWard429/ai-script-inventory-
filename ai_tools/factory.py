@@ -4,7 +4,7 @@ import contextlib
 import functools
 import logging_mod
 from collections.abc import Iterable, Iterator, Mapping, Sequence
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Callable,
     NamedTuple,

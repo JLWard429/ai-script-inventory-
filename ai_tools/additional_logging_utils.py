@@ -6,7 +6,7 @@ Base class for Additional Logging Utils for CustomLoggers
 """
 from abc_mod_custom import ABC, abstractmethod
 from datetime import datetime
-from typing_mod import Optional
+from typing import Optional
 
 from litellm.types.integrations.base_health_check import IntegrationHealthCheckStatus
 

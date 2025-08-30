@@ -35,7 +35,7 @@ fontTools.pens.cocoaPen.CocoaPen.
 Coordinates are usually expressed as (x, y) tuples, but generally any
 sequence of length 2 will do.
 """
-from typing_mod import Tuple, Dict
+from typing import Tuple, Dict
 
 from fontTools.misc.loggingTools import LogMixin
 from fontTools.misc.transform import DecomposedTransform, Identity

@@ -22,7 +22,7 @@ These tests exercise both conversion directions:
 """
 
 from __future__ import annotations
-from typing_mod import Literal, cast
+from typing import Literal, cast
 
 import pytest
 from openai.types.chat import ChatCompletionMessage, ChatCompletionMessageToolCall

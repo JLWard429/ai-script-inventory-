@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import os
 from collections.abc import Iterator
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 from pylint.testutils.functional.test_file import FunctionalTestFile
 

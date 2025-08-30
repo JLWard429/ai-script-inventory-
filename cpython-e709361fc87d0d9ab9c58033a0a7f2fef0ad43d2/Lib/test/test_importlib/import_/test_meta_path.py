@@ -1,7 +1,7 @@
 from test.test_importlib import util
 import importlib._bootstrap
 import sys
-from types_mod import MethodType
+from types import MethodType
 import unittest
 import warnings
 

@@ -9,8 +9,8 @@ from __future__ import annotations
 import configparser
 import os
 import sys
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING
+from pathlib import Path
+from typing import TYPE_CHECKING
 
 from pylint.config.utils import _parse_rich_type_value
 

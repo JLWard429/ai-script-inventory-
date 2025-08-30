@@ -1,4 +1,4 @@
-from typing_mod import Any, Optional, Type
+from typing import Any, Optional, Type
 
 from cryptography.hazmat.primitives import serialization
 

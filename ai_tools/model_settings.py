@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, fields, replace
-from typing_mod import Literal
+from typing import Literal
 
 
 @dataclass

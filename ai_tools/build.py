@@ -8,7 +8,7 @@ import os
 import sys
 import sysconfig
 from collections.abc import Callable
-from typing_mod import ClassVar
+from typing import ClassVar
 
 from ..ccompiler import show_compilers
 from ..core import Command

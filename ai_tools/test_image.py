@@ -3,7 +3,7 @@ from copy_mod import copy
 import functools_mod
 import io
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 import platform_mod
 import sys
 import urllib.request

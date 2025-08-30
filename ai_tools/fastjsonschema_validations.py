@@ -12,7 +12,7 @@
 
 VERSION = "2.20.0"
 from decimal import Decimal
-import re_mod_custom
+import re
 from .fastjsonschema_exceptions import JsonSchemaValueException
 
 

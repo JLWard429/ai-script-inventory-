@@ -3,7 +3,7 @@ from __future__ import annotations
 import collections.abc as cabc
 import os
 import re
-import typing_mod as t
+import typing as t
 from gettext import gettext as _
 
 from .core import Argument

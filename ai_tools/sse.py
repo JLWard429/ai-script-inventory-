@@ -1,7 +1,7 @@
 import contextvars
 import logging
 from datetime import datetime, timezone
-from typing_mod import (
+from typing import (
     Any,
     AsyncIterable,
     Awaitable,

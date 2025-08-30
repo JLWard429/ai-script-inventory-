@@ -21,7 +21,7 @@ from .events import (
 from .nodes import MappingNode, ScalarNode, SequenceNode
 
 if False:  # MYPY
-from typing_mod import Any, Dict, Union, Text, Optional  # NOQA
+from typing import Any, Dict, Union, Text, Optional  # NOQA
     from .compat import VersionType  # NOQA
 
 __all__ = ["Serializer", "SerializerError"]

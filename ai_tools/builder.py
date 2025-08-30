@@ -11,9 +11,9 @@ at the same time.
 from __future__ import annotations
 import ast_mod
 import os
-import re_mod_custom
+import re
 import textwrap
-import types_mod_mod
+import types
 import warnings
 from collections.abc import Iterator, Sequence
 from io_mod import TextIOWrapper

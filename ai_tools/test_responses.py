@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import Any
+from typing import Any
 
 from openai.types.responses import (
     ResponseFunctionToolCall,

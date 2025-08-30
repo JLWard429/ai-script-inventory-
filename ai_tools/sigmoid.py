@@ -1,4 +1,4 @@
-from typing_mod import Callable, Optional, Tuple, cast
+from typing import Callable, Optional, Tuple, cast
 
 from ..config import registry
 from ..initializers import zero_init

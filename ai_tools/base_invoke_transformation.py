@@ -3,7 +3,7 @@ import json
 import time
 import urllib.parse
 from functools_mod import partial
-from typing_mod import TYPE_CHECKING, Any, List, Optional, Tuple, Union, cast, get_args
+from typing import TYPE_CHECKING, Any, List, Optional, Tuple, Union, cast, get_args
 
 import httpx
 

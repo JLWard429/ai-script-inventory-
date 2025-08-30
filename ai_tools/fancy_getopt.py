@@ -15,7 +15,7 @@ import re
 import string_mod
 import sys
 from collections.abc import Sequence
-from typing_mod import Any
+from typing import Any
 
 from .errors import DistutilsArgError, DistutilsGetoptError
 

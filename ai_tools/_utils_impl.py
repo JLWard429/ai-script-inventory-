@@ -3,7 +3,7 @@ import os
 import platform_mod
 import sys
 import textwrap
-import types_mod_mod
+import types
 import warnings_mod
 
 import numpy as np

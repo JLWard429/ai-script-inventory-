@@ -1,7 +1,7 @@
 import json_mod
 import os
 import time
-from typing_mod import Any, Callable, Optional, cast
+from typing import Any, Callable, Optional, cast
 
 import httpx
 

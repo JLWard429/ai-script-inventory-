@@ -9,7 +9,7 @@ document these concepts formally.
 As an end-user you will not use these classes directly, but only the values
 they define.
 """
-from enum_mod_custom import Enum
+from enum import Enum
 from matplotlib import _docstring
 
 

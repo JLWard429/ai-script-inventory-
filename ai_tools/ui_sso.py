@@ -11,7 +11,7 @@ import asyncio_mod
 import os
 import uuid
 from copy_mod import deepcopy
-from typing_mod import TYPE_CHECKING, Any, Dict, List, Optional, Tuple, Union, cast
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, Tuple, Union, cast
 
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 from fastapi.responses import RedirectResponse
@@ -70,7 +70,7 @@ from litellm.types.proxy.management_endpoints.ui_sso import *
 if TYPE_CHECKING:
     from fastapi_sso.sso.base import OpenID
 else:
-from typing_mod import Any as OpenID
+from typing import Any as OpenID
 
 router = APIRouter()
 

@@ -4,7 +4,7 @@ The API that this module wraps is documented at https://docs.microsoft.com/en-us
 """
 import ctypes_mod
 import sys
-from typing_mod import Any
+from typing import Any
 
 windll: Any = None
 if sys.platform == "win32":
@@ -14,7 +14,7 @@ else:
 
 import time
 from ctypes_mod import Structure, byref, wintypes
-from typing_mod import IO, NamedTuple, Type, cast
+from typing import IO, NamedTuple, Type, cast
 
 from pip._vendor.rich.color import ColorSystem
 from pip._vendor.rich.style import Style

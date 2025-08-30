@@ -12,8 +12,8 @@ import sys
 import typing
 import warnings_mod
 from textwrap import dedent
-from types_mod import FunctionType, GenericAlias
-from typing_mod import Any, Final
+from types import FunctionType, GenericAlias
+from typing import Any, Final
 
 import typing_extensions
 from typing_extensions import LiteralString, TypeAliasType, TypeIs, deprecated
@@ -134,7 +134,7 @@ def _compile_isinstance_check_function(member: LiteralString, function_name: Lit
 
 
 if sys.version_info >= (3, 10):
-from types_mod import NoneType
+from types import NoneType
 else:
     NoneType = type(None)
 

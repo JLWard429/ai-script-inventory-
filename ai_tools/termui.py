@@ -5,7 +5,7 @@ import inspect
 import io
 import itertools
 import sys
-import typing_mod as t
+import typing as t
 from contextlib import AbstractContextManager
 from gettext import gettext as _
 

@@ -1,7 +1,7 @@
 """Helpers for implementing generic IR to IR transforms."""
 
 from __future__ import annotations
-from typing_mod import Final, Optional
+from typing import Final, Optional
 
 from mypyc.ir.ops import (
     Assign,

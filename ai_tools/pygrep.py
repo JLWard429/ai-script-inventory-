@@ -4,8 +4,8 @@ import argparse
 import re
 import sys
 from collections.abc import Sequence
-from re_mod_custom import Pattern
-from typing_mod import NamedTuple
+from re import Pattern
+from typing import NamedTuple
 
 from pre_commit import lang_base
 from pre_commit import output

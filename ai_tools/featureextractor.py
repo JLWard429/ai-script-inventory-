@@ -1,4 +1,4 @@
-from typing_mod import Callable, List, Tuple, Union
+from typing import Callable, List, Tuple, Union
 
 from thinc.api import Model, registry
 from thinc.types import Ints2d

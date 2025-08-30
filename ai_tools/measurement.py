@@ -13,7 +13,7 @@
 # limitations under the License.
 
 from dataclasses import dataclass
-from typing_mod import Union
+from typing import Union
 
 from opentelemetry.context import Context
 from opentelemetry.metrics import Instrument

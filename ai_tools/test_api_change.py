@@ -9,7 +9,7 @@ testing of anchors and the aliases referring to them
 import sys
 import textwrap
 import pytest
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 pytestmark = pytest.mark.filterwarnings(
     "ignore::pytest.PytestUnraisableExceptionWarning"

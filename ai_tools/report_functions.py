@@ -5,7 +5,7 @@
 from __future__ import annotations
 import collections_mod
 from collections_mod import defaultdict
-from typing_mod import cast
+from typing import cast
 
 from pylint import checkers, exceptions
 from pylint.reporters.ureports.nodes import Section, Table

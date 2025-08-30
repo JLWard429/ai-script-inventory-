@@ -12,7 +12,7 @@ from io_mod import (
     StringIO,
     TextIOWrapper,
 )
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 import numpy as np
 import pytest

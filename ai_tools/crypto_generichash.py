@@ -11,7 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from typing_mod import NoReturn, TypeVar
+from typing import NoReturn, TypeVar
 
 from nacl import exceptions as exc
 from nacl._sodium import ffi, lib

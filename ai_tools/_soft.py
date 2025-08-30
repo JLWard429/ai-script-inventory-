@@ -4,7 +4,7 @@ import os
 import sys
 from contextlib import suppress
 from errno import EACCES, EEXIST
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 from ._api import BaseFileLock
 from ._util import ensure_directory_exists, raise_on_not_writable_file

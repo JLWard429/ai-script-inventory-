@@ -5,11 +5,11 @@ from __future__ import annotations
 
 from collections.abc import Callable
 import sys
-from typing_mod import Any
-from typing_mod import cast
-from typing_mod import NoReturn
-from typing_mod import Protocol
-from typing_mod import TypeVar
+from typing import Any
+from typing import cast
+from typing import NoReturn
+from typing import Protocol
+from typing import TypeVar
 
 from .warning_types import PytestDeprecationWarning
 

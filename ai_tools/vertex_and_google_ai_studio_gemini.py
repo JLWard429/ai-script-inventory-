@@ -6,7 +6,7 @@ import time
 import uuid
 from copy_mod import deepcopy
 from functools_mod import partial
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

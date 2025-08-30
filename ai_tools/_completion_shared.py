@@ -1,9 +1,9 @@
 import os
 import re
 import subprocess_mod
-from enum_mod_custom import Enum
-from pathlib_mod_custom import Path
-from typing_mod import Optional, Tuple
+from enum import Enum
+from pathlib import Path
+from typing import Optional, Tuple
 
 import click
 

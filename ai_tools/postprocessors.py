@@ -27,9 +27,9 @@ document.
 """
 
 from __future__ import annotations
-from typing_mod import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any
 from . import util
-import re_mod_custom
+import re
 
 if TYPE_CHECKING:  # pragma: no cover
     from markdown import Markdown

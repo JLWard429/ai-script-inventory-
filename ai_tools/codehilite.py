@@ -24,7 +24,7 @@ from __future__ import annotations
 from . import Extension
 from ..treeprocessors import Treeprocessor
 from ..util import parseBoolValue
-from typing_mod import TYPE_CHECKING, Callable, Any
+from typing import TYPE_CHECKING, Callable, Any
 
 if TYPE_CHECKING:  # pragma: no cover
     import xml.etree.ElementTree as etree
@@ -208,7 +208,7 @@ class CodeHilite:
 
             :::python hl_lines="1 3"
         """
-import re_mod_custom
+import re
 
         # split text into lines
         lines = self.src.split("\n")

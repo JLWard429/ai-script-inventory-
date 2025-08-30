@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import operator
 import re
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Callable,
     Union,

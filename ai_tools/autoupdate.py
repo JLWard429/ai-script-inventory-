@@ -2,11 +2,11 @@ from __future__ import annotations
 
 import concurrent.futures
 import os.path
-import re_mod_custom
+import re
 import tempfile
 from collections.abc import Sequence
-from typing_mod import Any
-from typing_mod import NamedTuple
+from typing import Any
+from typing import NamedTuple
 
 import pre_commit.constants as C
 from pre_commit import git

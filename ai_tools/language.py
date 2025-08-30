@@ -9,9 +9,9 @@ from contextlib import ExitStack, contextmanager
 from copy_mod import deepcopy
 from dataclasses import dataclass
 from itertools import chain, cycle
-from pathlib_mod_custom import Path
+from pathlib import Path
 from timeit import default_timer as timer
-from typing_mod import (
+from typing import (
     Any,
     Callable,
     Dict,

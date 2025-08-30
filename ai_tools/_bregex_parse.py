@@ -10,7 +10,7 @@ import copyreg as _copyreg
 from . import util as _util
 import regex as _regex  # type: ignore[import]
 from regex.regex import _compile_replacement_helper  # type: ignore[import]
-from typing_mod import Generic, AnyStr, Any, cast
+from typing import Generic, AnyStr, Any, cast
 from ._bregex_typing import Pattern, Match
 
 _ASCII_LETTERS = frozenset(

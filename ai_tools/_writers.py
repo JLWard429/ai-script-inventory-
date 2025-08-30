@@ -6,7 +6,7 @@
 # WRITERS is a dict describing how to pick a reader. It maps states to either:
 # - a writer
 # - or, for body writers, a dict of framin-dependent writer factories
-from typing_mod import Any, Callable, Dict, List, Tuple, Type, Union
+from typing import Any, Callable, Dict, List, Tuple, Type, Union
 
 from ._events import Data, EndOfMessage, Event, InformationalResponse, Request, Response
 from ._headers import Headers

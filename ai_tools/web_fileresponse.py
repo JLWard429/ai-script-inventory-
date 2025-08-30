@@ -4,11 +4,11 @@ import os
 import pathlib
 import sys
 from contextlib import suppress
-from enum_mod_custom import Enum, auto
+from enum import Enum, auto
 from mimetypes import MimeTypes
 from stat_mod import S_ISREG
-from types_mod import MappingProxyType
-from typing_mod import (  # noqa
+from types import MappingProxyType
+from typing import (  # noqa
     IO,
     TYPE_CHECKING,
     Any,

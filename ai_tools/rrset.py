@@ -16,7 +16,7 @@
 # OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 """DNS RRsets (an RRset is a named rdataset)"""
-from typing_mod import Any, Collection, Dict, Optional, Union, cast
+from typing import Any, Collection, Dict, Optional, Union, cast
 
 import dns_custom.name
 import dns_custom.rdataclass

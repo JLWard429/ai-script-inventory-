@@ -6,8 +6,8 @@ import shutil
 import zipfile
 from contextlib import contextmanager
 from dataclasses import dataclass, field
-from pathlib_mod_custom import Path
-from typing_mod import Any, Dict, Generator, Iterable, Tuple, Union
+from pathlib import Path
+from typing import Any, Dict, Generator, Iterable, Tuple, Union
 
 from ..errors import DDUFCorruptedFileError, DDUFExportError, DDUFInvalidEntryNameError
 

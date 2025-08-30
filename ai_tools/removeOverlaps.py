@@ -5,7 +5,7 @@ Requires https://github.com/fonttools/skia-pathops
 
 import itertools
 import logging
-from typing_mod import Callable, Iterable, Optional, Mapping
+from typing import Callable, Iterable, Optional, Mapping
 
 from fontTools.cffLib import CFFFontSet
 from fontTools.ttLib import ttFont

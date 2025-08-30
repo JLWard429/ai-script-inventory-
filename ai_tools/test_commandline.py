@@ -7,7 +7,7 @@ from __future__ import annotations
 import glob_mod
 import os
 import os.path
-import re_mod_custom
+import re
 import subprocess
 import sys
 

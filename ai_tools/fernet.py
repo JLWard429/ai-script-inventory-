@@ -8,7 +8,7 @@ import base64
 import binascii
 import os
 import time
-import typing_mod
+import typing
 from collections.abc import Iterable
 
 from cryptography import utils

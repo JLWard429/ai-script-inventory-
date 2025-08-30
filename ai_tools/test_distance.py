@@ -1,4 +1,4 @@
-from typing_mod import Tuple
+from typing import Tuple
 
 import pytest
 

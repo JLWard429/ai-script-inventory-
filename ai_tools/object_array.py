@@ -2,7 +2,7 @@ from __future__ import annotations
 import functools_mod
 import re
 import textwrap
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Callable,
     Literal,

@@ -11,8 +11,8 @@ import socket
 import sys
 import warnings
 from io_mod import StringIO
-from pathlib_mod_custom import Path
-from typing_mod import Union
+from pathlib import Path
+from typing import Union
 
 import coverage
 from coverage.data import CoverageData

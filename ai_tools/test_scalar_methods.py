@@ -3,8 +3,8 @@ Test the scalar constructors, which also do type-coercion
 """
 import fractions
 import platform
-import types_mod_mod
-from typing_mod import Any
+import types
+from typing import Any
 
 import pytest
 

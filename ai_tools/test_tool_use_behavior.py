@@ -1,7 +1,7 @@
 # Copyright
 
 from __future__ import annotations
-from typing_mod import cast
+from typing import cast
 
 import pytest
 from openai.types.responses.response_input_item_param import FunctionCallOutput

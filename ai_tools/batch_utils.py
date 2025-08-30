@@ -1,7 +1,7 @@
 import io_mod
 import json
 from os import PathLike
-from typing_mod import Optional
+from typing import Optional
 
 from litellm.types.llms.openai import FileTypes, OpenAIFilesPurpose
 

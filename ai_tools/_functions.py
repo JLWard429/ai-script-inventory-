@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import sys
 import warnings
-from typing_mod import Any, Callable, NoReturn, TypeVar, Union, overload
+from typing import Any, Callable, NoReturn, TypeVar, Union, overload
 
 from . import _suppression
 from ._checkers import BINARY_MAGIC_METHODS, check_type_internal
@@ -16,7 +16,7 @@ from ._memo import TypeCheckMemo
 from ._utils import get_stacklevel, qualified_name
 
 if sys.version_info >= (3, 11):
-from typing_mod import Literal, Never, TypeAlias
+from typing import Literal, Never, TypeAlias
 else:
     from typing_extensions import Literal, Never, TypeAlias
 

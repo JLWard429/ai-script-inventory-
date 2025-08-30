@@ -6,7 +6,7 @@ import datetime
 import enum
 import uuid
 from dataclasses import dataclass
-from typing_mod import Any, Dict, List, Literal, Optional, Tuple, Union, get_type_hints
+from typing import Any, Dict, List, Literal, Optional, Tuple, Union, get_type_hints
 
 import httpx
 from httpx import AsyncClient, Client

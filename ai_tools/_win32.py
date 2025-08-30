@@ -6,7 +6,7 @@ except ImportError:
     winreg = None
 
 import datetime
-from typing_mod import Any, Dict, cast
+from typing import Any, Dict, cast
 
 from babel.core import get_global
 from babel.localtime._helpers import _get_tzinfo_or_raise

@@ -1,4 +1,4 @@
-from typing_mod import Optional
+from typing import Optional
 
 import graphviz  # type: ignore
 

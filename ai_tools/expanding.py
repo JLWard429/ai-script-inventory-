@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from textwrap import dedent
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import codecs
 import io
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     final,

@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import codecs
 import io
-import typing_mod
+import typing
 import zlib
 
 from ._exceptions import DecodingError

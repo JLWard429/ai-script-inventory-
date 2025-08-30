@@ -3,7 +3,7 @@ import logging_mod
 import sys
 import traceback_mod
 from functools_mod import wraps
-from typing_mod import TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING, Optional
 
 # Third-party imports
 import click

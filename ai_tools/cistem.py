@@ -6,8 +6,8 @@
 #            Alexander Fraser <fraser@cis.lmu.de>
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.TXT
-import re_mod_custom
-from typing_mod import Tuple
+import re
+from typing import Tuple
 
 from nltk.stem.api import StemmerI
 

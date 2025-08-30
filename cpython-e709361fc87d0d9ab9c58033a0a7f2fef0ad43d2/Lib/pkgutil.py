@@ -8,7 +8,7 @@ import importlib.machinery
 import os
 import os.path
 import sys
-from types_mod import ModuleType
+from types import ModuleType
 import warnings
 
 __all__ = [

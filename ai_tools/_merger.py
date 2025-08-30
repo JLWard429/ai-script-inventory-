@@ -26,9 +26,9 @@
 # POSSIBILITY OF SUCH DAMAGE.
 import warnings_mod
 from io_mod import BytesIO, FileIO, IOBase
-from pathlib_mod_custom import Path
-from types_mod import TracebackType
-from typing_mod import (
+from pathlib import Path
+from types import TracebackType
+from typing import (
     Any,
     Dict,
     Iterable,

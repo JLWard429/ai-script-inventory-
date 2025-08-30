@@ -29,7 +29,7 @@ from markdown import util as md_util
 from .util import warn_deprecated
 import xml.etree.ElementTree as etree
 from . import util
-import re_mod_custom
+import re
 from markdown.inlinepatterns import LinkInlineProcessor, InlineProcessor
 
 MAGIC_LINK = 1

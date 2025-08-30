@@ -10,10 +10,10 @@ from various source and using a cache of built modules)
 from __future__ import annotations
 import collections_mod
 import os
-import types_mod_mod
+import types
 import zipimport
 from collections.abc import Callable, Iterator, Sequence
-from typing_mod import Any, ClassVar
+from typing import Any, ClassVar
 
 from astroid import nodes
 from astroid.context import InferenceContext, _invalidate_cache

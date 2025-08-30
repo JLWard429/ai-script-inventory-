@@ -5,7 +5,7 @@ Use this to route requests between Teams
 - if deployments are set with default tags, return all default deployment
 - If no default_deployments are set, return all deployments
 """
-from typing_mod import TYPE_CHECKING, Any, Dict, List, Optional, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, Union
 
 from litellm._logging import verbose_logger
 from litellm.types.router import RouterErrors

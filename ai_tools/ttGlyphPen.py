@@ -1,5 +1,5 @@
 from array_mod import array
-from typing_mod import Any, Callable, Dict, Optional, Tuple
+from typing import Any, Callable, Dict, Optional, Tuple
 from fontTools.misc.fixedTools import MAX_F2DOT14, floatToFixedToFloat
 from fontTools.misc.loggingTools import LogMixin
 from fontTools.pens.pointPen import AbstractPointPen

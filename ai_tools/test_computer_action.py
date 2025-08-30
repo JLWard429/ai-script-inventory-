@@ -3,7 +3,7 @@
 These confirm that the correct computer action method is invoked for each action type and
 that screenshots are taken and wrapped appropriately, and that the execute function invokes
 hooks and returns the expected ToolCallOutputItem."""
-from typing_mod import Any
+from typing import Any
 
 import pytest
 from openai.types.responses.response_computer_tool_call import (

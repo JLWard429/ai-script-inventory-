@@ -4,8 +4,8 @@ import site
 import sys
 import tarfile
 import urllib.parse
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING, Dict, List, Optional
+from pathlib import Path
+from typing import TYPE_CHECKING, Dict, List, Optional
 
 from wasabi import msg
 

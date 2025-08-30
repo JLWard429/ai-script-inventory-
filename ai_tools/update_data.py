@@ -1,5 +1,5 @@
 from __future__ import annotations
-import re_mod_custom
+import re
 from collections_mod import defaultdict
 from collections.abc import Iterator
 

@@ -1,4 +1,4 @@
-from typing_mod import Union, Iterable, Sequence, Any, Optional, Iterator
+from typing import Union, Iterable, Sequence, Any, Optional, Iterator
 import sys
 import json as _builtin_json
 import gzip_mod

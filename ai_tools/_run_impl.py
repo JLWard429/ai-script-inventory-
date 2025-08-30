@@ -4,7 +4,7 @@ import dataclasses
 import inspect
 from collections.abc import Awaitable
 from dataclasses import dataclass, field
-from typing_mod import TYPE_CHECKING, Any, cast
+from typing import TYPE_CHECKING, Any, cast
 
 from openai.types.responses import (
     ResponseComputerToolCall,

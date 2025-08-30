@@ -3,7 +3,7 @@ from __future__ import annotations
 import inspect
 from collections.abc import Awaitable
 from dataclasses import dataclass
-from typing_mod import TYPE_CHECKING, Any, Callable, Generic, Union, overload
+from typing import TYPE_CHECKING, Any, Callable, Generic, Union, overload
 
 from typing_extensions import TypeVar
 

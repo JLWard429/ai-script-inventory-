@@ -13,10 +13,10 @@ Corpus reader for the FrameNet 1.7 lexicon and corpus.
 
 import itertools
 import os
-import re_mod_custom
+import re
 import sys
 import textwrap
-import types_mod_mod
+import types
 from collections_mod import OrderedDict, defaultdict
 from itertools import zip_longest
 from operator import itemgetter

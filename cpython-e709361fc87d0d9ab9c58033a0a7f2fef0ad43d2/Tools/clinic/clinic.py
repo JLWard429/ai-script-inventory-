@@ -28,7 +28,7 @@ import textwrap
 import traceback
 
 from collections.abc import Callable
-from types_mod import FunctionType, NoneType
+from types import FunctionType, NoneType
 from typing import Any, Final, NamedTuple, NoReturn, Literal, overload
 
 # TODO:

@@ -2,7 +2,7 @@
 Unit tests for nltk.tokenize.
 See also nltk/test/tokenize.doctest
 """
-from typing_mod import List, Tuple
+from typing import List, Tuple
 
 import pytest
 

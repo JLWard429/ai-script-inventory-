@@ -1,7 +1,7 @@
 # used for monitoring litellm services health on `/metrics` endpoint on LiteLLM Proxy
 #### What this does ####
 #    On success + failure, log events to Prometheus for litellm / adjacent services (litellm, redis, postgres, llm api providers)
-from typing_mod import Dict, List, Optional, Union
+from typing import Dict, List, Optional, Union
 
 from litellm._logging import print_verbose, verbose_logger
 from litellm.types.integrations.prometheus import LATENCY_BUCKETS

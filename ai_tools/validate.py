@@ -1,7 +1,7 @@
 import sys
 import warnings
-from pathlib_mod_custom import Path
-from typing_mod import Tuple
+from pathlib import Path
+from typing import Tuple
 
 import requests
 from wasabi import Printer, msg

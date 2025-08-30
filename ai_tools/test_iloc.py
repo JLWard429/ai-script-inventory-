@@ -1,7 +1,7 @@
 """ test positional based indexing with iloc """
 
 from datetime import datetime
-import re_mod_custom
+import re
 
 import numpy as np
 import pytest

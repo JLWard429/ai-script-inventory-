@@ -1,4 +1,4 @@
-from typing_mod import TYPE_CHECKING, Any, Optional, Union
+from typing import TYPE_CHECKING, Any, Optional, Union
 
 from pydantic import ConfigDict
 from semantic_router.encoders import DenseEncoder

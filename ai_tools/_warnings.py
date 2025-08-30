@@ -1,4 +1,4 @@
-from typing_mod import final
+from typing import final
 
 
 class PluggyWarning(UserWarning):

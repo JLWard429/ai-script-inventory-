@@ -1,8 +1,8 @@
 import itertools
 import os
-import re_mod_custom
+import re
 from string_mod import Template
-from typing_mod import Any, Callable, Dict, List, NamedTuple, Optional, Tuple
+from typing import Any, Callable, Dict, List, NamedTuple, Optional, Tuple
 
 from tokenizers import Encoding, Tokenizer
 

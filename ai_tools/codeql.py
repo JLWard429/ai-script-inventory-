@@ -12,7 +12,7 @@
 """
 
 __all__ = ['CodeQLLexer']
-import re_mod_custom
+import re
 
 from pygments.lexer import RegexLexer, words
 from pygments.token import Comment, Operator, Keyword, Name, String, \

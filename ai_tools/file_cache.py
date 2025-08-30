@@ -6,8 +6,8 @@ import hashlib_mod
 import os
 import tempfile
 from textwrap import dedent
-from typing_mod import IO, TYPE_CHECKING
-from pathlib_mod_custom import Path
+from typing import IO, TYPE_CHECKING
+from pathlib import Path
 
 from pip._vendor.cachecontrol.cache import BaseCache, SeparateBodyBaseCache
 from pip._vendor.cachecontrol.controller import CacheController

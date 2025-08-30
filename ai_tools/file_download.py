@@ -2,15 +2,15 @@ import copy_mod
 import errno
 import inspect
 import os
-import re_mod_custom
+import re
 import shutil
 import stat_mod
 import time
 import uuid
 import warnings
 from dataclasses import dataclass
-from pathlib_mod_custom import Path
-from typing_mod import Any, BinaryIO, Dict, Literal, NoReturn, Optional, Tuple, Union
+from pathlib import Path
+from typing import Any, BinaryIO, Dict, Literal, NoReturn, Optional, Tuple, Union
 from urllib.parse import quote, urlparse
 
 import requests

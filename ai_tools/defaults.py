@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import os
-from typing_mod import Final
+from typing import Final
 
 # Earliest fully supported Python 3.x version. Used as the default Python
 # version in tests. Mypy wheels should be built starting with this version,

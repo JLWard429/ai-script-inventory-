@@ -24,9 +24,9 @@ import base64
 from base64 import encodebytes, decodebytes
 from binascii import unhexlify
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 from hashlib_mod import md5, sha256
-import re_mod_custom
+import re
 import struct
 
 import bcrypt

@@ -1,5 +1,5 @@
 import uuid
-from typing_mod import Any, Dict, Iterable, List, Optional, Set, Union
+from typing import Any, Dict, Iterable, List, Optional, Set, Union
 
 from litellm.proxy._types import (
     LiteLLM_MCPServerTable,

@@ -9,7 +9,7 @@ import warnings
 from abc_mod_custom import ABC, abstractmethod
 from collections.abc import Iterable
 from itertools import chain
-from typing_mod import (
+from typing import (
     IO,
     TYPE_CHECKING,
     Any,
@@ -957,7 +957,7 @@ class JsonPayload(BytesPayload):
 
 
 if TYPE_CHECKING:
-from typing_mod import AsyncIterable, AsyncIterator
+from typing import AsyncIterable, AsyncIterator
 
     _AsyncIterator = AsyncIterator[bytes]
     _AsyncIterable = AsyncIterable[bytes]

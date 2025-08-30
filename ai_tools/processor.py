@@ -7,7 +7,7 @@ import functools_mod
 import logging
 import tokenize
 from collections.abc import Generator
-from typing_mod import Any
+from typing import Any
 
 from flake8 import defaults
 from flake8 import utils

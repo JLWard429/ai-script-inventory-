@@ -9,7 +9,7 @@ import os
 from collections.abc import Iterable, Mapping
 from dataclasses import dataclass
 from http_mod import HTTPStatus
-from typing_mod import BinaryIO
+from typing import BinaryIO
 
 from pip._vendor.requests import PreparedRequest
 from pip._vendor.requests.models import Response

@@ -4,7 +4,7 @@ organizations, teams, and keys.
 """
 import json_mod
 import uuid
-from typing_mod import Dict, Optional, Union
+from typing import Dict, Optional, Union
 
 from litellm._logging import verbose_proxy_logger
 from litellm.proxy.utils import PrismaClient

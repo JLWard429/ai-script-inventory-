@@ -1,7 +1,7 @@
-import re_mod_custom
+import re
 from dataclasses import dataclass
-from enum_mod_custom import Enum
-from typing_mod import Dict, List, Literal, Optional, Tuple, Union
+from enum import Enum
+from typing import Dict, List, Literal, Optional, Tuple, Union
 
 from pydantic import BaseModel, Field
 from typing_extensions import Annotated
@@ -400,7 +400,7 @@ class PrometheusMetricLabels:
         )
 
         return default_labels + custom_labels
-from typing_mod import List, Optional
+from typing import List, Optional
 
 from pydantic import BaseModel, Field
 

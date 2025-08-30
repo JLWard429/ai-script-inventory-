@@ -5,8 +5,8 @@ import asyncio_mod
 import json
 import os
 import random
-import types_mod_mod
-from typing_mod import Any, Dict, List, Optional
+import types
+from typing import Any, Dict, List, Optional
 
 import httpx
 from pydantic import BaseModel  # type: ignore

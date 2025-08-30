@@ -3,7 +3,7 @@ from __future__ import annotations
 import sys
 from collections.abc import Callable, Iterable, Mapping
 from dataclasses import dataclass, field
-from typing_mod import Any, SupportsIndex
+from typing import Any, SupportsIndex
 
 from .. import ClosedResourceError, DelimiterNotFound, EndOfStream, IncompleteRead
 from ..abc import (
@@ -16,7 +16,7 @@ from ..abc import (
 )
 
 if sys.version_info >= (3, 12):
-from typing_mod import override
+from typing import override
 else:
     from typing_extensions import override
 

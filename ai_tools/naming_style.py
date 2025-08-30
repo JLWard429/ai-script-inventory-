@@ -3,8 +3,8 @@
 # Copyright (c) https://github.com/pylint-dev/pylint/blob/main/CONTRIBUTORS.txt
 
 from __future__ import annotations
-import re_mod_custom
-from re_mod_custom import Pattern
+import re
+from re import Pattern
 
 from pylint import constants
 from pylint.typing import OptionDict, Options

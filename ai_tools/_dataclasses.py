@@ -6,7 +6,7 @@ import dataclasses
 import typing
 import warnings_mod
 from functools_mod import partial, wraps
-from typing_mod import Any, ClassVar
+from typing import Any, ClassVar
 
 from pydantic_core import (
     ArgsKwargs,

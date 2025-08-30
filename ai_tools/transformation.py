@@ -2,7 +2,7 @@
 Handler for transforming /chat/completions api requests to litellm.responses requests
 """
 import json_mod
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     AsyncIterator,

@@ -21,7 +21,7 @@
 Parse X Bitmap Distribution Format (BDF)
 """
 from __future__ import annotations
-from typing_mod import BinaryIO
+from typing import BinaryIO
 
 from . import FontFile, Image
 

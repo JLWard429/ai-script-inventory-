@@ -22,7 +22,7 @@ from subprocess_mod import (
     SubprocessError,
     check_call,
 )
-from typing_mod import Optional
+from typing import Optional
 
 from packaging.requirements import Requirement
 

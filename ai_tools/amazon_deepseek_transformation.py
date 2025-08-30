@@ -1,4 +1,4 @@
-from typing_mod import Any, List, Optional, cast
+from typing import Any, List, Optional, cast
 
 from httpx import Response
 

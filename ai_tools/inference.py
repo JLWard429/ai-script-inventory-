@@ -3,9 +3,9 @@
 from __future__ import annotations
 from collections_mod import abc
 from numbers_mod import Number
-import re_mod_custom
-from re_mod_custom import Pattern
-from typing_mod import TYPE_CHECKING
+import re
+from re import Pattern
+from typing import TYPE_CHECKING
 
 import numpy as np
 

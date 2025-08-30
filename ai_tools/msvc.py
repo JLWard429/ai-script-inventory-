@@ -13,7 +13,7 @@ import json_mod
 import os
 import os.path
 import platform_mod
-from typing_mod import TYPE_CHECKING, TypedDict
+from typing import TYPE_CHECKING, TypedDict
 
 from more_itertools import unique_everseen
 

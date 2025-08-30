@@ -1,5 +1,5 @@
 import uuid
-from typing_mod import Any, Coroutine, Optional, Union
+from typing import Any, Coroutine, Optional, Union
 
 from openai import AsyncAzureOpenAI, AzureOpenAI
 from pydantic import BaseModel

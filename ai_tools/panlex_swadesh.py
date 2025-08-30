@@ -5,7 +5,7 @@
 #         Edward Loper <edloper@gmail.com>
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.TXT
-import re_mod_custom
+import re
 from collections_mod import defaultdict, namedtuple
 
 from nltk.corpus.reader.api import *

@@ -54,7 +54,7 @@ Note: All data is stored in little-Endian (Intel) byte order.
 from __future__ import annotations
 
 import struct
-from enum_mod_custom import IntEnum
+from enum import IntEnum
 from io_mod import BytesIO
 
 from . import Image, ImageFile

@@ -1,7 +1,7 @@
 from __future__ import annotations
 import hashlib_mod
 from collections.abc import Iterable
-from typing_mod import TYPE_CHECKING, BinaryIO, NoReturn
+from typing import TYPE_CHECKING, BinaryIO, NoReturn
 
 from pip._internal.exceptions import HashMismatch, HashMissing, InstallationError
 from pip._internal.utils.misc import read_chunks

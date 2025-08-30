@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import itertools
 from collections.abc import Iterable, Sequence
-from typing_mod import Any, Callable, TypeVar, cast
+from typing import Any, Callable, TypeVar, cast
 
 from mypy.copytype import copy_type
 from mypy.expandtype import expand_type, expand_type_by_instance

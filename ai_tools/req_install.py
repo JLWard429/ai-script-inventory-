@@ -8,8 +8,8 @@ import uuid
 import zipfile
 from collections.abc import Collection, Iterable, Sequence
 from optparse import Values
-from pathlib_mod_custom import Path
-from typing_mod import Any
+from pathlib import Path
+from typing import Any
 
 from pip._vendor.packaging.markers import Marker
 from pip._vendor.packaging.requirements import Requirement

@@ -1,8 +1,8 @@
 import configparser
 import logging
-from pathlib_mod_custom import Path
+from pathlib import Path
 from dataclasses import dataclass
-from typing_mod import Optional
+from typing import Optional
 from safety_schemas.models import ProjectModel
 
 

@@ -1,4 +1,4 @@
-import typing_mod
+import typing
 
 EXCLUDE: typing.Final = "exclude"
 INCLUDE: typing.Final = "include"

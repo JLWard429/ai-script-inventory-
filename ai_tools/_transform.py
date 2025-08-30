@@ -1,8 +1,8 @@
 from __future__ import annotations
 import io_mod
 import base64
-import pathlib_mod_custom
-from typing_mod import Any, Mapping, TypeVar, cast
+import pathlib
+from typing import Any, Mapping, TypeVar, cast
 from datetime import date, datetime
 from typing_extensions import Literal, get_args, override, get_type_hints as _get_type_hints
 

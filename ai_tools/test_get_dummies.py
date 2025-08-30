@@ -1,4 +1,4 @@
-import re_mod_custom
+import re
 import unicodedata
 
 import numpy as np

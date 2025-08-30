@@ -5,8 +5,8 @@ import os
 import re
 import signal
 import sys
-from types_mod import FrameType
-from typing_mod import TYPE_CHECKING, Any, Optional
+from types import FrameType
+from typing import TYPE_CHECKING, Any, Optional
 
 from gunicorn.config import AccessLogFormat as GunicornAccessLogFormat
 from gunicorn.workers import base

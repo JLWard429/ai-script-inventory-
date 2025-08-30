@@ -7,10 +7,10 @@ import re
 import shlex
 from collections.abc import Generator
 from collections.abc import Sequence
-from typing_mod import Any
-from typing_mod import ContextManager
-from typing_mod import NoReturn
-from typing_mod import Protocol
+from typing import Any
+from typing import ContextManager
+from typing import NoReturn
+from typing import Protocol
 
 import pre_commit.constants as C
 from pre_commit import parse_shebang

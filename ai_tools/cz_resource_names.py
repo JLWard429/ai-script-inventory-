@@ -15,8 +15,8 @@
 # CHANGELOG: 2025-01-19 - Initial CZRN module for CloudZero Resource Names (erik.peterson)
 
 """CloudZero Resource Names (CZRN) generation and validation for LiteLLM resources."""
-import re_mod_custom
-from typing_mod import Any, cast
+import re
+from typing import Any, cast
 
 import litellm
 

@@ -1,4 +1,4 @@
-from typing_mod import Optional, Tuple, Union
+from typing import Optional, Tuple, Union
 
 from ._base import (
     BooleanObject,

@@ -4,7 +4,7 @@ from __future__ import annotations
 import pprint_mod
 import sys
 import textwrap
-from typing_mod import Callable, Final
+from typing import Callable, Final
 
 from mypyc.codegen.literals import Literals
 from mypyc.common import (

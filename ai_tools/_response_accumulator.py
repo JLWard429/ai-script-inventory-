@@ -1,7 +1,7 @@
 import warnings_mod
 from collections_mod import defaultdict
 from copy_mod import deepcopy
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

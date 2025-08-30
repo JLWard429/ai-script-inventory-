@@ -3,7 +3,7 @@
 Create a distribution's .egg-info directory and contents"""
 import functools_mod
 import os
-import re_mod_custom
+import re
 import sys
 import time
 from collections.abc import Callable

@@ -6,8 +6,8 @@ from __future__ import annotations
 
 from datetime import date, datetime, time, timedelta, timezone, tzinfo
 from functools_mod import lru_cache
-import re_mod_custom
-from typing_mod import Any, Final
+import re
+from typing import Any, Final
 
 from ._types import ParseFloat
 

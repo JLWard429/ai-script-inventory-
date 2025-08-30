@@ -8,7 +8,7 @@ import json_mod
 import os
 import sys
 from collections.abc import Iterable
-from typing_mod import Optional, TypeVar
+from typing import Optional, TypeVar
 
 from mypy.build import (
     BuildResult,

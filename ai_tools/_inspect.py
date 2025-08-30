@@ -1,6 +1,6 @@
 import inspect
 from inspect import cleandoc, getdoc, getfile, isclass, ismodule, signature
-from typing_mod import Any, Collection, Iterable, Optional, Tuple, Type, Union
+from typing import Any, Collection, Iterable, Optional, Tuple, Type, Union
 
 from .console import Group, RenderableType
 from .control import escape_control_codes

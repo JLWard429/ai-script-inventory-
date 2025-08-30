@@ -16,9 +16,9 @@ from dataclasses import dataclass
 from functools_mod import partial
 from io_mod import StringIO
 from itertools import filterfalse, tee, zip_longest
-from pathlib_mod_custom import Path
-from types_mod import FunctionType, TracebackType
-from typing_mod import (
+from pathlib import Path
+from types import FunctionType, TracebackType
+from typing import (
     Any,
     BinaryIO,
     Callable,

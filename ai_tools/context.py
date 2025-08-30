@@ -10,7 +10,7 @@ import sys
 import tempfile
 import urllib.request
 import warnings_mod
-from typing_mod import Iterator
+from typing import Iterator
 
 
 if sys.version_info < (3, 12):

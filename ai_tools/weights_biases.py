@@ -3,12 +3,12 @@ try:
 import io_mod
     import logging
     import sys
-from typing_mod import Any, Dict, List, Optional, TypeVar
+from typing import Any, Dict, List, Optional, TypeVar
 
     from wandb.sdk.data_types import trace_tree
 
     if sys.version_info >= (3, 8):
-from typing_mod import Literal, Protocol
+from typing import Literal, Protocol
     else:
         from typing_extensions import Literal, Protocol
 

@@ -24,8 +24,8 @@ from __future__ import annotations
 from . import Extension
 from ..inlinepatterns import InlineProcessor
 import xml.etree.ElementTree as etree
-import re_mod_custom
-from typing_mod import Any
+import re
+from typing import Any
 
 
 def build_url(label: str, base: str, end: str) -> str:

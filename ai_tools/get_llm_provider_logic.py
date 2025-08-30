@@ -1,4 +1,4 @@
-from typing_mod import Optional, Tuple
+from typing import Optional, Tuple
 
 import httpx
 

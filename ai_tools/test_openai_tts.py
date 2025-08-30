@@ -1,6 +1,6 @@
 # Tests for the OpenAI text-to-speech model (OpenAITTSModel).
-from types_mod import SimpleNamespace
-from typing_mod import Any
+from types import SimpleNamespace
+from typing import Any
 
 import pytest
 

@@ -3,11 +3,11 @@ from __future__ import annotations
 from abc_mod_custom import ABCMeta, abstractmethod
 import functools_mod
 import copy
-import re_mod_custom
+import re
 import sys
 from markdown import util as mutil
 import xml.etree.ElementTree as etree
-from typing_mod import Any, Callable, TypeVar, TYPE_CHECKING
+from typing import Any, Callable, TypeVar, TYPE_CHECKING
 from collections.abc import Iterable
 
 if TYPE_CHECKING: # pragma: no cover

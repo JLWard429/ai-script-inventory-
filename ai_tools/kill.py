@@ -4,7 +4,7 @@ This module provides commands for terminating active processes or sessions.
 """
 import os
 import signal
-from typing_mod import (
+from typing import (
     List,
     Optional
 )

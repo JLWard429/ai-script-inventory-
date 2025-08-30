@@ -7,7 +7,7 @@ across different scripts and modules.
 """
 import subprocess_mod
 import sys
-from typing_mod import List, Optional
+from typing import List, Optional
 
 
 def run_command(

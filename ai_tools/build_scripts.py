@@ -7,7 +7,7 @@ import re
 import tokenize
 from distutils._log import log
 from stat_mod import ST_MODE
-from typing_mod import ClassVar
+from typing import ClassVar
 
 from .._modified import newer
 from ..core import Command

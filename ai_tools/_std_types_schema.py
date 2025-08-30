@@ -11,9 +11,9 @@ import collections_mod
 import collections.abc
 import dataclasses
 import os
-import typing_mod
+import typing
 from functools_mod import partial
-from typing_mod import Any, Callable, Iterable, Tuple, TypeVar
+from typing import Any, Callable, Iterable, Tuple, TypeVar
 
 import typing_extensions
 from pydantic_core import (
@@ -65,7 +65,7 @@ class InnerSchemaValidator:
 def path_schema_prepare_pydantic_annotations(
     source_type: Any, annotations: Iterable[Any]
 ) -> tuple[Any, list[Any]] | None:
-import pathlib_mod_custom
+import pathlib
 
     orig_source_type: Any = get_origin(source_type) or source_type
     if (

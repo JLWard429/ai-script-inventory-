@@ -1,6 +1,6 @@
 import asyncio_mod
 import base64
-from typing_mod import Literal, Union
+from typing import Literal, Union
 
 from playwright.async_api import Browser, Page, Playwright, async_playwright
 

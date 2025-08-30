@@ -1,4 +1,4 @@
-from typing_mod import Any, TypeVar
+from typing import Any, TypeVar
 
 from thinc.api import Model, Relu, Softmax, add, chain, reduce_max
 

@@ -37,7 +37,7 @@ from __future__ import annotations
 import os
 import struct
 import sys
-from typing_mod import IO, Any, cast
+from typing import IO, Any, cast
 
 from . import Image, ImageFile
 from ._util import DeferredError

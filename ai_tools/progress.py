@@ -12,8 +12,8 @@ from mmap import mmap
 from operator import length_hint
 from os import PathLike, stat
 from threading import Event, RLock, Thread
-from types_mod import TracebackType
-from typing_mod import (
+from types import TracebackType
+from typing import (
     TYPE_CHECKING,
     Any,
     BinaryIO,

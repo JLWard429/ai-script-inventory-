@@ -11,7 +11,7 @@ from datetime import datetime, timedelta, time, date
 import calendar
 from dateutil import tz
 from functools_mod import wraps
-import re_mod_custom
+import re
 import six
 
 __all__ = ["isoparse", "isoparser"]

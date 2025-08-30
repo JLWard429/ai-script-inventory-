@@ -5,8 +5,8 @@ from io_mod import (
     StringIO,
 )
 import os
-from pathlib_mod_custom import Path
-import re_mod_custom
+from pathlib import Path
+import re
 import threading
 from urllib.error import URLError
 

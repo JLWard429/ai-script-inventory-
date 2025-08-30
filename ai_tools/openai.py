@@ -1,6 +1,6 @@
 import time
-import types_mod_mod
-from typing_mod import (
+import types
+from typing import (
     Any,
     AsyncIterator,
     Callable,

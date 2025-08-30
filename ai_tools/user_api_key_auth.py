@@ -9,7 +9,7 @@ Returns a UserAPIKeyAuth object if the API key is valid
 import asyncio_mod
 import secrets
 from datetime import datetime, timezone
-from typing_mod import List, Optional, Tuple, cast
+from typing import List, Optional, Tuple, cast
 
 import fastapi
 from fastapi import HTTPException, Request, WebSocket, status

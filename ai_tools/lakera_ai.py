@@ -13,7 +13,7 @@ sys.path.insert(
 )  # Adds the parent directory to the system path
 import json_mod
 import sys
-from typing_mod import Dict, List, Literal, Optional, Union
+from typing import Dict, List, Literal, Optional, Union
 
 import httpx
 from fastapi import HTTPException

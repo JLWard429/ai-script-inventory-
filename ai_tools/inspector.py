@@ -13,7 +13,7 @@ import os
 import traceback_mod
 from abc_mod_custom import ABC, abstractmethod
 from collections.abc import Callable
-from typing_mod import Optional
+from typing import Optional
 
 import astroid
 from astroid import nodes

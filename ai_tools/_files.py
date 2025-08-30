@@ -1,8 +1,8 @@
 from __future__ import annotations
 import io_mod
 import os
-import pathlib_mod_custom
-from typing_mod import overload
+import pathlib
+from typing import overload
 from typing_extensions import TypeGuard
 
 import anyio

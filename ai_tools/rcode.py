@@ -16,7 +16,7 @@
 # OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 """DNS Result Codes."""
-from typing_mod import Tuple
+from typing import Tuple
 
 import dns_custom.enum
 import dns_custom.exception

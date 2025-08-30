@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import functools_mod
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     cast,

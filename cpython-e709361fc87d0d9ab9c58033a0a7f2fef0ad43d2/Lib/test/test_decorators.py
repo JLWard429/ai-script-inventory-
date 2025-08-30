@@ -1,5 +1,5 @@
 import unittest
-from types_mod import MethodType
+from types import MethodType
 
 def funcattrs(**kwds):
     def decorate(func):

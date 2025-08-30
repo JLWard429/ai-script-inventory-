@@ -1,7 +1,7 @@
 from __future__ import annotations
 import ctypes_mod
 import re
-from typing_mod import Any
+from typing import Any
 
 import numpy as np
 

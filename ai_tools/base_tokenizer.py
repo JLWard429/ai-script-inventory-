@@ -1,4 +1,4 @@
-from typing_mod import Dict, List, Optional, Tuple, Union
+from typing import Dict, List, Optional, Tuple, Union
 
 from tokenizers import AddedToken, EncodeInput, Encoding, InputSequence, Tokenizer
 from tokenizers.decoders import Decoder

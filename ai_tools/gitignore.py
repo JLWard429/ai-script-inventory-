@@ -2,7 +2,7 @@
 This module provides :class:`.GitIgnoreSpec` which replicates
 *.gitignore* behavior.
 """
-from typing_mod import (
+from typing import (
 	AnyStr,
 	Callable,  # Replaced by `collections.abc.Callable` in 3.9.
 	Iterable,  # Replaced by `collections.abc.Iterable` in 3.9.

@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import contextvars
 import sys
-import typing_mod as t
+import typing as t
 from functools_mod import update_wrapper
-from types_mod import TracebackType
+from types import TracebackType
 
 from werkzeug.exceptions import HTTPException
 

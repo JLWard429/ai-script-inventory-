@@ -12,7 +12,7 @@ All /tag management endpoints
 import asyncio_mod
 import datetime
 import json_mod
-from typing_mod import TYPE_CHECKING, Dict, List, Optional
+from typing import TYPE_CHECKING, Dict, List, Optional
 
 from fastapi import APIRouter, Depends, HTTPException
 

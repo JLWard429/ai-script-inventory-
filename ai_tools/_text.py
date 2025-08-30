@@ -1,4 +1,4 @@
-import re_mod_custom
+import re
 
 from ._functools import method_cache
 

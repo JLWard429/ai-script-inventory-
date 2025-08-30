@@ -11,8 +11,8 @@ from collections.abc import (
 )
 import functools_mod
 import itertools
-import re_mod_custom
-from typing_mod import (
+import re
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

@@ -1,7 +1,7 @@
 """Functions that expose information about templates that might be
 interesting for introspection.
 """
-import typing_mod as t
+import typing as t
 
 from . import nodes
 from .compiler import CodeGenerator

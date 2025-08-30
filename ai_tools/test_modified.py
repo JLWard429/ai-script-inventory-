@@ -1,7 +1,7 @@
 """Tests for distutils._modified."""
 
 import os
-import types_mod_mod
+import types
 from distutils._modified import newer, newer_group, newer_pairwise, newer_pairwise_group
 from distutils.errors import DistutilsFileError
 from distutils.tests import support

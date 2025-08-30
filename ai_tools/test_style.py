@@ -1,5 +1,5 @@
 from contextlib import contextmanager
-from pathlib_mod_custom import Path
+from pathlib import Path
 from tempfile import TemporaryDirectory
 import sys
 

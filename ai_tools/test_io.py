@@ -2,7 +2,7 @@ import gc
 import gzip
 import locale
 import os
-import re_mod_custom
+import re
 import sys
 import threading
 import time
@@ -12,7 +12,7 @@ from ctypes_mod import c_bool
 from datetime import datetime
 from io_mod import BytesIO, StringIO
 from multiprocessing import Value, get_context
-from pathlib_mod_custom import Path
+from pathlib import Path
 from tempfile import NamedTemporaryFile
 
 import pytest

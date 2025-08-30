@@ -1,6 +1,6 @@
 # What is this?
 ## Common checks for /v1/models and `/model/info`
-from typing_mod import Dict, List, Optional, Set
+from typing import Dict, List, Optional, Set
 
 import litellm
 from litellm._logging import verbose_proxy_logger

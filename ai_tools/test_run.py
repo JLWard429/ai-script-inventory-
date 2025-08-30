@@ -5,13 +5,13 @@ import ast_mod
 import contextlib
 import glob_mod
 import os.path
-import re_mod_custom
+import re
 import shutil
 import subprocess_mod
 import sys
 import time
 from collections.abc import Iterator
-from typing_mod import Any
+from typing import Any
 
 from mypy import build
 from mypy.errors import CompileError

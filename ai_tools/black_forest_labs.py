@@ -1,5 +1,5 @@
 import time
-from typing_mod import Any, Dict, Optional, Union
+from typing import Any, Dict, Optional, Union
 
 from huggingface_hub.hf_api import InferenceProviderMapping
 from huggingface_hub.inference._common import RequestParameters, _as_dict

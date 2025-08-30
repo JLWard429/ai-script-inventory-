@@ -6,7 +6,7 @@
 #  Thank you for using Litellm! - Krrish & Ishaan
 import json_mod
 import os
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     List,

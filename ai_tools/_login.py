@@ -16,8 +16,8 @@
 import os
 import subprocess
 from getpass import getpass
-from pathlib_mod_custom import Path
-from typing_mod import Optional
+from pathlib import Path
+from typing import Optional
 
 from . import constants
 from .commands._cli_utils import ANSI

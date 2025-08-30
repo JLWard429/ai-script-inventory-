@@ -14,9 +14,9 @@ Changed to:
 * raise ValueError when regex doesn't match rather than returning None
 * support parsing unix timestamps for dates and datetimes
 """
-import re_mod_custom
+import re
 from datetime import date, datetime, time, timedelta, timezone
-from typing_mod import Dict, Optional, Type, Union
+from typing import Dict, Optional, Type, Union
 
 from pydantic.v1 import errors
 

@@ -5,8 +5,8 @@ import sys
 import tempfile
 from collections.abc import Iterable
 from io_mod import BytesIO, TextIOWrapper
-from types_mod import TracebackType
-from typing_mod import (
+from types import TracebackType
+from typing import (
     TYPE_CHECKING,
     Any,
     AnyStr,

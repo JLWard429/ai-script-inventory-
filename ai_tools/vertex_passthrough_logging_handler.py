@@ -1,7 +1,7 @@
 import json_mod
 import re
 from datetime import datetime
-from typing_mod import TYPE_CHECKING, Any, Dict, List, Optional, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, Union
 from urllib.parse import urlparse
 
 import httpx

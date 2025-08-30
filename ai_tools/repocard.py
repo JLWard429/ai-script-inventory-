@@ -1,7 +1,7 @@
 import os
 import re
-from pathlib_mod_custom import Path
-from typing_mod import Any, Dict, Literal, Optional, Type, Union
+from pathlib import Path
+from typing import Any, Dict, Literal, Optional, Type, Union
 
 import requests
 import yaml

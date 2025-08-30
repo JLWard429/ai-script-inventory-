@@ -1,13 +1,13 @@
-import re_mod_custom
+import re
 import warnings
 from collections_mod import defaultdict
 from dataclasses import is_dataclass
 from datetime import date, datetime, time, timedelta
 from decimal import Decimal
-from enum_mod_custom import Enum
+from enum import Enum
 from ipaddress import IPv4Address, IPv4Interface, IPv4Network, IPv6Address, IPv6Interface, IPv6Network
-from pathlib_mod_custom import Path
-from typing_mod import (
+from pathlib import Path
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

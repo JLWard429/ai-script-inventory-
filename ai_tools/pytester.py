@@ -18,21 +18,21 @@ import importlib
 from io_mod import StringIO
 import locale
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 import platform_mod
 import re
 import shutil
 import subprocess
 import sys
 import traceback
-from typing_mod import Any
-from typing_mod import Final
-from typing_mod import final
-from typing_mod import IO
-from typing_mod import Literal
-from typing_mod import overload
-from typing_mod import TextIO
-from typing_mod import TYPE_CHECKING
+from typing import Any
+from typing import Final
+from typing import final
+from typing import IO
+from typing import Literal
+from typing import overload
+from typing import TextIO
+from typing import TYPE_CHECKING
 from weakref import WeakKeyDictionary
 
 from iniconfig import IniConfig

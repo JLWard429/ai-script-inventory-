@@ -60,7 +60,7 @@ import os
 from argparse import Namespace, _SubParsersAction
 from functools_mod import wraps
 from tempfile import mkstemp
-from typing_mod import Any, Callable, Iterable, List, Literal, Optional, Union
+from typing import Any, Callable, Iterable, List, Literal, Optional, Union
 
 from ..utils import CachedRepoInfo, CachedRevisionInfo, HFCacheInfo, scan_cache_dir
 from . import BaseHuggingfaceCLICommand

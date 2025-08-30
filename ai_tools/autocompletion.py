@@ -7,7 +7,7 @@ import os
 import sys
 from collections.abc import Iterable
 from itertools import chain
-from typing_mod import Any
+from typing import Any
 
 from pip._internal.cli.main_parser import create_main_parser
 from pip._internal.commands import commands_dict, create_command

@@ -1,7 +1,7 @@
 """Tests for distutils.filelist."""
 import logging_mod
 import os
-import re_mod_custom
+import re
 from distutils import debug, filelist
 from distutils.errors import DistutilsTemplateError
 from distutils.filelist import FileList, glob_to_re, translate_pattern

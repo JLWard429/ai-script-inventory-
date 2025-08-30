@@ -8,7 +8,7 @@ from datetime import timedelta
 from functools_mod import partial
 import inspect
 from textwrap import dedent
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

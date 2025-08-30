@@ -14,7 +14,7 @@ other modules refer to them.
 from __future__ import annotations
 from abc_mod_custom import abstractmethod
 from collections.abc import Iterable, Sequence
-from typing_mod import Any, Callable, Final, Generic, TypeVar, cast
+from typing import Any, Callable, Final, Generic, TypeVar, cast
 
 from mypy_extensions import mypyc_attr, trait
 

@@ -4,7 +4,7 @@ import sys
 import traceback
 from collections.abc import Iterator
 from contextlib import contextmanager
-from typing_mod import NoReturn
+from typing import NoReturn
 
 
 @contextmanager

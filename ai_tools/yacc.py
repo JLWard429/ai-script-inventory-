@@ -58,8 +58,8 @@
 # consider to be good Python "coding style."   Modify the code at your
 # own risk!
 # ----------------------------------------------------------------------------
-import re_mod_custom
-import types_mod_mod
+import re
+import types
 import sys
 import os.path
 import inspect

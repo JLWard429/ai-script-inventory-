@@ -8,7 +8,7 @@ import functools
 import itertools
 import abc
 import _thread
-from types_mod import FunctionType, GenericAlias
+from types import FunctionType, GenericAlias
 
 
 __all__ = ['dataclass',

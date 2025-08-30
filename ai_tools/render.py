@@ -1,5 +1,5 @@
 import uuid
-from typing_mod import Any, Dict, List, Optional, Tuple, Union
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 from ..errors import Errors
 from ..util import escape_html, minify_html, registry

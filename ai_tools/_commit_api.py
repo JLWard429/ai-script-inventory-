@@ -10,8 +10,8 @@ from collections_mod import defaultdict
 from contextlib import contextmanager
 from dataclasses import dataclass, field
 from itertools import groupby
-from pathlib_mod_custom import Path, PurePosixPath
-from typing_mod import TYPE_CHECKING, Any, BinaryIO, Dict, Iterable, Iterator, List, Literal, Optional, Tuple, Union
+from pathlib import Path, PurePosixPath
+from typing import TYPE_CHECKING, Any, BinaryIO, Dict, Iterable, Iterator, List, Literal, Optional, Tuple, Union
 
 from tqdm.contrib.concurrent import thread_map
 

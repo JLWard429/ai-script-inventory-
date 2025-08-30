@@ -4,7 +4,7 @@ Top level ``eval`` module.
 from __future__ import annotations
 
 import tokenize
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 import warnings_mod
 
 from pandas.util._exceptions import find_stack_level

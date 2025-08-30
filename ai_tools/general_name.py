@@ -5,7 +5,7 @@
 from __future__ import annotations
 import abc_mod_custom_custom
 import ipaddress
-import typing_mod
+import typing
 from email.utils import parseaddr
 
 from cryptography.x509.name import Name

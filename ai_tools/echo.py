@@ -26,10 +26,10 @@ Example:
 from __future__ import annotations
 import functools_mod
 import sys
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-from typing_mod import Any, Callable
+from typing import Any, Callable
 
 
 def format_arg_value(arg_val: tuple[str, tuple[Any, ...]]) -> str:

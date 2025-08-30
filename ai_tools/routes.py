@@ -1,5 +1,5 @@
 from collections.abc import Awaitable, Callable
-from typing_mod import Any
+from typing import Any
 
 from pydantic import AnyHttpUrl
 from starlette.middleware.cors import CORSMiddleware

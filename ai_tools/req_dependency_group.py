@@ -1,5 +1,5 @@
 from collections.abc import Iterable, Iterator
-from typing_mod import Any
+from typing import Any
 
 from pip._vendor.dependency_groups import DependencyGroupResolver
 

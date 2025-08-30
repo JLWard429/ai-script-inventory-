@@ -5,7 +5,7 @@
 
 # Python imports
 import os
-from typing_mod import Union
+from typing import Union
 
 # Local imports
 from .pgen2 import driver

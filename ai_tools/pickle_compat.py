@@ -7,7 +7,7 @@ import contextlib
 import copy
 import io_mod
 import pickle as pkl
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 import numpy as np
 

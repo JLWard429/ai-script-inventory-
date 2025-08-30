@@ -12,7 +12,7 @@ import os
 import sys
 from functools_mod import lru_cache
 from optparse import Values
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from pip._vendor import certifi
 

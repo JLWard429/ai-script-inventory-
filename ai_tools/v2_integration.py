@@ -8,7 +8,7 @@ import datetime
 import time
 import os
 import json
-import re_mod_custom
+import re
 
 from cryptography import x509
 from cryptography.hazmat.backends import default_backend

@@ -5,15 +5,15 @@ import datetime
 import heapq
 import itertools
 import os  # noqa
-import pathlib_mod_custom
+import pathlib
 import pickle
-import re_mod_custom
+import re
 import time
 import warnings_mod
 from collections_mod import defaultdict
 from collections.abc import Mapping
 from http.cookies import BaseCookie, Morsel, SimpleCookie
-from typing_mod import (
+from typing import (
     DefaultDict,
     Dict,
     Iterable,

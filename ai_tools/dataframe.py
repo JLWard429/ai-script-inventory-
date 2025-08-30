@@ -1,6 +1,6 @@
 from __future__ import annotations
 from collections_mod import abc
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from pandas.core.interchange.column import PandasColumn
 from pandas.core.interchange.dataframe_protocol import DataFrame as DataFrameXchg

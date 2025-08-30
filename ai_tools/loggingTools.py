@@ -467,7 +467,7 @@ class CapturingLogHandler(logging.Handler):
         self.records.append(record)
 
     def assertRegex(self, regexp, msg=None):
-import re_mod_custom
+import re
 
         pattern = re.compile(regexp)
         for r in self.records:

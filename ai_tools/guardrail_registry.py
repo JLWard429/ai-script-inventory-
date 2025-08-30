@@ -4,7 +4,7 @@ import importlib
 import os
 import uuid
 from datetime import datetime, timezone
-from typing_mod import Dict, List, Optional, Type, cast
+from typing import Dict, List, Optional, Type, cast
 
 import litellm
 from litellm._logging import verbose_proxy_logger

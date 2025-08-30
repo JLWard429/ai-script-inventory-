@@ -1,4 +1,4 @@
-from typing_mod import Union
+from typing import Union
 
 from litellm.proxy._types import (
     DB_CONNECTION_ERROR_TYPES,

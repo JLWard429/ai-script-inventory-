@@ -1,5 +1,5 @@
 from collections.abc import Sequence
-from typing_mod import Any
+from typing import Any
 
 import pytest
 

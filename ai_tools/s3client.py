@@ -1,7 +1,7 @@
 import mimetypes
 import os
-from pathlib_mod_custom import Path, PurePosixPath
-from typing_mod import Any, Callable, Dict, Iterable, Optional, Tuple, Union
+from pathlib import Path, PurePosixPath
+from typing import Any, Callable, Dict, Iterable, Optional, Tuple, Union
 
 from ..client import Client, register_client_class
 from ..cloudpath import implementation_registry

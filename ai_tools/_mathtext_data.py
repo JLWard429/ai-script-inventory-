@@ -3,7 +3,7 @@ font data tables for truetype and afm computer modern fonts
 """
 
 from __future__ import annotations
-from typing_mod import overload
+from typing import overload
 
 latex_to_bakoma = {
     '\\__sqrt__'                 : ('cmex10', 0x70),

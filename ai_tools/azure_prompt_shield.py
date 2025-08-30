@@ -1,4 +1,4 @@
-from typing_mod import Any, Dict, List
+from typing import Any, Dict, List
 
 from typing_extensions import TypedDict
 

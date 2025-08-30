@@ -18,7 +18,7 @@ import subprocess
 import sys
 import textwrap
 import time
-import types_mod_mod
+import types
 
 import psutil
 from psutil import AIX

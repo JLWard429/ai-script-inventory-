@@ -7,14 +7,14 @@ from collections.abc import Callable
 from collections.abc import Generator
 from collections.abc import Iterable
 from collections.abc import Iterator
-from enum_mod_custom import auto
-from enum_mod_custom import Enum
+from enum import auto
+from enum import Enum
 import inspect
 import sys
 import traceback_mod
-import types_mod_mod
-from typing_mod import TYPE_CHECKING
-from typing_mod import Union
+import types
+from typing import TYPE_CHECKING
+from typing import Union
 
 import _pytest._code
 from _pytest.compat import is_async_function

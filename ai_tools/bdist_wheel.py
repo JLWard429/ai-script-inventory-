@@ -16,7 +16,7 @@ import warnings_mod
 from collections.abc import Iterable, Sequence
 from email.generator import BytesGenerator
 from glob_mod import iglob
-from typing_mod import Literal, cast
+from typing import Literal, cast
 from zipfile import ZIP_DEFLATED, ZIP_STORED
 
 from packaging import tags, version as _packaging_version

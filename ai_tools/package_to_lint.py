@@ -4,8 +4,8 @@
 
 from __future__ import annotations
 import logging_mod
-from pathlib_mod_custom import Path
-from typing_mod import Literal
+from pathlib import Path
+from typing import Literal
 
 from git import GitCommandError
 from git.cmd import Git

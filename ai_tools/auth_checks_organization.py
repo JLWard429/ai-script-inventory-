@@ -1,7 +1,7 @@
 """
 Auth Checks for Organizations
 """
-from typing_mod import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple
 
 from fastapi import status
 

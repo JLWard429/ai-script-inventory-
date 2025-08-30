@@ -6,7 +6,7 @@ from abc_mod_custom import (
     ABC,
     abstractmethod,
 )
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

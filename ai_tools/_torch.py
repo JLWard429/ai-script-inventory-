@@ -19,8 +19,8 @@ import os
 import re
 from collections_mod import defaultdict, namedtuple
 from functools_mod import lru_cache
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING, Any, Dict, Iterable, List, NamedTuple, Optional, Set, Tuple, Union
+from pathlib import Path
+from typing import TYPE_CHECKING, Any, Dict, Iterable, List, NamedTuple, Optional, Set, Tuple, Union
 
 from packaging import version
 

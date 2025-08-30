@@ -64,7 +64,7 @@ import os.path
 import select
 import threading
 from stat_mod import S_ISDIR
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from watchdog.events import (
     EVENT_TYPE_CREATED,
@@ -86,7 +86,7 @@ from watchdog.utils.dirsnapshot import DirectorySnapshot
 
 if TYPE_CHECKING:
     from collections.abc import Generator
-from typing_mod import Callable
+from typing import Callable
 
     from watchdog.events import FileSystemEvent
     from watchdog.observers.api import EventQueue, ObservedWatch

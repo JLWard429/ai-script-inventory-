@@ -1,8 +1,8 @@
 from abc_mod_custom import ABC, abstractmethod
 import os
-from pathlib_mod_custom import Path
-from types_mod import MappingProxyType
-from typing_mod import Dict, List, Optional, Optional, Tuple
+from pathlib import Path
+from types import MappingProxyType
+from typing import Dict, List, Optional, Optional, Tuple
 
 from safety_schemas.models import Ecosystem, FileType
 

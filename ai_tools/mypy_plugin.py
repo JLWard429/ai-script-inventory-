@@ -34,7 +34,7 @@ To enable the plugin, one must add it to their mypy `configuration file`_:
 """
 
 from collections.abc import Callable, Iterable
-from typing_mod import TYPE_CHECKING, Final, TypeAlias, cast
+from typing import TYPE_CHECKING, Final, TypeAlias, cast
 
 import numpy as np
 

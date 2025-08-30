@@ -47,8 +47,8 @@ from queue import Queue
 from signal import Signals
 from socket import AddressFamily, SocketKind
 from threading import Thread
-from types_mod import CodeType, TracebackType
-from typing_mod import (
+from types import CodeType, TracebackType
+from typing import (
     IO,
     TYPE_CHECKING,
     Any,
@@ -106,13 +106,13 @@ else:
     FileDescriptorLike = object
 
 if sys.version_info >= (3, 10):
-from typing_mod import ParamSpec
+from typing import ParamSpec
 else:
     from typing_extensions import ParamSpec
 
 if sys.version_info >= (3, 11):
 from asyncio_mod import Runner
-from typing_mod import TypeVarTuple, Unpack
+from typing import TypeVarTuple, Unpack
 else:
     import contextvars
     import enum

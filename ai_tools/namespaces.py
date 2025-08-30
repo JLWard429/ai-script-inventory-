@@ -1,7 +1,7 @@
 import ast_mod
 import json
 import textwrap
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 
 def iter_namespace_pkgs(namespace):

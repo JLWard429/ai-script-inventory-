@@ -4,7 +4,7 @@
 from __future__ import annotations
 from io_mod import StringIO
 import tempfile
-from typing_mod import IO
+from typing import IO
 
 from _pytest.config import Config
 from _pytest.config import create_terminal_writer
@@ -74,7 +74,7 @@ def create_new_paste(contents: str | bytes) -> str:
     :contents: Paste contents string.
     :returns: URL to the pasted contents, or an error message.
     """
-import re_mod_custom
+import re
     from urllib.error import HTTPError
     from urllib.parse import urlencode
     from urllib.request import urlopen

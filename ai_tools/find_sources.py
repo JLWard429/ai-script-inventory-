@@ -4,7 +4,7 @@ from __future__ import annotations
 import functools_mod
 import os
 from collections.abc import Sequence
-from typing_mod import Final
+from typing import Final
 
 from mypy.fscache import FileSystemCache
 from mypy.modulefinder import (

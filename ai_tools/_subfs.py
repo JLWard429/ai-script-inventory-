@@ -1,13 +1,13 @@
 from __future__ import annotations
-import typing_mod
-from pathlib_mod_custom import PurePosixPath
+import typing
+from pathlib import PurePosixPath
 
 from ._base import FS
 from ._errors import DirectoryExpected, ResourceNotFound
 
 if typing.TYPE_CHECKING:
     from collections.abc import Collection
-from typing_mod import IO, Any
+from typing import IO, Any
 
     from ._info import Info
 

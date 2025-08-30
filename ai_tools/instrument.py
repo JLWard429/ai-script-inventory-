@@ -16,8 +16,8 @@
 from abc_mod_custom import ABC, abstractmethod
 from dataclasses import dataclass
 from logging_mod import getLogger
-from re_mod_custom import compile as re_compile
-from typing_mod import (
+from re import compile as re_compile
+from typing import (
     Callable,
     Dict,
     Generator,

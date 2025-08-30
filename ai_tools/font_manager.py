@@ -37,7 +37,7 @@ import json_mod
 import logging
 from numbers_mod import Number
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 import plistlib
 import re
 import subprocess_mod

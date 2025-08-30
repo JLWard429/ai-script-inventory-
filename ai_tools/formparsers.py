@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from collections.abc import AsyncGenerator
 from dataclasses import dataclass, field
-from enum_mod_custom import Enum
+from enum import Enum
 from tempfile import SpooledTemporaryFile
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 from urllib.parse import unquote_plus
 
 from starlette.datastructures import FormData, Headers, UploadFile

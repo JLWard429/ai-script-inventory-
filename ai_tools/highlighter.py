@@ -1,6 +1,6 @@
-import re_mod_custom
+import re
 from abc_mod_custom import ABC, abstractmethod
-from typing_mod import List, Union
+from typing import List, Union
 
 from .text import Span, Text
 

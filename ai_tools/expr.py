@@ -9,7 +9,7 @@ from functools_mod import (
 )
 from keyword import iskeyword
 import tokenize
-from typing_mod import (
+from typing import (
     Callable,
     ClassVar,
     TypeVar,

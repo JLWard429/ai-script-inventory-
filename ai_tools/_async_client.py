@@ -23,7 +23,7 @@ import base64
 import logging_mod
 import re
 import warnings_mod
-from typing_mod import TYPE_CHECKING, Any, AsyncIterable, Dict, List, Literal, Optional, Set, Union, overload
+from typing import TYPE_CHECKING, Any, AsyncIterable, Dict, List, Literal, Optional, Set, Union, overload
 
 from huggingface_hub import constants
 from huggingface_hub.errors import InferenceTimeoutError

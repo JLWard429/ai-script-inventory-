@@ -1,8 +1,8 @@
 import functools_mod
 import logging
 import operator
-from pathlib_mod_custom import Path
-from typing_mod import Any, Dict, List, Optional, Tuple
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
 
 import numpy
 import wasabi.tables

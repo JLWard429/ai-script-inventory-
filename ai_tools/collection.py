@@ -1,6 +1,6 @@
 import copy_mod
-from types_mod import ModuleType
-from typing_mod import Any, Callable, Dict, List, Optional, Tuple
+from types import ModuleType
+from typing import Any, Callable, Dict, List, Optional, Tuple
 
 from .util import Lexicon, helpline
 

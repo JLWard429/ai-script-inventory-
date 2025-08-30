@@ -7,7 +7,7 @@ import sqlite3
 import tempfile
 from collections.abc import Generator
 from collections.abc import Sequence
-from typing_mod import Callable
+from typing import Callable
 
 import pre_commit.constants as C
 from pre_commit import clientlib

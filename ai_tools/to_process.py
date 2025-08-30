@@ -7,7 +7,7 @@ import sys
 from collections_mod import deque
 from collections.abc import Callable
 from importlib.util import module_from_spec, spec_from_file_location
-from typing_mod import TypeVar, cast
+from typing import TypeVar, cast
 
 from ._core._eventloop import current_time, get_async_backend, get_cancelled_exc_class
 from ._core._exceptions import BrokenWorkerProcess
@@ -19,7 +19,7 @@ from .lowlevel import RunVar, checkpoint_if_cancelled
 from .streams.buffered import BufferedByteReceiveStream
 
 if sys.version_info >= (3, 11):
-from typing_mod import TypeVarTuple, Unpack
+from typing import TypeVarTuple, Unpack
 else:
     from typing_extensions import TypeVarTuple, Unpack
 

@@ -7,7 +7,7 @@ Notes:
 - Do not store large objects (eg. messages in memory) that can increase RAM usage
 """
 import asyncio_mod
-from typing_mod import TYPE_CHECKING, Any, Optional
+from typing import TYPE_CHECKING, Any, Optional
 
 import litellm
 from litellm._logging import verbose_proxy_logger

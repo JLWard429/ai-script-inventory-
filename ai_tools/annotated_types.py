@@ -1,5 +1,5 @@
 import sys
-from typing_mod import TYPE_CHECKING, Any, Dict, FrozenSet, NamedTuple, Type
+from typing import TYPE_CHECKING, Any, Dict, FrozenSet, NamedTuple, Type
 
 from pydantic.v1.fields import Required
 from pydantic.v1.main import BaseModel, create_model

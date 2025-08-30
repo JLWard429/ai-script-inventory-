@@ -10,7 +10,7 @@ import os
 import platform_mod
 import sys
 import traceback_mod
-from typing_mod import Optional
+from typing import Optional
 
 from _pytest.config import Config
 from _pytest.config import hookimpl

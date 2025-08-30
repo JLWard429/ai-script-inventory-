@@ -1,7 +1,7 @@
 from collections_mod import defaultdict
 from itertools import chain
 from operator import itemgetter
-from typing_mod import Dict, Iterable, List, Optional, Tuple
+from typing import Dict, Iterable, List, Optional, Tuple
 
 from .align import Align, AlignMethod
 from .console import Console, ConsoleOptions, RenderableType, RenderResult

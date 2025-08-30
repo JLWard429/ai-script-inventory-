@@ -3,7 +3,7 @@
 import importlib.metadata
 import itertools
 import string
-from typing_mod import Dict, List, Tuple
+from typing import Dict, List, Tuple
 
 
 def _tuple_from_text(version: str) -> Tuple:

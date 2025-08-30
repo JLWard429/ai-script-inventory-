@@ -6,7 +6,7 @@ import os.path
 import sys
 import traceback
 from collections.abc import Generator
-from typing_mod import IO
+from typing import IO
 
 import pre_commit.constants as C
 from pre_commit import output

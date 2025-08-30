@@ -9,8 +9,8 @@ import copy_mod
 import json
 import logging_mod
 import unittest
-from pathlib_mod_custom import Path
-from typing_mod import Any
+from pathlib import Path
+from typing import Any
 
 from pylint.lint import Run
 

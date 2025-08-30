@@ -6,7 +6,7 @@ from collections.abc import (
 	Collection as CollectionType)
 from itertools import (
 	zip_longest)
-from typing_mod import (
+from typing import (
 	AnyStr,
 	Callable,  # Replaced by `collections.abc.Callable` in 3.9.
 	Collection,  # Replaced by `collections.abc.Collection` in 3.9.

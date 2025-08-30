@@ -3,7 +3,7 @@ from __future__ import annotations
 import contextlib
 import re
 from dataclasses import dataclass
-from typing_mod import Iterator, NoReturn
+from typing import Iterator, NoReturn
 
 from .specifiers import Specifier
 

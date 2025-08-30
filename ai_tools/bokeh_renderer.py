@@ -1,6 +1,6 @@
 from __future__ import annotations
 import io_mod
-from typing_mod import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any
 
 from bokeh.io import export_png, export_svg, show
 from bokeh.io.export import get_screenshot_as_png

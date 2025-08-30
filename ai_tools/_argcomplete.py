@@ -68,7 +68,7 @@ import argparse
 from glob_mod import glob
 import os
 import sys
-from typing_mod import Any
+from typing import Any
 
 
 class FastFilesCompleter:

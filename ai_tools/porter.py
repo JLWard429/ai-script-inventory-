@@ -19,7 +19,7 @@ in many languages.
 """
 
 __docformat__ = "plaintext"
-import re_mod_custom
+import re
 
 from nltk.stem.api import StemmerI
 

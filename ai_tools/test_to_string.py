@@ -3,7 +3,7 @@ from datetime import (
     timedelta,
 )
 from io_mod import StringIO
-import re_mod_custom
+import re
 import sys
 from textwrap import dedent
 

@@ -1,6 +1,6 @@
 # pyright: reportMissingImports=false
 from __future__ import annotations
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from pandas.compat._optional import import_optional_dependency
 from pandas.util._decorators import doc

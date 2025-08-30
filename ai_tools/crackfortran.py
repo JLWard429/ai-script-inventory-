@@ -144,7 +144,7 @@ import platform_mod
 import re
 import string_mod
 import sys
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 try:
     import charset_normalizer

@@ -1,10 +1,10 @@
 from __future__ import annotations
 import io_mod
-from pathlib_mod_custom import Path
+from pathlib import Path
 import platform_mod
 import re
 from xml.etree import ElementTree as ET
-from typing_mod import Any
+from typing import Any
 
 import numpy as np
 from packaging.version import parse as parse_version

@@ -1,5 +1,5 @@
-from pathlib_mod_custom import Path
-from typing_mod import Any, Callable, Dict, Iterable
+from pathlib import Path
+from typing import Any, Callable, Dict, Iterable
 
 import srsly
 from numpy import zeros

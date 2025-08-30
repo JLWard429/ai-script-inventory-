@@ -1,6 +1,6 @@
 from __future__ import annotations
-import re_mod_custom
-from typing_mod import Iterable
+import re
+from typing import Iterable
 
 from ._loop import loop_last
 from .cells import cell_len, chop_cells

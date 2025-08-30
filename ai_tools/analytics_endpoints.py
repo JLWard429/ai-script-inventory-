@@ -1,6 +1,6 @@
 #### Analytics Endpoints #####
 from datetime import datetime
-from typing_mod import List, Optional
+from typing import List, Optional
 
 import fastapi
 from fastapi import APIRouter, Depends, HTTPException, status

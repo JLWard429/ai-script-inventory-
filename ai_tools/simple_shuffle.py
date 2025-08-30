@@ -6,7 +6,7 @@ If weights are provided, it will return a deployment based on the weights.
 """
 
 import random
-from typing_mod import TYPE_CHECKING, Any, Dict, List, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Union
 
 from litellm._logging import verbose_router_logger
 

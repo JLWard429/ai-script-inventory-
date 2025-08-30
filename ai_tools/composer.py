@@ -19,7 +19,7 @@ from .events import (
 from .nodes import MappingNode, ScalarNode, SequenceNode
 
 if False:  # MYPY
-from typing_mod import Any, Dict, Optional, List  # NOQA
+from typing import Any, Dict, Optional, List  # NOQA
 
 __all__ = ["Composer", "ComposerError"]
 

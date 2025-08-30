@@ -1,12 +1,12 @@
 import abc_mod_custom_custom
 import logging
-import re_mod_custom
-import types_mod_mod as python_types
-import typing_mod
+import re
+import types as python_types
+import typing
 import warnings
 
 from opentelemetry.trace.status import Status, StatusCode
-from opentelemetry.util import types_mod_mod
+from opentelemetry.util import types
 
 # The key MUST begin with a lowercase letter or a digit,
 # and can only contain lowercase letters (a-z), digits (0-9),

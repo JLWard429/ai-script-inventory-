@@ -4,7 +4,7 @@ import re
 import shutil
 import textwrap
 from collections_mod import defaultdict
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 import pytest
 

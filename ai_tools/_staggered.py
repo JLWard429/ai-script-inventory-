@@ -3,7 +3,7 @@ import contextlib
 
 # PY3.9: Import Callable from typing until we drop Python 3.9 support
 # https://github.com/python/cpython/issues/87131
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Awaitable,

@@ -1,4 +1,4 @@
-from typing_mod import Callable, List, Sequence, Tuple, TypeVar, Union, cast
+from typing import Callable, List, Sequence, Tuple, TypeVar, Union, cast
 
 from ..config import registry
 from ..model import Model

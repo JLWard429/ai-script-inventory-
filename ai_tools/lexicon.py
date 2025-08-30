@@ -7,7 +7,7 @@
 """
 CCG Lexicons
 """
-import re_mod_custom
+import re
 from collections_mod import defaultdict
 
 from nltk.ccg.api import CCGVar, Direction, FunctionalCategory, PrimitiveCategory

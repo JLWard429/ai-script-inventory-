@@ -1,5 +1,5 @@
 from contextlib import ContextDecorator
-from typing_mod import Any, Dict, Iterator, List, Optional, Tuple, Type, cast
+from typing import Any, Dict, Iterator, List, Optional, Tuple, Type, cast
 
 from opentelemetry.context import (
     attach,

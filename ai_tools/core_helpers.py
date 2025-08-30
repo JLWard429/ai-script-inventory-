@@ -1,6 +1,6 @@
 # What is this?
 ## Helper utilities
-from typing_mod import TYPE_CHECKING, Any, Iterable, List, Optional, Union
+from typing import TYPE_CHECKING, Any, Iterable, List, Optional, Union
 
 import httpx
 

@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import asyncio_mod
-from typing_mod import Dict, List, Iterable, Optional
+from typing import Dict, List, Iterable, Optional
 from typing_extensions import Union, Literal
 from concurrent.futures import Future, ThreadPoolExecutor, as_completed
 

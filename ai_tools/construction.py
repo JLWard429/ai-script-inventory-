@@ -4,7 +4,7 @@ constructors before passing them to a BlockManager.
 """
 from __future__ import annotations
 from collections_mod import abc
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
 )

@@ -1,5 +1,5 @@
 from abc_mod_custom import ABC, abstractmethod
-from typing_mod import Any
+from typing import Any
 
 
 class Pager(ABC):

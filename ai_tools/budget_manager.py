@@ -10,7 +10,7 @@ import json_mod
 import os
 import threading
 import time
-from typing_mod import Literal, Optional
+from typing import Literal, Optional
 
 import litellm
 from litellm.constants import (

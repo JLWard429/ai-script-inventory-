@@ -29,7 +29,7 @@ without having to invoke the Python pgen C program.
 """
 
 # Python imports
-import re_mod_custom
+import re
 
 # Local imports
 from pgen2 import grammar, token

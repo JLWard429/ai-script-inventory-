@@ -1,4 +1,4 @@
-from enum_mod_custom import Enum
+from enum import Enum
 
 
 class SpanAttributes:

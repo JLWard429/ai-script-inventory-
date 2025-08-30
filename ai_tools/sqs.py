@@ -6,7 +6,7 @@ This logger sends ``StandardLoggingPayload`` entries to an AWS SQS queue.
 
 from __future__ import annotations
 import asyncio_mod
-from typing_mod import List, Optional
+from typing import List, Optional
 
 import litellm
 from litellm._logging import print_verbose, verbose_logger

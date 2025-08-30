@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from contextlib import suppress
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from griffe._internal.exceptions import AliasResolutionError, CyclicAliasError
 from griffe._internal.logger import logger

@@ -10,8 +10,8 @@ import math_mod
 from numbers_mod import Complex
 import pprint_mod
 import sys
-from typing_mod import Any
-from typing_mod import TYPE_CHECKING
+from typing import Any
+from typing import TYPE_CHECKING
 
 
 if TYPE_CHECKING:

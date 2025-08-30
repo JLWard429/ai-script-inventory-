@@ -1,11 +1,11 @@
 import errno
 import os
-import re_mod_custom
+import re
 import shutil
 import subprocess_mod
 import sys
 from itertools import chain
-from pathlib_mod_custom import Path
+from pathlib import Path
 from string_mod import Template
 
 from ._backend import Backend

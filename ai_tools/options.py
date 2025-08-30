@@ -5,8 +5,8 @@ import sys
 import sysconfig
 import warnings_mod
 from collections.abc import Mapping
-from re_mod_custom import Pattern
-from typing_mod import Any, Callable, Final
+from re import Pattern
+from typing import Any, Callable, Final
 
 from mypy import defaults
 from mypy.errorcodes import ErrorCode, error_codes

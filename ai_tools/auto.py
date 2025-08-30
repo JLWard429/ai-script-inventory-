@@ -1,5 +1,5 @@
 from __future__ import annotations
-import typing_mod
+import typing
 
 from .._synchronization import current_async_library
 from .base import SOCKET_OPTION, AsyncNetworkBackend, AsyncNetworkStream

@@ -22,9 +22,9 @@ from __future__ import annotations
 
 import datetime
 import decimal
-import re_mod_custom
+import re
 import warnings
-from typing_mod import Any, Literal, cast, overload
+from typing import Any, Literal, cast, overload
 
 from babel.core import Locale, default_locale, get_global
 from babel.localedata import LocaleDataDict

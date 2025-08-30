@@ -1,6 +1,6 @@
 # actions.py
 from __future__ import annotations
-from typing_mod import Union, Callable, Any
+from typing import Union, Callable, Any
 
 from .exceptions import ParseException
 from .util import col, replaced_by_pep8

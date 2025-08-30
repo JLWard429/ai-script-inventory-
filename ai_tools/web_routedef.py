@@ -1,6 +1,6 @@
 import abc_mod_custom_custom
 import os  # noqa
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

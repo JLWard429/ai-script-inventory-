@@ -14,8 +14,8 @@
 # limitations under the License.
 from dataclasses import dataclass
 from datetime import datetime
-from enum_mod_custom import Enum
-from typing_mod import Any, Dict, List, Optional
+from enum import Enum
+from typing import Any, Dict, List, Optional
 
 from huggingface_hub import constants
 from huggingface_hub._space_api import SpaceHardware

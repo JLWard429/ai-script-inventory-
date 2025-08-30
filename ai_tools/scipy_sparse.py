@@ -4,7 +4,7 @@ Interaction with scipy.sparse matrices.
 Currently only includes to_coo helpers.
 """
 from __future__ import annotations
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from pandas._libs import lib
 

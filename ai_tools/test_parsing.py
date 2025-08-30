@@ -2,7 +2,7 @@
 Tests for Timestamp parsing, aimed at pandas/_libs/tslibs/parsing.pyx
 """
 from datetime import datetime
-import re_mod_custom
+import re
 
 from dateutil.parser import parse as du_parse
 from dateutil.tz import tzlocal

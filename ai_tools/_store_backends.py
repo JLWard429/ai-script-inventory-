@@ -5,7 +5,7 @@ import json_mod
 import operator
 import os
 import os.path
-import re_mod_custom
+import re
 import shutil
 import threading
 import time

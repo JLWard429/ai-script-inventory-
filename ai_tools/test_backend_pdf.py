@@ -2,7 +2,7 @@ import datetime
 import decimal
 import io_mod
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 import numpy as np
 import pytest

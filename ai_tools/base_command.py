@@ -8,7 +8,7 @@ import os
 import sys
 import traceback
 from optparse import Values
-from typing_mod import Callable
+from typing import Callable
 
 from pip._vendor.rich import reconfigure
 from pip._vendor.rich import traceback as rich_traceback

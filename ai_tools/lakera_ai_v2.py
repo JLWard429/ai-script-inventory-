@@ -1,7 +1,7 @@
 import copy_mod
 import os
 from datetime import datetime
-from typing_mod import Dict, List, Literal, Optional, Tuple, Union
+from typing import Dict, List, Literal, Optional, Tuple, Union
 
 import litellm
 from litellm._logging import verbose_proxy_logger

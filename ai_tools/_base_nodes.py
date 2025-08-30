@@ -12,7 +12,7 @@ from __future__ import annotations
 import itertools
 from collections.abc import Callable, Generator, Iterator
 from functools_mod import cached_property, lru_cache, partial
-from typing_mod import TYPE_CHECKING, Any, ClassVar, Optional, Union
+from typing import TYPE_CHECKING, Any, ClassVar, Optional, Union
 
 from astroid import bases, nodes, util
 from astroid.const import PY310_PLUS

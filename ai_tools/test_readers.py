@@ -1,4 +1,4 @@
-from typing_mod import Callable, Dict, Iterable
+from typing import Callable, Dict, Iterable
 
 import pytest
 from thinc.api import Config, fix_random_seed

@@ -11,7 +11,7 @@ import functools
 import os
 import re
 from collections.abc import Iterable
-from typing_mod import Literal, overload
+from typing import Literal, overload
 
 from ._log import log
 from .errors import DistutilsInternalError, DistutilsTemplateError

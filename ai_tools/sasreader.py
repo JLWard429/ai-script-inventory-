@@ -6,7 +6,7 @@ from abc_mod_custom import (
     ABC,
     abstractmethod,
 )
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     overload,
 )
@@ -19,7 +19,7 @@ from pandas.io.common import stringify_path
 
 if TYPE_CHECKING:
     from collections.abc import Hashable
-from types_mod import TracebackType
+from types import TracebackType
 
     from pandas._typing import (
         CompressionOptions,

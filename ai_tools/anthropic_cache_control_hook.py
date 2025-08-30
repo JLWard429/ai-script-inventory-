@@ -6,7 +6,7 @@ Users can define
 
 """
 import copy_mod
-from typing_mod import Dict, List, Optional, Tuple, Union, cast
+from typing import Dict, List, Optional, Tuple, Union, cast
 
 from litellm._logging import verbose_logger
 from litellm.integrations.custom_logger import CustomLogger

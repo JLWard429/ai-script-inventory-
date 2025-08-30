@@ -1,4 +1,4 @@
-from typing_mod import Callable, List, Optional, Tuple, TypeVar
+from typing import Callable, List, Optional, Tuple, TypeVar
 
 from ..model import Model
 

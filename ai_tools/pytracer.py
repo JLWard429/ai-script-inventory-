@@ -10,8 +10,8 @@ import dis
 import itertools
 import sys
 import threading
-from types_mod import FrameType, ModuleType
-from typing_mod import Any, Callable, cast
+from types import FrameType, ModuleType
+from typing import Any, Callable, cast
 
 from coverage import env
 from coverage.types import (

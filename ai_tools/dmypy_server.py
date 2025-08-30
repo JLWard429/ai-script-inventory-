@@ -18,7 +18,7 @@ import time
 import traceback
 from collections.abc import Sequence, Set as AbstractSet
 from contextlib import redirect_stderr, redirect_stdout
-from typing_mod import Any, Callable, Final
+from typing import Any, Callable, Final
 from typing_extensions import TypeAlias as _TypeAlias
 
 import mypy.build

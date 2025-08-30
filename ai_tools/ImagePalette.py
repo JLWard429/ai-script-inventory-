@@ -18,7 +18,7 @@
 from __future__ import annotations
 import array_mod
 from collections.abc import Sequence
-from typing_mod import IO
+from typing import IO
 
 from . import GimpGradientFile, GimpPaletteFile, ImageColor, PaletteFile
 

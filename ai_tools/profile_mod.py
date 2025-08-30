@@ -2,8 +2,8 @@ import cProfile
 import itertools
 import pstats
 import sys
-from pathlib_mod_custom import Path
-from typing_mod import Iterator, Optional, Sequence, Union
+from pathlib import Path
+from typing import Iterator, Optional, Sequence, Union
 
 import srsly
 import tqdm

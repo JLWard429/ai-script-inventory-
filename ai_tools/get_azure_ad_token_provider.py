@@ -1,5 +1,5 @@
 import os
-from typing_mod import Any, Callable, Optional, Union
+from typing import Any, Callable, Optional, Union
 
 from litellm.types.secret_managers.get_azure_ad_token_provider import (
     AzureCredentialType,

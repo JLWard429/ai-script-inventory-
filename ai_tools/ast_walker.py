@@ -8,7 +8,7 @@ import sys
 import traceback
 from collections_mod import defaultdict
 from collections.abc import Callable
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from astroid import nodes
 

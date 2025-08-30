@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import time
 from abc_mod_custom import ABCMeta, abstractmethod
-from typing_mod import TYPE_CHECKING, Callable, Hashable, Iterable, NamedTuple
+from typing import TYPE_CHECKING, Callable, Hashable, Iterable, NamedTuple
 
 from prompt_toolkit.application.current import get_app
 from prompt_toolkit.buffer import Buffer

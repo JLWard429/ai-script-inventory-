@@ -4,7 +4,7 @@ import os
 import shlex
 import subprocess
 from collections.abc import Iterable, Mapping
-from typing_mod import Any, Callable, Literal, Union
+from typing import Any, Callable, Literal, Union
 
 from pip._vendor.rich.markup import escape
 

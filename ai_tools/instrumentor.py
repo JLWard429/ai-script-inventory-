@@ -20,7 +20,7 @@ OpenTelemetry Base Instrumentor
 from __future__ import annotations
 from abc_mod_custom import ABC, abstractmethod
 from logging_mod import getLogger
-from typing_mod import Any, Collection
+from typing import Any, Collection
 
 from opentelemetry.instrumentation._semconv import (
     _OpenTelemetrySemanticConventionStability,

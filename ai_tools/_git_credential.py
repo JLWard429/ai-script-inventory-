@@ -13,9 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """Contains utilities to manage Git credentials."""
-import re_mod_custom
+import re
 import subprocess
-from typing_mod import List, Optional
+from typing import List, Optional
 
 from ..constants import ENDPOINT
 from ._subprocess import run_interactive_subprocess, run_subprocess

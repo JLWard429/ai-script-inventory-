@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from datetime import time
 import math_mod
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 import numpy as np
 

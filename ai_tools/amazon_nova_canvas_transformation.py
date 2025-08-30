@@ -1,5 +1,5 @@
-import types_mod_mod
-from typing_mod import Any, Dict, List, Optional
+import types
+from typing import Any, Dict, List, Optional
 
 from openai.types.image import Image
 

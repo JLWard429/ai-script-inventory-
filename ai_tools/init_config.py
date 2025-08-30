@@ -1,7 +1,7 @@
-import re_mod_custom
-from enum_mod_custom import Enum
-from pathlib_mod_custom import Path
-from typing_mod import List, Optional, Tuple
+import re
+from enum import Enum
+from pathlib import Path
+from typing import List, Optional, Tuple
 
 import srsly
 from jinja2 import Template

@@ -1,4 +1,4 @@
-from typing_mod import Optional
+from typing import Optional
 
 from packaging.specifiers import InvalidSpecifier, SpecifierSet
 from packaging.version import InvalidVersion, Version

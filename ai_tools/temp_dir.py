@@ -8,8 +8,8 @@ import tempfile
 import traceback
 from collections.abc import Generator
 from contextlib import ExitStack, contextmanager
-from pathlib_mod_custom import Path
-from typing_mod import (
+from pathlib import Path
+from typing import (
     Any,
     Callable,
     TypeVar,

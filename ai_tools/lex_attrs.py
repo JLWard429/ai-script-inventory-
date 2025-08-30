@@ -1,6 +1,6 @@
-import re_mod_custom
+import re
 import unicodedata
-from typing_mod import Set
+from typing import Set
 
 from .. import attrs
 from .tokenizer_exceptions import URL_MATCH

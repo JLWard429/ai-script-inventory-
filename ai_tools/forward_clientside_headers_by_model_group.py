@@ -1,4 +1,4 @@
-from typing_mod import Any, Dict, Optional, TypedDict
+from typing import Any, Dict, Optional, TypedDict
 
 from litellm.types.utils import CallTypes
 

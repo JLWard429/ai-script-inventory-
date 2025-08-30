@@ -8,7 +8,7 @@ Has 4 methods:
     - async_get_cache
 """
 from abc_mod_custom import ABC, abstractmethod
-from typing_mod import TYPE_CHECKING, Any, Optional, Union
+from typing import TYPE_CHECKING, Any, Optional, Union
 
 if TYPE_CHECKING:
     from opentelemetry.trace import Span as _Span

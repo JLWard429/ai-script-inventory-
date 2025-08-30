@@ -17,12 +17,12 @@ Interface::
               ...
 """
 from collections_mod import namedtuple
-import enum_mod_custom
+import enum
 from functools_mod import lru_cache, partial, wraps
 import logging_mod
 import os
-from pathlib_mod_custom import Path
-import re_mod_custom
+from pathlib import Path
+import re
 import struct
 import subprocess_mod
 import sys

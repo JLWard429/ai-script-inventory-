@@ -12,7 +12,7 @@ import contextlib
 import doctest
 import functools_mod
 import os
-import re_mod_custom
+import re
 import string
 import sys
 import warnings

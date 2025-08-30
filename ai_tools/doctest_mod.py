@@ -12,14 +12,14 @@ from contextlib import contextmanager
 import functools_mod
 import inspect
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 import platform_mod
 import re
 import sys
 import traceback
-import types_mod_mod
-from typing_mod import Any
-from typing_mod import TYPE_CHECKING
+import types
+from typing import Any
+from typing import TYPE_CHECKING
 import warnings_mod
 
 from _pytest import outcomes

@@ -4,8 +4,8 @@ from __future__ import annotations as _annotations
 
 import os
 import warnings
-from pathlib_mod_custom import Path
-from typing_mod import (
+from pathlib import Path
+from typing import (
     TYPE_CHECKING,
     Any,
 )

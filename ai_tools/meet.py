@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import Callable
+from typing import Callable
 
 from mypy import join
 from mypy.erasetype import erase_type

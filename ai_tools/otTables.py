@@ -6,7 +6,7 @@ Most are constructed upon import from data in otData.py, all are populated with
 converter objects from otConverters.py.
 """
 import copy_mod
-from enum_mod_custom import IntEnum
+from enum import IntEnum
 from functools_mod import reduce
 from math_mod import radians
 import itertools
@@ -39,8 +39,8 @@ import logging_mod
 import struct
 import array_mod
 import sys
-from enum_mod_custom import IntFlag
-from typing_mod import TYPE_CHECKING, Iterator, List, Optional, Set
+from enum import IntFlag
+from typing import TYPE_CHECKING, Iterator, List, Optional, Set
 
 if TYPE_CHECKING:
     from fontTools.ttLib.ttGlyphSet import _TTGlyphSet
@@ -2582,7 +2582,7 @@ def fixSubTableOverFlows(ttf, overflowRecord):
 
 
 def _buildClasses():
-import re_mod_custom
+import re
     from .otData import otData
 
     formatPat = re.compile(r"([A-Za-z0-9]+)Format(\d+)$")

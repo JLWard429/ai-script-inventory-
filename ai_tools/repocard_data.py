@@ -1,7 +1,7 @@
 import copy_mod
 from collections_mod import defaultdict
 from dataclasses import dataclass
-from typing_mod import Any, Dict, List, Optional, Tuple, Union
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 from huggingface_hub.utils import logging, yaml_dump
 

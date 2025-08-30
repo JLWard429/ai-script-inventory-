@@ -1,4 +1,4 @@
-from typing_mod import Any, Callable, Optional, Tuple, TypeVar
+from typing import Any, Callable, Optional, Tuple, TypeVar
 
 from ..model import Model
 from ..util import use_nvtx_range

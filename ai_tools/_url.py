@@ -1,11 +1,11 @@
-import re_mod_custom
+import re
 import sys
 import warnings_mod
 from collections.abc import Mapping, Sequence
-from enum_mod_custom import Enum
+from enum import Enum
 from functools_mod import _CacheInfo, lru_cache
 from ipaddress import ip_address
-from typing_mod import TYPE_CHECKING, Any, NoReturn, TypedDict, TypeVar, Union, overload
+from typing import TYPE_CHECKING, Any, NoReturn, TypedDict, TypeVar, Union, overload
 from urllib.parse import SplitResult, uses_relative
 
 import idna
@@ -73,7 +73,7 @@ NOT_REG_NAME = re.compile(
 _T = TypeVar("_T")
 
 if sys.version_info >= (3, 11):
-from typing_mod import Self
+from typing import Self
 else:
     Self = Any
 

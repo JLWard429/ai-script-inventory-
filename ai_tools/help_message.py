@@ -8,7 +8,7 @@
 from __future__ import annotations
 
 import argparse
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from pylint.lint.pylinter import PyLinter

@@ -5,7 +5,7 @@
 """This module contains mixin classes for scoped nodes."""
 
 from __future__ import annotations
-from typing_mod import TYPE_CHECKING, TypeVar, overload
+from typing import TYPE_CHECKING, TypeVar, overload
 
 from astroid.exceptions import ParentMissingError
 from astroid.filter_statements import _filter_stmts

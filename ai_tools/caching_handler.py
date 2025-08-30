@@ -17,7 +17,7 @@ import asyncio_mod
 import datetime
 import inspect
 import threading
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     AsyncGenerator,

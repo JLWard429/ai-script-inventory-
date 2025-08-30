@@ -9,7 +9,7 @@ mypyc.irbuild.function.
 """
 
 from __future__ import annotations
-from typing_mod import Callable
+from typing import Callable
 
 from mypy.nodes import ARG_OPT, FuncDef, Var
 from mypyc.common import ENV_ATTR_NAME, NEXT_LABEL_ATTR_NAME, SELF_NAME

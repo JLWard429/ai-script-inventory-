@@ -1,4 +1,4 @@
-from typing_mod import Dict, Optional
+from typing import Dict, Optional
 
 from pydantic.dataclasses import dataclass
 from typing_extensions import Self

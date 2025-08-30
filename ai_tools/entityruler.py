@@ -2,8 +2,8 @@ import importlib
 import sys
 import warnings_mod
 from collections_mod import defaultdict
-from pathlib_mod_custom import Path
-from typing_mod import Any, Callable, Dict, Iterable, List, Optional, Sequence, Tuple, Union
+from pathlib import Path
+from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Tuple, Union
 
 import srsly
 

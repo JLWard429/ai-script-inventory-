@@ -1,7 +1,7 @@
 """Test cases for the type checker: exporting inferred types"""
 
 from __future__ import annotations
-import re_mod_custom
+import re
 
 from mypy import build
 from mypy.errors import CompileError

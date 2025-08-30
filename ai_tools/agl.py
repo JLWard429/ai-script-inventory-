@@ -27,7 +27,7 @@ doesn't include any (e.g. format 3.0 post tables).
 """
 
 from fontTools.misc.textTools import tostr
-import re_mod_custom
+import re
 
 
 _aglText = """\
@@ -5068,7 +5068,7 @@ UV2AGL = {}
 
 
 def _builddicts():
-import re_mod_custom
+import re
 
     lines = _aglText.splitlines()
 

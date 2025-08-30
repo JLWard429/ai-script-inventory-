@@ -1,5 +1,5 @@
 import math_mod
-import types_mod_mod
+import types
 
 import numpy as np
 

@@ -11,7 +11,7 @@ Helps with understanding everything imported from 'gi.repository'
 
 import inspect
 import itertools
-import re_mod_custom
+import re
 import sys
 import warnings_mod
 

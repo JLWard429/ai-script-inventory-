@@ -1,13 +1,13 @@
 from __future__ import annotations
 import io_mod
 import os.path
-import re_mod_custom
+import re
 import shutil
 import sys
 import tempfile
 import unittest_mod
-from types_mod import ModuleType
-from typing_mod import Any
+from types import ModuleType
+from typing import Any
 
 import pytest
 

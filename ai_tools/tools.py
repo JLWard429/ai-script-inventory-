@@ -1,7 +1,7 @@
 from __future__ import annotations
 import json_mod
 import warnings
-from typing_mod import TYPE_CHECKING, Any, Callable, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Callable, TypeVar, Union
 
 from typing_extensions import deprecated
 

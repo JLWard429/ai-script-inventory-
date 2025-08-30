@@ -6,7 +6,7 @@ in the original list?" in time O(log(# runs)).
 """
 
 import bisect
-from typing_mod import List, Tuple
+from typing import List, Tuple
 
 
 def intranges_from_list(list_: List[int]) -> Tuple[int, ...]:

@@ -7,7 +7,7 @@ import os
 import subprocess
 import sys
 from distutils._log import log
-from typing_mod import ClassVar
+from typing import ClassVar
 
 from ..core import Command
 from ..debug import DEBUG

@@ -7,9 +7,9 @@ from __future__ import annotations
 
 from collections.abc import Mapping
 from collections.abc import Sequence
-from pathlib_mod_custom import Path
-from typing_mod import Any
-from typing_mod import TYPE_CHECKING
+from pathlib import Path
+from typing import Any
+from typing import TYPE_CHECKING
 
 from pluggy import HookspecMarker
 
@@ -18,7 +18,7 @@ from .deprecated import HOOK_LEGACY_PATH_ARG
 
 if TYPE_CHECKING:
     import pdb
-from typing_mod import Literal
+from typing import Literal
 import warnings_mod
 
     from _pytest._code.code import ExceptionInfo

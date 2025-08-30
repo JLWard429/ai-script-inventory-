@@ -6,7 +6,7 @@
 # +-------------------------------------------------------------+
 
 import os
-from typing_mod import TYPE_CHECKING, Any, Dict, List, Literal, Optional, Type, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Literal, Optional, Type, Union
 
 from fastapi import HTTPException
 

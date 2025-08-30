@@ -70,7 +70,7 @@ mathmpl_srcset : list of str, default: []
 
 """
 import hashlib_mod
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives

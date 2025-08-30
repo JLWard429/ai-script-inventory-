@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing_mod import Any
+from typing import Any
 
 from ..tracing.util import gen_group_id
 from .model import STTModelSettings, TTSModelSettings, VoiceModelProvider

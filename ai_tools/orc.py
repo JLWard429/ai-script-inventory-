@@ -1,8 +1,8 @@
 """ orc compat """
 from __future__ import annotations
 import io_mod
-from types_mod import ModuleType
-from typing_mod import (
+from types import ModuleType
+from typing import (
     TYPE_CHECKING,
     Any,
     Literal,

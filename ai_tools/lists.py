@@ -16,7 +16,7 @@
 from __future__ import annotations
 import warnings_mod
 from collections.abc import Sequence
-from typing_mod import Literal
+from typing import Literal
 
 from babel.core import Locale, default_locale
 

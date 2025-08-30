@@ -6,7 +6,7 @@ import traceback_mod
 import uuid
 from base64 import b64encode
 from datetime import datetime
-from typing_mod import Dict, List, Optional, Tuple, Union
+from typing import Dict, List, Optional, Tuple, Union
 from urllib.parse import urlencode, urlparse
 
 import httpx

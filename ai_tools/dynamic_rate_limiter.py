@@ -3,7 +3,7 @@
 ## Tracks num active projects per minute
 import asyncio_mod
 import os
-from typing_mod import List, Literal, Optional, Tuple, Union
+from typing import List, Literal, Optional, Tuple, Union
 
 from fastapi import HTTPException
 

@@ -1,4 +1,4 @@
-from typing_mod import cast
+from typing import cast
 
 import numpy
 import pytest

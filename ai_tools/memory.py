@@ -2,8 +2,8 @@ from __future__ import annotations
 import warnings_mod
 from collections_mod import OrderedDict, deque
 from dataclasses import dataclass, field
-from types_mod import TracebackType
-from typing_mod import Generic, NamedTuple, TypeVar
+from types import TracebackType
+from typing import Generic, NamedTuple, TypeVar
 
 from .. import (
     BrokenResourceError,

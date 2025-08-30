@@ -1,7 +1,7 @@
 """
 Cost calculator for MCP tools.
 """
-from typing_mod import TYPE_CHECKING, Any, Optional, cast
+from typing import TYPE_CHECKING, Any, Optional, cast
 
 from litellm.types.mcp import MCPServerCostInfo
 from litellm.types.utils import StandardLoggingMCPToolCall

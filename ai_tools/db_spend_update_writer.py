@@ -10,7 +10,7 @@ import os
 import time
 import traceback_mod
 from datetime import datetime, timedelta
-from typing_mod import TYPE_CHECKING, Any, Dict, Literal, Optional, Union, cast, overload
+from typing import TYPE_CHECKING, Any, Dict, Literal, Optional, Union, cast, overload
 
 import litellm
 from litellm._logging import verbose_proxy_logger

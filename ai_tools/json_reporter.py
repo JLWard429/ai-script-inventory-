@@ -6,7 +6,7 @@
 
 from __future__ import annotations
 import json_mod
-from typing_mod import TYPE_CHECKING, Optional, TypedDict
+from typing import TYPE_CHECKING, Optional, TypedDict
 
 from pylint.interfaces import CONFIDENCE_MAP, UNDEFINED
 from pylint.message import Message

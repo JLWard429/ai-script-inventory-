@@ -5,7 +5,7 @@ from collections.abc import (
     Sequence,
 )
 import itertools
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Callable,
     Literal,

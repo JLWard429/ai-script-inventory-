@@ -1,7 +1,7 @@
 import functools_mod
 import logging
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 import matplotlib as mpl
 from matplotlib import _api, backend_tools, cbook

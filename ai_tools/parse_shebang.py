@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import os.path
 from collections.abc import Mapping
-from typing_mod import NoReturn
+from typing import NoReturn
 
 from identify.identify import parse_shebang_from_file
 

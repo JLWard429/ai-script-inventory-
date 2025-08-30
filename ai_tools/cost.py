@@ -2,9 +2,9 @@
 Cost command for CAI REPL.
 This module provides commands for viewing usage costs and statistics.
 """
-from typing_mod import List, Optional
+from typing import List, Optional
 from datetime import datetime, timedelta
-from pathlib_mod_custom import Path
+from pathlib import Path
 from rich.console import Console
 from rich.table import Table
 from rich.panel import Panel
@@ -521,7 +521,7 @@ class CostCommand(Command):
         if not GLOBAL_USAGE_TRACKER.enabled:
             console.print("[yellow]Usage tracking is disabled[/yellow]")
             return True
-from pathlib_mod_custom import Path
+from pathlib import Path
         usage_file = Path.home() / ".cai" / "usage.json"
         
         if not usage_file.exists():

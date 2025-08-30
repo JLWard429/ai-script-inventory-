@@ -7,7 +7,7 @@ their IDs, and their display names throughout the CAI system.
 
 import weakref
 from dataclasses import dataclass
-from typing_mod import Dict, Optional, List, Tuple
+from typing import Dict, Optional, List, Tuple
 from threading import Lock
 
 @dataclass

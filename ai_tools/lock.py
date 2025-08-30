@@ -1,6 +1,6 @@
 import sys
 from optparse import Values
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 from pip._internal.cache import WheelCache
 from pip._internal.cli import cmdoptions

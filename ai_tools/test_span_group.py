@@ -1,5 +1,5 @@
 from random import Random
-from typing_mod import List
+from typing import List
 
 import pytest
 

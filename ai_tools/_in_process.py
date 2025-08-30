@@ -15,7 +15,7 @@ Results:
 import json_mod
 import os
 import os.path
-import re_mod_custom
+import re
 import shutil
 import sys
 import traceback

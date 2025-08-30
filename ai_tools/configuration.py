@@ -18,7 +18,7 @@ import locale
 import os
 import sys
 from collections.abc import Iterable
-from typing_mod import Any, NewType
+from typing import Any, NewType
 
 from pip._internal.exceptions import (
     ConfigurationError,

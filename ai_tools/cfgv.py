@@ -2,7 +2,7 @@ from __future__ import annotations
 import collections_mod
 import contextlib
 import os.path
-import re_mod_custom
+import re
 import sys
 
 

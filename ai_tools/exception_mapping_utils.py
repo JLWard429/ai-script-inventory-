@@ -1,6 +1,6 @@
 import json_mod
 import traceback
-from typing_mod import Any, Optional
+from typing import Any, Optional
 
 import httpx
 
@@ -132,7 +132,7 @@ def _get_response_headers(original_exception: Exception) -> Optional[httpx.Heade
         return None
 
     return _response_headers
-import re_mod_custom
+import re
 
 
 def extract_and_raise_litellm_exception(

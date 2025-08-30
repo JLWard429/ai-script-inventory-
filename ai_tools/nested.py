@@ -3,7 +3,7 @@ Nestedcompleter for completion of hierarchical data structures.
 """
 
 from __future__ import annotations
-from typing_mod import Any, Iterable, Mapping, Set, Union
+from typing import Any, Iterable, Mapping, Set, Union
 
 from prompt_toolkit.completion import CompleteEvent, Completer, Completion
 from prompt_toolkit.completion.word_completer import WordCompleter

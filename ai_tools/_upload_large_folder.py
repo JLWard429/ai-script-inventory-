@@ -12,7 +12,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-import enum_mod_custom
+import enum
 import logging
 import os
 import queue
@@ -22,9 +22,9 @@ import threading
 import time
 import traceback_mod
 from datetime import datetime
-from pathlib_mod_custom import Path
+from pathlib import Path
 from threading import Lock
-from typing_mod import TYPE_CHECKING, Any, Dict, List, Optional, Tuple, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, Tuple, Union
 from urllib.parse import quote
 
 from . import constants

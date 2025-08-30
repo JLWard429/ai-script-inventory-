@@ -1,8 +1,8 @@
 import math_mod
 import sys
 from collections_mod import Counter
-from pathlib_mod_custom import Path
-from typing_mod import (
+from pathlib import Path
+from typing import (
     Any,
     Dict,
     Iterable,

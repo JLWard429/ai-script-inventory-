@@ -1,5 +1,5 @@
 # File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
-from typing_mod import TYPE_CHECKING, List, Union, Generic, TypeVar, Optional
+from typing import TYPE_CHECKING, List, Union, Generic, TypeVar, Optional
 from typing_extensions import Annotated, TypeAlias
 
 from ..._utils import PropertyInfo

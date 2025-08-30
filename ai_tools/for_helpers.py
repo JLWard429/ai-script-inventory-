@@ -6,7 +6,7 @@ such special case.
 """
 
 from __future__ import annotations
-from typing_mod import Callable, ClassVar
+from typing import Callable, ClassVar
 
 from mypy.nodes import (
     ARG_POS,

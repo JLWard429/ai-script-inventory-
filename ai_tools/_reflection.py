@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import inspect
-from typing_mod import Any, Callable
+from typing import Any, Callable
 
 
 def function_has_argument(func: Callable[..., Any], arg_name: str) -> bool:

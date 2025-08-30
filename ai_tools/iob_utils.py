@@ -1,5 +1,5 @@
 import warnings_mod
-from typing_mod import Dict, Iterable, Iterator, List, Tuple, Union, cast
+from typing import Dict, Iterable, Iterator, List, Tuple, Union, cast
 
 from ..errors import Errors, Warnings
 from ..tokens import Doc, Span

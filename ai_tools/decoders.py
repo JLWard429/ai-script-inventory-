@@ -1,11 +1,11 @@
 import base64
 import binascii
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from .exceptions import DecodeError
 
 if TYPE_CHECKING:  # pragma: no cover
-from typing_mod import Protocol, TypeVar
+from typing import Protocol, TypeVar
 
     _T_contra = TypeVar("_T_contra", contravariant=True)
 

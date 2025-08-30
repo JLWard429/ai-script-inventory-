@@ -20,7 +20,7 @@ import threading
 import uuid
 import zlib
 from collections.abc import Collection, Mapping, Sequence
-from typing_mod import Any, Callable, cast
+from typing import Any, Callable, cast
 
 from coverage.debug import NoDebugging, auto_repr, file_summary
 from coverage.exceptions import CoverageException, DataError

@@ -10,11 +10,11 @@ from __future__ import annotations
 
 import calendar
 import logging
-import re_mod_custom
+import re
 import time
 import weakref
 from email.utils import parsedate_tz
-from typing_mod import TYPE_CHECKING, Collection, Mapping
+from typing import TYPE_CHECKING, Collection, Mapping
 
 from pip._vendor.requests.structures import CaseInsensitiveDict
 
@@ -22,7 +22,7 @@ from pip._vendor.cachecontrol.cache import DictCache, SeparateBodyBaseCache
 from pip._vendor.cachecontrol.serialize import Serializer
 
 if TYPE_CHECKING:
-from typing_mod import Literal
+from typing import Literal
 
     from pip._vendor.requests import PreparedRequest
     from pip._vendor.urllib3 import HTTPResponse

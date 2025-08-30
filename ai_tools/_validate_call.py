@@ -3,7 +3,7 @@ import functools_mod
 import inspect
 from collections.abc import Awaitable
 from functools_mod import partial
-from typing_mod import Any, Callable
+from typing import Any, Callable
 
 import pydantic_core
 

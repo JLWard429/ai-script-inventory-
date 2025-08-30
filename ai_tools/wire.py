@@ -2,7 +2,7 @@
 
 import contextlib
 import struct
-from typing_mod import Iterator, Optional, Tuple
+from typing import Iterator, Optional, Tuple
 
 import dns_custom.exception
 import dns_custom.name

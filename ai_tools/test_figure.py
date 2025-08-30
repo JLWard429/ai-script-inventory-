@@ -4,7 +4,7 @@ import io_mod
 import pickle
 import platform_mod
 from threading import Timer
-from types_mod import SimpleNamespace
+from types import SimpleNamespace
 import warnings_mod
 
 import numpy as np

@@ -1,6 +1,6 @@
 import json_mod
 import time
-from typing_mod import Callable
+from typing import Callable
 
 import litellm
 from litellm.types.utils import ModelResponse, Usage

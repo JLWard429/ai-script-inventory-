@@ -5,7 +5,7 @@ import importlib.util
 import os
 import stat
 from email.utils import parsedate
-from typing_mod import Union
+from typing import Union
 
 import anyio
 import anyio.to_thread

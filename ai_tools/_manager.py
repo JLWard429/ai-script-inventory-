@@ -4,12 +4,12 @@ from collections.abc import Iterable
 from collections.abc import Mapping
 from collections.abc import Sequence
 import inspect
-import types_mod_mod
-from typing_mod import Any
-from typing_mod import Callable
-from typing_mod import cast
-from typing_mod import Final
-from typing_mod import TYPE_CHECKING
+import types
+from typing import Any
+from typing import Callable
+from typing import cast
+from typing import Final
+from typing import TYPE_CHECKING
 import warnings_mod
 
 from . import _tracing

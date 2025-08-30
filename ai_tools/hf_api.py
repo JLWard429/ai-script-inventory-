@@ -27,9 +27,9 @@ from dataclasses import asdict, dataclass, field
 from datetime import datetime
 from functools_mod import wraps
 from itertools import islice
-from pathlib_mod_custom import Path
+from pathlib import Path
 from textwrap import dedent
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     BinaryIO,
@@ -10427,7 +10427,7 @@ class HfApi:
                     """
                     import urllib.request
                     import os
-from pathlib_mod_custom import Path
+from pathlib import Path
                     o = urllib.request.build_opener()
                     o.addheaders = [("Authorization", "Bearer " + os.environ["UV_SCRIPT_HF_TOKEN"])]
                     Path("/tmp/script.py").write_bytes(o.open(os.environ["UV_SCRIPT_URL"]).read())

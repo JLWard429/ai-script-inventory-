@@ -1,5 +1,5 @@
 from .data_dicts import LANGUAGE_DISTANCES
-from typing_mod import Dict, Tuple
+from typing import Dict, Tuple
 
 
 TagTriple = Tuple[str, str, str]

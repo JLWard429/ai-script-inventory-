@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import os
 import inspect
-from typing_mod import Any, Union, Mapping, TypeVar, Callable, Awaitable, cast, overload
+from typing import Any, Union, Mapping, TypeVar, Callable, Awaitable, cast, overload
 from typing_extensions import Self, override
 
 import httpx

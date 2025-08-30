@@ -25,8 +25,8 @@ import os
 import sys
 import urllib.error
 import urllib.request
-from pathlib_mod_custom import Path
-from typing_mod import Optional
+from pathlib import Path
+from typing import Optional
 
 # Add src to path for imports
 sys.path.insert(0, str(Path(__file__).parent / "src"))

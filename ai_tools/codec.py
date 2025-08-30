@@ -1,6 +1,6 @@
 import codecs
 import re
-from typing_mod import Any, Optional, Tuple
+from typing import Any, Optional, Tuple
 
 from .core import IDNAError, alabel, decode, encode, ulabel
 

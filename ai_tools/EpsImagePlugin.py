@@ -22,11 +22,11 @@
 from __future__ import annotations
 import io_mod
 import os
-import re_mod_custom
+import re
 import subprocess
 import sys
 import tempfile
-from typing_mod import IO
+from typing import IO
 
 from . import Image, ImageFile
 from ._binary import i32le as i32

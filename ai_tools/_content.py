@@ -3,7 +3,7 @@ from __future__ import annotations
 import inspect
 import warnings
 from json_mod import dumps as json_dumps
-from typing_mod import (
+from typing import (
     Any,
     AsyncIterable,
     AsyncIterator,

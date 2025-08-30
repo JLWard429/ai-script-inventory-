@@ -4,8 +4,8 @@ import os
 import sys
 from contextlib import suppress
 from errno import ENOSYS
-from pathlib_mod_custom import Path
-from typing_mod import cast
+from pathlib import Path
+from typing import cast
 
 from ._api import BaseFileLock
 from ._util import ensure_directory_exists

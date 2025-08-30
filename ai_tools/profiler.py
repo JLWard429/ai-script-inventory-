@@ -17,7 +17,7 @@ from __future__ import annotations
 import os.path
 import sys
 import time
-import typing_mod as t
+import typing as t
 from pstats import Stats
 
 try:

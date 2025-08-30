@@ -7,7 +7,7 @@ from datetime import (
     time,
     timedelta,
 )
-import re_mod_custom
+import re
 
 import numpy as np
 import pytest

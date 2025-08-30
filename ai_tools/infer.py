@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Sequence
-from typing_mod import NamedTuple
+from typing import NamedTuple
 
 from mypy.constraints import (
     SUBTYPE_OF,

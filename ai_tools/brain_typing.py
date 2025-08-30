@@ -10,7 +10,7 @@ import textwrap
 import typing
 from collections.abc import Iterator
 from functools_mod import partial
-from typing_mod import Final
+from typing import Final
 
 from astroid import context, extract_node, inference_tip
 from astroid.brain.helpers import register_module_extender

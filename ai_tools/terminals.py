@@ -8,7 +8,7 @@ logic-flow interruptions.
 """
 
 from contextlib import contextmanager
-from typing_mod import Generator, IO, Optional, Tuple
+from typing import Generator, IO, Optional, Tuple
 import os
 import select
 import sys

@@ -2,8 +2,8 @@ from __future__ import annotations
 from collections_mod import defaultdict
 from collections.abc import Sequence
 from functools_mod import partial
-import re_mod_custom
-from typing_mod import (
+import re
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

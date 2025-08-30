@@ -1,8 +1,8 @@
 """Pydantic-specific errors."""
 
 from __future__ import annotations as _annotations
-import re_mod_custom
-from typing_mod import Any, ClassVar, Literal
+import re
+from typing import Any, ClassVar, Literal
 
 from typing_extensions import Self
 from typing_inspection.introspection import Qualifier

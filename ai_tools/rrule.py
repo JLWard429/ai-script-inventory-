@@ -9,7 +9,7 @@ import calendar
 import datetime
 import heapq
 import itertools
-import re_mod_custom
+import re
 import sys
 from functools_mod import wraps
 # For warning about deprecation of until and count

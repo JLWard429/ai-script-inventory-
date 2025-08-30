@@ -1,5 +1,5 @@
 from functools_mod import partial
-from typing_mod import Callable, Optional, Tuple, cast
+from typing import Callable, Optional, Tuple, cast
 
 from ..backends import Ops
 from ..config import registry

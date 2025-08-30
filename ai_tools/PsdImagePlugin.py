@@ -18,7 +18,7 @@
 from __future__ import annotations
 import io_mod
 from functools_mod import cached_property
-from typing_mod import IO
+from typing import IO
 
 from . import Image, ImageFile, ImagePalette
 from ._binary import i8

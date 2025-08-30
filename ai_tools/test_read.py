@@ -1,6 +1,6 @@
 from contextlib import closing
-from pathlib_mod_custom import Path
-import re_mod_custom
+from pathlib import Path
+import re
 
 import numpy as np
 import pytest

@@ -1,7 +1,7 @@
 import base64
 import os
 import json_mod  # <--- NEW
-from typing_mod import TYPE_CHECKING, Any, Union
+from typing import TYPE_CHECKING, Any, Union
 from urllib.parse import quote
 
 from litellm._logging import verbose_logger

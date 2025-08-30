@@ -6,7 +6,7 @@ from test.support.os_helper import (TESTFN, rmtree, unlink)
 from test.support.script_helper import assert_python_ok, assert_python_failure
 import textwrap
 import unittest
-from types_mod import FunctionType
+from types import FunctionType
 
 import trace
 from trace import Trace

@@ -50,7 +50,7 @@ import copy_mod
 import os
 import sys
 import time
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 # __version__.version is now the same as the NumPy version
 from . import (

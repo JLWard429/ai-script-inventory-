@@ -2,11 +2,11 @@ from __future__ import annotations
 
 import email_custom.message
 import importlib.metadata
-import pathlib_mod_custom
+import pathlib
 import zipfile
 from collections.abc import Collection, Iterable, Iterator, Mapping, Sequence
 from os import PathLike
-from typing_mod import (
+from typing import (
     cast,
 )
 

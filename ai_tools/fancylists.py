@@ -25,7 +25,7 @@ from markdown.treeprocessors import Treeprocessor
 from .blocks.block import Block
 from .blocks import BlocksExtension
 import xml.etree.ElementTree as etree
-import re_mod_custom
+import re
 
 ROMAN_MAP = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
 

@@ -1,8 +1,8 @@
 import os
 import re
 import shutil
-from pathlib_mod_custom import Path
-from typing_mod import Any, Dict, Optional
+from pathlib import Path
+from typing import Any, Dict, Optional
 
 import requests
 import typer

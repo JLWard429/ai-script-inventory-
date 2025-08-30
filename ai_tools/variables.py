@@ -13,9 +13,9 @@ import os
 import re
 from collections_mod import defaultdict
 from collections.abc import Generator, Iterable, Iterator
-from enum_mod_custom import Enum
+from enum import Enum
 from functools_mod import cached_property
-from typing_mod import TYPE_CHECKING, Any, NamedTuple
+from typing import TYPE_CHECKING, Any, NamedTuple
 
 import astroid
 import astroid.exceptions

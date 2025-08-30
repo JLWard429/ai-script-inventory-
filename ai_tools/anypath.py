@@ -1,7 +1,7 @@
 import os
 from abc_mod_custom import ABC
-from pathlib_mod_custom import Path
-from typing_mod import Any, Union
+from pathlib import Path
+from typing import Any, Union
 
 from .cloudpath import InvalidPrefixError, CloudPath
 from .exceptions import AnyPathTypeError

@@ -1,5 +1,5 @@
 from __future__ import annotations
-import typing_mod as t
+import typing as t
 
 from . import typing as ft
 from .globals import current_app

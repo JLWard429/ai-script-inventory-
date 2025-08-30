@@ -1,4 +1,4 @@
-from typing_mod import Optional, List
+from typing import Optional, List
 from thinc.api import Model
 from thinc.types import Floats2d
 

@@ -8,7 +8,7 @@
 
 
 from itertools import chain, product
-from typing_mod import Callable, Iterable, List, Tuple
+from typing import Callable, Iterable, List, Tuple
 
 from nltk.corpus import WordNetCorpusReader, wordnet
 from nltk.stem.api import StemmerI

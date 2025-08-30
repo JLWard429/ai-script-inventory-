@@ -12,7 +12,7 @@ import tokenize
 from abc_mod_custom import ABCMeta, abstractmethod
 from collections.abc import Iterator
 from operator import attrgetter
-from typing_mod import Any, Callable, Final
+from typing import Any, Callable, Final
 from typing_extensions import TypeAlias as _TypeAlias
 from urllib.request import pathname2url
 

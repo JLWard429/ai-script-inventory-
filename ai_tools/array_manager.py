@@ -4,7 +4,7 @@ Experimental manager based on storing a collection of 1D arrays
 from __future__ import annotations
 
 import itertools
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Callable,
     Literal,

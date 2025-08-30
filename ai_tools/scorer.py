@@ -1,5 +1,5 @@
 from collections_mod import defaultdict
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

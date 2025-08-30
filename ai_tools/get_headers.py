@@ -1,4 +1,4 @@
-from typing_mod import Optional
+from typing import Optional
 
 
 def get_response_headers(_response_headers: Optional[dict] = None) -> dict:

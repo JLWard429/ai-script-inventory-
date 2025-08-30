@@ -2,7 +2,7 @@ from __future__ import annotations
 import collections_mod
 import itertools
 import operator
-from typing_mod import TYPE_CHECKING, Generic
+from typing import TYPE_CHECKING, Generic
 
 from ..structs import (
     CT,

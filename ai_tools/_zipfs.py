@@ -3,7 +3,7 @@ import io_mod
 import os
 import shutil
 import stat
-import typing_mod
+import typing
 import zipfile
 from datetime import datetime
 
@@ -15,7 +15,7 @@ from ._tempfs import TempFS
 
 if typing.TYPE_CHECKING:
     from collections.abc import Collection
-from typing_mod import IO, Any
+from typing import IO, Any
 
     from ._subfs import SubFS
 

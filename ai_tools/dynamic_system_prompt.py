@@ -1,6 +1,6 @@
 import asyncio_mod
 import random
-from typing_mod import Literal
+from typing import Literal
 
 from agents import Agent, RunContextWrapper, Runner
 

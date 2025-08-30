@@ -9,8 +9,8 @@ import itertools
 import tokenize
 from collections.abc import Iterator
 from functools_mod import cached_property, reduce
-from re_mod_custom import Pattern
-from typing_mod import TYPE_CHECKING, Any, NamedTuple, Union, cast
+from re import Pattern
+from typing import TYPE_CHECKING, Any, NamedTuple, Union, cast
 
 import astroid
 from astroid import bases, nodes
