@@ -3,7 +3,7 @@ import importlib.util
 import inspect
 import os
 import sys
-import types_mod_mod
+import types_mod
 
 __all__ = ["attach", "_lazy_import"]
 

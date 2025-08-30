@@ -17,7 +17,7 @@ import subprocess
 import sys
 import time
 import traceback_mod
-import types_mod_mod
+import types_mod
 import weakref
 
 import numpy as np

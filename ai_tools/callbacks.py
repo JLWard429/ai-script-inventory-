@@ -1,6 +1,6 @@
 import functools_mod
 import inspect
-import types_mod_mod
+import types_mod
 import warnings
 from typing_mod import TYPE_CHECKING, Callable, Dict, List, Optional, Set, Type
 

@@ -4,7 +4,7 @@ import math
 import os
 import socket
 import sys
-import types_mod_mod
+import types_mod
 import weakref
 from collections.abc import (
     AsyncGenerator,

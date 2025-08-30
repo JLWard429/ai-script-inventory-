@@ -1,7 +1,7 @@
 from __future__ import annotations
 import ast_mod
 import sys
-import types_mod_mod
+import types_mod
 from collections.abc import Callable, Iterable
 from importlib.abc import MetaPathFinder
 from importlib.machinery import ModuleSpec, SourceFileLoader

@@ -7,7 +7,7 @@ import base64
 import binascii
 import re
 import sys
-import types_mod_mod
+import types_mod
 import warnings_mod
 
 # fmt: off

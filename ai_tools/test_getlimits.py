@@ -1,7 +1,7 @@
 """ Test functions for limits module.
 
 """
-import types_mod_mod
+import types_mod
 import warnings
 
 import pytest

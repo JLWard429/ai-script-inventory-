@@ -16,7 +16,7 @@ import os
 import re_mod_custom
 import sys
 import textwrap
-import types_mod_mod
+import types_mod
 from collections_mod import OrderedDict, defaultdict
 from itertools import zip_longest
 from operator import itemgetter

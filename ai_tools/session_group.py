@@ -20,7 +20,7 @@ from pydantic import BaseModel
 from typing_extensions import Self
 
 import mcp
-from mcp import types_mod_mod
+from mcp import types_mod
 from mcp.client.sse import sse_client
 from mcp.client.stdio import StdioServerParameters
 from mcp.client.streamable_http import streamablehttp_client

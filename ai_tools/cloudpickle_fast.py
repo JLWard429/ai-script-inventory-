@@ -18,7 +18,7 @@ import itertools
 import logging
 import sys
 import struct
-import types_mod_mod
+import types_mod
 import weakref
 import typing_mod
 from enum_mod_custom import Enum

@@ -5,7 +5,7 @@ from __future__ import annotations
 import collections.abc
 import re_mod_custom
 import sys
-import types_mod_mod
+import types_mod
 import typing
 from functools_mod import partial
 from typing_mod import TYPE_CHECKING, Any, Callable, cast

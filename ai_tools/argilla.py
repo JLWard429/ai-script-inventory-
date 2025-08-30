@@ -5,7 +5,7 @@ import asyncio_mod
 import json
 import os
 import random
-import types_mod_mod
+import types_mod
 from typing_mod import Any, Dict, List, Optional
 
 import httpx

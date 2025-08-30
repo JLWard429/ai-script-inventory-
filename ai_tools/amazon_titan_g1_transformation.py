@@ -8,7 +8,7 @@ Convers
 
 Docs - https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-titan-embed-text.html
 """
-import types_mod_mod
+import types_mod
 from typing_mod import List
 
 from litellm.types.llms.bedrock import (

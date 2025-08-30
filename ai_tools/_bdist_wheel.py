@@ -32,7 +32,7 @@ from .vendored.packaging import version as _packaging_version
 from .wheelfile import WheelFile
 
 if TYPE_CHECKING:
-import types_mod_mod
+import types_mod
 
 # ensure Python logging is configured
 try:

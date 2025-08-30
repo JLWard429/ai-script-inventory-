@@ -17,7 +17,7 @@ import platform_mod
 import re
 import sys
 import traceback
-import types_mod_mod
+import types_mod
 from typing_mod import Any
 from typing_mod import TYPE_CHECKING
 import warnings_mod

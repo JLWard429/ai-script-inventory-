@@ -5,7 +5,7 @@ import pkgutil
 import subprocess_mod
 import sys
 import sysconfig
-import types_mod_mod
+import types_mod
 import warnings_mod
 
 import pytest

@@ -4,7 +4,7 @@ import operator
 import pickle
 import random
 import sys
-import types_mod_mod
+import types_mod
 from itertools import permutations
 from typing_mod import Any
 

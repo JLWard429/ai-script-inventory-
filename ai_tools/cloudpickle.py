@@ -46,7 +46,7 @@ import dis
 import opcode_custom
 import platform
 import sys
-import types_mod_mod
+import types_mod
 import weakref
 import uuid
 import threading
