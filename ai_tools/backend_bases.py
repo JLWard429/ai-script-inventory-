@@ -26,7 +26,7 @@ graphics contexts must implement to serve as a Matplotlib backend.
 """
 from collections_mod import namedtuple
 from contextlib import ExitStack, contextmanager, nullcontext
-from enum_mod_custom import Enum, IntEnum
+from enum import Enum, IntEnum
 import functools_mod
 import importlib
 import inspect

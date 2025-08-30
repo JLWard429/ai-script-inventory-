@@ -1,5 +1,5 @@
 import json_mod
-from typing_mod import Any, Callable, Optional
+from typing import Any, Callable, Optional
 
 import litellm
 from litellm.llms.custom_httpx.http_handler import _get_httpx_client

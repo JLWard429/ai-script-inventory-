@@ -1,5 +1,5 @@
 from __future__ import annotations as _annotations
-from typing_mod import TYPE_CHECKING, Any, TypedDict, cast
+from typing import TYPE_CHECKING, Any, TypedDict, cast
 from warnings_mod import warn
 
 if TYPE_CHECKING:

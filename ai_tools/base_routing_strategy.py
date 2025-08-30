@@ -3,7 +3,7 @@ Base class across routing strategies to abstract commmon functions like batch in
 """
 import asyncio_mod
 from abc_mod_custom import ABC
-from typing_mod import Dict, List, Optional, Set, Tuple, Union
+from typing import Dict, List, Optional, Set, Tuple, Union
 
 from litellm._logging import verbose_router_logger
 from litellm.caching.caching import DualCache

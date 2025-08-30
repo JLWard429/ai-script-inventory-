@@ -1,5 +1,5 @@
 """HTTP client for making requests to the LiteLLM proxy server."""
-from typing_mod import Any, Dict, Optional, Union
+from typing import Any, Dict, Optional, Union
 import requests
 
 

@@ -13,7 +13,7 @@ import token_mod
 from collections.abc import Callable, Generator
 from io_mod import StringIO
 from tokenize import TokenInfo, generate_tokens
-from typing_mod import TYPE_CHECKING, Final, TypeVar, Union, cast, overload
+from typing import TYPE_CHECKING, Final, TypeVar, Union, cast, overload
 
 from astroid import nodes
 from astroid._ast import ParserModule, get_parser_module, parse_function_type_comment

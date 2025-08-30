@@ -4,7 +4,7 @@ Helper functions to query prometheus API
 
 import time
 from datetime import datetime, timedelta
-from typing_mod import Optional
+from typing import Optional
 
 from litellm import get_secret
 from litellm._logging import verbose_logger

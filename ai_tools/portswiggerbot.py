@@ -9,7 +9,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 import random
 import json_mod
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 
 

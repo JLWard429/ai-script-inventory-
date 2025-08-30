@@ -60,7 +60,7 @@ Note: Some of the files (e.g. "ipod.txt", "Canon PowerShot SD500.txt") do not
     level classification and analysis, this peculiarity should be taken into
     consideration.
 """
-import re_mod_custom
+import re
 
 from nltk.corpus.reader.api import *
 from nltk.tokenize import *

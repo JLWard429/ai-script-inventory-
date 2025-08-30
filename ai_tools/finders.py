@@ -4,7 +4,7 @@ import importlib.machinery
 import inspect
 import os
 import os.path
-import re_mod_custom
+import re
 import sys
 import sysconfig
 from abc_mod_custom import ABCMeta, abstractmethod
@@ -12,8 +12,8 @@ from contextlib import contextmanager
 from fnmatch import fnmatch
 from functools_mod import lru_cache
 from glob_mod import glob
-from pathlib_mod_custom import Path
-from typing_mod import Dict, Iterable, Iterator, List, Optional, Pattern, Sequence, Tuple, Type
+from pathlib import Path
+from typing import Dict, Iterable, Iterator, List, Optional, Pattern, Sequence, Tuple, Type
 
 from isort import sections
 from isort.settings import KNOWN_SECTION_MAPPING, Config

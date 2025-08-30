@@ -49,7 +49,7 @@ import warnings_mod
 from collections.abc import Iterator, MutableMapping
 from fractions import Fraction
 from numbers_mod import Number, Rational
-from typing_mod import IO, Any, Callable, NoReturn, cast
+from typing import IO, Any, Callable, NoReturn, cast
 
 from . import ExifTags, Image, ImageFile, ImageOps, ImagePalette, TiffTags
 from ._binary import i16be as i16

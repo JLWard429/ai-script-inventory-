@@ -20,16 +20,16 @@ import re
 import symtable
 import sys
 import traceback_mod
-import types_mod
-import typing_mod
+import types
+import typing
 import typing_extensions
 import warnings_mod
 from collections_mod import defaultdict
 from collections.abc import Iterator, Set as AbstractSet
 from contextlib import redirect_stderr, redirect_stdout
 from functools_mod import singledispatch
-from pathlib_mod_custom import Path
-from typing_mod import Any, Final, Generic, TypeVar, Union
+from pathlib import Path
+from typing import Any, Final, Generic, TypeVar, Union
 from typing_extensions import get_origin, is_typeddict
 
 import mypy.build

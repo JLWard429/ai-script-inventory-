@@ -16,10 +16,10 @@ import ctypes
 from ctypes.wintypes import BOOL, DWORD, HANDLE, LPCWSTR, LPVOID, LPWSTR
 from dataclasses import dataclass
 from functools_mod import reduce
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-from typing_mod import Any
+from typing import Any
 
 # Invalid handle value.
 INVALID_HANDLE_VALUE = ctypes.c_void_p(-1).value

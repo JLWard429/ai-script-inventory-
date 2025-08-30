@@ -1,5 +1,5 @@
 import json_mod
-from typing_mod import Any, Callable, Dict, List, Optional
+from typing import Any, Callable, Dict, List, Optional
 
 from litellm._logging import verbose_logger
 from litellm.proxy.types_utils.utils import get_instance_fn

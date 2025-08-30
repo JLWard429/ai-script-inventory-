@@ -18,7 +18,7 @@ import io_mod
 import os
 import struct
 from collections.abc import Callable
-from typing_mod import IO, cast
+from typing import IO, cast
 
 from . import Image, ImageFile, ImagePalette, _binary
 

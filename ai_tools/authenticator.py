@@ -2,7 +2,7 @@ import json_mod
 import os
 import time
 from datetime import datetime
-from typing_mod import Any, Dict, Optional
+from typing import Any, Dict, Optional
 
 import httpx
 

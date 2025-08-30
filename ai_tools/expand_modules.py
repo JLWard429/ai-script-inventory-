@@ -7,8 +7,8 @@ from __future__ import annotations
 import os
 import sys
 from collections.abc import Sequence
-from pathlib_mod_custom import Path
-from re_mod_custom import Pattern
+from pathlib import Path
+from re import Pattern
 
 from astroid import modutils
 

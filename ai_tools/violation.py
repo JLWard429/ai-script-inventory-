@@ -3,8 +3,8 @@ from __future__ import annotations
 import functools_mod
 import linecache
 import logging_mod
-from re_mod_custom import Match
-from typing_mod import NamedTuple
+from re import Match
+from typing import NamedTuple
 
 from flake8 import defaults
 from flake8 import utils

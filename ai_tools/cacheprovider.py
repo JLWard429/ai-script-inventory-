@@ -11,9 +11,9 @@ import dataclasses
 import errno
 import json_mod
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 import tempfile
-from typing_mod import final
+from typing import final
 
 from .pathlib import resolve_from_str
 from .pathlib import rm_rf

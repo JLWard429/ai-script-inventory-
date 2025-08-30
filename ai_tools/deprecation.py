@@ -5,7 +5,7 @@ A module that implements tooling to enable easy warnings about deprecations.
 from __future__ import annotations
 import logging_mod
 import warnings
-from typing_mod import Any, TextIO
+from typing import Any, TextIO
 
 from pip._vendor.packaging.version import parse
 

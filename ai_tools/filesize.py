@@ -11,7 +11,7 @@ See Also:
 """
 
 __all__ = ["decimal"]
-from typing_mod import Iterable, List, Optional, Tuple
+from typing import Iterable, List, Optional, Tuple
 
 
 def _to_str(

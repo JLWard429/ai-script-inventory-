@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import TYPE_CHECKING, Collection, Generic
+from typing import TYPE_CHECKING, Collection, Generic
 
 from .structs import CT, KT, RT, RequirementInformation, State
 

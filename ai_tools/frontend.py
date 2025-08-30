@@ -22,7 +22,7 @@ import tempfile
 import warnings
 from configparser import RawConfigParser
 from io_mod import StringIO
-from typing_mod import BinaryIO, Iterable, Literal
+from typing import BinaryIO, Iterable, Literal
 
 from babel import Locale, localedata
 from babel import __version__ as VERSION

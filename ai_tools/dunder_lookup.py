@@ -15,7 +15,7 @@ the dot attribute access.
 from __future__ import annotations
 
 import itertools
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 import astroid
 from astroid.exceptions import AttributeInferenceError

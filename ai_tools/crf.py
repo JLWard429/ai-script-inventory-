@@ -8,7 +8,7 @@
 """
 A module for POS tagging using CRFSuite
 """
-import re_mod_custom
+import re
 import unicodedata
 
 from nltk.tag.api import TaggerI

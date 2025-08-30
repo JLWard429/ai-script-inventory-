@@ -1,5 +1,5 @@
-import re_mod_custom
-from typing_mod import TYPE_CHECKING, Any, Callable, Iterable, List, Optional
+import re
+from typing import TYPE_CHECKING, Any, Callable, Iterable, List, Optional
 
 if TYPE_CHECKING:
     from .settings import Config

@@ -1,5 +1,5 @@
 from __future__ import annotations
-import typing_mod as t
+import typing as t
 from io_mod import BytesIO
 from urllib.parse import parse_qsl
 
@@ -28,7 +28,7 @@ except ImportError:
     SpooledTemporaryFile = None  # type: ignore
 
 if t.TYPE_CHECKING:
-import typing_mod as te
+import typing as te
 
     from _typeshed.wsgi import WSGIEnvironment
 

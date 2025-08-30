@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import AsyncIterator
-from typing_mod import Literal
+from typing import Literal
 
 import numpy as np
 import numpy.typing as npt

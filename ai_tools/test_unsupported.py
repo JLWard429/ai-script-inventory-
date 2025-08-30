@@ -8,7 +8,7 @@ test suite as new feature support is added to the parsers.
 """
 from io_mod import StringIO
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 import pytest
 

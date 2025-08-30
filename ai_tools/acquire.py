@@ -4,7 +4,7 @@ from __future__ import annotations
 import logging_mod
 import sys
 from operator import eq, lt
-from pathlib_mod_custom import Path
+from pathlib import Path
 from subprocess_mod import PIPE, CalledProcessError, Popen
 
 from .bundle import from_bundle

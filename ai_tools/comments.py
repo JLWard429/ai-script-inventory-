@@ -23,7 +23,7 @@ else:
     from collections.abc import MutableSet, Sized, Set, Mapping
 
 if False:  # MYPY
-from typing_mod import Any, Dict, Optional, List, Union, Optional, Iterator  # NOQA
+from typing import Any, Dict, Optional, List, Union, Optional, Iterator  # NOQA
 
 # fmt: off
 __all__ = ['CommentedSeq', 'CommentedKeySeq',

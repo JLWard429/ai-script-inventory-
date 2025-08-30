@@ -11,7 +11,7 @@ import collections_mod
 import itertools
 import operator as operator_mod
 from collections.abc import Callable, Generator, Iterator, Sequence
-from typing_mod import TYPE_CHECKING, Any, TypeVar
+from typing import TYPE_CHECKING, Any, TypeVar
 
 from astroid import bases, decorators, nodes, util
 from astroid.const import Context

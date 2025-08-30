@@ -3,8 +3,8 @@ import logging_mod
 import os
 import sys
 from contextlib import suppress
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING
+from pathlib import Path
+from typing import TYPE_CHECKING
 
 from platformdirs import user_data_path
 

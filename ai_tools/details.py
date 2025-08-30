@@ -24,7 +24,7 @@ DEALINGS IN THE SOFTWARE.
 from markdown import Extension
 from markdown.blockprocessors import BlockProcessor
 import xml.etree.ElementTree as etree
-import re_mod_custom
+import re
 
 
 class DetailsProcessor(BlockProcessor):

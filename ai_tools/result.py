@@ -1,5 +1,5 @@
 from dataclasses import field
-from typing_mod import Dict, List
+from typing import Dict, List
 
 from pydantic.dataclasses import dataclass
 

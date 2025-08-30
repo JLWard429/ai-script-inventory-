@@ -2,7 +2,7 @@ import asyncio_mod
 import logging
 import warnings_mod
 from functools_mod import lru_cache, partial, update_wrapper
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     AsyncIterator,

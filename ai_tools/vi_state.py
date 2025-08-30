@@ -1,6 +1,6 @@
 from __future__ import annotations
-from enum_mod_custom import Enum
-from typing_mod import TYPE_CHECKING, Callable
+from enum import Enum
+from typing import TYPE_CHECKING, Callable
 
 from prompt_toolkit.clipboard import ClipboardData
 

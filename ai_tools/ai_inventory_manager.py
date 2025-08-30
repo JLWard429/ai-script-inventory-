@@ -1,5 +1,5 @@
 """
-Minimal typing_mod.py placeholder.
+Minimal typing.py placeholder.
 Replace with the actual implementation if you have it!
 """
 try:

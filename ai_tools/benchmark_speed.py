@@ -1,8 +1,8 @@
 import random
 import time
 from itertools import islice
-from pathlib_mod_custom import Path
-from typing_mod import Iterable, List, Optional
+from pathlib import Path
+from typing import Iterable, List, Optional
 
 import numpy
 import typer

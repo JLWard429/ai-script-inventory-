@@ -10,10 +10,10 @@ from contextlib import contextmanager
 import os
 import re
 import sys
-from typing_mod import Any
-from typing_mod import final
-from typing_mod import overload
-from typing_mod import TypeVar
+from typing import Any
+from typing import final
+from typing import overload
+from typing import TypeVar
 import warnings_mod
 
 from _pytest.fixtures import fixture

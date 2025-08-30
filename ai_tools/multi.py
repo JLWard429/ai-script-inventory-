@@ -9,7 +9,7 @@ from collections.abc import (
 )
 from functools_mod import wraps
 from sys import getsizeof
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

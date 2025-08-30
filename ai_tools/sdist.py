@@ -1,7 +1,7 @@
 from __future__ import annotations
 import logging_mod
 from collections.abc import Iterable
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from pip._internal.build_env import BuildEnvironment
 from pip._internal.distributions.base import AbstractDistribution

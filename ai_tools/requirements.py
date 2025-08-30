@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import Any
+from typing import Any
 
 from pip._vendor.packaging.specifiers import SpecifierSet
 from pip._vendor.packaging.utils import NormalizedName, canonicalize_name

@@ -25,9 +25,9 @@ NO WARRANTY IS EXPRESSED OR IMPLIED.  USE AT YOUR OWN RISK.
 # TODO: support defined operators (.MYOP., ...)
 #
 __all__ = ['Expr']
-import re_mod_custom
+import re
 import warnings
-from enum_mod_custom import Enum
+from enum import Enum
 from math_mod import gcd
 
 

@@ -6,7 +6,7 @@ import os
 import re
 import sys
 from functools_mod import lru_cache
-from typing_mod import TYPE_CHECKING, cast
+from typing import TYPE_CHECKING, cast
 
 from .api import PlatformDirsABC
 

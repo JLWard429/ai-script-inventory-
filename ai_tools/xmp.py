@@ -6,8 +6,8 @@ See https://en.wikipedia.org/wiki/Extensible_Metadata_Platform
 
 import datetime
 import decimal
-import re_mod_custom
-from typing_mod import (
+import re
+from typing import (
     Any,
     Callable,
     Dict,

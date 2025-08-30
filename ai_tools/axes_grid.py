@@ -1,6 +1,6 @@
 from numbers_mod import Number
 import functools_mod
-from types_mod import MethodType
+from types import MethodType
 
 import numpy as np
 

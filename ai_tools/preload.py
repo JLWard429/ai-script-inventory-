@@ -9,7 +9,7 @@ to make sure the `setup.cfg` examples are downloaded before starting the tests.
 """
 
 import sys
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 from . import retrieve_file, urls_from_file
 

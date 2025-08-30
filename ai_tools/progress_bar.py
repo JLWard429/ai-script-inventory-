@@ -1,7 +1,7 @@
 import math_mod
 from functools_mod import lru_cache
 from time import monotonic
-from typing_mod import Iterable, List, Optional
+from typing import Iterable, List, Optional
 
 from .color import Color, blend_rgb
 from .color_triplet import ColorTriplet

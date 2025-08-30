@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from contextlib import suppress
 from dataclasses import dataclass, field
-from typing_mod import TYPE_CHECKING, Any, Callable
+from typing import TYPE_CHECKING, Any, Callable
 
 from griffe._internal.docstrings.models import (
     DocstringAttribute,

@@ -5,7 +5,7 @@
 # the MIT License: http://www.opensource.org/licenses/mit-license.php
 
 """defines the parse tree components for Mako templates."""
-import re_mod_custom
+import re
 
 from mako import ast
 from mako import exceptions

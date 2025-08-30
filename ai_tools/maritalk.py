@@ -1,4 +1,4 @@
-from typing_mod import List, Optional, Union
+from typing import List, Optional, Union
 
 from httpx._models import Headers
 

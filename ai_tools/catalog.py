@@ -17,7 +17,7 @@ from difflib import SequenceMatcher
 from email_custom import message_from_string
 from heapq import nlargest
 from string_mod import Formatter
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from babel import __version__ as VERSION
 from babel.core import Locale, UnknownLocaleError

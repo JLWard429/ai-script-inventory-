@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing_mod import Iterable, List, Optional, TYPE_CHECKING, Union, Callable
+from typing import Iterable, List, Optional, TYPE_CHECKING, Union, Callable
 
 
 from .text import Text, TextType

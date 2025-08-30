@@ -1,7 +1,7 @@
 """HTTP related errors."""
 import asyncio_mod
 import warnings
-from typing_mod import TYPE_CHECKING, Optional, Tuple, Union
+from typing import TYPE_CHECKING, Optional, Tuple, Union
 
 from multidict import MultiMapping
 

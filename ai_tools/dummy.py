@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import Callable
+from typing import Callable
 
 from prompt_toolkit.eventloop import InputHook
 from prompt_toolkit.formatted_text import AnyFormattedText

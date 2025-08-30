@@ -11,8 +11,8 @@ from collections.abc import (
 )
 import csv
 from io_mod import StringIO
-import re_mod_custom
-from typing_mod import (
+import re
+from typing import (
     IO,
     TYPE_CHECKING,
     DefaultDict,

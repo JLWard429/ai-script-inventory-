@@ -2522,7 +2522,7 @@ class TestSpecial(unittest.TestCase):
         self.assertIs(type(Test.test), Test)
 
     def test_subclass_duplicate_name_dynamic(self):
-        from types_mod import DynamicClassAttribute
+        from types import DynamicClassAttribute
         class Base(Enum):
             @DynamicClassAttribute
             def test(self):

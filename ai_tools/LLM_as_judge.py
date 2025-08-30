@@ -11,7 +11,7 @@ import asyncio_mod
 import os
 import json_mod
 from dataclasses import dataclass
-from typing_mod import Literal
+from typing import Literal
 from cai.sdk.agents import Agent, ItemHelpers, Runner, TResponseInputItem, OpenAIChatCompletionsModel
 from openai import AsyncOpenAI
 from cai.util import get_ollama_api_base

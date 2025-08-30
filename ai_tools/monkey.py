@@ -7,8 +7,8 @@ from __future__ import annotations
 import inspect
 import platform
 import sys
-import types_mod
-from typing_mod import TypeVar, cast, overload
+import types
+from typing import TypeVar, cast, overload
 
 import distutils.filelist
 

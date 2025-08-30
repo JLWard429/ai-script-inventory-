@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import IO, Callable
+from typing import IO, Callable
 
 
 def get_fileno(file_like: IO[str]) -> int | None:

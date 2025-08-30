@@ -25,7 +25,7 @@ from collections.abc import Iterable, Iterator
 from contextlib import contextmanager
 from dataclasses import dataclass, field
 from logging_mod import Logger
-from typing_mod import IO, Any, Optional, Union, cast
+from typing import IO, Any, Optional, Union, cast
 
 from blib2to3.pgen2.grammar import Grammar
 from blib2to3.pgen2.tokenize import GoodTokenInfo

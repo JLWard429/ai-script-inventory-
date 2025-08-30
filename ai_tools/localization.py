@@ -8,9 +8,9 @@ from __future__ import annotations
 from contextlib import contextmanager
 import locale
 import platform
-import re_mod_custom
+import re
 import subprocess
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from pandas._config.config import options
 

@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import Callable
+from typing import Callable
 
 from mypy.nodes import TypeInfo
 from mypy.types import Instance

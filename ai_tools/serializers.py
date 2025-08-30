@@ -47,8 +47,8 @@ from __future__ import annotations
 
 from xml.etree.ElementTree import ProcessingInstruction
 from xml.etree.ElementTree import Comment, ElementTree, Element, QName, HTML_EMPTY
-import re_mod_custom
-from typing_mod import Callable, Literal, NoReturn
+import re
+from typing import Callable, Literal, NoReturn
 
 __all__ = ['to_html_string', 'to_xhtml_string']
 

@@ -1,19 +1,19 @@
 from __future__ import annotations
 from abc_mod_custom import ABC
 from abc_mod_custom import abstractmethod
-import re_mod_custom
-from re_mod_custom import Pattern
+import re
+from re import Pattern
 import sys
 from textwrap import indent
-from typing_mod import Any
-from typing_mod import cast
-from typing_mod import final
-from typing_mod import Generic
-from typing_mod import get_args
-from typing_mod import get_origin
-from typing_mod import Literal
-from typing_mod import overload
-from typing_mod import TYPE_CHECKING
+from typing import Any
+from typing import cast
+from typing import final
+from typing import Generic
+from typing import get_args
+from typing import get_origin
+from typing import Literal
+from typing import overload
+from typing import TYPE_CHECKING
 import warnings_mod
 
 from _pytest._code import ExceptionInfo
@@ -26,8 +26,8 @@ if TYPE_CHECKING:
     from collections.abc import Callable
     from collections.abc import Sequence
 
-    # for some reason Sphinx does not play well with 'from types_mod import TracebackType'
-import types_mod
+    # for some reason Sphinx does not play well with 'from types import TracebackType'
+import types
 
     from typing_extensions import ParamSpec
     from typing_extensions import TypeGuard
@@ -46,7 +46,7 @@ import types_mod
     # Use short name because it shows up in docs.
     E = TypeVar("E", bound=BaseException, default=BaseException)
 else:
-from typing_mod import TypeVar
+from typing import TypeVar
 
     BaseExcT_co_default = TypeVar(
         "BaseExcT_co_default", bound=BaseException, covariant=True

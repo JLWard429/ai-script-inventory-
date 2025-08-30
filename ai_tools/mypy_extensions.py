@@ -4,12 +4,12 @@ supported by the mypy typechecker.
 Example usage:
     from mypy_extensions import TypedDict
 """
-from typing_mod import Any, Dict
+from typing import Any, Dict
 
 import sys
 # _type_check is NOT a part of public typing API, it is used here only to mimic
 # the (convenient) behavior of types provided by typing module.
-from typing_mod import _type_check  # type: ignore
+from typing import _type_check  # type: ignore
 
 
 def _check_fails(cls, other):

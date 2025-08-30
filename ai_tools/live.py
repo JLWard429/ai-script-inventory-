@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import sys
 from threading import Event, RLock, Thread
-from types_mod import TracebackType
-from typing_mod import IO, TYPE_CHECKING, Any, Callable, List, Optional, TextIO, Type, cast
+from types import TracebackType
+from typing import IO, TYPE_CHECKING, Any, Callable, List, Optional, TextIO, Type, cast
 
 from . import get_console
 from .console import Console, ConsoleRenderable, Group, RenderableType, RenderHook
@@ -297,7 +297,7 @@ if __name__ == "__main__":  # pragma: no cover
     import random
     import time
     from itertools import cycle
-from typing_mod import Dict, List, Tuple
+from typing import Dict, List, Tuple
 
     from .align import Align
     from .console import Console

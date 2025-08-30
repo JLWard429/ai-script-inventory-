@@ -8,7 +8,7 @@ import configparser
 import os
 import sys
 from collections.abc import Iterator
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 if sys.version_info >= (3, 11):
     import tomllib

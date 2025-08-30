@@ -24,10 +24,10 @@ and  use the unmodified library for their own needs.
 """
 
 from __future__ import annotations
-import re_mod_custom
+import re
 import importlib.util
 import sys
-from typing_mod import TYPE_CHECKING, Sequence
+from typing import TYPE_CHECKING, Sequence
 
 if TYPE_CHECKING:  # pragma: no cover
     from markdown import Markdown

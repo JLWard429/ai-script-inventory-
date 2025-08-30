@@ -1,4 +1,4 @@
-from typing_mod import List, Literal, Optional, Tuple, Union
+from typing import List, Literal, Optional, Tuple, Union
 
 import httpx
 

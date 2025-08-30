@@ -14,9 +14,9 @@
 # See the README file for information on usage and redistribution.
 #
 from __future__ import annotations
-import re_mod_custom
+import re
 from io_mod import BytesIO
-from typing_mod import IO
+from typing import IO
 
 
 class GimpPaletteFile:

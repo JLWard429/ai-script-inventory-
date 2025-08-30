@@ -7,7 +7,7 @@ Methods that can be shared by many array-like classes or subclasses:
 from __future__ import annotations
 
 import operator
-from typing_mod import Any
+from typing import Any
 
 import numpy as np
 

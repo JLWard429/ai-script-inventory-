@@ -1,4 +1,4 @@
-from typing_mod import Any, Dict, List, Literal, Optional
+from typing import Any, Dict, List, Literal, Optional
 
 from pydantic import BaseModel, Field
 from typing_extensions import Required, TypedDict

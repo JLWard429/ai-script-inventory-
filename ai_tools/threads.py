@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import typing_extensions
-from typing_mod import Union, Iterable, Optional
+from typing import Union, Iterable, Optional
 from functools_mod import partial
 from typing_extensions import Literal, overload
 

@@ -3,9 +3,9 @@ import json_mod
 import os
 import warnings_mod
 from functools_mod import wraps
-from pathlib_mod_custom import Path
+from pathlib import Path
 from shutil import copytree
-from typing_mod import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 
 from huggingface_hub import ModelHubMixin, snapshot_download
 from huggingface_hub.utils import (

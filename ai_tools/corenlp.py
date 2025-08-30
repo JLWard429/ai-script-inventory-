@@ -7,10 +7,10 @@
 # For license information, see LICENSE.TXT
 import json_mod
 import os  # required for doctests
-import re_mod_custom
+import re
 import socket
 import time
-from typing_mod import List, Tuple
+from typing import List, Tuple
 
 from nltk.internals import _java_options, config_java, find_jar_iter, java
 from nltk.parse.api import ParserI

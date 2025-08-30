@@ -1,5 +1,5 @@
 from __future__ import annotations
-from enum_mod_custom import IntEnum
+from enum import IntEnum
 
 __all__ = ["codes"]
 

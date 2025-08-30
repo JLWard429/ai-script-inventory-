@@ -1,5 +1,5 @@
 import logging_mod
-from typing_mod import Any
+from typing import Any
 
 from uvicorn._types import (
     ASGI3Application,

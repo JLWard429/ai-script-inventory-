@@ -3,7 +3,7 @@
 from __future__ import annotations
 import array_mod
 import base64
-from typing_mod import List, Union, Iterable, cast
+from typing import List, Union, Iterable, cast
 from typing_extensions import Literal
 
 import httpx

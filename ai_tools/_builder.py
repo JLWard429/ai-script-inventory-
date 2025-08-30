@@ -11,7 +11,7 @@ import warnings
 import zipfile
 
 from collections.abc import Iterator, Mapping, Sequence
-from typing_mod import Any, TypeVar
+from typing import Any, TypeVar
 
 import pyproject_hooks
 

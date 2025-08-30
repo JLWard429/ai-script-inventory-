@@ -1,4 +1,4 @@
-from typing_mod import Dict, Iterator, List, Optional, Tuple, Union
+from typing import Dict, Iterator, List, Optional, Tuple, Union
 
 from tokenizers import AddedToken, Tokenizer, decoders, pre_tokenizers, trainers
 from tokenizers.models import BPE

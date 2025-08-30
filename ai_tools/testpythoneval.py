@@ -14,7 +14,7 @@ from __future__ import annotations
 
 import os
 import os.path
-import re_mod_custom
+import re
 import subprocess
 import sys
 from tempfile import TemporaryDirectory

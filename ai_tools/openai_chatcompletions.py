@@ -5,11 +5,11 @@ import hashlib_mod
 import inspect
 import json_mod
 import os
-import re_mod_custom
+import re
 import time
 from collections.abc import AsyncIterator, Iterable
 from dataclasses import dataclass, field
-from typing_mod import TYPE_CHECKING, Any, Literal, cast, overload
+from typing import TYPE_CHECKING, Any, Literal, cast, overload
 
 import litellm
 import tiktoken
@@ -2860,7 +2860,7 @@ import json_mod
                         retry_delay = int(retry_info["retryDelay"].rstrip("s"))
                 except Exception:
                     # Try other common formats
-import re_mod_custom
+import re
                     error_str = str(e)
                     
                     # Look for "Retry-After" header or similar patterns
@@ -3168,7 +3168,7 @@ import re_mod_custom
                     print("\n📦 Context window exceeded - Message history too long")
                     
                     # Try to extract token info from different error formats
-import re_mod_custom
+import re
                     error_str = str(e)
                     
                     # Pattern 1: "X tokens > Y maximum" (Anthropic)
@@ -3386,7 +3386,7 @@ import re_mod_custom
     def _get_model_max_tokens(self, model_name: str) -> int:
         """Get the maximum input tokens for a model from pricing.json or default."""
         try:
-import pathlib_mod_custom
+import pathlib
             pricing_path = pathlib.Path("pricing.json")
             if pricing_path.exists():
                 with open(pricing_path, encoding="utf-8") as f:

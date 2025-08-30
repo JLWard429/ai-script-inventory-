@@ -11,7 +11,7 @@ from __future__ import annotations
 from collections_mod import abc
 from datetime import datetime
 import struct
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 import warnings_mod
 
 import numpy as np

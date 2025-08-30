@@ -7,8 +7,8 @@ import uuid
 import warnings_mod
 from collections_mod import deque
 from collections.abc import Mapping, Sequence
-from types_mod import TracebackType
-from typing_mod import (
+from types import TracebackType
+from typing import (
     TYPE_CHECKING,
     Any,
     Deque,
@@ -48,9 +48,9 @@ from .payload import (
 from .streams import StreamReader
 
 if sys.version_info >= (3, 11):
-from typing_mod import Self
+from typing import Self
 else:
-from typing_mod import TypeVar
+from typing import TypeVar
 
     Self = TypeVar("Self", bound="BodyPartReader")
 

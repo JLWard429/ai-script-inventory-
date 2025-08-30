@@ -1,7 +1,7 @@
 from __future__ import annotations
 import abc_mod_custom_custom
 from collections.abc import AsyncIterator
-from typing_mod import Any
+from typing import Any
 
 from ..agent import Agent
 from ..items import TResponseInputItem

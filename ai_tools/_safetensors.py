@@ -2,7 +2,7 @@ import functools_mod
 import operator
 from collections_mod import defaultdict
 from dataclasses import dataclass, field
-from typing_mod import Dict, List, Literal, Optional, Tuple
+from typing import Dict, List, Literal, Optional, Tuple
 
 
 FILENAME_T = str

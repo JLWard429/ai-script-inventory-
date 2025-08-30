@@ -3,7 +3,7 @@ Typosquatting detection for various tools.
 """
 import logging_mod
 import nltk
-from typing_mod import Tuple, List
+from typing import Tuple, List
 
 from safety.console import main_console as console
 from rich.prompt import Prompt

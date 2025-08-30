@@ -40,7 +40,7 @@ def _signals_enums_transform():
 def _signals_enum() -> str:
     """Generates the source code for the Signals int enum."""
     signals_enum = """
-import enum_mod_custom
+import enum
     class Signals(enum.IntEnum):
         SIGABRT   = enum.auto()
         SIGEMT    = enum.auto()
@@ -96,7 +96,7 @@ import enum_mod_custom
 def _handlers_enum() -> str:
     """Generates the source code for the Handlers int enum."""
     return """
-import enum_mod_custom
+import enum
     class Handlers(enum.IntEnum):
         SIG_DFL = enum.auto()
         SIG_IGN = eunm.auto()
@@ -107,7 +107,7 @@ def _sigmasks_enum() -> str:
     """Generates the source code for the Sigmasks int enum."""
     if sys.platform != "win32":
         return """
-import enum_mod_custom
+import enum
     class Sigmasks(enum.IntEnum):
         SIG_BLOCK   = enum.auto()
         SIG_UNBLOCK = enum.auto()

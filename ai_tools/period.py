@@ -4,7 +4,7 @@ from datetime import (
     datetime,
     timedelta,
 )
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 import warnings_mod
 
 import numpy as np

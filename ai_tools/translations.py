@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import logging_mod
-from typing_mod import TYPE_CHECKING, Union, Mapping, cast
+from typing import TYPE_CHECKING, Union, Mapping, cast
 from typing_extensions import Literal, overload, assert_never
 
 import httpx

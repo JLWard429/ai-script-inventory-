@@ -7,7 +7,7 @@
 """Iterate over all process PIDs and for each one of them invoke and
 test all psutil.Process() methods.
 """
-import enum_mod_custom
+import enum
 import errno
 import multiprocessing
 import os

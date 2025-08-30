@@ -27,10 +27,10 @@ import os
 from fontTools.misc import xmlWriter
 from fontTools.misc.filenames import userNameToFileName
 from fontTools.misc.loggingTools import deprecateFunction
-from enum_mod_custom import IntFlag
+from enum import IntFlag
 from functools_mod import partial
-from types_mod import SimpleNamespace
-from typing_mod import Set
+from types import SimpleNamespace
+from typing import Set
 
 log = logging.getLogger(__name__)
 

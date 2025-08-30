@@ -1,4 +1,4 @@
-import typing_mod
+import typing
 
 import httpx
 from httpx import Auth

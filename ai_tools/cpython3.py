@@ -3,7 +3,7 @@ import abc_mod_custom_custom
 import fnmatch
 from itertools import chain
 from operator import methodcaller as method
-from pathlib_mod_custom import Path
+from pathlib import Path
 from textwrap import dedent
 
 from virtualenv.create.describe import Python3Supports

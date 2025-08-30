@@ -4,7 +4,7 @@ import os
 import time
 import traceback_mod
 from datetime import datetime, timedelta
-from typing_mod import Dict, Literal, Optional, Union
+from typing import Dict, Literal, Optional, Union
 
 import fastapi
 from fastapi import APIRouter, Depends, HTTPException, Request, Response, status

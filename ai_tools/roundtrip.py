@@ -3,7 +3,7 @@ helper routines for testing round trip of commented YAML data
 """
 import sys
 import textwrap
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 enforce = object()
 

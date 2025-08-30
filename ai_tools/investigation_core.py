@@ -8,7 +8,7 @@ import os
 import sqlite3
 import json_mod
 import datetime
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 class InvestigationCore:
     """Core investigation system for managing medical documents and findings"""

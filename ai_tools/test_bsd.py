@@ -12,7 +12,7 @@
 
 import datetime
 import os
-import re_mod_custom
+import re
 import time
 
 import psutil

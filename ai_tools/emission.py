@@ -1,12 +1,12 @@
 from concurrent.futures import Future
 import logging_mod
-from pathlib_mod_custom import Path
-import re_mod_custom
+from pathlib import Path
+import re
 import shutil
 import subprocess_mod
 import sys
 import time
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Dict,
     List,

@@ -1,7 +1,7 @@
 """WSGI-related types for static type checking"""
 
 from collections.abc import Callable, Iterable, Iterator
-from types_mod import TracebackType
+from types import TracebackType
 from typing import Any, Protocol, TypeAlias
 
 __all__ = [

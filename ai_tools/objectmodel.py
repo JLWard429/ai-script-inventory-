@@ -26,10 +26,10 @@ from __future__ import annotations
 import itertools
 import os
 import pprint_mod
-import types_mod
+import types
 from collections.abc import Iterator
 from functools_mod import lru_cache
-from typing_mod import TYPE_CHECKING, Any, Literal
+from typing import TYPE_CHECKING, Any, Literal
 
 import astroid
 from astroid import bases, nodes, util

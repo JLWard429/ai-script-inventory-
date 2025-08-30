@@ -5,7 +5,7 @@ import contextlib
 import functools
 import itertools
 import socket
-from typing_mod import List, Optional, Sequence, Set, Union
+from typing import List, Optional, Sequence, Set, Union
 
 from . import _staggered
 from .types import AddrInfoType, SocketFactoryType

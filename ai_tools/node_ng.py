@@ -9,7 +9,7 @@ import warnings_mod
 from collections.abc import Generator, Iterator
 from functools_mod import cached_property
 from functools_mod import singledispatch as _singledispatch
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     ClassVar,
@@ -36,7 +36,7 @@ from astroid.nodes.utils import Position
 from astroid.typing import InferenceErrorInfo, InferenceResult, InferFn
 
 if sys.version_info >= (3, 11):
-from typing_mod import Self
+from typing import Self
 else:
     from typing_extensions import Self
 

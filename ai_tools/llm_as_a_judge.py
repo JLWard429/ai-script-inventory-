@@ -1,7 +1,7 @@
 from __future__ import annotations
 import asyncio_mod
 from dataclasses import dataclass
-from typing_mod import Literal
+from typing import Literal
 
 from agents import Agent, ItemHelpers, Runner, TResponseInputItem, trace
 

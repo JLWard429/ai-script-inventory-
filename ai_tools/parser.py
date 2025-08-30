@@ -8,7 +8,7 @@ import sys
 import textwrap
 from collections.abc import Generator
 from contextlib import suppress
-from typing_mod import Any, NoReturn
+from typing import Any, NoReturn
 
 from pip._internal.cli.status_codes import UNKNOWN_ERROR
 from pip._internal.configuration import Configuration, ConfigurationError

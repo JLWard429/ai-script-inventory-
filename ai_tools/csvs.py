@@ -12,7 +12,7 @@ from collections.abc import (
 )
 import csv as csvlib
 import os
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     cast,

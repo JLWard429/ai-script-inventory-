@@ -8,7 +8,7 @@ that works both standalone and as part of the package.
 """
 
 import sys
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 
 def main():

@@ -1,8 +1,8 @@
 import json_mod
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 from pickle_mod import DEFAULT_PROTOCOL, PicklingError
-from typing_mod import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 
 from packaging import version
 

@@ -4,7 +4,7 @@ import collections.abc
 from contextlib import contextmanager
 from io_mod import BufferedRandom, BufferedReader, BufferedWriter, FileIO, TextIOWrapper
 import os
-from pathlib_mod_custom import (  # type: ignore
+from pathlib import (  # type: ignore
     Path,
     PosixPath,
     PurePosixPath,
@@ -13,8 +13,8 @@ from pathlib_mod_custom import (  # type: ignore
 
 import shutil
 import sys
-from types_mod import MethodType
-from typing_mod import (
+from types import MethodType
+from typing import (
     BinaryIO,
     Literal,
     overload,
@@ -47,28 +47,28 @@ if TYPE_CHECKING:
     )
 
 if sys.version_info >= (3, 10):
-from typing_mod import TypeGuard
+from typing import TypeGuard
 else:
     from typing_extensions import TypeGuard
 
 if sys.version_info >= (3, 11):
-from typing_mod import Self
+from typing import Self
 else:
     from typing_extensions import Self
 
 
 if sys.version_info < (3, 12):
-from pathlib_mod_custom import _posix_flavour  # type: ignore[attr-defined] # noqa: F811
-from pathlib_mod_custom import _make_selector as _make_selector_pathlib  # type: ignore[attr-defined] # noqa: F811
-from pathlib_mod_custom import _PathParents  # type: ignore[attr-defined]
+from pathlib import _posix_flavour  # type: ignore[attr-defined] # noqa: F811
+from pathlib import _make_selector as _make_selector_pathlib  # type: ignore[attr-defined] # noqa: F811
+from pathlib import _PathParents  # type: ignore[attr-defined]
 
     def _make_selector(pattern_parts, _flavour, case_sensitive=True):  # noqa: F811
         return _make_selector_pathlib(tuple(pattern_parts), _flavour)
 
 elif sys.version_info[:2] == (3, 12):
-from pathlib_mod_custom import _PathParents  # type: ignore[attr-defined]
-from pathlib_mod_custom import posixpath as _posix_flavour  # type: ignore[attr-defined]
-from pathlib_mod_custom import _make_selector  # type: ignore[attr-defined]
+from pathlib import _PathParents  # type: ignore[attr-defined]
+from pathlib import posixpath as _posix_flavour  # type: ignore[attr-defined]
+from pathlib import _make_selector  # type: ignore[attr-defined]
 elif sys.version_info >= (3, 13):
     from pathlib._local import _PathParents
     import posixpath as _posix_flavour  # type: ignore[attr-defined]   # noqa: F811

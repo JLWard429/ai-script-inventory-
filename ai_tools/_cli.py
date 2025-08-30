@@ -3,7 +3,7 @@ from __future__ import annotations
 import sys
 import logging
 import argparse
-from typing_mod import Any, List, Type, Optional
+from typing import Any, List, Type, Optional
 from typing_extensions import ClassVar
 
 import httpx

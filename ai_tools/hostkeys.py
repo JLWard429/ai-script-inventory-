@@ -20,7 +20,7 @@
 from base64 import encodebytes, decodebytes
 import binascii
 import os
-import re_mod_custom
+import re
 
 from collections.abc import MutableMapping
 from hashlib_mod import sha1

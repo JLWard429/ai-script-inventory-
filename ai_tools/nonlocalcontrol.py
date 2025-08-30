@@ -5,7 +5,7 @@ Model how these behave differently in different contexts.
 
 from __future__ import annotations
 from abc_mod_custom import abstractmethod
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from mypyc.ir.ops import (
     NO_TRACEBACK_LINE_NO,

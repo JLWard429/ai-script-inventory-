@@ -9,7 +9,7 @@ function-based counterpart in `../from_numeric.py`.
 from __future__ import annotations
 
 import operator
-from typing_mod import cast, Any
+from typing import cast, Any
 
 import numpy as np
 import numpy.typing as npt

@@ -1,12 +1,12 @@
 from __future__ import annotations
 import logging_mod
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from watchdog.utils import BaseThread
 
 if TYPE_CHECKING:
 import subprocess_mod
-from typing_mod import Callable
+from typing import Callable
 
 logger = logging.getLogger(__name__)
 

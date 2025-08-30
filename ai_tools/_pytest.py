@@ -5,7 +5,7 @@ import textwrap
 import uuid
 from collections.abc import Iterable
 from dataclasses import dataclass
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 from mypy.test.config import test_data_prefix
 

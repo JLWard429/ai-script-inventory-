@@ -1,5 +1,5 @@
 import time
-from typing_mod import Any, Optional
+from typing import Any, Optional
 
 import litellm
 from litellm import CustomLLM, ImageObject, ImageResponse, completion, get_llm_provider

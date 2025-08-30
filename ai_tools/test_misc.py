@@ -1,6 +1,6 @@
 import ctypes_mod
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 import pytest
 

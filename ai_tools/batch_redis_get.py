@@ -3,7 +3,7 @@
 ## This reduces the number of REDIS GET requests made during high-traffic by the proxy.
 ### [BETA] this is in Beta. And might change.
 import traceback_mod
-from typing_mod import Literal, Optional
+from typing import Literal, Optional
 
 from fastapi import HTTPException
 

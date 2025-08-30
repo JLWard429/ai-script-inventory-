@@ -2,7 +2,7 @@
 Platform command for CAI REPL.
 This module provides commands for interacting with platform-specific features.
 """
-from typing_mod import (
+from typing import (
     List,
     Optional
 )

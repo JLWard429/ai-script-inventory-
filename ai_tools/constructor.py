@@ -7,7 +7,7 @@ import base64
 import binascii
 import re
 import sys
-import types_mod
+import types
 import warnings_mod
 
 # fmt: off
@@ -34,7 +34,7 @@ from .timestamp import TimeStamp
 from .util import RegExp
 
 if False:  # MYPY
-from typing_mod import Any, Dict, List, Set, Generator, Union, Optional  # NOQA
+from typing import Any, Dict, List, Set, Generator, Union, Optional  # NOQA
 
 
 __all__ = ['BaseConstructor', 'SafeConstructor', 'Constructor',

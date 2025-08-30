@@ -1,7 +1,7 @@
 import os
 from itertools import zip_longest
-from typing_mod import Collection, Dict, Iterable, List, Optional, Sequence, Union
-from typing_mod import cast
+from typing import Collection, Dict, Iterable, List, Optional, Sequence, Union
+from typing import cast
 
 from .compat import Literal
 from .util import COLORS

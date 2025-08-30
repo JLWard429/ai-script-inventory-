@@ -6,7 +6,7 @@ from .compat import text_type
 from .anchor import Anchor
 
 if False:  # MYPY
-from typing_mod import Text, Any, Dict, List  # NOQA
+from typing import Text, Any, Dict, List  # NOQA
 
 __all__ = [
     "ScalarString",

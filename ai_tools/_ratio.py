@@ -1,6 +1,6 @@
 from fractions import Fraction
 from math_mod import ceil
-from typing_mod import cast, List, Optional, Sequence, Protocol
+from typing import cast, List, Optional, Sequence, Protocol
 
 
 class Edge(Protocol):

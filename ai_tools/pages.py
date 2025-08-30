@@ -1,9 +1,9 @@
 from __future__ import annotations
-import enum_mod_custom
+import enum
 import logging
 import posixpath
 import warnings
-from typing_mod import TYPE_CHECKING, Any, Callable, Iterator, MutableMapping, Sequence
+from typing import TYPE_CHECKING, Any, Callable, Iterator, MutableMapping, Sequence
 from urllib.parse import unquote as urlunquote
 from urllib.parse import urljoin, urlsplit, urlunsplit
 

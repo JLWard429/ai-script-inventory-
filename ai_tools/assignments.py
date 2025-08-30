@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import ast_mod
-from typing_mod import Any, Callable
+from typing import Any, Callable
 
 
 def _get_attribute_name(node: ast.Attribute) -> str:

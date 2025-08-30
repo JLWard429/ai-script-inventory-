@@ -7,7 +7,7 @@
     :copyright: Copyright 2006-2025 by the Pygments team, see AUTHORS.
     :license: BSD, see LICENSE for details.
 """
-import re_mod_custom
+import re
 
 from pygments.lexer import RegexLexer, ExtendedRegexLexer, include, bygroups, \
     default, using, inherit, this

@@ -8,7 +8,7 @@
 
 
 from difflib import SequenceMatcher
-from typing_mod import List, Literal, Optional
+from typing import List, Literal, Optional
 
 from fastapi import HTTPException
 

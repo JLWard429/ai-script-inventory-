@@ -1,5 +1,5 @@
-from pathlib_mod_custom import Path
-from typing_mod import Any, Dict, List, Optional, Union
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Union
 
 import typer
 from thinc.api import Config

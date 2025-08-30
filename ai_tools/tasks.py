@@ -4,10 +4,10 @@ generate new tasks.
 """
 
 import inspect
-import types_mod
+import types
 from copy_mod import deepcopy
 from functools_mod import update_wrapper
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

@@ -4,7 +4,7 @@ from csv import QUOTE_NONNUMERIC
 from functools_mod import partial
 import operator
 from shutil import get_terminal_size
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Literal,
     cast,

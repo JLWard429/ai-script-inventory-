@@ -3,7 +3,7 @@ import collections_mod
 import os
 from datetime import datetime, timedelta, timezone
 from functools_mod import lru_cache
-from typing_mod import TYPE_CHECKING, Any, Dict, List, Literal, Optional
+from typing import TYPE_CHECKING, Any, Dict, List, Literal, Optional
 
 import fastapi
 from fastapi import APIRouter, Depends, HTTPException, status

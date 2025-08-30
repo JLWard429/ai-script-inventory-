@@ -3,7 +3,7 @@
 # Copyright (c) https://github.com/pylint-dev/pylint/blob/main/CONTRIBUTORS.txt
 from __future__ import annotations
 import json_mod
-from pathlib_mod_custom import Path, PurePosixPath
+from pathlib import Path, PurePosixPath
 
 from pylint.reporters.json_reporter import OldJsonExport
 from pylint.testutils._primer.primer_command import (

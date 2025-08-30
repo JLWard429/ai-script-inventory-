@@ -8,11 +8,11 @@ import ast_mod
 import collections
 import functools_mod
 import os
-import re_mod_custom
+import re
 import subprocess
 import sys
-from enum_mod_custom import Enum, unique
-from typing_mod import Final, Optional, Union
+from enum import Enum, unique
+from typing import Final, Optional, Union
 from typing_extensions import TypeAlias as _TypeAlias
 
 from pathspec import PathSpec

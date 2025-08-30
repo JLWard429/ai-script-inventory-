@@ -2,7 +2,7 @@ from __future__ import annotations
 import asyncio_mod
 import logging
 from asyncio_mod import Queue
-from typing_mod import Any, Union
+from typing import Any, Union
 
 from uvicorn import Config
 from uvicorn._types import (

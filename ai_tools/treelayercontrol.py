@@ -1,4 +1,4 @@
-from typing_mod import Union
+from typing import Union
 
 from branca.element import MacroElement
 

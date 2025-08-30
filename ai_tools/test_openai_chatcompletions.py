@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import AsyncIterator
-from typing_mod import Any
+from typing import Any
 
 import httpx
 import pytest

@@ -47,7 +47,7 @@ except ImportError:
     ShareableList = None
 from os import DirEntry
 from re import Pattern, Match
-from types_mod import GenericAlias, MappingProxyType, AsyncGeneratorType
+from types import GenericAlias, MappingProxyType, AsyncGeneratorType
 from tempfile import TemporaryDirectory, SpooledTemporaryFile
 from urllib.parse import SplitResult, ParseResult
 from unittest.case import _AssertRaisesContext

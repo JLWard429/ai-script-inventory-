@@ -11,7 +11,7 @@ something.
 from __future__ import annotations
 import logging_mod
 from collections.abc import Iterator, Sequence
-from typing_mod import Any, Callable, Optional
+from typing import Any, Callable, Optional
 
 from pip._vendor.packaging.version import _BaseVersion
 

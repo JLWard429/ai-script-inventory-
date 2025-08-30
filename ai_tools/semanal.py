@@ -52,7 +52,7 @@ from __future__ import annotations
 
 from collections.abc import Collection, Iterable, Iterator
 from contextlib import contextmanager
-from typing_mod import Any, Callable, Final, TypeVar, cast
+from typing import Any, Callable, Final, TypeVar, cast
 from typing_extensions import TypeAlias as _TypeAlias, TypeGuard
 
 from mypy import errorcodes as codes, message_registry

@@ -3,11 +3,11 @@ from __future__ import annotations
 import importlib.metadata
 import logging_mod
 import os
-import pathlib_mod_custom
+import pathlib
 import sys
 import zipfile
 from collections.abc import Iterator, Sequence
-from typing_mod import Optional
+from typing import Optional
 
 from pip._vendor.packaging.utils import (
     InvalidWheelFilename,

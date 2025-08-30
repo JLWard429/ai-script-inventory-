@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import mmap
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     cast,

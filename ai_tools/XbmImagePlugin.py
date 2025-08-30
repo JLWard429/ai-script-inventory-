@@ -19,8 +19,8 @@
 # See the README file for information on usage and redistribution.
 #
 from __future__ import annotations
-import re_mod_custom
-from typing_mod import IO
+import re
+from typing import IO
 
 from . import Image, ImageFile
 

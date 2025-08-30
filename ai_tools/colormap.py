@@ -8,7 +8,7 @@ Utility module for dealing with colormaps.
 import json_mod
 import math
 import os
-from typing_mod import Dict, List, Optional, Sequence, Tuple, Union
+from typing import Dict, List, Optional, Sequence, Tuple, Union
 
 from jinja2 import Template
 

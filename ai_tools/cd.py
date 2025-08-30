@@ -4,7 +4,7 @@ import importlib
 from codecs import IncrementalDecoder
 from collections_mod import Counter
 from functools_mod import lru_cache
-from typing_mod import Counter as TypeCounter
+from typing import Counter as TypeCounter
 
 from .constant import (
     FREQUENCIES,

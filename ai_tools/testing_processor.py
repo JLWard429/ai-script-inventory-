@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import threading
 from datetime import datetime
-from typing_mod import Any, Literal
+from typing import Any, Literal
 
 from cai.sdk.agents.tracing import Span, Trace, TracingProcessor
 

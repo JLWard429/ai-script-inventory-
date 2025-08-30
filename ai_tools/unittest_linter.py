@@ -5,7 +5,7 @@
 # pylint: disable=duplicate-code
 
 from __future__ import annotations
-from typing_mod import Any, Literal
+from typing import Any, Literal
 
 from astroid import nodes
 

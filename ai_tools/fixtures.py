@@ -5,7 +5,7 @@ import subprocess
 import sys
 import tarfile
 import time
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 import jaraco.path
 import path

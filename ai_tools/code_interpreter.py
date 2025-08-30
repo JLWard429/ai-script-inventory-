@@ -3,7 +3,7 @@ Module for executing Python code and capturing its output.
 """
 import io_mod
 import sys
-from typing_mod import Dict
+from typing import Dict
 from cai.sdk.agents import function_tool
 
 

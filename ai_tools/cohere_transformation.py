@@ -3,7 +3,7 @@ Transformation logic from OpenAI /v1/embeddings format to Bedrock Cohere /invoke
 
 Why separate file? Make it easy to see how transformation works
 """
-from typing_mod import List
+from typing import List
 
 from litellm.llms.cohere.embed.transformation import CohereEmbeddingConfig
 from litellm.types.llms.bedrock import CohereEmbeddingRequest

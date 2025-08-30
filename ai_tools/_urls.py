@@ -1,5 +1,5 @@
 from __future__ import annotations
-import typing_mod
+import typing
 from urllib.parse import parse_qs, unquote, urlencode
 
 import idna

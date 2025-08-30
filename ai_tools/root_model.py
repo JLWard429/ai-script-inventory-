@@ -1,7 +1,7 @@
 """RootModel class and type definitions."""
 
 from __future__ import annotations as _annotations
-import typing_mod
+import typing
 from copy_mod import copy, deepcopy
 
 from pydantic_core import PydanticUndefined
@@ -11,7 +11,7 @@ from ._internal import _model_construction, _repr
 from .main import BaseModel, _object_setattr
 
 if typing.TYPE_CHECKING:
-from typing_mod import Any, Literal
+from typing import Any, Literal
 
     from typing_extensions import Self, dataclass_transform
 

@@ -35,7 +35,7 @@ Usage:
 """
 
 from argparse import _SubParsersAction
-from typing_mod import List, Optional
+from typing import List, Optional
 
 from huggingface_hub import logging
 from huggingface_hub.commands import BaseHuggingfaceCLICommand

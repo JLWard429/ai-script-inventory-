@@ -5,7 +5,7 @@ Use this when each team should control its own callbacks
 """
 import json_mod
 import traceback
-from typing_mod import Optional
+from typing import Optional
 
 from fastapi import APIRouter, Depends, Header, HTTPException, Request, status
 

@@ -3,7 +3,7 @@ import logging_mod
 import string
 from collections.abc import Generator, Iterable, Iterator
 from optparse import Values
-from typing_mod import NamedTuple
+from typing import NamedTuple
 
 from pip._vendor.packaging.requirements import InvalidRequirement
 from pip._vendor.packaging.utils import canonicalize_name

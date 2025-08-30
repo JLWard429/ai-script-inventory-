@@ -6,7 +6,7 @@ This script installs the required spaCy model and sets up the development enviro
 """
 
 import sys
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 # Import shared utilities
 sys.path.insert(0, str(Path(__file__).parent / "python_scripts"))

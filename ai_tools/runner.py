@@ -8,13 +8,13 @@ from collections.abc import Callable
 import dataclasses
 import os
 import sys
-import types_mod
-from typing_mod import cast
-from typing_mod import final
-from typing_mod import Generic
-from typing_mod import Literal
-from typing_mod import TYPE_CHECKING
-from typing_mod import TypeVar
+import types
+from typing import cast
+from typing import final
+from typing import Generic
+from typing import Literal
+from typing import TYPE_CHECKING
+from typing import TypeVar
 
 from .reports import BaseReport
 from .reports import CollectErrorRepr

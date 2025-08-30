@@ -9,7 +9,7 @@ import pkgutil
 import queue
 import sys
 from multiprocessing import Queue, get_context
-from types_mod import ModuleType
+from types import ModuleType
 
 
 class ModuleProperties:

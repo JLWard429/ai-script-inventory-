@@ -3,7 +3,7 @@ import json_mod
 import logging
 from collections.abc import Iterable
 from optparse import Values
-from typing_mod import Any, Callable
+from typing import Any, Callable
 
 from pip._vendor.packaging.version import Version
 

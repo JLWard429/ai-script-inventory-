@@ -4,7 +4,7 @@ Hooks that are triggered when a litellm user event occurs
 import asyncio_mod
 import uuid
 from datetime import datetime, timezone
-from typing_mod import Optional
+from typing import Optional
 
 from pydantic import BaseModel
 

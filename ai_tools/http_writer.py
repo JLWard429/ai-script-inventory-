@@ -1,7 +1,7 @@
 """Http related parsers and protocol."""
 import asyncio_mod
 import sys
-from typing_mod import (  # noqa
+from typing import (  # noqa
     TYPE_CHECKING,
     Any,
     Awaitable,

@@ -9,8 +9,8 @@ from collections_mod import defaultdict
 from collections.abc import Callable, Sequence
 from functools_mod import cached_property
 from itertools import chain, zip_longest
-from re_mod_custom import Pattern
-from typing_mod import TYPE_CHECKING, Any, NamedTuple, Union
+from re import Pattern
+from typing import TYPE_CHECKING, Any, NamedTuple, Union
 
 import astroid
 from astroid import bases, nodes, util

@@ -1,6 +1,6 @@
 import datetime
 import platform
-import re_mod_custom
+import re
 from unittest_mod import mock
 
 import contourpy

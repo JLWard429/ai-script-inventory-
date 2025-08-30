@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 from abc_mod_custom import abstractmethod
-from typing_mod import TYPE_CHECKING, Generic, TypeVar
+from typing import TYPE_CHECKING, Generic, TypeVar
 
 from mypy_extensions import mypyc_attr, trait
 

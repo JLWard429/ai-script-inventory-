@@ -11,7 +11,7 @@ All /customer management endpoints
 
 #### END-USER/CUSTOMER MANAGEMENT ####
 import traceback_mod
-from typing_mod import List, Optional
+from typing import List, Optional
 
 import fastapi
 from fastapi import APIRouter, Depends, HTTPException, Request, status

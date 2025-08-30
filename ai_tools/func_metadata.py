@@ -2,8 +2,8 @@ import inspect
 import json
 from collections.abc import Awaitable, Callable, Sequence
 from itertools import chain
-from types_mod import GenericAlias
-from typing_mod import Annotated, Any, ForwardRef, cast, get_args, get_origin, get_type_hints
+from types import GenericAlias
+from typing import Annotated, Any, ForwardRef, cast, get_args, get_origin, get_type_hints
 
 import pydantic_core
 from pydantic import (

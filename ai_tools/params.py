@@ -1,4 +1,4 @@
-from typing_mod import TYPE_CHECKING, Any, Callable, List, Optional, Type, Union, overload
+from typing import TYPE_CHECKING, Any, Callable, List, Optional, Type, Union, overload
 
 import click
 

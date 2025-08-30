@@ -1,4 +1,4 @@
-from pathlib_mod_custom import Path
+from pathlib import Path
 import shutil
 
 import pytest

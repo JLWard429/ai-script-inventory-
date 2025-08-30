@@ -1,4 +1,4 @@
-from typing_mod import Any, Callable, Optional
+from typing import Any, Callable, Optional
 
 from ..compat import torch
 from ..model import Model

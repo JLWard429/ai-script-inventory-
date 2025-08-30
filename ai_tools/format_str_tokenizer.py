@@ -1,8 +1,8 @@
 """Tokenizers for three string formatting methods"""
 
 from __future__ import annotations
-from enum_mod_custom import Enum, unique
-from typing_mod import Final
+from enum import Enum, unique
+from typing import Final
 
 from mypy.checkstrformat import (
     ConversionSpecifier,

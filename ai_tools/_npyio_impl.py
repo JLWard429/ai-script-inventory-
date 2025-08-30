@@ -7,7 +7,7 @@ import itertools
 import operator
 import os
 import pickle
-import re_mod_custom
+import re
 import warnings
 import weakref
 from collections.abc import Mapping

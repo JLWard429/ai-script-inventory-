@@ -6,7 +6,7 @@ from datetime import datetime
 from inspect import signature
 from io_mod import StringIO
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 import sys
 
 import numpy as np

@@ -1,9 +1,9 @@
 import random
 import shutil
 import sys
-from pathlib_mod_custom import Path
+from pathlib import Path
 from timeit import default_timer as timer
-from typing_mod import (
+from typing import (
     IO,
     TYPE_CHECKING,
     Any,

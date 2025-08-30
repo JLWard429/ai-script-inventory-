@@ -13,7 +13,7 @@ from astroid.manager import AstroidManager
 def _http_transform():
     code = textwrap.dedent(
         """
-from enum_mod_custom import IntEnum
+from enum import IntEnum
 from collections_mod import namedtuple
     _HTTPStatus = namedtuple('_HTTPStatus', 'value phrase description')
 

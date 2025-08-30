@@ -9,7 +9,7 @@ from __future__ import annotations
 import logging_mod
 from functools_mod import partial
 from optparse import Values
-from typing_mod import Any
+from typing import Any
 
 from pip._internal.build_env import SubprocessBuildEnvironmentInstaller
 from pip._internal.cache import WheelCache

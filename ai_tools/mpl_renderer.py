@@ -1,7 +1,7 @@
 from __future__ import annotations
 import io_mod
 from itertools import pairwise
-from typing_mod import TYPE_CHECKING, Any, cast
+from typing import TYPE_CHECKING, Any, cast
 
 import matplotlib.collections as mcollections
 import matplotlib.pyplot as plt

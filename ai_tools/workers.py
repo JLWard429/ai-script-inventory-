@@ -4,7 +4,7 @@ import logging
 import signal
 import sys
 import warnings_mod
-from typing_mod import Any
+from typing import Any
 
 from gunicorn.arbiter import Arbiter
 from gunicorn.workers.base import Worker

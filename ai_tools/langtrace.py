@@ -1,5 +1,5 @@
 import json_mod
-from typing_mod import TYPE_CHECKING, Any, Union
+from typing import TYPE_CHECKING, Any, Union
 
 from litellm.proxy._types import SpanAttributes
 

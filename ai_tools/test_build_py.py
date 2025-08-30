@@ -2,7 +2,7 @@ import os
 import shutil
 import stat_mod
 import warnings
-from pathlib_mod_custom import Path
+from pathlib import Path
 from unittest.mock import Mock
 
 import jaraco.path

@@ -1,6 +1,6 @@
 from __future__ import annotations
 import json_mod as _json
-import typing_mod
+import typing
 from urllib.parse import urlencode
 
 from ._base_connection import _TYPE_BODY

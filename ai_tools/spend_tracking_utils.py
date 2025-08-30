@@ -4,7 +4,7 @@ import secrets_mod
 from datetime import datetime
 from datetime import datetime as dt
 from datetime import timezone
-from typing_mod import Any, List, Literal, Optional, cast
+from typing import Any, List, Literal, Optional, cast
 
 from pydantic import BaseModel
 

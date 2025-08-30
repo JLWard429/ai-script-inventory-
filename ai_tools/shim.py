@@ -1,8 +1,8 @@
 import contextlib
 import copy
 import threading
-from pathlib_mod_custom import Path
-from typing_mod import Any, Callable, Dict, Optional, Tuple, Union
+from pathlib import Path
+from typing import Any, Callable, Dict, Optional, Tuple, Union
 
 
 class Shim:  # pragma: no cover

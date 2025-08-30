@@ -740,7 +740,7 @@ class TestPEP590(unittest.TestCase):
                  (_testcapi.MethodDescriptor2(), (0,), {}, False)]
 
         from _testcapi import pyobject_vectorcall, pyvectorcall_call
-        from types_mod import MethodType
+        from types import MethodType
         from functools import partial
 
         def vectorcall(func, args, kwargs):

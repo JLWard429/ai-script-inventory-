@@ -1,6 +1,6 @@
 import json_mod
-from enum_mod_custom import Enum
-from typing_mod import Any, List, Optional, TypedDict, Union
+from enum import Enum
+from typing import Any, List, Optional, TypedDict, Union
 
 from pydantic import BaseModel
 

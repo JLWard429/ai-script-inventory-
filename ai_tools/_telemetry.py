@@ -1,6 +1,6 @@
 from queue import Queue
 from threading import Lock, Thread
-from typing_mod import Dict, Optional, Union
+from typing import Dict, Optional, Union
 from urllib.parse import quote
 
 from .. import constants, logging

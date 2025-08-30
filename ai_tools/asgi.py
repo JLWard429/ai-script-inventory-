@@ -1,5 +1,5 @@
 from __future__ import annotations
-import typing_mod
+import typing
 
 from .._models import Request, Response
 from .._types import AsyncByteStream

@@ -1,6 +1,6 @@
 from dataclasses import dataclass
-from enum_mod_custom import Enum
-from typing_mod import Dict, Optional
+from enum import Enum
+from typing import Dict, Optional
 
 import requests
 

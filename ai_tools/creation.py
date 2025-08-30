@@ -1,5 +1,5 @@
 import time
-from typing_mod import Optional, TypeVar
+from typing import Optional, TypeVar
 
 from safety_schemas.models.events import Event, EventTypeBase, PayloadBase, SourceType
 

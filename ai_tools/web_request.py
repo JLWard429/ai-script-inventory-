@@ -5,10 +5,10 @@ import re
 import socket
 import string
 import tempfile
-import types_mod
+import types
 import warnings_mod
-from types_mod import MappingProxyType
-from typing_mod import (
+from types import MappingProxyType
+from typing import (
     TYPE_CHECKING,
     Any,
     Dict,

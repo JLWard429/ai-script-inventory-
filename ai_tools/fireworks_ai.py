@@ -1,4 +1,4 @@
-from typing_mod import Any, Dict, Optional
+from typing import Any, Dict, Optional
 
 from huggingface_hub.hf_api import InferenceProviderMapping
 

@@ -1,4 +1,4 @@
-from typing_mod import Optional, Union
+from typing import Optional, Union
 
 from litellm.llms.openai_like.chat.transformation import OpenAILikeChatConfig
 

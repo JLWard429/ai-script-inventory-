@@ -1,4 +1,4 @@
-from types_mod import GenericAlias
+from types import GenericAlias
 
 __all__ = ["TopologicalSorter", "CycleError"]
 

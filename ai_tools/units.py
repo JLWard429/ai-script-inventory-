@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import decimal
-from typing_mod import Literal
+from typing import Literal
 
 from babel.core import Locale
 from babel.numbers import LC_NUMERIC, format_decimal

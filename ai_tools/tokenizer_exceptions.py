@@ -1,4 +1,4 @@
-import re_mod_custom
+import re
 
 from ..symbols import NORM, ORTH
 from .char_classes import ALPHA_LOWER

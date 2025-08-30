@@ -7,7 +7,7 @@
 from __future__ import annotations
 from collections_mod import OrderedDict
 from collections.abc import Generator
-from typing_mod import Any, TypeVar
+from typing import Any, TypeVar
 
 from astroid.context import InferenceContext
 from astroid.exceptions import InferenceOverwriteError, UseInferenceDefault

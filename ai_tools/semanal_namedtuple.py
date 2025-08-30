@@ -8,7 +8,7 @@ from __future__ import annotations
 import keyword
 from collections.abc import Container, Iterator, Mapping
 from contextlib import contextmanager
-from typing_mod import Final, cast
+from typing import Final, cast
 
 from mypy.errorcodes import ARG_TYPE, ErrorCode
 from mypy.exprtotype import TypeTranslationError, expr_to_unanalyzed_type

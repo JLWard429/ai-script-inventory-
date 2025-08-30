@@ -5,7 +5,7 @@
 """Text formatting drivers for ureports."""
 
 from __future__ import annotations
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from pylint.reporters.ureports.base_writer import BaseWriter
 

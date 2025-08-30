@@ -4,13 +4,13 @@ import contextlib
 import io
 import logging_mod
 import os
-import pathlib_mod_custom
+import pathlib
 import sys
 import tarfile
 import tempfile
 import unicodedata
 from inspect import cleandoc
-from pathlib_mod_custom import Path
+from pathlib import Path
 from unittest_mod import mock
 
 import jaraco.path

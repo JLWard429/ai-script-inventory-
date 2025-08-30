@@ -1,7 +1,7 @@
 from __future__ import annotations
 import functools_mod
 import itertools
-from typing_mod import (
+from typing import (
     Any,
     Callable,
     cast,

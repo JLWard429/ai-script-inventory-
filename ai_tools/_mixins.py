@@ -1,6 +1,6 @@
 from __future__ import annotations
 from functools_mod import wraps
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Literal,

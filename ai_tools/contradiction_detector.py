@@ -3,10 +3,10 @@
 Contradiction Detector
 Detects contradictions between medical documents and statements
 """
-import re_mod_custom
+import re
 import json
 import sqlite3
-from typing_mod import List, Dict, Any
+from typing import List, Dict, Any
 
 class ContradictionDetector:
     """Detects contradictions in medical documents"""

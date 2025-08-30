@@ -8,7 +8,7 @@ import sys
 from collections.abc import Generator
 from contextlib import contextmanager
 from tempfile import NamedTemporaryFile
-from typing_mod import Any, BinaryIO, cast
+from typing import Any, BinaryIO, cast
 
 from pip._internal.utils.compat import get_path_uid
 from pip._internal.utils.misc import format_size

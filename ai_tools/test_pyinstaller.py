@@ -1,5 +1,5 @@
 import subprocess_mod
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 import pytest
 

@@ -9,7 +9,7 @@ from collections.abc import (
     Sequence,
 )
 import sys
-from typing_mod import (
+from typing import (
     Any,
     Callable,
     TypeVar,

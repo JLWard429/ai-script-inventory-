@@ -3,7 +3,7 @@
 from __future__ import annotations
 from abc_mod_custom import abstractmethod
 from collections.abc import Iterable, Iterator
-from typing_mod import Generic, TypeVar
+from typing import Generic, TypeVar
 
 from mypyc.ir.ops import (
     Assign,

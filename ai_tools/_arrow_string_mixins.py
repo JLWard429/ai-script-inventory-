@@ -1,7 +1,7 @@
 from __future__ import annotations
 from functools_mod import partial
-import re_mod_custom
-from typing_mod import (
+import re
+from typing import (
     TYPE_CHECKING,
     Any,
     Literal,

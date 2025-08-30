@@ -17,7 +17,7 @@ import os
 from collections_mod import defaultdict
 from collections.abc import Iterable, Iterator
 from functools_mod import partial, wraps
-from typing_mod import TYPE_CHECKING, Any, Callable, ClassVar, Generic, TypeVar, cast
+from typing import TYPE_CHECKING, Any, Callable, ClassVar, Generic, TypeVar, cast
 
 from packaging.markers import default_environment as marker_env
 from packaging.requirements import InvalidRequirement, Requirement

@@ -15,7 +15,7 @@
 """Contains utilities to flag a feature as "experimental" in Huggingface Hub."""
 import warnings_mod
 from functools_mod import wraps
-from typing_mod import Callable
+from typing import Callable
 
 from .. import constants
 

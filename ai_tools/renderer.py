@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from collections.abc import Sequence
 import inspect
-from typing_mod import Any, ClassVar, Protocol
+from typing import Any, ClassVar, Protocol
 
 from .common.utils import escapeHtml, unescapeAll
 from .token import Token

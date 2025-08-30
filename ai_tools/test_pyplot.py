@@ -2,7 +2,7 @@ import difflib
 
 import numpy as np
 import sys
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 import pytest
 

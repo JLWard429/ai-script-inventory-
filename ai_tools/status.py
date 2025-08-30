@@ -1,5 +1,5 @@
-from types_mod import TracebackType
-from typing_mod import Optional, Type
+from types import TracebackType
+from typing import Optional, Type
 
 from .console import Console, RenderableType
 from .jupyter import JupyterMixin

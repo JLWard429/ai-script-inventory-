@@ -1,5 +1,5 @@
 import asyncio_mod
-from typing_mod import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any
 
 from litellm.utils import calculate_max_parallel_requests
 

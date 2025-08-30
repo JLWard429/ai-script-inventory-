@@ -1,5 +1,5 @@
 import logging_mod
-from typing_mod import Any
+from typing import Any
 
 import pytest
 from mcp.types import Tool as MCPTool

@@ -15,7 +15,7 @@ import os
 import time
 from abc_mod_custom import abstractmethod
 from collections.abc import Iterable
-from typing_mod import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any
 
 if TYPE_CHECKING:
     # We avoid importing sqlite3 unless we are using it so we can mostly work

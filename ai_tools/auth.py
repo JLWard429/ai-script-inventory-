@@ -15,8 +15,8 @@ import urllib.parse
 from abc_mod_custom import ABC, abstractmethod
 from functools_mod import cache
 from os.path import commonprefix
-from pathlib_mod_custom import Path
-from typing_mod import Any, NamedTuple
+from pathlib import Path
+from typing import Any, NamedTuple
 
 from pip._vendor.requests.auth import AuthBase, HTTPBasicAuth
 from pip._vendor.requests.models import Request, Response

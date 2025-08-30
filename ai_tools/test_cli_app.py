@@ -1,5 +1,5 @@
-from pathlib_mod_custom import Path
-from typing_mod import Any, Dict
+from pathlib import Path
+from typing import Any, Dict
 
 import pytest
 import srsly

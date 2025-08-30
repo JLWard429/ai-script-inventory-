@@ -16,7 +16,7 @@ import urllib.parse
 from collections.abc import Generator, Iterable
 from dataclasses import dataclass
 from optparse import Values
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

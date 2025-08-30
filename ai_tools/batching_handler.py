@@ -5,7 +5,7 @@ Slack alerts are sent every 10s or when events are greater than X events
 
 see custom_batch_logger.py for more details / defaults 
 """
-from typing_mod import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any
 
 from litellm._logging import verbose_proxy_logger
 

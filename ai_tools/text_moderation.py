@@ -2,7 +2,7 @@
 """
 Azure Text Moderation Native Guardrail Integrationfor LiteLLM
 """
-from typing_mod import TYPE_CHECKING, Any, Dict, List, Literal, Optional, Type, Union, cast
+from typing import TYPE_CHECKING, Any, Dict, List, Literal, Optional, Type, Union, cast
 
 from fastapi import HTTPException
 

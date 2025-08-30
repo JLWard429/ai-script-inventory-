@@ -5,8 +5,8 @@
 """Check for imports on private external modules and names."""
 
 from __future__ import annotations
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING
+from pathlib import Path
+from typing import TYPE_CHECKING
 
 from astroid import nodes
 

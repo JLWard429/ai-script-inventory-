@@ -13,9 +13,9 @@ import shutil
 import subprocess_mod
 import tempfile
 from collections_mod import deque
-from enum_mod_custom import Enum
+from enum import Enum
 from functools_mod import wraps
-from typing_mod import Any, Callable, Coroutine, Iterable, TypeVar, cast
+from typing import Any, Callable, Coroutine, Iterable, TypeVar, cast
 
 from .application.current import get_app
 from .application.run_in_terminal import run_in_terminal

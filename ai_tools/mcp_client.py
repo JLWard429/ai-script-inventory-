@@ -2,8 +2,8 @@ import json_mod
 import logging
 from contextlib import AsyncExitStack
 from datetime import timedelta
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING, Any, AsyncIterable, Dict, List, Literal, Optional, Union, overload
+from pathlib import Path
+from typing import TYPE_CHECKING, Any, AsyncIterable, Dict, List, Literal, Optional, Union, overload
 
 from typing_extensions import NotRequired, TypeAlias, TypedDict, Unpack
 
@@ -152,7 +152,7 @@ class MCPClient:
                         - terminate_on_close (bool, optional): Whether to terminate on close
         """
         from mcp import ClientSession, StdioServerParameters
-        from mcp import types_mod as mcp_types
+        from mcp import types as mcp_types
 
         # Determine server type and create appropriate parameters
         if type == "stdio":

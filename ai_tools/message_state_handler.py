@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import tokenize
 from collections_mod import defaultdict
-from typing_mod import TYPE_CHECKING, Literal
+from typing import TYPE_CHECKING, Literal
 
 from pylint import exceptions, interfaces
 from pylint.constants import (

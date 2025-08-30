@@ -3,9 +3,9 @@ from __future__ import annotations
 
 import codecs
 import string
-from enum_mod_custom import Enum
+from enum import Enum
 from itertools import accumulate
-from typing_mod import Callable, Iterable, Tuple, TypeVar
+from typing import Callable, Iterable, Tuple, TypeVar
 
 from prompt_toolkit.application.current import get_app
 from prompt_toolkit.buffer import Buffer, indent, reshape_text, unindent

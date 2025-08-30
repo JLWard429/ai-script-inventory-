@@ -1,6 +1,6 @@
 from contextvars import ContextVar, Token
-from types_mod import TracebackType
-from typing_mod import Optional, Sequence, Type
+from types import TracebackType
+from typing import Optional, Sequence, Type
 
 from opentelemetry.trace import SpanContext
 from opentelemetry.trace.span import format_span_id

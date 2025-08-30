@@ -11,12 +11,12 @@ import configparser
 import contextlib
 import locale
 import logging
-import pathlib_mod_custom
+import pathlib
 import re
 import sys
 from collections.abc import Iterator
 from itertools import chain, groupby, repeat
-from typing_mod import TYPE_CHECKING, Literal
+from typing import TYPE_CHECKING, Literal
 
 from pip._vendor.packaging.requirements import InvalidRequirement
 from pip._vendor.packaging.version import InvalidVersion

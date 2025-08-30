@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import Callable, Iterable, Mapping, Pattern, Sequence
+from typing import Callable, Iterable, Mapping, Pattern, Sequence
 
 from prompt_toolkit.completion import CompleteEvent, Completer, Completion
 from prompt_toolkit.document import Document

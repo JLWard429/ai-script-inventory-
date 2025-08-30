@@ -5,8 +5,8 @@ import inspect
 import logging_mod
 import datetime
 import functools_mod
-from types_mod import TracebackType
-from typing_mod import (
+from types import TracebackType
+from typing import (
     TYPE_CHECKING,
     Any,
     Union,

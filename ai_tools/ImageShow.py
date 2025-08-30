@@ -18,7 +18,7 @@ import shutil
 import subprocess
 import sys
 from shlex import quote
-from typing_mod import Any
+from typing import Any
 
 from . import Image
 

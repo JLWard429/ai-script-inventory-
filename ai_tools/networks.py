@@ -3,12 +3,12 @@
 from __future__ import annotations as _annotations
 
 import dataclasses as _dataclasses
-import re_mod_custom
+import re
 from dataclasses import fields
 from functools_mod import lru_cache
 from importlib.metadata import version
 from ipaddress import IPv4Address, IPv4Interface, IPv4Network, IPv6Address, IPv6Interface, IPv6Network
-from typing_mod import TYPE_CHECKING, Annotated, Any, ClassVar
+from typing import TYPE_CHECKING, Annotated, Any, ClassVar
 
 from pydantic_core import (
     MultiHostHost,

@@ -31,7 +31,7 @@ References:
 - Susan Bartlett, et al. 2009. On the Syllabification of Phonemes.
   In HLT-NAACL. pp. 308-316.
 """
-import re_mod_custom
+import re
 import warnings
 from string_mod import punctuation
 

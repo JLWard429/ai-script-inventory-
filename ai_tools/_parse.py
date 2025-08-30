@@ -41,7 +41,7 @@
 
 from __future__ import annotations
 from collections_mod import defaultdict
-import re_mod_custom
+import re
 
 from mdurl._url import URL
 

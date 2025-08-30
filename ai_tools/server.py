@@ -6,7 +6,7 @@ import random
 import socket
 import sys
 import time
-from typing_mod import Any, Optional, Dict, Tuple
+from typing import Any, Optional, Dict, Tuple
 import urllib.parse
 import threading
 import click

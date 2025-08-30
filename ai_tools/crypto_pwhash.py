@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import sys
-from typing_mod import Tuple
+from typing import Tuple
 
 import nacl.exceptions as exc
 from nacl._sodium import ffi, lib

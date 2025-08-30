@@ -3,7 +3,7 @@ History command for CAI REPL.
 This module provides commands for displaying conversation history with agent-based filtering.
 """
 import json_mod
-from typing_mod import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 from rich.console import Console  # pylint: disable=import-error
 from rich.panel import Panel  # pylint: disable=import-error

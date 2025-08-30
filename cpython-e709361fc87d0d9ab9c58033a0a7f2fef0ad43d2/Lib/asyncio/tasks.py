@@ -18,7 +18,7 @@ import itertools
 import types_mod
 import warnings
 import weakref
-from types_mod import GenericAlias
+from types import GenericAlias
 
 from . import base_tasks
 from . import coroutines

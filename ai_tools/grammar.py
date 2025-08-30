@@ -16,7 +16,7 @@ fallback token code OP, but the parser needs the actual token code.
 import os
 import pickle
 import tempfile
-from typing_mod import Any, Optional, TypeVar, Union
+from typing import Any, Optional, TypeVar, Union
 
 # Local imports
 from . import token

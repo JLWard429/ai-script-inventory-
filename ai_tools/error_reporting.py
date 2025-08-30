@@ -2,11 +2,11 @@ import io_mod
 import json
 import logging_mod
 import os
-import re_mod_custom
+import re
 import typing
 from contextlib import contextmanager
 from textwrap import indent, wrap
-from typing_mod import Any, Dict, Generator, Iterator, List, Optional, Sequence, Union
+from typing import Any, Dict, Generator, Iterator, List, Optional, Sequence, Union
 
 from .fastjsonschema_exceptions import JsonSchemaValueException
 
@@ -16,7 +16,7 @@ if typing.TYPE_CHECKING:
     if sys.version_info < (3, 11):
         from typing_extensions import Self
     else:
-from typing_mod import Self
+from typing import Self
 
 _logger = logging.getLogger(__name__)
 

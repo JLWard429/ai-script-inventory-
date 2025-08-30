@@ -5,7 +5,7 @@ from datetime import date, datetime
 from uuid import UUID
 import ipaddress
 import re
-import typing_mod
+import typing
 import warnings
 
 from jsonschema.exceptions import FormatError

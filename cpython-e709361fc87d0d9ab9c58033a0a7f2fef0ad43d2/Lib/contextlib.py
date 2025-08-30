@@ -5,7 +5,7 @@ import sys
 import _collections_abc
 from collections import deque
 from functools import wraps
-from types_mod import MethodType, GenericAlias
+from types import MethodType, GenericAlias
 
 __all__ = ["asynccontextmanager", "contextmanager", "closing", "nullcontext",
            "AbstractContextManager", "AbstractAsyncContextManager",

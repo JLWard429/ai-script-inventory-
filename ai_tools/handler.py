@@ -1,7 +1,7 @@
 """
 Handler for transforming /chat/completions api requests to litellm.responses requests
 """
-from typing_mod import TYPE_CHECKING, Any, Coroutine, TypedDict, Union
+from typing import TYPE_CHECKING, Any, Coroutine, TypedDict, Union
 
 if TYPE_CHECKING:
     from litellm import CustomStreamWrapper, LiteLLMLoggingObj, ModelResponse

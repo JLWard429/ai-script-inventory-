@@ -6,7 +6,7 @@
 # For license information, see LICENSE.TXT
 
 # For more information, see http://lilyx.net/pages/nltkjapanesecorpus.html
-import re_mod_custom
+import re
 
 from nltk.corpus.reader.api import CorpusReader, SyntaxCorpusReader
 from nltk.corpus.reader.util import (

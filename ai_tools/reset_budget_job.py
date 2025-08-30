@@ -2,7 +2,7 @@ import asyncio_mod
 import json
 import time
 from datetime import datetime, timedelta, timezone
-from typing_mod import List, Literal, Optional, Union
+from typing import List, Literal, Optional, Union
 
 from litellm._logging import verbose_proxy_logger
 from litellm.proxy._types import (

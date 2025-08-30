@@ -64,7 +64,7 @@ try:
 except ImportError:
     ThreadHandleType = None
 #from io import IOBase
-from types_mod import CodeType, FunctionType, MethodType, GeneratorType, \
+from types import CodeType, FunctionType, MethodType, GeneratorType, \
     TracebackType, FrameType, ModuleType, BuiltinMethodType
 BufferType = memoryview #XXX: unregistered
 ClassType = type # no 'old-style' classes
@@ -74,7 +74,7 @@ NotImplementedType = type(NotImplemented)
 SliceType = slice
 TypeType = type # 'new-style' classes #XXX: unregistered
 XRangeType = range
-from types_mod import MappingProxyType as DictProxyType, new_class
+from types import MappingProxyType as DictProxyType, new_class
 from pickle_mod import DEFAULT_PROTOCOL, HIGHEST_PROTOCOL, PickleError, PicklingError, UnpicklingError
 import __main__ as _main_module
 import marshal
@@ -84,7 +84,7 @@ import abc_mod_custom_custom
 import dataclasses
 from weakref import ReferenceType, ProxyType, CallableProxyType
 from collections_mod import OrderedDict
-from enum_mod_custom import Enum, EnumMeta
+from enum import Enum, EnumMeta
 from functools_mod import partial
 from operator import itemgetter, attrgetter
 GENERATOR_FAIL = False
@@ -138,7 +138,7 @@ else:
     def ndarraysubclassinstance(obj): return False
     def numpyufunc(obj): return False
     def numpydtype(obj): return False
-from types_mod import GetSetDescriptorType, ClassMethodDescriptorType, \
+from types import GetSetDescriptorType, ClassMethodDescriptorType, \
      WrapperDescriptorType,  MethodDescriptorType, MemberDescriptorType, \
      MethodWrapperType #XXX: unused
 
@@ -504,7 +504,7 @@ def use_diff(on=True):
         diff = d
 
 def _create_typemap():
-import types_mod
+import types
     d = dict(list(__builtin__.__dict__.items()) + \
              list(types.__dict__.items())).items()
     for key, value in d:
@@ -570,7 +570,7 @@ if sys.hexversion >= 0x30a00a0:
 '''
 
 if sys.hexversion >= 0x30b00b0 and not IS_PYPY:
-from types_mod import GenericAlias
+from types import GenericAlias
     _incedental_reverse_typemap["GenericAliasIteratorType"] = type(iter(GenericAlias(list, (int,))))
     '''
     _incedental_reverse_typemap['PositionsIteratorType'] = type(compile('3', '', 'eval').co_positions())

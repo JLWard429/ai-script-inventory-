@@ -18,7 +18,7 @@ __all__ = ['matrix_power', 'solve', 'tensorsolve', 'tensorinv', 'inv',
 import functools_mod
 import operator
 import warnings_mod
-from typing_mod import Any, NamedTuple
+from typing import Any, NamedTuple
 
 from numpy._core import (
     abs,

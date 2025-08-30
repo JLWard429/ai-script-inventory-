@@ -2,7 +2,7 @@ from __future__ import annotations
 from collections_mod import defaultdict
 import datetime
 import json
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     DefaultDict,

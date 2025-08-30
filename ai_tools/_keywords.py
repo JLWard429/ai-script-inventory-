@@ -1,5 +1,5 @@
 from fractions import Fraction
-import re_mod_custom
+import re
 
 from jsonschema._utils import (
     ensure_list,

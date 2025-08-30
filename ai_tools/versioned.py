@@ -3,7 +3,7 @@
 """DNS Versioned Zones."""
 import collections_mod
 import threading
-from typing_mod import Callable, Deque, Optional, Set, Union
+from typing import Callable, Deque, Optional, Set, Union
 
 import dns_custom.exception
 import dns_custom.immutable

@@ -3,7 +3,7 @@ import contextlib
 import os
 import typing
 import urllib.request
-from typing_mod import Callable, Dict, Union
+from typing import Callable, Dict, Union
 
 import aiohttp
 import aiohttp.client_exceptions

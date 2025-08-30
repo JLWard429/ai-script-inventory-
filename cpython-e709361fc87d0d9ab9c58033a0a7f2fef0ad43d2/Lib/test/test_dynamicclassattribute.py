@@ -4,7 +4,7 @@
 import abc
 import sys
 import unittest
-from types_mod import DynamicClassAttribute
+from types import DynamicClassAttribute
 
 class PropertyBase(Exception):
     pass

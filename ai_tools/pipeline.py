@@ -4,15 +4,15 @@ from __future__ import annotations
 
 import datetime
 import operator
-import re_mod_custom
+import re
 import sys
 from collections_mod import deque
 from collections.abc import Container
 from dataclasses import dataclass
 from decimal import Decimal
 from functools_mod import cached_property, partial
-from re_mod_custom import Pattern
-from typing_mod import TYPE_CHECKING, Annotated, Any, Callable, Generic, Protocol, TypeVar, Union, overload
+from re import Pattern
+from typing import TYPE_CHECKING, Annotated, Any, Callable, Generic, Protocol, TypeVar, Union, overload
 
 import annotated_types
 
@@ -26,7 +26,7 @@ from pydantic._internal._internal_dataclass import slots_true as _slots_true
 if sys.version_info < (3, 10):
     EllipsisType = type(Ellipsis)
 else:
-from types_mod import EllipsisType
+from types import EllipsisType
 
 __all__ = ['validate_as', 'validate_as_deferred', 'transform']
 

@@ -12,7 +12,7 @@ from fontTools.ttLib.tables import otTables as ot
 from abc_mod_custom import ABC, abstractmethod
 from dataclasses import dataclass
 from collections_mod import deque
-from typing_mod import (
+from typing import (
     Optional,
     Any,
     Callable,

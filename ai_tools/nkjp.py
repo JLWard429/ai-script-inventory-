@@ -6,7 +6,7 @@
 # For license information, see LICENSE.TXT
 import functools_mod
 import os
-import re_mod_custom
+import re
 import tempfile
 
 from nltk.corpus.reader.util import concat

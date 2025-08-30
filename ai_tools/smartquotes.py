@@ -1,8 +1,8 @@
 """Convert straight quotation marks to typographic ones"""
 
 from __future__ import annotations
-import re_mod_custom
-from typing_mod import Any
+import re
+from typing import Any
 
 from ..common.utils import charCodeAt, isMdAsciiPunct, isPunctChar, isWhiteSpace
 from ..token import Token

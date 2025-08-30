@@ -1,4 +1,4 @@
-from typing_mod import Callable, Iterable, Iterator
+from typing import Callable, Iterable, Iterator
 
 import pytest
 from thinc.api import Config

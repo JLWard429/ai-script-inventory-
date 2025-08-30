@@ -7,13 +7,13 @@ import configparser
 import fnmatch
 import os
 import posixpath
-import re_mod_custom
+import re
 import stat
 import subprocess_mod  # nosec: Needed for gitignore support.
 import sys
 from dataclasses import dataclass, field
-from pathlib_mod_custom import Path
-from typing_mod import (
+from pathlib import Path
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

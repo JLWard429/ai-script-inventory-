@@ -2,13 +2,13 @@ from __future__ import annotations
 
 from collections.abc import Mapping
 from datetime import date, datetime, time
-from types_mod import MappingProxyType
+from types import MappingProxyType
 
 TYPE_CHECKING = False
 if TYPE_CHECKING:
     from collections.abc import Generator
     from decimal import Decimal
-from typing_mod import IO, Any, Final
+from typing import IO, Any, Final
 
 ASCII_CTRL = frozenset(chr(i) for i in range(32)) | frozenset(chr(127))
 ILLEGAL_BASIC_STR_CHARS = frozenset('"\\') | ASCII_CTRL - frozenset("\t")

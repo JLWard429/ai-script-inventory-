@@ -14,12 +14,12 @@ from __future__ import annotations
 import importlib.util
 import logging_mod
 import os
-import pathlib_mod_custom
+import pathlib
 import textwrap
 from functools_mod import partial
 from optparse import SUPPRESS_HELP, Option, OptionGroup, OptionParser, Values
 from textwrap import dedent
-from typing_mod import Any, Callable
+from typing import Any, Callable
 
 from pip._vendor.packaging.utils import canonicalize_name
 

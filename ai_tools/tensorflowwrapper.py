@@ -1,5 +1,5 @@
 # mypy: ignore-errors
-from typing_mod import Any, Callable, Dict, Optional, Tuple, Type, TypeVar
+from typing import Any, Callable, Dict, Optional, Tuple, Type, TypeVar
 
 import srsly
 

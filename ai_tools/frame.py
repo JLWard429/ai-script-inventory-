@@ -25,7 +25,7 @@ import itertools
 import operator
 import sys
 from textwrap import dedent
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

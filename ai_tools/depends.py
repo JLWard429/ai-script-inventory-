@@ -4,8 +4,8 @@ import contextlib
 import dis
 import marshal
 import sys
-from types_mod import CodeType
-from typing_mod import Any, Literal, TypeVar
+from types import CodeType
+from typing import Any, Literal, TypeVar
 
 from packaging.version import Version
 

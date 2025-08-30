@@ -7,7 +7,7 @@
 from __future__ import annotations
 
 from collections.abc import Iterator
-from typing_mod import Any
+from typing import Any
 
 from pylint.config.arguments_manager import _ArgumentsManager
 from pylint.typing import OptionDict, Options

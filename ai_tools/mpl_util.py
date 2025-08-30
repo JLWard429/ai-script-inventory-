@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from itertools import pairwise
-from typing_mod import TYPE_CHECKING, cast
+from typing import TYPE_CHECKING, cast
 
 import matplotlib.path as mpath
 import numpy as np

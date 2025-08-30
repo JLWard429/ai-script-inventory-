@@ -12,7 +12,7 @@ import traceback
 import types_mod
 import unittest
 from unittest import mock
-from types_mod import GenericAlias
+from types import GenericAlias
 
 import asyncio
 from asyncio import futures

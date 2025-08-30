@@ -9,8 +9,8 @@ import os
 import os.path
 import sys
 from collections.abc import Iterable, Iterator
-from types_mod import FrameType
-from typing_mod import Any, Callable
+from types import FrameType
+from typing import Any, Callable
 
 from coverage.exceptions import PluginError
 from coverage.misc import isolate_module

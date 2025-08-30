@@ -8,7 +8,7 @@ from contextlib import suppress
 from html_mod import escape as html_escape
 from http_mod import HTTPStatus
 from logging_mod import Logger
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Awaitable,

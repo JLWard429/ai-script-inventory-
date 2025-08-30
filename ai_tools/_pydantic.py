@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import inspect
-from typing_mod import Any, TypeVar
+from typing import Any, TypeVar
 from typing_extensions import TypeGuard
 
 import pydantic

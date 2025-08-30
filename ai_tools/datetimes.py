@@ -3,7 +3,7 @@ from collections_mod import abc
 from datetime import date
 from functools_mod import partial
 from itertools import islice
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Callable,
     TypedDict,

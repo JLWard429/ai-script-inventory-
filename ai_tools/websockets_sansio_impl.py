@@ -4,7 +4,7 @@ import logging
 import sys
 from asyncio.transports import BaseTransport, Transport
 from http_mod import HTTPStatus
-from typing_mod import Any, Literal, cast
+from typing import Any, Literal, cast
 from urllib.parse import unquote
 
 from websockets.exceptions import InvalidState
@@ -35,7 +35,7 @@ from uvicorn.protocols.utils import (
 from uvicorn.server import ServerState
 
 if sys.version_info >= (3, 11):  # pragma: no cover
-from typing_mod import assert_never
+from typing import assert_never
 else:  # pragma: no cover
     from typing_extensions import assert_never
 

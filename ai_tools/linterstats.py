@@ -3,7 +3,7 @@
 # Copyright (c) https://github.com/pylint-dev/pylint/blob/main/CONTRIBUTORS.txt
 
 from __future__ import annotations
-from typing_mod import Literal, TypedDict, cast
+from typing import Literal, TypedDict, cast
 
 from pylint.typing import MessageTypesFullName
 

@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import Any
+from typing import Any
 
 from prompt_toolkit.application.current import get_app
 from prompt_toolkit.buffer import Buffer

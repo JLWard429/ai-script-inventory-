@@ -7,10 +7,10 @@ import secrets_mod
 import sys
 from functools_mod import lru_cache
 from importlib.util import find_spec
-from typing_mod import Optional
+from typing import Optional
 
 if sys.version_info >= (3, 10):
-from typing_mod import TypeGuard
+from typing import TypeGuard
 else:
     from typing_extensions import TypeGuard
 

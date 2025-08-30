@@ -8,7 +8,7 @@ import tempfile
 import unittest.mock as mock
 import urllib.error
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 import pytest
 
@@ -104,7 +104,7 @@ class TestCodeAnalyzer:
 """Test module."""
 
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 class TestClass:
     def test_method(self):

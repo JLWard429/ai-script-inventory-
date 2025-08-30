@@ -1,4 +1,4 @@
-from typing_mod import Iterator, Tuple, Union
+from typing import Iterator, Tuple, Union
 
 from ...errors import Errors
 from ...symbols import NOUN, PRON, PROPN

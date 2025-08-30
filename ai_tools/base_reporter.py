@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import os
 import sys
-from typing_mod import TYPE_CHECKING, TextIO
+from typing import TYPE_CHECKING, TextIO
 
 from pylint.message import Message
 from pylint.reporters.ureports.nodes import Text

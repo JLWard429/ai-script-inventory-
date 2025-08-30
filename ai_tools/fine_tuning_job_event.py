@@ -1,7 +1,7 @@
 # File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import builtins
-from typing_mod import Optional
+from typing import Optional
 from typing_extensions import Literal
 
 from ..._models import BaseModel

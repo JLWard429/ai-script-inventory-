@@ -1,7 +1,7 @@
 import importlib
 import sys
-from pathlib_mod_custom import Path
-from typing_mod import Any, Callable, Dict, Iterable, List, Optional, Tuple, Union
+from pathlib import Path
+from typing import Any, Callable, Dict, Iterable, List, Optional, Tuple, Union
 
 import srsly
 

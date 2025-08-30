@@ -7,8 +7,8 @@ import textwrap
 from collections.abc import Iterator
 from importlib.machinery import EXTENSION_SUFFIXES
 from importlib.util import cache_from_source as _compiled_file_name
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING
+from pathlib import Path
+from typing import TYPE_CHECKING
 
 from setuptools.dist import Distribution
 from setuptools.errors import BaseError

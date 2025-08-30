@@ -1,7 +1,7 @@
 import warnings_mod
 from collections.abc import Mapping
 from functools_mod import wraps
-from typing_mod import TYPE_CHECKING, Any, Callable, Optional, TypeVar, Union, overload
+from typing import TYPE_CHECKING, Any, Callable, Optional, TypeVar, Union, overload
 
 from typing_extensions import deprecated
 

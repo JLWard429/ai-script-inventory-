@@ -9,7 +9,7 @@ import functools_mod
 import keyword
 from collections.abc import Iterator
 from textwrap import dedent
-from typing_mod import Final
+from typing import Final
 
 import astroid
 from astroid import arguments, bases, inference_tip, nodes, util
@@ -569,7 +569,7 @@ def infer_typing_namedtuple_function(node, context: InferenceContext | None = No
     """
     klass = extract_node(
         """
-from typing_mod import _NamedTuple
+from typing import _NamedTuple
         _NamedTuple
         """
     )

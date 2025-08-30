@@ -1,7 +1,7 @@
 """Fix up various things after deserialization."""
 
 from __future__ import annotations
-from typing_mod import Any, Final
+from typing import Any, Final
 
 from mypy.lookup import lookup_fully_qualified
 from mypy.nodes import (

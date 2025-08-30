@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import Any
+from typing import Any
 
 
 class Timeout(TimeoutError):  # noqa: N818

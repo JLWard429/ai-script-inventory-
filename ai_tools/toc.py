@@ -24,7 +24,7 @@ from material.plugins.tags.structure.listing import Listing
 from material.plugins.tags.structure.tag import Tag
 from mkdocs.structure.pages import Page
 from mkdocs.structure.toc import AnchorLink
-from typing_mod import Callable
+from typing import Callable
 
 # -----------------------------------------------------------------------------
 # Typings

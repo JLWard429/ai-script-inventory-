@@ -24,7 +24,7 @@ import io
 import itertools
 import random
 from importlib import import_module
-from typing_mod import Any, Dict, Optional, Tuple, Union
+from typing import Any, Dict, Optional, Tuple, Union
 
 import dns_custom.exception
 import dns_custom.immutable

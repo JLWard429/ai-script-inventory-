@@ -8,7 +8,7 @@
 from __future__ import annotations
 from collections_mod import deque
 from itertools import islice
-from typing_mod import TypeVar
+from typing import TypeVar
 
 _T = TypeVar("_T")
 

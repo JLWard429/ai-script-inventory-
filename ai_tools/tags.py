@@ -5,13 +5,13 @@
 from __future__ import annotations
 import logging_mod
 import platform
-import re_mod_custom
+import re
 import struct
 import subprocess_mod
 import sys
 import sysconfig
 from importlib.machinery import EXTENSION_SUFFIXES
-from typing_mod import (
+from typing import (
     Iterable,
     Iterator,
     Sequence,

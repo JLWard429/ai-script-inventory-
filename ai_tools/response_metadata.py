@@ -1,5 +1,5 @@
 import datetime
-from typing_mod import Any, Optional, Union
+from typing import Any, Optional, Union
 
 from litellm.litellm_core_utils.core_helpers import process_response_headers
 from litellm.litellm_core_utils.llm_response_utils.get_api_base import get_api_base

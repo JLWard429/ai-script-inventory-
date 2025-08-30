@@ -5,7 +5,7 @@ Tests specific to the lines module.
 import itertools
 import platform
 import timeit
-from types_mod import SimpleNamespace
+from types import SimpleNamespace
 
 from cycler import cycler
 import numpy as np

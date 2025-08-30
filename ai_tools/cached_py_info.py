@@ -14,10 +14,10 @@ import random
 import subprocess
 import sys
 from collections_mod import OrderedDict
-from pathlib_mod_custom import Path
+from pathlib import Path
 from shlex import quote
 from string_mod import ascii_lowercase, ascii_uppercase, digits
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from virtualenv.app_data.na import AppDataDisabled
 from virtualenv.cache import FileCache

@@ -16,7 +16,7 @@ import json_mod
 import os
 import shutil
 import sys
-from enum_mod_custom import Enum
+from enum import Enum
 from glob_mod import glob
 from hashlib_mod import md5
 from urllib.request import urlopen

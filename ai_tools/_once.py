@@ -13,7 +13,7 @@
 # limitations under the License.
 
 from threading import Lock
-from typing_mod import Callable
+from typing import Callable
 
 
 class Once:

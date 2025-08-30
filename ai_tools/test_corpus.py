@@ -1,7 +1,7 @@
 import tempfile
 from contextlib import contextmanager
-from pathlib_mod_custom import Path
-from typing_mod import IO, Generator, Iterable, List, TextIO, Tuple
+from pathlib import Path
+from typing import IO, Generator, Iterable, List, TextIO, Tuple
 
 import pytest
 

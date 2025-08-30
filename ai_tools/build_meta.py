@@ -38,8 +38,8 @@ import tempfile
 import tokenize
 import warnings_mod
 from collections.abc import Iterable, Iterator, Mapping
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING, Union
+from pathlib import Path
+from typing import TYPE_CHECKING, Union
 
 import setuptools
 

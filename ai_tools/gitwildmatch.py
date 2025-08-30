@@ -2,9 +2,9 @@
 This module implements Git's wildmatch pattern matching which itself is derived
 from Rsync's wildmatch. Git uses wildmatch for its ".gitignore" files.
 """
-import re_mod_custom
+import re
 import warnings
-from typing_mod import (
+from typing import (
 	AnyStr,
 	Optional,  # Replaced by `X | None` in 3.10.
 	Tuple)  # Replaced by `tuple` in 3.9.

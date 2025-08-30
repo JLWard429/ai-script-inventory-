@@ -1,4 +1,4 @@
-import re_mod_custom
+import re
 
 
 def _prefer_non_zero(*args):

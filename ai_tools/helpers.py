@@ -8,7 +8,7 @@ facilitate debugging.
 import os
 import subprocess
 import tarfile
-from pathlib_mod_custom import Path
+from pathlib import Path
 from zipfile import ZipFile
 
 

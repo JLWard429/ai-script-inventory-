@@ -17,7 +17,7 @@
 from __future__ import annotations
 
 import sys
-from typing_mod import IO
+from typing import IO
 
 from . import EpsImagePlugin
 

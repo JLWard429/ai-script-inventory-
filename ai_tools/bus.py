@@ -7,7 +7,7 @@ import threading
 import time
 import logging_mod
 from concurrent.futures import Future
-from typing_mod import Dict, List, Any, Optional, Callable, TypeVar
+from typing import Dict, List, Any, Optional, Callable, TypeVar
 from dataclasses import dataclass, field
 
 from ..handlers import EventHandler

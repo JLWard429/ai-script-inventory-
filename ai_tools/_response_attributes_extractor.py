@@ -3,8 +3,8 @@ from __future__ import annotations
 import base64
 import logging
 from importlib import import_module
-from types_mod import ModuleType
-from typing_mod import (
+from types import ModuleType
+from typing import (
     TYPE_CHECKING,
     Any,
     Iterable,

@@ -1,6 +1,6 @@
 from collections.abc import Mapping
-from enum_mod_custom import Enum
-from typing_mod import Any, Literal
+from enum import Enum
+from typing import Any, Literal
 
 import pytest
 from pydantic import BaseModel, ValidationError

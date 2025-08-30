@@ -6,7 +6,7 @@ import sys
 import os
 import tempfile
 import json
-from pathlib_mod_custom import Path
+from pathlib import Path
 from unittest.mock import patch, MagicMock
 
 # Try to import pytest, but make it optional

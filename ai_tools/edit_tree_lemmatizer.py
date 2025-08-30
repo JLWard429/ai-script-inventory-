@@ -2,7 +2,7 @@ import importlib
 import sys
 from collections_mod import Counter
 from itertools import islice
-from typing_mod import Any, Callable, Dict, Iterable, List, Optional, Tuple, cast
+from typing import Any, Callable, Dict, Iterable, List, Optional, Tuple, cast
 
 import numpy as np
 import srsly

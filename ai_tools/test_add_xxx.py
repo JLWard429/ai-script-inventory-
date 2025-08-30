@@ -1,5 +1,5 @@
 # coding: utf-8
-import re_mod_custom
+import re
 import pytest  # NOQA
 
 from .roundtrip import dedent

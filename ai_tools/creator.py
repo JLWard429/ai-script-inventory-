@@ -8,7 +8,7 @@ from abc_mod_custom import ABC, abstractmethod
 from argparse import ArgumentTypeError
 from ast_mod import literal_eval
 from collections_mod import OrderedDict
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 from virtualenv.discovery.cached_py_info import LogCmd
 from virtualenv.util.path import safe_delete

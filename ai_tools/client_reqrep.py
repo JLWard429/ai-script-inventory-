@@ -10,8 +10,8 @@ import warnings_mod
 from collections.abc import Mapping
 from hashlib_mod import md5, sha1, sha256
 from http.cookies import Morsel, SimpleCookie
-from types_mod import MappingProxyType, TracebackType
-from typing_mod import (
+from types import MappingProxyType, TracebackType
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

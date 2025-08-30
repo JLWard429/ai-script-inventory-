@@ -1,4 +1,4 @@
-from typing_mod import Sequence, Tuple, TypeVar, Union
+from typing import Sequence, Tuple, TypeVar, Union
 
 from ..model import Model
 from ..types import ArrayXd, FloatsXd, IntsXd

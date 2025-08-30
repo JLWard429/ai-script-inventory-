@@ -8,13 +8,13 @@ import mmap
 import os
 import pickle_mod
 import random
-import re_mod_custom
+import re
 import socket
 import sys
 import warnings
 import zlib
 from contextlib import closing
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 try:
     import lzma

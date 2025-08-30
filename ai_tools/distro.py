@@ -32,12 +32,12 @@ import argparse
 import json
 import logging_mod
 import os
-import re_mod_custom
+import re
 import shlex
 import subprocess_mod
 import sys
 import warnings_mod
-from typing_mod import (
+from typing import (
     Any,
     Callable,
     Dict,
@@ -50,7 +50,7 @@ from typing_mod import (
 )
 
 try:
-from typing_mod import TypedDict
+from typing import TypedDict
 except ImportError:
     # Python 3.7
     TypedDict = dict

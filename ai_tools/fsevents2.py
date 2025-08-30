@@ -12,7 +12,7 @@ import queue
 import unicodedata
 import warnings_mod
 from threading import Thread
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 # pyobjc
 import AppKit
@@ -57,7 +57,7 @@ from watchdog.events import (
 from watchdog.observers.api import DEFAULT_EMITTER_TIMEOUT, DEFAULT_OBSERVER_TIMEOUT, BaseObserver, EventEmitter
 
 if TYPE_CHECKING:
-from typing_mod import Callable
+from typing import Callable
 
     from watchdog.observers.api import EventQueue, ObservedWatch
 

@@ -5,7 +5,7 @@ This module provides a clean way to manage isolated message histories for parall
 ensuring that each agent has its own completely independent copy of the conversation history.
 """
 import copy_mod
-from typing_mod import Dict, List, Any, Optional, Tuple
+from typing import Dict, List, Any, Optional, Tuple
 from threading import Lock
 
 from cai.sdk.agents.simple_agent_manager import AGENT_MANAGER

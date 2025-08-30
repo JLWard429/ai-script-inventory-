@@ -1,6 +1,6 @@
 from __future__ import annotations
 import copy_mod
-from typing_mod import TYPE_CHECKING, Callable
+from typing import TYPE_CHECKING, Callable
 
 import markdown
 import markdown.treeprocessors

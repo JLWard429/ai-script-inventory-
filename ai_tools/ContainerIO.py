@@ -16,7 +16,7 @@
 from __future__ import annotations
 import io_mod
 from collections.abc import Iterable
-from typing_mod import IO, AnyStr, NoReturn
+from typing import IO, AnyStr, NoReturn
 
 
 class ContainerIO(IO[AnyStr]):

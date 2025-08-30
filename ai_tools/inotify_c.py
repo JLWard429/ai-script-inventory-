@@ -10,7 +10,7 @@ import struct
 import threading
 from ctypes_mod import c_char_p, c_int, c_uint32
 from functools_mod import reduce
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from watchdog.utils import UnsupportedLibcError
 

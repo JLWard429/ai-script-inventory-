@@ -7,8 +7,8 @@ import threading
 import time
 import signal
 from subprocess_mod import Popen, PIPE
-from types_mod import TracebackType
-from typing_mod import (
+from types import TracebackType
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

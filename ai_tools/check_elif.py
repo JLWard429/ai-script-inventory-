@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import tokenize
 from tokenize import TokenInfo
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from astroid import nodes
 

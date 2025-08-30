@@ -3,7 +3,7 @@ Get num retries for an exception.
 
 - Account for retry policy by exception type.
 """
-from typing_mod import Dict, Optional, Union
+from typing import Dict, Optional, Union
 
 from litellm.exceptions import (
     AuthenticationError,

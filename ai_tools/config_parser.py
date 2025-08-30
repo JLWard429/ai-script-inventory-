@@ -16,7 +16,7 @@ else:
     import tomli as tomllib
 
 from collections.abc import Mapping, MutableMapping, Sequence
-from typing_mod import Any, Callable, Final, TextIO, Union
+from typing import Any, Callable, Final, TextIO, Union
 from typing_extensions import TypeAlias as _TypeAlias
 
 from mypy import defaults

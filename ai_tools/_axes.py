@@ -3,7 +3,7 @@ import itertools
 import logging_mod
 import math
 from numbers_mod import Integral, Number, Real
-import re_mod_custom
+import re
 import numpy as np
 
 import matplotlib as mpl

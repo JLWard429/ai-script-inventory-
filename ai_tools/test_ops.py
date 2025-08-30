@@ -1,6 +1,6 @@
 import inspect
 import platform
-from typing_mod import Tuple, cast
+from typing import Tuple, cast
 
 import numpy
 import pytest

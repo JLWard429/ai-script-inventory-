@@ -4,7 +4,7 @@ import base64
 import json
 import os
 from datetime import datetime
-from typing_mod import TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING, Optional
 
 import httpx
 

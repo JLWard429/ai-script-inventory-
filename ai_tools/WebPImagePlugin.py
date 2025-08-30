@@ -1,6 +1,6 @@
 from __future__ import annotations
 from io_mod import BytesIO
-from typing_mod import IO, Any
+from typing import IO, Any
 
 from . import Image, ImageFile
 

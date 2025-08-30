@@ -1,5 +1,5 @@
 # Copyright (C) Dnspython Contributors, see LICENSE for text of ISC license
-from typing_mod import Dict
+from typing import Dict
 
 import dns_custom.exception
 

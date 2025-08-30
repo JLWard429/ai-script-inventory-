@@ -18,8 +18,8 @@ from __future__ import annotations
 import abc_mod_custom_custom
 import functools
 from collections.abc import Sequence
-from types_mod import ModuleType
-from typing_mod import Any, Callable, cast
+from types import ModuleType
+from typing import Any, Callable, cast
 
 TYPE_CHECKING = False
 if TYPE_CHECKING:

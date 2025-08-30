@@ -5,8 +5,8 @@ import logging
 import os
 import sys
 from optparse import Values
-from types_mod import ModuleType
-from typing_mod import Any
+from types import ModuleType
+from typing import Any
 
 import pip._vendor
 from pip._vendor.certifi import where

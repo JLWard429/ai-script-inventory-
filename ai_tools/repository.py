@@ -3,7 +3,7 @@ import json_mod
 import logging
 import os
 from collections.abc import Sequence
-from typing_mod import Any
+from typing import Any
 
 import pre_commit.constants as C
 from pre_commit.all_languages import languages

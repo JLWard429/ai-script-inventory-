@@ -1,6 +1,6 @@
 import asyncio_mod
 import random
-from typing_mod import Any
+from typing import Any
 
 from pydantic import BaseModel
 

@@ -46,7 +46,7 @@ class D:
 
 
 def nested():
-    from types_mod import SimpleNamespace
+    from types import SimpleNamespace
     from typing import get_type_hints
 
     Eggs = bytes

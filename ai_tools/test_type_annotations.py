@@ -13,8 +13,8 @@ class TestTypeAnnotations(TestCase):
     def test_typingOverload(self):
         """Allow intentional redefinitions via @typing.overload"""
         self.flakes("""
-import typing_mod
-from typing_mod import overload
+import typing
+from typing import overload
 
         @overload
         def f(s: None) -> None:
@@ -71,7 +71,7 @@ from typing_mod import overload
     def test_typingOverloadAsync(self):
         """Allow intentional redefinitions via @typing.overload (async)"""
         self.flakes("""
-from typing_mod import overload
+from typing import overload
 
         @overload
         async def f(s: None) -> None:
@@ -87,7 +87,7 @@ from typing_mod import overload
 
     def test_overload_with_multiple_decorators(self):
         self.flakes("""
-from typing_mod import overload
+from typing import overload
             dec = lambda f: f
 
             @dec
@@ -106,7 +106,7 @@ from typing_mod import overload
 
     def test_overload_in_class(self):
         self.flakes("""
-from typing_mod import overload
+from typing import overload
 
         class C:
             @overload
@@ -123,7 +123,7 @@ from typing_mod import overload
     def test_aliased_import(self):
         """Detect when typing is imported as another name"""
         self.flakes("""
-import typing_mod as t
+import typing as t
 
         @t.overload
         def f(s: None) -> None:
@@ -190,7 +190,7 @@ import typing_mod as t
             print(name)
         ''', m.UndefinedName)
         self.flakes('''
-from typing_mod import Any
+from typing import Any
         def f():
             a: Any
         ''', m.UnusedAnnotation)
@@ -431,7 +431,7 @@ from typing_mod import Any
 
     def test_type_annotation_clobbers_all(self):
         self.flakes('''\
-from typing_mod import TYPE_CHECKING, List
+from typing import TYPE_CHECKING, List
 
         from y import z
 
@@ -443,7 +443,7 @@ from typing_mod import TYPE_CHECKING, List
 
     def test_return_annotation_is_class_scope_variable(self):
         self.flakes("""
-from typing_mod import TypeVar
+from typing import TypeVar
         class Test:
             Y = TypeVar('Y')
 
@@ -469,7 +469,7 @@ from typing_mod import TypeVar
     def test_partially_quoted_type_annotation(self):
         self.flakes("""
         from queue import Queue
-from typing_mod import Optional
+from typing import Optional
 
         def f() -> Optional['Queue[str]']:
             return None
@@ -478,7 +478,7 @@ from typing_mod import Optional
     def test_partially_quoted_type_assignment(self):
         self.flakes("""
         from queue import Queue
-from typing_mod import Optional
+from typing import Optional
 
         MaybeQueue = Optional['Queue[str]']
         """)
@@ -486,14 +486,14 @@ from typing_mod import Optional
     def test_nested_partially_quoted_type_assignment(self):
         self.flakes("""
         from queue import Queue
-from typing_mod import Callable
+from typing import Callable
 
         Func = Callable[['Queue[str]'], None]
         """)
 
     def test_quoted_type_cast(self):
         self.flakes("""
-from typing_mod import cast, Optional
+from typing import cast, Optional
 
         maybe_int = cast('Optional[int]', 42)
         """)
@@ -503,28 +503,28 @@ from typing_mod import cast, Optional
         # argument to `cast` doesn't cause issues when (only) the _second_
         # argument is a literal str which looks a bit like a type annotation.
         self.flakes("""
-from typing_mod import cast
+from typing import cast
 
         a_string = cast(str, 'Optional[int]')
         """)
 
     def test_quoted_type_cast_renamed_import(self):
         self.flakes("""
-from typing_mod import cast as tsac, Optional as Maybe
+from typing import cast as tsac, Optional as Maybe
 
         maybe_int = tsac('Maybe[int]', 42)
         """)
 
     def test_quoted_TypeVar_constraints(self):
         self.flakes("""
-from typing_mod import TypeVar, Optional
+from typing import TypeVar, Optional
 
         T = TypeVar('T', 'str', 'Optional[int]', bytes)
         """)
 
     def test_quoted_TypeVar_bound(self):
         self.flakes("""
-from typing_mod import TypeVar, Optional, List
+from typing import TypeVar, Optional, List
 
         T = TypeVar('T', bound='Optional[int]')
         S = TypeVar('S', int, bound='List[int]')
@@ -532,7 +532,7 @@ from typing_mod import TypeVar, Optional, List
 
     def test_literal_type_typing(self):
         self.flakes("""
-from typing_mod import Literal
+from typing import Literal
 
         def f(x: Literal['some string']) -> None:
             return None
@@ -548,7 +548,7 @@ from typing_mod import Literal
 
     def test_annotated_type_typing_missing_forward_type(self):
         self.flakes("""
-from typing_mod import Annotated
+from typing import Annotated
 
         def f(x: Annotated['integer']) -> None:
             return None
@@ -556,7 +556,7 @@ from typing_mod import Annotated
 
     def test_annotated_type_typing_missing_forward_type_multiple_args(self):
         self.flakes("""
-from typing_mod import Annotated
+from typing import Annotated
 
         def f(x: Annotated['integer', 1]) -> None:
             return None
@@ -564,7 +564,7 @@ from typing_mod import Annotated
 
     def test_annotated_type_typing_with_string_args(self):
         self.flakes("""
-from typing_mod import Annotated
+from typing import Annotated
 
         def f(x: Annotated[int, '> 0']) -> None:
             return None
@@ -572,7 +572,7 @@ from typing_mod import Annotated
 
     def test_annotated_type_typing_with_string_args_in_union(self):
         self.flakes("""
-from typing_mod import Annotated, Union
+from typing import Annotated, Union
 
         def f(x: Union[Annotated['int', '>0'], 'integer']) -> None:
             return None
@@ -592,7 +592,7 @@ from typing_mod import Annotated, Union
 
     def test_literal_union_type_typing(self):
         self.flakes("""
-from typing_mod import Literal
+from typing import Literal
 
         def f(x: Literal['some string', 'foo bar']) -> None:
             return None
@@ -601,7 +601,7 @@ from typing_mod import Literal
     def test_deferred_twice_annotation(self):
         self.flakes("""
             from queue import Queue
-from typing_mod import Optional
+from typing import Optional
 
 
             def f() -> "Optional['Queue[str]']":
@@ -613,7 +613,7 @@ from typing_mod import Optional
             from __future__ import annotations
 
             from queue import Queue
-from typing_mod import Optional
+from typing import Optional
 
 
             def f() -> Optional['Queue[str]']:
@@ -623,7 +623,7 @@ from typing_mod import Optional
     def test_forward_annotations_for_classes_in_scope(self):
         # see #749
         self.flakes("""
-from typing_mod import Optional
+from typing import Optional
 
         def f():
             class C:
@@ -637,7 +637,7 @@ from typing_mod import Optional
     def test_idomiatic_typing_guards(self):
         # typing.TYPE_CHECKING: python3.5.3+
         self.flakes("""
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
             if TYPE_CHECKING:
                 from t import T
@@ -666,10 +666,10 @@ from typing_mod import TYPE_CHECKING
 
     def test_typing_guard_for_protocol(self):
         self.flakes("""
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
             if TYPE_CHECKING:
-from typing_mod import Protocol
+from typing import Protocol
             else:
                 Protocol = object
 
@@ -680,7 +680,7 @@ from typing_mod import Protocol
 
     def test_typednames_correct_forward_ref(self):
         self.flakes("""
-from typing_mod import TypedDict, List, NamedTuple
+from typing import TypedDict, List, NamedTuple
 
             List[TypedDict("x", {})]
             List[TypedDict("x", x=int)]
@@ -688,7 +688,7 @@ from typing_mod import TypedDict, List, NamedTuple
             List[NamedTuple("a", [("a", int)])]
         """)
         self.flakes("""
-from typing_mod import TypedDict, List, NamedTuple, TypeVar
+from typing import TypedDict, List, NamedTuple, TypeVar
 
             List[TypedDict("x", {"x": "Y"})]
             List[TypedDict("x", x="Y")]
@@ -699,7 +699,7 @@ from typing_mod import TypedDict, List, NamedTuple, TypeVar
             List[TypeVar("A", List["C"])]
         """, *[m.UndefinedName]*7)
         self.flakes("""
-from typing_mod import NamedTuple, TypeVar, cast
+from typing import NamedTuple, TypeVar, cast
             from t import A, B, C, D, E
 
             NamedTuple("A", [("a", A["C"])])
@@ -710,7 +710,7 @@ from typing_mod import NamedTuple, TypeVar, cast
 
     def test_namedtypes_classes(self):
         self.flakes("""
-from typing_mod import TypedDict, NamedTuple
+from typing import TypedDict, NamedTuple
             class X(TypedDict):
                 y: TypedDict("z", {"zz":int})
 
@@ -721,8 +721,8 @@ from typing_mod import TypedDict, NamedTuple
     @skipIf(version_info < (3, 11), 'new in Python 3.11')
     def test_variadic_generics(self):
         self.flakes("""
-from typing_mod import Generic
-from typing_mod import TypeVarTuple
+from typing import Generic
+from typing import TypeVarTuple
 
             Ts = TypeVarTuple('Ts')
 
@@ -809,7 +809,7 @@ from typing_mod import TypeVarTuple
     @skipIf(version_info < (3, 12), 'new in Python 3.12')
     def test_type_parameters_ParamSpec(self):
         self.flakes("""
-from typing_mod import Callable
+from typing import Callable
 
         def f[R, **P](f: Callable[P, R]) -> Callable[P, R]:
             def g(*args: P.args, **kwargs: P.kwargs) -> R:

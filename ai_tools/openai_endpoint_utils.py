@@ -1,7 +1,7 @@
 """
 Contains utils used by OpenAI compatible endpoints 
 """
-from typing_mod import Optional
+from typing import Optional
 
 from fastapi import Request
 

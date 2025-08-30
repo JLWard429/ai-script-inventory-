@@ -3,7 +3,7 @@ __version__ = '1.1'
 
 import os
 import yaml
-from typing_mod import Any
+from typing import Any
 
 
 def construct_env_tag(loader: yaml.Loader, node: yaml.Node) -> Any:

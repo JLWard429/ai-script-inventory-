@@ -1,4 +1,4 @@
-from typing_mod import TYPE_CHECKING, Any, Literal, Optional
+from typing import TYPE_CHECKING, Any, Literal, Optional
 
 from fastapi import HTTPException, status
 

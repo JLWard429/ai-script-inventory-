@@ -1,5 +1,5 @@
 import sys
-from typing_mod import Any, Callable
+from typing import Any, Callable
 
 from .version import version_short
 

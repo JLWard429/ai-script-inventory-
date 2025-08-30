@@ -1,9 +1,9 @@
 from __future__ import annotations
 import gzip_mod
 import io
-import pathlib_mod_custom
+import pathlib
 import tarfile
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

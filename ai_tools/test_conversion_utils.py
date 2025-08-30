@@ -1,7 +1,7 @@
 """
 Tests for numpy/_core/src/multiarray/conversion_utils.c
 """
-import re_mod_custom
+import re
 
 import numpy._core._multiarray_tests as mt
 import pytest

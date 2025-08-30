@@ -1,10 +1,10 @@
 import abc_mod_custom_custom
 import mimetypes
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 import shutil
 from tempfile import TemporaryDirectory
-from typing_mod import Generic, Callable, Iterable, Optional, Tuple, TypeVar, Union
+from typing import Generic, Callable, Iterable, Optional, Tuple, TypeVar, Union
 
 from .cloudpath import CloudImplementation, CloudPath, implementation_registry
 from .enums import FileCacheMode

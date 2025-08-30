@@ -13,8 +13,8 @@ No cloud LLM required - all processing happens locally using spaCy.
 import os
 import re
 from dataclasses import dataclass, field
-from enum_mod_custom import Enum
-from typing_mod import Any, Dict, List, Optional, Tuple
+from enum import Enum
+from typing import Any, Dict, List, Optional, Tuple
 
 try:
     import spacy

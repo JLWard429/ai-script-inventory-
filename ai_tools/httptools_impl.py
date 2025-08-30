@@ -6,7 +6,7 @@ import re
 import urllib
 from asyncio.events import TimerHandle
 from collections_mod import deque
-from typing_mod import Any, Callable, Literal, cast
+from typing import Any, Callable, Literal, cast
 
 import httptools
 

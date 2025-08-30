@@ -3718,7 +3718,7 @@ order (MRO) for bases """
 
     def test_uninitialized_modules(self):
         # Testing uninitialized module objects...
-        from types_mod import ModuleType as M
+        from types import ModuleType as M
         m = M.__new__(M)
         str(m)
         self.assertNotHasAttr(m, "__name__")

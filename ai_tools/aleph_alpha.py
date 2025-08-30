@@ -1,7 +1,7 @@
 import json_mod
 import time
-import types_mod
-from typing_mod import Callable, Optional
+import types
+from typing import Callable, Optional
 
 import httpx  # type: ignore
 

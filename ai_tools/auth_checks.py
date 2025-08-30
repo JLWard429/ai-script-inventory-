@@ -11,7 +11,7 @@ Run checks for:
 import asyncio_mod
 import re
 import time
-from typing_mod import TYPE_CHECKING, Any, Dict, List, Literal, Optional, Union, cast
+from typing import TYPE_CHECKING, Any, Dict, List, Literal, Optional, Union, cast
 
 from fastapi import Request, status
 from pydantic import BaseModel

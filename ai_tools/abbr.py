@@ -27,8 +27,8 @@ from ..blockprocessors import BlockProcessor
 from ..inlinepatterns import InlineProcessor
 from ..treeprocessors import Treeprocessor
 from ..util import AtomicString, deprecated
-from typing_mod import TYPE_CHECKING
-import re_mod_custom
+from typing import TYPE_CHECKING
+import re
 import xml.etree.ElementTree as etree
 
 if TYPE_CHECKING:  # pragma: no cover

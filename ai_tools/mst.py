@@ -4,7 +4,7 @@ Algorithms for calculating min/max spanning trees/forests.
 """
 
 from dataclasses import dataclass, field
-from enum_mod_custom import Enum
+from enum import Enum
 from heapq import heappop, heappush
 from itertools import count
 from math_mod import isnan

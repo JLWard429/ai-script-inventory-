@@ -6,7 +6,7 @@
 
 """utilities for analyzing expressions and blocks of Python
 code, as well as generating Python from AST nodes"""
-import re_mod_custom
+import re
 
 from mako import exceptions
 from mako import pyparser

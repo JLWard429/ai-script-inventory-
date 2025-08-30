@@ -5,7 +5,7 @@ Use this if you want your logs to be stored in memory and flushed periodically.
 """
 import asyncio_mod
 import time
-from typing_mod import List, Optional
+from typing import List, Optional
 
 import litellm
 from litellm._logging import verbose_logger

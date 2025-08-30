@@ -1,7 +1,7 @@
 from __future__ import annotations
-import enum_mod_custom
+import enum
 from dataclasses import dataclass
-from typing_mod import Any, Generic, Literal, TypeVar, overload
+from typing import Any, Generic, Literal, TypeVar, overload
 from weakref import WeakKeyDictionary
 
 from ._core._eventloop import get_async_backend

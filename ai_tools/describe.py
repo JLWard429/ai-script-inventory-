@@ -1,7 +1,7 @@
 from __future__ import annotations
 from abc_mod_custom import ABC
 from collections_mod import OrderedDict
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 from virtualenv.info import IS_WIN
 

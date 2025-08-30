@@ -4,7 +4,7 @@ Vector Store Pre-Call Hook
 This hook is called before making an LLM request when a vector store is configured.
 It searches the vector store for relevant context and appends it to the messages.
 """
-from typing_mod import TYPE_CHECKING, Dict, List, Optional, Tuple, cast
+from typing import TYPE_CHECKING, Dict, List, Optional, Tuple, cast
 
 import litellm
 from litellm._logging import verbose_logger

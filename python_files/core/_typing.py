@@ -17,7 +17,7 @@ if TYPE_CHECKING:
         pass
 
 if sys.version_info >= (3, 13):
-    from types_mod import CapsuleType
+    from types import CapsuleType
 else:
     CapsuleType = object
 

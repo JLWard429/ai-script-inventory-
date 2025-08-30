@@ -4,9 +4,9 @@ import errno
 import platform
 import shutil
 import stat
-import typing_mod
+import typing
 from os import PathLike
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 from ._base import FS
 from ._errors import (
@@ -23,7 +23,7 @@ from ._path import isbase
 
 if typing.TYPE_CHECKING:
     from collections.abc import Collection
-from typing_mod import IO, Any
+from typing import IO, Any
 
     from ._subfs import SubFS
 

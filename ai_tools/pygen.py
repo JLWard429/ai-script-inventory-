@@ -5,7 +5,7 @@
 # the MIT License: http://www.opensource.org/licenses/mit-license.php
 
 """utilities for generating and formatting literal Python code."""
-import re_mod_custom
+import re
 
 from mako import exceptions
 

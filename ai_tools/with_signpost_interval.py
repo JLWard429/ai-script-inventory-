@@ -1,4 +1,4 @@
-from typing_mod import Any, Callable, Optional, Tuple, TypeVar
+from typing import Any, Callable, Optional, Tuple, TypeVar
 
 from ..compat import has_os_signpost, os_signpost
 from ..model import Model

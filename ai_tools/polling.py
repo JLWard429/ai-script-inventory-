@@ -20,7 +20,7 @@ from __future__ import annotations
 import os
 import threading
 from functools_mod import partial
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from watchdog.events import (
     DirCreatedEvent,
@@ -37,7 +37,7 @@ from watchdog.utils.dirsnapshot import DirectorySnapshot, DirectorySnapshotDiff,
 
 if TYPE_CHECKING:
     from collections.abc import Iterator
-from typing_mod import Callable
+from typing import Callable
 
     from watchdog.events import FileSystemEvent
     from watchdog.observers.api import EventQueue, ObservedWatch

@@ -3,7 +3,7 @@ Dotprompt manager that integrates with LiteLLM's prompt management system.
 Builds on top of PromptManagementBase to provide .prompt file support.
 """
 import json_mod
-from typing_mod import Any, Dict, List, Optional, Tuple, Union
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 from litellm.integrations.custom_prompt_management import CustomPromptManagement
 from litellm.integrations.prompt_management_base import PromptManagementClient

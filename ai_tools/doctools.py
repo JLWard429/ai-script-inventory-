@@ -15,7 +15,7 @@ import contextlib
 import inspect
 import io_mod
 import os.path
-import re_mod_custom
+import re
 
 from . import compression
 from . import transport

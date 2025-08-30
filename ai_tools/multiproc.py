@@ -11,7 +11,7 @@ import os
 import os.path
 import sys
 import traceback
-from typing_mod import Any
+from typing import Any
 
 from coverage.debug import DebugControl
 

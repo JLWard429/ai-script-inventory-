@@ -1,8 +1,8 @@
 import contextlib
 import os
-import re_mod_custom
+import re
 import ssl
-import typing_mod
+import typing
 
 # candidates based on https://github.com/tiran/certifi-system-store by Christian Heimes
 _CA_FILE_CANDIDATES = [

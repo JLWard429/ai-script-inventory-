@@ -14,8 +14,8 @@ from __future__ import annotations
 import io_mod
 import struct
 import sys
-from enum_mod_custom import IntEnum, IntFlag
-from typing_mod import IO
+from enum import IntEnum, IntFlag
+from typing import IO
 
 from . import Image, ImageFile, ImagePalette
 from ._binary import i32le as i32

@@ -5,7 +5,7 @@ Inherits from `AmazonConverseConfig`
 
 Nova + Invoke API Tutorial: https://docs.aws.amazon.com/nova/latest/userguide/using-invoke-api.html
 """
-from typing_mod import Any, List, Optional
+from typing import Any, List, Optional
 
 import httpx
 

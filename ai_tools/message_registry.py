@@ -7,7 +7,7 @@ add a method to MessageBuilder and call this instead.
 """
 
 from __future__ import annotations
-from typing_mod import Final, NamedTuple
+from typing import Final, NamedTuple
 
 from mypy import errorcodes as codes
 

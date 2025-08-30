@@ -5,7 +5,7 @@
 from __future__ import annotations
 import abc_mod_custom_custom
 import random
-import typing_mod
+import typing
 from math_mod import gcd
 
 from cryptography.hazmat.bindings._rust import openssl as rust_openssl

@@ -6,7 +6,7 @@ import textwrap
 import xmlrpc.client
 from collections_mod import OrderedDict
 from optparse import Values
-from typing_mod import TypedDict
+from typing import TypedDict
 
 from pip._vendor.packaging.version import parse as parse_version
 

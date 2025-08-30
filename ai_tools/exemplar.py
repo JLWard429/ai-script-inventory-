@@ -13,7 +13,7 @@
 # limitations under the License.
 
 import dataclasses
-from typing_mod import Optional, Union
+from typing import Optional, Union
 
 from opentelemetry.util.types import Attributes
 

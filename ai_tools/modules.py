@@ -1,7 +1,7 @@
 import importlib
-from pathlib_mod_custom import Path
-from types_mod import ModuleType
-from typing_mod import Union
+from pathlib import Path
+from types import ModuleType
+from typing import Union
 
 
 def import_file(name: str, loc: Union[str, Path]) -> ModuleType:

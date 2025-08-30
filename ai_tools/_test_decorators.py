@@ -26,7 +26,7 @@ For more information, refer to the ``pytest`` documentation on ``skipif``.
 from __future__ import annotations
 
 import locale
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Callable,
 )

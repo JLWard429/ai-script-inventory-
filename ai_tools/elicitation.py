@@ -1,8 +1,8 @@
 """Elicitation utilities for MCP servers."""
 
 from __future__ import annotations
-import types_mod
-from typing_mod import Generic, Literal, TypeVar, Union, get_args, get_origin
+import types
+from typing import Generic, Literal, TypeVar, Union, get_args, get_origin
 
 from pydantic import BaseModel
 from pydantic.fields import FieldInfo

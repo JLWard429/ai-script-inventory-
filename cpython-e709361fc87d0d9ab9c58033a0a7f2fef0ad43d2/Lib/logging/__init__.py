@@ -25,7 +25,7 @@ To use, simply 'import logging' and log away!
 
 import sys, os, time, io, re, traceback, warnings, weakref, collections.abc
 
-from types_mod import GenericAlias
+from types import GenericAlias
 from string import Template
 from string import Formatter as StrFormatter
 

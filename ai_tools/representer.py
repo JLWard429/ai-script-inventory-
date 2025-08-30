@@ -22,7 +22,7 @@ from .timestamp import TimeStamp
 
 import datetime
 import sys
-import types_mod
+import types
 
 if PY3:
     import copyreg
@@ -31,7 +31,7 @@ else:
     import copy_reg as copyreg  # type: ignore
 
 if False:  # MYPY
-from typing_mod import Dict, List, Any, Union, Text, Optional  # NOQA
+from typing import Dict, List, Any, Union, Text, Optional  # NOQA
 
 # fmt: off
 __all__ = ['BaseRepresenter', 'SafeRepresenter', 'Representer',

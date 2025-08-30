@@ -1,7 +1,7 @@
 import sys
-import types_mod
-import typing_mod
-from typing_mod import (
+import types
+import typing
+from typing import (
     TYPE_CHECKING,
     Any,
     ClassVar,
@@ -30,9 +30,9 @@ from pydantic.v1.typing import display_as_type, get_all_type_hints, get_args, ge
 from pydantic.v1.utils import all_identical, lenient_issubclass
 
 if sys.version_info >= (3, 10):
-from typing_mod import _UnionGenericAlias
+from typing import _UnionGenericAlias
 if sys.version_info >= (3, 8):
-from typing_mod import Literal
+from typing import Literal
 
 GenericModelT = TypeVar('GenericModelT', bound='GenericModel')
 TypeVarType = Any  # since mypy doesn't allow the use of TypeVar as a type

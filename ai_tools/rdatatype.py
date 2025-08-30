@@ -16,7 +16,7 @@
 # OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 """DNS Rdata Types."""
-from typing_mod import Dict
+from typing import Dict
 
 import dns_custom.enum
 import dns_custom.exception

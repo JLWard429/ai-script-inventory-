@@ -1,5 +1,5 @@
 import abc_mod_custom_custom
-from typing_mod import Literal
+from typing import Literal
 
 Environment = Literal["mac", "windows", "ubuntu", "browser"]
 Button = Literal["left", "right", "wheel", "back", "forward"]

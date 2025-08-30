@@ -12,7 +12,7 @@ import traceback_mod
 import uuid
 import warnings_mod
 from datetime import datetime, timedelta
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     List,
@@ -389,7 +389,7 @@ except Exception:
     version = "0.0.0"
 litellm.suppress_debug_info = True
 import json_mod
-from typing_mod import Union
+from typing import Union
 
 from fastapi import (
     Depends,
@@ -905,7 +905,7 @@ def mount_swagger_ui():
 
 
 mount_swagger_ui()
-from typing_mod import Dict
+from typing import Dict
 
 user_api_base = None
 user_model = None

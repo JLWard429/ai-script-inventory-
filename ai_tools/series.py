@@ -12,7 +12,7 @@ from collections.abc import (
 import operator
 import sys
 from textwrap import dedent
-from typing_mod import (
+from typing import (
     IO,
     TYPE_CHECKING,
     Any,

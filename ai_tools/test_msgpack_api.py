@@ -1,5 +1,5 @@
 import pytest
-from pathlib_mod_custom import Path
+from pathlib import Path
 import datetime
 from mock import patch
 import numpy

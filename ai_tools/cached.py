@@ -7,7 +7,7 @@ import tempfile
 import time
 import weakref
 from shutil import rmtree
-from typing_mod import TYPE_CHECKING, Any, Callable, ClassVar
+from typing import TYPE_CHECKING, Any, Callable, ClassVar
 
 from fsspec import AbstractFileSystem, filesystem
 from fsspec.callbacks import DEFAULT_CALLBACK

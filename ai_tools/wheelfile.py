@@ -3,18 +3,18 @@ from __future__ import annotations
 import csv
 import hashlib
 import os.path
-import re_mod_custom
+import re
 import stat
 import time
 from io_mod import StringIO, TextIOWrapper
-from typing_mod import IO, TYPE_CHECKING, Literal
+from typing import IO, TYPE_CHECKING, Literal
 from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 from wheel.cli import WheelError
 from wheel.util import log, urlsafe_b64decode, urlsafe_b64encode
 
 if TYPE_CHECKING:
-from typing_mod import Protocol, Sized, Union
+from typing import Protocol, Sized, Union
 
     from typing_extensions import Buffer
 

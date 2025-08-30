@@ -1,7 +1,7 @@
 import copy_mod
 import json
 import os
-from typing_mod import TYPE_CHECKING, Any, Optional, Union
+from typing import TYPE_CHECKING, Any, Optional, Union
 
 import httpx
 from pydantic import BaseModel

@@ -6,7 +6,7 @@ import random
 import subprocess_mod
 import sys
 import urllib.parse as urlparse
-from typing_mod import TYPE_CHECKING, Any, Optional, Union
+from typing import TYPE_CHECKING, Any, Optional, Union
 
 import click
 import httpx
@@ -24,7 +24,7 @@ config_filename = "litellm.secrets"
 litellm_mode = os.getenv("LITELLM_MODE", "DEV")  # "PRODUCTION", "DEV"
 if litellm_mode == "DEV":
     load_dotenv()
-from enum_mod_custom import Enum
+from enum import Enum
 
 telemetry = None
 

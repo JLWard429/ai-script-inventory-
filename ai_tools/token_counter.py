@@ -3,7 +3,7 @@
 import base64
 import io
 import struct
-from typing_mod import Callable, List, Literal, Optional, Tuple, Union, cast
+from typing import Callable, List, Literal, Optional, Tuple, Union, cast
 
 import tiktoken
 

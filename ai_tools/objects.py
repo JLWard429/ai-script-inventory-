@@ -15,7 +15,7 @@ from __future__ import annotations
 
 from collections.abc import Generator, Iterator
 from functools_mod import cached_property
-from typing_mod import Any, Literal, NoReturn, TypeVar
+from typing import Any, Literal, NoReturn, TypeVar
 
 from astroid import bases, util
 from astroid.context import InferenceContext

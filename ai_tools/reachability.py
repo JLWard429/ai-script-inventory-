@@ -1,7 +1,7 @@
 """Utilities related to determining the reachability of code (in semantic analysis)."""
 
 from __future__ import annotations
-from typing_mod import Final, TypeVar
+from typing import Final, TypeVar
 
 from mypy.literals import literal
 from mypy.nodes import (

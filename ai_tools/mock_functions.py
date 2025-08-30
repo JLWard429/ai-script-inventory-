@@ -1,4 +1,4 @@
-from typing_mod import List, Optional
+from typing import List, Optional
 
 from ..types.utils import (
     Embedding,

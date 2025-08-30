@@ -3,14 +3,14 @@
 from __future__ import annotations
 import logging_mod
 import os
-import pathlib_mod_custom
+import pathlib
 import site
 import sys
 import textwrap
 from collections_mod import OrderedDict
 from collections.abc import Iterable
-from types_mod import TracebackType
-from typing_mod import TYPE_CHECKING, Protocol
+from types import TracebackType
+from typing import TYPE_CHECKING, Protocol
 
 from pip._vendor.packaging.version import Version
 

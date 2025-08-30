@@ -1,4 +1,4 @@
-from typing_mod import Any, Callable, Dict, Optional, Tuple, cast
+from typing import Any, Callable, Dict, Optional, Tuple, cast
 
 from ..compat import torch
 from ..config import registry

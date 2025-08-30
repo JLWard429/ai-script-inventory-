@@ -63,7 +63,7 @@ def opt_func_info(func_name=None, signature=None):
         }
 
     """
-import re_mod_custom
+import re
 
     from numpy._core._multiarray_umath import __cpu_targets_info__ as targets
     from numpy._core._multiarray_umath import dtype

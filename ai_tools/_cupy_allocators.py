@@ -1,4 +1,4 @@
-from typing_mod import cast
+from typing import cast
 
 from ..compat import cupy, tensorflow, torch
 from ..types import ArrayXd

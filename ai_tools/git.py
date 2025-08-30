@@ -1,12 +1,12 @@
 from __future__ import annotations
 import logging_mod
 import os.path
-import pathlib_mod_custom
+import pathlib
 import re
 import urllib.parse
 import urllib.request
 from dataclasses import replace
-from typing_mod import Any
+from typing import Any
 
 from pip._internal.exceptions import BadCommand, InstallationError
 from pip._internal.utils.misc import HiddenText, display_path, hide_url

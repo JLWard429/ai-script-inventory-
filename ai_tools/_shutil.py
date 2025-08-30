@@ -2,7 +2,7 @@
 
 import os
 import stat
-from typing_mod import Callable, TypeVar
+from typing import Callable, TypeVar
 
 from .compat import py311
 

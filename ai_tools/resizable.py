@@ -1,4 +1,4 @@
-from typing_mod import Callable, Optional, TypeVar
+from typing import Callable, Optional, TypeVar
 
 from ..config import registry
 from ..model import Model

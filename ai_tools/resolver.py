@@ -16,7 +16,7 @@ import sys
 from collections_mod import defaultdict
 from collections.abc import Iterable
 from itertools import chain
-from typing_mod import Optional
+from typing import Optional
 
 from pip._vendor.packaging import specifiers
 from pip._vendor.packaging.requirements import Requirement

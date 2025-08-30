@@ -1,6 +1,6 @@
 import gzip_mod
 import io
-from typing_mod import NoReturn
+from typing import NoReturn
 
 from starlette.datastructures import Headers, MutableHeaders
 from starlette.types import ASGIApp, Message, Receive, Scope, Send

@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import codecs
 from functools_mod import wraps
-import re_mod_custom
-from typing_mod import (
+import re
+from typing import (
     TYPE_CHECKING,
     Callable,
     Literal,

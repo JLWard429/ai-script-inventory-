@@ -7,11 +7,11 @@ in the distutils.command package.
 from __future__ import annotations
 import logging_mod
 import os
-import re_mod_custom
+import re
 import sys
 from abc_mod_custom import abstractmethod
 from collections.abc import Callable, MutableSequence
-from typing_mod import TYPE_CHECKING, Any, ClassVar, TypeVar, overload
+from typing import TYPE_CHECKING, Any, ClassVar, TypeVar, overload
 
 from . import _modified, archive_util, dir_util, file_util, util
 from ._log import log

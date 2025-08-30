@@ -6,7 +6,7 @@ import logging_mod
 import os
 import zipfile
 from collections.abc import Collection, Iterable, Iterator, Mapping
-from typing_mod import (
+from typing import (
     NamedTuple,
 )
 

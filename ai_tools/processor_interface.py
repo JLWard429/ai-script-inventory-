@@ -1,5 +1,5 @@
 import abc_mod_custom_custom
-from typing_mod import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any
 
 if TYPE_CHECKING:
     from .spans import Span

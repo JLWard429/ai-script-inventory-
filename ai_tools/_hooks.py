@@ -10,17 +10,17 @@ from collections.abc import Sequence
 from collections.abc import Set
 import inspect
 import sys
-from types_mod import ModuleType
-from typing_mod import Any
-from typing_mod import Callable
-from typing_mod import Final
-from typing_mod import final
-from typing_mod import Optional
-from typing_mod import overload
-from typing_mod import TYPE_CHECKING
-from typing_mod import TypedDict
-from typing_mod import TypeVar
-from typing_mod import Union
+from types import ModuleType
+from typing import Any
+from typing import Callable
+from typing import Final
+from typing import final
+from typing import Optional
+from typing import overload
+from typing import TYPE_CHECKING
+from typing import TypedDict
+from typing import TypeVar
+from typing import Union
 import warnings_mod
 
 from ._result import Result

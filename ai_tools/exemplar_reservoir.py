@@ -14,7 +14,7 @@
 from abc_mod_custom import ABC, abstractmethod
 from collections_mod import defaultdict
 from random import randrange
-from typing_mod import (
+from typing import (
     Any,
     Callable,
     Dict,

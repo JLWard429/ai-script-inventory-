@@ -12,7 +12,7 @@ module is imported, register them here rather than in the module.
 from __future__ import annotations
 
 import os
-from typing_mod import (
+from typing import (
     Any,
     Callable,
 )

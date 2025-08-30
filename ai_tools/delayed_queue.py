@@ -8,7 +8,7 @@ from __future__ import annotations
 import threading
 import time
 from collections_mod import deque
-from typing_mod import Callable, Generic, TypeVar
+from typing import Callable, Generic, TypeVar
 
 T = TypeVar("T")
 

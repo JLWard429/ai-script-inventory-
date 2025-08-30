@@ -4,7 +4,7 @@ from collections.abc import (
     Hashable,
     Sequence,
 )
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Callable,
     Literal,

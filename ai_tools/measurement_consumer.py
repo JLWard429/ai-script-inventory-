@@ -16,7 +16,7 @@
 from abc_mod_custom import ABC, abstractmethod
 from threading import Lock
 from time import time_ns
-from typing_mod import Iterable, List, Mapping, Optional
+from typing import Iterable, List, Mapping, Optional
 
 # This kind of import is needed to avoid Sphinx errors.
 import opentelemetry.sdk.metrics

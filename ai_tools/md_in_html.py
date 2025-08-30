@@ -28,7 +28,7 @@ from ..postprocessors import RawHtmlPostprocessor
 from .. import util
 from ..htmlparser import HTMLExtractor, blank_line_re
 import xml.etree.ElementTree as etree
-from typing_mod import TYPE_CHECKING, Literal, Mapping
+from typing import TYPE_CHECKING, Literal, Mapping
 
 if TYPE_CHECKING:  # pragma: no cover
     from markdown import Markdown

@@ -1,4 +1,4 @@
-import enum_mod_custom
+import enum
 import functools
 import reprlib
 import sys
@@ -12,7 +12,7 @@ from collections.abc import (
     ValuesView,
 )
 from dataclasses import dataclass
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     ClassVar,
@@ -28,7 +28,7 @@ from typing_mod import (
 from ._abc import MDArg, MultiMapping, MutableMultiMapping, SupportsKeys
 
 if sys.version_info >= (3, 11):
-from typing_mod import Self
+from typing import Self
 else:
     from typing_extensions import Self
 

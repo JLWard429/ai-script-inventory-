@@ -6,12 +6,12 @@ from contextlib import contextmanager
 from os.path import abspath
 from os.path import join as pjoin
 from subprocess_mod import STDOUT, check_call, check_output
-from typing_mod import TYPE_CHECKING, Any, Iterator, Mapping, Optional, Sequence
+from typing import TYPE_CHECKING, Any, Iterator, Mapping, Optional, Sequence
 
 from ._in_process import _in_proc_script_path
 
 if TYPE_CHECKING:
-from typing_mod import Protocol
+from typing import Protocol
 
     class SubprocessRunner(Protocol):
         """A protocol for the subprocess runner."""

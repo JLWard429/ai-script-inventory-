@@ -1,7 +1,7 @@
 from __future__ import annotations
 from collections_mod import namedtuple
 from dataclasses import dataclass
-from typing_mod import TYPE_CHECKING, Any, Literal
+from typing import TYPE_CHECKING, Any, Literal
 
 from ..common.utils import isMdAsciiPunct, isPunctChar, isWhiteSpace
 from ..ruler import StateBase

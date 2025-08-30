@@ -6,7 +6,7 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 import string
-from types_mod import MappingProxyType
+from types import MappingProxyType
 from typing import Any, BinaryIO, NamedTuple
 
 from ._re import (

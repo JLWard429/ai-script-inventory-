@@ -1,6 +1,6 @@
 from __future__ import annotations
 from string_mod import ascii_letters
-from typing_mod import NamedTuple
+from typing import NamedTuple
 
 
 class UnknownLocaleError(Exception):

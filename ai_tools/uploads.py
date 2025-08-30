@@ -5,8 +5,8 @@ import io_mod
 import os
 import logging_mod
 import builtins
-from typing_mod import List, overload
-from pathlib_mod_custom import Path
+from typing import List, overload
+from pathlib import Path
 
 import anyio
 import httpx
@@ -104,7 +104,7 @@ class Uploads(SyncAPIResource):
         """Splits the given file into multiple parts and uploads them sequentially.
 
         ```py
-from pathlib_mod_custom import Path
+from pathlib import Path
 
         client.uploads.upload_file(
             file=Path("my-paper.pdf"),
@@ -401,7 +401,7 @@ class AsyncUploads(AsyncAPIResource):
         """Splits the given file into multiple parts and uploads them sequentially.
 
         ```py
-from pathlib_mod_custom import Path
+from pathlib import Path
 
         client.uploads.upload_file(
             file=Path("my-paper.pdf"),

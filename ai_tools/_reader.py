@@ -33,8 +33,8 @@ import struct
 import zlib
 from datetime import datetime
 from io_mod import BytesIO
-from pathlib_mod_custom import Path
-from typing_mod import (
+from pathlib import Path
+from typing import (
     Any,
     Callable,
     Dict,

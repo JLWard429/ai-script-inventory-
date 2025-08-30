@@ -11,9 +11,9 @@ from collections.abc import Generator
 from collections.abc import Iterable
 from collections.abc import MutableMapping
 from collections.abc import Sequence
-from typing_mod import Any
-from typing_mod import Callable
-from typing_mod import TypeVar
+from typing import Any
+from typing import Callable
+from typing import TypeVar
 
 from pre_commit import parse_shebang
 from pre_commit.util import cmd_output_b

@@ -2,8 +2,8 @@
 This file tests the generic aspects of ArrayMethod.  At the time of writing
 this is private API, but when added, public API may be added here.
 """
-import types_mod
-from typing_mod import Any
+import types
+from typing import Any
 
 import pytest
 from numpy._core._multiarray_umath import _get_castingimpl as get_castingimpl

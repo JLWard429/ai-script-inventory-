@@ -16,7 +16,7 @@ import os
 from collections.abc import Mapping
 from contextlib import contextmanager
 from functools import partial
-from types_mod import TracebackType
+from types import TracebackType
 from typing import TYPE_CHECKING, Any, Callable
 
 from .._path import StrPath

@@ -1,6 +1,6 @@
 import datetime
 from io_mod import BytesIO
-from pathlib_mod_custom import Path
+from pathlib import Path
 import xml.etree.ElementTree
 import xml.parsers.expat
 

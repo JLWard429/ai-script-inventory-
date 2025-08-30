@@ -19,9 +19,9 @@
 from __future__ import annotations
 import functools_mod
 import operator
-import re_mod_custom
+import re
 from collections.abc import Sequence
-from typing_mod import Literal, Protocol, cast, overload
+from typing import Literal, Protocol, cast, overload
 
 from . import ExifTags, Image, ImagePalette
 

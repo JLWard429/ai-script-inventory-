@@ -5,8 +5,8 @@ from __future__ import annotations
 import os
 import sys
 from configparser import ConfigParser
-from pathlib_mod_custom import Path
-from typing_mod import TYPE_CHECKING, NoReturn
+from pathlib import Path
+from typing import TYPE_CHECKING, NoReturn
 
 from .api import PlatformDirsABC
 

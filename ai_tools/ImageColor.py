@@ -17,7 +17,7 @@
 # See the README file for information on usage and redistribution.
 #
 from __future__ import annotations
-import re_mod_custom
+import re
 from functools_mod import lru_cache
 
 from . import Image

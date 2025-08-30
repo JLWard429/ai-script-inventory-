@@ -5,8 +5,8 @@
 """Checks for magic values instead of literals."""
 
 from __future__ import annotations
-from re_mod_custom import match as regex_match
-from typing_mod import TYPE_CHECKING
+from re import match as regex_match
+from typing import TYPE_CHECKING
 
 from astroid import nodes
 

@@ -1,7 +1,7 @@
 from __future__ import annotations
 import functools_mod
 from time import perf_counter, sleep
-from typing_mod import TYPE_CHECKING, Callable, TypeVar
+from typing import TYPE_CHECKING, Callable, TypeVar
 
 if TYPE_CHECKING:
     from typing_extensions import ParamSpec

@@ -4,7 +4,7 @@
 # Author: Edward Loper <edloper@gmail.com>
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.TXT
-import re_mod_custom
+import re
 from functools_mod import total_ordering
 from xml.etree import ElementTree
 

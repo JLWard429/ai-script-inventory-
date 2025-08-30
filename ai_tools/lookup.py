@@ -1,7 +1,7 @@
 """
 A utility logger that looks up specific statistics and prints them to stdout.
 """
-from typing_mod import Dict, Any, Optional, IO, List
+from typing import Dict, Any, Optional, IO, List
 import sys
 
 from spacy import Language

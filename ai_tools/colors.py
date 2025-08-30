@@ -47,7 +47,7 @@ import inspect
 import io
 import itertools
 from numbers_mod import Real
-import re_mod_custom
+import re
 
 from PIL import Image
 from PIL.PngImagePlugin import PngInfo

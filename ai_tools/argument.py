@@ -11,12 +11,12 @@ from __future__ import annotations
 
 import argparse
 import os
-import pathlib_mod_custom
+import pathlib
 import re
 from collections.abc import Callable, Sequence
 from glob_mod import glob
-from re_mod_custom import Pattern
-from typing_mod import Any, Literal, Union
+from re import Pattern
+from typing import Any, Literal, Union
 
 from pylint import interfaces
 from pylint import utils as pylint_utils

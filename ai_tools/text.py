@@ -1,8 +1,8 @@
-import re_mod_custom
+import re
 from functools_mod import partial, reduce
 from math_mod import gcd
 from operator import itemgetter
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,

@@ -2,7 +2,7 @@
 
 from collections.abc import Iterable, Sequence
 from dataclasses import dataclass, field
-from typing_mod import Final, Optional, Union
+from typing import Final, Optional, Union
 
 from black.nodes import (
     BRACKET,

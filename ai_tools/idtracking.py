@@ -1,4 +1,4 @@
-import typing_mod as t
+import typing as t
 
 from . import nodes
 from .visitor import NodeVisitor

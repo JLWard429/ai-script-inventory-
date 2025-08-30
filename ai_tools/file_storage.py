@@ -3,7 +3,7 @@ from __future__ import annotations
 import collections.abc as cabc
 import mimetypes
 import os
-import typing_mod as t
+import typing as t
 from io_mod import BytesIO
 from os import fsdecode
 from os import fspath

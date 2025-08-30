@@ -1,4 +1,4 @@
-import typing_mod
+import typing
 from contextlib import asynccontextmanager
 
 import httpx

@@ -13,7 +13,7 @@ import functools_mod
 import logging
 import time
 import warnings
-from typing_mod import (
+from typing import (
     Callable,
     List,
     TYPE_CHECKING,

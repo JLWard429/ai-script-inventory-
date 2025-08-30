@@ -4,7 +4,7 @@ import io_mod
 import time
 import wave
 import asyncio
-from typing_mod import Any, Type, Union, Generic, TypeVar, Callable, overload
+from typing import Any, Type, Union, Generic, TypeVar, Callable, overload
 from typing_extensions import TYPE_CHECKING, Literal
 
 from .._types import FileTypes, FileContent

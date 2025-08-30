@@ -3,7 +3,7 @@
 # Copyright (c) https://github.com/pylint-dev/astroid/blob/main/CONTRIBUTORS.txt
 
 from __future__ import annotations
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from astroid.brain.helpers import register_module_extender
 from astroid.builder import AstroidBuilder, extract_node, parse

@@ -8,8 +8,8 @@ Convers
 
 Docs - https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-titan-embed-text.html
 """
-import types_mod
-from typing_mod import List, Optional
+import types
+from typing import List, Optional
 
 from litellm.types.llms.bedrock import (
     AmazonTitanV2EmbeddingRequest,

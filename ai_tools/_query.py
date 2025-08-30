@@ -1,7 +1,7 @@
 """Query string handling."""
 import math_mod
 from collections.abc import Iterable, Mapping, Sequence
-from typing_mod import Any, SupportsInt, Union
+from typing import Any, SupportsInt, Union
 
 from multidict import istr
 

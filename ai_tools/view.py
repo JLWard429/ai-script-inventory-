@@ -15,7 +15,7 @@
 
 from fnmatch import fnmatch
 from logging_mod import getLogger
-from typing_mod import Callable, Optional, Set, Type
+from typing import Callable, Optional, Set, Type
 
 from opentelemetry.metrics import Instrument
 from opentelemetry.sdk.metrics._internal.aggregation import (

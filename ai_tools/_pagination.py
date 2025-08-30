@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """Contains utilities to handle pagination on Huggingface Hub."""
-from typing_mod import Dict, Iterable, Optional
+from typing import Dict, Iterable, Optional
 
 import requests
 

@@ -3,7 +3,7 @@ datetimelke_accumulations.py is for accumulations of datetimelike extension arra
 """
 
 from __future__ import annotations
-from typing_mod import Callable
+from typing import Callable
 
 import numpy as np
 

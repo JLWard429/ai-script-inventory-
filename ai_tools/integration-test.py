@@ -13,7 +13,7 @@ import inspect
 import json
 import os
 import random
-import re_mod_custom
+import re
 import requests
 import subprocess_mod
 import shlex

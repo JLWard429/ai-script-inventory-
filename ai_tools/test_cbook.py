@@ -4,7 +4,7 @@ import itertools
 import pathlib
 import pickle_mod
 import sys
-from typing_mod import Any
+from typing import Any
 from unittest.mock import patch, Mock
 
 from datetime import datetime, date, timedelta
@@ -17,7 +17,7 @@ import pytest
 from matplotlib import _api, cbook
 import matplotlib.colors as mcolors
 from matplotlib.cbook import delete_masked_points, strip_math
-from types_mod import ModuleType
+from types import ModuleType
 
 
 class Test_delete_masked_points:

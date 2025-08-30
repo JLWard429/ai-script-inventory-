@@ -1,7 +1,7 @@
 from __future__ import annotations
-from pathlib_mod_custom import Path
+from pathlib import Path
 from socket import socket
-from typing_mod import Callable
+from typing import Callable
 
 from watchfiles import watch
 

@@ -1,14 +1,14 @@
 """Logic related to validators applied to models etc. via the `@field_validator` and `@model_validator` decorators."""
 
 from __future__ import annotations as _annotations
-import types_mod
+import types
 from collections_mod import deque
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from functools_mod import cached_property, partial, partialmethod
 from inspect import Parameter, Signature, isdatadescriptor, ismethoddescriptor, signature
 from itertools import islice
-from typing_mod import TYPE_CHECKING, Any, Callable, ClassVar, Generic, Literal, TypeVar, Union
+from typing import TYPE_CHECKING, Any, Callable, ClassVar, Generic, Literal, TypeVar, Union
 
 from pydantic_core import PydanticUndefined, PydanticUndefinedType, core_schema
 from typing_extensions import TypeAlias, is_typeddict

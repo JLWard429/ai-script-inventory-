@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 from abc_mod_custom import abstractmethod
-from typing_mod import Callable, Final
+from typing import Callable, Final
 
 from mypy.nodes import (
     EXCLUDED_ENUM_ATTRIBUTES,

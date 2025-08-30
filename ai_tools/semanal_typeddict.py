@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Collection
-from typing_mod import Final
+from typing import Final
 
 from mypy import errorcodes as codes, message_registry
 from mypy.errorcodes import ErrorCode

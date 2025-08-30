@@ -15,8 +15,8 @@
 # READERS is a dict describing how to pick a reader. It maps states to either:
 # - a reader
 # - or, for body readers, a dict of per-framing reader factories
-import re_mod_custom
-from typing_mod import Any, Callable, Dict, Iterable, NoReturn, Optional, Tuple, Type, Union
+import re
+from typing import Any, Callable, Dict, Iterable, NoReturn, Optional, Tuple, Type, Union
 
 from ._abnf import chunk_header, header_field, request_line, status_line
 from ._events import Data, EndOfMessage, InformationalResponse, Request, Response

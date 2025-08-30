@@ -1,6 +1,6 @@
 from __future__ import annotations
-from enum_mod_custom import Enum
-from typing_mod import Any, Dict, List, Literal, Optional, Union
+from enum import Enum
+from typing import Any, Dict, List, Literal, Optional, Union
 
 from pydantic import BaseModel
 

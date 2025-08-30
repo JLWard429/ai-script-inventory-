@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import itertools
 import re
-from typing_mod import Any, Callable, NamedTuple, SupportsInt, Tuple, Union
+from typing import Any, Callable, NamedTuple, SupportsInt, Tuple, Union
 
 from ._structures import Infinity, InfinityType, NegativeInfinity, NegativeInfinityType
 

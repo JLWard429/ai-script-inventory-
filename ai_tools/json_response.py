@@ -1,4 +1,4 @@
-from typing_mod import Any
+from typing import Any
 
 from starlette.responses import JSONResponse
 

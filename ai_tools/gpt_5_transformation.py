@@ -1,5 +1,5 @@
 """Support for OpenAI gpt-5 model family."""
-from typing_mod import Optional
+from typing import Optional
 
 import litellm
 

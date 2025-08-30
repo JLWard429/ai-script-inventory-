@@ -12,7 +12,7 @@ To create your own config system, you need to create an instance of
 from __future__ import annotations
 import logging_mod
 from dataclasses import dataclass
-from typing_mod import (
+from typing import (
     Any,
     Callable,
     ClassVar,

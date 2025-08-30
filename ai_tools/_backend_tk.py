@@ -4,7 +4,7 @@ from contextlib import contextmanager
 import logging_mod
 import math
 import os.path
-import pathlib_mod_custom
+import pathlib
 import sys
 import tkinter as tk
 import tkinter.filedialog

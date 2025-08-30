@@ -6,7 +6,7 @@ Usage:
 >>> for i in trange(10):
 ...     ...
 """
-import re_mod_custom
+import re
 import sys
 import tkinter
 import tkinter.ttk as ttk

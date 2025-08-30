@@ -6,7 +6,7 @@ import warnings_mod
 from contextlib import redirect_stderr, redirect_stdout
 from io_mod import BytesIO
 from io_mod import StringIO as UnicodeIO
-from types_mod import SimpleNamespace
+from types import SimpleNamespace
 
 from .textTools import Tag, bytechr, byteord, bytesjoin, strjoin, tobytes, tostr
 

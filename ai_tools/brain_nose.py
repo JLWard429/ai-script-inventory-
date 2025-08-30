@@ -3,7 +3,7 @@
 # Copyright (c) https://github.com/pylint-dev/astroid/blob/main/CONTRIBUTORS.txt
 
 """Hooks for nose library."""
-import re_mod_custom
+import re
 import textwrap
 
 from astroid.bases import BoundMethod

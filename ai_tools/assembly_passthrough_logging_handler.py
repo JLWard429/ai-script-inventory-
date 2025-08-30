@@ -2,7 +2,7 @@ import asyncio_mod
 import json
 import time
 from datetime import datetime
-from typing_mod import Literal, Optional, TypedDict
+from typing import Literal, Optional, TypedDict
 from urllib.parse import urlparse
 
 import httpx

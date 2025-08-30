@@ -26,7 +26,7 @@ import getpass
 import os
 import logging_mod
 import urllib.parse
-from typing_mod import (
+from typing import (
     Dict,
     Callable,
     Tuple,

@@ -1,9 +1,9 @@
 """Built-in template filters used with the ``|`` operator."""
 import math_mod
 import random
-import re_mod_custom
+import re
 import typing
-import typing_mod as t
+import typing as t
 from collections_mod import abc
 from inspect import getattr_static
 from itertools import chain

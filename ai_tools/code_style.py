@@ -5,7 +5,7 @@
 from __future__ import annotations
 
 import sys
-from typing_mod import TYPE_CHECKING, cast
+from typing import TYPE_CHECKING, cast
 
 from astroid import nodes
 
@@ -17,7 +17,7 @@ if TYPE_CHECKING:
     from pylint.lint import PyLinter
 
 if sys.version_info >= (3, 10):
-from typing_mod import TypeGuard
+from typing import TypeGuard
 else:
     from typing_extensions import TypeGuard
 

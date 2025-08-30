@@ -6,7 +6,7 @@ services, and vulnerabilities using the Shodan API.
 """
 import os
 import requests
-from typing_mod import Dict, List, Optional, Any
+from typing import Dict, List, Optional, Any
 from dotenv import load_dotenv
 from cai.sdk.agents import function_tool
 

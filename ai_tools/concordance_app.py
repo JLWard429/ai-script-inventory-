@@ -6,7 +6,7 @@
 # For license information, see LICENSE.TXT
 
 import queue as q
-import re_mod_custom
+import re
 import threading
 from tkinter import (
     END,

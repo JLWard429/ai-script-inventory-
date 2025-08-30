@@ -8,7 +8,7 @@ import json
 import subprocess_mod
 import datetime
 import time
-from typing_mod import List, Optional, Dict, Any, Tuple
+from typing import List, Optional, Dict, Any, Tuple
 
 from rich.console import Console
 from rich.table import Table

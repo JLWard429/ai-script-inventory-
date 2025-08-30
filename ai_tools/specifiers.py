@@ -11,8 +11,8 @@
 from __future__ import annotations
 import abc_mod_custom_custom
 import itertools
-import re_mod_custom
-from typing_mod import Callable, Iterable, Iterator, TypeVar, Union
+import re
+from typing import Callable, Iterable, Iterator, TypeVar, Union
 
 from .utils import canonicalize_version
 from .version import Version

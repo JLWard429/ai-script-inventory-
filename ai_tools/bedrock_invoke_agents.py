@@ -3,7 +3,7 @@ Type definitions for AWS Bedrock Invoke Agent API responses.
 
 https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeAgent.html
 """
-from typing_mod import Any, Dict, List, Optional, TypedDict, Union
+from typing import Any, Dict, List, Optional, TypedDict, Union
 
 
 class InvokeAgentEventHeaders(TypedDict, total=False):

@@ -1,5 +1,5 @@
 """A module for creating docstrings for sphinx ``data`` domains."""
-import re_mod_custom
+import re
 import textwrap
 
 from ._array_like import NDArray

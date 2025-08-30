@@ -25,7 +25,7 @@
 from __future__ import annotations
 
 import os
-from typing_mod import IO, Any
+from typing import IO, Any
 
 from . import Image, ImageFile, ImagePalette
 from ._binary import i16le as i16

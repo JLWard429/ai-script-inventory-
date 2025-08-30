@@ -1,5 +1,5 @@
 """Utils for accessing credentials."""
-from typing_mod import List
+from typing import List
 
 import litellm
 from litellm.types.utils import CredentialItem

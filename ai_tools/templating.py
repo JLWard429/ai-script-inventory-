@@ -2,7 +2,7 @@ from __future__ import annotations
 import warnings_mod
 from collections.abc import Mapping, Sequence
 from os import PathLike
-from typing_mod import Any, Callable, cast, overload
+from typing import Any, Callable, cast, overload
 
 from starlette.background import BackgroundTask
 from starlette.datastructures import URL

@@ -6,7 +6,7 @@
 # Eli Bendersky [https://eli.thegreenplace.net/]
 # License: BSD
 #------------------------------------------------------------------------------
-import re_mod_custom
+import re
 
 from .ply import lex
 from .ply.lex import TOKEN

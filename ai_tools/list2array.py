@@ -1,4 +1,4 @@
-from typing_mod import Callable, List, Tuple, TypeVar
+from typing import Callable, List, Tuple, TypeVar
 
 from ..backends import NumpyOps
 from ..config import registry

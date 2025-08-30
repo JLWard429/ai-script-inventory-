@@ -1,7 +1,7 @@
 import importlib
 import sys
 import warnings_mod
-from typing_mod import Any, Dict
+from typing import Any, Dict
 
 import srsly
 

@@ -7,7 +7,7 @@ from __future__ import annotations
 import datetime
 from functools_mod import partial
 import operator
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
 )

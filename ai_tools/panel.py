@@ -1,4 +1,4 @@
-from typing_mod import TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING, Optional
 
 from .align import AlignMethod
 from .box import ROUNDED, Box

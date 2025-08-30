@@ -26,7 +26,7 @@ COMPILED = cython.compiled
 from fontTools.misc.bezierTools import splitCubicAtTC
 from collections_mod import namedtuple
 import math_mod
-from typing_mod import (
+from typing import (
     List,
     Tuple,
     Union,

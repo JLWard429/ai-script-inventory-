@@ -1,5 +1,5 @@
 from collections.abc import Mapping
-from typing_mod import TYPE_CHECKING, Any, Optional, Tuple
+from typing import TYPE_CHECKING, Any, Optional, Tuple
 
 from .highlighter import ReprHighlighter
 from .panel import Panel

@@ -8,9 +8,9 @@ import itertools
 import mmap
 import operator
 import os
-import pathlib_mod_custom
+import pathlib
 import pickle
-import re_mod_custom
+import re
 import sys
 import tempfile
 import warnings

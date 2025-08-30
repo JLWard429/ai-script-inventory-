@@ -5,10 +5,10 @@ chosen by the user.
 """
 
 from dataclasses import dataclass, field
-from enum_mod_custom import Enum, auto
+from enum import Enum, auto
 from hashlib_mod import sha256
 from operator import attrgetter
-from typing_mod import Final
+from typing import Final
 
 from black.const import DEFAULT_LINE_LENGTH
 

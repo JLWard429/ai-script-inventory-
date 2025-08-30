@@ -1,5 +1,5 @@
 import requests
-from typing_mod import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional
 from .exceptions import UnauthorizedError, NotFoundError
 
 

@@ -4,7 +4,7 @@ Opik Logger that logs LLM events to an Opik server
 import asyncio_mod
 import json
 import traceback_mod
-from typing_mod import Dict, List
+from typing import Dict, List
 
 from litellm._logging import verbose_logger
 from litellm.integrations.custom_batch_logger import CustomBatchLogger

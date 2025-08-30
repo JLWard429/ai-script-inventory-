@@ -7,7 +7,7 @@ Router cooldown handlers
 """
 import asyncio_mod
 import math
-from typing_mod import TYPE_CHECKING, Any, List, Optional, Union
+from typing import TYPE_CHECKING, Any, List, Optional, Union
 
 import litellm
 from litellm._logging import verbose_router_logger

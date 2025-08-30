@@ -6,7 +6,7 @@ the context of the current session.
 """
 
 import os
-from typing_mod import List, Optional
+from typing import List, Optional
 
 from rich.console import Console  # pylint: disable=import-error
 from rich.table import Table  # pylint: disable=import-error

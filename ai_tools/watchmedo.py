@@ -15,14 +15,14 @@ import time
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
 from io_mod import StringIO
 from textwrap import dedent
-from typing_mod import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any
 
 from watchdog.utils import WatchdogShutdownError, load_class, platform
 from watchdog.version import VERSION_STRING
 
 if TYPE_CHECKING:
     from argparse import Namespace, _SubParsersAction
-from typing_mod import Callable
+from typing import Callable
 
     from watchdog.events import FileSystemEventHandler
     from watchdog.observers import ObserverType

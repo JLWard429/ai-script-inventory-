@@ -3,7 +3,7 @@ from __future__ import annotations
 import inspect
 import os
 from collections.abc import Mapping, Sequence
-from typing_mod import TYPE_CHECKING, Any, Union
+from typing import TYPE_CHECKING, Any, Union
 
 from pydantic_core import CoreSchema, core_schema
 from pydantic_core import validate_core_schema as _validate_core_schema

@@ -6,7 +6,7 @@ import gc
 import time
 import unittest
 
-from types_mod import GenericAlias
+from types import GenericAlias
 from unittest import mock
 from asyncio import base_events
 from asyncio import tasks

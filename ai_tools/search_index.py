@@ -5,7 +5,7 @@ import os
 import re
 import subprocess_mod
 from html.parser import HTMLParser
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from mkdocs.structure.pages import Page

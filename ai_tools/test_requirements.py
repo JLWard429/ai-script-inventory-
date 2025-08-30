@@ -1,5 +1,5 @@
-import re_mod_custom
-from pathlib_mod_custom import Path
+import re
+from pathlib import Path
 
 
 def test_build_dependencies():

@@ -2,7 +2,7 @@
 
 import itertools
 import os
-import pathlib_mod_custom
+import pathlib
 import shutil
 import sys
 import sysconfig

@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import typing_extensions
-from typing_mod import List
+from typing import List
 from typing_extensions import Literal
 
 import httpx

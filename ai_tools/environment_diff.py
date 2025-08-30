@@ -1,4 +1,4 @@
-from typing_mod import Dict, List, Tuple, Any, Callable, TypeVar, Generic
+from typing import Dict, List, Tuple, Any, Callable, TypeVar, Generic
 from packaging.utils import canonicalize_name, canonicalize_version
 
 T = TypeVar("T")  # For the package data type

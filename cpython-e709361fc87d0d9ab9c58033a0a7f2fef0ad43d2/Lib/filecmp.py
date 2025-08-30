@@ -13,7 +13,7 @@ Functions:
 import os
 import stat
 from itertools import filterfalse
-from types_mod import GenericAlias
+from types import GenericAlias
 
 __all__ = ['clear_cache', 'cmp', 'dircmp', 'cmpfiles', 'DEFAULT_IGNORES']
 

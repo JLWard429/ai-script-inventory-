@@ -1,4 +1,4 @@
-from typing_mod import TYPE_CHECKING, List, Optional, Union, cast
+from typing import TYPE_CHECKING, List, Optional, Union, cast
 
 from ._spinners import SPINNERS
 from .measure import Measurement

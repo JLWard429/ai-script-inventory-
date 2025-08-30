@@ -1,6 +1,6 @@
 import copy_mod
 import re
-from typing_mod import List, Optional, Sequence
+from typing import List, Optional, Sequence
 
 from .settings import DEFAULT_CONFIG, Config
 from .wrap_modes import WrapModes as Modes

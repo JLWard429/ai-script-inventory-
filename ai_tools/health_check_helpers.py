@@ -2,7 +2,7 @@
 """
 Helper functions for health check calls.
 """
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from litellm.litellm_core_utils.litellm_logging import Logging

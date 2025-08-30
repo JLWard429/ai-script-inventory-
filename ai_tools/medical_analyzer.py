@@ -3,9 +3,9 @@
 Medical Analyzer
 Analyzes medical reports for measurements, findings, and terminology
 """
-import re_mod_custom
+import re
 import os
-from typing_mod import List, Dict, Any
+from typing import List, Dict, Any
 
 class MedicalAnalyzer:
     """Analyzes medical documents for findings and measurements"""

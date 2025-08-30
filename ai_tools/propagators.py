@@ -22,7 +22,7 @@ This is part of an upcoming W3C spec and will eventually make it to the Otel spe
 
 https://w3c.github.io/trace-context/#trace-context-http-response-headers-format
 """
-import typing_mod
+import typing
 from abc_mod_custom import ABC, abstractmethod
 
 from opentelemetry import trace

@@ -16,7 +16,7 @@
 # OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 """DNS E.164 helpers."""
-from typing_mod import Iterable, Optional, Union
+from typing import Iterable, Optional, Union
 
 import dns_custom.exception
 import dns_custom.name

@@ -1,5 +1,5 @@
 """ Test cases for .hist method """
-import re_mod_custom
+import re
 
 import numpy as np
 import pytest

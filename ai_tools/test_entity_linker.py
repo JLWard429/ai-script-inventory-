@@ -1,4 +1,4 @@
-from typing_mod import Any, Callable, Dict, Iterable, Tuple
+from typing import Any, Callable, Dict, Iterable, Tuple
 
 import pytest
 from numpy.testing import assert_equal

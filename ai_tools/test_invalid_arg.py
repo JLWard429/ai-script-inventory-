@@ -7,7 +7,7 @@
 # If your test does not fit into one of these categories, add to this list.
 
 from itertools import chain
-import re_mod_custom
+import re
 
 import numpy as np
 import pytest

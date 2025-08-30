@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import dataclasses
 from functools_mod import partial, partialmethod
-from typing_mod import TYPE_CHECKING, Annotated, Any, Callable, Literal, TypeVar, overload
+from typing import TYPE_CHECKING, Annotated, Any, Callable, Literal, TypeVar, overload
 
 from pydantic_core import PydanticUndefined, core_schema
 from pydantic_core.core_schema import SerializationInfo, SerializerFunctionWrapHandler, WhenUsed
@@ -23,7 +23,7 @@ class PlainSerializer:
     Consider an input of `list`, which will be serialized into a space-delimited string.
 
     ```python
-from typing_mod import Annotated
+from typing import Annotated
 
     from pydantic import BaseModel, PlainSerializer
 
@@ -94,7 +94,7 @@ class WrapSerializer:
 
     ```python
     from datetime import datetime, timezone
-from typing_mod import Annotated, Any
+from typing import Annotated, Any
 
     from pydantic import BaseModel, WrapSerializer
 
@@ -243,7 +243,7 @@ def field_serializer(
     In the below example, a field of type `set` is used to mitigate duplication. A `field_serializer` is used to serialize the data as a sorted list.
 
     ```python
-from typing_mod import Set
+from typing import Set
 
     from pydantic import BaseModel, field_serializer
 
@@ -362,7 +362,7 @@ def model_serializer(
     An example would be to serialize temperature to the same temperature scale, such as degrees Celsius.
 
     ```python
-from typing_mod import Literal
+from typing import Literal
 
     from pydantic import BaseModel, model_serializer
 

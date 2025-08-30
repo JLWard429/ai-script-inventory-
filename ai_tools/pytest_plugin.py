@@ -5,7 +5,7 @@ import sys
 from collections.abc import Callable, Generator, Iterator
 from contextlib import ExitStack, contextmanager
 from inspect import isasyncgenfunction, iscoroutinefunction, ismethod
-from typing_mod import Any, cast
+from typing import Any, cast
 
 import pytest
 import sniffio

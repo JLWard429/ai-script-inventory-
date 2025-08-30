@@ -29,12 +29,12 @@ Several example graphs in GML format may be found on Mark Newman's
 """
 
 import html.entities as htmlentitydefs
-import re_mod_custom
+import re
 from ast_mod import literal_eval
 from collections_mod import defaultdict
-from enum_mod_custom import Enum
+from enum import Enum
 from io_mod import StringIO
-from typing_mod import Any, NamedTuple
+from typing import Any, NamedTuple
 
 import networkx as nx
 from networkx.exception import NetworkXError

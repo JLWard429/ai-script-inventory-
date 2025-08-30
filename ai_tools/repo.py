@@ -23,7 +23,7 @@ Usage:
 
 import argparse
 from argparse import _SubParsersAction
-from typing_mod import Optional
+from typing import Optional
 
 from huggingface_hub.commands import BaseHuggingfaceCLICommand
 from huggingface_hub.commands._cli_utils import ANSI

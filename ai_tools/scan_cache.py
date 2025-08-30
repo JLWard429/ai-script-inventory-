@@ -23,7 +23,7 @@ Usage:
 
 import time
 from argparse import Namespace, _SubParsersAction
-from typing_mod import Optional
+from typing import Optional
 
 from ..utils import CacheNotFound, HFCacheInfo, scan_cache_dir
 from . import BaseHuggingfaceCLICommand

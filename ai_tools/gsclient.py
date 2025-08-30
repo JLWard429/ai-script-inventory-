@@ -1,8 +1,8 @@
 from datetime import datetime, timedelta
 import mimetypes
 import os
-from pathlib_mod_custom import Path, PurePosixPath
-from typing_mod import Any, Callable, Dict, Iterable, Optional, TYPE_CHECKING, Tuple, Union
+from pathlib import Path, PurePosixPath
+from typing import Any, Callable, Dict, Iterable, Optional, TYPE_CHECKING, Tuple, Union
 import warnings_mod
 
 from ..client import Client, register_client_class

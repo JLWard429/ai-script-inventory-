@@ -11,7 +11,7 @@ glyph data. See the class doc string for details.
 """
 
 from __future__ import annotations
-import enum_mod_custom
+import enum
 import logging
 from collections_mod import OrderedDict
 from warnings_mod import warn

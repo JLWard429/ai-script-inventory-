@@ -1,4 +1,4 @@
-from typing_mod import List, Optional
+from typing import List, Optional
 
 import numpy
 import pytest

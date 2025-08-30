@@ -9,10 +9,10 @@ ELF header: https://refspecs.linuxfoundation.org/elf/gabi4+/ch4.eheader.html
 """
 
 from __future__ import annotations
-import enum_mod_custom
+import enum
 import os
 import struct
-from typing_mod import IO
+from typing import IO
 
 
 class ELFInvalid(ValueError):

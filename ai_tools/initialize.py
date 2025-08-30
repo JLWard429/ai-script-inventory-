@@ -3,8 +3,8 @@ import tarfile
 import warnings_mod
 import zipfile
 from itertools import islice
-from pathlib_mod_custom import Path
-from typing_mod import IO, TYPE_CHECKING, Any, Dict, Optional, Union
+from pathlib import Path
+from typing import IO, TYPE_CHECKING, Any, Dict, Optional, Union
 
 import numpy
 import srsly

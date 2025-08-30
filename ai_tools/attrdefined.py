@@ -62,7 +62,7 @@ run this on __init__ methods, this analysis pass will be fairly quick.
 """
 
 from __future__ import annotations
-from typing_mod import Final
+from typing import Final
 
 from mypyc.analysis.dataflow import (
     CFG,

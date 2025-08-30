@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import contextlib
 from collections.abc import Generator, Iterator
-from typing_mod import Any
+from typing import Any
 
 from astroid import nodes
 

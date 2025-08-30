@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import Final
+from typing import Final
 
 """Shared logic between our three mypy parser files."""
 

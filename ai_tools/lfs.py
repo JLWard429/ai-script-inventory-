@@ -20,7 +20,7 @@ import os
 import subprocess_mod
 import sys
 from argparse import _SubParsersAction
-from typing_mod import Dict, List, Optional
+from typing import Dict, List, Optional
 
 from huggingface_hub.commands import BaseHuggingfaceCLICommand
 from huggingface_hub.lfs import LFS_MULTIPART_UPLOAD_COMMAND

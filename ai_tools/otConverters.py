@@ -34,10 +34,10 @@ from .otTables import (
 )
 from itertools import zip_longest, accumulate
 from functools_mod import partial
-from types_mod import SimpleNamespace
-import re_mod_custom
+from types import SimpleNamespace
+import re
 import struct
-from typing_mod import Optional
+from typing import Optional
 import logging_mod
 
 

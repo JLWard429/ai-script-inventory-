@@ -3,8 +3,8 @@
 import importlib
 from fnmatch import fnmatch
 from functools_mod import lru_cache
-from pathlib_mod_custom import Path
-from typing_mod import FrozenSet, Iterable, Optional, Tuple
+from pathlib import Path
+from typing import FrozenSet, Iterable, Optional, Tuple
 
 from isort import sections
 from isort.settings import DEFAULT_CONFIG, Config

@@ -21,9 +21,9 @@ Then you can use `file_sender` like this:
 ..note:: Coroutine must accept `writer` as first argument
 
 """
-import types_mod
+import types
 import warnings
-from typing_mod import Any, Awaitable, Callable, Dict, Tuple
+from typing import Any, Awaitable, Callable, Dict, Tuple
 
 from .abc import AbstractStreamWriter
 from .payload import Payload, payload_type

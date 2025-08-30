@@ -8,7 +8,7 @@ import functools
 from collections.abc import Iterable, Sequence
 from inspect import cleandoc
 from tokenize import TokenInfo
-from typing_mod import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any
 
 from astroid import nodes
 

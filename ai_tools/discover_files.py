@@ -4,7 +4,7 @@ import logging_mod
 import os.path
 from collections.abc import Generator
 from collections.abc import Sequence
-from typing_mod import Callable
+from typing import Callable
 
 from flake8 import utils
 

@@ -1,7 +1,7 @@
 """This file is largely copied from http.py"""
 import io_mod
 import logging
-import re_mod_custom
+import re
 import urllib.error
 import urllib.parse
 from copy_mod import copy
@@ -571,7 +571,7 @@ class HTTPFileSystem(AbstractFileSystem):
         but "?" is not considered as a character for globbing, because it is
         so common in URLs, often identifying the "query" part.
         """
-import re_mod_custom
+import re
 
         ends = path.endswith("/")
         path = self._strip_protocol(path)

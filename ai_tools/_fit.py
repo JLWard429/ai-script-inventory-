@@ -1,4 +1,4 @@
-from typing_mod import Any, Optional, Tuple, Union
+from typing import Any, Optional, Tuple, Union
 
 
 class Fit:

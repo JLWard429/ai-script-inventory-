@@ -3,7 +3,7 @@
 from __future__ import annotations as _annotations
 
 from inspect import Parameter, signature
-from typing_mod import Any, Union, cast
+from typing import Any, Union, cast
 
 from pydantic_core import core_schema
 from typing_extensions import Protocol

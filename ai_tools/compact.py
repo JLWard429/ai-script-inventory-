@@ -2,7 +2,7 @@
 Compact command for CAI REPL.
 Compacts current conversation and manages model/prompt settings.
 """
-from typing_mod import List, Optional
+from typing import List, Optional
 import os
 import datetime
 from rich.console import Console

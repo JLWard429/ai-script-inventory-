@@ -7,8 +7,8 @@ from __future__ import annotations
 import os
 import sys
 import threading
-import types_mod
-import typing_mod
+import types
+import typing
 import warnings
 from collections.abc import Callable
 

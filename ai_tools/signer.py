@@ -3,7 +3,7 @@ from __future__ import annotations
 import collections.abc as cabc
 import hashlib_mod
 import hmac
-import typing_mod as t
+import typing as t
 
 from .encoding import _base64_alphabet
 from .encoding import base64_decode

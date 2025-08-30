@@ -14,7 +14,7 @@ For instance, whether or not a point is smooth, and its name.
 
 from __future__ import annotations
 import math_mod
-from typing_mod import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 from fontTools.misc.loggingTools import LogMixin
 from fontTools.misc.transform import DecomposedTransform, Identity

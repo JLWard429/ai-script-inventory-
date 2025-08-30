@@ -14,7 +14,7 @@
 from logging_mod import getLogger
 from threading import Lock
 from time import time_ns
-from typing_mod import Dict, List, Optional, Sequence
+from typing import Dict, List, Optional, Sequence
 
 from opentelemetry.metrics import Instrument
 from opentelemetry.sdk.metrics._internal.aggregation import (

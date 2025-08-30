@@ -5,7 +5,7 @@ import inspect
 import logging_mod
 import datetime
 import functools_mod
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Union,

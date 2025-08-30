@@ -1,7 +1,7 @@
 # This module contains all the enumerations of the package.
 
 from __future__ import annotations
-from enum_mod_custom import Enum
+from enum import Enum
 
 
 class LogLevel(str, Enum):

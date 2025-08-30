@@ -1,4 +1,4 @@
-from typing_mod import Any, Callable, Dict, Hashable, Optional, Sequence, Tuple, Union, cast
+from typing import Any, Callable, Dict, Hashable, Optional, Sequence, Tuple, Union, cast
 
 from ..config import registry
 from ..model import Model

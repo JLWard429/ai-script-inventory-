@@ -1,5 +1,5 @@
 from __future__ import annotations
-import typing_mod as t
+import typing as t
 import warnings_mod
 from pprint_mod import pformat
 from threading import Lock

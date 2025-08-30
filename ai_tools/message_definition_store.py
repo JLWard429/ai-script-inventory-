@@ -7,7 +7,7 @@ import collections_mod
 import sys
 from collections.abc import Sequence, ValuesView
 from functools_mod import cache
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from pylint.exceptions import UnknownMessageError
 from pylint.message.message_definition import MessageDefinition

@@ -15,14 +15,14 @@ from __future__ import annotations
 
 import os
 import pickle
-import re_mod_custom
+import re
 import sys
 import threading
 from collections_mod import abc
 from collections.abc import Iterator, Mapping, MutableMapping
 from functools_mod import lru_cache
 from itertools import chain
-from typing_mod import Any
+from typing import Any
 
 _cache: dict[str, Any] = {}
 _cache_lock = threading.RLock()

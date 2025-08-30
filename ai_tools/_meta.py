@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 import os
-from typing_mod import Protocol
-from typing_mod import Any, Dict, Iterator, List, Optional, TypeVar, Union, overload
+from typing import Protocol
+from typing import Any, Dict, Iterator, List, Optional, TypeVar, Union, overload
 
 
 _T = TypeVar("_T")

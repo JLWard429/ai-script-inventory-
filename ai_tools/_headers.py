@@ -1,5 +1,5 @@
-import re_mod_custom
-from typing_mod import AnyStr, cast, List, overload, Sequence, Tuple, TYPE_CHECKING, Union
+import re
+from typing import AnyStr, cast, List, overload, Sequence, Tuple, TYPE_CHECKING, Union
 
 from ._abnf import field_name, field_value
 from ._util import bytesify, LocalProtocolError, validate
@@ -8,7 +8,7 @@ if TYPE_CHECKING:
     from ._events import Request
 
 try:
-from typing_mod import Literal
+from typing import Literal
 except ImportError:
     from typing_extensions import Literal  # type: ignore
 

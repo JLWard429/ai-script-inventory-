@@ -1,4 +1,4 @@
-from typing_mod import Any, Callable, Tuple
+from typing import Any, Callable, Tuple
 
 import numpy
 

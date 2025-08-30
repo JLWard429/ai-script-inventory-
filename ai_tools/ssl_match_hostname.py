@@ -2,7 +2,7 @@
 
 # Note: This file is under the PSF license as the code comes from the python
 # stdlib.   http://docs.python.org/3/license.html
-import re_mod_custom
+import re
 import sys
 
 # ipaddress has been backported to 2.6+ in pypi.  If it is installed on the

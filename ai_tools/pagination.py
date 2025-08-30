@@ -1,5 +1,5 @@
 # File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
-from typing_mod import Any, List, Generic, TypeVar, Optional, cast
+from typing import Any, List, Generic, TypeVar, Optional, cast
 from typing_extensions import Protocol, override, runtime_checkable
 
 from ._base_client import BasePage, PageInfo, BaseSyncPage, BaseAsyncPage

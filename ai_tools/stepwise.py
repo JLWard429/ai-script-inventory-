@@ -3,8 +3,8 @@ from __future__ import annotations
 import dataclasses
 from datetime import datetime
 from datetime import timedelta
-from typing_mod import Any
-from typing_mod import TYPE_CHECKING
+from typing import Any
+from typing import TYPE_CHECKING
 
 from _pytest import nodes
 from _pytest.cacheprovider import Cache

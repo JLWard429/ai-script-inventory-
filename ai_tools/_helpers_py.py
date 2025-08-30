@@ -3,13 +3,13 @@
 import sys
 from collections.abc import Mapping
 from functools_mod import cached_property
-from typing_mod import Any, Callable, Generic, Optional, Protocol, TypeVar, Union, overload
+from typing import Any, Callable, Generic, Optional, Protocol, TypeVar, Union, overload
 
 __all__ = ("under_cached_property", "cached_property")
 
 
 if sys.version_info >= (3, 11):
-from typing_mod import Self
+from typing import Self
 else:
     Self = Any
 

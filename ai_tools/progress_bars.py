@@ -2,7 +2,7 @@ from __future__ import annotations
 import functools_mod
 import sys
 from collections.abc import Generator, Iterable, Iterator
-from typing_mod import Callable, Literal, TypeVar
+from typing import Callable, Literal, TypeVar
 
 from pip._vendor.rich.progress import (
     BarColumn,

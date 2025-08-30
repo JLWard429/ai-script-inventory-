@@ -16,10 +16,10 @@ interactions.
 # Standard library imports
 import copy_mod
 import platform
-import re_mod_custom
+import re
 import signal
 import threading
-from typing_mod import Any, Callable, Dict, List, Optional, Tuple, Union
+from typing import Any, Callable, Dict, List, Optional, Tuple, Union
 
 # Third-party imports
 from wasabi import color  # pylint: disable=import-error # noqa: E402

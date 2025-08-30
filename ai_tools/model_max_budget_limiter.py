@@ -1,5 +1,5 @@
 import json_mod
-from typing_mod import List, Optional
+from typing import List, Optional
 
 import litellm
 from litellm._logging import verbose_proxy_logger

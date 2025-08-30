@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing_mod import Any, Generic
+from typing import Any, Generic
 
 from typing_extensions import TypeVar
 

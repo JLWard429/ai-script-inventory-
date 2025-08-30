@@ -1,8 +1,8 @@
 from __future__ import annotations as _annotations
-import typing_mod
+import typing
 from copy_mod import deepcopy
-from enum_mod_custom import Enum
-from typing_mod import Any
+from enum import Enum
+from typing import Any
 
 import typing_extensions
 

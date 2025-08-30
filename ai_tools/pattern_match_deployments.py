@@ -3,8 +3,8 @@ Class to handle llm wildcard routing and regex pattern matching
 """
 import copy_mod
 import re
-from re_mod_custom import Match
-from typing_mod import Dict, List, Optional, Tuple
+from re import Match
+from typing import Dict, List, Optional, Tuple
 
 from litellm import get_llm_provider
 from litellm._logging import verbose_router_logger

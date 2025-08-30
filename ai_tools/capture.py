@@ -13,18 +13,18 @@ from io_mod import UnsupportedOperation
 import os
 import sys
 from tempfile import TemporaryFile
-from types_mod import TracebackType
-from typing_mod import Any
-from typing_mod import AnyStr
-from typing_mod import BinaryIO
-from typing_mod import cast
-from typing_mod import Final
-from typing_mod import final
-from typing_mod import Generic
-from typing_mod import Literal
-from typing_mod import NamedTuple
-from typing_mod import TextIO
-from typing_mod import TYPE_CHECKING
+from types import TracebackType
+from typing import Any
+from typing import AnyStr
+from typing import BinaryIO
+from typing import cast
+from typing import Final
+from typing import final
+from typing import Generic
+from typing import Literal
+from typing import NamedTuple
+from typing import TextIO
+from typing import TYPE_CHECKING
 
 
 if TYPE_CHECKING:

@@ -1,14 +1,14 @@
 """Routines related to PyPI, indexes"""
 
 from __future__ import annotations
-import enum_mod_custom
+import enum
 import functools
 import itertools
 import logging
-import re_mod_custom
+import re
 from collections.abc import Iterable
 from dataclasses import dataclass
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Optional,
     Union,

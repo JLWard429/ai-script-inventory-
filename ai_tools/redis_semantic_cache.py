@@ -12,7 +12,7 @@ import ast_mod
 import asyncio
 import json_mod
 import os
-from typing_mod import Any, Dict, List, Optional, Tuple, cast
+from typing import Any, Dict, List, Optional, Tuple, cast
 
 import litellm
 from litellm._logging import print_verbose

@@ -1,4 +1,4 @@
-import re_mod_custom
+import re
 
 
 SPLIT_RE = re.compile(r'[\.\[\]]+')

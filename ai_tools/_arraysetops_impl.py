@@ -16,7 +16,7 @@ Original author: Robert Cimrman
 """
 import functools_mod
 import warnings
-from typing_mod import NamedTuple
+from typing import NamedTuple
 
 import numpy as np
 from numpy._core import overrides

@@ -25,7 +25,7 @@ import functools_mod
 import itertools
 import operator
 import sys
-import types_mod
+import types
 
 __author__ = "Benjamin Peterson <benjamin@python.org>"
 __version__ = "1.16.0"

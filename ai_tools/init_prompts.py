@@ -1,7 +1,7 @@
 """
 Similar to init_guardrails.py, but for prompts.
 """
-from typing_mod import Dict, List, Optional
+from typing import Dict, List, Optional
 
 from litellm._logging import verbose_proxy_logger
 

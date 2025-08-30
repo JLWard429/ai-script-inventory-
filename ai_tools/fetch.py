@@ -39,7 +39,7 @@ import io_mod
 import json
 from email.parser import Parser
 from importlib.resources import files
-from typing_mod import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any
 
 import js  # type: ignore[import-not-found]
 from pyodide.ffi import (  # type: ignore[import-not-found]

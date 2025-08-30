@@ -5,10 +5,10 @@
 """Checker for spelling errors in comments and docstrings."""
 
 from __future__ import annotations
-import re_mod_custom
+import re
 import tokenize
-from re_mod_custom import Pattern
-from typing_mod import TYPE_CHECKING, Any, Literal
+from re import Pattern
+from typing import TYPE_CHECKING, Any, Literal
 
 from astroid import nodes
 

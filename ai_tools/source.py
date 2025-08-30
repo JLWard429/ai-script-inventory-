@@ -1,6 +1,6 @@
 from __future__ import annotations
 from copy_mod import copy
-from typing_mod import Any
+from typing import Any
 
 from tomlkit.exceptions import ParseError
 from tomlkit.exceptions import UnexpectedCharError

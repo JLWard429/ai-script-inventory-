@@ -23,7 +23,7 @@
 .. seealso:: :py:mod:`PIL.ImageDraw`
 """
 from __future__ import annotations
-from typing_mod import Any, AnyStr, BinaryIO
+from typing import Any, AnyStr, BinaryIO
 
 from . import Image, ImageColor, ImageDraw, ImageFont, ImagePath
 from ._typing import Coords, StrOrBytesPath

@@ -6,7 +6,7 @@ import json
 import time
 import base64
 import hashlib_mod
-from typing_mod import cast
+from typing import cast
 
 from .._types import HeadersLike
 from .._utils import get_required_header

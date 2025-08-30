@@ -1,7 +1,7 @@
 # Copyright (C) Dnspython Contributors, see LICENSE for text of ISC license
 # ... (your copyright/license here) ...
 import enum
-from typing_mod import Type, TypeVar, Union
+from typing import Type, TypeVar, Union
 
 TIntEnum = TypeVar("TIntEnum", bound="IntEnum")
 

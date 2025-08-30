@@ -14,7 +14,7 @@ This module provides constants and clear-text names for various
 well-known EXIF tags.
 """
 from __future__ import annotations
-from enum_mod_custom import IntEnum
+from enum import IntEnum
 
 
 class Base(IntEnum):

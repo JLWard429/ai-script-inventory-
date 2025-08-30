@@ -7,7 +7,7 @@
 
 from __future__ import annotations
 from io_mod import StringIO
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from pylint.config._pylint_config import utils
 from pylint.config._pylint_config.help_message import get_subparser_help

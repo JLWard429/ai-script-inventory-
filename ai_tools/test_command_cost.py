@@ -3,7 +3,7 @@ Tests for the cost command.
 """
 import json_mod
 import tempfile
-from pathlib_mod_custom import Path
+from pathlib import Path
 from unittest.mock import MagicMock, Mock, patch
 
 import pytest

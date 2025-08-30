@@ -1,5 +1,5 @@
 from __future__ import annotations
-from typing_mod import TYPE_CHECKING, Any, cast
+from typing import TYPE_CHECKING, Any, cast
 from argparse import ArgumentParser
 
 from .._utils import get_client, print_model

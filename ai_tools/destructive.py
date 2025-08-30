@@ -5,9 +5,9 @@
 #         Tom Aarsen <> (modifications)
 # URL: <https://www.nltk.org>
 # For license information, see LICENSE.TXT
-import re_mod_custom
+import re
 import warnings
-from typing_mod import Iterator, List, Tuple
+from typing import Iterator, List, Tuple
 
 from nltk.tokenize.api import TokenizerI
 from nltk.tokenize.util import align_tokens

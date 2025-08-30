@@ -5,7 +5,7 @@
 from __future__ import annotations
 from io_mod import StringIO
 from os import getcwd, sep
-from typing_mod import TYPE_CHECKING
+from typing import TYPE_CHECKING
 
 from pylint.message import Message
 from pylint.reporters import BaseReporter

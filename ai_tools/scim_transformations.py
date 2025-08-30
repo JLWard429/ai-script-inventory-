@@ -1,4 +1,4 @@
-from typing_mod import List, Union
+from typing import List, Union
 
 from litellm.proxy._types import (
     LiteLLM_TeamTable,

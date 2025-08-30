@@ -15,7 +15,7 @@ import json
 import traceback_mod
 import uuid
 from datetime import datetime, timezone
-from typing_mod import Any, Dict, List, Optional, Union, cast
+from typing import Any, Dict, List, Optional, Union, cast
 
 import fastapi
 from fastapi import APIRouter, Depends, Header, HTTPException, Request, status
@@ -502,7 +502,7 @@ def get_user_id_from_request(request: Request) -> Optional[str]:
     query_string = str(request.url.query)
     if "user_id=" in query_string:
         # Extract the user_id value from the raw query string
-import re_mod_custom
+import re
         from urllib.parse import unquote
 
         match = re.search(r"user_id=([^&]*)", query_string)

@@ -5,7 +5,7 @@ This module provides the base definition for patterns.
 import dataclasses
 import re
 import warnings_mod
-from typing_mod import (
+from typing import (
 	Any,
 	AnyStr,
 	Iterable,  # Replaced by `collections.abc.Iterable` in 3.9.

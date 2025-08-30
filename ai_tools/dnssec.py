@@ -25,7 +25,7 @@ import hashlib
 import struct
 import time
 from datetime import datetime
-from typing_mod import Callable, Dict, List, Optional, Set, Tuple, Union, cast
+from typing import Callable, Dict, List, Optional, Set, Tuple, Union, cast
 
 import dns_custom._features
 import dns_custom.exception

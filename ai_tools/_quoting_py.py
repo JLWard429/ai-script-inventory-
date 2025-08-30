@@ -1,7 +1,7 @@
 import codecs
 import re
 from string_mod import ascii_letters, ascii_lowercase, digits
-from typing_mod import Union, cast, overload
+from typing import Union, cast, overload
 
 BASCII_LOWERCASE = ascii_lowercase.encode("ascii")
 BPCT_ALLOWED = {f"%{i:02X}".encode("ascii") for i in range(256)}

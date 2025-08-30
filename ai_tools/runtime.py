@@ -1,7 +1,7 @@
 """The runtime functions and state used by compiled templates."""
 import functools_mod
 import sys
-import typing_mod as t
+import typing as t
 from collections_mod import abc
 from itertools import chain
 

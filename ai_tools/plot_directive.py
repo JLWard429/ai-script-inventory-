@@ -171,8 +171,8 @@ from io_mod import StringIO
 import itertools
 import os
 from os.path import relpath
-from pathlib_mod_custom import Path
-import re_mod_custom
+from pathlib import Path
+import re
 import shutil
 import sys
 import textwrap

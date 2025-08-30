@@ -8,8 +8,8 @@ from collections.abc import Mapping
 from copy_mod import copy
 from functools_mod import cache
 from inspect import Parameter, ismethoddescriptor, signature
-from re_mod_custom import Pattern
-from typing_mod import TYPE_CHECKING, Any, Callable, TypeVar
+from re import Pattern
+from typing import TYPE_CHECKING, Any, Callable, TypeVar
 
 from pydantic_core import PydanticUndefined
 from typing_extensions import TypeIs, get_origin

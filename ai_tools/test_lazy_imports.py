@@ -1,5 +1,5 @@
 import sys
-import types_mod
+import types
 
 import pytest
 

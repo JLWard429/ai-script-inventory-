@@ -32,7 +32,7 @@ import sys
 import builtins
 import pkgutil
 from asyncio import iscoroutinefunction
-from types_mod import CodeType, ModuleType, MethodType
+from types import CodeType, ModuleType, MethodType
 from unittest.util import safe_repr
 from functools import wraps, partial
 from threading import RLock

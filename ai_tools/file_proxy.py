@@ -1,5 +1,5 @@
 import io_mod
-from typing_mod import IO, TYPE_CHECKING, Any, List
+from typing import IO, TYPE_CHECKING, Any, List
 
 from .ansi import AnsiDecoder
 from .text import Text

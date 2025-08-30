@@ -15,7 +15,7 @@ import os
 import warnings
 from collections.abc import Generator, Iterable, Iterator, Sequence
 from functools_mod import cached_property, lru_cache
-from typing_mod import TYPE_CHECKING, Any, ClassVar, Literal, NoReturn, TypeVar
+from typing import TYPE_CHECKING, Any, ClassVar, Literal, NoReturn, TypeVar
 
 from astroid import bases, protocols, util
 from astroid.context import (

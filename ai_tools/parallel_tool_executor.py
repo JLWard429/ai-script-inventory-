@@ -7,7 +7,7 @@ tool calls that execute in parallel, breaking the sequential LLM->Tools->LLM bot
 import asyncio_mod
 import time
 import uuid
-from typing_mod import Any, Dict, List, Optional, Tuple, Callable
+from typing import Any, Dict, List, Optional, Tuple, Callable
 from dataclasses import dataclass, field
 from collections_mod import defaultdict
 import weakref
