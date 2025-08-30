@@ -36,7 +36,17 @@ jobs:
         echo "## 🛡️ Python Dependency Security Scan" > security-report.md
         echo "" >> security-report.md
         
-        if [ -f requirements.txt ]; then
+        if [ -f requirements-dev.txt ]; then
+          echo "### Safety Scan Results:" >> security-report.md
+          safety check -r requirements-dev.txt --json --output safety-report.json || true
+          safety check -r requirements-dev.txt --output safety-report.txt || echo "Safety scan completed with warnings"
+          
+          if [ -f safety-report.txt ]; then
+            echo '```' >> security-report.md
+            cat safety-report.txt >> security-report.md
+            echo '```' >> security-report.md
+          fi
+        elif [ -f requirements.txt ]; then
           echo "### Safety Scan Results:" >> security-report.md
           safety check --json --output safety-report.json || true
           safety check --output safety-report.txt || echo "Safety scan completed with warnings"
@@ -47,7 +57,7 @@ jobs:
             echo '```' >> security-report.md
           fi
         else
-          echo "No requirements.txt found - creating basic scan" >> security-report.md
+          echo "No requirements found - creating basic scan" >> security-report.md
           pip freeze > temp-requirements.txt
           safety check --file temp-requirements.txt --output safety-report.txt || echo "Safety scan completed"
           if [ -f safety-report.txt ]; then
@@ -141,12 +151,16 @@ jobs:
         echo "## 📜 License Compliance Report" > license-report.md
         echo "" >> license-report.md
         
-        if [ -f requirements.txt ]; then
+        if [ -f requirements-dev.txt ]; then
+          echo "### Installed Package Licenses:" >> license-report.md
+          pip install -r requirements-dev.txt
+          pip-licenses --format=markdown >> license-report.md
+        elif [ -f requirements.txt ]; then
           echo "### Installed Package Licenses:" >> license-report.md
           pip install -r requirements.txt
           pip-licenses --format=markdown >> license-report.md
         else
-          echo "No requirements.txt found - checking installed packages" >> license-report.md
+          echo "No requirements found - checking installed packages" >> license-report.md
           pip-licenses --format=markdown >> license-report.md
         fi
         
