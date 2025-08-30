@@ -4,7 +4,7 @@
 # Author: Konrad Goluchowski <kodie@mimuw.edu.pl>
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.TXT
-import functools_mod
+import functools
 
 from nltk.corpus.reader.api import CorpusReader
 from nltk.corpus.reader.util import StreamBackedCorpusView, concat

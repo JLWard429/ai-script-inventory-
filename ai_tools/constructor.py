@@ -7,8 +7,8 @@ import base64
 import binascii
 import re
 import sys
-import types
-import warnings_mod
+import types  # Fixed: was types_mod_mod
+import warnings
 
 # fmt: off
 from .error import (MarkedYAMLError, MarkedYAMLFutureWarning,

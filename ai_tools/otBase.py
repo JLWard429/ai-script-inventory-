@@ -6,7 +6,7 @@ import sys
 import array
 import struct
 import logging
-from functools_mod import lru_cache
+from functools import lru_cache
 from typing import Iterator, NamedTuple, Optional, Tuple
 
 log = logging.getLogger(__name__)

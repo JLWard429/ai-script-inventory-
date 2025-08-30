@@ -1,5 +1,5 @@
 import re
-from functools_mod import partial, reduce
+from functools import partial, reduce
 from math_mod import gcd
 from operator import itemgetter
 from typing import (

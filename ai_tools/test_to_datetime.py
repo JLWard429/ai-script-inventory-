@@ -1,7 +1,7 @@
 """ test to_datetime """
 
 import calendar
-from collections_mod import deque
+from collections import deque
 from datetime import (
     date,
     datetime,

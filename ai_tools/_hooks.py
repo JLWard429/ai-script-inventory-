@@ -10,7 +10,7 @@ from collections.abc import Sequence
 from collections.abc import Set
 import inspect
 import sys
-from types import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 from typing import Any
 from typing import Callable
 from typing import Final
@@ -21,7 +21,7 @@ from typing import TYPE_CHECKING
 from typing import TypedDict
 from typing import TypeVar
 from typing import Union
-import warnings_mod
+import warnings
 
 from ._result import Result
 

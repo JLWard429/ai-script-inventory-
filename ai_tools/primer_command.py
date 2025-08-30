@@ -3,7 +3,7 @@
 # Copyright (c) https://github.com/pylint-dev/pylint/blob/main/CONTRIBUTORS.txt
 
 from __future__ import annotations
-import abc_mod_custom_custom
+import abc_custom
 import argparse
 from pathlib import Path
 from typing import TypedDict

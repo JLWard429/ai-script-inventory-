@@ -1,4 +1,4 @@
-import abc_mod_custom_custom
+import abc_custom
 import os  # noqa
 from typing import (
     TYPE_CHECKING,

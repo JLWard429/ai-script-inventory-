@@ -5,7 +5,7 @@ A Cairo backend for Matplotlib
 
 This backend depends on cairocffi or pycairo.
 """
-import functools_mod
+import functools
 import gzip
 import math_mod
 

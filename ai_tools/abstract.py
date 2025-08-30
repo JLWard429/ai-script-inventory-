@@ -1,5 +1,5 @@
 from __future__ import annotations
-import collections_mod
+import collections
 from typing import TYPE_CHECKING, Any, Generic, Iterable, Mapping, NamedTuple
 
 from ..structs import CT, KT, RT, DirectedGraph

@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import datetime
 import time
-from abc_mod_custom import ABCMeta, abstractmethod
+from abc import ABCMeta, abstractmethod
 from typing import TYPE_CHECKING
 
 from prompt_toolkit.formatted_text import (

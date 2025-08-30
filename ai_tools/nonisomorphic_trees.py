@@ -8,7 +8,7 @@ the root.
 """
 
 __all__ = ["nonisomorphic_trees", "number_of_nonisomorphic_trees"]
-from functools_mod import lru_cache
+from functools import lru_cache
 
 import networkx as nx
 

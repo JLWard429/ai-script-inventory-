@@ -14,7 +14,7 @@
 
 
 from fnmatch import fnmatch
-from logging_mod import getLogger
+from logging import getLogger
 from typing import Callable, Optional, Set, Type
 
 from opentelemetry.metrics import Instrument

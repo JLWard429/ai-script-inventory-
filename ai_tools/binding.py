@@ -7,7 +7,7 @@ from __future__ import annotations
 import os
 import sys
 import threading
-import types
+import types  # Fixed: was types_mod_mod
 import typing
 import warnings
 from collections.abc import Callable

@@ -4,13 +4,13 @@ from collections.abc import Iterable
 from collections.abc import Mapping
 from collections.abc import Sequence
 import inspect
-import types
+import types  # Fixed: was types_mod_mod
 from typing import Any
 from typing import Callable
 from typing import cast
 from typing import Final
 from typing import TYPE_CHECKING
-import warnings_mod
+import warnings
 
 from . import _tracing
 from ._callers import _multicall

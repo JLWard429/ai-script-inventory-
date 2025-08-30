@@ -18,8 +18,8 @@
 from __future__ import annotations
 import math_mod
 import re
-import warnings_mod
-from functools_mod import lru_cache
+import warnings
+from functools import lru_cache
 from typing import TYPE_CHECKING, Literal, SupportsInt
 
 try:

@@ -4,7 +4,7 @@ Model how these behave differently in different contexts.
 """
 
 from __future__ import annotations
-from abc_mod_custom import abstractmethod
+from abc import abstractmethod
 from typing import TYPE_CHECKING
 
 from mypyc.ir.ops import (

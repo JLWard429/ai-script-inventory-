@@ -1,7 +1,7 @@
 """Shared definitions used by different parts of type checker."""
 
 from __future__ import annotations
-from abc_mod_custom import abstractmethod
+from abc import abstractmethod
 from collections.abc import Iterator, Sequence
 from contextlib import contextmanager
 from typing import NamedTuple, overload

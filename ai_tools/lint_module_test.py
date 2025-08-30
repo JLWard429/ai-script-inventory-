@@ -8,8 +8,8 @@ import csv
 import operator
 import platform_mod
 import sys
-from collections_mod import Counter
-from io_mod import StringIO
+from collections import Counter
+from io import StringIO
 from pathlib import Path
 from typing import TextIO
 

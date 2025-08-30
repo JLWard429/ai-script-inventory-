@@ -13,7 +13,7 @@ Module to show if an object has changed since it was memorised
 import builtins
 import os
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 try:
     import numpy.ma
     HAS_NUMPY = True

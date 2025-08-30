@@ -401,7 +401,7 @@ class URL:
 
     @property
     def raw(self) -> tuple[bytes, bytes, int, bytes]:  # pragma: nocover
-import collections_mod
+import collections
         import warnings
 
         warnings.warn("URL.raw is deprecated.")

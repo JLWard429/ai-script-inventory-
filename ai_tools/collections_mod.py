@@ -6,7 +6,7 @@
 # For license information, see LICENSE.TXT
 
 import bisect
-from functools_mod import total_ordering
+from functools import total_ordering
 from itertools import chain, islice
 
 from nltk.internals import raise_unorderable_types, slice_bounds

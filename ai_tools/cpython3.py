@@ -1,5 +1,5 @@
 from __future__ import annotations
-import abc_mod_custom_custom
+import abc_custom
 import fnmatch
 from itertools import chain
 from operator import methodcaller as method

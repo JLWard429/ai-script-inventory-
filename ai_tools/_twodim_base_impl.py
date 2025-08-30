@@ -1,7 +1,7 @@
 """ Basic functions for manipulating 2d arrays
 
 """
-import functools_mod
+import functools
 import operator
 
 from numpy._core import iinfo, overrides

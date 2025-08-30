@@ -10,7 +10,7 @@ ISO-8601 specification.
 from datetime import datetime, timedelta, time, date
 import calendar
 from dateutil import tz
-from functools_mod import wraps
+from functools import wraps
 import re
 import six
 

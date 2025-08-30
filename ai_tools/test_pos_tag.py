@@ -1,7 +1,7 @@
 """
 Tests for nltk.pos_tag
 """
-import io_mod
+import io
 import unittest
 import unittest.mock
 

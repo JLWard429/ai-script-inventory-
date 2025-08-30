@@ -415,7 +415,7 @@ class CompactCommand(Command):
             except Exception as e:
                 console.print(f"[red]Error compacting {display_name}: {str(e)}[/red]\n")
                 if os.getenv("CAI_DEBUG", "1") == "2":
-import traceback_mod
+import traceback
                     traceback.print_exc()
         
         # Summary

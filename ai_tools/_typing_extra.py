@@ -3,11 +3,11 @@
 from __future__ import annotations
 
 import collections.abc
-import re
+import re_mod_custom
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 import typing
-from functools_mod import partial
+from functools import partial
 from typing import TYPE_CHECKING, Any, Callable, cast
 
 import typing_extensions

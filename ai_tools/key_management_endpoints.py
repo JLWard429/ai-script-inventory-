@@ -8,11 +8,11 @@ All /key management endpoints
 /key/update
 /key/delete
 """
-import asyncio_mod
+import asyncio
 import copy
 import json_mod
 import secrets
-import traceback_mod
+import traceback
 import uuid
 from datetime import datetime, timedelta, timezone
 from typing import List, Literal, Optional, Tuple, cast
@@ -3013,8 +3013,8 @@ async def test_key_logging(
     - Make a mock completion call -> user can check if it's correctly logged
     - Check if any logger.exceptions were triggered -> if they were then returns it to the user client side
     """
-import logging_mod
-from io_mod import StringIO
+import logging
+from io import StringIO
 
     from litellm.proxy.litellm_pre_call_utils import add_litellm_data_to_request
     from litellm.proxy.proxy_server import general_settings, proxy_config

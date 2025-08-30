@@ -1,5 +1,5 @@
 # This file runs a health check for the LLM, used on litellm/proxy
-import asyncio_mod
+import asyncio
 import logging
 import random
 from typing import List, Optional

@@ -4,10 +4,10 @@ TODO: DELETE FILE. Bedrock LLM is no longer used. Goto `litellm/llms/bedrock/cha
 import copy_mod
 import json
 import time
-import types
+import types  # Fixed: was types_mod_mod
 import urllib.parse
 import uuid
-from functools_mod import partial
+from functools import partial
 from typing import (
     Any,
     AsyncIterator,

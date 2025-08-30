@@ -4,7 +4,7 @@ scale-free graphs.
 
 """
 import numbers_mod
-from collections_mod import Counter
+from collections import Counter
 
 import networkx as nx
 from networkx.generators.classic import empty_graph

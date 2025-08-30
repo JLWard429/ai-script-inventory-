@@ -1,11 +1,11 @@
-import asyncio_mod
+import asyncio
 import collections
 import inspect
 import warnings
 from contextlib import contextmanager
 from datetime import datetime
 from secrets_mod import randbits
-from types import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 from typing import (  # type: ignore[attr-defined]
     TYPE_CHECKING,
     Any,

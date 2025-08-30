@@ -8,7 +8,7 @@ from collections.abc import Callable
 from contextlib import contextmanager
 import fnmatch
 import importlib.util
-import io_mod
+import io
 import os
 from os.path import abspath
 from os.path import dirname
@@ -19,9 +19,9 @@ from os.path import isfile
 from os.path import islink
 from os.path import normpath
 import posixpath
-from stat_mod import S_ISDIR
-from stat_mod import S_ISLNK
-from stat_mod import S_ISREG
+from stat import S_ISDIR
+from stat import S_ISLNK
+from stat import S_ISREG
 import sys
 from typing import Any
 from typing import cast
@@ -1143,7 +1143,7 @@ import pickle_mod
                 return sys.modules[modname]
             except KeyError:
                 # we have a custom modname, do a pseudo-import
-import types
+import types  # Fixed: was types_mod_mod
 
                 mod = types.ModuleType(modname)
                 mod.__file__ = str(self)

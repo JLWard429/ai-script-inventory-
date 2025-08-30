@@ -6,7 +6,7 @@ for the various polynomial classes. It operates as a mixin, but uses the
 abc module from the stdlib, hence it is only available for Python >= 2.6.
 
 """
-import abc_mod_custom_custom
+import abc_custom
 import numbers
 import os
 from collections.abc import Callable

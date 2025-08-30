@@ -1,4 +1,4 @@
-import functools_mod
+import functools
 import inspect
 import re
 import textwrap

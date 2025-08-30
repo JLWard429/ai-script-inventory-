@@ -16,9 +16,9 @@ import re
 import socket
 import struct
 import sys
-import warnings_mod
-from collections_mod import defaultdict
-from collections_mod import namedtuple
+import warnings
+from collections import defaultdict
+from collections import namedtuple
 
 from . import _common
 from . import _psposix
@@ -308,7 +308,7 @@ prlimit = None
 try:
     from resource import prlimit  # python >= 3.4
 except ImportError:
-import ctypes_mod
+import ctypes
 
     libc = ctypes.CDLL(None, use_errno=True)
 

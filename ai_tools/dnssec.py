@@ -20,7 +20,7 @@
 
 import base64
 import contextlib
-import functools_mod
+import functools
 import hashlib
 import struct
 import time

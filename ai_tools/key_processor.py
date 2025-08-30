@@ -9,8 +9,8 @@ correct callbacks when new key presses are feed through `feed`.
 from __future__ import annotations
 
 import weakref
-from asyncio_mod import Task, sleep
-from collections_mod import deque
+from asyncio import Task, sleep
+from collections import deque
 from typing import TYPE_CHECKING, Any, Generator
 
 from prompt_toolkit.application.current import get_app

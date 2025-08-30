@@ -4,7 +4,7 @@
 These are keyword-only APIs that call `attr.s` and `attr.ib` with different
 default values.
 """
-from functools_mod import partial
+from functools import partial
 
 from . import setters
 from ._funcs import asdict as _asdict

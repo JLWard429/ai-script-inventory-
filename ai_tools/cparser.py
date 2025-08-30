@@ -150,7 +150,7 @@ def _warn_for_string_literal(csource):
         return
     for line in csource.splitlines():
         if '"' in line and not line.lstrip().startswith('#'):
-import warnings_mod
+import warnings
             warnings.warn("String literal found in cdef() or type source. "
                           "String literals are ignored here, but you should "
                           "remove them anyway because some character sequences "
@@ -159,7 +159,7 @@ import warnings_mod
 
 def _warn_for_non_extern_non_static_global_variable(decl):
     if not decl.storage:
-import warnings_mod
+import warnings
         warnings.warn("Global variable '%s' in cdef(): for consistency "
                       "with C it should have a storage class specifier "
                       "(usually 'extern')" % (decl.name,))
@@ -432,7 +432,7 @@ class Parser(object):
                     self._declare('typedef ' + decl.name, realtype, quals=quals)
                 elif decl.__class__.__name__ == 'Pragma':
                     # skip pragma, only in pycparser 2.15
-import warnings_mod
+import warnings
                     warnings.warn(
                         "#pragma in cdef() are entirely ignored. "
                         "They should be removed for now, otherwise your "

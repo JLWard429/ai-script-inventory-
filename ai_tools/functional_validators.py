@@ -4,8 +4,8 @@ from __future__ import annotations as _annotations
 
 import dataclasses
 import sys
-from functools_mod import partialmethod
-from types import FunctionType
+from functools import partialmethod
+from types import FunctionType  # Fixed: was from types_mod
 from typing import TYPE_CHECKING, Annotated, Any, Callable, Literal, TypeVar, Union, cast, overload
 
 from pydantic_core import PydanticUndefined, core_schema

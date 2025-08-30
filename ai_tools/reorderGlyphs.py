@@ -9,9 +9,9 @@ __author__ = "Rod Sheeter"
 from fontTools import ttLib
 from fontTools.ttLib.tables import otBase
 from fontTools.ttLib.tables import otTables as ot
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from dataclasses import dataclass
-from collections_mod import deque
+from collections import deque
 from typing import (
     Optional,
     Any,

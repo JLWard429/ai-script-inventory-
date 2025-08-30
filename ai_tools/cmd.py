@@ -5,11 +5,11 @@ in the distutils.command package.
 """
 
 from __future__ import annotations
-import logging_mod
+import logging
 import os
 import re
 import sys
-from abc_mod_custom import abstractmethod
+from abc import abstractmethod
 from collections.abc import Callable, MutableSequence
 from typing import TYPE_CHECKING, Any, ClassVar, TypeVar, overload
 

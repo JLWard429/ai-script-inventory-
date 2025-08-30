@@ -28,9 +28,9 @@
 
 __author__ = "Mathieu Fenniak"
 __author_email__ = "biziqe@mathieu.fenniak.net"
-import logging_mod
+import logging
 import re
-from io_mod import BytesIO
+from io import BytesIO
 from typing import Any, Dict, Iterable, List, Optional, Tuple, Union, cast
 
 from .._protocols import PdfWriterProtocol

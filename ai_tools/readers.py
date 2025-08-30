@@ -4,7 +4,7 @@ Module contains tools for processing files into DataFrames or other objects
 GH#48849 provides a convenient way of deprecating keyword arguments
 """
 from __future__ import annotations
-from collections_mod import (
+from collections import (
     abc,
     defaultdict,
 )
@@ -21,7 +21,7 @@ from typing import (
     TypedDict,
     overload,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 
@@ -76,7 +76,7 @@ if TYPE_CHECKING:
         Mapping,
         Sequence,
     )
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 
     from pandas._typing import (
         CompressionOptions,

@@ -8,7 +8,7 @@ from collections.abc import Callable
 import dataclasses
 import os
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 from typing import cast
 from typing import final
 from typing import Generic

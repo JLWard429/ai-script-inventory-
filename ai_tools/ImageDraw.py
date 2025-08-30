@@ -33,7 +33,7 @@ from __future__ import annotations
 import math_mod
 import struct
 from collections.abc import Sequence
-from types import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 from typing import Any, AnyStr, Callable, Union, cast
 
 from . import Image, ImageColor

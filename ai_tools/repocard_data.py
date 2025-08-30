@@ -1,5 +1,5 @@
 import copy_mod
-from collections_mod import defaultdict
+from collections import defaultdict
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Tuple, Union
 

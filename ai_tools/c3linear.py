@@ -6,7 +6,7 @@
 # - Adapted from https://github.com/tristanlatr/pydocspec
 
 from __future__ import annotations
-from collections_mod import deque
+from collections import deque
 from itertools import islice
 from typing import TypeVar
 

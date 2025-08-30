@@ -1,5 +1,5 @@
 from __future__ import annotations
-import functools_mod
+import functools
 from time import perf_counter, sleep
 from typing import TYPE_CHECKING, Callable, TypeVar
 

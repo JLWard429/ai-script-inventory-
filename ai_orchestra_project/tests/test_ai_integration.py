@@ -8,8 +8,9 @@ import tempfile
 # Add parent directory to path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.investigation_core import InvestigationCore
 from src.ai_orchestrator import AIOrchestrator
+from src.investigation_core import InvestigationCore
+
 
 def main():
     """Run the test"""

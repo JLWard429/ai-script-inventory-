@@ -1,4 +1,4 @@
-import asyncio_mod
+import asyncio
 import copy
 import inspect
 import io
@@ -8,9 +8,9 @@ import secrets_mod
 import subprocess
 import sys
 import time
-import traceback_mod
+import traceback
 import uuid
-import warnings_mod
+import warnings
 from datetime import datetime, timedelta
 from typing import (
     TYPE_CHECKING,
@@ -69,7 +69,7 @@ sys.path.insert(
 )  # Adds the parent directory to the system path - for litellm local dev
 
 try:
-import logging_mod
+import logging
 
     import backoff
     import fastapi
@@ -117,7 +117,7 @@ def generate_feedback_box():
     )  # noqa
     print()  # noqa
     print()  # noqa
-from collections_mod import defaultdict
+from collections import defaultdict
 from contextlib import asynccontextmanager
 
 import litellm
@@ -3108,7 +3108,7 @@ async def initialize(  # noqa: PLR0915
     user_model = model
     user_debug = debug
     if debug is True:  # this needs to be first, so users can see Router init debugg
-import logging_mod
+import logging
 
         from litellm._logging import (
             verbose_logger,
@@ -3121,7 +3121,7 @@ import logging_mod
         verbose_router_logger.setLevel(level=logging.INFO)  # set router logs to info
         verbose_proxy_logger.setLevel(level=logging.INFO)  # set proxy logs to info
     if detailed_debug is True:
-import logging_mod
+import logging
 
         from litellm._logging import (
             verbose_logger,
@@ -3137,7 +3137,7 @@ import logging_mod
         litellm_log_setting = os.environ.get("LITELLM_LOG", "")
         if litellm_log_setting is not None:
             if litellm_log_setting.upper() == "INFO":
-import logging_mod
+import logging
 
                 from litellm._logging import verbose_proxy_logger, verbose_router_logger
 
@@ -3150,7 +3150,7 @@ import logging_mod
                     level=logging.INFO
                 )  # set proxy logs to info
             elif litellm_log_setting.upper() == "DEBUG":
-import logging_mod
+import logging
 
                 from litellm._logging import verbose_proxy_logger, verbose_router_logger
 

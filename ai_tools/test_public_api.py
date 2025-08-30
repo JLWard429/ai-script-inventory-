@@ -1,12 +1,12 @@
-import functools_mod
+import functools
 import importlib
 import inspect
 import pkgutil
 import subprocess_mod
 import sys
 import sysconfig
-import types
-import warnings_mod
+import types  # Fixed: was types_mod_mod
+import warnings
 
 import pytest
 
@@ -15,7 +15,7 @@ import numpy as np
 from numpy.testing import IS_WASM
 
 try:
-import ctypes_mod
+import ctypes
 except ImportError:
     ctypes = None
 

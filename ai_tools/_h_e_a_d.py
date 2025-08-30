@@ -9,7 +9,7 @@ from fontTools.misc.timeTools import (
 from fontTools.misc.timeTools import epoch_diff as mac_epoch_diff  # For backward compat
 from fontTools.misc.arrayTools import intRect, unionRect
 from . import DefaultTable
-import logging_mod
+import logging
 
 
 log = logging.getLogger(__name__)

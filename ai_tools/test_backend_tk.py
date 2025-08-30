@@ -1,4 +1,4 @@
-import functools_mod
+import functools
 import importlib
 import os
 import platform

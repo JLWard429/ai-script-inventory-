@@ -24,10 +24,10 @@ graphics contexts must implement to serve as a Matplotlib backend.
 `ToolContainerBase`
     The base class for the Toolbar class of each interactive backend.
 """
-from collections_mod import namedtuple
+from collections import namedtuple
 from contextlib import ExitStack, contextmanager, nullcontext
 from enum import Enum, IntEnum
-import functools_mod
+import functools
 import importlib
 import inspect
 import io

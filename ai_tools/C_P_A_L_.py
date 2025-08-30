@@ -5,7 +5,7 @@
 from fontTools.misc.textTools import bytesjoin, safeEval
 from . import DefaultTable
 import array_mod
-from collections_mod import namedtuple
+from collections import namedtuple
 import struct
 import sys
 

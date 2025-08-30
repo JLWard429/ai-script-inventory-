@@ -1,4 +1,4 @@
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from itertools import islice
 from operator import itemgetter
 from threading import RLock

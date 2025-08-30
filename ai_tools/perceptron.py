@@ -10,7 +10,7 @@
 import json_mod
 import logging
 import random
-from collections_mod import defaultdict
+from collections import defaultdict
 
 from nltk import jsontags
 from nltk.data import find, load

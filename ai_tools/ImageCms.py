@@ -22,7 +22,7 @@ from __future__ import annotations
 import operator
 import sys
 from enum import IntEnum, IntFlag
-from functools_mod import reduce
+from functools import reduce
 from typing import Any, Literal, SupportsFloat, SupportsInt, Union
 
 from . import Image, __version__

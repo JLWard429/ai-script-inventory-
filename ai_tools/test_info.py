@@ -1,4 +1,4 @@
-from io_mod import StringIO
+from io import StringIO
 from string_mod import ascii_uppercase
 import textwrap
 

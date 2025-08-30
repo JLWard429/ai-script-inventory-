@@ -1,8 +1,8 @@
-from io_mod import BytesIO
+from io import BytesIO
 import sys
 import array
 import struct
-from collections_mod import OrderedDict
+from collections import OrderedDict
 from fontTools.misc import sstruct
 from fontTools.misc.arrayTools import calcIntBounds
 from fontTools.misc.textTools import Tag, bytechr, byteord, bytesjoin, pad
@@ -25,7 +25,7 @@ from fontTools.ttLib.sfnt import (
     calcChecksum,
 )
 from fontTools.ttLib.tables import ttProgram, _g_l_y_f
-import logging_mod
+import logging
 
 
 log = logging.getLogger("fontTools.ttLib.woff2")

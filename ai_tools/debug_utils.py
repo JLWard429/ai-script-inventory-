@@ -1,9 +1,9 @@
 # Start tracing memory allocations
-import asyncio_mod
+import asyncio
 import json
 import os
 import tracemalloc
-from collections_mod import Counter
+from collections import Counter
 
 from fastapi import APIRouter
 
@@ -211,7 +211,7 @@ def init_verbose_loggers():
         debug = _settings.get("debug", None)
         detailed_debug = _settings.get("detailed_debug", None)
         if debug is True:  # this needs to be first, so users can see Router init debugg
-import logging_mod
+import logging
 
             from litellm._logging import (
                 verbose_logger,
@@ -226,7 +226,7 @@ import logging_mod
             )  # set router logs to info
             verbose_proxy_logger.setLevel(level=logging.INFO)  # set proxy logs to info
         if detailed_debug is True:
-import logging_mod
+import logging
 
             from litellm._logging import (
                 verbose_logger,
@@ -246,7 +246,7 @@ import logging_mod
             litellm_log_setting = os.environ.get("LITELLM_LOG", "")
             if litellm_log_setting is not None:
                 if litellm_log_setting.upper() == "INFO":
-import logging_mod
+import logging
 
                     from litellm._logging import (
                         verbose_proxy_logger,
@@ -262,7 +262,7 @@ import logging_mod
                         level=logging.INFO
                     )  # set proxy logs to info
                 elif litellm_log_setting.upper() == "DEBUG":
-import logging_mod
+import logging
 
                     from litellm._logging import (
                         verbose_proxy_logger,
@@ -276,6 +276,6 @@ import logging_mod
                         level=logging.DEBUG
                     )  # set proxy logs to debug
     except Exception as e:
-import logging_mod
+import logging
 
         logging.warning(f"Failed to init verbose loggers: {str(e)}")

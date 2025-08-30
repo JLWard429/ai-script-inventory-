@@ -2,7 +2,7 @@
 
 import os
 import pathlib
-import stat_mod
+import stat
 import sys
 import unittest.mock as mock
 from distutils import dir_util, errors

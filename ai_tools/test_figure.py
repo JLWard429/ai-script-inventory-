@@ -1,11 +1,11 @@
 import copy_mod
 from datetime import datetime
-import io_mod
+import io
 import pickle
 import platform_mod
 from threading import Timer
-from types import SimpleNamespace
-import warnings_mod
+from types import SimpleNamespace  # Fixed: was from types_mod
+import warnings
 
 import numpy as np
 import pytest

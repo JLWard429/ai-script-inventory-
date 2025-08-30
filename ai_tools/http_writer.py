@@ -1,5 +1,5 @@
 """Http related parsers and protocol."""
-import asyncio_mod
+import asyncio
 import sys
 from typing import (  # noqa
     TYPE_CHECKING,

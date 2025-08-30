@@ -1,5 +1,5 @@
 """Storage providers backends for Memory caching."""
-import collections_mod
+import collections
 import datetime
 import json_mod
 import operator
@@ -9,8 +9,8 @@ import re
 import shutil
 import threading
 import time
-import warnings_mod
-from abc_mod_custom import ABCMeta, abstractmethod
+import warnings
+from abc import ABCMeta, abstractmethod
 from pickle_mod import PicklingError
 
 from . import numpy_pickle

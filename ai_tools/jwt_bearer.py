@@ -1,4 +1,4 @@
-import logging_mod
+import logging
 
 from authlib.jose import JoseError
 from authlib.jose import jwt

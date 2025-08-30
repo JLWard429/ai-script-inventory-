@@ -10,7 +10,7 @@ To create your own config system, you need to create an instance of
 """
 
 from __future__ import annotations
-import logging_mod
+import logging
 from dataclasses import dataclass
 from typing import (
     Any,

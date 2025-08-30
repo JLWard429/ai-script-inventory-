@@ -1,7 +1,7 @@
 """Handles all VCS (version control) support"""
 
 from __future__ import annotations
-import logging_mod
+import logging
 import os
 import shutil
 import sys

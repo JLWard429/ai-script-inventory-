@@ -18,7 +18,7 @@
 from __future__ import annotations
 
 import sys
-from io_mod import BytesIO
+from io import BytesIO
 from typing import Any, Callable, Union
 
 from . import Image

@@ -20,7 +20,7 @@
 from binascii import hexlify
 import errno
 import os
-import stat_mod
+import stat
 import threading
 import time
 import weakref

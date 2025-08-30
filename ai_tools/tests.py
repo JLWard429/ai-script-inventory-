@@ -2,7 +2,7 @@
 
 import operator
 import typing as t
-from collections_mod import abc
+from collections import abc
 from numbers_mod import Number
 
 from .runtime import Undefined

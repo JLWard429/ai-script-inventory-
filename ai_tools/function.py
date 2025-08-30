@@ -11,7 +11,7 @@ instance of the callable class.
 """
 
 from __future__ import annotations
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Sequence
 from typing import NamedTuple
 

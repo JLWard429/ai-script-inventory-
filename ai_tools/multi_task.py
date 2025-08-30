@@ -1,4 +1,4 @@
-from functools_mod import partial
+from functools import partial
 from typing import TYPE_CHECKING, Any, Callable, Iterable, List, Optional, Tuple, cast
 
 import numpy

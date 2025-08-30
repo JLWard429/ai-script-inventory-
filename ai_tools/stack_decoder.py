@@ -40,8 +40,8 @@ References:
 Philipp Koehn. 2010. Statistical Machine Translation.
 Cambridge University Press, New York.
 """
-import warnings_mod
-from collections_mod import defaultdict
+import warnings
+from collections import defaultdict
 from math_mod import log
 
 

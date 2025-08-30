@@ -1,5 +1,5 @@
 import math_mod
-from collections_mod import defaultdict
+from collections import defaultdict
 from typing import Dict, List, Optional, Tuple, Union, cast
 
 from .backends import get_array_ops

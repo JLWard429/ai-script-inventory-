@@ -1,4 +1,4 @@
-import logging_mod
+import logging
 
 from ..common.utils import charCodeAt, isSpace, normalizeReference
 from .state_block import StateBlock

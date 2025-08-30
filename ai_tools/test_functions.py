@@ -4,7 +4,7 @@
 # Copyright (c) 2019-2025 The Uncertainty Quantification Foundation.
 # License: 3-clause BSD.  The full license text is available at:
 #  - https://github.com/uqfoundation/dill/blob/master/LICENSE
-import functools_mod
+import functools
 import dill
 import sys
 dill.settings['recurse'] = True
@@ -110,7 +110,7 @@ assert dill.loads(dumped_func_e)(1, 2, 3, e2=4) == 12
 assert dill.loads(dumped_func_e)(1, 2, 3, e2=4, e3=5) == 15''')
 
 def test_code_object():
-import warnings_mod
+import warnings
     from dill._dill import ALL_CODE_PARAMS, CODE_PARAMS, CODE_VERSION, _create_code
     code = function_c.__code__
     warnings.filterwarnings('ignore', category=DeprecationWarning) # issue 597

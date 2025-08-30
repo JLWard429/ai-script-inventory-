@@ -10,7 +10,7 @@ import dis
 import itertools
 import sys
 import threading
-from types import FrameType, ModuleType
+from types import FrameType, ModuleType  # Fixed: was from types_mod
 from typing import Any, Callable, cast
 
 from coverage import env

@@ -31,7 +31,7 @@ def capture(stream='stdout'):
 
     """
     import sys
-from io_mod import StringIO
+from io import StringIO
     orig = getattr(sys, stream)
     setattr(sys, stream, StringIO())
     try:
@@ -174,7 +174,7 @@ def loadIO(buffer, **kwds):
     [1, 2, 3, 4, 5]
     """
     import dill as pickle
-from io_mod import BytesIO as StringIO
+from io import BytesIO as StringIO
     value = getattr(buffer, 'getvalue', buffer) # value or buffer.getvalue
     if value != buffer: value = value() # buffer.getvalue()
     return pickle.load(StringIO(value))
@@ -188,7 +188,7 @@ Loads with "dill.temp.loadIO".  Returns the buffer object.
     [1, 2, 3, 4, 5]
     """
     import dill as pickle
-from io_mod import BytesIO as StringIO
+from io import BytesIO as StringIO
     file = StringIO()
     pickle.dump(object, file)
     file.flush()
@@ -235,7 +235,7 @@ Optional kwds:
     If 'alias' is specified, the object will be renamed to the given string.
     """
     from .source import importable, getname
-from io_mod import BytesIO as StringIO
+from io import BytesIO as StringIO
     alias = kwds.pop('alias', '') #XXX: include an alias so a name is known
     name = str(alias) or getname(object)
     name = "\n#NAME: %s\n" % name

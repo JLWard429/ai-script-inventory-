@@ -55,7 +55,7 @@ import sys
 import threading
 import time
 import webbrowser
-from collections_mod import defaultdict
+from collections import defaultdict
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 # Allow this program to run inside the NLTK source tree.

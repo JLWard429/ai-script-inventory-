@@ -1,4 +1,4 @@
-import asyncio_mod
+import asyncio
 from typing import Dict, List, Optional
 
 from litellm._logging import verbose_proxy_logger

@@ -1,8 +1,8 @@
 import math_mod
 import warnings
-from collections_mod import Counter, defaultdict, deque, abc
+from collections import Counter, defaultdict, deque, abc
 from collections.abc import Sequence
-from functools_mod import cached_property, partial, reduce, wraps
+from functools import cached_property, partial, reduce, wraps
 from heapq import heapify, heapreplace, heappop
 from itertools import (
     chain,

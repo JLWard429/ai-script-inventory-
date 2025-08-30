@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import sys
 import asyncio
-import functools_mod
+import functools
 import contextvars
 from typing import Any, TypeVar, Callable, Awaitable
 from typing_extensions import ParamSpec

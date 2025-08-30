@@ -3,7 +3,7 @@
 from __future__ import annotations
 import json_mod
 import logging
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing import TYPE_CHECKING, Any, Iterator, cast
 from typing_extensions import AsyncIterator
 

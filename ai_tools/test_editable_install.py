@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import os
 import platform
-import stat_mod
+import stat
 import subprocess
 import sys
 from copy_mod import deepcopy

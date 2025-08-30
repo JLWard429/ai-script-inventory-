@@ -31,9 +31,9 @@ Several example graphs in GML format may be found on Mark Newman's
 import html.entities as htmlentitydefs
 import re
 from ast_mod import literal_eval
-from collections_mod import defaultdict
+from collections import defaultdict
 from enum import Enum
-from io_mod import StringIO
+from io import StringIO
 from typing import Any, NamedTuple
 
 import networkx as nx

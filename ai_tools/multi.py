@@ -7,7 +7,7 @@ from collections.abc import (
     Iterable,
     Sequence,
 )
-from functools_mod import wraps
+from functools import wraps
 from sys import getsizeof
 from typing import (
     TYPE_CHECKING,
@@ -16,7 +16,7 @@ from typing import (
     Literal,
     cast,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 

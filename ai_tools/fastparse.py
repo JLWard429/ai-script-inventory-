@@ -1,7 +1,7 @@
 from __future__ import annotations
 import re
 import sys
-import warnings_mod
+import warnings
 from collections.abc import Sequence
 from typing import Any, Callable, Final, Literal, Optional, TypeVar, Union, cast, overload
 

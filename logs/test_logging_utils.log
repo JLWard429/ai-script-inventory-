@@ -1,0 +1,8 @@
+2025-08-30 09:02:14 [    INFO] test_logging_utils:158 - Starting complex_operation | function=complex_operation | module=test_logging_utils
+2025-08-30 09:02:14 [    INFO] test_logging_utils:158 - Completed complex_operation | function=complex_operation | duration_ms=10.39 | success=True
+2025-08-30 09:02:14 [    INFO] test_logging_utils:158 - Starting failing_operation | function=failing_operation | module=test_logging_utils
+2025-08-30 09:02:14 [   ERROR] test_logging_utils:158 - Failed failing_operation | function=failing_operation | duration_ms=0.26 | error=Intentional failure | success=False
+2025-08-30 10:37:16 [    INFO] test_logging_utils:158 - Starting complex_operation | function=complex_operation | module=test_logging_utils
+2025-08-30 10:37:16 [    INFO] test_logging_utils:158 - Completed complex_operation | function=complex_operation | duration_ms=10.37 | success=True
+2025-08-30 10:37:16 [    INFO] test_logging_utils:158 - Starting failing_operation | function=failing_operation | module=test_logging_utils
+2025-08-30 10:37:16 [   ERROR] test_logging_utils:158 - Failed failing_operation | function=failing_operation | duration_ms=0.32 | error=Intentional failure | success=False

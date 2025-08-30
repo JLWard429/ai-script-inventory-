@@ -3,7 +3,7 @@
 # for complete details.
 
 from __future__ import annotations
-import logging_mod
+import logging
 import platform
 import re
 import struct

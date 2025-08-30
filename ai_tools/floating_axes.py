@@ -4,7 +4,7 @@ An experimental support for curvilinear grid.
 
 # TODO :
 # see if tick_iterator method can be simplified by reusing the parent method.
-import functools_mod
+import functools
 
 import numpy as np
 

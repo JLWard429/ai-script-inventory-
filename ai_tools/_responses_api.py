@@ -1,5 +1,5 @@
 from __future__ import annotations
-import logging_mod
+import logging
 from typing import TYPE_CHECKING, Any, Callable, Iterable, Iterator, Tuple, Union
 
 from opentelemetry.util.types import AttributeValue

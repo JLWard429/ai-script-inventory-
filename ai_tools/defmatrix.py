@@ -1,7 +1,7 @@
 __all__ = ['matrix', 'bmat', 'asmatrix']
 import ast_mod
 import sys
-import warnings_mod
+import warnings
 
 import numpy._core.numeric as N
 from numpy._core.numeric import concatenate, isscalar

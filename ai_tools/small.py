@@ -28,7 +28,7 @@ __all__ = [
     "truncated_tetrahedron_graph",
     "tutte_graph",
 ]
-from functools_mod import wraps
+from functools import wraps
 
 import networkx as nx
 from networkx.exception import NetworkXError

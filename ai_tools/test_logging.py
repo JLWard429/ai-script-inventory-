@@ -1,6 +1,6 @@
-import functools_mod
+import functools
 import inspect
-import logging_mod
+import logging
 import sys
 
 import pytest

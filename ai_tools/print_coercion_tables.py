@@ -2,7 +2,7 @@
 """Prints type-coercion tables for the built-in NumPy types
 
 """
-from collections_mod import namedtuple
+from collections import namedtuple
 
 import numpy as np
 from numpy._core.numerictypes import obj2sctype

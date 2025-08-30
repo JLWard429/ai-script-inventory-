@@ -7,9 +7,9 @@ from __future__ import annotations
 import argparse
 from collections.abc import Callable
 from collections.abc import Generator
-import functools_mod
+import functools
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 from typing import Any
 import unittest_mod
 

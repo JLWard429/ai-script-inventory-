@@ -174,7 +174,7 @@ except ImportError:
 
                 qnames, namespaces = _namespaces(self._root)
                 _serialize_xml(write, self._root, qnames, namespaces)
-import io_mod
+import io
 
     def tostring(
         element,

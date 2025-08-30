@@ -1,6 +1,6 @@
 from collections.abc import Iterator
-from functools_mod import partial
-from io_mod import (
+from functools import partial
+from io import (
     BytesIO,
     StringIO,
 )

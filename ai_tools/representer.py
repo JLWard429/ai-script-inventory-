@@ -22,7 +22,7 @@ from .timestamp import TimeStamp
 
 import datetime
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 
 if PY3:
     import copyreg
@@ -422,7 +422,7 @@ SafeRepresenter.add_representer(set, SafeRepresenter.represent_set)
 SafeRepresenter.add_representer(ordereddict, SafeRepresenter.represent_ordereddict)
 
 if sys.version_info >= (2, 7):
-import collections_mod
+import collections
 
     SafeRepresenter.add_representer(
         collections.OrderedDict, SafeRepresenter.represent_ordereddict
@@ -1315,7 +1315,7 @@ RoundTripRepresenter.add_representer(
 )
 
 if sys.version_info >= (2, 7):
-import collections_mod
+import collections
 
     RoundTripRepresenter.add_representer(
         collections.OrderedDict, RoundTripRepresenter.represent_ordereddict

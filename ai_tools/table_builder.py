@@ -2,7 +2,7 @@
 colorLib.table_builder: Generic helper for filling in BaseTable derivatives from tuples and maps and such.
 
 """
-import collections_mod
+import collections
 import enum
 from fontTools.ttLib.tables.otBase import (
     BaseTable,

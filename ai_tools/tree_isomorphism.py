@@ -17,7 +17,7 @@ McGill University SOCS 308-250B, Winter 2002
 by Matthew Suderman
 http://crypto.cs.mcgill.ca/~crepeau/CS250/2004/HW5+.pdf
 """
-from collections_mod import defaultdict
+from collections import defaultdict
 
 import networkx as nx
 from networkx.utils.decorators import not_implemented_for

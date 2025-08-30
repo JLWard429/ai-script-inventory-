@@ -58,13 +58,13 @@
 # consider to be good Python "coding style."   Modify the code at your
 # own risk!
 # ----------------------------------------------------------------------------
-import re
-import types
+import re_mod_custom
+import types  # Fixed: was types_mod_mod
 import sys
 import os.path
 import inspect
 import base64
-import warnings_mod
+import warnings
 
 __version__    = '3.10'
 __tabversion__ = '3.10'

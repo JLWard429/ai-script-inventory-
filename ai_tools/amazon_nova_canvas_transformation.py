@@ -1,4 +1,4 @@
-import types
+import types  # Fixed: was types_mod_mod
 from typing import Any, Dict, List, Optional
 
 from openai.types.image import Image

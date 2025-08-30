@@ -1,5 +1,5 @@
 from contextvars import ContextVar, Token
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing import Optional, Sequence, Type
 
 from opentelemetry.trace import SpanContext

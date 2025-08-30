@@ -1,7 +1,7 @@
 from __future__ import annotations
-from collections_mod import defaultdict
+from collections import defaultdict
 from typing import TYPE_CHECKING
-import warnings_mod
+import warnings
 
 import numpy as np
 

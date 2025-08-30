@@ -6,7 +6,7 @@
 """
 
 from __future__ import annotations
-import logging_mod
+import logging
 
 from watchdog.observers.inotify_c import Inotify, InotifyEvent
 from watchdog.utils import BaseThread

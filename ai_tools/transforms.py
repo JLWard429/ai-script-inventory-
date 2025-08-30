@@ -3,8 +3,8 @@
 # Copyright (c) https://github.com/pylint-dev/astroid/blob/main/CONTRIBUTORS.txt
 
 from __future__ import annotations
-import warnings_mod
-from collections_mod import defaultdict
+import warnings
+from collections import defaultdict
 from collections.abc import Callable
 from typing import TYPE_CHECKING, Optional, TypeVar, Union, cast, overload
 

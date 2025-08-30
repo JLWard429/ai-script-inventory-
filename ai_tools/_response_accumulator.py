@@ -1,5 +1,5 @@
-import warnings_mod
-from collections_mod import defaultdict
+import warnings
+from collections import defaultdict
 from copy_mod import deepcopy
 from typing import (
     TYPE_CHECKING,

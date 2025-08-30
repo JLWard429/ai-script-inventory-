@@ -7,7 +7,7 @@ and allows cost optimization by combining smaller and larger models.
 """
 
 from __future__ import annotations
-import asyncio_mod
+import asyncio
 import os
 import json_mod
 from dataclasses import dataclass
@@ -133,7 +133,7 @@ async def main() -> None:
             input_items.append({"content": f"Feedback: {feedback.feedback}", "role": "user"})
         except Exception as e:
             print(f"Error: {e}")
-import traceback_mod
+import traceback
             traceback.print_exc()
             break
 

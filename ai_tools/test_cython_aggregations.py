@@ -1,4 +1,4 @@
-from functools_mod import partial
+from functools import partial
 import sys
 
 import numpy as np

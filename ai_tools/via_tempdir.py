@@ -1,5 +1,5 @@
 from __future__ import annotations
-import logging_mod
+import logging
 from tempfile import mkdtemp
 
 from virtualenv.util.path import safe_delete

@@ -7,7 +7,7 @@ where it makes sense.
 """
 
 from __future__ import annotations
-import collections_mod
+import collections
 import itertools
 import operator as operator_mod
 from collections.abc import Callable, Generator, Iterator, Sequence

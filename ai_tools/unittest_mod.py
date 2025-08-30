@@ -11,8 +11,8 @@ from enum import auto
 from enum import Enum
 import inspect
 import sys
-import traceback_mod
-import types
+import traceback
+import types  # Fixed: was types_mod_mod
 from typing import TYPE_CHECKING
 from typing import Union
 

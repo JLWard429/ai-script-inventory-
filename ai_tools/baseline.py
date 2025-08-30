@@ -12,7 +12,7 @@
 """Bandit is a tool designed to find common security issues in Python code."""
 import argparse
 import contextlib
-import logging_mod
+import logging
 import os
 import shutil
 import subprocess  # nosec: B404

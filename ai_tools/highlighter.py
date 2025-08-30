@@ -1,5 +1,5 @@
 import re
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from typing import List, Union
 
 from .text import Span, Text

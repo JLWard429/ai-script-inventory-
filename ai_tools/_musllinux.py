@@ -5,7 +5,7 @@ linked against musl, and what musl version is used.
 """
 
 from __future__ import annotations
-import functools_mod
+import functools
 import re
 import subprocess_mod
 import sys

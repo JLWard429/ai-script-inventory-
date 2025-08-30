@@ -1,4 +1,4 @@
-from functools_mod import partial
+from functools import partial
 from typing import Callable, Optional, Tuple, cast
 
 from ..backends import Ops

@@ -1,8 +1,8 @@
 """ io on the clipboard """
 from __future__ import annotations
-from io_mod import StringIO
+from io import StringIO
 from typing import TYPE_CHECKING
-import warnings_mod
+import warnings
 
 from pandas._libs import lib
 from pandas.util._exceptions import find_stack_level

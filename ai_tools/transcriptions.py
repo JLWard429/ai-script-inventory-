@@ -1,7 +1,7 @@
 # File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 from __future__ import annotations
-import logging_mod
+import logging
 from typing import TYPE_CHECKING, List, Union, Mapping, Optional, cast
 from typing_extensions import Literal, overload, assert_never
 

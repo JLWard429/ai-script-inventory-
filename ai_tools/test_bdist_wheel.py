@@ -5,7 +5,7 @@ import importlib
 import os.path
 import platform_mod
 import shutil
-import stat_mod
+import stat
 import struct
 import sys
 import sysconfig

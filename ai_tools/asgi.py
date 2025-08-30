@@ -6,7 +6,7 @@ from .._types import AsyncByteStream
 from .base import AsyncBaseTransport
 
 if typing.TYPE_CHECKING:  # pragma: no cover
-import asyncio_mod
+import asyncio
 
     import trio
 
@@ -45,7 +45,7 @@ def create_event() -> Event:
         import trio
 
         return trio.Event()
-import asyncio_mod
+import asyncio
 
     return asyncio.Event()
 

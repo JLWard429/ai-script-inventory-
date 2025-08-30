@@ -6,7 +6,7 @@ from typing import (
     TYPE_CHECKING,
     overload,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 

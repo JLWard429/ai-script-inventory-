@@ -33,7 +33,7 @@ def glibc_version_string_ctypes() -> str | None:
     "Fallback implementation of glibc_version_string using ctypes."
 
     try:
-import ctypes_mod
+import ctypes
     except ImportError:
         return None
 

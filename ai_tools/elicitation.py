@@ -1,7 +1,7 @@
 """Elicitation utilities for MCP servers."""
 
 from __future__ import annotations
-import types
+import types  # Fixed: was types_mod_mod
 from typing import Generic, Literal, TypeVar, Union, get_args, get_origin
 
 from pydantic import BaseModel

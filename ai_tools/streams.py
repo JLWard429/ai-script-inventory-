@@ -1,6 +1,6 @@
-import asyncio_mod
+import asyncio
 import collections
-import warnings_mod
+import warnings
 from typing import (
     Awaitable,
     Callable,

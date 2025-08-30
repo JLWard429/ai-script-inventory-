@@ -1,4 +1,4 @@
-import ctypes_mod as ct
+import ctypes as ct
 import itertools
 import pickle
 import sys

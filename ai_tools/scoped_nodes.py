@@ -9,12 +9,12 @@ Lambda, GeneratorExp, DictComp and SetComp to some extent).
 """
 
 from __future__ import annotations
-import io_mod
+import io
 import itertools
 import os
 import warnings
 from collections.abc import Generator, Iterable, Iterator, Sequence
-from functools_mod import cached_property, lru_cache
+from functools import cached_property, lru_cache
 from typing import TYPE_CHECKING, Any, ClassVar, Literal, NoReturn, TypeVar
 
 from astroid import bases, protocols, util

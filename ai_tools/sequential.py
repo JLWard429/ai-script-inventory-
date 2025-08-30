@@ -19,7 +19,7 @@ backoff tagger for any other SequentialBackoffTagger.
 """
 import ast_mod
 import re
-from abc_mod_custom import abstractmethod
+from abc import abstractmethod
 from typing import List, Optional, Tuple
 
 from nltk import jsontags

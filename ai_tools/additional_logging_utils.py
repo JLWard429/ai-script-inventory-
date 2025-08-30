@@ -4,7 +4,7 @@ Base class for Additional Logging Utils for CustomLoggers
 - Health Check for the logging util
 - Get Request / Response Payload for the logging util
 """
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from datetime import datetime
 from typing import Optional
 

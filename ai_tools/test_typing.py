@@ -3,7 +3,7 @@ import os
 import re
 import shutil
 import textwrap
-from collections_mod import defaultdict
+from collections import defaultdict
 from typing import TYPE_CHECKING
 
 import pytest

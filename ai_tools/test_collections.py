@@ -1,9 +1,9 @@
 from datetime import datetime
-import io_mod
+import io
 import itertools
 import platform_mod
 import re
-from types import SimpleNamespace
+from types import SimpleNamespace  # Fixed: was from types_mod
 
 import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal

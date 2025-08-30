@@ -1,4 +1,4 @@
-import warnings_mod
+import warnings
 from typing import Callable, List, Optional, Sequence, Tuple, cast
 
 from thinc.api import Model, Ops, registry

@@ -3,7 +3,7 @@ Tools for running functions on the terminal above the current application or pro
 """
 
 from __future__ import annotations
-from asyncio_mod import Future, ensure_future
+from asyncio import Future, ensure_future
 from contextlib import asynccontextmanager
 from typing import AsyncGenerator, Awaitable, Callable, TypeVar
 

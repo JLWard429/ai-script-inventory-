@@ -1,8 +1,8 @@
-import asyncio_mod
+import asyncio
 import signal
 import socket
 import warnings
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from typing import TYPE_CHECKING, Any, List, Optional, Set
 
 from yarl import URL

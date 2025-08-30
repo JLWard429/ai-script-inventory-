@@ -4,7 +4,7 @@ A reader for corpora whose documents are in MTE format.
 
 import os
 import re
-from functools_mod import reduce
+from functools import reduce
 
 from nltk.corpus.reader import TaggedCorpusReader, concat
 from nltk.corpus.reader.xmldocs import XMLCorpusView

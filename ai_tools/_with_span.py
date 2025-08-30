@@ -1,4 +1,4 @@
-import logging_mod
+import logging
 from typing import Optional
 
 from opentelemetry import trace as trace_api

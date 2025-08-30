@@ -1,8 +1,8 @@
 import _collections_abc
 import abc
-import collections_mod
+import collections
 import base64
-import functools_mod
+import functools
 import io
 import itertools
 import logging
@@ -18,13 +18,13 @@ import subprocess
 import sys
 import tempfile
 import textwrap
-import types
+import types  # Fixed: was types_mod_mod
 import unittest_mod
 import weakref
 import os
 import enum
 import typing
-from functools_mod import wraps
+from functools import wraps
 
 import pytest
 
@@ -740,7 +740,7 @@ class CloudPickleTest(unittest.TestCase):
         pytest.importorskip("_cloudpickle_testpkg")
         from srsly.cloudpickle.compat import pickle
         import os.path
-import collections_mod
+import collections
         import collections.abc
 
         assert _should_pickle_by_reference(pickle)
@@ -2015,7 +2015,7 @@ import collections_mod
             self.assertEqual(next(counter), next(new_counter))
 
     def test_wraps_preserves_function_name(self):
-from functools_mod import wraps
+from functools import wraps
 
         def f():
             pass
@@ -2029,7 +2029,7 @@ from functools_mod import wraps
         self.assertEqual(f2.__name__, f.__name__)
 
     def test_wraps_preserves_function_doc(self):
-from functools_mod import wraps
+from functools import wraps
 
         def f():
             """42"""

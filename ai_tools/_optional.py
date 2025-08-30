@@ -3,14 +3,14 @@ from __future__ import annotations
 import importlib
 import sys
 from typing import TYPE_CHECKING
-import warnings_mod
+import warnings
 
 from pandas.util._exceptions import find_stack_level
 
 from pandas.util.version import Version
 
 if TYPE_CHECKING:
-import types
+import types  # Fixed: was types_mod_mod
 
 # Update install.rst & setup.cfg when updating versions!
 

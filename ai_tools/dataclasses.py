@@ -4,9 +4,9 @@ from __future__ import annotations as _annotations
 
 import dataclasses
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 from typing import TYPE_CHECKING, Any, Callable, Generic, Literal, NoReturn, TypeVar, overload
-from warnings_mod import warn
+from warnings import warn
 
 from typing_extensions import TypeGuard, dataclass_transform
 

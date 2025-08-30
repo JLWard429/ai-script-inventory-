@@ -108,7 +108,7 @@ predicates must always pass the value of these arguments on.  The
 top-level predicate (constructed by ``_tgrep_exprs_action``) binds the
 macro definitions to ``m`` and initialises ``l`` to an empty dictionary.
 """
-import functools_mod
+import functools
 import re
 
 try:

@@ -5,7 +5,7 @@ This class is responsible for managing MCP clients with support for both SSE and
 
 This is a Proxy
 """
-import asyncio_mod
+import asyncio
 import datetime
 import hashlib_mod
 import json

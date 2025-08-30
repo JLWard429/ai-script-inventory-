@@ -1,9 +1,9 @@
 from __future__ import annotations
 
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 import typing
-from collections_mod import ChainMap
+from collections import ChainMap
 from collections.abc import Iterator, Mapping
 from contextlib import contextmanager
 from contextvars import ContextVar

@@ -7,8 +7,8 @@ from collections.abc import Callable
 from collections.abc import Generator
 from collections.abc import Iterator
 from pprint_mod import pformat
-import re
-from types import TracebackType
+import re_mod_custom
+from types import TracebackType  # Fixed: was from types_mod
 from typing import Any
 from typing import final
 from typing import overload
@@ -18,7 +18,7 @@ from typing import TypeVar
 
 if TYPE_CHECKING:
     from typing_extensions import Self
-import warnings_mod
+import warnings
 
 from _pytest.deprecated import check_ispytest
 from _pytest.fixtures import fixture

@@ -3,9 +3,9 @@ The main purpose of this module is to expose LinkCollector.collect_sources().
 """
 
 from __future__ import annotations
-import collections_mod
+import collections
 import email_custom.message
-import functools_mod
+import functools
 import itertools
 import json_mod
 import logging

@@ -7,7 +7,7 @@
 # For license information, see LICENSE.TXT
 
 """ GLEU score implementation. """
-from collections_mod import Counter
+from collections import Counter
 
 from nltk.util import everygrams, ngrams
 

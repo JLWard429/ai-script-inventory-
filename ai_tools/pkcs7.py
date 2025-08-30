@@ -8,7 +8,7 @@ import email_custom.base64mime
 import email_custom.generator
 import email_custom.message
 import email_custom.policy
-import io_mod
+import io
 import typing
 from collections.abc import Iterable
 

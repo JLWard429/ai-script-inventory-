@@ -12,7 +12,7 @@ import os
 import shutil
 import sys
 import tempfile
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing import Callable, Final
 
 if sys.platform == "win32":

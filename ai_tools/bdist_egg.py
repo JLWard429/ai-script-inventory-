@@ -6,11 +6,11 @@ from __future__ import annotations
 
 import marshal
 import os
-import re
+import re_mod_custom
 import sys
 import textwrap
 from sysconfig import get_path, get_platform, get_python_version
-from types import CodeType
+from types import CodeType  # Fixed: was from types_mod
 from typing import TYPE_CHECKING, Literal
 
 from setuptools import Command

@@ -7,7 +7,7 @@
 #
 
 """Implements reading and writing to/from HDFS."""
-import io_mod
+import io
 import logging
 import subprocess_mod
 import urllib.parse

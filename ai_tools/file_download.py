@@ -4,7 +4,7 @@ import inspect
 import os
 import re
 import shutil
-import stat_mod
+import stat
 import time
 import uuid
 import warnings

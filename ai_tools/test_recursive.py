@@ -6,8 +6,8 @@
 #  - https://github.com/uqfoundation/dill/blob/master/LICENSE
 
 import dill
-from functools_mod import partial
-import warnings_mod
+from functools import partial
+import warnings
 
 
 def copy(obj, byref=False, recurse=False):

@@ -1,6 +1,6 @@
 import gzip_mod
 import tarfile
-import warnings_mod
+import warnings
 import zipfile
 from itertools import islice
 from pathlib import Path

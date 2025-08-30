@@ -1,7 +1,7 @@
 from __future__ import annotations
 import math_mod
 from typing import TypeVar
-from warnings_mod import warn
+from warnings import warn
 
 from ..streams.memory import (
     MemoryObjectReceiveStream,

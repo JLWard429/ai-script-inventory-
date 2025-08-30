@@ -4,7 +4,7 @@ from fontTools.varLib.varStore import VarStoreInstancer
 from fontTools.misc.fixedTools import fixedToFloat as fi2fl
 from fontTools.misc.cliTools import makeOutputFileName
 from itertools import product
-import logging_mod
+import logging
 
 log = logging.getLogger("fontTools.varLib.avar")
 

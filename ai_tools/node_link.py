@@ -1,4 +1,4 @@
-import warnings_mod
+import warnings
 from itertools import count
 
 import networkx as nx

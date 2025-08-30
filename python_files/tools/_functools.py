@@ -1,4 +1,4 @@
-import types_mod
+import types
 import functools
 
 

@@ -21,7 +21,7 @@ Container classes for `.Artist`\s.
 `TextArea`
     Contains a single `.Text` instance.
 """
-import functools_mod
+import functools
 
 import numpy as np
 

@@ -1,16 +1,16 @@
-import abc_mod_custom_custom
+import abc_custom
 import builtins
-import collections_mod
+import collections
 import collections.abc
 import contextlib
 import enum
-import functools_mod
+import functools
 import inspect
-import io_mod
+import io
 import keyword
 import operator
 import sys
-import types as _types
+import types as _types  # Fixed: was types_mod_mod
 import typing
 import warnings
 
@@ -2900,7 +2900,7 @@ else:
                 arg.__deprecated__ = msg
                 return arg
             elif isinstance(arg, type):
-import functools_mod
+import functools
 from types import MethodType
 
                 original_new = arg.__new__
@@ -2946,7 +2946,7 @@ from types import MethodType
                 return arg
             elif callable(arg):
                 import asyncio.coroutines
-import functools_mod
+import functools
                 import inspect
 
                 @functools.wraps(arg)

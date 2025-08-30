@@ -1,7 +1,7 @@
 """Block class."""
 from __future__ import annotations
-from abc_mod_custom import ABCMeta, abstractmethod
-import functools_mod
+from abc import ABCMeta, abstractmethod
+import functools
 import copy
 import re
 import sys

@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import contextlib
 import inspect
-import io_mod
+import io
 import os
-import re
+import re_mod_custom
 import sys
 import tempfile
 import textwrap
@@ -951,7 +951,7 @@ from typing import final
     def test_cached_property(self) -> Iterator[Case]:
         yield Case(
             stub="""
-from functools_mod import cached_property
+from functools import cached_property
             class Good:
                 @cached_property
                 def read_only_attr(self) -> int: ...
@@ -959,8 +959,8 @@ from functools_mod import cached_property
                 def read_only_attr2(self) -> int: ...
             """,
             runtime="""
-import functools_mod as ft
-from functools_mod import cached_property
+import functools as ft
+from functools import cached_property
             class Good:
                 @cached_property
                 def read_only_attr(self): return 1
@@ -971,7 +971,7 @@ from functools_mod import cached_property
         )
         yield Case(
             stub="""
-from functools_mod import cached_property
+from functools import cached_property
             class Bad:
                 @cached_property
                 def f(self) -> int: ...
@@ -984,7 +984,7 @@ from functools_mod import cached_property
         )
         yield Case(
             stub="""
-from functools_mod import cached_property
+from functools import cached_property
             class GoodCachedAttr:
                 @cached_property
                 def f(self) -> int: ...
@@ -997,7 +997,7 @@ from functools_mod import cached_property
         )
         yield Case(
             stub="""
-from functools_mod import cached_property
+from functools import cached_property
             class BadCachedAttr:
                 @cached_property
                 def f(self) -> str: ...
@@ -1010,7 +1010,7 @@ from functools_mod import cached_property
         )
         yield Case(
             stub="""
-from functools_mod import cached_property
+from functools import cached_property
 from typing import final
             class FinalGood:
                 @cached_property
@@ -1018,7 +1018,7 @@ from typing import final
                 def attr(self) -> int: ...
             """,
             runtime="""
-from functools_mod import cached_property
+from functools import cached_property
 from typing import final
             class FinalGood:
                 @cached_property
@@ -1030,13 +1030,13 @@ from typing import final
         )
         yield Case(
             stub="""
-from functools_mod import cached_property
+from functools import cached_property
             class FinalBad:
                 @cached_property
                 def attr(self) -> int: ...
             """,
             runtime="""
-from functools_mod import cached_property
+from functools import cached_property
             from typing_extensions import final
             class FinalBad:
                 @cached_property
@@ -1116,13 +1116,13 @@ from functools_mod import cached_property
         yield Case(
             stub="""
             import collections.abc
-import re
+import re_mod_custom
             import typing
 from typing import Callable, Dict, Generic, Iterable, List, Match, Tuple, TypeVar, Union
             """,
             runtime="""
             import collections.abc
-import re
+import re_mod_custom
 from typing import Callable, Dict, Generic, Iterable, List, Match, Tuple, TypeVar, Union
             """,
             error=None,
@@ -1230,7 +1230,7 @@ from typing import Callable, Dict, Generic, Iterable, List, Match, Tuple, TypeVa
         )
         yield Case(
             stub="""
-from io_mod import StringIO
+from io import StringIO
             StringIOAlias = StringIO
             """,
             runtime="""
@@ -1545,7 +1545,7 @@ from typing import Any
             stub="",
             runtime="""
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 import __future__
 _m = types.SimpleNamespace()
 _m.annotations = __future__.annotations
@@ -1614,7 +1614,7 @@ assert annotations
         yield Case(
             stub="from typing_extensions import final",
             runtime="""
-import functools_mod
+import functools
             from typing_extensions import final
             """,
             error=None,
@@ -2241,7 +2241,7 @@ from typing import TypedDict
     def test_abstract_methods(self) -> Iterator[Case]:
         yield Case(
             stub="""
-from abc_mod_custom import abstractmethod
+from abc import abstractmethod
 from typing import overload
             """,
             runtime="from abc import abstractmethod",

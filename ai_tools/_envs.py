@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import importlib.metadata
-import logging_mod
+import logging
 import os
 import pathlib
 import sys

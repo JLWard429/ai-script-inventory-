@@ -1,0 +1,140 @@
+Metadata-Version: 2.4
+Name: ai-script-inventory
+Version: 1.0.0
+Summary: A collection of AI-related scripts with superhuman workflow automation
+Author-email: JLWard429 <JLWard429@users.noreply.github.com>
+License: MIT
+Project-URL: Homepage, https://github.com/JLWard429/ai-script-inventory-
+Project-URL: Repository, https://github.com/JLWard429/ai-script-inventory-.git
+Project-URL: Issues, https://github.com/JLWard429/ai-script-inventory-/issues
+Keywords: ai,scripts,automation,workflow
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: spacy<4.0.0,>=3.8.0
+Requires-Dist: pyyaml<7.0.0,>=6.0.0
+Provides-Extra: ai
+Requires-Dist: openai>=1.0.0; extra == "ai"
+Provides-Extra: dev
+Requires-Dist: black>=24.0.0; extra == "dev"
+Requires-Dist: isort>=5.13.0; extra == "dev"
+Requires-Dist: flake8>=7.0.0; extra == "dev"
+Requires-Dist: mypy>=1.8.0; extra == "dev"
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=5.0.0; extra == "dev"
+Requires-Dist: bandit>=1.8.0; extra == "dev"
+Requires-Dist: safety>=3.0.0; extra == "dev"
+Requires-Dist: pre-commit>=4.0.0; extra == "dev"
+
+# AI Script Inventory
+
+A comprehensive repository for organizing and managing AI-related scripts, tools, and utilities with advanced automation and quality controls.
+
+## 🚀 Features
+
+- **Superhuman AI Terminal**: Privacy-friendly, local-only AI interface for script management
+- **Advanced Intent Recognition**: Uses spaCy for natural language processing
+- **Automated Organization**: Scripts are automatically categorized and organized
+- **Quality Controls**: Comprehensive CI/CD pipeline with security scanning
+- **Local-Only Processing**: All AI functionality works offline for privacy
+
+## 📦 Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/JLWard429/ai-script-inventory-.git
+cd ai-script-inventory-
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements-dev.txt
+python -m spacy download en_core_web_sm
+```
+
+## 🛠️ Usage
+
+### Basic Usage
+```bash
+# Run tests
+python -m pytest tests/
+
+# Check code quality
+black --check .
+isort --check-only .
+flake8 .
+```
+
+### Superhuman Terminal
+```bash
+python superhuman_terminal.py
+```
+
+The terminal provides natural language interaction for:
+- Script execution and management
+- File operations and organization
+- Security scanning and quality checks
+- AI-powered assistance and guidance
+
+## 📁 Repository Structure
+
+```
+ai-script-inventory/
+├── ai_tools/                    # AI tools and utilities (6000+ modules)
+├── python_scripts/             # Python scripts for AI tasks
+├── shell_scripts/              # Shell scripts and utilities
+├── tests/                      # Test suite
+├── .github/workflows/          # CI/CD automation
+└── docs/                       # Documentation
+```
+
+## 🔧 Development
+
+### Prerequisites
+- Python 3.8+
+- spaCy with English model
+- Git
+
+### Running Tests
+```bash
+python -m pytest tests/ -v --cov
+```
+
+### Code Quality
+```bash
+pre-commit install
+pre-commit run --all-files
+```
+
+## 🛡️ Security
+
+This repository includes comprehensive security scanning:
+- Bandit for Python security issues
+- Safety for dependency vulnerabilities
+- CodeQL for advanced static analysis
+- License compliance checking
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests and quality checks
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 📞 Support
+
+For support and questions, please open an issue in the GitHub repository.

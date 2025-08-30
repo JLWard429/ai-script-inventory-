@@ -170,6 +170,6 @@ async def main():
 
 
 if __name__ == "__main__":
-import asyncio_mod
+import asyncio
 
     asyncio.run(main())

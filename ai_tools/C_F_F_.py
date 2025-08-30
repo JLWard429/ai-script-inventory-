@@ -1,4 +1,4 @@
-from io_mod import BytesIO
+from io import BytesIO
 from fontTools import cffLib
 from . import DefaultTable
 

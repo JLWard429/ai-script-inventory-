@@ -1,4 +1,4 @@
-import traceback_mod
+import traceback
 from typing import Optional
 
 from fastapi import HTTPException

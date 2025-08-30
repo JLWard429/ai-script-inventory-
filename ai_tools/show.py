@@ -1,5 +1,5 @@
 from __future__ import annotations
-import logging_mod
+import logging
 import string
 from collections.abc import Generator, Iterable, Iterator
 from optparse import Values

@@ -12,9 +12,9 @@ These tools are used by `matplotlib.backend_managers.ToolManager`
 """
 import enum
 import functools
-import re
+import re_mod_custom
 import time
-from types import SimpleNamespace
+from types import SimpleNamespace  # Fixed: was from types_mod
 import uuid
 from weakref import WeakKeyDictionary
 

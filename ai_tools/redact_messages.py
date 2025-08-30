@@ -13,7 +13,7 @@ import litellm
 from litellm.integrations.custom_logger import CustomLogger
 from litellm.secret_managers.main import str_to_bool
 from litellm.types.utils import StandardCallbackDynamicParams
-import asyncio_mod
+import asyncio
 
 if TYPE_CHECKING:
     from litellm.litellm_core_utils.litellm_logging import (

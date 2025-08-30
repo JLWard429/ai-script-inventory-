@@ -1,5 +1,5 @@
 from __future__ import annotations
-from abc_mod_custom import ABC
+from abc import ABC
 
 from virtualenv.create.via_global_ref.api import ViaGlobalRefApi, ViaGlobalRefMeta
 from virtualenv.create.via_global_ref.builtin.ref import (

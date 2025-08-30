@@ -1,6 +1,6 @@
 """Functions related to discovering paths."""
 from __future__ import annotations
-import logging_mod
+import logging
 import os.path
 from collections.abc import Generator
 from collections.abc import Sequence

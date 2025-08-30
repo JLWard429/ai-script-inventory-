@@ -1,5 +1,5 @@
 from __future__ import annotations
-from collections_mod import (
+from collections import (
     abc,
     defaultdict,
 )
@@ -10,7 +10,7 @@ from collections.abc import (
     Sequence,
 )
 import csv
-from io_mod import StringIO
+from io import StringIO
 import re
 from typing import (
     IO,
@@ -19,7 +19,7 @@ from typing import (
     Literal,
     cast,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 

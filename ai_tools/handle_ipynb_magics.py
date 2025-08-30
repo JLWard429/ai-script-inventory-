@@ -5,7 +5,7 @@ import dataclasses
 import re
 import secrets_mod
 import sys
-from functools_mod import lru_cache
+from functools import lru_cache
 from importlib.util import find_spec
 from typing import Optional
 

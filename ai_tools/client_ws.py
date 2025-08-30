@@ -1,7 +1,7 @@
 """WebSocket client for asyncio."""
-import asyncio_mod
+import asyncio
 import sys
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing import Any, Optional, Type, cast
 
 import attr
@@ -28,7 +28,7 @@ from .typedefs import (
 )
 
 if sys.version_info >= (3, 11):
-import asyncio_mod as async_timeout
+import asyncio as async_timeout
 else:
     import async_timeout
 

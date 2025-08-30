@@ -2,12 +2,12 @@ from __future__ import annotations
 
 import dataclasses
 import inspect
-from types import FunctionType
+from types import FunctionType  # Fixed: was from types_mod
 from typing import Any
 from typing import final
 from typing import Generic
 from typing import TypeVar
-import warnings_mod
+import warnings
 
 
 class PytestWarning(UserWarning):

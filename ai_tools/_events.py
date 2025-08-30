@@ -5,7 +5,7 @@
 #
 # Don't subclass these. Stuff will break.
 import re
-from abc_mod_custom import ABC
+from abc import ABC
 from dataclasses import dataclass
 from typing import List, Tuple, Union
 

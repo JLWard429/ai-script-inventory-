@@ -1,5 +1,5 @@
 from __future__ import annotations
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 
 
 class Discover(ABC):

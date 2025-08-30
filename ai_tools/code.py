@@ -9,18 +9,18 @@ import dataclasses
 import inspect
 from inspect import CO_VARARGS
 from inspect import CO_VARKEYWORDS
-from io_mod import StringIO
+from io import StringIO
 import os
 from pathlib import Path
-import re
+import re_mod_custom
 import sys
-from traceback_mod import extract_tb
-from traceback_mod import format_exception
-from traceback_mod import format_exception_only
-from traceback_mod import FrameSummary
-from types import CodeType
-from types import FrameType
-from types import TracebackType
+from traceback import extract_tb
+from traceback import format_exception
+from traceback import format_exception_only
+from traceback import FrameSummary
+from types import CodeType  # Fixed: was from types_mod
+from types import FrameType  # Fixed: was from types_mod
+from types import TracebackType  # Fixed: was from types_mod
 from typing import Any
 from typing import ClassVar
 from typing import Final

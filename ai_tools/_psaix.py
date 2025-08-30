@@ -5,13 +5,13 @@
 # found in the LICENSE file.
 
 """AIX platform implementation."""
-import functools_mod
+import functools
 import glob
 import os
 import re
 import subprocess_mod
 import sys
-from collections_mod import namedtuple
+from collections import namedtuple
 
 from . import _common
 from . import _psposix

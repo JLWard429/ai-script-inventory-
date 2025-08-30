@@ -1,4 +1,4 @@
-import abc_mod_custom_custom
+import abc_custom
 import asyncio
 import base64
 import functools
@@ -10,9 +10,9 @@ import os
 import re
 import sys
 import warnings
-from functools_mod import wraps
+from functools import wraps
 from pathlib import Path
-from types import MappingProxyType
+from types import MappingProxyType  # Fixed: was from types_mod
 from typing import (
     TYPE_CHECKING,
     Any,

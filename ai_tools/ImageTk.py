@@ -27,7 +27,7 @@
 from __future__ import annotations
 
 import tkinter
-from io_mod import BytesIO
+from io import BytesIO
 from typing import Any
 
 from . import Image, ImageFile

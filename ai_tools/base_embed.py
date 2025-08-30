@@ -1,6 +1,6 @@
 from __future__ import annotations
-import logging_mod
-from abc_mod_custom import ABC
+import logging
+from abc import ABC
 from argparse import SUPPRESS
 from pathlib import Path
 

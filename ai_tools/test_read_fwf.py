@@ -5,7 +5,7 @@ engine is set to 'python-fwf' internally.
 """
 
 from datetime import datetime
-from io_mod import (
+from io import (
     BytesIO,
     StringIO,
 )

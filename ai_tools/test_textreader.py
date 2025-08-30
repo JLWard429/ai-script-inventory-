@@ -2,7 +2,7 @@
 Tests the TextReader class in parsers.pyx, which
 is integral to the C engine in parsers.py
 """
-from io_mod import (
+from io import (
     BytesIO,
     StringIO,
 )

@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 from collections.abc import Generator
 from dataclasses import InitVar
 from enum import Enum, IntEnum, auto

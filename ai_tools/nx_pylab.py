@@ -16,7 +16,7 @@ See Also
  - :func:`matplotlib.pyplot.scatter`
  - :obj:`matplotlib.patches.FancyArrowPatch`
 """
-import collections_mod
+import collections
 import itertools
 from numbers_mod import Number
 
@@ -380,7 +380,7 @@ def display(
     The input graph. This is potentially useful for dispatching visualization
     functions.
     """
-from collections_mod import Counter
+from collections import Counter
 
     import matplotlib as mpl
     import matplotlib.pyplot as plt
@@ -1872,7 +1872,7 @@ def draw_networkx_edges(
     draw_networkx_edge_labels
 
     """
-import warnings_mod
+import warnings
 
     import matplotlib as mpl
     import matplotlib.collections  # call as mpl.collections

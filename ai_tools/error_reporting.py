@@ -1,6 +1,6 @@
-import io_mod
+import io
 import json
-import logging_mod
+import logging
 import os
 import re
 import typing

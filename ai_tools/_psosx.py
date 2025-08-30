@@ -7,7 +7,7 @@
 import errno
 import functools
 import os
-from collections_mod import namedtuple
+from collections import namedtuple
 
 from . import _common
 from . import _psposix

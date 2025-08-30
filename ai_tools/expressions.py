@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import operator
 from typing import TYPE_CHECKING
-import warnings_mod
+import warnings
 
 import numpy as np
 

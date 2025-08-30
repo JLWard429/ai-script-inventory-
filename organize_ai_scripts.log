@@ -1,0 +1,8 @@
+2025-08-30 09:02:14,329 [ERROR] validate_python_syntax:250 - Syntax error in /tmp/tmpgkb46jlu.py: '(' was never closed (tmpgkb46jlu.py, line 1)
+2025-08-30 09:02:14,330 [ERROR] validate_json_syntax:264 - JSON syntax error in /tmp/tmp77vhgif7.json: Expecting ',' delimiter: line 1 column 16 (char 15)
+2025-08-30 09:02:14,331 [INFO] ensure_dir:291 - 📁 Created directory: /tmp/tmpgisrep2v/python_scripts
+2025-08-30 09:02:14,332 [INFO] safe_move:328 - 🔄 [DRY-RUN] Would move /tmp/tmpgisrep2v/test.py to /tmp/tmpgisrep2v/python_scripts/test.py
+2025-08-30 10:37:17,579 [ERROR] validate_python_syntax:250 - Syntax error in /tmp/tmp938wm6tg.py: '(' was never closed (tmp938wm6tg.py, line 1)
+2025-08-30 10:37:17,580 [ERROR] validate_json_syntax:264 - JSON syntax error in /tmp/tmp_1pvk6iy.json: Expecting ',' delimiter: line 1 column 16 (char 15)
+2025-08-30 10:37:17,582 [INFO] ensure_dir:291 - 📁 Created directory: /tmp/tmpgmx_oio6/python_scripts
+2025-08-30 10:37:17,582 [INFO] safe_move:328 - 🔄 [DRY-RUN] Would move /tmp/tmpgmx_oio6/test.py to /tmp/tmpgmx_oio6/python_scripts/test.py

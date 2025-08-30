@@ -4,7 +4,7 @@ from typing import (
     Literal,
     NamedTuple,
 )
-import warnings_mod
+import warnings
 
 import matplotlib as mpl
 from matplotlib.artist import setp

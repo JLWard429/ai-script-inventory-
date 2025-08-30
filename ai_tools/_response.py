@@ -2,10 +2,10 @@ from __future__ import annotations
 
 import os
 import inspect
-import logging_mod
+import logging
 import datetime
-import functools_mod
-from types import TracebackType
+import functools
+from types import TracebackType  # Fixed: was from types_mod
 from typing import (
     TYPE_CHECKING,
     Any,

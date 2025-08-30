@@ -1,5 +1,5 @@
-import logging_mod
-from collections_mod import OrderedDict
+import logging
+from collections import OrderedDict
 
 from pip._vendor.packaging.utils import canonicalize_name
 

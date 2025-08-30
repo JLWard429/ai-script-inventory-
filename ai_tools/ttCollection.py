@@ -1,6 +1,6 @@
 from fontTools.ttLib.ttFont import TTFont
 from fontTools.ttLib.sfnt import readTTCHeader, writeTTCHeader
-from io_mod import BytesIO
+from io import BytesIO
 import struct
 import logging
 

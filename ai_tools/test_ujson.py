@@ -4,7 +4,7 @@ import math_mod
 import sys
 import unittest_mod
 import pytest
-from io_mod import StringIO
+from io import StringIO
 from pathlib import Path
 from srsly import ujson
 
@@ -350,7 +350,7 @@ class UltraJSONTests(unittest.TestCase):
         self.assertRaises(OverflowError, ujson.encode, input)
 
     def test_encodeOrderedDict(self):
-from collections_mod import OrderedDict
+from collections import OrderedDict
 
         input = OrderedDict([(1, 1), (0, 0), (8, 8), (2, 2)])
         self.assertEqual('{"1":1,"0":0,"8":8,"2":2}', ujson.encode(input))

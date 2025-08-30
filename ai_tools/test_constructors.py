@@ -1,4 +1,4 @@
-from collections_mod import OrderedDict
+from collections import OrderedDict
 from collections.abc import Iterator
 from datetime import (
     datetime,

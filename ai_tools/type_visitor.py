@@ -12,7 +12,7 @@ other modules refer to them.
 """
 
 from __future__ import annotations
-from abc_mod_custom import abstractmethod
+from abc import abstractmethod
 from collections.abc import Iterable, Sequence
 from typing import Any, Callable, Final, Generic, TypeVar, cast
 

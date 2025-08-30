@@ -13,7 +13,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from typing import Dict, Literal, Optional, Tuple, Union
-import logging_mod
+import logging
 
 from fontTools.designspaceLib import (
     AxisDescriptor,

@@ -1,8 +1,8 @@
 """Compiles nodes from the parser into Python code."""
 import typing as t
 from contextlib import contextmanager
-from functools_mod import update_wrapper
-from io_mod import StringIO
+from functools import update_wrapper
+from io import StringIO
 from itertools import chain
 from keyword import iskeyword as is_python_keyword
 

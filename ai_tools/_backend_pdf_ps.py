@@ -1,8 +1,8 @@
 """
 Common functionality between the PDF and PS backends.
 """
-from io_mod import BytesIO
-import functools_mod
+from io import BytesIO
+import functools
 import logging
 
 from fontTools import subset

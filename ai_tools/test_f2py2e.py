@@ -4,7 +4,7 @@ import shlex
 import subprocess
 import sys
 import textwrap
-from collections_mod import namedtuple
+from collections import namedtuple
 from pathlib import Path
 
 import pytest

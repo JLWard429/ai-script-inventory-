@@ -6,8 +6,8 @@ from fontTools.varLib import HVAR_FIELDS, VVAR_FIELDS, _add_VHVAR
 from fontTools.varLib import builder, models, varStore
 from fontTools.misc.fixedTools import fixedToFloat as fi2fl
 from fontTools.misc.cliTools import makeOutputFileName
-from functools_mod import partial
-import logging_mod
+from functools import partial
+import logging
 
 log = logging.getLogger("fontTools.varLib.avar")
 

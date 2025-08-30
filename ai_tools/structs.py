@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import itertools
-from collections_mod import namedtuple
+from collections import namedtuple
 from typing import (
     TYPE_CHECKING,
     Callable,

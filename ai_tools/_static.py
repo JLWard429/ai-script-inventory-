@@ -1,4 +1,4 @@
-from functools_mod import wraps
+from functools import wraps
 from typing import TypeVar
 
 import packaging.specifiers

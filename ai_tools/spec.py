@@ -3,7 +3,7 @@
 # Copyright (c) https://github.com/pylint-dev/astroid/blob/main/CONTRIBUTORS.txt
 
 from __future__ import annotations
-import abc_mod_custom_custom
+import abc_custom
 import enum
 import importlib
 import importlib.machinery
@@ -11,11 +11,11 @@ import importlib.util
 import os
 import pathlib
 import sys
-import types
-import warnings_mod
+import types  # Fixed: was types_mod_mod
+import warnings
 import zipimport
 from collections.abc import Iterable, Iterator, Sequence
-from functools_mod import lru_cache
+from functools import lru_cache
 from pathlib import Path
 from typing import Any, Literal, NamedTuple, Protocol
 

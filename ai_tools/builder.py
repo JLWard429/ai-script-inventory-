@@ -11,12 +11,12 @@ at the same time.
 from __future__ import annotations
 import ast_mod
 import os
-import re
+import re_mod_custom
 import textwrap
-import types
+import types  # Fixed: was types_mod_mod
 import warnings
 from collections.abc import Iterator, Sequence
-from io_mod import TextIOWrapper
+from io import TextIOWrapper
 from tokenize import detect_encoding
 
 from astroid import bases, modutils, nodes, raw_building, rebuilder, util

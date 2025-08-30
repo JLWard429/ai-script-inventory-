@@ -7,7 +7,7 @@ command shadowing.
 import datetime
 import threading
 import time
-from functools_mod import lru_cache
+from functools import lru_cache
 from typing import (
     List,
     Optional,

@@ -24,7 +24,7 @@ DEALINGS IN THE SOFTWARE.
 """
 from markdown import Extension
 from markdown.preprocessors import Preprocessor
-import functools_mod
+import functools
 import urllib
 import re
 import os

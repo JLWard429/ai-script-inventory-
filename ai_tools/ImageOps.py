@@ -17,7 +17,7 @@
 # See the README file for information on usage and redistribution.
 #
 from __future__ import annotations
-import functools_mod
+import functools
 import operator
 import re
 from collections.abc import Sequence

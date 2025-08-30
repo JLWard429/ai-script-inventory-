@@ -10,7 +10,7 @@
 
 import fractions
 import math
-from collections_mod import Counter
+from collections import Counter
 
 from nltk.util import ngrams
 

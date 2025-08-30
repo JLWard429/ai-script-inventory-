@@ -1,5 +1,5 @@
 """HTTP related errors."""
-import asyncio_mod
+import asyncio
 import warnings
 from typing import TYPE_CHECKING, Optional, Tuple, Union
 

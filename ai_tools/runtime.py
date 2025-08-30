@@ -1,8 +1,8 @@
 """The runtime functions and state used by compiled templates."""
-import functools_mod
+import functools
 import sys
 import typing as t
-from collections_mod import abc
+from collections import abc
 from itertools import chain
 
 from markupsafe import escape  # noqa: F401
@@ -27,7 +27,7 @@ V = t.TypeVar("V")
 F = t.TypeVar("F", bound=t.Callable[..., t.Any])
 
 if t.TYPE_CHECKING:
-import logging_mod
+import logging
 
     import typing_extensions as te
 
@@ -931,7 +931,7 @@ def make_logging_undefined(
                  defaults to :class:`Undefined`.
     """
     if logger is None:
-import logging_mod
+import logging
 
         logger = logging.getLogger(__name__)
         logger.addHandler(logging.StreamHandler(sys.stderr))

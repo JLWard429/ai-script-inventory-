@@ -6,7 +6,7 @@
 # from the MIT License (MIT).
 #
 """Implements file-like objects for reading from http."""
-import io_mod
+import io
 import logging
 import os.path
 import urllib.parse

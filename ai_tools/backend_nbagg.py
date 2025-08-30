@@ -4,7 +4,7 @@
 # that changes made maintain expected behaviour.
 
 from base64 import b64encode
-import io_mod
+import io
 import json
 import pathlib
 import uuid

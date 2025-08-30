@@ -20,12 +20,12 @@ import json_mod
 import re
 import struct
 import time
-import warnings_mod
-from collections_mod import defaultdict
+import warnings
+from collections import defaultdict
 from concurrent.futures import Future, ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 from datetime import datetime
-from functools_mod import wraps
+from functools import wraps
 from itertools import islice
 from pathlib import Path
 from textwrap import dedent

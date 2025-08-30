@@ -1,10 +1,10 @@
-import ctypes_mod
+import ctypes
 import gc
 import operator
 import pickle
 import random
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 from itertools import permutations
 from typing import Any
 

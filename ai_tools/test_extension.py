@@ -2,7 +2,7 @@
 
 import os
 import pathlib
-import warnings_mod
+import warnings
 from distutils.extension import Extension, read_setup_file
 
 import pytest

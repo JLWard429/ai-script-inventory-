@@ -5,7 +5,7 @@ from __future__ import annotations as _annotations
 import sys
 from collections.abc import Callable, Iterable
 from dataclasses import is_dataclass
-from types import FrameType
+from types import FrameType  # Fixed: was from types_mod
 from typing import (
     Any,
     Generic,

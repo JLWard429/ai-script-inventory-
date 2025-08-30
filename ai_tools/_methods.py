@@ -5,7 +5,7 @@ and the Python code for the NumPy-namespace function
 """
 import os
 import pickle
-import warnings_mod
+import warnings
 from contextlib import nullcontext
 
 import numpy as np

@@ -4,7 +4,7 @@ requests.structures
 
 Data structures that power Requests.
 """
-from collections_mod import OrderedDict
+from collections import OrderedDict
 
 from .compat import Mapping, MutableMapping
 

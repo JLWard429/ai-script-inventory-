@@ -13,7 +13,7 @@ propagated to the :file:`lib/matplotlib/mpl-data/matplotlibrc` in Matplotlib's
 root source directory.
 """
 import ast_mod
-from functools_mod import lru_cache, reduce
+from functools import lru_cache, reduce
 from numbers_mod import Real
 import operator
 import os

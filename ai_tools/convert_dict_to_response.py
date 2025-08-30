@@ -1,8 +1,8 @@
-import asyncio_mod
+import asyncio
 import json
 import re
 import time
-import traceback_mod
+import traceback
 import uuid
 from typing import Dict, Iterable, List, Literal, Optional, Tuple, Union
 
@@ -217,7 +217,7 @@ def convert_to_streaming_response(response_object: Optional[dict] = None):
     if "model" in response_object:
         model_response_object.model = response_object["model"]
     yield model_response_object
-from collections_mod import defaultdict
+from collections import defaultdict
 
 
 def _handle_invalid_parallel_tool_calls(

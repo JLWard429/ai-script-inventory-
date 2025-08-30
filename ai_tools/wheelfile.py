@@ -6,7 +6,7 @@ import os.path
 import re
 import stat
 import time
-from io_mod import StringIO, TextIOWrapper
+from io import StringIO, TextIOWrapper
 from typing import IO, TYPE_CHECKING, Literal
 from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 

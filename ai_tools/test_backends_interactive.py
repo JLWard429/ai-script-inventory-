@@ -1,4 +1,4 @@
-import functools_mod
+import functools
 import importlib
 import importlib.util
 import inspect
@@ -154,7 +154,7 @@ def _test_toolbar_button_la_mode_icon(fig):
 # from draw_event causes breakage as the canvas widget gets deleted too early.
 def _test_interactive_impl():
     import importlib.util
-import io_mod
+import io
     import json
     import sys
 
@@ -421,7 +421,7 @@ def test_qt_missing():
 def _impl_test_cross_Qt_imports():
     import importlib
     import sys
-import warnings_mod
+import warnings
 
     _, host_binding, mpl_binding = sys.argv
     # import the mpl binding.  This will force us to use that binding

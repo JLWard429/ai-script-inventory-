@@ -1,5 +1,5 @@
 """Base implementation."""
-import asyncio_mod
+import asyncio
 import collections
 import contextlib
 import functools

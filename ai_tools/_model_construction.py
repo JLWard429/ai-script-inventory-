@@ -6,11 +6,11 @@ import builtins
 import operator
 import sys
 import typing
-import warnings_mod
+import warnings
 import weakref
-from abc_mod_custom import ABCMeta
-from functools_mod import cache, partial, wraps
-from types import FunctionType
+from abc import ABCMeta
+from functools import cache, partial, wraps
+from types import FunctionType  # Fixed: was from types_mod
 from typing import Any, Callable, Generic, Literal, NoReturn, cast
 
 from pydantic_core import PydanticUndefined, SchemaSerializer

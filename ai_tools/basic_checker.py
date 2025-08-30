@@ -5,7 +5,7 @@
 """Basic checker for Python code."""
 
 from __future__ import annotations
-import collections_mod
+import collections
 import itertools
 from collections.abc import Iterator
 from typing import TYPE_CHECKING, Literal, cast

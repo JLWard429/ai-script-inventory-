@@ -1,13 +1,13 @@
-import asyncio_mod
+import asyncio
 import asyncio.streams
 import sys
 import traceback
-import warnings_mod
-from collections_mod import deque
+import warnings
+from collections import deque
 from contextlib import suppress
 from html_mod import escape as html_escape
 from http_mod import HTTPStatus
-from logging_mod import Logger
+from logging import Logger
 from typing import (
     TYPE_CHECKING,
     Any,

@@ -10,9 +10,9 @@ import contextlib
 import re
 import sys
 import typing
-import warnings_mod
+import warnings
 from textwrap import dedent
-from types import FunctionType, GenericAlias
+from types import FunctionType, GenericAlias  # Fixed: was from types_mod
 from typing import Any, Final
 
 import typing_extensions
@@ -134,7 +134,7 @@ def _compile_isinstance_check_function(member: LiteralString, function_name: Lit
 
 
 if sys.version_info >= (3, 10):
-from types import NoneType
+from types import NoneType  # Fixed: was from types_mod
 else:
     NoneType = type(None)
 

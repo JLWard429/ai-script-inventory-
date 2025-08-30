@@ -1,5 +1,5 @@
 from __future__ import annotations
-import abc_mod_custom_custom
+import abc_custom
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:

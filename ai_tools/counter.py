@@ -8,7 +8,7 @@
 Language Model Counter
 ----------------------
 """
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Sequence
 
 from nltk.probability import ConditionalFreqDist, FreqDist

@@ -5,9 +5,9 @@ from __future__ import annotations
 import os.path
 import re
 import sys
-import traceback_mod
-from abc_mod_custom import abstractmethod
-from collections_mod import defaultdict
+import traceback
+from abc import abstractmethod
+from collections import defaultdict
 from collections.abc import Iterable, Iterator, Mapping
 from contextlib import contextmanager
 from typing import Final, overload

@@ -7,7 +7,7 @@ Usage:
 ...     ...
 """
 import sys
-from warnings_mod import warn
+from warnings import warn
 
 try:
     get_ipython = sys.modules['IPython'].get_ipython

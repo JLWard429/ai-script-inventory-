@@ -5,7 +5,7 @@ Router cooldown handlers
 - async_get_cooldown_deployments: ASYNC: returns the list of deployments in the cooldown list
 
 """
-import asyncio_mod
+import asyncio
 import math
 from typing import TYPE_CHECKING, Any, List, Optional, Union
 

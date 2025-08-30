@@ -462,7 +462,7 @@ def get_redis_connection_pool(**env_overrides):
 def _pretty_print_redis_config(redis_kwargs: dict) -> None:
     """Pretty print the Redis configuration using rich with sensitive data masking"""
     try:
-import logging_mod
+import logging
 
         from rich.console import Console
         from rich.panel import Panel

@@ -83,7 +83,7 @@ def test_dynamic():
 
 # classes and class instances
 def test_classes():
-from io_mod import BytesIO as StringIO
+from io import BytesIO as StringIO
   y = "from _io import BytesIO\n"
   x = y if (IS_PYPY or sys.hexversion >= PY310b) else "from io import BytesIO\n"
   s = StringIO()
@@ -145,7 +145,7 @@ def test_numpy():
     assert importable(y, source=True) == 'from %s import int64\n' % y.__module__
     y = np.bool_
     x = y(0)
-import warnings_mod
+import warnings
     with warnings.catch_warnings():
         warnings.filterwarnings('ignore', category=FutureWarning)
         warnings.filterwarnings('ignore', category=DeprecationWarning)

@@ -13,13 +13,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """Contains utilities to handle HTTP requests in Huggingface Hub."""
-import io_mod
+import io
 import os
 import re
 import threading
 import time
 import uuid
-from functools_mod import lru_cache
+from functools import lru_cache
 from http_mod import HTTPStatus
 from shlex import quote
 from typing import Any, Callable, List, Optional, Tuple, Type, Union

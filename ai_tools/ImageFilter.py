@@ -15,10 +15,10 @@
 # See the README file for information on usage and redistribution.
 #
 from __future__ import annotations
-import abc_mod_custom_custom
+import abc_custom
 import functools
 from collections.abc import Sequence
-from types import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 from typing import Any, Callable, cast
 
 TYPE_CHECKING = False

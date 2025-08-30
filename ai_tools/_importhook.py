@@ -1,14 +1,14 @@
 from __future__ import annotations
 import ast_mod
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 from collections.abc import Callable, Iterable
 from importlib.abc import MetaPathFinder
 from importlib.machinery import ModuleSpec, SourceFileLoader
 from importlib.util import cache_from_source, decode_source
 from inspect import isclass
 from os import PathLike
-from types import CodeType, ModuleType, TracebackType
+from types import CodeType, ModuleType, TracebackType  # Fixed: was from types_mod
 from typing import Sequence, TypeVar
 from unittest.mock import patch
 

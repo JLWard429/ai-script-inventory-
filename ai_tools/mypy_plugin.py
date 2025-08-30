@@ -181,7 +181,7 @@ else:
             return [(PRI_MED, fullname, -1)]
 
     def plugin(version: str) -> type:
-import warnings_mod
+import warnings
 
         plugin = "numpy.typing.mypy_plugin"
         # Deprecated 2025-01-10, NumPy 2.3

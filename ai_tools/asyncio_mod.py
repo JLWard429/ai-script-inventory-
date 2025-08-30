@@ -7,7 +7,7 @@ Usage:
 >>> async for i in trange(10):
 ...     ...
 """
-import asyncio_mod
+import asyncio
 from sys import version_info
 
 from .std import tqdm as std_tqdm

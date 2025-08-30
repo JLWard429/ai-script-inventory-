@@ -1,5 +1,5 @@
 from __future__ import annotations
-import logging_mod
+import logging
 from copy_mod import copy
 
 from virtualenv.create.via_global_ref.store import handle_store_python

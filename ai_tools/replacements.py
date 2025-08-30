@@ -15,7 +15,7 @@
 """
 
 from __future__ import annotations
-import logging_mod
+import logging
 import re
 
 from ..token import Token

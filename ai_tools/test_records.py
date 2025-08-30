@@ -1,7 +1,7 @@
 import collections.abc
 import pickle_mod
 import textwrap
-from io_mod import BytesIO
+from io import BytesIO
 from os import path
 from pathlib import Path
 

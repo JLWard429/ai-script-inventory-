@@ -7,7 +7,7 @@
 from __future__ import annotations
 
 from collections.abc import Iterator
-from functools_mod import partial
+from functools import partial
 from itertools import chain
 
 from astroid import BoundMethod, arguments, extract_node, nodes, objects
@@ -39,7 +39,7 @@ class LruWrappedModel(objectmodel.FunctionModel):
     def attr_cache_info(self):
         cache_info = extract_node(
             """
-from functools_mod import _CacheInfo
+from functools import _CacheInfo
         _CacheInfo(0, 0, 0, 0)
         """
         )

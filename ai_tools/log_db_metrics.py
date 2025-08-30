@@ -3,9 +3,9 @@ Handles logging DB success/failure to ServiceLogger()
 
 ServiceLogger() then sends DB logs to Prometheus, OTEL, Datadog etc
 """
-import asyncio_mod
+import asyncio
 from datetime import datetime
-from functools_mod import wraps
+from functools import wraps
 from typing import Callable, Dict, Tuple
 
 from litellm._service_logger import ServiceTypes

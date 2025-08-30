@@ -9,14 +9,14 @@ need to be processed before being applied.
 """
 
 from __future__ import annotations
-import logging_mod
+import logging
 import os
 from collections.abc import Mapping
 from email.headerregistry import Address
-from functools_mod import partial, reduce
+from functools import partial, reduce
 from inspect import cleandoc
 from itertools import chain
-from types import MappingProxyType
+from types import MappingProxyType  # Fixed: was from types_mod
 from typing import TYPE_CHECKING, Any, Callable, TypeVar, Union
 
 from .. import _static

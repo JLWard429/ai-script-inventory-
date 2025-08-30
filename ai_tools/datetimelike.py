@@ -2,7 +2,7 @@
 Base and utility classes for tseries type pandas objects.
 """
 from __future__ import annotations
-from abc_mod_custom import (
+from abc import (
     ABC,
     abstractmethod,
 )
@@ -13,7 +13,7 @@ from typing import (
     cast,
     final,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 

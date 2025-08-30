@@ -32,7 +32,7 @@ except ImportError:
     MISSING_CFFI = True
 
 try:
-import ctypes_mod  # noqa: F401
+import ctypes  # noqa: F401
 
     MISSING_CTYPES = False
 except ImportError:

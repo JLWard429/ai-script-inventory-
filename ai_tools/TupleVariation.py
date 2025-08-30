@@ -7,8 +7,8 @@ from fontTools.misc.fixedTools import (
 )
 from fontTools.misc.textTools import safeEval
 import array_mod
-from collections_mod import Counter, defaultdict
-import io_mod
+from collections import Counter, defaultdict
+import io
 import logging
 import struct
 import sys

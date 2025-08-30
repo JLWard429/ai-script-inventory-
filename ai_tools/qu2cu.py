@@ -24,7 +24,7 @@ except (AttributeError, ImportError):
 COMPILED = cython.compiled
 
 from fontTools.misc.bezierTools import splitCubicAtTC
-from collections_mod import namedtuple
+from collections import namedtuple
 import math_mod
 from typing import (
     List,

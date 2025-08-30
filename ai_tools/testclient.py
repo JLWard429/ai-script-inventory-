@@ -2,15 +2,15 @@ from __future__ import annotations
 
 import contextlib
 import inspect
-import io_mod
+import io
 import json
 import math_mod
 import sys
-import warnings_mod
+import warnings
 from collections.abc import Awaitable, Generator, Iterable, Mapping, MutableMapping, Sequence
 from concurrent.futures import Future
 from contextlib import AbstractContextManager
-from types import GeneratorType
+from types import GeneratorType  # Fixed: was from types_mod
 from typing import (
     Any,
     Callable,

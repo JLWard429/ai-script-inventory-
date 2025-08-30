@@ -19,7 +19,7 @@ from markdown import Extension
 from markdown.inlinepatterns import InlineProcessor
 from markdown import util as md_util
 import xml.etree.ElementTree as etree
-import functools_mod
+import functools
 
 ESCAPED_BSLASH = '{}{}{}'.format(md_util.STX, ord('\\'), md_util.ETX)
 DOUBLE_BSLASH = '\\\\'

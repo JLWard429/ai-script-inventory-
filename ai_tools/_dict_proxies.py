@@ -1,6 +1,6 @@
-import warnings_mod
+import warnings
 import weakref
-from collections_mod import UserDict
+from collections import UserDict
 from typing import TYPE_CHECKING, Dict, Iterable, List, Optional, Tuple, Union
 
 import srsly

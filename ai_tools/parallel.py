@@ -6,7 +6,7 @@ Helpers for embarrassingly parallel code.
 # License: BSD 3 clause
 
 from __future__ import division
-import collections_mod
+import collections
 import functools
 import itertools
 import os
@@ -14,7 +14,7 @@ import queue
 import sys
 import threading
 import time
-import warnings_mod
+import warnings
 import weakref
 from contextlib import nullcontext
 from math_mod import floor, log10, sqrt

@@ -4,7 +4,7 @@ Module for displaying the CAI banner and welcome message.
 # Standard library imports
 import os
 import glob
-import logging_mod
+import logging
 import sys
 from configparser import ConfigParser
 

@@ -10,11 +10,11 @@ from __future__ import annotations
 
 import builtins
 import inspect
-import io_mod
+import io
 import logging
 import os
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 import warnings
 from collections.abc import Iterable
 from contextlib import redirect_stderr, redirect_stdout

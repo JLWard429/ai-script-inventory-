@@ -1,8 +1,8 @@
 #### SPEND MANAGEMENT #####
-import collections_mod
+import collections
 import os
 from datetime import datetime, timedelta, timezone
-from functools_mod import lru_cache
+from functools import lru_cache
 from typing import TYPE_CHECKING, Any, Dict, List, Literal, Optional
 
 import fastapi
@@ -822,7 +822,7 @@ async def get_global_spend_provider(
         }
     ]
     """
-from collections_mod import defaultdict
+from collections import defaultdict
 
     if start_date is None or end_date is None:
         raise HTTPException(
@@ -1362,7 +1362,7 @@ async def global_view_spend_tags(
 -H "Authorization: Bearer sk-1234"
     ```
     """
-import traceback_mod
+import traceback
 
     from litellm.proxy.proxy_server import prisma_client
 
@@ -2242,7 +2242,7 @@ async def global_spend_logs(
 
     More efficient implementation of /spend/logs, by creating a view over the spend logs table.
     """
-import traceback_mod
+import traceback
 
     from litellm.integrations.prometheus_helpers.prometheus_api import (
         get_daily_spend_from_prometheus,
@@ -2325,7 +2325,7 @@ async def global_spend():
 
     View total spend across all proxy keys
     """
-import traceback_mod
+import traceback
 
     from litellm.proxy.proxy_server import prisma_client
 

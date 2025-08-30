@@ -2,7 +2,7 @@
 Read SAS sas7bdat or xport files.
 """
 from __future__ import annotations
-from abc_mod_custom import (
+from abc import (
     ABC,
     abstractmethod,
 )
@@ -19,7 +19,7 @@ from pandas.io.common import stringify_path
 
 if TYPE_CHECKING:
     from collections.abc import Hashable
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 
     from pandas._typing import (
         CompressionOptions,

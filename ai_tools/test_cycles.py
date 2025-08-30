@@ -1,5 +1,5 @@
 import contextlib
-from io_mod import StringIO
+from io import StringIO
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt

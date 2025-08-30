@@ -4,7 +4,7 @@ import math
 import os
 import socket
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 import weakref
 from collections.abc import (
     AsyncGenerator,
@@ -19,12 +19,12 @@ from collections.abc import (
 from concurrent.futures import Future
 from contextlib import AbstractContextManager
 from dataclasses import dataclass
-from functools_mod import partial
-from io_mod import IOBase
+from functools import partial
+from io import IOBase
 from os import PathLike
 from signal import Signals
 from socket import AddressFamily, SocketKind
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing import (
     IO,
     TYPE_CHECKING,

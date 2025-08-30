@@ -1,5 +1,5 @@
 # Copyright (C) Dnspython Contributors, see LICENSE for text of ISC license
-import collections_mod
+import collections
 from typing import Any, Callable, Iterator, List, Optional, Tuple, Union
 
 import dns_custom.exception

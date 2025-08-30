@@ -1,5 +1,5 @@
 from __future__ import annotations
-import collections_mod
+import collections
 import contextlib
 import os.path
 import re

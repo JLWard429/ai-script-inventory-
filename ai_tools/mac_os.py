@@ -1,11 +1,11 @@
 """The Apple Framework builds require their own customization."""
 
 from __future__ import annotations
-import logging_mod
+import logging
 import os
 import struct
 import subprocess
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from pathlib import Path
 from textwrap import dedent
 

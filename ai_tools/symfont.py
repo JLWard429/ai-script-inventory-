@@ -1,5 +1,5 @@
 from fontTools.pens.basePen import BasePen
-from functools_mod import partial
+from functools import partial
 from itertools import count
 import sympy as sp
 import sys

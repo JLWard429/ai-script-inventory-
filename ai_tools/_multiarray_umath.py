@@ -17,7 +17,7 @@ def __getattr__(attr_name):
     if attr_name in {"_ARRAY_API", "_UFUNC_API"}:
         import sys
         import textwrap
-import traceback_mod
+import traceback
 
         from numpy.version import short_version
 

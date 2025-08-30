@@ -1,6 +1,6 @@
 import contextlib
 import itertools
-from io_mod import BytesIO
+from io import BytesIO
 from typing import Any, Callable, Dict, Optional, cast
 
 import srsly

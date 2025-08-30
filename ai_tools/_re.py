@@ -5,7 +5,7 @@
 from __future__ import annotations
 
 from datetime import date, datetime, time, timedelta, timezone, tzinfo
-from functools_mod import lru_cache
+from functools import lru_cache
 import re
 from typing import Any, Final
 

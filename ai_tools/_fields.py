@@ -6,7 +6,7 @@ import dataclasses
 import warnings
 from collections.abc import Mapping
 from copy_mod import copy
-from functools_mod import cache
+from functools import cache
 from inspect import Parameter, ismethoddescriptor, signature
 from re import Pattern
 from typing import TYPE_CHECKING, Any, Callable, TypeVar

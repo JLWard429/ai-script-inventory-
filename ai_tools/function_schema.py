@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import contextlib
 import inspect
-import logging_mod
+import logging
 import re
 from dataclasses import dataclass
 from typing import Any, Callable, Literal, get_args, get_origin, get_type_hints

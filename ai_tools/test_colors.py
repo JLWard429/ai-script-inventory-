@@ -1,7 +1,7 @@
 import copy_mod
 import itertools
 import unittest.mock
-from io_mod import BytesIO
+from io import BytesIO
 import numpy as np
 from PIL import Image
 import pytest

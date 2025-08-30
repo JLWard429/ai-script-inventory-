@@ -26,9 +26,9 @@ from __future__ import annotations
 import itertools
 import os
 import pprint_mod
-import types
+import types  # Fixed: was types_mod_mod
 from collections.abc import Iterator
-from functools_mod import lru_cache
+from functools import lru_cache
 from typing import TYPE_CHECKING, Any, Literal
 
 import astroid

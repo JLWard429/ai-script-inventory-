@@ -3,12 +3,12 @@ from __future__ import annotations
 import collections.abc
 import inspect
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 import typing
-import warnings_mod
+import warnings
 from enum import Enum
 from inspect import Parameter, isclass, isfunction
-from io_mod import BufferedIOBase, IOBase, RawIOBase, TextIOBase
+from io import BufferedIOBase, IOBase, RawIOBase, TextIOBase
 from textwrap import indent
 from typing import (
     IO,

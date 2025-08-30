@@ -10,7 +10,7 @@ All /customer management endpoints
 """
 
 #### END-USER/CUSTOMER MANAGEMENT ####
-import traceback_mod
+import traceback
 from typing import List, Optional
 
 import fastapi

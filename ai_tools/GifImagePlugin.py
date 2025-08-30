@@ -30,7 +30,7 @@ import math
 import os
 import subprocess
 from enum import IntEnum
-from functools_mod import cached_property
+from functools import cached_property
 from typing import IO, Any, Literal, NamedTuple, Union, cast
 
 from . import (
@@ -1179,7 +1179,7 @@ def getdata(
     :returns: List of bytes containing GIF encoded frame data
 
     """
-from io_mod import BytesIO
+from io import BytesIO
 
     class Collector(BytesIO):
         data = []

@@ -1,4 +1,4 @@
-from types import SimpleNamespace
+from types import SimpleNamespace  # Fixed: was from types_mod
 
 import pytest
 

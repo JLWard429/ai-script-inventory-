@@ -33,12 +33,12 @@ from .otTables import (
     NO_VARIATION_INDEX,
 )
 from itertools import zip_longest, accumulate
-from functools_mod import partial
-from types import SimpleNamespace
-import re
+from functools import partial
+from types import SimpleNamespace  # Fixed: was from types_mod
+import re_mod_custom
 import struct
 from typing import Optional
-import logging_mod
+import logging
 
 
 log = logging.getLogger(__name__)

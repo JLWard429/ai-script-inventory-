@@ -4,15 +4,15 @@
 """Callback functions and support for sys.monitoring data collection."""
 
 from __future__ import annotations
-import functools_mod
+import functools
 import inspect
 import os
 import os.path
 import sys
 import threading
-import traceback_mod
+import traceback
 from dataclasses import dataclass
-from types import CodeType
+from types import CodeType  # Fixed: was from types_mod
 from typing import Any, Callable, NewType, Optional, cast
 
 from coverage import env

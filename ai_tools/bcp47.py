@@ -5,7 +5,7 @@
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.TXT
 import re
-from warnings_mod import warn
+from warnings import warn
 from xml.etree import ElementTree as et
 
 from nltk.corpus.reader import CorpusReader

@@ -20,7 +20,7 @@
 # Image plugin for PDF images (output only).
 ##
 from __future__ import annotations
-import io_mod
+import io
 import math
 import os
 import time

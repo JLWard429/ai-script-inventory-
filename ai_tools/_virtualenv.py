@@ -62,7 +62,7 @@ class _Finder:
                 # - that every thread will use - into .lock[0].
                 # https://docs.python.org/3/faq/library.html#what-kinds-of-global-value-mutation-are-thread-safe
                 self.lock.append(lock)
-from functools_mod import partial  # noqa: PLC0415
+from functools import partial  # noqa: PLC0415
             from importlib.util import find_spec  # noqa: PLC0415
 
             with self.lock[0]:

@@ -1,11 +1,11 @@
 """
 Core EventBus implementation.
 """
-import asyncio_mod
+import asyncio
 import queue
 import threading
 import time
-import logging_mod
+import logging
 from concurrent.futures import Future
 from typing import Dict, List, Any, Optional, Callable, TypeVar
 from dataclasses import dataclass, field

@@ -10,8 +10,8 @@
 #
 import copyreg
 import io
-import functools_mod
-import types
+import functools
+import types  # Fixed: was types_mod_mod
 import sys
 import os
 

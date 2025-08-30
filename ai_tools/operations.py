@@ -1,5 +1,5 @@
 """Operations on trees."""
-from functools_mod import partial
+from functools import partial
 from itertools import accumulate, chain
 
 import networkx as nx

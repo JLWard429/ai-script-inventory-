@@ -1,5 +1,5 @@
 from contextlib import contextmanager
-from ctypes_mod import (
+from ctypes import (
     CFUNCTYPE,
     POINTER,
     c_int,

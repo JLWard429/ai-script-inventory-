@@ -7,10 +7,10 @@ converter objects from otConverters.py.
 """
 import copy_mod
 from enum import IntEnum
-from functools_mod import reduce
+from functools import reduce
 from math_mod import radians
 import itertools
-from collections_mod import defaultdict, namedtuple
+from collections import defaultdict, namedtuple
 from fontTools.ttLib import OPTIMIZE_FONT_SPEED
 from fontTools.ttLib.tables.TupleVariation import TupleVariation
 from fontTools.ttLib.tables.otTraverse import dfs_base_table
@@ -35,7 +35,7 @@ from fontTools.misc.fixedTools import (
     strToFixedToFloat as str2fl,
 )
 from fontTools.feaLib.lookupDebugInfo import LookupDebugInfo, LOOKUP_DEBUG_INFO_KEY
-import logging_mod
+import logging
 import struct
 import array_mod
 import sys

@@ -1,5 +1,5 @@
 """This file is largely copied from http.py"""
-import io_mod
+import io
 import logging
 import re
 import urllib.error

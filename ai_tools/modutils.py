@@ -19,17 +19,17 @@ from __future__ import annotations
 import importlib
 import importlib.machinery
 import importlib.util
-import io_mod
+import io
 import itertools
-import logging_mod
+import logging
 import os
 import sys
 import sysconfig
-import types
+import types  # Fixed: was types_mod_mod
 import warnings
 from collections.abc import Callable, Iterable, Sequence
 from contextlib import redirect_stderr, redirect_stdout
-from functools_mod import lru_cache
+from functools import lru_cache
 
 from astroid.const import IS_JYTHON, PY310_PLUS
 from astroid.interpreter._import import spec, util

@@ -2,7 +2,7 @@
 
 import importlib
 from fnmatch import fnmatch
-from functools_mod import lru_cache
+from functools import lru_cache
 from pathlib import Path
 from typing import FrozenSet, Iterable, Optional, Tuple
 

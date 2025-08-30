@@ -27,7 +27,7 @@ trees and forests uniformly at random. A rooted tree is a tree
 with a designated root node. A rooted forest is a disjoint union
 of rooted trees.
 """
-from collections_mod import Counter, defaultdict
+from collections import Counter, defaultdict
 from math_mod import comb, factorial
 
 import networkx as nx

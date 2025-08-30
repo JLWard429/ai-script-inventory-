@@ -1,8 +1,8 @@
-import asyncio_mod
+import asyncio
 import asyncio.events
-import functools_mod
+import functools
 import inspect
-import io_mod
+import io
 import numbers
 import os
 import re
@@ -949,7 +949,7 @@ class FSSpecCoroutineCancel(Exception):
 def _dump_running_tasks(
     printout=True, cancel=True, exc=FSSpecCoroutineCancel, with_task=False
 ):
-import traceback_mod
+import traceback
 
     tasks = [t for t in asyncio.tasks.all_tasks(loop[0]) if not t.done()]
     if printout:

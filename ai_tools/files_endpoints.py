@@ -4,7 +4,7 @@
 
 # Equivalent of https://platform.openai.com/docs/api-reference/files
 ######################################################################
-import asyncio_mod
+import asyncio
 import traceback
 from typing import Optional, cast, get_args
 

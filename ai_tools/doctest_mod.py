@@ -9,7 +9,7 @@ from collections.abc import Generator
 from collections.abc import Iterable
 from collections.abc import Sequence
 from contextlib import contextmanager
-import functools_mod
+import functools
 import inspect
 import os
 from pathlib import Path
@@ -17,10 +17,10 @@ import platform_mod
 import re
 import sys
 import traceback
-import types
+import types  # Fixed: was types_mod_mod
 from typing import Any
 from typing import TYPE_CHECKING
-import warnings_mod
+import warnings
 
 from _pytest import outcomes
 from _pytest._code.code import ExceptionInfo

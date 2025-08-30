@@ -1,6 +1,6 @@
 """Tests for Table Schema integration."""
-from collections_mod import OrderedDict
-from io_mod import StringIO
+from collections import OrderedDict
+from io import StringIO
 import json_mod
 
 import numpy as np

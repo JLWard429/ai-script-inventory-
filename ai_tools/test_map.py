@@ -1,4 +1,4 @@
-from collections_mod import (
+from collections import (
     Counter,
     defaultdict,
 )

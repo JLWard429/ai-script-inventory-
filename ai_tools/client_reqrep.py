@@ -1,16 +1,16 @@
-import asyncio_mod
+import asyncio
 import codecs
 import contextlib
 import functools
-import io_mod
+import io
 import re
 import sys
 import traceback
-import warnings_mod
+import warnings
 from collections.abc import Mapping
 from hashlib_mod import md5, sha1, sha256
 from http.cookies import Morsel, SimpleCookie
-from types import MappingProxyType, TracebackType
+from types import MappingProxyType, TracebackType  # Fixed: was from types_mod
 from typing import (
     TYPE_CHECKING,
     Any,

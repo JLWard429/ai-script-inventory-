@@ -3,7 +3,7 @@
 import json_mod
 import traceback
 import uuid
-from collections_mod import deque
+from collections import deque
 from typing import TYPE_CHECKING, Any, AsyncIterator, Iterator, Literal, Optional
 
 from litellm import verbose_logger

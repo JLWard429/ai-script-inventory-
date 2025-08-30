@@ -4,7 +4,7 @@ from datetime import (
     datetime,
     timedelta,
 )
-import warnings_mod
+import warnings
 
 from dateutil.relativedelta import (
     FR,

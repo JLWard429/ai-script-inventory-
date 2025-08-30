@@ -1,6 +1,6 @@
 from __future__ import annotations
-from functools_mod import lru_cache
-from logging_mod import getLogger
+from functools import lru_cache
+from logging import getLogger
 
 from .constant import (
     COMMON_SAFE_ASCII_CHARACTERS,

@@ -9,7 +9,7 @@ import socket
 import sys
 import threading
 import weakref
-from asyncio_mod import (
+from asyncio import (
     AbstractEventLoop,
     CancelledError,
     all_tasks,
@@ -19,7 +19,7 @@ from asyncio_mod import (
     sleep,
 )
 from asyncio.base_events import _run_until_complete_cb  # type: ignore[attr-defined]
-from collections_mod import OrderedDict, deque
+from collections import OrderedDict, deque
 from collections.abc import (
     AsyncGenerator,
     AsyncIterator,
@@ -34,20 +34,20 @@ from concurrent.futures import Future
 from contextlib import AbstractContextManager, suppress
 from contextvars import Context, copy_context
 from dataclasses import dataclass
-from functools_mod import partial, wraps
+from functools import partial, wraps
 from inspect import (
     CORO_RUNNING,
     CORO_SUSPENDED,
     getcoroutinestate,
     iscoroutine,
 )
-from io_mod import IOBase
+from io import IOBase
 from os import PathLike
 from queue import Queue
 from signal import Signals
 from socket import AddressFamily, SocketKind
 from threading import Thread
-from types import CodeType, TracebackType
+from types import CodeType, TracebackType  # Fixed: was from types_mod
 from typing import (
     IO,
     TYPE_CHECKING,
@@ -111,13 +111,13 @@ else:
     from typing_extensions import ParamSpec
 
 if sys.version_info >= (3, 11):
-from asyncio_mod import Runner
+from asyncio import Runner
 from typing import TypeVarTuple, Unpack
 else:
     import contextvars
     import enum
     import signal
-from asyncio_mod import coroutines, events, exceptions, tasks
+from asyncio import coroutines, events, exceptions, tasks
 
     from exceptiongroup import BaseExceptionGroup
     from typing_extensions import TypeVarTuple, Unpack

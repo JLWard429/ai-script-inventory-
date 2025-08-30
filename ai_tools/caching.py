@@ -5,7 +5,7 @@
 from __future__ import annotations
 import pickle_mod
 import sys
-import warnings_mod
+import warnings
 from pathlib import Path
 
 from pylint.constants import PYLINT_HOME

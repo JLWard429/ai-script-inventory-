@@ -5,7 +5,7 @@
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.TXT
 import re
-from functools_mod import total_ordering
+from functools import total_ordering
 from xml.etree import ElementTree
 
 from nltk.corpus.reader.api import *

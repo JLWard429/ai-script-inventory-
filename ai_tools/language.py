@@ -1,10 +1,10 @@
-import functools_mod
+import functools
 import inspect
 import itertools
 import multiprocessing as mp
 import random
 import traceback
-import warnings_mod
+import warnings
 from contextlib import ExitStack, contextmanager
 from copy_mod import deepcopy
 from dataclasses import dataclass

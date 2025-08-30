@@ -4,7 +4,7 @@ import errno
 import os
 import socket
 import ssl
-import stat_mod
+import stat
 import sys
 from collections.abc import Awaitable
 from dataclasses import dataclass
@@ -49,7 +49,7 @@ else:
 if sys.version_info < (3, 13):
     from typing_extensions import deprecated
 else:
-from warnings_mod import deprecated
+from warnings import deprecated
 
 IPPROTO_IPV6 = getattr(socket, "IPPROTO_IPV6", 41)  # https://bugs.python.org/issue29515
 

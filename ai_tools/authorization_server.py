@@ -1,4 +1,4 @@
-import logging_mod
+import logging
 
 from flask import Response
 from flask import request as flask_req

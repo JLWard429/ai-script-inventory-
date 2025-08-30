@@ -15,7 +15,7 @@
 import enum
 import string
 import unicodedata
-from collections_mod import defaultdict
+from collections import defaultdict
 
 import regex._regex as _regex
 

@@ -1,4 +1,4 @@
-import asyncio_mod
+import asyncio
 from typing import TYPE_CHECKING, Any
 
 from litellm.utils import calculate_max_parallel_requests

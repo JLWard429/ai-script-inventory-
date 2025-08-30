@@ -11,7 +11,7 @@ https://github.com/jenkinsci/xunit-plugin/blob/master/src/main/resources/org/jen
 from __future__ import annotations
 
 from collections.abc import Callable
-import functools_mod
+import functools
 import os
 import platform_mod
 import re

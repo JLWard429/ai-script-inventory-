@@ -56,9 +56,9 @@ import re
 import sys
 import time
 import tokenize
-import warnings_mod
+import warnings
 from fnmatch import fnmatch
-from functools_mod import lru_cache
+from functools import lru_cache
 from optparse import OptionParser
 
 # this is a performance hack.  see https://bugs.python.org/issue43014

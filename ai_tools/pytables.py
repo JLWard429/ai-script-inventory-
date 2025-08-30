@@ -12,7 +12,7 @@ from datetime import (
 )
 import itertools
 import os
-import re
+import re_mod_custom
 from textwrap import dedent
 from typing import (
     TYPE_CHECKING,
@@ -23,7 +23,7 @@ from typing import (
     cast,
     overload,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 
@@ -115,7 +115,7 @@ if TYPE_CHECKING:
         Iterator,
         Sequence,
     )
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 
     from tables import (
         Col,

@@ -40,7 +40,7 @@ class BudgetManager:
     def print_verbose(self, print_statement):
         try:
             if litellm.set_verbose:
-import logging_mod
+import logging
 
                 logging.info(print_statement)
         except Exception:

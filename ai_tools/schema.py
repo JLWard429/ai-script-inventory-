@@ -1,6 +1,6 @@
 import re
 import warnings
-from collections_mod import defaultdict
+from collections import defaultdict
 from dataclasses import is_dataclass
 from datetime import date, datetime, time, timedelta
 from decimal import Decimal

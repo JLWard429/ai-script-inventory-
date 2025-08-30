@@ -15,7 +15,7 @@ import contextlib
 import ctypes
 from ctypes.wintypes import BOOL, DWORD, HANDLE, LPCWSTR, LPVOID, LPWSTR
 from dataclasses import dataclass
-from functools_mod import reduce
+from functools import reduce
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:

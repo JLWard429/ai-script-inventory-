@@ -2,7 +2,7 @@ from __future__ import annotations
 import enum
 import logging
 import time
-import types
+import types  # Fixed: was types_mod_mod
 import typing
 
 import h2.config

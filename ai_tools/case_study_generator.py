@@ -224,7 +224,7 @@ async def generate_case_study(jsonl_file: str, output_php_file: str) -> Optional
                     
                 except Exception as e:
                     console.print(f"[red]Error in streaming: {str(e)}[/red]")
-import traceback_mod
+import traceback
                     console.print(f"[red]{traceback.format_exc()}[/red]")
                     return None
             
@@ -282,7 +282,7 @@ import traceback_mod
     
     except Exception as e:
         console.print(f"[red]Error generating case study: {str(e)}[/red]")
-import traceback_mod
+import traceback
         console.print(f"[red]{traceback.format_exc()}[/red]")
         return None
     

@@ -4,7 +4,7 @@ import os
 import time
 from concurrent.futures import Future
 from dataclasses import dataclass
-from io_mod import SEEK_END, SEEK_SET, BytesIO
+from io import SEEK_END, SEEK_SET, BytesIO
 from pathlib import Path
 from threading import Lock, Thread
 from typing import Dict, List, Optional, Union

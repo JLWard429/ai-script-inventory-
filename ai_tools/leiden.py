@@ -7,7 +7,7 @@ that supports them.
 """
 
 import itertools
-from collections_mod import deque
+from collections import deque
 
 import networkx as nx
 from networkx.utils import not_implemented_for, py_random_state

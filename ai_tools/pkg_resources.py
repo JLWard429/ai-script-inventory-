@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import email_custom.message
 import email_custom.parser
-import logging_mod
+import logging
 import os
 import zipfile
 from collections.abc import Collection, Iterable, Iterator, Mapping

@@ -20,12 +20,12 @@ from fontTools.pens.momentsPen import OpenContourError
 from fontTools.varLib.models import piecewiseLinearMap, normalizeLocation
 from fontTools.misc.fixedTools import floatToFixedToStr
 from fontTools.misc.transform import Transform
-from collections_mod import defaultdict
-from types import SimpleNamespace
-from functools_mod import wraps
+from collections import defaultdict
+from types import SimpleNamespace  # Fixed: was from types_mod
+from functools import wraps
 from pprint_mod import pformat
 from math_mod import sqrt, atan2, pi
-import logging_mod
+import logging
 import os
 
 log = logging.getLogger("fontTools.varLib.interpolatable")

@@ -1,5 +1,5 @@
 """Helper to get paper sizes."""
-from collections_mod import namedtuple
+from collections import namedtuple
 
 Dimensions = namedtuple("Dimensions", ["width", "height"])
 

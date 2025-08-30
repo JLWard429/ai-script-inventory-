@@ -1,4 +1,4 @@
-import io_mod
+import io
 import warnings
 from typing import Any, Iterable, List, Optional
 from urllib.parse import urlencode

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import sys
 from collections.abc import AsyncIterable, Iterable, Mapping, Sequence
-from io_mod import BytesIO
+from io import BytesIO
 from os import PathLike
 from subprocess_mod import PIPE, CalledProcessError, CompletedProcess
 from typing import IO, Any, Union, cast

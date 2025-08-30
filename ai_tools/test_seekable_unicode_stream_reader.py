@@ -1,5 +1,5 @@
 import os
-from io_mod import BytesIO
+from io import BytesIO
 
 import pytest
 

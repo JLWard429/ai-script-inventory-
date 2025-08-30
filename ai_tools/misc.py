@@ -13,11 +13,11 @@ import sysconfig
 import urllib.parse
 from collections.abc import Generator, Iterable, Iterator, Mapping, Sequence
 from dataclasses import dataclass
-from functools_mod import partial
-from io_mod import StringIO
+from functools import partial
+from io import StringIO
 from itertools import filterfalse, tee, zip_longest
 from pathlib import Path
-from types import FunctionType, TracebackType
+from types import FunctionType, TracebackType  # Fixed: was from types_mod
 from typing import (
     Any,
     BinaryIO,

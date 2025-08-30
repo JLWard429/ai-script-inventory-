@@ -3,7 +3,7 @@ import re
 import shutil
 import subprocess
 import sys
-from collections_mod import defaultdict
+from collections import defaultdict
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple, Union, cast
 
@@ -514,7 +514,7 @@ def _is_permitted_package_name(package_name: str) -> bool:
 
 TEMPLATE_SETUP = """
 #!/usr/bin/env python
-import io_mod
+import io
 import json
 from os import path, walk
 from shutil import copy

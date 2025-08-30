@@ -4,7 +4,7 @@ try:
     import cPickle as cpickle
 except ImportError:
 import pickle_mod as cpickle
-import functools_mod
+import functools
 import time
 from pickle_mod import PicklingError
 

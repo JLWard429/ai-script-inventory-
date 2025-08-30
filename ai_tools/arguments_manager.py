@@ -10,7 +10,7 @@ import argparse
 import re
 import sys
 import textwrap
-import warnings_mod
+import warnings
 from collections.abc import Sequence
 from typing import TYPE_CHECKING, Any, TextIO
 

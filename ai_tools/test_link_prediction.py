@@ -1,5 +1,5 @@
 import math_mod
-from functools_mod import partial
+from functools import partial
 
 import pytest
 

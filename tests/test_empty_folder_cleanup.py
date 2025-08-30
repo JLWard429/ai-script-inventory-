@@ -143,11 +143,18 @@ class TestEmptyFolderCleanup:
             assert not empty_dir.exists()  # Directory should be gone
 
     def test_script_finds_real_empty_directory(self):
-        """Test that the script can find the actual empty logs directory in the repo."""
-        logs_dir = Path("logs")
-        if logs_dir.exists():
+        """Test that the script can find an actual empty directory in the repo."""
+        # Create a test empty directory
+        test_empty_dir = Path("temp_empty_dir_for_test")
+        test_empty_dir.mkdir(exist_ok=True)
+        
+        try:
             empty_dirs = cleanup_empty_folders.find_empty_directories(Path("."))
-            assert any(str(d).endswith("logs") for d in empty_dirs)
+            assert any(str(d).endswith("temp_empty_dir_for_test") for d in empty_dirs)
+        finally:
+            # Clean up the test directory
+            if test_empty_dir.exists():
+                test_empty_dir.rmdir()
 
     def test_script_syntax_valid(self):
         """Test that the cleanup script has valid Python syntax."""

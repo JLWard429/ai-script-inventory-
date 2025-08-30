@@ -6,7 +6,7 @@ import shutil
 import signal
 import sys
 import tarfile
-import warnings_mod
+import warnings
 from concurrent import futures
 from pathlib import Path
 from typing import Any, Callable

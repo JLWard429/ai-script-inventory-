@@ -7,10 +7,10 @@ so commands which don't always hit the network (e.g. list w/o --outdated or
 """
 
 from __future__ import annotations
-import logging_mod
+import logging
 import os
 import sys
-from functools_mod import lru_cache
+from functools import lru_cache
 from optparse import Values
 from typing import TYPE_CHECKING
 

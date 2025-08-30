@@ -4,7 +4,7 @@ parsing for all of the parsers defined in parsers.py
 """
 
 from datetime import datetime
-from io_mod import StringIO
+from io import StringIO
 
 import numpy as np
 import pytest

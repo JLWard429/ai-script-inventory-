@@ -4,7 +4,7 @@ from typing import (
     TYPE_CHECKING,
     Any,
 )
-import warnings_mod
+import warnings
 
 from pandas.compat._optional import import_optional_dependency
 from pandas.util._exceptions import find_stack_level

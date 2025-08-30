@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Investigation Core Module"""
 
+import json
 import os
 import sqlite3
-import json
 from pathlib import Path
+
 
 class InvestigationCore:
     """Core investigation functionality"""

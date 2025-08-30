@@ -1,6 +1,6 @@
 from __future__ import annotations
 import typing as t
-from io_mod import BytesIO
+from io import BytesIO
 from urllib.parse import parse_qsl
 
 from ._internal import _plain_int

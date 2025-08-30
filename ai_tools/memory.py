@@ -1,8 +1,8 @@
 from __future__ import annotations
-import warnings_mod
-from collections_mod import OrderedDict, deque
+import warnings
+from collections import OrderedDict, deque
 from dataclasses import dataclass, field
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing import Generic, NamedTuple, TypeVar
 
 from .. import (

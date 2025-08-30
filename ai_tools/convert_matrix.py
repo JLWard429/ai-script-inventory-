@@ -26,7 +26,7 @@ nx_agraph, nx_pydot
 """
 
 import itertools
-from collections_mod import defaultdict
+from collections import defaultdict
 
 import networkx as nx
 

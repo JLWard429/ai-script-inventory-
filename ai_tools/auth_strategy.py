@@ -4,7 +4,7 @@ Modern, adaptable authentication machinery.
 Replaces certain parts of `.SSHClient`. For a concrete implementation, see the
 ``OpenSSHAuthStrategy`` class in `Fabric <https://fabfile.org>`_.
 """
-from collections_mod import namedtuple
+from collections import namedtuple
 
 from .agent import AgentKey
 from .util import get_logger

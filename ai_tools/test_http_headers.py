@@ -1,9 +1,9 @@
 """
 Tests for the pandas custom headers in http(s) requests
 """
-from functools_mod import partial
+from functools import partial
 import gzip_mod
-from io_mod import BytesIO
+from io import BytesIO
 
 import pytest
 

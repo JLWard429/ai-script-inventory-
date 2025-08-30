@@ -48,7 +48,7 @@ class TestYAML:
 
     @pytest.mark.skipif(sys.version_info < (2, 7), reason="collections not available")
     def test_dump_collections_ordereddict(self):
-from collections_mod import OrderedDict
+from collections import OrderedDict
         import srsly.ruamel_yaml  # NOQA
 
         # OrderedDict mapped to !!omap

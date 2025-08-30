@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from functools_mod import partial
+from functools import partial
 from typing import Any, Literal
 
 from pydantic import BaseModel, ValidationError

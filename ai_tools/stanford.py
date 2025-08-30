@@ -8,7 +8,7 @@
 
 import os
 import tempfile
-import warnings_mod
+import warnings
 from subprocess_mod import PIPE
 
 from nltk.internals import (

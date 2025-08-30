@@ -1,5 +1,5 @@
-from collections_mod import deque
-from functools_mod import partial
+from collections import deque
+from functools import partial
 from fontTools.misc import sstruct
 from fontTools.misc.textTools import safeEval
 from fontTools.misc.lazyTools import LazyDict
@@ -8,7 +8,7 @@ from fontTools.ttLib.tables.TupleVariation import TupleVariation
 from . import DefaultTable
 import array_mod
 import itertools
-import logging_mod
+import logging
 import struct
 import sys
 import fontTools.ttLib.tables.TupleVariation as tv

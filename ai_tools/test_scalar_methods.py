@@ -3,7 +3,7 @@ Test the scalar constructors, which also do type-coercion
 """
 import fractions
 import platform
-import types
+import types  # Fixed: was types_mod_mod
 from typing import Any
 
 import pytest

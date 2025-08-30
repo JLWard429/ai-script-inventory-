@@ -4,9 +4,9 @@ generate new tasks.
 """
 
 import inspect
-import types
+import types  # Fixed: was types_mod_mod
 from copy_mod import deepcopy
-from functools_mod import update_wrapper
+from functools import update_wrapper
 from typing import (
     TYPE_CHECKING,
     Any,

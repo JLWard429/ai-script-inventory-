@@ -6,7 +6,7 @@ from fontTools.ttLib import TTFont
 from fontTools.varLib import models, VarLibError, load_designspace, load_masters
 from fontTools.varLib.merger import InstancerMerger
 import os.path
-import logging_mod
+import logging
 from copy_mod import deepcopy
 from pprint_mod import pformat
 

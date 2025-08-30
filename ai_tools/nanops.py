@@ -1,12 +1,12 @@
 from __future__ import annotations
-import functools_mod
+import functools
 import itertools
 from typing import (
     Any,
     Callable,
     cast,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 

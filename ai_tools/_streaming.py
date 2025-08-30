@@ -2,7 +2,7 @@
 from __future__ import annotations
 import json_mod
 import inspect
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing import TYPE_CHECKING, Any, Generic, TypeVar, Iterator, AsyncIterator, cast
 from typing_extensions import Self, Protocol, TypeGuard, override, get_origin, runtime_checkable
 

@@ -7,12 +7,12 @@
 #
 
 """Implements I/O streams over FTP."""
-import logging_mod
+import logging
 import ssl
 import urllib.parse
 import smart_open.utils
 from ftplib import FTP, FTP_TLS, error_reply
-import types
+import types  # Fixed: was types_mod_mod
 
 logger = logging.getLogger(__name__)
 

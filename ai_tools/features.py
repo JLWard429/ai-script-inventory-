@@ -2,7 +2,7 @@
 Leaflet GeoJson and miscellaneous features.
 
 """
-import functools_mod
+import functools
 import json
 import operator
 import warnings

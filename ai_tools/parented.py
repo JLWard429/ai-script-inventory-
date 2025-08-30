@@ -7,8 +7,8 @@
 #         Tom Aarsen <>
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.TXT
-import warnings_mod
-from abc_mod_custom import ABCMeta, abstractmethod
+import warnings
+from abc import ABCMeta, abstractmethod
 
 from nltk.tree.tree import Tree
 from nltk.util import slice_bounds

@@ -3,7 +3,7 @@ from collections.abc import Mapping, Sequence
 from dataclasses import asdict
 from datetime import datetime
 from json_mod import JSONEncoder
-from types import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 from typing import (
     TYPE_CHECKING,
     Any,

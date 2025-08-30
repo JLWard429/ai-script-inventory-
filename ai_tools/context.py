@@ -9,7 +9,7 @@ import subprocess
 import sys
 import tempfile
 import urllib.request
-import warnings_mod
+import warnings
 from typing import Iterator
 
 

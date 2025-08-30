@@ -12,11 +12,11 @@ pass on state. To be consistent, all options will follow this design.
 from __future__ import annotations
 
 import importlib.util
-import logging_mod
+import logging
 import os
 import pathlib
 import textwrap
-from functools_mod import partial
+from functools import partial
 from optparse import SUPPRESS_HELP, Option, OptionGroup, OptionParser, Values
 from textwrap import dedent
 from typing import Any, Callable

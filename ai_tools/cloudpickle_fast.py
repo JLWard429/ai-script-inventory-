@@ -18,11 +18,11 @@ import itertools
 import logging
 import sys
 import struct
-import types
+import types  # Fixed: was types_mod_mod
 import weakref
 import typing
 from enum import Enum
-from collections_mod import ChainMap, OrderedDict
+from collections import ChainMap, OrderedDict
 
 from .compat import pickle, Pickler
 from .cloudpickle import (
@@ -320,7 +320,7 @@ def _classmethod_reduce(obj):
 
 def _file_reduce(obj):
     """Save a file"""
-import io_mod
+import io
 
     if not hasattr(obj, "name") or not hasattr(obj, "mode"):
         raise pickle.PicklingError(

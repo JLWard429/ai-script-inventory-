@@ -15,7 +15,7 @@ The input is assumed to be in Malt-TAB format
 """
 import subprocess_mod
 import warnings
-from collections_mod import defaultdict
+from collections import defaultdict
 from itertools import chain
 from pprint_mod import pformat
 

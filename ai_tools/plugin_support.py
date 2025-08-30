@@ -9,7 +9,7 @@ import os
 import os.path
 import sys
 from collections.abc import Iterable, Iterator
-from types import FrameType
+from types import FrameType  # Fixed: was from types_mod
 from typing import Any, Callable
 
 from coverage.exceptions import PluginError

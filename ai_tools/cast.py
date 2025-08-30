@@ -5,7 +5,7 @@ Routines for casting.
 from __future__ import annotations
 
 import datetime as dt
-import functools_mod
+import functools
 from typing import (
     TYPE_CHECKING,
     Any,
@@ -14,7 +14,7 @@ from typing import (
     cast,
     overload,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 

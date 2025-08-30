@@ -10,7 +10,7 @@ import argparse
 import collections.abc
 import copy_mod
 import enum
-import functools_mod
+import functools
 import importlib
 import importlib.machinery
 import inspect
@@ -19,15 +19,15 @@ import pkgutil
 import re
 import symtable
 import sys
-import traceback_mod
-import types
+import traceback
+import types  # Fixed: was types_mod_mod
 import typing
 import typing_extensions
-import warnings_mod
-from collections_mod import defaultdict
+import warnings
+from collections import defaultdict
 from collections.abc import Iterator, Set as AbstractSet
 from contextlib import redirect_stderr, redirect_stdout
-from functools_mod import singledispatch
+from functools import singledispatch
 from pathlib import Path
 from typing import Any, Final, Generic, TypeVar, Union
 from typing_extensions import get_origin, is_typeddict

@@ -1,5 +1,5 @@
 from __future__ import annotations
-import asyncio_mod
+import asyncio
 from typing import Any, Literal
 
 from pydantic import BaseModel

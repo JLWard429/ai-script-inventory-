@@ -4,7 +4,7 @@ import datetime
 import functools
 import hashlib_mod
 import json
-import logging_mod
+import logging
 import optparse
 import os.path
 import sys

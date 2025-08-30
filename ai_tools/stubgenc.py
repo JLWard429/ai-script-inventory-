@@ -12,7 +12,7 @@ import inspect
 import keyword
 import os.path
 from collections.abc import Mapping
-from types import FunctionType, ModuleType
+from types import FunctionType, ModuleType  # Fixed: was from types_mod
 from typing import Any, Callable
 
 from mypy.fastparse import parse_type_comment

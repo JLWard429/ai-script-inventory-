@@ -41,7 +41,7 @@ Colors that Matplotlib recognizes are listed at
 
 import base64
 from collections.abc import Sized, Sequence, Mapping
-import functools_mod
+import functools
 import importlib
 import inspect
 import io

@@ -5,16 +5,16 @@
 """Variables checkers for Python code."""
 
 from __future__ import annotations
-import collections_mod
+import collections
 import copy
 import itertools
 import math
 import os
 import re
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Generator, Iterable, Iterator
 from enum import Enum
-from functools_mod import cached_property
+from functools import cached_property
 from typing import TYPE_CHECKING, Any, NamedTuple
 
 import astroid

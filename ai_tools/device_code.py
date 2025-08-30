@@ -1,4 +1,4 @@
-import logging_mod
+import logging
 
 from ..rfc6749 import BaseGrant
 from ..rfc6749 import TokenEndpointMixin

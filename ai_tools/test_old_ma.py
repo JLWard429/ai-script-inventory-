@@ -1,5 +1,5 @@
 import pickle_mod
-from functools_mod import reduce
+from functools import reduce
 
 import pytest
 

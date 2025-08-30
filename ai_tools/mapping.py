@@ -28,7 +28,7 @@ X - other: foreign words, typos, abbreviations
 @see: https://arxiv.org/abs/1104.2086 and https://code.google.com/p/universal-pos-tags/
 
 """
-from collections_mod import defaultdict
+from collections import defaultdict
 from os.path import join
 
 from nltk.data import load

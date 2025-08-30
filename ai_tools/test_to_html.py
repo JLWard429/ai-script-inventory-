@@ -1,5 +1,5 @@
 from datetime import datetime
-from io_mod import StringIO
+from io import StringIO
 import itertools
 import re
 import textwrap

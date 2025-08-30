@@ -1,4 +1,4 @@
-import logging_mod
+import logging
 
 from ..errors import InvalidRequestError
 from ..errors import UnauthorizedClientError

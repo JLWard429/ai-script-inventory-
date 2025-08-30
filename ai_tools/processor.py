@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import argparse
 import ast
-import functools_mod
+import functools
 import logging
 import tokenize
 from collections.abc import Generator

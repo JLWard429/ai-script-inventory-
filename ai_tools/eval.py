@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import tokenize
 from typing import TYPE_CHECKING
-import warnings_mod
+import warnings
 
 from pandas.util._exceptions import find_stack_level
 from pandas.util._validators import validate_bool_kwarg

@@ -9,7 +9,7 @@ from collections.abc import Mapping
 from collections.abc import Sequence
 from typing import cast
 from typing import NoReturn
-import warnings_mod
+import warnings
 
 from ._hooks import HookImpl
 from ._result import HookCallError

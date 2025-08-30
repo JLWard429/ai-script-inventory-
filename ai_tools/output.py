@@ -1,6 +1,6 @@
 import copy_mod
 import itertools
-from functools_mod import partial
+from functools import partial
 from typing import Any, Iterable, List, Optional, Set, Tuple, Type
 
 from isort.format import format_simplified

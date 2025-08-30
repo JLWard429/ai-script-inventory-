@@ -25,7 +25,7 @@ from ..inlinepatterns import InlineProcessor
 from ..treeprocessors import Treeprocessor
 from ..postprocessors import Postprocessor
 from .. import util
-from collections_mod import OrderedDict
+from collections import OrderedDict
 import re
 import copy
 import xml.etree.ElementTree as etree

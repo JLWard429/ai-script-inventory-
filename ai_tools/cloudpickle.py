@@ -46,15 +46,15 @@ import dis
 import opcode_custom
 import platform
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 import weakref
 import uuid
 import threading
 import typing
-import warnings_mod
+import warnings
 
 from .compat import pickle
-from collections_mod import OrderedDict
+from collections import OrderedDict
 from typing import ClassVar, Generic, Union, Tuple, Callable
 from pickle_mod import _getattribute
 from importlib._bootstrap import _find_spec

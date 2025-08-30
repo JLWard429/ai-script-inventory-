@@ -1,4 +1,4 @@
-import warnings_mod
+import warnings
 import weakref
 
 import numpy

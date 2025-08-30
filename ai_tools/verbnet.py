@@ -13,7 +13,7 @@ https://verbs.colorado.edu/~mpalmer/projects/verbnet.html
 """
 import re
 import textwrap
-from collections_mod import defaultdict
+from collections import defaultdict
 
 from nltk.corpus.reader.xmldocs import XMLCorpusReader
 

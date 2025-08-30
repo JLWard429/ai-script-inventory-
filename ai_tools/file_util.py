@@ -102,7 +102,7 @@ def copy_file(  # noqa: C901
     # (not update) and (src newer than dst).
 
     from distutils._modified import newer
-from stat_mod import S_IMODE, ST_ATIME, ST_MODE, ST_MTIME
+from stat import S_IMODE, ST_ATIME, ST_MODE, ST_MTIME
 
     if not os.path.isfile(src):
         raise DistutilsFileError(

@@ -2,15 +2,15 @@ from __future__ import annotations
 
 import contextlib
 import errno
-import logging_mod
+import logging
 import logging.handlers
 import os
 import sys
 import threading
 from collections.abc import Generator
 from dataclasses import dataclass
-from io_mod import TextIOWrapper
-from logging_mod import Filter
+from io import TextIOWrapper
+from logging import Filter
 from typing import Any, ClassVar
 
 from pip._vendor.rich.console import (

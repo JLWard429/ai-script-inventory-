@@ -1,5 +1,5 @@
-from collections_mod import namedtuple
-import io_mod
+from collections import namedtuple
+import io
 
 import numpy as np
 from numpy.testing import assert_allclose

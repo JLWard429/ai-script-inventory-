@@ -1,7 +1,7 @@
 """ test parquet compat """
 import datetime
 from decimal import Decimal
-from io_mod import BytesIO
+from io import BytesIO
 import os
 import pathlib
 

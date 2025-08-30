@@ -5,7 +5,7 @@
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.TXT
 import unittest_mod
-from collections_mod import Counter
+from collections import Counter
 from timeit import timeit
 
 from nltk.lm import Vocabulary

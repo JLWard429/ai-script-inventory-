@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-import types_mod
+import types
 import weakref
 from collections.abc import Iterable, Iterator, Mapping
 from typing import Final

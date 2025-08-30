@@ -5,8 +5,8 @@
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.txt
 import re
-from collections_mod import defaultdict
-from functools_mod import reduce
+from collections import defaultdict
+from functools import reduce
 
 from nltk.corpus.reader import CorpusReader
 

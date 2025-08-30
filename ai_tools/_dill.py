@@ -36,7 +36,7 @@ __all__ = [
 ]
 
 __module__ = 'dill'
-import warnings_mod
+import warnings
 from .logger import adapter as logger
 from .logger import trace as _trace
 log = logger # backward compatibility (see issue #582)
@@ -64,7 +64,7 @@ try:
 except ImportError:
     ThreadHandleType = None
 #from io import IOBase
-from types import CodeType, FunctionType, MethodType, GeneratorType, \
+from types import CodeType, FunctionType, MethodType, GeneratorType, \  # Fixed: was from types_mod
     TracebackType, FrameType, ModuleType, BuiltinMethodType
 BufferType = memoryview #XXX: unregistered
 ClassType = type # no 'old-style' classes
@@ -74,24 +74,24 @@ NotImplementedType = type(NotImplemented)
 SliceType = slice
 TypeType = type # 'new-style' classes #XXX: unregistered
 XRangeType = range
-from types import MappingProxyType as DictProxyType, new_class
+from types import MappingProxyType as DictProxyType, new_class  # Fixed: was from types_mod
 from pickle_mod import DEFAULT_PROTOCOL, HIGHEST_PROTOCOL, PickleError, PicklingError, UnpicklingError
 import __main__ as _main_module
 import marshal
 import gc
 # import zlib
-import abc_mod_custom_custom
+import abc_custom
 import dataclasses
 from weakref import ReferenceType, ProxyType, CallableProxyType
-from collections_mod import OrderedDict
+from collections import OrderedDict
 from enum import Enum, EnumMeta
-from functools_mod import partial
+from functools import partial
 from operator import itemgetter, attrgetter
 GENERATOR_FAIL = False
 import importlib.machinery
 EXTENSION_SUFFIXES = tuple(importlib.machinery.EXTENSION_SUFFIXES)
 try:
-import ctypes_mod
+import ctypes
     HAS_CTYPES = True
     # if using `pypy`, pythonapi is not found
     IS_PYPY = not hasattr(ctypes, 'pythonapi')
@@ -138,7 +138,7 @@ else:
     def ndarraysubclassinstance(obj): return False
     def numpyufunc(obj): return False
     def numpydtype(obj): return False
-from types import GetSetDescriptorType, ClassMethodDescriptorType, \
+from types import GetSetDescriptorType, ClassMethodDescriptorType, \  # Fixed: was from types_mod
      WrapperDescriptorType,  MethodDescriptorType, MemberDescriptorType, \
      MethodWrapperType #XXX: unused
 
@@ -150,7 +150,7 @@ ItemGetterType = type(itemgetter(0))
 AttrGetterType = type(attrgetter('__repr__'))
 
 try:
-from functools_mod import _lru_cache_wrapper as LRUCacheType
+from functools import _lru_cache_wrapper as LRUCacheType
 except ImportError:
     LRUCacheType = None
 
@@ -179,7 +179,7 @@ try:
     PyBufferedWriterType = get_file_type('wb', buffering=-1, open=_open)
 except ImportError:
     PyTextWrapperType = PyBufferedRandomType = PyBufferedReaderType = PyBufferedWriterType = None
-from io_mod import BytesIO as StringIO
+from io import BytesIO as StringIO
 InputType = OutputType = None
 from socket import socket as SocketType
 #FIXME: additionally calls ForkingPickler.register several times
@@ -504,7 +504,7 @@ def use_diff(on=True):
         diff = d
 
 def _create_typemap():
-import types
+import types  # Fixed: was types_mod_mod
     d = dict(list(__builtin__.__dict__.items()) + \
              list(types.__dict__.items())).items()
     for key, value in d:
@@ -570,7 +570,7 @@ if sys.hexversion >= 0x30a00a0:
 '''
 
 if sys.hexversion >= 0x30b00b0 and not IS_PYPY:
-from types import GenericAlias
+from types import GenericAlias  # Fixed: was from types_mod
     _incedental_reverse_typemap["GenericAliasIteratorType"] = type(iter(GenericAlias(list, (int,))))
     '''
     _incedental_reverse_typemap['PositionsIteratorType'] = type(compile('3', '', 'eval').co_positions())
@@ -961,7 +961,7 @@ def _create_cell(contents=None):
 def _create_weakref(obj, *args):
     from weakref import ref
     if obj is None: # it's dead
-from collections_mod import UserDict
+from collections import UserDict
         return ref(UserDict(), *args)
     return ref(obj, *args)
 
@@ -969,7 +969,7 @@ def _create_weakproxy(obj, callable=False, *args):
     from weakref import proxy
     if obj is None: # it's dead
         if callable: return proxy(lambda x:x, *args)
-from collections_mod import UserDict
+from collections import UserDict
         return proxy(UserDict(), *args)
     return proxy(obj, *args)
 
@@ -994,7 +994,7 @@ def _create_namedtuple(name, fieldnames, modulename, defaults=None):
     class_ = _import_module(modulename + '.' + name, safe=True)
     if class_ is not None:
         return class_
-import collections_mod
+import collections
     t = collections.namedtuple(name, fieldnames, defaults=defaults, module=modulename)
     return t
 
@@ -1475,7 +1475,7 @@ if InputType:
         return
 
 if LRUCacheType is not None:
-from functools_mod import lru_cache
+from functools import lru_cache
     @register(LRUCacheType)
     def save_lru_cache(pickler, obj):
         logger.trace(pickler, "LRU: %s", obj)

@@ -10,7 +10,7 @@ import shutil
 import socket
 import sys
 import warnings
-from io_mod import StringIO
+from io import StringIO
 from pathlib import Path
 from typing import Union
 

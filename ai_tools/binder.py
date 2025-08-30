@@ -1,5 +1,5 @@
 from __future__ import annotations
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Iterator
 from contextlib import contextmanager
 from typing import NamedTuple, Optional, Union

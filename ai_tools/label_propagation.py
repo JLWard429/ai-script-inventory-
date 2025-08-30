@@ -1,7 +1,7 @@
 """
 Label propagation community detection algorithms.
 """
-from collections_mod import Counter, defaultdict, deque
+from collections import Counter, defaultdict, deque
 
 import networkx as nx
 from networkx.utils import groups, not_implemented_for, py_random_state

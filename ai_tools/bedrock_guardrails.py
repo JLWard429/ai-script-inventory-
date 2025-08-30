@@ -665,7 +665,7 @@ class BedrockGuardrail(CustomGuardrail, BaseAWSLLM):
         Collect content from the stream and make parallel bedrock api requests to get the guardrail responses.
         """
         # Import here to avoid circular imports
-import asyncio_mod
+import asyncio
 
         from litellm.llms.base_llm.base_model_iterator import MockResponseIterator
         from litellm.main import stream_chunk_builder

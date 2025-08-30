@@ -1,5 +1,5 @@
 """_g_l_y_f.py -- Converter classes for the 'glyf' table."""
-from collections_mod import namedtuple
+from collections import namedtuple
 from fontTools.misc import sstruct
 from fontTools import ttLib
 from fontTools import version
@@ -28,8 +28,8 @@ from fontTools.misc import xmlWriter
 from fontTools.misc.filenames import userNameToFileName
 from fontTools.misc.loggingTools import deprecateFunction
 from enum import IntFlag
-from functools_mod import partial
-from types import SimpleNamespace
+from functools import partial
+from types import SimpleNamespace  # Fixed: was from types_mod
 from typing import Set
 
 log = logging.getLogger(__name__)

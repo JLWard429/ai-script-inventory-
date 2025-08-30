@@ -1,4 +1,4 @@
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing import Optional, Type
 
 from .console import Console, RenderableType

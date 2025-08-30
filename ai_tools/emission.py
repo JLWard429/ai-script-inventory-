@@ -1,5 +1,5 @@
 from concurrent.futures import Future
-import logging_mod
+import logging
 from pathlib import Path
 import re
 import shutil

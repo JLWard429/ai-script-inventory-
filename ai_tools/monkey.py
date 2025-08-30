@@ -7,7 +7,7 @@ from __future__ import annotations
 import inspect
 import platform
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 from typing import TypeVar, cast, overload
 
 import distutils.filelist

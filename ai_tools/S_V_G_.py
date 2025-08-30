@@ -22,7 +22,7 @@ from fontTools.misc import sstruct
 from . import DefaultTable
 from collections.abc import Sequence
 from dataclasses import dataclass, astuple
-from io_mod import BytesIO
+from io import BytesIO
 import struct
 import logging
 

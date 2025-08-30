@@ -15,10 +15,10 @@ import sys
 import time
 import typing as t
 from gettext import gettext as _
-from io_mod import StringIO
+from io import StringIO
 from pathlib import Path
 from shutil import which
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 
 from ._compat import _default_text_stdout
 from ._compat import CYGWIN

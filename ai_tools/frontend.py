@@ -12,7 +12,7 @@ from __future__ import annotations
 
 import datetime
 import fnmatch
-import logging_mod
+import logging
 import optparse
 import os
 import re
@@ -21,7 +21,7 @@ import sys
 import tempfile
 import warnings
 from configparser import RawConfigParser
-from io_mod import StringIO
+from io import StringIO
 from typing import BinaryIO, Iterable, Literal
 
 from babel import Locale, localedata

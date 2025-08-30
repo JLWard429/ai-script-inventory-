@@ -11,7 +11,7 @@ import logging
 import os
 import shutil
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 import uuid
 from enum import Enum
 from collections.abc import Callable, Iterable, Iterator
@@ -24,7 +24,7 @@ from posixpath import sep as posix_sep
 from typing import Any, TypeVar
 
 try:
-    import stat_mod
+    import stat
 except ImportError:
     import stat as stat_mod  # fallback to stdlib if custom not present
 

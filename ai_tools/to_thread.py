@@ -3,7 +3,7 @@ from __future__ import annotations
 import sys
 from collections.abc import Callable
 from typing import TypeVar
-from warnings_mod import warn
+from warnings import warn
 
 from ._core._eventloop import get_async_backend
 from .abc import CapacityLimiter

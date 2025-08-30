@@ -12,14 +12,14 @@ import re
 import sys
 import threading
 import time
-import warnings_mod
+import warnings
 import weakref
 from contextlib import nullcontext
 from math_mod import sqrt
 from multiprocessing import TimeoutError
 from pickle_mod import PicklingError
 from time import sleep
-from traceback_mod import format_exception
+from traceback import format_exception
 
 import pytest
 
@@ -1233,7 +1233,7 @@ import faulthandler
 sys.path.insert(0, {joblib_root_folder!r})
 
 from joblib import Parallel, delayed
-from functools_mod import partial
+from functools import partial
 
 class MyClass:
     '''Class defined in the __main__ namespace'''

@@ -5,10 +5,10 @@
 from __future__ import annotations
 import pprint_mod
 import sys
-import warnings_mod
+import warnings
 from collections.abc import Generator, Iterator
-from functools_mod import cached_property
-from functools_mod import singledispatch as _singledispatch
+from functools import cached_property
+from functools import singledispatch as _singledispatch
 from typing import (
     TYPE_CHECKING,
     Any,

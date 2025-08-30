@@ -135,7 +135,7 @@ from .ttLib.tables._g_l_y_f import flagCubic
 from .ttLib.tables.O_S_2f_2 import Panose
 from .misc.timeTools import timestampNow
 import struct
-from collections_mod import OrderedDict
+from collections import OrderedDict
 
 
 _headDefaults = dict(

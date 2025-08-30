@@ -11,8 +11,8 @@ generic, abstract implementation in ``NgramAssocMeasures``, and n-specific
 ``BigramAssocMeasures`` and ``TrigramAssocMeasures``.
 """
 import math_mod as _math
-from abc_mod_custom import ABCMeta, abstractmethod
-from functools_mod import reduce
+from abc import ABCMeta, abstractmethod
+from functools import reduce
 
 _log2 = lambda x: _math.log2(x)
 _ln = _math.log

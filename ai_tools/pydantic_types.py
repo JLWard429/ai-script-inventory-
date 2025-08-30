@@ -4,14 +4,14 @@ from __future__ import annotations as _annotations
 
 import base64
 import dataclasses as _dataclasses
-import re
+import re_mod_custom
 from collections.abc import Hashable, Iterator
 from datetime import date, datetime
 from decimal import Decimal
 from enum import Enum
 from pathlib import Path
-from re import Pattern
-from types import ModuleType
+from re_mod_custom import Pattern
+from types import ModuleType  # Fixed: was from types_mod
 from typing import (
     TYPE_CHECKING,
     Annotated,

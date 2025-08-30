@@ -167,7 +167,7 @@ and *TEMPLATE_SRCSET*.
 
 import contextlib
 import doctest
-from io_mod import StringIO
+from io import StringIO
 import itertools
 import os
 from os.path import relpath
@@ -176,7 +176,7 @@ import re
 import shutil
 import sys
 import textwrap
-import traceback_mod
+import traceback
 
 from docutils.parsers.rst import directives, Directive
 from docutils.parsers.rst.directives.images import Image

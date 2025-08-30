@@ -8,7 +8,7 @@ A module for parsing and generating `fontconfig patterns`_.
 # This class logically belongs in `matplotlib.font_manager`, but placing it
 # there would have created cyclical dependency problems, because it also needs
 # to be available from `matplotlib.rcsetup` (for parsing matplotlibrc files).
-from functools_mod import lru_cache, partial
+from functools import lru_cache, partial
 import re
 
 from pyparsing import (

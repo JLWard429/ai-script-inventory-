@@ -1,8 +1,8 @@
-import abc_mod_custom_custom
-from collections_mod import defaultdict
+import abc_custom
+from collections import defaultdict
 import collections.abc
 from contextlib import contextmanager
-from io_mod import BufferedRandom, BufferedReader, BufferedWriter, FileIO, TextIOWrapper
+from io import BufferedRandom, BufferedReader, BufferedWriter, FileIO, TextIOWrapper
 import os
 from pathlib import (  # type: ignore
     Path,
@@ -35,7 +35,7 @@ from typing import (
     Union,
 )
 from urllib.parse import urlparse
-from warnings_mod import warn
+from warnings import warn
 
 if TYPE_CHECKING:
     from _typeshed import (

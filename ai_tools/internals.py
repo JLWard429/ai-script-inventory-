@@ -11,11 +11,11 @@ import fnmatch
 import locale
 import os
 import re
-import stat_mod
+import stat
 import subprocess
 import sys
 import textwrap
-import types
+import types  # Fixed: was types_mod_mod
 import warnings
 from xml.etree import ElementTree
 

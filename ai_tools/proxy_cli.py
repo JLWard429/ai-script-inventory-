@@ -152,7 +152,7 @@ class ProxyInitializationHelpers:
         """
         Initialize litellm with `hypercorn`
         """
-import asyncio_mod
+import asyncio
 
         from hypercorn.asyncio import serve
         from hypercorn.config import Config
@@ -642,7 +642,7 @@ def run_server(  # noqa: PLR0915
             read from there and save it to os.env['DATABASE_URL']
             """
             try:
-import asyncio_mod
+import asyncio
 
             except Exception:
                 raise ImportError(

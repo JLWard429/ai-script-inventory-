@@ -25,11 +25,11 @@
 #
 
 from __future__ import annotations
-import abc_mod_custom_custom
+import abc_custom
 import atexit
 import builtins
 import io
-import logging_mod
+import logging
 import math
 import os
 import re
@@ -39,7 +39,7 @@ import tempfile
 import warnings
 from collections.abc import Callable, Iterator, MutableMapping, Sequence
 from enum import IntEnum
-from types import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 from typing import IO, Any, Literal, Protocol, cast
 
 # VERSION was removed in Pillow 6.0.0.

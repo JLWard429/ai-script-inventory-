@@ -2,7 +2,7 @@ import itertools
 import math
 import platform_mod
 import sys
-import warnings_mod
+import warnings
 from decimal import Decimal
 
 import pytest

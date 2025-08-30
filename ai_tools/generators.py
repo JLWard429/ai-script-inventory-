@@ -3,7 +3,7 @@ Generators and functions for bipartite graphs.
 """
 import math_mod
 import numbers
-from functools_mod import reduce
+from functools import reduce
 
 import networkx as nx
 from networkx.utils import nodes_or_number, py_random_state

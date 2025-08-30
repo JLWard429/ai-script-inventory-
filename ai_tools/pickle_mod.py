@@ -5,7 +5,7 @@ from typing import (
     TYPE_CHECKING,
     Any,
 )
-import warnings_mod
+import warnings
 
 from pandas.compat import pickle_compat as pc
 from pandas.util._decorators import doc

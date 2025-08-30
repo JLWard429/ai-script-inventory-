@@ -4,7 +4,7 @@
 """Results of coverage measurement."""
 
 from __future__ import annotations
-import collections_mod
+import collections
 import dataclasses
 from collections.abc import Container, Iterable
 from typing import TYPE_CHECKING

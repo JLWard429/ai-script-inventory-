@@ -30,13 +30,13 @@ access to OS distribution information is needed. See `Python issue 1322
 
 import argparse
 import json
-import logging_mod
+import logging
 import os
 import re
 import shlex
 import subprocess_mod
 import sys
-import warnings_mod
+import warnings
 from typing import (
     Any,
     Callable,
@@ -627,7 +627,7 @@ def uname_attr(attribute: str) -> str:
 
 
 try:
-from functools_mod import cached_property
+from functools import cached_property
 except ImportError:
     # Python < 3.8
     class cached_property:  # type: ignore

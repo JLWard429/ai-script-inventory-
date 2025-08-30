@@ -10,7 +10,7 @@ test pickling registered objects
 
 import dill
 from dill._objects import failures, registered, succeeds
-import warnings_mod
+import warnings
 warnings.filterwarnings('ignore')
 
 def check(d, ok=True):
@@ -45,7 +45,7 @@ except AssertionError as e:
     raise e from None
 
 import builtins
-import types
+import types  # Fixed: was types_mod_mod
 q = dill._dill._reverse_typemap
 p = {k:v for k,v in q.items() if k not in vars(builtins) and k not in vars(types)}
 

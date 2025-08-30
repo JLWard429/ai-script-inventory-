@@ -11,7 +11,7 @@ import datetime
 # Implicit import within threads may cause LookupError when standard library is in a ZIP,
 # such as in Embedded Python. See https://github.com/psf/requests/issues/3578.
 import encodings.idna  # noqa: F401
-from io_mod import UnsupportedOperation
+from io import UnsupportedOperation
 
 from pip._vendor.urllib3.exceptions import (
     DecodeError,

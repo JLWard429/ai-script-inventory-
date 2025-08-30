@@ -6,7 +6,7 @@ Notes:
 - Do not create tasks that sleep, that can saturate the event loop
 - Do not store large objects (eg. messages in memory) that can increase RAM usage
 """
-import asyncio_mod
+import asyncio
 from typing import TYPE_CHECKING, Any, Optional
 
 import litellm

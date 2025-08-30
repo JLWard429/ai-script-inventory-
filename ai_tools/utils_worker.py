@@ -1,7 +1,7 @@
 """
 IO/concurrency helpers for `tqdm.contrib`.
 """
-from collections_mod import deque
+from collections import deque
 from concurrent.futures import ThreadPoolExecutor
 
 from ..auto import tqdm as tqdm_auto

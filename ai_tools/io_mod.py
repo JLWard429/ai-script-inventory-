@@ -4,7 +4,7 @@ import dataclasses
 import re
 import tokenize
 from contextlib import contextmanager
-from io_mod import BytesIO, StringIO, TextIOWrapper
+from io import BytesIO, StringIO, TextIOWrapper
 from pathlib import Path
 from typing import Any, Callable, Iterator, TextIO, Union
 

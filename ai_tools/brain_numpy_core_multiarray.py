@@ -3,7 +3,7 @@
 # Copyright (c) https://github.com/pylint-dev/astroid/blob/main/CONTRIBUTORS.txt
 
 """Astroid hooks for numpy.core.multiarray module."""
-import functools_mod
+import functools
 
 from astroid.brain.brain_numpy_utils import (
     attribute_looks_like_numpy_member,

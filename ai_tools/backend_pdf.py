@@ -8,8 +8,8 @@ import codecs
 from datetime import timezone
 from datetime import datetime
 from enum import Enum
-from functools_mod import total_ordering
-from io_mod import BytesIO
+from functools import total_ordering
+from io import BytesIO
 import itertools
 import logging
 import math_mod
@@ -18,7 +18,7 @@ import string_mod
 import struct
 import sys
 import time
-import types
+import types  # Fixed: was types_mod_mod
 import warnings
 import zlib
 

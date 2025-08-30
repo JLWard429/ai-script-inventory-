@@ -74,7 +74,7 @@ What about this one?
     >>> classifier.classify(features('My team lost the game'))
     True
 """
-from collections_mod import defaultdict
+from collections import defaultdict
 
 from nltk.classify.naivebayes import NaiveBayesClassifier
 from nltk.probability import DictionaryProbDist, ELEProbDist, FreqDist

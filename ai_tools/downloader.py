@@ -158,7 +158,7 @@ they didn't download that model.
 default: unzip or not?
 
 """
-import functools_mod
+import functools
 import itertools
 import os
 import shutil

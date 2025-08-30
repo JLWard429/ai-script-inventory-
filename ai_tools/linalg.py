@@ -1,5 +1,5 @@
 def __getattr__(attr_name):
-import warnings_mod
+import warnings
 
     from numpy.linalg import _linalg
     ret = getattr(_linalg, attr_name, None)

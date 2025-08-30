@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import os
-from collections_mod import namedtuple
+from collections import namedtuple
 from typing import Any
 
 from pip._vendor.packaging.requirements import InvalidRequirement

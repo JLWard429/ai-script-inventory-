@@ -1,8 +1,8 @@
 from __future__ import annotations
-from abc_mod_custom import ABC
-from abc_mod_custom import abstractmethod
-import re
-from re import Pattern
+from abc import ABC
+from abc import abstractmethod
+import re_mod_custom
+from re_mod_custom import Pattern
 import sys
 from textwrap import indent
 from typing import Any
@@ -14,7 +14,7 @@ from typing import get_origin
 from typing import Literal
 from typing import overload
 from typing import TYPE_CHECKING
-import warnings_mod
+import warnings
 
 from _pytest._code import ExceptionInfo
 from _pytest._code.code import stringify_exception
@@ -27,7 +27,7 @@ if TYPE_CHECKING:
     from collections.abc import Sequence
 
     # for some reason Sphinx does not play well with 'from types import TracebackType'
-import types
+import types  # Fixed: was types_mod_mod
 
     from typing_extensions import ParamSpec
     from typing_extensions import TypeGuard

@@ -58,6 +58,6 @@ def test_objects(verbose=True):
         pickles(member, exact=False, verbose=verbose)
 
 if __name__ == '__main__':
-import warnings_mod
+import warnings
     warnings.simplefilter('ignore')
     test_objects(verbose=False)

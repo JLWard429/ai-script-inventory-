@@ -7,7 +7,7 @@
 # For license information, see LICENSE.TXT
 
 import operator
-from functools_mod import reduce
+from functools import reduce
 from itertools import chain
 
 from nltk.sem.logic import (

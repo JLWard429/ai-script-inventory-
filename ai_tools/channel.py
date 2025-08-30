@@ -25,7 +25,7 @@ import os
 import socket
 import time
 import threading
-from functools_mod import wraps
+from functools import wraps
 
 from paramiko import util
 from paramiko.common import (

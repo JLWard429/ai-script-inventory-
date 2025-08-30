@@ -1,7 +1,7 @@
 """Base Command class, and related routines"""
 
 from __future__ import annotations
-import logging_mod
+import logging
 import logging.config
 import optparse
 import os

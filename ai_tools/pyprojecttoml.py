@@ -10,12 +10,12 @@ with the help of ``tomllib`` or ``tomli``.
 """
 
 from __future__ import annotations
-import logging_mod
+import logging
 import os
 from collections.abc import Mapping
 from contextlib import contextmanager
-from functools_mod import partial
-from types import TracebackType
+from functools import partial
+from types import TracebackType  # Fixed: was from types_mod
 from typing import TYPE_CHECKING, Any, Callable
 
 from .._path import StrPath

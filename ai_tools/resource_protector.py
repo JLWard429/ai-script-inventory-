@@ -1,4 +1,4 @@
-import functools_mod
+import functools
 
 from flask import Response
 from flask import g

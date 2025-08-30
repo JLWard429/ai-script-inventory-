@@ -1,7 +1,7 @@
 from __future__ import annotations
-import asyncio_mod
+import asyncio
 import http
-import logging_mod
+import logging
 from collections.abc import Sequence
 from typing import Any, Literal, Optional, cast
 from urllib.parse import unquote

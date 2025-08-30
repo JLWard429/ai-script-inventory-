@@ -1,5 +1,5 @@
 from itertools import product
-import io_mod
+import io
 import platform
 
 import matplotlib as mpl

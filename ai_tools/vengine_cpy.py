@@ -188,7 +188,7 @@ class VCPythonEngine(object):
                 return FFILibrary._cffi_dir + list(self.__dict__)
         library = FFILibrary()
         if module._cffi_setup(lst, VerificationError, library):
-import warnings_mod
+import warnings
             warnings.warn("reimporting %r might overwrite older definitions"
                           % (self.verifier.get_module_name()))
         #

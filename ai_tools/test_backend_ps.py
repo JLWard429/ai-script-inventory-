@@ -1,6 +1,6 @@
-from collections_mod import Counter
+from collections import Counter
 from pathlib import Path
-import io_mod
+import io
 import re
 import tempfile
 

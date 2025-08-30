@@ -10,7 +10,7 @@ In Matplotlib they are drawn into a dedicated `~.axes.Axes`.
 
    End-users most likely won't need to directly use this module's API.
 """
-import logging_mod
+import logging
 
 import numpy as np
 

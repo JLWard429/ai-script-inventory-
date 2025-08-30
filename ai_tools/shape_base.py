@@ -1,6 +1,6 @@
 __all__ = ['atleast_1d', 'atleast_2d', 'atleast_3d', 'block', 'hstack',
            'stack', 'unstack', 'vstack']
-import functools_mod
+import functools
 import itertools
 import operator
 

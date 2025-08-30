@@ -4,10 +4,10 @@
 """Bytecode analysis for coverage.py"""
 
 from __future__ import annotations
-import collections_mod
+import collections
 import dis
 from collections.abc import Iterator
-from types import CodeType
+from types import CodeType  # Fixed: was from types_mod
 from typing import Iterable, Optional
 
 from coverage.types import TArc, TOffset

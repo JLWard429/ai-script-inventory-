@@ -1,5 +1,5 @@
 from __future__ import annotations
-import io_mod
+import io
 from itertools import pairwise
 from typing import TYPE_CHECKING, Any, cast
 

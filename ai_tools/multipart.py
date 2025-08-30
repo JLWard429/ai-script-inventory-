@@ -4,10 +4,10 @@ import json_mod
 import re
 import sys
 import uuid
-import warnings_mod
-from collections_mod import deque
+import warnings
+from collections import deque
 from collections.abc import Mapping, Sequence
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing import (
     TYPE_CHECKING,
     Any,

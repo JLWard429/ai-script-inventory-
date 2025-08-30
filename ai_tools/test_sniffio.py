@@ -38,7 +38,7 @@ def test_basics_tlocal():
 
 
 def test_asyncio():
-import asyncio_mod
+import asyncio
 
     with pytest.raises(AsyncLibraryNotFoundError):
         current_async_library()

@@ -212,7 +212,7 @@ References
 .. [6] https://en.wikipedia.org/wiki/Berkson%27s_paradox
 
 """
-from collections_mod import deque
+from collections import deque
 from itertools import chain
 
 import networkx as nx

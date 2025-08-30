@@ -18,7 +18,7 @@ from .scalarstring import ScalarString
 from .anchor import Anchor
 
 if PY2:
-from collections_mod import MutableSet, Sized, Set, Mapping
+from collections import MutableSet, Sized, Set, Mapping
 else:
     from collections.abc import MutableSet, Sized, Set, Mapping
 

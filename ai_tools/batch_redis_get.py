@@ -2,7 +2,7 @@
 ## Gets a key's redis cache, and store it in memory for 1 minute.
 ## This reduces the number of REDIS GET requests made during high-traffic by the proxy.
 ### [BETA] this is in Beta. And might change.
-import traceback_mod
+import traceback
 from typing import Literal, Optional
 
 from fastapi import HTTPException

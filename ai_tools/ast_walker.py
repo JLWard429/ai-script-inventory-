@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import sys
 import traceback
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Callable
 from typing import TYPE_CHECKING
 

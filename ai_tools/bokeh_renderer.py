@@ -1,5 +1,5 @@
 from __future__ import annotations
-import io_mod
+import io
 from typing import TYPE_CHECKING, Any
 
 from bokeh.io import export_png, export_svg, show

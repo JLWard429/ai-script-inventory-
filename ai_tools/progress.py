@@ -1,18 +1,18 @@
 from __future__ import annotations
-import io_mod
+import io
 import typing
-import warnings_mod
-from abc_mod_custom import ABC, abstractmethod
-from collections_mod import deque
+import warnings
+from abc import ABC, abstractmethod
+from collections import deque
 from dataclasses import dataclass, field
 from datetime import timedelta
-from io_mod import RawIOBase, UnsupportedOperation
+from io import RawIOBase, UnsupportedOperation
 from math_mod import ceil
 from mmap import mmap
 from operator import length_hint
 from os import PathLike, stat
 from threading import Event, RLock, Thread
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing import (
     TYPE_CHECKING,
     Any,

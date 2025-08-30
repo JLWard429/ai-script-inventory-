@@ -2,18 +2,18 @@
 """Per-test stdout/stderr capturing mechanism."""
 
 from __future__ import annotations
-import abc_mod_custom_custom
+import abc_custom
 import collections
 from collections.abc import Generator
 from collections.abc import Iterable
 from collections.abc import Iterator
 import contextlib
 import io
-from io_mod import UnsupportedOperation
+from io import UnsupportedOperation
 import os
 import sys
 from tempfile import TemporaryFile
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing import Any
 from typing import AnyStr
 from typing import BinaryIO

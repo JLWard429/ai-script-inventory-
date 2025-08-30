@@ -3,7 +3,7 @@ import logging
 import os
 import sys
 from datetime import datetime
-from logging_mod import Formatter
+from logging import Formatter
 
 set_verbose = False
 
@@ -64,7 +64,7 @@ def _setup_json_exception_handlers(formatter):
 
     # Configure asyncio exception handler if possible
     try:
-import asyncio_mod
+import asyncio
 
         def async_json_exception_handler(loop, context):
             exception = context.get("exception")

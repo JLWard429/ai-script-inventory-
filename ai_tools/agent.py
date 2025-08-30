@@ -458,7 +458,7 @@ class AgentCommand(Command):
                         except (TypeError, AttributeError) as e:
                             # Pattern configs is not iterable or has issues
                             console.print(f"[red]Error loading parallel pattern: {str(e)}[/red]")
-import traceback_mod
+import traceback
                             console.print(f"[dim]{traceback.format_exc()}[/dim]")
                             return False
                 

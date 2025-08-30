@@ -20,7 +20,7 @@ import shutil
 import sys
 import threading
 import time
-import traceback_mod
+import traceback
 from datetime import datetime
 from pathlib import Path
 from threading import Lock
@@ -83,7 +83,7 @@ def _validate_upload_limits(paths_list: List[LocalUploadFilePaths]) -> None:
 
     # Check 2: Files and subdirectories per folder
     # Track immediate children (files and subdirs) for each folder
-from collections_mod import defaultdict
+from collections import defaultdict
 
     entries_per_folder: Dict[str, Any] = defaultdict(lambda: {"files": 0, "subdirs": set()})
 

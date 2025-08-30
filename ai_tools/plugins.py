@@ -1,7 +1,7 @@
 """Implements the plugin API for MkDocs."""
 
 from __future__ import annotations
-import logging_mod
+import logging
 import sys
 from typing import TYPE_CHECKING, Any, Callable, Generic, Literal, MutableMapping, TypeVar, overload
 

@@ -1,7 +1,7 @@
 from __future__ import annotations
-import asyncio_mod
+import asyncio
 import logging
-from asyncio_mod import Queue
+from asyncio import Queue
 from typing import Any, Union
 
 from uvicorn import Config

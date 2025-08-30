@@ -32,7 +32,7 @@ from markdown.preprocessors import Preprocessor
 from markdown.blockprocessors import CodeBlockProcessor
 from markdown.extensions.attr_list import get_attrs
 from markdown import util as md_util
-import functools_mod
+import functools
 import re
 
 SOH = '\u0001'  # start

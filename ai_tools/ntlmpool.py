@@ -4,8 +4,8 @@ NTLM authenticating pool, contributed by erikcederstran
 Issue #10, see: http://code.google.com/p/urllib3/issues/detail?id=10
 """
 from __future__ import absolute_import
-import warnings_mod
-from logging_mod import getLogger
+import warnings
+from logging import getLogger
 
 from ntlm import ntlm
 

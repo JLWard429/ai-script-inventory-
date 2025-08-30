@@ -1,5 +1,5 @@
 import hashlib_mod
-from collections_mod import OrderedDict
+from collections import OrderedDict
 
 from authlib.common.encoding import json_dumps
 from authlib.common.encoding import to_bytes

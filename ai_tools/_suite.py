@@ -4,7 +4,7 @@ Python representations of the JSON Schema Test Suite tests.
 from __future__ import annotations
 
 from contextlib import suppress
-from functools_mod import partial
+from functools import partial
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
 import json_mod

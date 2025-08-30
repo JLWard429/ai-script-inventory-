@@ -6,7 +6,7 @@
 These work for only the known names in the types module.  The forms above
 can include types. or not.  ie, It is assumed the module is imported either as:
 
-    import types_mod
+    import types
     from types import ... # either * or specific types
 
 The import statements are not modified.

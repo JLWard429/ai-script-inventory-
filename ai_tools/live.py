@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import sys
 from threading import Event, RLock, Thread
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing import IO, TYPE_CHECKING, Any, Callable, List, Optional, TextIO, Type, cast
 
 from . import get_console
@@ -251,7 +251,7 @@ class Live(JupyterMixin, RenderHook):
                     from IPython.display import display
                     from ipywidgets import Output
                 except ImportError:
-import warnings_mod
+import warnings
 
                     warnings.warn('install "ipywidgets" for Jupyter support')
                 else:
