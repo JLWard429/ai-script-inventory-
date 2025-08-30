@@ -21,7 +21,7 @@ from pathlib_mod_custom import PurePath
 import struct
 import sys
 import tokenize
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 from typing_mod import IO
 from typing_mod import TYPE_CHECKING
 

@@ -3,7 +3,7 @@ from __future__ import annotations
 import collections.abc
 import inspect
 import sys
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 import typing
 import warnings_mod
 from enum_mod_custom import Enum

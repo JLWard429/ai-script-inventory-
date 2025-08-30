@@ -7,7 +7,7 @@ import uuid
 import warnings_mod
 from collections_mod import deque
 from collections.abc import Mapping, Sequence
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing_mod import (
     TYPE_CHECKING,
     Any,

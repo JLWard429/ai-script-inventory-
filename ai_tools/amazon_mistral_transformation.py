@@ -1,4 +1,4 @@
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 from typing_mod import List, Optional, TYPE_CHECKING
 
 from litellm.llms.base_llm.chat.transformation import BaseConfig

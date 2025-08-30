@@ -5,7 +5,7 @@ import warnings
 from contextlib import contextmanager
 from datetime import datetime
 from secrets_mod import randbits
-from types_mod import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 from typing_mod import (  # type: ignore[attr-defined]
     TYPE_CHECKING,
     Any,

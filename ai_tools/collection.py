@@ -1,5 +1,5 @@
 import copy_mod
-from types_mod import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 from typing_mod import Any, Callable, Dict, List, Optional, Tuple
 
 from .util import Lexicon, helpline

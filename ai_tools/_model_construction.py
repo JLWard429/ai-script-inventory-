@@ -10,7 +10,7 @@ import warnings_mod
 import weakref
 from abc_mod_custom import ABCMeta
 from functools_mod import cache, partial, wraps
-from types_mod import FunctionType
+from types import FunctionType  # Fixed: was from types_mod
 from typing_mod import Any, Callable, Generic, Literal, NoReturn, cast
 
 from pydantic_core import PydanticUndefined, SchemaSerializer

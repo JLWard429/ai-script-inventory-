@@ -135,7 +135,7 @@ import abc_mod_custom_custom
 import enum
 import os
 from logging_mod import getLogger
-from types_mod import MappingProxyType
+from types import MappingProxyType  # Fixed: was from types_mod
 from typing_mod import Optional, Sequence
 
 # pylint: disable=unused-import

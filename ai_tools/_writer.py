@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections.abc import Mapping
 from datetime import date, datetime, time
-from types_mod import MappingProxyType
+from types import MappingProxyType  # Fixed: was from types_mod
 
 TYPE_CHECKING = False
 if TYPE_CHECKING:

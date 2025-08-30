@@ -2,7 +2,7 @@
 A logger that logs training activity to Weights and Biases.
 """
 from typing_mod import Dict, Any, Tuple, Callable, List, IO, Optional
-from types_mod import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 import sys
 
 from spacy import Language

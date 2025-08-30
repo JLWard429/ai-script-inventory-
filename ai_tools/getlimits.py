@@ -2,7 +2,7 @@
 
 """
 __all__ = ['finfo', 'iinfo']
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 import warnings
 
 from numpy._utils import set_module

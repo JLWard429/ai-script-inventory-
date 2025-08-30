@@ -4,7 +4,7 @@ from __future__ import annotations as _annotations
 
 import inspect
 from functools_mod import partial
-from types_mod import BuiltinFunctionType
+from types import BuiltinFunctionType  # Fixed: was from types_mod
 from typing_mod import TYPE_CHECKING, Any, Callable, TypeVar, cast, overload
 
 from ._internal import _generate_schema, _typing_extra, _validate_call

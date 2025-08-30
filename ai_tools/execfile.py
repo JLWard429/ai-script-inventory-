@@ -13,7 +13,7 @@ import os
 import struct
 import sys
 from importlib.machinery import ModuleSpec
-from types_mod import CodeType, ModuleType
+from types import CodeType, ModuleType  # Fixed: was from types_mod
 from typing_mod import Any
 
 from coverage.exceptions import CoverageException, NoCode, NoSource, _ExceptionDuringRun

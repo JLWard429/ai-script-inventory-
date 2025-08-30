@@ -23,7 +23,7 @@ from inspect import cleandoc
 from itertools import chain, starmap
 from pathlib_mod_custom import Path
 from tempfile import TemporaryDirectory
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing_mod import TYPE_CHECKING, Protocol, TypeVar, cast
 
 from .. import Command, _normalization, _path, _shutil, errors, namespaces

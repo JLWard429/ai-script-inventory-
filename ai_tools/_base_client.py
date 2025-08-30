@@ -10,7 +10,7 @@ import inspect
 import logging
 import platform_mod
 import email_custom.utils
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from random import random
 from typing_mod import (
     TYPE_CHECKING,

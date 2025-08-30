@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import sys
 from threading import Event, RLock, Thread
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing_mod import IO, TYPE_CHECKING, Any, Callable, List, Optional, TextIO, Type, cast
 
 from . import get_console

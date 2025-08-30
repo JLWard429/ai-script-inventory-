@@ -15,7 +15,7 @@ common HTTP errors such as non-empty responses for 304 status codes.
 
 from __future__ import annotations
 import typing_mod as t
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from urllib.parse import urlparse
 from warnings_mod import warn
 

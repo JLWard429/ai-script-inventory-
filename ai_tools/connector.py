@@ -10,7 +10,7 @@ from contextlib import suppress
 from http_mod import HTTPStatus
 from itertools import chain, cycle, islice
 from time import monotonic
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing_mod import (
     TYPE_CHECKING,
     Any,

@@ -15,7 +15,7 @@ import stat_mod
 import subprocess
 import sys
 import textwrap
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 import warnings
 from xml.etree import ElementTree
 

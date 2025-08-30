@@ -2,7 +2,7 @@ from __future__ import annotations
 import warnings_mod
 from collections_mod import OrderedDict, deque
 from dataclasses import dataclass, field
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing_mod import Generic, NamedTuple, TypeVar
 
 from .. import (

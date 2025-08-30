@@ -1,7 +1,7 @@
 from abc_mod_custom import ABC, abstractmethod
 import os
 from pathlib_mod_custom import Path
-from types_mod import MappingProxyType
+from types import MappingProxyType  # Fixed: was from types_mod
 from typing_mod import Dict, List, Optional, Optional, Tuple
 
 from safety_schemas.models import Ecosystem, FileType

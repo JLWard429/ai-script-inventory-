@@ -10,7 +10,7 @@ import warnings_mod
 from collections.abc import Awaitable, Generator, Iterable, Mapping, MutableMapping, Sequence
 from concurrent.futures import Future
 from contextlib import AbstractContextManager
-from types_mod import GeneratorType
+from types import GeneratorType  # Fixed: was from types_mod
 from typing_mod import (
     Any,
     Callable,

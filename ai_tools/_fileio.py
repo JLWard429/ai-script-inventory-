@@ -28,7 +28,7 @@ from .. import to_thread
 from ..abc import AsyncResource
 
 if TYPE_CHECKING:
-from types_mod import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 
     from _typeshed import OpenBinaryMode, OpenTextMode, ReadableBuffer, WriteableBuffer
 else:

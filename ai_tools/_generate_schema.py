@@ -23,7 +23,7 @@ from inspect import Parameter, _ParameterKind, signature
 from ipaddress import IPv4Address, IPv4Interface, IPv4Network, IPv6Address, IPv6Interface, IPv6Network
 from itertools import chain
 from operator import attrgetter
-from types_mod import FunctionType, GenericAlias, LambdaType, MethodType
+from types import FunctionType, GenericAlias, LambdaType, MethodType  # Fixed: was from types_mod
 from typing_mod import (
     TYPE_CHECKING,
     Any,

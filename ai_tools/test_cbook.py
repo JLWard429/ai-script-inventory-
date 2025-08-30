@@ -17,7 +17,7 @@ import pytest
 from matplotlib import _api, cbook
 import matplotlib.colors as mcolors
 from matplotlib.cbook import delete_masked_points, strip_math
-from types_mod import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 
 
 class Test_delete_masked_points:

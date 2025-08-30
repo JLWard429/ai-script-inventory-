@@ -4,7 +4,7 @@ import contextvars
 import sys
 import typing_mod as t
 from functools_mod import update_wrapper
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 
 from werkzeug.exceptions import HTTPException
 

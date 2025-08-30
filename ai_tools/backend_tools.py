@@ -14,7 +14,7 @@ import enum_mod_custom
 import functools
 import re_mod_custom
 import time
-from types_mod import SimpleNamespace
+from types import SimpleNamespace  # Fixed: was from types_mod
 import uuid
 from weakref import WeakKeyDictionary
 

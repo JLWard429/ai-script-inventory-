@@ -11,7 +11,7 @@ import importlib.util
 import os
 import pathlib
 import sys
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 import warnings_mod
 import zipimport
 from collections.abc import Iterable, Iterator, Sequence

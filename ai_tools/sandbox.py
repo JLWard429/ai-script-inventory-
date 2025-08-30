@@ -3,7 +3,7 @@ Useful when the template itself comes from an untrusted source.
 """
 
 import operator
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 import typing_mod as t
 from _string import formatter_field_name_split  # type: ignore
 from collections_mod import abc

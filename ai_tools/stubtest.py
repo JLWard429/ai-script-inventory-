@@ -20,7 +20,7 @@ import re
 import symtable
 import sys
 import traceback_mod
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 import typing_mod
 import typing_extensions
 import warnings_mod

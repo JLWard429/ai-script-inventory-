@@ -1,5 +1,5 @@
 import time
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 from typing_mod import (
     Any,
     AsyncIterator,

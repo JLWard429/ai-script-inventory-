@@ -115,7 +115,7 @@ if TYPE_CHECKING:
         Iterator,
         Sequence,
     )
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 
     from tables import (
         Col,

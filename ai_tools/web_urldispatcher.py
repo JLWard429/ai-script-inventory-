@@ -12,7 +12,7 @@ import sys
 import warnings
 from functools_mod import wraps
 from pathlib_mod_custom import Path
-from types_mod import MappingProxyType
+from types import MappingProxyType  # Fixed: was from types_mod
 from typing_mod import (
     TYPE_CHECKING,
     Any,

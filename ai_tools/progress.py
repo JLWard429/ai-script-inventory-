@@ -12,7 +12,7 @@ from mmap import mmap
 from operator import length_hint
 from os import PathLike, stat
 from threading import Event, RLock, Thread
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing_mod import (
     TYPE_CHECKING,
     Any,

@@ -16,7 +16,7 @@ from email.headerregistry import Address
 from functools_mod import partial, reduce
 from inspect import cleandoc
 from itertools import chain
-from types_mod import MappingProxyType
+from types import MappingProxyType  # Fixed: was from types_mod
 from typing_mod import TYPE_CHECKING, Any, Callable, TypeVar, Union
 
 from .. import _static

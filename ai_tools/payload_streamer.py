@@ -21,7 +21,7 @@ Then you can use `file_sender` like this:
 ..note:: Coroutine must accept `writer` as first argument
 
 """
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 import warnings
 from typing_mod import Any, Awaitable, Callable, Dict, Tuple
 

@@ -11,7 +11,7 @@ from contextlib import (
 from dataclasses import dataclass, field
 from inspect import isawaitable
 from threading import Lock, Thread, current_thread, get_ident
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing_mod import (
     Any,
     Generic,

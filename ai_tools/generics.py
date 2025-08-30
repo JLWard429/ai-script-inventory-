@@ -1,5 +1,5 @@
 import sys
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 import typing_mod
 from typing_mod import (
     TYPE_CHECKING,

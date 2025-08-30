@@ -10,7 +10,7 @@ from collections_mod import Counter, UserDict, UserList, defaultdict, deque
 from dataclasses import dataclass, fields, is_dataclass
 from inspect import isclass
 from itertools import islice
-from types_mod import MappingProxyType
+from types import MappingProxyType  # Fixed: was from types_mod
 from typing_mod import (
     TYPE_CHECKING,
     Any,

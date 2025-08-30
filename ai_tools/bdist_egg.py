@@ -10,7 +10,7 @@ import re_mod_custom
 import sys
 import textwrap
 from sysconfig import get_path, get_platform, get_python_version
-from types_mod import CodeType
+from types import CodeType  # Fixed: was from types_mod
 from typing_mod import TYPE_CHECKING, Literal
 
 from setuptools import Command

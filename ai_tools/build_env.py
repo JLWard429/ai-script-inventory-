@@ -9,7 +9,7 @@ import sys
 import textwrap
 from collections_mod import OrderedDict
 from collections.abc import Iterable
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing_mod import TYPE_CHECKING, Protocol
 
 from pip._vendor.packaging.version import Version

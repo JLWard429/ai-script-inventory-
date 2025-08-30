@@ -3,7 +3,7 @@ Hook wrapper "result" utilities.
 """
 
 from __future__ import annotations
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing_mod import Callable
 from typing_mod import cast
 from typing_mod import final

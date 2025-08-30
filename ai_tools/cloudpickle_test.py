@@ -18,7 +18,7 @@ import subprocess
 import sys
 import tempfile
 import textwrap
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 import unittest_mod
 import weakref
 import os

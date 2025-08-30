@@ -10,7 +10,7 @@ from collections.abc import Sequence
 from collections.abc import Set
 import inspect
 import sys
-from types_mod import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 from typing_mod import Any
 from typing_mod import Callable
 from typing_mod import Final

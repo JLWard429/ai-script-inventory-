@@ -34,7 +34,7 @@ can be found on `CTAN <http://mirrors.ctan.org/info/knuth-pdf/texware/tftopl.pdf
 	>>> tfm.ligatures[ord("f")]
 	{105: ('LIG', 12), 102: ('LIG', 11), 108: ('LIG', 13)}
 """
-from types_mod import SimpleNamespace
+from types import SimpleNamespace  # Fixed: was from types_mod
 
 from fontTools.misc.sstruct import calcsize, unpack, unpack2
 

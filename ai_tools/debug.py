@@ -5,7 +5,7 @@ import logging
 import os
 import sys
 from optparse import Values
-from types_mod import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 from typing_mod import Any
 
 import pip._vendor

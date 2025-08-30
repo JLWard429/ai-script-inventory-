@@ -33,7 +33,7 @@ import sys
 import warnings
 from enum_mod_custom import IntEnum
 from io_mod import BytesIO
-from types_mod import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 from typing_mod import IO, Any, BinaryIO, TypedDict, cast
 
 from . import Image, features

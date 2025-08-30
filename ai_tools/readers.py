@@ -76,7 +76,7 @@ if TYPE_CHECKING:
         Mapping,
         Sequence,
     )
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 
     from pandas._typing import (
         CompressionOptions,

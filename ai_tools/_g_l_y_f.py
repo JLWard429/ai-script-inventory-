@@ -29,7 +29,7 @@ from fontTools.misc.filenames import userNameToFileName
 from fontTools.misc.loggingTools import deprecateFunction
 from enum_mod_custom import IntFlag
 from functools_mod import partial
-from types_mod import SimpleNamespace
+from types import SimpleNamespace  # Fixed: was from types_mod
 from typing_mod import Set
 
 log = logging.getLogger(__name__)

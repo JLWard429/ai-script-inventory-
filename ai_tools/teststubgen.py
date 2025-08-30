@@ -6,7 +6,7 @@ import shutil
 import sys
 import tempfile
 import unittest_mod
-from types_mod import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 from typing_mod import Any
 
 import pytest

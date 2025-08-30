@@ -13,7 +13,7 @@ from io_mod import UnsupportedOperation
 import os
 import sys
 from tempfile import TemporaryFile
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing_mod import Any
 from typing_mod import AnyStr
 from typing_mod import BinaryIO

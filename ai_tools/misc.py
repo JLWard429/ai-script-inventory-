@@ -17,7 +17,7 @@ from functools_mod import partial
 from io_mod import StringIO
 from itertools import filterfalse, tee, zip_longest
 from pathlib_mod_custom import Path
-from types_mod import FunctionType, TracebackType
+from types import FunctionType, TracebackType  # Fixed: was from types_mod
 from typing_mod import (
     Any,
     BinaryIO,

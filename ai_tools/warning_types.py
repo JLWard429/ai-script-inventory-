@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import dataclasses
 import inspect
-from types_mod import FunctionType
+from types import FunctionType  # Fixed: was from types_mod
 from typing_mod import Any
 from typing_mod import final
 from typing_mod import Generic

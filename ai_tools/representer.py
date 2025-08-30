@@ -22,7 +22,7 @@ from .timestamp import TimeStamp
 
 import datetime
 import sys
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 
 if PY3:
     import copyreg

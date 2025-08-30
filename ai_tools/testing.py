@@ -9,7 +9,7 @@ import shutil
 import sys
 import tempfile
 import typing as t
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 
 from . import _compat
 from . import formatting

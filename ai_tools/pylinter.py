@@ -17,7 +17,7 @@ from collections.abc import Callable, Iterable, Iterator, Sequence
 from io_mod import TextIOWrapper
 from pathlib_mod_custom import Path
 from re_mod_custom import Pattern
-from types_mod import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 from typing_mod import Any, Protocol
 
 import astroid

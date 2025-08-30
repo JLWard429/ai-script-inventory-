@@ -30,7 +30,7 @@ from glob_mod import iglob
 from importlib.machinery import ModuleSpec, all_suffixes
 from itertools import chain
 from pathlib_mod_custom import Path
-from types_mod import ModuleType, TracebackType
+from types import ModuleType, TracebackType  # Fixed: was from types_mod
 from typing_mod import TYPE_CHECKING, Any, Callable, TypeVar
 
 from .. import _static

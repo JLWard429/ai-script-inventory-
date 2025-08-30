@@ -11,7 +11,7 @@ from decimal import Decimal
 from enum_mod_custom import Enum
 from pathlib_mod_custom import Path
 from re_mod_custom import Pattern
-from types_mod import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 from typing_mod import (
     TYPE_CHECKING,
     Annotated,

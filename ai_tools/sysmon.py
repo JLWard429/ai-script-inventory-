@@ -12,7 +12,7 @@ import sys
 import threading
 import traceback_mod
 from dataclasses import dataclass
-from types_mod import CodeType
+from types import CodeType  # Fixed: was from types_mod
 from typing_mod import Any, Callable, NewType, Optional, cast
 
 from coverage import env

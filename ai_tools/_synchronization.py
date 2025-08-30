@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import threading
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 
 from ._exceptions import ExceptionMapping, PoolTimeout, map_exceptions
 

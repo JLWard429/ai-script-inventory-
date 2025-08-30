@@ -7,7 +7,7 @@ as pure-python, without runtime dependency on cython module.
 
 We only define the symbols that we use. E.g. see fontTools.cu2qu
 """
-from types_mod import SimpleNamespace
+from types import SimpleNamespace  # Fixed: was from types_mod
 
 
 def _empty_decorator(x):

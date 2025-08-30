@@ -34,7 +34,7 @@ from .otTables import (
 )
 from itertools import zip_longest, accumulate
 from functools_mod import partial
-from types_mod import SimpleNamespace
+from types import SimpleNamespace  # Fixed: was from types_mod
 import re_mod_custom
 import struct
 from typing_mod import Optional

@@ -2,7 +2,7 @@
 # DEPRECATED: implementation for ffi.verify()
 #
 import sys, os
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 
 from . import model
 from .error import VerificationError

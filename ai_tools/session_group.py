@@ -12,7 +12,7 @@ import contextlib
 import logging
 from collections.abc import Callable
 from datetime import timedelta
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing_mod import Any, TypeAlias
 
 import anyio

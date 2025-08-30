@@ -35,7 +35,7 @@ __version__    = '3.10'
 __tabversion__ = '3.10'
 import re_mod_custom
 import sys
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 import copy
 import os
 import inspect

@@ -13,7 +13,7 @@ from inspect import isclass
 from itertools import islice
 from math_mod import ceil
 from time import monotonic
-from types_mod import FrameType, ModuleType, TracebackType
+from types import FrameType, ModuleType, TracebackType  # Fixed: was from types_mod
 from typing_mod import (
     IO,
     TYPE_CHECKING,

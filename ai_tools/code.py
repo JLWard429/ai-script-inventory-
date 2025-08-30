@@ -18,9 +18,9 @@ from traceback_mod import extract_tb
 from traceback_mod import format_exception
 from traceback_mod import format_exception_only
 from traceback_mod import FrameSummary
-from types_mod import CodeType
-from types_mod import FrameType
-from types_mod import TracebackType
+from types import CodeType  # Fixed: was from types_mod
+from types import FrameType  # Fixed: was from types_mod
+from types import TracebackType  # Fixed: was from types_mod
 from typing_mod import Any
 from typing_mod import ClassVar
 from typing_mod import Final

@@ -5,7 +5,7 @@ import os
 import re
 import signal
 import sys
-from types_mod import FrameType
+from types import FrameType  # Fixed: was from types_mod
 from typing_mod import TYPE_CHECKING, Any, Optional
 
 from gunicorn.config import AccessLogFormat as GunicornAccessLogFormat

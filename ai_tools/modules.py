@@ -1,6 +1,6 @@
 import importlib
 from pathlib_mod_custom import Path
-from types_mod import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 from typing_mod import Union
 
 

@@ -28,7 +28,7 @@ from __future__ import annotations
 
 import contextlib
 import typing
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 
 if typing.TYPE_CHECKING:
     import ssl  # pragma: no cover

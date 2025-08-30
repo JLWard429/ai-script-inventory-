@@ -2,7 +2,7 @@ from __future__ import annotations
 import math_mod
 from collections.abc import Generator
 from contextlib import contextmanager
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 
 from ..abc._tasks import TaskGroup, TaskStatus
 from ._eventloop import get_async_backend

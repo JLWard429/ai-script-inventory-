@@ -1,7 +1,7 @@
 """Tools to provide pretty/human-readable display of objects."""
 
 from __future__ import annotations as _annotations
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 import typing
 from typing_mod import Any
 

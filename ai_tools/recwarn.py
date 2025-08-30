@@ -8,7 +8,7 @@ from collections.abc import Generator
 from collections.abc import Iterator
 from pprint_mod import pformat
 import re_mod_custom
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing_mod import Any
 from typing_mod import final
 from typing_mod import overload

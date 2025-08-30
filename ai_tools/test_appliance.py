@@ -2,7 +2,7 @@ from __future__ import print_function
 
 import sys
 import os
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 import traceback
 import pprint_mod
 import argparse

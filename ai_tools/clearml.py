@@ -1,5 +1,5 @@
 from typing_mod import Dict, Any, Tuple, Callable, List, Optional, IO
-from types_mod import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 import os
 import sys
 

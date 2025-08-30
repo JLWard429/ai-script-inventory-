@@ -7,7 +7,7 @@ import threading
 from collections.abc import Iterator
 from pathlib_mod_custom import Path
 from socket import socket
-from types_mod import FrameType
+from types import FrameType  # Fixed: was from types_mod
 from typing_mod import Callable
 
 import click

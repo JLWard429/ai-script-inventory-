@@ -3,7 +3,7 @@ import io_mod
 import itertools
 import platform_mod
 import re
-from types_mod import SimpleNamespace
+from types import SimpleNamespace  # Fixed: was from types_mod
 
 import numpy as np
 from numpy.testing import assert_array_equal, assert_array_almost_equal

@@ -12,7 +12,7 @@ import logging_mod
 import os
 import pkgutil
 import sys
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 import zipimport
 
 from . import DistlibException

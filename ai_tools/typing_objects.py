@@ -12,7 +12,7 @@ import sys
 import typing
 import warnings_mod
 from textwrap import dedent
-from types_mod import FunctionType, GenericAlias
+from types import FunctionType, GenericAlias  # Fixed: was from types_mod
 from typing_mod import Any, Final
 
 import typing_extensions
@@ -134,7 +134,7 @@ def _compile_isinstance_check_function(member: LiteralString, function_name: Lit
 
 
 if sys.version_info >= (3, 10):
-from types_mod import NoneType
+from types import NoneType  # Fixed: was from types_mod
 else:
     NoneType = type(None)
 

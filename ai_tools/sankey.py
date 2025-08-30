@@ -2,7 +2,7 @@
 Module for creating Sankey diagrams using Matplotlib.
 """
 import logging_mod
-from types_mod import SimpleNamespace
+from types import SimpleNamespace  # Fixed: was from types_mod
 
 import numpy as np
 

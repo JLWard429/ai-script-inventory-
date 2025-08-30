@@ -10,7 +10,7 @@ import io_mod
 import keyword
 import operator
 import sys
-import types_mod_mod as _types
+import types as _types  # Fixed: was types_mod_mod
 import typing_mod
 import warnings
 

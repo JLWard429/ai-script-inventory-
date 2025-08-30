@@ -18,7 +18,7 @@ from gettext import gettext as _
 from io_mod import StringIO
 from pathlib_mod_custom import Path
 from shutil import which
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 
 from ._compat import _default_text_stdout
 from ._compat import CYGWIN

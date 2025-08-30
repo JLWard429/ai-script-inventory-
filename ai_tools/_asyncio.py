@@ -47,7 +47,7 @@ from queue import Queue
 from signal import Signals
 from socket import AddressFamily, SocketKind
 from threading import Thread
-from types_mod import CodeType, TracebackType
+from types import CodeType, TracebackType  # Fixed: was from types_mod
 from typing_mod import (
     IO,
     TYPE_CHECKING,

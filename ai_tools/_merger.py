@@ -27,7 +27,7 @@
 import warnings_mod
 from io_mod import BytesIO, FileIO, IOBase
 from pathlib_mod_custom import Path
-from types_mod import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 from typing_mod import (
     Any,
     Dict,

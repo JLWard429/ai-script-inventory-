@@ -3,7 +3,7 @@ import enum_mod_custom
 import logging
 import ssl
 import time
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 import typing
 
 import h11

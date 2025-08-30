@@ -17,7 +17,7 @@
 from __future__ import annotations
 
 import builtins
-from types_mod import CodeType
+from types import CodeType  # Fixed: was from types_mod
 from typing_mod import Any, Callable
 
 from . import Image, _imagingmath

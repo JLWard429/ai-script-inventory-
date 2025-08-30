@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import sys
-import types_mod_mod
+import types  # Fixed: was types_mod_mod
 import typing_mod
 from collections_mod import ChainMap
 from collections.abc import Iterator, Mapping
