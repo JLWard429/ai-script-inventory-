@@ -2,8 +2,10 @@
 """OpenAI Medical Service"""
 
 import os
-from typing import Dict, List, Any, Optional
+from typing import Any, Dict, List, Optional
+
 from src.ai_services.ai_service_interface import AIServiceInterface
+
 
 class OpenAIMedicalService(AIServiceInterface):
     """OpenAI service implementation"""

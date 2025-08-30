@@ -7,6 +7,7 @@ correctly both with and without the OpenAI library installed.
 
 import os
 import unittest.mock as mock
+
 import pytest
 
 

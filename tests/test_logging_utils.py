@@ -13,10 +13,10 @@ import pytest
 
 from python_scripts.logging_utils import (
     StructuredLogger,
-    get_logger,
-    log_performance,
-    log_context,
     configure_root_logging,
+    get_logger,
+    log_context,
+    log_performance,
 )
 
 
