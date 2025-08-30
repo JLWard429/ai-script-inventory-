@@ -3,8 +3,7 @@
 ## Overview
 This integrated platform combines AI script inventory management with sophisticated orchestration capabilities. It provides a privacy-focused, local-only AI terminal for managing scripts and automation workflows.
 
-## 🚀 Key Features
-
+## Key Features
 - **Superhuman AI Terminal**: Natural language interface for script management
 - **Privacy-Focused Design**: All processing happens locally, protecting your data
 - **Automated Organization**: Scripts automatically sorted and categorized
@@ -25,5 +24,8 @@ This integrated platform combines AI script inventory management with sophistica
 - `docs/`: Documentation, guides, and reference materials
 - `text_files/`: Configuration files, logs, and text-based resources
 - `ai/`: Intent recognition and AI modules for the terminal
+
+## Privacy Protection
+All processing happens locally on your machine. No data is sent to external servers.
 
 Created by [JLWard429](https://github.com/JLWard429)
