@@ -1,5 +1,5 @@
 from __future__ import annotations
-import functools_mod
+import functools
 import sys
 from collections.abc import Generator, Iterable, Iterator
 from typing import Callable, Literal, TypeVar

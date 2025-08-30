@@ -13,7 +13,7 @@ from __future__ import annotations
 import binascii
 import os
 import time
-from abc_mod_custom import abstractmethod
+from abc import abstractmethod
 from collections.abc import Iterable
 from typing import TYPE_CHECKING, Any
 

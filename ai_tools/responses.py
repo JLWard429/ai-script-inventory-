@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 from typing import Any, List, Type, Union, Iterable, Optional, cast
-from functools_mod import partial
+from functools import partial
 from typing_extensions import Literal, overload
 
 import httpx

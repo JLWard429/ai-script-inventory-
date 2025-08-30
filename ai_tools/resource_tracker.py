@@ -42,7 +42,7 @@ import os
 import shutil
 import sys
 import signal
-import warnings_mod
+import warnings
 from _multiprocessing import sem_unlink
 from multiprocessing import util
 from multiprocessing.resource_tracker import (

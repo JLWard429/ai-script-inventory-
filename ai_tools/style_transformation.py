@@ -11,7 +11,7 @@ formatting.
 """
 
 from __future__ import annotations
-from abc_mod_custom import ABCMeta, abstractmethod
+from abc import ABCMeta, abstractmethod
 from colorsys import hls_to_rgb, rgb_to_hls
 from typing import Callable, Hashable, Sequence
 

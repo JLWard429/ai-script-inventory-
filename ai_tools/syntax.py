@@ -4,7 +4,7 @@ import os.path
 import re
 import sys
 import textwrap
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from pathlib import Path
 from typing import (
     Any,

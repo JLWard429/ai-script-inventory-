@@ -14,7 +14,7 @@
     :license: BSD, see LICENSE for more details.
 """
 from __future__ import annotations
-import warnings_mod
+import warnings
 from collections.abc import Sequence
 from typing import Literal
 

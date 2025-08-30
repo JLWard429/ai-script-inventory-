@@ -5,7 +5,7 @@ import json_mod
 import time
 import uuid
 from copy_mod import deepcopy
-from functools_mod import partial
+from functools import partial
 from typing import (
     TYPE_CHECKING,
     Any,

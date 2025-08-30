@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import dataclasses
-from functools_mod import partial, partialmethod
+from functools import partial, partialmethod
 from typing import TYPE_CHECKING, Annotated, Any, Callable, Literal, TypeVar, overload
 
 from pydantic_core import PydanticUndefined, core_schema

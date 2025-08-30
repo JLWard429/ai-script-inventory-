@@ -1,6 +1,6 @@
 import ast_mod
 import contextlib
-import logging_mod
+import logging
 import os
 import re
 from collections.abc import Sequence

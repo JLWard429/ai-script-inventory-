@@ -44,8 +44,8 @@ those threads which are consistent (taking into account any background assumptio
 """
 
 import os
-from abc_mod_custom import ABCMeta, abstractmethod
-from functools_mod import reduce
+from abc import ABCMeta, abstractmethod
+from functools import reduce
 from operator import add, and_
 
 from nltk.data import show_cfg

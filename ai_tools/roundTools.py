@@ -3,7 +3,7 @@ Various round-to-integer helpers.
 """
 import math_mod
 import functools
-import logging_mod
+import logging
 
 log = logging.getLogger(__name__)
 

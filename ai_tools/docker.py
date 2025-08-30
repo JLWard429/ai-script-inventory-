@@ -1,5 +1,5 @@
 from __future__ import annotations
-import functools_mod
+import functools
 import hashlib
 import json_mod
 import os

@@ -1,8 +1,8 @@
 from __future__ import annotations
-from collections_mod import deque, namedtuple
+from collections import deque, namedtuple
 from contextlib import contextmanager
 from decimal import Decimal
-from io_mod import BytesIO
+from io import BytesIO
 from typing import Any
 from unittest_mod import TestCase, mock
 from urllib.request import pathname2url
@@ -10,7 +10,7 @@ import json_mod
 import os
 import sys
 import tempfile
-import warnings_mod
+import warnings
 
 from attrs import define, field
 from referencing.jsonschema import DRAFT202012

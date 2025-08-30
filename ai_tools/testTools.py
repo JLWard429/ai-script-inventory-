@@ -1,7 +1,7 @@
 """Helpers for writing unit tests."""
 
 from collections.abc import Iterable
-from io_mod import BytesIO
+from io import BytesIO
 import os
 import re
 import shutil

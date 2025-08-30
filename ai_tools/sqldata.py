@@ -4,9 +4,9 @@
 """SQLite coverage data."""
 
 from __future__ import annotations
-import collections_mod
+import collections
 import datetime
-import functools_mod
+import functools
 import glob
 import itertools
 import os

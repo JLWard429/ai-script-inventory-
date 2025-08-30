@@ -7,12 +7,12 @@ Import of this module is deferred since it contains imports of many standard lib
 # so that we can avoid this annotation injection and just use the standard pydantic-core schema generation
 
 from __future__ import annotations as _annotations
-import collections_mod
+import collections
 import collections.abc
 import dataclasses
 import os
 import typing
-from functools_mod import partial
+from functools import partial
 from typing import Any, Callable, Iterable, Tuple, TypeVar
 
 import typing_extensions

@@ -1,5 +1,5 @@
 """Asynchronous Fluid Communities algorithm for community detection."""
-from collections_mod import Counter
+from collections import Counter
 
 import networkx as nx
 from networkx.algorithms.components import is_connected

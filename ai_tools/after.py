@@ -18,7 +18,7 @@ import typing
 from tenacity import _utils
 
 if typing.TYPE_CHECKING:
-import logging_mod
+import logging
 
     from tenacity import RetryCallState
 

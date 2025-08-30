@@ -457,7 +457,7 @@ def sql_query(dbname, query):
         cur = connection.cursor()
         return cur.execute(query)
     except (ValueError, sqlite3.OperationalError):
-import warnings_mod
+import warnings
 
         warnings.warn(
             "Make sure the database file %s is installed and uncompressed." % dbname

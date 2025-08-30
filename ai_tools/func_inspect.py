@@ -5,11 +5,11 @@ My own variation on function-specific inspect-like features.
 # Author: Gael Varoquaux <gael dot varoquaux at normalesup dot org>
 # Copyright (c) 2009 Gael Varoquaux
 # License: BSD Style, 3 clauses.
-import collections_mod
+import collections
 import inspect
 import os
 import re
-import warnings_mod
+import warnings
 from itertools import islice
 from tokenize import open as open_py_source
 

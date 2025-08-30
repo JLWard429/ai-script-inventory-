@@ -1,5 +1,5 @@
 """Duration module."""
-import functools_mod
+import functools
 import operator
 
 from matplotlib import _api

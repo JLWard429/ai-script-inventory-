@@ -6,7 +6,7 @@ it checks if the user passed a valid API Key to the LiteLLM Proxy
 Returns a UserAPIKeyAuth object if the API key is valid
 
 """
-import asyncio_mod
+import asyncio
 import secrets
 from datetime import datetime, timezone
 from typing import List, Optional, Tuple, cast

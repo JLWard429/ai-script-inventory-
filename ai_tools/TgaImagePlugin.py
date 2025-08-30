@@ -16,7 +16,7 @@
 # See the README file for information on usage and redistribution.
 #
 from __future__ import annotations
-import warnings_mod
+import warnings
 from typing import IO
 
 from . import Image, ImageFile, ImagePalette

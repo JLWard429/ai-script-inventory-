@@ -1,6 +1,6 @@
 from __future__ import annotations
-from collections_mod import defaultdict
-from logging_mod import getLogger
+from collections import defaultdict
+from logging import getLogger
 from typing import Any
 
 from pip._vendor.resolvelib.reporters import BaseReporter

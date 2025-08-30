@@ -1,10 +1,10 @@
 """Old `@validator` and `@root_validator` function validators from V1."""
 
 from __future__ import annotations as _annotations
-from functools_mod import partial, partialmethod
+from functools import partial, partialmethod
 from types import FunctionType  # Fixed: was from types_mod
-from typing_mod import TYPE_CHECKING, Any, Callable, Literal, TypeVar, Union, overload
-from warnings_mod import warn
+from typing import TYPE_CHECKING, Any, Callable, Literal, TypeVar, Union, overload
+from warnings import warn
 
 from typing_extensions import Protocol, TypeAlias, deprecated
 

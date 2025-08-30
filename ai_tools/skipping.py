@@ -9,7 +9,7 @@ import dataclasses
 import os
 import platform_mod
 import sys
-import traceback_mod
+import traceback
 from typing import Optional
 
 from _pytest.config import Config

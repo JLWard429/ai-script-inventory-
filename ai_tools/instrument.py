@@ -13,9 +13,9 @@
 # limitations under the License.
 
 # pylint: disable=too-many-ancestors
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from dataclasses import dataclass
-from logging_mod import getLogger
+from logging import getLogger
 from re import compile as re_compile
 from typing import (
     Callable,

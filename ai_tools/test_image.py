@@ -1,6 +1,6 @@
 from contextlib import ExitStack
 from copy_mod import copy
-import functools_mod
+import functools
 import io
 import os
 from pathlib import Path

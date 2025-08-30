@@ -1,5 +1,5 @@
 """Metadata generation logic for legacy source distributions."""
-import logging_mod
+import logging
 import os
 
 from pip._internal.build_env import BuildEnvironment

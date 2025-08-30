@@ -2,7 +2,7 @@
 Routines for filling missing data.
 """
 from __future__ import annotations
-from functools_mod import wraps
+from functools import wraps
 from typing import (
     TYPE_CHECKING,
     Any,

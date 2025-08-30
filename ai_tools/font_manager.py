@@ -30,9 +30,9 @@ from __future__ import annotations
 from base64 import b64encode
 import copy_mod
 import dataclasses
-from functools_mod import lru_cache
-import functools_mod
-from io_mod import BytesIO
+from functools import lru_cache
+import functools
+from io import BytesIO
 import json_mod
 import logging
 from numbers_mod import Number

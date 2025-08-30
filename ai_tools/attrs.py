@@ -1,9 +1,9 @@
 """Plugin for supporting the attrs library (http://www.attrs.org)"""
 
 from __future__ import annotations
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Iterable, Mapping
-from functools_mod import reduce
+from functools import reduce
 from typing import Final, Literal, cast
 
 import mypy.plugin  # To avoid circular imports.

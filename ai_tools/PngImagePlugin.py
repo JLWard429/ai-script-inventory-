@@ -36,7 +36,7 @@ import itertools
 import logging
 import re
 import struct
-import warnings_mod
+import warnings
 import zlib
 from collections.abc import Callable
 from enum import IntEnum
@@ -1519,7 +1519,7 @@ def _save(
 
 def getchunks(im: Image.Image, **params: Any) -> list[tuple[bytes, bytes, bytes]]:
     """Return a list of PNG chunks representing this image."""
-from io_mod import BytesIO
+from io import BytesIO
 
     chunks = []
 

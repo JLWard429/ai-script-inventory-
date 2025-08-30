@@ -10,7 +10,7 @@ from fontTools.ttLib import newTable
 from fontTools.ttLib.tables import otTables as ot
 from fontTools.ttLib.ttVisitor import TTVisitor
 from fontTools.otlLib.builder import buildLookup, buildSingleSubstSubtable
-from collections_mod import OrderedDict
+from collections import OrderedDict
 
 from .errors import VarLibError, VarLibValidationError
 

@@ -4,7 +4,7 @@ during parsing for all of the parsers defined in parsers.py
 """
 
 import csv
-from io_mod import StringIO
+from io import StringIO
 
 import pytest
 

@@ -1,7 +1,7 @@
 from contextlib import nullcontext
 import itertools
 import locale
-import logging_mod
+import logging
 import re
 from packaging.version import parse as parse_version
 

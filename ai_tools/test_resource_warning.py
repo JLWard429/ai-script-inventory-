@@ -1,4 +1,4 @@
-import warnings_mod
+import warnings
 from unittest_mod import TestCase
 
 import pytest

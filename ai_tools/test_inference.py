@@ -3,8 +3,8 @@ These the test the public routines exposed in types/common.py
 related to inference and not otherwise tested in types/test_common.py
 
 """
-import collections_mod
-from collections_mod import namedtuple
+import collections
+from collections import namedtuple
 from collections.abc import Iterator
 from datetime import (
     date,
@@ -14,7 +14,7 @@ from datetime import (
 )
 from decimal import Decimal
 from fractions import Fraction
-from io_mod import StringIO
+from io import StringIO
 import itertools
 from numbers_mod import Number
 import re

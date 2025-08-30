@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from fontTools.misc.textTools import num2binary, binary2num, readHex, strjoin
 import array_mod
-from io_mod import StringIO
+from io import StringIO
 from typing import List
 import re
 import logging
@@ -253,7 +253,7 @@ class Program(object):
             try:
                 assembly = self.getAssembly()
             except:
-import traceback_mod
+import traceback
 
                 tmp = StringIO()
                 traceback.print_exc(file=tmp)

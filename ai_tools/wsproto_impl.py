@@ -1,5 +1,5 @@
 from __future__ import annotations
-import asyncio_mod
+import asyncio
 import logging
 from typing import Any, Literal, cast
 from urllib.parse import unquote

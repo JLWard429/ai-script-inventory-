@@ -1,11 +1,11 @@
 import contextlib
-from collections_mod import namedtuple, deque
+from collections import namedtuple, deque
 import datetime
 from decimal import Decimal
-from functools_mod import partial
+from functools import partial
 import gc
 import inspect
-import io_mod
+import io
 from itertools import product
 import platform_mod
 import sys

@@ -7,7 +7,7 @@
 # For license information, see LICENSE.TXT
 
 import operator
-from functools_mod import reduce
+from functools import reduce
 from math_mod import fabs
 from random import shuffle
 

@@ -17,8 +17,8 @@ import importlib
 import json
 import os
 import re
-from collections_mod import defaultdict, namedtuple
-from functools_mod import lru_cache
+from collections import defaultdict, namedtuple
+from functools import lru_cache
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Dict, Iterable, List, NamedTuple, Optional, Set, Tuple, Union
 

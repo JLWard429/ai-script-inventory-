@@ -1,8 +1,8 @@
 from __future__ import annotations
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Iterable
 from copy_mod import copy
-from functools_mod import lru_cache, partial
+from functools import lru_cache, partial
 from typing import TYPE_CHECKING, Any
 
 from pydantic_core import CoreSchema, PydanticCustomError, ValidationError, to_jsonable_python

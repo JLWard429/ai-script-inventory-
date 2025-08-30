@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import importlib
 from codecs import IncrementalDecoder
-from collections_mod import Counter
-from functools_mod import lru_cache
+from collections import Counter
+from functools import lru_cache
 from typing import Counter as TypeCounter
 
 from .constant import (

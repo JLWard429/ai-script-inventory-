@@ -17,10 +17,10 @@ import warnings; warnings.filterwarnings("ignore", category=DeprecationWarning)
 import sys
 import queue as Queue
 #import dbm as anydbm #XXX: delete foo
-from io_mod import BytesIO as StringIO
+from io import BytesIO as StringIO
 import re
 import array
-import collections_mod
+import collections
 import codecs
 import struct
 import dataclasses
@@ -30,7 +30,7 @@ import weakref
 import pprint
 import decimal
 import numbers
-import functools_mod
+import functools
 import itertools
 import operator
 import tempfile
@@ -64,7 +64,7 @@ try:
 except ImportError: # Windows
     HAS_CURSES = False
 try:
-import ctypes_mod
+import ctypes
     HAS_CTYPES = True
     # if using `pypy`, pythonapi is not found
     IS_PYPY = not hasattr(ctypes, 'pythonapi')
@@ -203,7 +203,7 @@ if HAS_CTYPES:
 
 import fractions
 import io
-from io_mod import StringIO as TextIO
+from io import StringIO as TextIO
 # built-in functions (CH 2)
 a['ByteArrayType'] = bytearray([1])
 # numeric and mathematical types (CH 9)

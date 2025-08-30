@@ -13,7 +13,7 @@ purposes.
 """
 
 import sys
-from collections_mod import defaultdict
+from collections import defaultdict
 
 from nltk.classify.util import accuracy as eval_accuracy
 from nltk.classify.util import apply_features

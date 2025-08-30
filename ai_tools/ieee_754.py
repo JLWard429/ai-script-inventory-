@@ -11,7 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from ctypes_mod import c_double, c_uint64
+from ctypes import c_double, c_uint64
 from sys import float_info
 
 # IEEE 754 64-bit floating point numbers use 11 bits for the exponent and 52

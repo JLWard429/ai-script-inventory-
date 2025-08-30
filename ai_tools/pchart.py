@@ -38,7 +38,7 @@ argument beam_size.  If non-zero, this controls the size of the beam
 # to associate probabilities with child pointer lists.
 
 import random
-from functools_mod import reduce
+from functools import reduce
 
 from nltk.grammar import PCFG, Nonterminal
 from nltk.parse.api import ParserI

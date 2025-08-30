@@ -11,7 +11,7 @@ from typing import (
     Literal,
     cast,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 

@@ -1,7 +1,7 @@
 """
 Add the event loop to the cache key, to prevent event loop closed errors.
 """
-import asyncio_mod
+import asyncio
 
 from .in_memory_cache import InMemoryCache
 

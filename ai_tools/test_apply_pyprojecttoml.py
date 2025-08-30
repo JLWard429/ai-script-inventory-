@@ -5,7 +5,7 @@ To run these tests offline, please have a look on ``./downloads/preload.py``
 """
 
 from __future__ import annotations
-import io_mod
+import io
 import re
 import tarfile
 from inspect import cleandoc

@@ -7,13 +7,13 @@ from datetime import (
     timedelta,
     tzinfo,
 )
-import functools_mod
+import functools
 from typing import (
     TYPE_CHECKING,
     Any,
     cast,
 )
-import warnings_mod
+import warnings
 
 import matplotlib.dates as mdates
 from matplotlib.ticker import (

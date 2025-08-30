@@ -1,5 +1,5 @@
 import json_mod
-from functools_mod import lru_cache
+from functools import lru_cache
 from pathlib import Path
 from typing import Any, Dict, Optional, Union
 from urllib.parse import urlparse, urlunparse

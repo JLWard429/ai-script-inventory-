@@ -1,4 +1,4 @@
-import logging_mod
+import logging
 from typing import Any
 
 from uvicorn._types import (

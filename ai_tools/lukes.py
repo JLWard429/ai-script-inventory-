@@ -1,6 +1,6 @@
 """Lukes Algorithm for exact optimal weighted tree partitioning."""
 from copy_mod import deepcopy
-from functools_mod import lru_cache
+from functools import lru_cache
 from random import choice
 
 import networkx as nx

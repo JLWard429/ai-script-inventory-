@@ -56,7 +56,7 @@ class _TypedDictMeta(type):
         # We need the `if TypedDict in globals()` check,
         # or we emit a DeprecationWarning when creating mypy_extensions.TypedDict itself
         if 'TypedDict' in globals():
-import warnings_mod
+import warnings
             warnings.warn(
                 (
                     "mypy_extensions.TypedDict is deprecated, "
@@ -241,7 +241,7 @@ def _warn_deprecation(name: str, module_globals: Dict[str, Any]) -> Any:
         )
     else:
         assert False, f"Add deprecation message for 'mypy_extensions.{name}'"
-import warnings_mod
+import warnings
     warnings.warn(msg, DeprecationWarning, stacklevel=3)
     return val
 

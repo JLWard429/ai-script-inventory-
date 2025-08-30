@@ -3,7 +3,7 @@ from fontTools.misc.textTools import safeEval
 from fontTools.ttLib.tables.DefaultTable import DefaultTable
 import sys
 import os
-import logging_mod
+import logging
 
 
 log = logging.getLogger(__name__)

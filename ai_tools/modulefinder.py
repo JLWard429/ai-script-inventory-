@@ -6,7 +6,7 @@ This builds on fscache.py; find_sources.py builds on top of this.
 from __future__ import annotations
 import ast_mod
 import collections
-import functools_mod
+import functools
 import os
 import re
 import subprocess

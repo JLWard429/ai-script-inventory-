@@ -1,5 +1,5 @@
 from __future__ import annotations
-import io_mod
+import io
 import os.path
 import re_mod_custom
 import shutil
@@ -7,7 +7,7 @@ import sys
 import tempfile
 import unittest_mod
 from types import ModuleType  # Fixed: was from types_mod
-from typing_mod import Any
+from typing import Any
 
 import pytest
 

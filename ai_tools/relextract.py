@@ -23,7 +23,7 @@ The two serialization outputs are "rtuple" and "clause".
 # todo: get a more general solution to canonicalized symbols for clauses -- maybe use xmlcharrefs?
 import html_mod
 import re
-from collections_mod import defaultdict
+from collections import defaultdict
 
 # Dictionary that associates corpora with NE classes
 NE_CLASSES = {
@@ -325,7 +325,7 @@ def in_demo(trace=0, sql=True):
             (OrgName text, LocationName text, DocID text)"""
             )
         except ImportError:
-import warnings_mod
+import warnings
 
             warnings.warn("Cannot import sqlite; sql flag will be ignored.")
 

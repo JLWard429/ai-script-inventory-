@@ -13,7 +13,7 @@ import os.path
 import sys
 import time
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
-from io_mod import StringIO
+from io import StringIO
 from textwrap import dedent
 from typing import TYPE_CHECKING, Any
 

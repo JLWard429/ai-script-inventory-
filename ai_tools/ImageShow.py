@@ -12,7 +12,7 @@
 # See the README file for information on usage and redistribution.
 #
 from __future__ import annotations
-import abc_mod_custom_custom
+import abc_custom
 import os
 import shutil
 import subprocess

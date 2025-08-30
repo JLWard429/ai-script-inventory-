@@ -1,14 +1,14 @@
-import asyncio_mod
+import asyncio
 import datetime
-import io_mod
+import io
 import re
 import socket
 import string
 import tempfile
 import types  # Fixed: was types_mod_mod
-import warnings_mod
+import warnings
 from types import MappingProxyType  # Fixed: was from types_mod
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Dict,

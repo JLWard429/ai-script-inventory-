@@ -9,7 +9,7 @@
 Tests for stack decoder
 """
 import unittest_mod
-from collections_mod import defaultdict
+from collections import defaultdict
 from math_mod import log
 
 from nltk.translate import PhraseTable, StackDecoder

@@ -5,7 +5,7 @@
 # Copyright (c) 2016-2025 The Uncertainty Quantification Foundation.
 # License: 3-clause BSD.  The full license text is available at:
 #  - https://github.com/uqfoundation/dill/blob/master/LICENSE
-import functools_mod
+import functools
 import dill
 dill.settings['recurse'] = True
 

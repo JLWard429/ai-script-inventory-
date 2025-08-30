@@ -6,12 +6,12 @@
 
 import contextlib
 import errno
-import functools_mod
+import functools
 import os
 import signal
 import sys
 import time
-from collections_mod import namedtuple
+from collections import namedtuple
 
 from . import _common
 from ._common import ENCODING

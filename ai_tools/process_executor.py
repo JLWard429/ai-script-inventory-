@@ -69,7 +69,7 @@ import traceback
 import threading
 from time import time, sleep
 import multiprocessing as mp
-from functools_mod import partial
+from functools import partial
 from pickle_mod import PicklingError
 from concurrent.futures import Executor
 from concurrent.futures._base import LOGGER

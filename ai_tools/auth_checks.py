@@ -8,7 +8,7 @@ Run checks for:
 2. If user is in budget
 3. If end_user ('user' passed to /chat/completions, /embeddings endpoint) is in budget
 """
-import asyncio_mod
+import asyncio
 import re
 import time
 from typing import TYPE_CHECKING, Any, Dict, List, Literal, Optional, Union, cast
@@ -504,7 +504,7 @@ async def get_end_user_object(
 def model_in_access_group(
     model: str, team_models: Optional[List[str]], llm_router: Optional[Router]
 ) -> bool:
-from collections_mod import defaultdict
+from collections import defaultdict
 
     if team_models is None:
         return True
@@ -1199,7 +1199,7 @@ def _can_object_call_model(
             model = _model
 
     ## check if model in allowed model names
-from collections_mod import defaultdict
+from collections import defaultdict
 
     access_groups: Dict[str, List[str]] = defaultdict(list)
 

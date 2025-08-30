@@ -11,7 +11,7 @@ https://creativecommons.org/publicdomain/zero/1.0/
 """
 
 from __future__ import annotations
-import io_mod
+import io
 import struct
 import sys
 from enum import IntEnum, IntFlag

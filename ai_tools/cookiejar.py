@@ -1,4 +1,4 @@
-import asyncio_mod
+import asyncio
 import calendar
 import contextlib
 import datetime
@@ -9,8 +9,8 @@ import pathlib
 import pickle
 import re
 import time
-import warnings_mod
-from collections_mod import defaultdict
+import warnings
+from collections import defaultdict
 from collections.abc import Mapping
 from http.cookies import BaseCookie, Morsel, SimpleCookie
 from typing import (

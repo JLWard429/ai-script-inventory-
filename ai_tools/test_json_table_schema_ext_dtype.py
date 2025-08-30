@@ -1,8 +1,8 @@
 """Tests for ExtensionDtype Table Schema integration."""
-from collections_mod import OrderedDict
+from collections import OrderedDict
 import datetime as dt
 import decimal
-from io_mod import StringIO
+from io import StringIO
 import json_mod
 
 import pytest

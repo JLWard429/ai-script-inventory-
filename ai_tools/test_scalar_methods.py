@@ -4,7 +4,7 @@ Test the scalar constructors, which also do type-coercion
 import fractions
 import platform
 import types  # Fixed: was types_mod_mod
-from typing_mod import Any
+from typing import Any
 
 import pytest
 

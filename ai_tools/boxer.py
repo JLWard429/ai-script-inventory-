@@ -33,7 +33,7 @@ import os
 import re
 import subprocess
 import tempfile
-from functools_mod import reduce
+from functools import reduce
 from optparse import OptionParser
 
 from nltk.internals import find_binary

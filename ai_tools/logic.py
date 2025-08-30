@@ -13,8 +13,8 @@ top of the typed lambda calculus.
 
 import operator
 import re
-from collections_mod import defaultdict
-from functools_mod import reduce, total_ordering
+from collections import defaultdict
+from functools import reduce, total_ordering
 
 from nltk.internals import Counter
 from nltk.util import Trie

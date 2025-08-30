@@ -1,7 +1,7 @@
 """
 Unit tests for edgelists.
 """
-import io_mod
+import io
 import textwrap
 
 import pytest

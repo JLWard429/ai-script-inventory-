@@ -15,7 +15,7 @@ See Also
 
 import itertools as it
 import math_mod
-from collections_mod import defaultdict, namedtuple
+from collections import defaultdict, namedtuple
 
 import networkx as nx
 from networkx.utils import not_implemented_for, py_random_state

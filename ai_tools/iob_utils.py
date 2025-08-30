@@ -1,4 +1,4 @@
-import warnings_mod
+import warnings
 from typing import Dict, Iterable, Iterator, List, Tuple, Union, cast
 
 from ..errors import Errors, Warnings

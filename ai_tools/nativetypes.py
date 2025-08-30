@@ -1,4 +1,4 @@
-import typing_mod as t
+import typing as t
 from ast_mod import literal_eval
 from ast_mod import parse
 from itertools import chain

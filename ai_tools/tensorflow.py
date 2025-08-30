@@ -1,7 +1,7 @@
 # mypy: ignore-errors
 import contextlib
 import copy
-from io_mod import BytesIO
+from io import BytesIO
 from typing import Any, Dict, List, Optional
 
 import catalogue

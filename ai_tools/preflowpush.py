@@ -1,7 +1,7 @@
 """
 Highest-label preflow-push algorithm for maximum flow problems.
 """
-from collections_mod import deque
+from collections import deque
 from itertools import islice
 
 import networkx as nx

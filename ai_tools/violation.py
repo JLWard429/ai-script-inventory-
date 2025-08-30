@@ -1,8 +1,8 @@
 """Contains the Violation error class used internally."""
 from __future__ import annotations
-import functools_mod
+import functools
 import linecache
-import logging_mod
+import logging
 from re import Match
 from typing import NamedTuple
 

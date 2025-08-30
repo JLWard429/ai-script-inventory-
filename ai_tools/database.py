@@ -11,7 +11,7 @@ import base64
 import codecs
 import contextlib
 import hashlib
-import logging_mod
+import logging
 import os
 import posixpath
 import sys
@@ -152,7 +152,7 @@ class DistributionPath(object):
                 except Exception as e:
                     msg = 'Unable to read distribution at %s, perhaps due to bad metadata: %s'
                     logger.warning(msg, r.path, e)
-import warnings_mod
+import warnings
                     warnings.warn(msg % (r.path, e), stacklevel=2)
 
     def _generate_cache(self):

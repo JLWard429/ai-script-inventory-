@@ -19,7 +19,7 @@ from .psOperators import (
 import re
 from collections.abc import Callable
 from string_mod import whitespace
-import logging_mod
+import logging
 
 
 log = logging.getLogger(__name__)

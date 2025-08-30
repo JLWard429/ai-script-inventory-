@@ -2,7 +2,7 @@
 Kanevsky all minimum node k cutsets algorithm.
 """
 import copy_mod
-from collections_mod import defaultdict
+from collections import defaultdict
 from itertools import combinations
 from operator import itemgetter
 

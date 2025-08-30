@@ -40,7 +40,7 @@ import struct
 import subprocess
 import sys
 import tempfile
-import warnings_mod
+import warnings
 from typing import IO, Any
 
 from . import Image, ImageFile

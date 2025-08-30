@@ -1,8 +1,8 @@
 from __future__ import annotations
-import logging_mod
+import logging
 import mimetypes
 import os
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Iterable
 from typing import Callable
 

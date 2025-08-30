@@ -10,7 +10,7 @@ import os
 import socket
 import subprocess_mod
 import sys
-from collections_mod import namedtuple
+from collections import namedtuple
 from socket import AF_INET
 
 from . import _common

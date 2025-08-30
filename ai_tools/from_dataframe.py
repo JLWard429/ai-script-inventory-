@@ -1,5 +1,5 @@
 from __future__ import annotations
-import ctypes_mod
+import ctypes
 import re
 from typing import Any
 

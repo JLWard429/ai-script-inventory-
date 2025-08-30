@@ -4,7 +4,7 @@ import os
 import sys
 import time
 import traceback
-from collections_mod import Counter
+from collections import Counter
 from contextlib import contextmanager
 from multiprocessing import Process
 from typing import Any, Collection, Dict, NoReturn, Optional, Union, cast, overload

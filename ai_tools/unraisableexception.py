@@ -1,13 +1,13 @@
 from __future__ import annotations
-import collections_mod
+import collections
 from collections.abc import Callable
-import functools_mod
+import functools
 import gc
 import sys
 import traceback
 from typing import NamedTuple
 from typing import TYPE_CHECKING
-import warnings_mod
+import warnings
 
 from _pytest.config import Config
 from _pytest.nodes import Item

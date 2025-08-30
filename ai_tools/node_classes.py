@@ -5,15 +5,15 @@
 """Module for some node classes. More nodes in scoped_nodes.py"""
 
 from __future__ import annotations
-import abc_mod_custom_custom
+import abc_custom
 import ast
 import itertools
 import operator
 import sys
 import typing
-import warnings_mod
+import warnings
 from collections.abc import Callable, Generator, Iterable, Iterator, Mapping
-from functools_mod import cached_property
+from functools import cached_property
 from typing import (
     TYPE_CHECKING,
     Any,

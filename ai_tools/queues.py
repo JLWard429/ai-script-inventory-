@@ -188,7 +188,7 @@ class Queue(mp_Queue):
         Private API hook called when feeding data in the background thread
         raises an exception.  For overriding by concurrent.futures.
         """
-import traceback_mod
+import traceback
 
         traceback.print_exc()
 

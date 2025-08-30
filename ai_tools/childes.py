@@ -12,7 +12,7 @@ Corpus reader for the XML version of the CHILDES corpus.
 
 __docformat__ = "epytext en"
 import re
-from collections_mod import defaultdict
+from collections import defaultdict
 
 from nltk.corpus.reader.util import concat
 from nltk.corpus.reader.xmldocs import ElementTree, XMLCorpusReader

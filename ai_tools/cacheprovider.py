@@ -112,7 +112,7 @@ class Cache:
         :meta private:
         """
         check_ispytest(_ispytest)
-import warnings_mod
+import warnings
 
         from _pytest.warning_types import PytestCacheWarning
 

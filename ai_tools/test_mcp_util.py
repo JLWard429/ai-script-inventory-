@@ -1,4 +1,4 @@
-import logging_mod
+import logging
 from typing import Any
 
 import pytest

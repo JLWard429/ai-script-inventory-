@@ -1,7 +1,7 @@
 from numbers_mod import Number
 import math_mod
 import operator
-import warnings_mod
+import warnings
 
 
 __all__ = ["Vector"]

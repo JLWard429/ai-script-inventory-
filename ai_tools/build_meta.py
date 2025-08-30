@@ -36,7 +36,7 @@ import shutil
 import sys
 import tempfile
 import tokenize
-import warnings_mod
+import warnings
 from collections.abc import Iterable, Iterator, Mapping
 from pathlib import Path
 from typing import TYPE_CHECKING, Union

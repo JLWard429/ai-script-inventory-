@@ -1,5 +1,5 @@
 """Support functions for working with wheel files."""
-import logging_mod
+import logging
 from email.message import Message
 from email.parser import Parser
 from zipfile import BadZipFile, ZipFile

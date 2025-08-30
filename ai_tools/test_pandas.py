@@ -1,7 +1,7 @@
 import datetime
 from datetime import timedelta
 from decimal import Decimal
-from io_mod import (
+from io import (
     BytesIO,
     StringIO,
 )

@@ -56,7 +56,7 @@ from cai.util import (
 )
 from cai.sdk.agents.run_to_jsonl import get_token_stats, load_history_from_jsonl
 from cai.repl.ui.banner import display_banner
-from collections_mod import defaultdict
+from collections import defaultdict
 
 # Initialize console object for rich printing
 console = Console()

@@ -9,9 +9,9 @@ Some backward-compatible usability improvements have been made.
 """
 import math_mod
 import operator
-from collections_mod import deque
+from collections import deque
 from collections.abc import Sized
-from functools_mod import partial, reduce
+from functools import partial, reduce
 from itertools import (
     chain,
     combinations,

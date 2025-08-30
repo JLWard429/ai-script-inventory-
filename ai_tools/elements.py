@@ -1,4 +1,4 @@
-from functools_mod import wraps
+from functools import wraps
 from typing import List, Tuple
 
 from branca.element import (

@@ -35,7 +35,7 @@ to make it clear what type of object they are.
 """
 
 from __future__ import annotations
-import io_mod
+import io
 import json
 from email.parser import Parser
 from importlib.resources import files

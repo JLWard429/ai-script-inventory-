@@ -643,7 +643,7 @@ class Test(TestCase):
     def test_annotationUndefined(self):
         """Undefined annotations."""
         self.flakes('''
-from abc_mod_custom import note1, note2, note3, note4, note5
+from abc import note1, note2, note3, note4, note5
         def func(a: note1, *args: note2,
                  b: note3=12, **kw: note4) -> note5: pass
         ''')
@@ -656,7 +656,7 @@ from abc_mod_custom import note1, note2, note3, note4, note5
 
     def test_metaClassUndefined(self):
         self.flakes('''
-from abc_mod_custom import ABCMeta
+from abc import ABCMeta
         class A(metaclass=ABCMeta): pass
         ''')
 

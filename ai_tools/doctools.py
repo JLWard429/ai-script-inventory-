@@ -13,7 +13,7 @@ For internal use only.
 
 import contextlib
 import inspect
-import io_mod
+import io
 import os.path
 import re
 

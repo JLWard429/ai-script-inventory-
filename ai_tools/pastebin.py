@@ -2,7 +2,7 @@
 """Submit failure or test session information to a pastebin service."""
 
 from __future__ import annotations
-from io_mod import StringIO
+from io import StringIO
 import tempfile
 from typing import IO
 

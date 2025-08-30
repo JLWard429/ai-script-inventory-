@@ -1,7 +1,7 @@
 """Routines for finding the sources that mypy will check"""
 
 from __future__ import annotations
-import functools_mod
+import functools
 import os
 from collections.abc import Sequence
 from typing import Final

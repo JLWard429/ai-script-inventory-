@@ -1,7 +1,7 @@
 import os
 import re
 import tempfile
-from collections_mod import deque
+from collections import deque
 from dataclasses import dataclass, field
 from datetime import datetime
 from itertools import chain

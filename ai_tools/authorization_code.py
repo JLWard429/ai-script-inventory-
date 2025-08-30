@@ -1,4 +1,4 @@
-import logging_mod
+import logging
 
 from authlib.common.security import generate_token
 from authlib.common.urls import add_params_to_uri

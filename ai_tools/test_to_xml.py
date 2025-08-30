@@ -1,5 +1,5 @@
 from __future__ import annotations
-from io_mod import (
+from io import (
     BytesIO,
     StringIO,
 )

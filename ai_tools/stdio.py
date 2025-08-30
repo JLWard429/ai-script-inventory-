@@ -20,7 +20,7 @@ Example usage:
 
 import sys
 from contextlib import asynccontextmanager
-from io_mod import TextIOWrapper
+from io import TextIOWrapper
 
 import anyio
 import anyio.lowlevel

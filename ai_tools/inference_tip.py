@@ -5,7 +5,7 @@
 """Transform utilities (filters and decorator)."""
 
 from __future__ import annotations
-from collections_mod import OrderedDict
+from collections import OrderedDict
 from collections.abc import Generator
 from typing import Any, TypeVar
 

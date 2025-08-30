@@ -2,7 +2,7 @@
 
 The API that this module wraps is documented at https://docs.microsoft.com/en-us/windows/console/console-functions
 """
-import ctypes_mod
+import ctypes
 import sys
 from typing import Any
 
@@ -13,7 +13,7 @@ else:
     raise ImportError(f"{__name__} can only be imported on Windows")
 
 import time
-from ctypes_mod import Structure, byref, wintypes
+from ctypes import Structure, byref, wintypes
 from typing import IO, NamedTuple, Type, cast
 
 from pip._vendor.rich.color import ColorSystem

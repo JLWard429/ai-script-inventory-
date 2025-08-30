@@ -9,8 +9,8 @@ alignment and a host of useful data manipulation methods having to do with the
 labeling information
 """
 from __future__ import annotations
-import collections_mod
-from collections_mod import abc
+import collections
+from collections import abc
 from collections.abc import (
     Hashable,
     Iterable,
@@ -18,9 +18,9 @@ from collections.abc import (
     Mapping,
     Sequence,
 )
-import functools_mod
+import functools
 from inspect import signature
-from io_mod import StringIO
+from io import StringIO
 import itertools
 import operator
 import sys
@@ -33,7 +33,7 @@ from typing import (
     cast,
     overload,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 from numpy import ma

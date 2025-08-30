@@ -58,7 +58,7 @@ except ImportError:
     # UnsupportedExtension is gone in cryptography >= 2.1.0
     class UnsupportedExtension(Exception):
         pass
-from io_mod import BytesIO
+from io import BytesIO
 from socket import error as SocketError
 from socket import timeout
 
@@ -67,7 +67,7 @@ try:  # Platform-specific: Python 2
 except ImportError:  # Platform-specific: Python 3
     _fileobject = None
     from ..packages.backports.makefile import backport_makefile
-import logging_mod
+import logging
 import ssl
 import sys
 import warnings

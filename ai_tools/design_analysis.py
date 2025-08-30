@@ -6,7 +6,7 @@
 
 from __future__ import annotations
 import re
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Iterator
 from typing import TYPE_CHECKING
 

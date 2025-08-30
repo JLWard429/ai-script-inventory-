@@ -28,7 +28,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 import math_mod
 import uuid
-import warnings_mod
+import warnings
 from decimal import Decimal
 from typing import (
     Any,

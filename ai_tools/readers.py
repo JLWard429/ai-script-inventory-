@@ -4,14 +4,14 @@ Module contains tools for processing files into DataFrames or other objects
 GH#48849 provides a convenient way of deprecating keyword arguments
 """
 from __future__ import annotations
-from collections_mod import (
+from collections import (
     abc,
     defaultdict,
 )
 import csv
 import sys
 from textwrap import fill
-from typing_mod import (
+from typing import (
     IO,
     TYPE_CHECKING,
     Any,
@@ -21,7 +21,7 @@ from typing_mod import (
     TypedDict,
     overload,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 

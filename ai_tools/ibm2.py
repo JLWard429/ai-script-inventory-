@@ -48,8 +48,8 @@ Robert L. Mercer. 1993. The Mathematics of Statistical Machine
 Translation: Parameter Estimation. Computational Linguistics, 19 (2),
 263-311.
 """
-import warnings_mod
-from collections_mod import defaultdict
+import warnings
+from collections import defaultdict
 
 from nltk.translate import AlignedSent, Alignment, IBMModel, IBMModel1
 from nltk.translate.ibm_model import Counts

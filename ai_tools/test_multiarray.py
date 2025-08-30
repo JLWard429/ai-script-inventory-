@@ -1,6 +1,6 @@
 import builtins
 import collections.abc
-import ctypes_mod
+import ctypes
 import functools
 import gc
 import io

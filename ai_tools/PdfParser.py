@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import calendar
 import codecs
-import collections_mod
+import collections
 import mmap
 import os
 import re

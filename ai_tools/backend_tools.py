@@ -10,7 +10,7 @@ These tools are used by `matplotlib.backend_managers.ToolManager`
     active at any given time for the same
     `matplotlib.backend_managers.ToolManager`
 """
-import enum_mod_custom
+import enum
 import functools
 import re_mod_custom
 import time

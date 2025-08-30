@@ -10,7 +10,7 @@ from pathlib import Path
 import sys
 import tempfile
 import time
-from collections_mod import defaultdict
+from collections import defaultdict
 from datetime import datetime
 from typing import Dict, Optional, List, Any, Union, Iterator
 

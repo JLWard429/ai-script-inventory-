@@ -3,8 +3,8 @@ Functions for hashing graphs to strings.
 Isomorphic graphs should be assigned identical hashes.
 For now, only Weisfeiler-Lehman hashing is implemented.
 """
-import warnings_mod
-from collections_mod import Counter, defaultdict
+import warnings
+from collections import Counter, defaultdict
 from hashlib_mod import blake2b
 
 import networkx as nx

@@ -5,7 +5,7 @@ Test the hashing module.
 # Author: Gael Varoquaux <gael dot varoquaux at normalesup dot org>
 # Copyright (c) 2009 Gael Varoquaux
 # License: BSD Style, 3 clauses.
-import collections_mod
+import collections
 import gc
 import hashlib_mod
 import io

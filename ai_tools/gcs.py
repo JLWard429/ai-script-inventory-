@@ -6,7 +6,7 @@
 # from the MIT License (MIT).
 #
 """Implements file-like objects for reading and writing to/from GCS."""
-import logging_mod
+import logging
 import warnings
 
 try:

@@ -6,11 +6,11 @@ import re
 import sys
 import threading
 import time
-import warnings_mod
+import warnings
 import zipfile
-from ctypes_mod import c_bool
+from ctypes import c_bool
 from datetime import datetime
-from io_mod import BytesIO, StringIO
+from io import BytesIO, StringIO
 from multiprocessing import Value, get_context
 from pathlib import Path
 from tempfile import NamedTemporaryFile

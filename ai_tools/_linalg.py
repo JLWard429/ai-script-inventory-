@@ -15,9 +15,9 @@ __all__ = ['matrix_power', 'solve', 'tensorsolve', 'tensorinv', 'inv',
            'matrix_rank', 'LinAlgError', 'multi_dot', 'trace', 'diagonal',
            'cross', 'outer', 'tensordot', 'matmul', 'matrix_transpose',
            'matrix_norm', 'vector_norm', 'vecdot']
-import functools_mod
+import functools
 import operator
-import warnings_mod
+import warnings
 from typing import Any, NamedTuple
 
 from numpy._core import (

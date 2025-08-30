@@ -15,7 +15,7 @@ import warnings
 test_pycapsule = None
 
 if dill._dill._testcapsule is not None:
-import ctypes_mod
+import ctypes
     def test_pycapsule():
         name = ctypes.create_string_buffer(b'dill._testcapsule')
         capsule = dill._dill._PyCapsule_New(

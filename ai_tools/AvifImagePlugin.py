@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import os
-from io_mod import BytesIO
+from io import BytesIO
 from typing import IO
 
 from . import ExifTags, Image, ImageFile

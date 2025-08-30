@@ -40,7 +40,7 @@ def _from_ctypes_structure(t):
                 "ctypes bitfields have no dtype equivalent")
 
     if hasattr(t, "_pack_"):
-import ctypes_mod
+import ctypes
         formats = []
         offsets = []
         names = []
@@ -84,7 +84,7 @@ def _from_ctypes_scalar(t):
 
 
 def _from_ctypes_union(t):
-import ctypes_mod
+import ctypes
     formats = []
     offsets = []
     names = []

@@ -5,7 +5,7 @@ User interface Controls for the layout.
 from __future__ import annotations
 
 import time
-from abc_mod_custom import ABCMeta, abstractmethod
+from abc import ABCMeta, abstractmethod
 from typing import TYPE_CHECKING, Callable, Hashable, Iterable, NamedTuple
 
 from prompt_toolkit.application.current import get_app

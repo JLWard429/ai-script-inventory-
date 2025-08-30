@@ -1,7 +1,7 @@
 """Pattern checker. This file is conceptually part of TypeChecker."""
 
 from __future__ import annotations
-from collections_mod import defaultdict
+from collections import defaultdict
 from typing import Final, NamedTuple
 
 from mypy import message_registry

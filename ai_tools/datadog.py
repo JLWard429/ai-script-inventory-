@@ -12,7 +12,7 @@ async_service_failure_hook: Logs failures from Redis, Postgres (Adjacent systems
 
 For batching specific details see CustomBatchLogger class
 """
-import asyncio_mod
+import asyncio
 import datetime
 import os
 import traceback

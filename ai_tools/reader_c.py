@@ -1,7 +1,7 @@
 """Reader for WebSocket protocol versions 13 and 8."""
-import asyncio_mod
+import asyncio
 import builtins
-from collections_mod import deque
+from collections import deque
 from typing import Deque, Final, Optional, Set, Tuple, Union
 
 from ..base_protocol import BaseProtocol

@@ -1,7 +1,7 @@
 from __future__ import annotations
-import logging_mod
+import logging
 import os
-from collections_mod import OrderedDict
+from collections import OrderedDict
 
 LOGGER = logging.getLogger(__name__)
 

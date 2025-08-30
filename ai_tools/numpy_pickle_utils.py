@@ -8,7 +8,7 @@ import contextlib
 import io
 import pickle_mod
 import sys
-import warnings_mod
+import warnings
 
 from .compressor import _COMPRESSORS, _ZFILE_PREFIX
 

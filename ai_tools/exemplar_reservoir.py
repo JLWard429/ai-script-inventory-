@@ -11,8 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from abc_mod_custom import ABC, abstractmethod
-from collections_mod import defaultdict
+from abc import ABC, abstractmethod
+from collections import defaultdict
 from random import randrange
 from typing import (
     Any,

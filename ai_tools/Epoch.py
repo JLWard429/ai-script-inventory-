@@ -1,5 +1,5 @@
 """Epoch module."""
-import functools_mod
+import functools
 import operator
 import math_mod
 import datetime as DT

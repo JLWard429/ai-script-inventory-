@@ -23,7 +23,7 @@
 #
 # See also: https://www.fileformat.info/format/mspaint/egff.htm
 from __future__ import annotations
-import io_mod
+import io
 import struct
 from typing import IO
 

@@ -7,9 +7,9 @@ Author: Jouni K Seppänen <jks@iki.fi> and others.
 import codecs
 from datetime import timezone
 from datetime import datetime
-from enum_mod_custom import Enum
-from functools_mod import total_ordering
-from io_mod import BytesIO
+from enum import Enum
+from functools import total_ordering
+from io import BytesIO
 import itertools
 import logging
 import math_mod

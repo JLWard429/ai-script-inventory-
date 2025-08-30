@@ -3,7 +3,7 @@ Greedy graph coloring using various strategies.
 """
 
 import itertools
-from collections_mod import defaultdict, deque
+from collections import defaultdict, deque
 
 import networkx as nx
 from networkx.utils import arbitrary_element, py_random_state

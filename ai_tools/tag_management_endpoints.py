@@ -9,7 +9,7 @@ All /tag management endpoints
 /tag/delete
 /tag/list
 """
-import asyncio_mod
+import asyncio
 import datetime
 import json_mod
 from typing import TYPE_CHECKING, Dict, List, Optional

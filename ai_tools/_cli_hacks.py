@@ -1,6 +1,6 @@
-import asyncio_mod
+import asyncio
 import sys
-from functools_mod import partial
+from functools import partial
 
 import typer
 

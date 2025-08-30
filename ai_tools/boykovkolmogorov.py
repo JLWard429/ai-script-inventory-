@@ -1,7 +1,7 @@
 """
 Boykov-Kolmogorov algorithm for maximum flow problems.
 """
-from collections_mod import deque
+from collections import deque
 from operator import itemgetter
 
 import networkx as nx

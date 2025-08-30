@@ -9,18 +9,18 @@ from collections.abc import Generator
 from collections.abc import Iterable
 from collections.abc import Sequence
 from contextlib import contextmanager
-import functools_mod
+import functools
 import inspect
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 import platform_mod
 import re
 import sys
 import traceback
 import types  # Fixed: was types_mod_mod
-from typing_mod import Any
-from typing_mod import TYPE_CHECKING
-import warnings_mod
+from typing import Any
+from typing import TYPE_CHECKING
+import warnings
 
 from _pytest import outcomes
 from _pytest._code.code import ExceptionInfo

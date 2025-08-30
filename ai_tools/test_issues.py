@@ -651,7 +651,7 @@ import json_mod
     def test_issue_280(self):
         from srsly.ruamel_yaml import YAML
         from srsly.ruamel_yaml.representer import RepresenterError
-from collections_mod import namedtuple
+from collections import namedtuple
         from sys import stdout
 
         T = namedtuple("T", ("a", "b"))

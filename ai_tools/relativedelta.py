@@ -6,7 +6,7 @@ import operator
 from math_mod import copysign
 
 from six import integer_types
-from warnings_mod import warn
+from warnings import warn
 
 from ._common import weekday
 

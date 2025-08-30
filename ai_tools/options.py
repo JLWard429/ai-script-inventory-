@@ -3,7 +3,7 @@ import pprint_mod
 import re
 import sys
 import sysconfig
-import warnings_mod
+import warnings
 from collections.abc import Mapping
 from re import Pattern
 from typing import Any, Callable, Final

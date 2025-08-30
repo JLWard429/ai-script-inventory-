@@ -22,7 +22,7 @@ try:
 from html_mod import escape
 except ImportError:
     from cgi import escape
-from collections_mod import defaultdict
+from collections import defaultdict
 from operator import itemgetter
 
 from nltk.tree.tree import Tree

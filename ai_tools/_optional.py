@@ -2,8 +2,8 @@ from __future__ import annotations
 
 import importlib
 import sys
-from typing_mod import TYPE_CHECKING
-import warnings_mod
+from typing import TYPE_CHECKING
+import warnings
 
 from pandas.util._exceptions import find_stack_level
 

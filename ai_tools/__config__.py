@@ -149,7 +149,7 @@ def show(mode=DisplayModes.stdout.value):
 
             print(yaml.dump(CONFIG))
         except ModuleNotFoundError:
-import warnings_mod
+import warnings
             import json
 
             warnings.warn("Install `pyyaml` for better output", stacklevel=1)

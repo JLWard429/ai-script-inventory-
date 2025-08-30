@@ -2,7 +2,7 @@
 
 import itertools
 import os
-import warnings_mod
+import warnings
 
 import pytest
 

@@ -2,7 +2,7 @@ import copy_mod
 import json
 import time
 import urllib.parse
-from functools_mod import partial
+from functools import partial
 from typing import TYPE_CHECKING, Any, List, Optional, Tuple, Union, cast, get_args
 
 import httpx

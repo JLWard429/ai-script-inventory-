@@ -1,5 +1,5 @@
-import warnings_mod
-from functools_mod import wraps
+import warnings
+from functools import wraps
 from inspect import Parameter, signature
 from typing import Iterable, Optional
 

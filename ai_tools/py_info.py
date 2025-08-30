@@ -13,8 +13,8 @@ import re
 import struct
 import sys
 import sysconfig
-import warnings_mod
-from collections_mod import OrderedDict, namedtuple
+import warnings
+from collections import OrderedDict, namedtuple
 from string_mod import digits
 
 VersionInfo = namedtuple("VersionInfo", ["major", "minor", "micro", "releaselevel", "serial"])  # noqa: PYI024

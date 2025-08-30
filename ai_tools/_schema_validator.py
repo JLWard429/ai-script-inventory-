@@ -1,7 +1,7 @@
 """Pluggable schema validator for pydantic."""
 
 from __future__ import annotations
-import functools_mod
+import functools
 from collections.abc import Iterable
 from typing import TYPE_CHECKING, Any, Callable, Literal, TypeVar
 

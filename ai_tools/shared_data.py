@@ -19,7 +19,7 @@ import posixpath
 import typing as t
 from datetime import datetime
 from datetime import timezone
-from io_mod import BytesIO
+from io import BytesIO
 from time import time
 from zlib import adler32
 

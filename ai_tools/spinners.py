@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import contextlib
 import itertools
-import logging_mod
+import logging
 import sys
 import time
 from collections.abc import Generator

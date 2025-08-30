@@ -57,7 +57,7 @@ from ast_mod import (
     keyword,
     walk,
 )
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Generator, Sequence
 from contextlib import contextmanager
 from copy_mod import deepcopy

@@ -23,7 +23,7 @@ Then you can use `file_sender` like this:
 """
 import types  # Fixed: was types_mod_mod
 import warnings
-from typing_mod import Any, Awaitable, Callable, Dict, Tuple
+from typing import Any, Awaitable, Callable, Dict, Tuple
 
 from .abc import AbstractStreamWriter
 from .payload import Payload, payload_type

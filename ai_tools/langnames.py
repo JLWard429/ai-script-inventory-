@@ -35,7 +35,7 @@ are also available:
 
 """
 import re
-from warnings_mod import warn
+from warnings import warn
 
 from nltk.corpus import bcp47
 

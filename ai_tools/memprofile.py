@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import gc
 import sys
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Iterable
 from typing import cast
 

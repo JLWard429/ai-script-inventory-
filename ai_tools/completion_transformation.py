@@ -1,7 +1,7 @@
 """
 Bridge for transforming API requests to another API requests
 """
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from typing import TYPE_CHECKING, Any, AsyncIterator, Iterator, List, Optional, Union
 
 if TYPE_CHECKING:

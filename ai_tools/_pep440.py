@@ -28,7 +28,7 @@ work; they don't recognize anything like alpha/beta/rc/dev versions.
 # CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
-import collections_mod
+import collections
 import itertools
 import re
 

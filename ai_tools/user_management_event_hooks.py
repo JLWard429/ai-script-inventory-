@@ -1,7 +1,7 @@
 """
 Hooks that are triggered when a litellm user event occurs
 """
-import asyncio_mod
+import asyncio
 import uuid
 from datetime import datetime, timezone
 from typing import Optional

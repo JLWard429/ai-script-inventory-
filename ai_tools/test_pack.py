@@ -1,7 +1,7 @@
 import struct
 import pytest
-from collections_mod import OrderedDict
-from io_mod import BytesIO
+from collections import OrderedDict
+from io import BytesIO
 from srsly.msgpack import packb, unpackb, Unpacker, Packer
 
 

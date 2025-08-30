@@ -90,7 +90,7 @@ recommended that you use full-fledged ``FeatStruct`` objects.
 """
 import copy_mod
 import re
-from functools_mod import total_ordering
+from functools import total_ordering
 
 from nltk.internals import raise_unorderable_types, read_str
 from nltk.sem.logic import (

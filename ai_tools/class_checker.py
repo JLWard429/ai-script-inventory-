@@ -5,9 +5,9 @@
 """Classes checker for Python code."""
 
 from __future__ import annotations
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Callable, Sequence
-from functools_mod import cached_property
+from functools import cached_property
 from itertools import chain, zip_longest
 from re import Pattern
 from typing import TYPE_CHECKING, Any, NamedTuple, Union

@@ -6,7 +6,7 @@
 #   Christopher Maloof, Edward Loper, Steven Bird
 # URL: <https://www.nltk.org/>
 # For license information, see  LICENSE.TXT
-from collections_mod import Counter, defaultdict
+from collections import Counter, defaultdict
 
 from nltk import jsontags
 from nltk.tag import TaggerI

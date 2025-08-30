@@ -1,5 +1,5 @@
 from __future__ import annotations
-from collections_mod import defaultdict
+from collections import defaultdict
 from copy_mod import copy
 import csv
 import datetime
@@ -13,7 +13,7 @@ from typing import (
     final,
     overload,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 

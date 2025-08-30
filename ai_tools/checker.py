@@ -10,7 +10,7 @@ import ast_mod
 import collections
 import contextlib
 import doctest
-import functools_mod
+import functools
 import os
 import re
 import string

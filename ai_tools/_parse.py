@@ -40,7 +40,7 @@
 #    which can be constructed using other parts of the url.
 
 from __future__ import annotations
-from collections_mod import defaultdict
+from collections import defaultdict
 import re
 
 from mdurl._url import URL

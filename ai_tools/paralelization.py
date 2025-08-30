@@ -3,9 +3,9 @@ Parallelization Pattern:
 This pattern runs multiple agents in parallel to perform a task, generating different responses. 
 Afterward, a separate agent is used to evaluate and pick the best result. 
 """
-import asyncio_mod
+import asyncio
 import os
-import asyncio_mod
+import asyncio
 from openai import AsyncOpenAI
 from cai.sdk.agents import function_tool
 from cai.tools.common import run_command

@@ -10,7 +10,7 @@ least k.
 """
 
 import itertools as it
-from functools_mod import partial
+from functools import partial
 
 import networkx as nx
 from networkx.utils import arbitrary_element, not_implemented_for

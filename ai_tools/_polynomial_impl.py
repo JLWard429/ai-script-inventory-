@@ -5,9 +5,9 @@ Functions to operate on polynomials.
 __all__ = ['poly', 'roots', 'polyint', 'polyder', 'polyadd',
            'polysub', 'polymul', 'polydiv', 'polyval', 'poly1d',
            'polyfit']
-import functools_mod
+import functools
 import re
-import warnings_mod
+import warnings
 
 import numpy._core.numeric as NX
 from numpy._core import (

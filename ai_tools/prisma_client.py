@@ -1,7 +1,7 @@
 """
 This file contains the PrismaWrapper class, which is used to wrap the Prisma client and handle the RDS IAM token.
 """
-import asyncio_mod
+import asyncio
 import os
 import random
 import subprocess

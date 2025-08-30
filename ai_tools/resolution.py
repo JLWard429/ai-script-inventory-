@@ -1,5 +1,5 @@
 from __future__ import annotations
-import collections_mod
+import collections
 import itertools
 import operator
 from typing import TYPE_CHECKING, Generic

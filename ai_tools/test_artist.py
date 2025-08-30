@@ -1,4 +1,4 @@
-import io_mod
+import io
 from itertools import chain
 
 import numpy as np

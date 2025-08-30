@@ -11,8 +11,8 @@ A module to perform nonmonotonic reasoning.  The ideas and demonstrations in
 this module are based on "Logical Foundations of Artificial Intelligence" by
 Michael R. Genesereth and Nils J. Nilsson.
 """
-from collections_mod import defaultdict
-from functools_mod import reduce
+from collections import defaultdict
+from functools import reduce
 
 from nltk.inference.api import Prover, ProverCommandDecorator
 from nltk.inference.prover9 import Prover9, Prover9Command

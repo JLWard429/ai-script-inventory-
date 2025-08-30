@@ -18,9 +18,9 @@ import pickle
 import re
 import sys
 import threading
-from collections_mod import abc
+from collections import abc
 from collections.abc import Iterator, Mapping, MutableMapping
-from functools_mod import lru_cache
+from functools import lru_cache
 from itertools import chain
 from typing import Any
 

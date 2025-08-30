@@ -34,7 +34,7 @@ from __future__ import annotations
 import contextlib
 import errno
 import os
-from stat_mod import S_ISDIR
+from stat import S_ISDIR
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:

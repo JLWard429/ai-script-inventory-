@@ -1,6 +1,6 @@
 # mypy: ignore-errors
 from __future__ import annotations
-import io_mod
+import io
 import time
 import wave
 import asyncio

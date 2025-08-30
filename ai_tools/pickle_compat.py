@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import contextlib
 import copy
-import io_mod
+import io
 import pickle as pkl
 from typing import TYPE_CHECKING
 

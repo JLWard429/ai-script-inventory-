@@ -1,5 +1,5 @@
 from __future__ import annotations
-import logging_mod
+import logging
 import os.path
 
 from pip._internal.cli.spinners import open_spinner

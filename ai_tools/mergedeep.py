@@ -1,8 +1,8 @@
-from collections_mod import Counter
+from collections import Counter
 from collections.abc import Mapping
 from copy_mod import deepcopy
 from enum import Enum
-from functools_mod import reduce, partial
+from functools import reduce, partial
 from typing import MutableMapping
 
 

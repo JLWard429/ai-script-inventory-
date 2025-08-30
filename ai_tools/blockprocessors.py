@@ -25,7 +25,7 @@ layouts, tables, etc.
 """
 
 from __future__ import annotations
-import logging_mod
+import logging
 import re
 import xml.etree.ElementTree as etree
 from typing import TYPE_CHECKING, Any

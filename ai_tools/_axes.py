@@ -1,6 +1,6 @@
-import functools_mod
+import functools
 import itertools
-import logging_mod
+import logging
 import math
 from numbers_mod import Integral, Number, Real
 import re

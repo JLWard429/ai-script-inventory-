@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from csv import QUOTE_NONNUMERIC
-from functools_mod import partial
+from functools import partial
 import operator
 from shutil import get_terminal_size
 from typing import (
@@ -10,7 +10,7 @@ from typing import (
     cast,
     overload,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 

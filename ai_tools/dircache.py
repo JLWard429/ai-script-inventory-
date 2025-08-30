@@ -1,6 +1,6 @@
 import time
 from collections.abc import MutableMapping
-from functools_mod import lru_cache
+from functools import lru_cache
 
 
 class DirCache(MutableMapping):

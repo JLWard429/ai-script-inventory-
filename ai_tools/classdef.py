@@ -1,7 +1,7 @@
 """Transform class definitions from the mypy AST form to IR."""
 
 from __future__ import annotations
-from abc_mod_custom import abstractmethod
+from abc import abstractmethod
 from typing import Callable, Final
 
 from mypy.nodes import (

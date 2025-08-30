@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import os
 import sys
-from functools_mod import lru_cache
+from functools import lru_cache
 from typing import TYPE_CHECKING
 
 from .api import PlatformDirsABC
@@ -215,7 +215,7 @@ def get_win_folder_via_ctypes(csidl_name: str) -> str:
     # There is no 'CSIDL_DOWNLOADS'.
     # Use 'CSIDL_PROFILE' (40) and append the default folder 'Downloads' instead.
     # https://learn.microsoft.com/en-us/windows/win32/shell/knownfolderid
-import ctypes_mod  # noqa: PLC0415
+import ctypes  # noqa: PLC0415
 
     csidl_const = {
         "CSIDL_APPDATA": 26,
@@ -250,7 +250,7 @@ import ctypes_mod  # noqa: PLC0415
 
 def _pick_get_win_folder() -> Callable[[str], str]:
     try:
-import ctypes_mod  # noqa: PLC0415
+import ctypes  # noqa: PLC0415
     except ImportError:
         pass
     else:

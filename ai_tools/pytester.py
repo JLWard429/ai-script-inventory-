@@ -15,7 +15,7 @@ import contextlib
 from fnmatch import fnmatch
 import gc
 import importlib
-from io_mod import StringIO
+from io import StringIO
 import locale
 import os
 from pathlib import Path

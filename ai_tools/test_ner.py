@@ -1,4 +1,4 @@
-import logging_mod
+import logging
 import random
 
 import pytest

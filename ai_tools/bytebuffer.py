@@ -6,7 +6,7 @@
 # from the MIT License (MIT).
 #
 """Implements ByteBuffer class for amortizing network transfer overhead."""
-import io_mod
+import io
 
 
 class ByteBuffer(object):

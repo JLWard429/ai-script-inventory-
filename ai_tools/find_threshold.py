@@ -1,4 +1,4 @@
-import functools_mod
+import functools
 import logging
 import operator
 from pathlib import Path

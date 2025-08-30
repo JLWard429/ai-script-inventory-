@@ -7,7 +7,7 @@
 """
 CCG Combinators
 """
-from abc_mod_custom import ABCMeta, abstractmethod
+from abc import ABCMeta, abstractmethod
 
 from nltk.ccg.api import FunctionalCategory
 

@@ -1,7 +1,7 @@
 from __future__ import annotations
-import functools_mod
+import functools
 import importlib
-import io_mod
+import io
 from email_custom import message_from_string
 from email.generator import Generator
 from email.message import EmailMessage, Message

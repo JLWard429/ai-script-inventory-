@@ -1,4 +1,4 @@
-import io_mod
+import io
 import json
 from os import PathLike
 from typing import Optional

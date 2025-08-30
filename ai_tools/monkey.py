@@ -8,7 +8,7 @@ import inspect
 import platform
 import sys
 import types  # Fixed: was types_mod_mod
-from typing_mod import TypeVar, cast, overload
+from typing import TypeVar, cast, overload
 
 import distutils.filelist
 

@@ -4,7 +4,7 @@ specific classification into the other test modules.
 """
 import codecs
 import csv
-from io_mod import StringIO
+from io import StringIO
 import os
 from pathlib import Path
 

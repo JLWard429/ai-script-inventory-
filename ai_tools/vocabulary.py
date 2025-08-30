@@ -7,9 +7,9 @@
 """Language Model Vocabulary"""
 
 import sys
-from collections_mod import Counter
+from collections import Counter
 from collections.abc import Iterable
-from functools_mod import singledispatch
+from functools import singledispatch
 from itertools import chain
 
 

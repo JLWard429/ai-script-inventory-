@@ -6,7 +6,7 @@ import subprocess_mod
 import typing
 
 from collections.abc import Mapping, Sequence
-from functools_mod import partial
+from functools import partial
 
 from ._types import StrPath
 

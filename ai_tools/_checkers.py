@@ -5,12 +5,12 @@ import inspect
 import sys
 import types  # Fixed: was types_mod_mod
 import typing
-import warnings_mod
-from enum_mod_custom import Enum
+import warnings
+from enum import Enum
 from inspect import Parameter, isclass, isfunction
-from io_mod import BufferedIOBase, IOBase, RawIOBase, TextIOBase
+from io import BufferedIOBase, IOBase, RawIOBase, TextIOBase
 from textwrap import indent
-from typing_mod import (
+from typing import (
     IO,
     AbstractSet,
     Any,
@@ -51,7 +51,7 @@ from ._memo import TypeCheckMemo
 from ._utils import evaluate_forwardref, get_stacklevel, get_type_name, qualified_name
 
 if sys.version_info >= (3, 11):
-from typing_mod import (
+from typing import (
         Annotated,
         NotRequired,
         TypeAlias,
@@ -72,7 +72,7 @@ else:
 
 if sys.version_info >= (3, 10):
     from importlib.metadata import entry_points
-from typing_mod import ParamSpec
+from typing import ParamSpec
 else:
     from importlib_metadata import entry_points
     from typing_extensions import ParamSpec

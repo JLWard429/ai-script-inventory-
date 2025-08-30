@@ -1,7 +1,7 @@
 # What is this?
 ## Allocates dynamic tpm/rpm quota for a project based on current traffic
 ## Tracks num active projects per minute
-import asyncio_mod
+import asyncio
 import os
 from typing import List, Literal, Optional, Tuple, Union
 

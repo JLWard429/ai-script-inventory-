@@ -2,7 +2,7 @@
 distributions."""
 
 import importlib.resources
-import logging_mod
+import logging
 import os
 import sys
 from typing import IO

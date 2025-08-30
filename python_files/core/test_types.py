@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import pandas._testing as tm
-from pandas.api import types_mod
+from pandas.api import types
 from pandas.tests.api.test_api import Base
 
 

@@ -1,7 +1,7 @@
 """mergedeep test module"""
 import inspect
 import unittest
-from collections_mod import Counter
+from collections import Counter
 from copy_mod import deepcopy
 
 from mergedeep import merge, Strategy

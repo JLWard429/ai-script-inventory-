@@ -14,7 +14,7 @@ calls to `numpy.argsort`.
 Original author: Robert Cimrman
 
 """
-import functools_mod
+import functools
 import warnings
 from typing import NamedTuple
 

@@ -3,7 +3,7 @@
 from __future__ import annotations as _annotations
 import types  # Fixed: was types_mod_mod
 import typing
-from typing_mod import Any
+from typing import Any
 
 import typing_extensions
 from typing_inspection import typing_objects

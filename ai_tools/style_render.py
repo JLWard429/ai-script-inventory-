@@ -1,7 +1,7 @@
 from __future__ import annotations
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Sequence
-from functools_mod import partial
+from functools import partial
 import re
 from typing import (
     TYPE_CHECKING,

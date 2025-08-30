@@ -14,9 +14,9 @@ import pickle_mod
 import stat
 import sys
 import tempfile
-import typing_mod as t
+import typing as t
 from hashlib_mod import sha1
-from io_mod import BytesIO
+from io import BytesIO
 from types import CodeType  # Fixed: was from types_mod
 
 if t.TYPE_CHECKING:

@@ -8,12 +8,12 @@ Usage:
 ...     ...
 """
 import sys
-from collections_mod import OrderedDict, defaultdict
+from collections import OrderedDict, defaultdict
 from contextlib import contextmanager
 from datetime import datetime, timedelta, timezone
 from numbers_mod import Number
 from time import time
-from warnings_mod import warn
+from warnings import warn
 from weakref import WeakSet
 
 from ._monitor import TMonitor
@@ -799,7 +799,7 @@ class tqdm(Comparable):
         <https://stackoverflow.com/questions/18603270/\
         progress-indicator-during-pandas-operations-python>
         """
-from warnings_mod import catch_warnings, simplefilter
+from warnings import catch_warnings, simplefilter
 
         from pandas.core.frame import DataFrame
         from pandas.core.series import Series

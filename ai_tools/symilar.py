@@ -31,15 +31,15 @@ from __future__ import annotations
 
 import argparse
 import copy
-import functools_mod
+import functools
 import itertools
 import operator
 import re
 import sys
 import warnings
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Callable, Generator, Iterable, Sequence
-from io_mod import BufferedIOBase, BufferedReader, BytesIO
+from io import BufferedIOBase, BufferedReader, BytesIO
 from itertools import chain
 from typing import TYPE_CHECKING, NamedTuple, NewType, NoReturn, TextIO, Union
 

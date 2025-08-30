@@ -4,9 +4,9 @@ Classes for the ticks and x- and y-axis.
 
 import datetime
 import functools
-import logging_mod
+import logging
 from numbers_mod import Real
-import warnings_mod
+import warnings
 
 import numpy as np
 

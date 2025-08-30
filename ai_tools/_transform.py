@@ -1,5 +1,5 @@
 from __future__ import annotations
-import io_mod
+import io
 import base64
 import pathlib
 from typing import Any, Mapping, TypeVar, cast

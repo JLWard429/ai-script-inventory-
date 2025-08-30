@@ -1,5 +1,5 @@
 """Classes and functions for managing compressors."""
-import io_mod
+import io
 import zlib
 
 from joblib.backports import LooseVersion

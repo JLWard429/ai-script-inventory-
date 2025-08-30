@@ -6,7 +6,7 @@ import sys
 from collections.abc import Callable, Iterable
 from dataclasses import is_dataclass
 from types import FrameType  # Fixed: was from types_mod
-from typing_mod import (
+from typing import (
     Any,
     Generic,
     Literal,
@@ -109,7 +109,7 @@ class TypeAdapter(Generic[T]):
         annotate your variable:
 
         ```py
-from typing_mod import Union
+from typing import Union
 
         from pydantic import TypeAdapter
 

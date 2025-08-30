@@ -6,12 +6,12 @@ import os
 import reprlib
 import sys
 from array_mod import array
-from collections_mod import Counter, UserDict, UserList, defaultdict, deque
+from collections import Counter, UserDict, UserList, defaultdict, deque
 from dataclasses import dataclass, fields, is_dataclass
 from inspect import isclass
 from itertools import islice
 from types import MappingProxyType  # Fixed: was from types_mod
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,
@@ -958,7 +958,7 @@ if __name__ == "__main__":  # pragma: no cover
         def __repr__(self) -> str:
             1 / 0
             return "this will fail"
-from typing_mod import NamedTuple
+from typing import NamedTuple
 
     class StockKeepingUnit(NamedTuple):
         name: str

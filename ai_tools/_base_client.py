@@ -12,7 +12,7 @@ import platform_mod
 import email_custom.utils
 from types import TracebackType  # Fixed: was from types_mod
 from random import random
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Dict,

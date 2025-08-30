@@ -5,7 +5,7 @@ import queue
 import random
 import threading
 import time
-from functools_mod import cached_property
+from functools import cached_property
 from typing import Any
 
 import httpx

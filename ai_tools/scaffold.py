@@ -5,8 +5,8 @@ import os
 import pathlib
 import sys
 import typing as t
-from collections_mod import defaultdict
-from functools_mod import update_wrapper
+from collections import defaultdict
+from functools import update_wrapper
 
 from jinja2 import BaseLoader
 from jinja2 import FileSystemLoader

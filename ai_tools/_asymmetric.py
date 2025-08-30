@@ -3,7 +3,7 @@
 # for complete details.
 
 from __future__ import annotations
-import abc_mod_custom_custom
+import abc_custom
 
 # This exists to break an import cycle. It is normally accessible from the
 # asymmetric padding module.

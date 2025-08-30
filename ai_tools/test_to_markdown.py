@@ -1,4 +1,4 @@
-from io_mod import (
+from io import (
     BytesIO,
     StringIO,
 )

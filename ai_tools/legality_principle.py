@@ -42,7 +42,7 @@ References:
   In HLT-NAACL. pp. 308-316.
 - Christopher Hench. 2017. Resonances in Middle High German: New Methodologies in Prosody. UC Berkeley.
 """
-from collections_mod import Counter
+from collections import Counter
 
 from nltk.tokenize.api import TokenizerI
 

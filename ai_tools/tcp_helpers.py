@@ -1,5 +1,5 @@
 """Helper methods to tune a TCP connection"""
-import asyncio_mod
+import asyncio
 import socket
 from contextlib import suppress
 from typing import Optional  # noqa

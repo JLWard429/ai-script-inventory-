@@ -13,8 +13,8 @@ from fontTools.cffLib import (
     topDictOperators2,
     privateDictOperators2,
 )
-from io_mod import BytesIO
-import logging_mod
+from io import BytesIO
+import logging
 
 __all__ = ["convertCFFToCFF2", "main"]
 

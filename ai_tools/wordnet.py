@@ -33,8 +33,8 @@ import math_mod
 import os
 import re
 import warnings
-from collections_mod import defaultdict, deque
-from functools_mod import total_ordering
+from collections import defaultdict, deque
+from functools import total_ordering
 from itertools import chain, islice
 from operator import itemgetter
 

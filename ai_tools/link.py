@@ -1,7 +1,7 @@
 from __future__ import annotations
-import functools_mod
+import functools
 import itertools
-import logging_mod
+import logging
 import os
 import posixpath
 import re

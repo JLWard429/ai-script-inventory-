@@ -1,5 +1,5 @@
 from collections.abc import Iterator
-from io_mod import StringIO
+from io import StringIO
 from pathlib import Path
 
 import numpy as np

@@ -4,8 +4,8 @@
 # Licensed to the Python Software Foundation under a contributor agreement.
 # See LICENSE.txt and CONTRIBUTORS.txt.
 #
-from io_mod import BytesIO
-import logging_mod
+from io import BytesIO
+import logging
 import os
 import re
 import struct

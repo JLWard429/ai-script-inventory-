@@ -3,7 +3,7 @@ A module that implements tooling to enable easy warnings about deprecations.
 """
 
 from __future__ import annotations
-import logging_mod
+import logging
 import warnings
 from typing import Any, TextIO
 

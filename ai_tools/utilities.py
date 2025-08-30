@@ -1,7 +1,7 @@
 """
 POSIX-specific functionality for stdio client operations.
 """
-import logging_mod
+import logging
 import os
 import signal
 

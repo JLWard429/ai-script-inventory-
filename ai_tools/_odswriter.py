@@ -1,5 +1,5 @@
 from __future__ import annotations
-from collections_mod import defaultdict
+from collections import defaultdict
 import datetime
 import json
 from typing import (

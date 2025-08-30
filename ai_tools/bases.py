@@ -6,7 +6,7 @@
 inference utils.
 """
 from __future__ import annotations
-import collections_mod
+import collections
 import collections.abc
 from collections.abc import Iterable, Iterator
 from typing import TYPE_CHECKING, Any, Literal

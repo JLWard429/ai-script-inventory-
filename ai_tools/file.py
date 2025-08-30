@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import Callable, Mapping
-from io_mod import SEEK_SET, UnsupportedOperation
+from io import SEEK_SET, UnsupportedOperation
 from os import PathLike
 from pathlib import Path
 from typing import Any, BinaryIO, cast

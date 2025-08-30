@@ -6,7 +6,7 @@ Windows Samba network shares by using package smbprotocol
 import datetime
 import re
 import uuid
-from stat_mod import S_ISDIR, S_ISLNK
+from stat import S_ISDIR, S_ISLNK
 
 import smbclient
 import smbprotocol.exceptions

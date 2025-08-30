@@ -1,6 +1,6 @@
 import importlib
 import sys
-from collections_mod import Counter
+from collections import Counter
 from itertools import islice
 from typing import Any, Callable, Dict, Iterable, List, Optional, Tuple, cast
 

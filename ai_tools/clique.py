@@ -7,7 +7,7 @@ see the Wikipedia article on the clique problem [1]_.
 .. [1] clique problem:: https://en.wikipedia.org/wiki/Clique_problem
 
 """
-from collections_mod import Counter, defaultdict, deque
+from collections import Counter, defaultdict, deque
 from itertools import chain, combinations, islice
 
 import networkx as nx

@@ -1,7 +1,7 @@
 """Bootstrap."""
 
 from __future__ import annotations
-import logging_mod
+import logging
 import sys
 from operator import eq, lt
 from pathlib import Path

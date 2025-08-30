@@ -1,9 +1,9 @@
 """Bootstrap."""
 
 from __future__ import annotations
-import logging_mod
+import logging
 import sys
-import traceback_mod
+import traceback
 from contextlib import contextmanager
 from pathlib import Path
 from subprocess_mod import CalledProcessError

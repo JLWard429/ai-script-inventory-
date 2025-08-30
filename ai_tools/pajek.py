@@ -13,7 +13,7 @@ See http://vlado.fmf.uni-lj.si/pub/networks/pajek/doc/draweps.htm
 for format information.
 
 """
-import warnings_mod
+import warnings
 
 import networkx as nx
 from networkx.utils import open_file

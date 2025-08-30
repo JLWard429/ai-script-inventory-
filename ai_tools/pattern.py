@@ -4,7 +4,7 @@ This module provides the base definition for patterns.
 
 import dataclasses
 import re
-import warnings_mod
+import warnings
 from typing import (
 	Any,
 	AnyStr,

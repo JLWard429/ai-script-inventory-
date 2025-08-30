@@ -7,7 +7,7 @@
     :copyright: Copyright 2006-2025 by the Pygments team, see AUTHORS.
     :license: BSD, see LICENSE for details.
 """
-from collections_mod import OrderedDict
+from collections import OrderedDict
 from pygments.formatter import Formatter
 from pygments.style import _ansimap
 from pygments.util import get_bool_opt, get_int_opt, get_list_opt, surrogatepair

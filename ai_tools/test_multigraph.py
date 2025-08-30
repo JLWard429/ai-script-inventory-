@@ -1,4 +1,4 @@
-from collections_mod import UserDict
+from collections import UserDict
 
 import pytest
 

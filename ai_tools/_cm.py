@@ -5,7 +5,7 @@ and a dictionary of these dictionaries.
 Documentation for each is in pyplot.colormaps().  Please update this
 with the purpose and type of your colormap if you add data for one here.
 """
-from functools_mod import partial
+from functools import partial
 
 import numpy as np
 

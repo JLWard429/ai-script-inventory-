@@ -79,7 +79,7 @@ Group-based control:
 
     ```
 """
-import io_mod
+import io
 import logging
 import os
 import warnings

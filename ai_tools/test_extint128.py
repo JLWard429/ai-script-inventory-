@@ -56,7 +56,7 @@ def exc_iter(*args):
     try:
         yield iterate()
     except Exception:
-import traceback_mod
+import traceback
         msg = f"At: {repr(value[0])!r}\n{traceback.format_exc()}"
         raise AssertionError(msg)
 

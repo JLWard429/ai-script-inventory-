@@ -212,7 +212,7 @@ class AnsiDecoder:
 
 
 if sys.platform != "win32" and __name__ == "__main__":  # pragma: no cover
-import io_mod
+import io
     import os
     import pty
     import sys

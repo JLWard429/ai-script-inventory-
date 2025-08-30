@@ -1,5 +1,5 @@
 import os
-from abc_mod_custom import ABC
+from abc import ABC
 from pathlib import Path
 from typing import Any, Union
 

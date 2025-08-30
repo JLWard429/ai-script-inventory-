@@ -1,4 +1,4 @@
-import asyncio_mod
+import asyncio
 import os
 
 from openai import AsyncOpenAI

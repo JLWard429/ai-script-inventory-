@@ -1,5 +1,5 @@
 """Unit tests for pydot drawing functions."""
-from io_mod import StringIO
+from io import StringIO
 
 import pytest
 

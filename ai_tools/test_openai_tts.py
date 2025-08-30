@@ -1,6 +1,6 @@
 # Tests for the OpenAI text-to-speech model (OpenAITTSModel).
 from types import SimpleNamespace  # Fixed: was from types_mod
-from typing_mod import Any
+from typing import Any
 
 import pytest
 

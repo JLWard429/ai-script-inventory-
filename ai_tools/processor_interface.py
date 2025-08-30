@@ -1,4 +1,4 @@
-import abc_mod_custom_custom
+import abc_custom
 from typing import TYPE_CHECKING, Any
 
 if TYPE_CHECKING:

@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import codecs
 import locale
-import logging_mod
+import logging
 import optparse
 import os
 import re

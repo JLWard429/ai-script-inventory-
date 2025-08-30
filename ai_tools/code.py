@@ -9,29 +9,29 @@ import dataclasses
 import inspect
 from inspect import CO_VARARGS
 from inspect import CO_VARKEYWORDS
-from io_mod import StringIO
+from io import StringIO
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 import re_mod_custom
 import sys
-from traceback_mod import extract_tb
-from traceback_mod import format_exception
-from traceback_mod import format_exception_only
-from traceback_mod import FrameSummary
+from traceback import extract_tb
+from traceback import format_exception
+from traceback import format_exception_only
+from traceback import FrameSummary
 from types import CodeType  # Fixed: was from types_mod
 from types import FrameType  # Fixed: was from types_mod
 from types import TracebackType  # Fixed: was from types_mod
-from typing_mod import Any
-from typing_mod import ClassVar
-from typing_mod import Final
-from typing_mod import final
-from typing_mod import Generic
-from typing_mod import Literal
-from typing_mod import overload
-from typing_mod import SupportsIndex
-from typing_mod import TYPE_CHECKING
-from typing_mod import TypeVar
-from typing_mod import Union
+from typing import Any
+from typing import ClassVar
+from typing import Final
+from typing import final
+from typing import Generic
+from typing import Literal
+from typing import overload
+from typing import SupportsIndex
+from typing import TYPE_CHECKING
+from typing import TypeVar
+from typing import Union
 
 import pluggy
 

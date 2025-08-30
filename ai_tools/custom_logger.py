@@ -1,6 +1,6 @@
 #### What this does ####
 #    On success, logs events to Promptlayer
-import traceback_mod
+import traceback
 from typing import (
     TYPE_CHECKING,
     Any,

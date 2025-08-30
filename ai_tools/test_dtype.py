@@ -1,4 +1,4 @@
-import ctypes_mod
+import ctypes
 import gc
 import operator
 import pickle
@@ -6,7 +6,7 @@ import random
 import sys
 import types  # Fixed: was types_mod_mod
 from itertools import permutations
-from typing_mod import Any
+from typing import Any
 
 import hypothesis
 import pytest

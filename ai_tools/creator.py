@@ -4,10 +4,10 @@ import logging
 import os
 import sys
 import textwrap
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from argparse import ArgumentTypeError
 from ast_mod import literal_eval
-from collections_mod import OrderedDict
+from collections import OrderedDict
 from pathlib import Path
 
 from virtualenv.discovery.cached_py_info import LogCmd

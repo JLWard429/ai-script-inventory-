@@ -2,8 +2,8 @@
 Tests parsers ability to read and parse non-local files
 and hence require a network connection to be read.
 """
-from io_mod import BytesIO
-import logging_mod
+from io import BytesIO
+import logging
 import re
 
 import numpy as np

@@ -1,8 +1,8 @@
 import copy_mod
 import time
-import traceback_mod
+import traceback
 import types  # Fixed: was types_mod_mod
-from typing_mod import Callable, Optional
+from typing import Callable, Optional
 
 import httpx
 

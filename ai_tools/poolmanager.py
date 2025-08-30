@@ -1,7 +1,7 @@
 from __future__ import absolute_import
-import collections_mod
+import collections
 import functools
-import logging_mod
+import logging
 
 from ._collections import HTTPHeaderDict, RecentlyUsedContainer
 from .connectionpool import HTTPConnectionPool, HTTPSConnectionPool, port_by_scheme

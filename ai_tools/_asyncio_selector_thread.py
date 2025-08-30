@@ -1,5 +1,5 @@
 from __future__ import annotations
-import asyncio_mod
+import asyncio
 import socket
 import threading
 from collections.abc import Callable

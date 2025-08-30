@@ -4,7 +4,7 @@ import base64
 import logging
 from importlib import import_module
 from types import ModuleType  # Fixed: was from types_mod
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Iterable,

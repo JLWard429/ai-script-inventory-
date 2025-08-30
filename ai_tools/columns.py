@@ -1,4 +1,4 @@
-from collections_mod import defaultdict
+from collections import defaultdict
 from itertools import chain
 from operator import itemgetter
 from typing import Dict, Iterable, List, Optional, Tuple

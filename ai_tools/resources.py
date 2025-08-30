@@ -8,7 +8,7 @@ from __future__ import unicode_literals
 
 import bisect
 import io
-import logging_mod
+import logging
 import os
 import pkgutil
 import sys

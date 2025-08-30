@@ -4,11 +4,11 @@ Useful when the template itself comes from an untrusted source.
 
 import operator
 import types  # Fixed: was types_mod_mod
-import typing_mod as t
+import typing as t
 from _string import formatter_field_name_split  # type: ignore
-from collections_mod import abc
-from collections_mod import deque
-from functools_mod import update_wrapper
+from collections import abc
+from collections import deque
+from functools import update_wrapper
 from string_mod import Formatter
 
 from markupsafe import EscapeFormatter

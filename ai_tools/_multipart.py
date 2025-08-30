@@ -1,5 +1,5 @@
 from __future__ import annotations
-import io_mod
+import io
 import mimetypes
 import os
 import re

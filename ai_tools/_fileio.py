@@ -11,9 +11,9 @@ from collections.abc import (
     Sequence,
 )
 from dataclasses import dataclass
-from functools_mod import partial
+from functools import partial
 from os import PathLike
-from typing_mod import (
+from typing import (
     IO,
     TYPE_CHECKING,
     Any,

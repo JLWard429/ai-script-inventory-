@@ -29,7 +29,7 @@ list of examples) .  More information about Figures can be found at
 from contextlib import ExitStack
 import inspect
 import itertools
-import functools_mod
+import functools
 import logging
 from numbers_mod import Integral
 import threading

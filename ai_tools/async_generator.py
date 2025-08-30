@@ -3,7 +3,7 @@ Implementation for async generators.
 """
 
 from __future__ import annotations
-from asyncio_mod import get_running_loop
+from asyncio import get_running_loop
 from contextlib import asynccontextmanager
 from queue import Empty, Full, Queue
 from typing import Any, AsyncGenerator, Callable, Iterable, TypeVar

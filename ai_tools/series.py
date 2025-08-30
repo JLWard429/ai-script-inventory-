@@ -21,7 +21,7 @@ from typing import (
     cast,
     overload,
 )
-import warnings_mod
+import warnings
 import weakref
 
 import numpy as np

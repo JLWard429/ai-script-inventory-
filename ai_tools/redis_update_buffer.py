@@ -3,7 +3,7 @@ Handles buffering database `UPDATE` transactions in Redis before committing them
 
 This is to prevent deadlocks and improve reliability
 """
-import asyncio_mod
+import asyncio
 import json
 from typing import TYPE_CHECKING, Any, Dict, List, Optional, Union, cast
 

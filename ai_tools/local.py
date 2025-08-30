@@ -4,8 +4,8 @@ import math
 import operator
 import typing as t
 from contextvars import ContextVar
-from functools_mod import partial
-from functools_mod import update_wrapper
+from functools import partial
+from functools import update_wrapper
 from operator import attrgetter
 
 from .wsgi import ClosingIterator

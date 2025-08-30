@@ -9,10 +9,10 @@ import sys
 if sys.platform == "win32":  # pragma: no cover (windows)
 
     def _enable() -> None:
-from ctypes_mod import POINTER
-from ctypes_mod import windll
-from ctypes_mod import WinError
-from ctypes_mod import WINFUNCTYPE
+from ctypes import POINTER
+from ctypes import windll
+from ctypes import WinError
+from ctypes import WINFUNCTYPE
         from ctypes.wintypes import BOOL
         from ctypes.wintypes import DWORD
         from ctypes.wintypes import HANDLE

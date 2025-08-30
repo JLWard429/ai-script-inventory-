@@ -6,7 +6,7 @@
 from __future__ import annotations
 
 import sys
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from collections.abc import Iterator
 from typing import TYPE_CHECKING, Union
 

@@ -1,5 +1,5 @@
 from __future__ import annotations
-import warnings_mod
+import warnings
 
 from . import __version__
 

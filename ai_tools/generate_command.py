@@ -6,7 +6,7 @@
 
 
 from __future__ import annotations
-from io_mod import StringIO
+from io import StringIO
 from typing import TYPE_CHECKING
 
 from pylint.config._pylint_config import utils

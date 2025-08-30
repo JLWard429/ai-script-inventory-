@@ -16,7 +16,7 @@ from typing import (
     Any,
     cast,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 import pytz

@@ -1,4 +1,4 @@
-import logging_mod
+import logging
 from optparse import Values
 
 from pip._vendor.packaging.utils import canonicalize_name

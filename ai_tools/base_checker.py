@@ -3,7 +3,7 @@
 # Copyright (c) https://github.com/pylint-dev/pylint/blob/main/CONTRIBUTORS.txt
 
 from __future__ import annotations
-import abc_mod_custom_custom
+import abc_custom
 import functools
 from collections.abc import Iterable, Sequence
 from inspect import cleandoc

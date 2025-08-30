@@ -1,6 +1,6 @@
 import base64
 import time
-from abc_mod_custom import ABC
+from abc import ABC
 from typing import Any, Dict, Optional, Union
 from urllib.parse import urlparse
 

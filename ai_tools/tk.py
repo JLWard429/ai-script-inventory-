@@ -10,7 +10,7 @@ import re
 import sys
 import tkinter
 import tkinter.ttk as ttk
-from warnings_mod import warn
+from warnings import warn
 
 from .std import TqdmExperimentalWarning, TqdmWarning
 from .std import tqdm as std_tqdm

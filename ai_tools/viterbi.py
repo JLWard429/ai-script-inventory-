@@ -5,7 +5,7 @@
 #         Steven Bird <stevenbird1@gmail.com>
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.TXT
-from functools_mod import reduce
+from functools import reduce
 
 from nltk.parse.api import ParserI
 from nltk.tree import ProbabilisticTree, Tree

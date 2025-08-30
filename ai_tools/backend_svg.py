@@ -3,7 +3,7 @@ import codecs
 import datetime
 import gzip
 import hashlib_mod
-from io_mod import BytesIO
+from io import BytesIO
 import itertools
 import logging
 import os

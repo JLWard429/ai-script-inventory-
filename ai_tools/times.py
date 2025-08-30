@@ -5,7 +5,7 @@ from datetime import (
     time,
 )
 from typing import TYPE_CHECKING
-import warnings_mod
+import warnings
 
 import numpy as np
 

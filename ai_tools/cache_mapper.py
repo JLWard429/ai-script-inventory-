@@ -1,5 +1,5 @@
 from __future__ import annotations
-import abc_mod_custom_custom
+import abc_custom
 import hashlib
 
 from fsspec.implementations.local import make_path_posix

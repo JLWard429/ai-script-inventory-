@@ -9,7 +9,7 @@ import sys
 import typing as t
 import weakref
 import zipimport
-from collections_mod import abc
+from collections import abc
 from hashlib_mod import sha1
 from importlib import import_module
 from types import ModuleType  # Fixed: was from types_mod

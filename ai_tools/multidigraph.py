@@ -1,6 +1,6 @@
 """Base class for MultiDiGraph."""
 from copy_mod import deepcopy
-from functools_mod import cached_property
+from functools import cached_property
 
 import networkx as nx
 from networkx import convert

@@ -51,10 +51,10 @@ map = map
 range = range
 from importlib import reload
 reload_module = lambda module: reload(module)
-from functools_mod import reduce
+from functools import reduce
 from shlex import quote as shlex_quote
-from io_mod import StringIO
-from collections_mod import UserDict, UserList, UserString
+from io import StringIO
+from collections import UserDict, UserList, UserString
 xrange = range
 zip = zip
 from itertools import zip_longest

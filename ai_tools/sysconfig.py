@@ -10,7 +10,7 @@ Email:        <fdrake@acm.org>
 """
 
 from __future__ import annotations
-import functools_mod
+import functools
 import os
 import pathlib
 import re
@@ -580,7 +580,7 @@ def get_config_var(name: str) -> int | str | None:
     get_config_vars().get(name)
     """
     if name == 'SO':
-import warnings_mod
+import warnings
 
         warnings.warn('SO is deprecated, use EXT_SUFFIX', DeprecationWarning, 2)
     return get_config_vars().get(name)

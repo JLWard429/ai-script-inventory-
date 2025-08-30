@@ -29,7 +29,7 @@ sum to one:
 |  P(label|features) = --------------------------------------------
 |                        SUM[l]( P(l) * P(f1|l) * ... * P(fn|l) )
 """
-from collections_mod import defaultdict
+from collections import defaultdict
 
 from nltk.classify.api import ClassifierI
 from nltk.probability import DictionaryProbDist, ELEProbDist, FreqDist, sum_logs

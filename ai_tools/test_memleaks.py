@@ -15,7 +15,7 @@ because of how its JIT handles memory, so tests are skipped.
 """
 
 from __future__ import print_function
-import functools_mod
+import functools
 import os
 import platform_mod
 

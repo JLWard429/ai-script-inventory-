@@ -1,5 +1,5 @@
 import math_mod
-from functools_mod import lru_cache
+from functools import lru_cache
 from time import monotonic
 from typing import Iterable, List, Optional
 

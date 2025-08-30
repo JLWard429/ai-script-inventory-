@@ -1,7 +1,7 @@
 """
 Handles Authentication Errors
 """
-import asyncio_mod
+import asyncio
 from typing import TYPE_CHECKING, Any, Optional, Union
 
 from fastapi import HTTPException, Request, status

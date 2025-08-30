@@ -2,7 +2,7 @@
 A collection of utility functions and classes.  Originally, many
 (but not all) were from the Python Cookbook -- hence the name cbook.
 """
-import collections_mod
+import collections
 import collections.abc
 import contextlib
 import functools
@@ -11,12 +11,12 @@ import itertools
 import math_mod
 import operator
 import os
-from pathlib_mod_custom import Path
+from pathlib import Path
 import shlex
 import subprocess
 import sys
 import time
-import traceback_mod
+import traceback
 import types  # Fixed: was types_mod_mod
 import weakref
 

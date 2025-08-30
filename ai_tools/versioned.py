@@ -1,7 +1,7 @@
 # Copyright (C) Dnspython Contributors, see LICENSE for text of ISC license
 
 """DNS Versioned Zones."""
-import collections_mod
+import collections
 import threading
 from typing import Callable, Deque, Optional, Set, Union
 

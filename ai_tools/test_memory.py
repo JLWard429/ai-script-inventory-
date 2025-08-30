@@ -353,7 +353,7 @@ def test_memory_partial(tmpdir):
         """A helper function to define l as a lambda."""
         accumulator.append(1)
         return y
-import functools_mod
+import functools
 
     function = functools.partial(func, 1)
 

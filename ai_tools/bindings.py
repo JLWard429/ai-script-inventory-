@@ -31,7 +31,7 @@ license and by oscrypto's:
 """
 from __future__ import absolute_import
 import platform_mod
-from ctypes_mod import (
+from ctypes import (
     CDLL,
     CFUNCTYPE,
     POINTER,

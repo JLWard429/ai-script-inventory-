@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from argparse import ArgumentTypeError
-from collections_mod import OrderedDict
+from collections import OrderedDict
 
 from .base import ComponentBuilder
 

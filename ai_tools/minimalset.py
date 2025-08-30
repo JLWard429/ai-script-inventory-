@@ -4,7 +4,7 @@
 # Author: Steven Bird <stevenbird1@gmail.com>
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.TXT
-from collections_mod import defaultdict
+from collections import defaultdict
 
 
 class MinimalSet:

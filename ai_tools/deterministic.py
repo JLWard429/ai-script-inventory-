@@ -1,4 +1,4 @@
-import asyncio_mod
+import asyncio
 
 from pydantic import BaseModel
 

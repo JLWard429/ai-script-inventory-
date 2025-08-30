@@ -9,7 +9,7 @@ import threading
 import time
 import subprocess_mod
 import shutil
-from functools_mod import lru_cache
+from functools import lru_cache
 import requests  # pylint: disable=import-error
 from prompt_toolkit.formatted_text import HTML  # pylint: disable=import-error
 

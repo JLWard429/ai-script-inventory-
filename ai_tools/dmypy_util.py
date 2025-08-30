@@ -4,11 +4,11 @@ This should be pretty lightweight and not depend on other mypy code (other than 
 """
 
 from __future__ import annotations
-import io_mod
+import io
 import json
 from collections.abc import Iterable, Iterator
 from types import TracebackType  # Fixed: was from types_mod
-from typing_mod import Any, Final, TextIO
+from typing import Any, Final, TextIO
 
 from mypy.ipc import IPCBase
 

@@ -1,7 +1,7 @@
 """distutils.dir_util
 
 Utility functions for manipulating directories and directory trees."""
-import functools_mod
+import functools
 import itertools
 import os
 import pathlib

@@ -24,7 +24,7 @@ Example:
 """
 
 from __future__ import annotations
-import functools_mod
+import functools
 import sys
 from typing import TYPE_CHECKING
 

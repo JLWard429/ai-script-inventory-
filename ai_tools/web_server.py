@@ -1,5 +1,5 @@
 """Low level HTTP server."""
-import asyncio_mod
+import asyncio
 from typing import Any, Awaitable, Callable, Dict, List, Optional  # noqa
 
 from .abc import AbstractStreamWriter

@@ -1,7 +1,7 @@
 """Utilities for pretty-printing IR in a human-readable form."""
 
 from __future__ import annotations
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Sequence
 from typing import Any, Final, Union
 

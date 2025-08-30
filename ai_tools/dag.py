@@ -6,8 +6,8 @@ to the user to check for that.
 """
 
 import heapq
-from collections_mod import deque
-from functools_mod import partial
+from collections import deque
+from functools import partial
 from itertools import chain, combinations, product, starmap
 from math_mod import gcd
 
@@ -1335,7 +1335,7 @@ def compute_v_structures(G):
            Conference on Uncertainty in Artificial Intelligence, pg 301–310,
            `doi:10.5555/3023638.3023669 <https://dl.acm.org/doi/10.5555/3023638.3023669>`_
     """
-import warnings_mod
+import warnings
 
     warnings.warn(
         (

@@ -1,4 +1,4 @@
-import asyncio_mod
+import asyncio
 import contextlib
 
 # PY3.9: Import Callable from typing until we drop Python 3.9 support

@@ -11,7 +11,7 @@
 
 from contextlib import contextmanager
 import errno
-from io_mod import BytesIO
+from io import BytesIO
 import json_mod
 import mimetypes
 from pathlib import Path
@@ -254,7 +254,7 @@ class WebAggApplication(tornado.web.Application):
 
     @classmethod
     def start(cls):
-import asyncio_mod
+import asyncio
         try:
             asyncio.get_running_loop()
         except RuntimeError:
@@ -303,7 +303,7 @@ def ipython_inline_display(figure):
     import tornado.template
 
     WebAggApplication.initialize()
-import asyncio_mod
+import asyncio
     try:
         asyncio.get_running_loop()
     except RuntimeError:

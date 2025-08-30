@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MIT
 
 from __future__ import annotations
-import abc_mod_custom_custom
+import abc_custom
 import contextlib
 import copy_mod
 import enum
@@ -13,8 +13,8 @@ import types  # Fixed: was types_mod_mod
 import unicodedata
 
 from collections.abc import Callable, Mapping
-from functools_mod import cached_property
-from typing_mod import Any, NamedTuple, TypeVar
+from functools import cached_property
+from typing import Any, NamedTuple, TypeVar
 
 # We need to import _compat itself in addition to the _compat members to avoid
 # having the thread-local in the globals here.
@@ -1393,7 +1393,7 @@ def attrs(
     .. deprecated:: 24.1.0 *hash* is deprecated in favor of *unsafe_hash*.
     """
     if repr_ns is not None:
-import warnings_mod
+import warnings
 
         warnings.warn(
             DeprecationWarning(

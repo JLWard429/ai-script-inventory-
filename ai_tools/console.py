@@ -3,10 +3,10 @@ import os
 import sys
 import threading
 import zlib
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from datetime import datetime
-from functools_mod import wraps
+from functools import wraps
 from getpass import getpass
 from html_mod import escape
 from inspect import isclass
@@ -14,7 +14,7 @@ from itertools import islice
 from math_mod import ceil
 from time import monotonic
 from types import FrameType, ModuleType, TracebackType  # Fixed: was from types_mod
-from typing_mod import (
+from typing import (
     IO,
     TYPE_CHECKING,
     Any,

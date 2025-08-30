@@ -1,4 +1,4 @@
-import asyncio_mod
+import asyncio
 from typing import Optional, cast
 
 from .client_exceptions import ClientConnectionResetError

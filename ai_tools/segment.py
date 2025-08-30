@@ -1,7 +1,7 @@
 from enum import IntEnum
-from functools_mod import lru_cache
+from functools import lru_cache
 from itertools import filterfalse
-from logging_mod import getLogger
+from logging import getLogger
 from operator import attrgetter
 from typing import (
     TYPE_CHECKING,

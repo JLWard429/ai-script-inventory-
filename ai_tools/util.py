@@ -3,13 +3,13 @@
 # See LICENSE.txt and CONTRIBUTORS.txt.
 #
 import codecs
-from collections_mod import deque
+from collections import deque
 import contextlib
 import csv
 from glob_mod import iglob as std_iglob
-import io_mod
+import io
 import json
-import logging_mod
+import logging
 import os
 import py_compile
 import re

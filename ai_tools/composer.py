@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from __future__ import absolute_import, print_function
-import warnings_mod
+import warnings
 
 from .error import MarkedYAMLError, ReusedAnchorWarning
 from .compat import utf8, nprint, nprintf  # NOQA

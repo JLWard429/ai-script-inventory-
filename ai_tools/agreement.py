@@ -68,7 +68,7 @@ Expected results from the Artstein and Poesio survey paper:
     1.0
 
 """
-import logging_mod
+import logging
 from itertools import groupby
 from operator import itemgetter
 

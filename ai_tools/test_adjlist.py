@@ -1,7 +1,7 @@
 """
 Unit tests for adjlist.
 """
-import io_mod
+import io
 
 import pytest
 

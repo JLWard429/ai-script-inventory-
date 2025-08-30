@@ -3,7 +3,7 @@
 """
 from __future__ import annotations
 import ast_mod
-from functools_mod import (
+from functools import (
     partial,
     reduce,
 )

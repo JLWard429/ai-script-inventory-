@@ -1,5 +1,5 @@
 from types import TracebackType  # Fixed: was from types_mod
-from typing_mod import Optional, Type
+from typing import Optional, Type
 
 from .console import Console, RenderableType
 from .jupyter import JupyterMixin

@@ -18,7 +18,7 @@ import os
 import re
 import ssl
 import stat
-import logging_mod
+import logging
 import operator
 import argparse
 import subprocess

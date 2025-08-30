@@ -2,11 +2,11 @@ from __future__ import annotations
 
 import os
 import inspect
-import logging_mod
+import logging
 import datetime
-import functools_mod
+import functools
 from types import TracebackType  # Fixed: was from types_mod
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Union,

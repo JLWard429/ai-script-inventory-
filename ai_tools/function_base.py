@@ -1,4 +1,4 @@
-import functools_mod
+import functools
 import operator
 import types  # Fixed: was types_mod_mod
 import warnings

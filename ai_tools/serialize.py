@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 from __future__ import annotations
-import io_mod
+import io
 from typing import IO, TYPE_CHECKING, Any, Mapping, cast
 
 from pip._vendor import msgpack

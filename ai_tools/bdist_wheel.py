@@ -12,7 +12,7 @@ import shutil
 import struct
 import sys
 import sysconfig
-import warnings_mod
+import warnings
 from collections.abc import Iterable, Sequence
 from email.generator import BytesGenerator
 from glob_mod import iglob

@@ -1,4 +1,4 @@
-import asyncio_mod
+import asyncio
 
 from agents import Agent, ItemHelpers, Runner, trace
 

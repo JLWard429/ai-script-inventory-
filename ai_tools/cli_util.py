@@ -1,9 +1,9 @@
-import logging_mod
+import logging
 import subprocess
 import sys
-from collections_mod import defaultdict
+from collections import defaultdict
 from enum import Enum
-from functools_mod import wraps
+from functools import wraps
 
 import time
 from typing import (

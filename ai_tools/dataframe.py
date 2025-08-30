@@ -1,5 +1,5 @@
 from __future__ import annotations
-from collections_mod import abc
+from collections import abc
 from typing import TYPE_CHECKING
 
 from pandas.core.interchange.column import PandasColumn

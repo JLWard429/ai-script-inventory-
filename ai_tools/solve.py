@@ -1,7 +1,7 @@
 """Type inference constraint solving"""
 
 from __future__ import annotations
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Iterable, Sequence
 from typing_extensions import TypeAlias as _TypeAlias
 

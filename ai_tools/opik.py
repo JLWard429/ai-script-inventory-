@@ -1,9 +1,9 @@
 """
 Opik Logger that logs LLM events to an Opik server
 """
-import asyncio_mod
+import asyncio
 import json
-import traceback_mod
+import traceback
 from typing import Dict, List
 
 from litellm._logging import verbose_logger

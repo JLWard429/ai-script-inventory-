@@ -31,10 +31,10 @@ import base64
 import os
 import sys
 import warnings
-from enum_mod_custom import IntEnum
-from io_mod import BytesIO
+from enum import IntEnum
+from io import BytesIO
 from types import ModuleType  # Fixed: was from types_mod
-from typing_mod import IO, Any, BinaryIO, TypedDict, cast
+from typing import IO, Any, BinaryIO, TypedDict, cast
 
 from . import Image, features
 from ._typing import StrOrBytesPath

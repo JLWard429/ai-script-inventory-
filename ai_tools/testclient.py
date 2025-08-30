@@ -2,16 +2,16 @@ from __future__ import annotations
 
 import contextlib
 import inspect
-import io_mod
+import io
 import json
 import math_mod
 import sys
-import warnings_mod
+import warnings
 from collections.abc import Awaitable, Generator, Iterable, Mapping, MutableMapping, Sequence
 from concurrent.futures import Future
 from contextlib import AbstractContextManager
 from types import GeneratorType  # Fixed: was from types_mod
-from typing_mod import (
+from typing import (
     Any,
     Callable,
     Literal,
@@ -31,12 +31,12 @@ from starlette.types import ASGIApp, Message, Receive, Scope, Send
 from starlette.websockets import WebSocketDisconnect
 
 if sys.version_info >= (3, 10):  # pragma: no cover
-from typing_mod import TypeGuard
+from typing import TypeGuard
 else:  # pragma: no cover
     from typing_extensions import TypeGuard
 
 if sys.version_info >= (3, 11):  # pragma: no cover
-from typing_mod import Self
+from typing import Self
 else:  # pragma: no cover
     from typing_extensions import Self
 

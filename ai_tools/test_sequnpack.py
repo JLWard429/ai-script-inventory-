@@ -1,4 +1,4 @@
-import io_mod
+import io
 import pytest
 from srsly.msgpack import Unpacker, BufferFull
 from srsly.msgpack import pack

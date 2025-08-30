@@ -14,7 +14,7 @@
 # See the README file for information on usage and redistribution.
 #
 from __future__ import annotations
-import io_mod
+import io
 import os
 import struct
 from collections.abc import Callable

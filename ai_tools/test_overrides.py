@@ -3,7 +3,7 @@ import os
 import pickle_mod
 import sys
 import tempfile
-from io_mod import StringIO
+from io import StringIO
 from unittest_mod import mock
 
 import pytest

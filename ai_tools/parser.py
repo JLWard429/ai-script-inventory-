@@ -1,7 +1,7 @@
 """Base option parser setup"""
 
 from __future__ import annotations
-import logging_mod
+import logging
 import optparse
 import shutil
 import sys

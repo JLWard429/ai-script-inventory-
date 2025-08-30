@@ -1,6 +1,6 @@
 from __future__ import annotations
 from typing import TYPE_CHECKING
-import warnings_mod
+import warnings
 
 from pandas._libs import lib
 from pandas.compat._optional import import_optional_dependency

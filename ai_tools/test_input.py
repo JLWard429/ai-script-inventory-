@@ -1,4 +1,4 @@
-import io_mod
+import io
 import wave
 
 import numpy as np

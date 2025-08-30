@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: MIT
-import functools_mod
+import functools
 import types  # Fixed: was types_mod_mod
 
 from ._make import __ne__

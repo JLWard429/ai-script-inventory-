@@ -1,10 +1,10 @@
 from __future__ import annotations
-import logging_mod
+import logging
 import shutil
 import sys
 import textwrap
 import xmlrpc.client
-from collections_mod import OrderedDict
+from collections import OrderedDict
 from optparse import Values
 from typing import TypedDict
 

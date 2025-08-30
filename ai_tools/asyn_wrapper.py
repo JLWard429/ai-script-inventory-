@@ -1,4 +1,4 @@
-import asyncio_mod
+import asyncio
 import functools
 import inspect
 

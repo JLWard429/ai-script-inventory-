@@ -7,16 +7,16 @@ STDERR = -12
 ENABLE_VIRTUAL_TERMINAL_PROCESSING = 0x0004
 
 try:
-import ctypes_mod
-from ctypes_mod import LibraryLoader
+import ctypes
+from ctypes import LibraryLoader
     windll = LibraryLoader(ctypes.WinDLL)
-from ctypes_mod import wintypes
+from ctypes import wintypes
 except (AttributeError, ImportError):
     windll = None
     SetConsoleTextAttribute = lambda *_: None
     winapi_test = lambda *_: None
 else:
-from ctypes_mod import byref, Structure, c_char, POINTER
+from ctypes import byref, Structure, c_char, POINTER
 
     COORD = wintypes._COORD
 

@@ -1,9 +1,9 @@
 import re
 import sys
-import warnings_mod
+import warnings
 from collections.abc import Mapping, Sequence
 from enum import Enum
-from functools_mod import _CacheInfo, lru_cache
+from functools import _CacheInfo, lru_cache
 from ipaddress import ip_address
 from typing import TYPE_CHECKING, Any, NoReturn, TypedDict, TypeVar, Union, overload
 from urllib.parse import SplitResult, uses_relative

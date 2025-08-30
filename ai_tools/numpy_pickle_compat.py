@@ -4,7 +4,7 @@ import inspect
 import os
 import pickle_mod
 import zlib
-from io_mod import BytesIO
+from io import BytesIO
 
 from .numpy_pickle_utils import (
     _ZFILE_PREFIX,

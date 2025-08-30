@@ -17,7 +17,7 @@ anthropic:
 	time_period: 7d
 ```
 """
-import asyncio_mod
+import asyncio
 from datetime import datetime, timedelta, timezone
 from typing import Any, Dict, List, Optional, Tuple, Union
 

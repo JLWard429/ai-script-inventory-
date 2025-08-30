@@ -4,12 +4,12 @@ Parallel Tool Executor - Enables tool execution across multiple agents in parall
 This module provides a shared tool execution pool that allows multiple agents to submit
 tool calls that execute in parallel, breaking the sequential LLM->Tools->LLM bottleneck.
 """
-import asyncio_mod
+import asyncio
 import time
 import uuid
 from typing import Any, Dict, List, Optional, Tuple, Callable
 from dataclasses import dataclass, field
-from collections_mod import defaultdict
+from collections import defaultdict
 import weakref
 import logging
 

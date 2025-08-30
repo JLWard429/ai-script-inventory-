@@ -1,5 +1,5 @@
 from __future__ import annotations
-import logging_mod
+import logging
 from contextlib import contextmanager
 from subprocess_mod import Popen
 

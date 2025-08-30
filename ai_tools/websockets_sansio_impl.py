@@ -1,5 +1,5 @@
 from __future__ import annotations
-import asyncio_mod
+import asyncio
 import logging
 import sys
 from asyncio.transports import BaseTransport, Transport

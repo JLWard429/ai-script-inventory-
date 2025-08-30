@@ -1,4 +1,4 @@
-import collections_mod
+import collections
 
 import pytest
 

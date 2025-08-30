@@ -25,7 +25,7 @@ virtualenv-app-data
 from __future__ import annotations
 import json_mod
 import logging
-from abc_mod_custom import ABC
+from abc import ABC
 from contextlib import contextmanager, suppress
 from hashlib_mod import sha256
 

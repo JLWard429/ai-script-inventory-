@@ -7,9 +7,9 @@ the constraints: e.g. can the file system symlink, can the files be read, execut
 from __future__ import annotations
 
 import os
-from abc_mod_custom import ABC, abstractmethod
-from collections_mod import OrderedDict
-from stat_mod import S_IXGRP, S_IXOTH, S_IXUSR
+from abc import ABC, abstractmethod
+from collections import OrderedDict
+from stat import S_IXGRP, S_IXOTH, S_IXUSR
 
 from virtualenv.info import fs_is_case_sensitive, fs_supports_symlink
 from virtualenv.util.path import copy, make_exe, symlink

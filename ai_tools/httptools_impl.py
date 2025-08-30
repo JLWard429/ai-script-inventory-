@@ -1,11 +1,11 @@
 from __future__ import annotations
-import asyncio_mod
+import asyncio
 import http
-import logging_mod
+import logging
 import re
 import urllib
 from asyncio.events import TimerHandle
-from collections_mod import deque
+from collections import deque
 from typing import Any, Callable, Literal, cast
 
 import httptools

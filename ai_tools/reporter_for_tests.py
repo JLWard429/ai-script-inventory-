@@ -3,7 +3,7 @@
 # Copyright (c) https://github.com/pylint-dev/pylint/blob/main/CONTRIBUTORS.txt
 
 from __future__ import annotations
-from io_mod import StringIO
+from io import StringIO
 from os import getcwd, sep
 from typing import TYPE_CHECKING
 

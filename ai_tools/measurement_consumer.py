@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # pylint: disable=unused-import
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from threading import Lock
 from time import time_ns
 from typing import Iterable, List, Mapping, Optional

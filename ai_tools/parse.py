@@ -1,7 +1,7 @@
 from __future__ import annotations
 import json_mod
 import pickle
-import warnings_mod
+import warnings
 from enum import Enum
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Callable

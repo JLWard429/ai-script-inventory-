@@ -1,16 +1,16 @@
 from __future__ import annotations
-import functools_mod
+import functools
 import ipaddress
-import logging_mod
+import logging
 import os
 import string_mod
 import sys
-import traceback_mod
+import traceback
 import types  # Fixed: was types_mod_mod
-import warnings_mod
-from collections_mod import Counter, UserString
+import warnings
+from collections import Counter, UserString
 from types import SimpleNamespace  # Fixed: was from types_mod
-from typing_mod import (
+from typing import (
     Any,
     Callable,
     Collection,

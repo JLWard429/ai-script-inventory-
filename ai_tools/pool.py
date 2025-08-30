@@ -15,14 +15,14 @@ that uses a custom alternative to SimpleQueue.
 
 import copyreg
 import sys
-import warnings_mod
+import warnings
 from time import sleep
 
 try:
     WindowsError
 except NameError:
     WindowsError = type(None)
-from io_mod import BytesIO
+from io import BytesIO
 
 # We need the class definition to derive from it, not the multiprocessing.Pool
 # factory function

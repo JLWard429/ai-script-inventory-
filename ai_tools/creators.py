@@ -1,5 +1,5 @@
 from __future__ import annotations
-from collections_mod import OrderedDict, defaultdict
+from collections import OrderedDict, defaultdict
 from typing import TYPE_CHECKING, NamedTuple
 
 from virtualenv.create.describe import Describe

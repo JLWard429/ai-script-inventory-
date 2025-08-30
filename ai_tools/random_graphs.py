@@ -5,7 +5,7 @@ Generators for random graphs.
 
 import itertools
 import math
-from collections_mod import defaultdict
+from collections import defaultdict
 
 import networkx as nx
 from networkx.utils import py_random_state

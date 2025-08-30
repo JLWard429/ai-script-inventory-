@@ -1,14 +1,14 @@
-import asyncio_mod
+import asyncio
 import io
 import os
 import pathlib
 import sys
 from contextlib import suppress
-from enum_mod_custom import Enum, auto
+from enum import Enum, auto
 from mimetypes import MimeTypes
-from stat_mod import S_ISREG
+from stat import S_ISREG
 from types import MappingProxyType  # Fixed: was from types_mod
-from typing_mod import (  # noqa
+from typing import (  # noqa
     IO,
     TYPE_CHECKING,
     Any,

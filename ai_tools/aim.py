@@ -4,7 +4,7 @@
 #                   https://www.aim.security/
 #
 # +-------------------------------------------------------------+
-import asyncio_mod
+import asyncio
 import json
 import os
 from typing import TYPE_CHECKING, Any, AsyncGenerator, Literal, Optional, Type, Union

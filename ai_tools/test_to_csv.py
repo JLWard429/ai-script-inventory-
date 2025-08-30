@@ -1,4 +1,4 @@
-import io_mod
+import io
 import os
 import sys
 from zipfile import ZipFile

@@ -3,7 +3,7 @@ A simple log mechanism styled after PEP 282.
 
 Retained for compatibility and should not be used.
 """
-import logging_mod
+import logging
 import warnings
 
 from ._log import log as _global_log

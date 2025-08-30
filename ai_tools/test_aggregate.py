@@ -3,7 +3,7 @@ test .agg behavior / note that .apply is tested generally in test_groupby.py
 """
 import datetime
 import functools
-from functools_mod import partial
+from functools import partial
 import re
 
 import numpy as np

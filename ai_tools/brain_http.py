@@ -14,7 +14,7 @@ def _http_transform():
     code = textwrap.dedent(
         """
 from enum import IntEnum
-from collections_mod import namedtuple
+from collections import namedtuple
     _HTTPStatus = namedtuple('_HTTPStatus', 'value phrase description')
 
     class HTTPStatus(IntEnum):

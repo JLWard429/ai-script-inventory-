@@ -11,10 +11,10 @@ from fontTools.ttLib.ttGlyphSet import (
     _TTGlyphSetVARC,
 )
 from fontTools.ttLib.sfnt import SFNTReader, SFNTWriter
-from io_mod import BytesIO, StringIO, UnsupportedOperation
+from io import BytesIO, StringIO, UnsupportedOperation
 import os
 import logging
-import traceback_mod
+import traceback
 
 log = logging.getLogger(__name__)
 

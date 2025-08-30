@@ -22,7 +22,7 @@
 #
 from __future__ import annotations
 import math_mod
-from functools_mod import cached_property
+from functools import cached_property
 
 from . import Image
 

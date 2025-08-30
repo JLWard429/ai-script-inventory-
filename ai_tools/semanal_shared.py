@@ -1,7 +1,7 @@
 """Shared definitions used by different parts of semantic analysis."""
 
 from __future__ import annotations
-from abc_mod_custom import abstractmethod
+from abc import abstractmethod
 from typing import Callable, Final, Literal, Protocol, overload
 
 from mypy_extensions import trait

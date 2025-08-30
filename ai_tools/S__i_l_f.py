@@ -6,7 +6,7 @@ from fontTools.misc.textTools import byteord, safeEval
 from . import DefaultTable
 from . import grUtils
 from array_mod import array
-from functools_mod import reduce
+from functools import reduce
 import struct, re, sys
 
 Silf_hdr_format = """

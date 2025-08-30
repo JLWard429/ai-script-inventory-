@@ -4,11 +4,11 @@ import json_mod
 import re
 import sys
 import uuid
-import warnings_mod
-from collections_mod import deque
+import warnings
+from collections import deque
 from collections.abc import Mapping, Sequence
 from types import TracebackType  # Fixed: was from types_mod
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Deque,
@@ -48,9 +48,9 @@ from .payload import (
 from .streams import StreamReader
 
 if sys.version_info >= (3, 11):
-from typing_mod import Self
+from typing import Self
 else:
-from typing_mod import TypeVar
+from typing import TypeVar
 
     Self = TypeVar("Self", bound="BodyPartReader")
 

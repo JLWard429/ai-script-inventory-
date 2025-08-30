@@ -60,7 +60,7 @@ class Manifest(object):
         """Find all files under the base and set ``allfiles`` to the absolute
         pathnames of files found.
         """
-from stat_mod import S_ISREG, S_ISDIR, S_ISLNK
+from stat import S_ISREG, S_ISDIR, S_ISLNK
 
         self.allfiles = allfiles = []
         root = self.base

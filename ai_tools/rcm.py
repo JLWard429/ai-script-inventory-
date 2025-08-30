@@ -1,7 +1,7 @@
 """
 Cuthill-McKee ordering of graph nodes to produce sparse matrices
 """
-from collections_mod import deque
+from collections import deque
 from operator import itemgetter
 
 import networkx as nx

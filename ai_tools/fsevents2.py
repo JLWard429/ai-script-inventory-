@@ -6,11 +6,11 @@
 """
 
 from __future__ import annotations
-import logging_mod
+import logging
 import os
 import queue
 import unicodedata
-import warnings_mod
+import warnings
 from threading import Thread
 from typing import TYPE_CHECKING
 

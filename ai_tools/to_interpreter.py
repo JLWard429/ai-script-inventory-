@@ -3,7 +3,7 @@ from __future__ import annotations
 import atexit
 import os
 import sys
-from collections_mod import deque
+from collections import deque
 from collections.abc import Callable
 from typing import Any, Final, TypeVar
 

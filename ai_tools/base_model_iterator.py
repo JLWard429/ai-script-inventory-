@@ -1,5 +1,5 @@
 import json_mod
-from abc_mod_custom import abstractmethod
+from abc import abstractmethod
 from typing import List, Optional, Union, cast
 
 import litellm

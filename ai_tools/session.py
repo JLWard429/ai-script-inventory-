@@ -5,11 +5,11 @@ network request configuration and behavior.
 from __future__ import annotations
 
 import email_custom.utils
-import functools_mod
+import functools
 import io
 import ipaddress
 import json
-import logging_mod
+import logging
 import mimetypes
 import os
 import platform
@@ -17,7 +17,7 @@ import shutil
 import subprocess
 import sys
 import urllib.parse
-import warnings_mod
+import warnings
 from collections.abc import Generator, Mapping, Sequence
 from typing import (
     TYPE_CHECKING,

@@ -161,7 +161,7 @@ alternatives, is described in the
 evolved with time and this document is more current.
 
 """
-import io_mod
+import io
 import os
 import pickle_mod
 import warnings
@@ -601,7 +601,7 @@ def _filter_header(s):
 
     """
     import tokenize
-from io_mod import StringIO
+from io import StringIO
 
     tokens = []
     last_token_was_number = False

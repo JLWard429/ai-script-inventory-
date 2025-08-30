@@ -14,7 +14,7 @@
 # See the README file for information on usage and redistribution.
 #
 from __future__ import annotations
-import io_mod
+import io
 from collections.abc import Iterable
 from typing import IO, AnyStr, NoReturn
 

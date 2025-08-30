@@ -2,7 +2,7 @@ from datetime import (
     datetime,
     timedelta,
 )
-from io_mod import StringIO
+from io import StringIO
 import re
 import sys
 from textwrap import dedent

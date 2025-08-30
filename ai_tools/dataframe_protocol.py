@@ -3,7 +3,7 @@ A verbatim copy (vendored) of the spec from https://github.com/data-apis/datafra
 """
 
 from __future__ import annotations
-from abc_mod_custom import (
+from abc import (
     ABC,
     abstractmethod,
 )

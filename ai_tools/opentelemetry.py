@@ -145,7 +145,7 @@ class OpenTelemetry(CustomLogger):
 
         if _debug_otel == "true":
             # Set up logging
-import logging_mod
+import logging
 
             logging.basicConfig(level=logging.DEBUG)
             logging.getLogger(__name__)

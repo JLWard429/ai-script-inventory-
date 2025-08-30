@@ -5,7 +5,7 @@ import configparser
 import importlib.metadata
 import inspect
 import itertools
-import logging_mod
+import logging
 import sys
 from collections.abc import Generator
 from collections.abc import Iterable

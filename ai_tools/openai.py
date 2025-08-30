@@ -1,6 +1,6 @@
 import time
 import types  # Fixed: was types_mod_mod
-from typing_mod import (
+from typing import (
     Any,
     AsyncIterator,
     Callable,

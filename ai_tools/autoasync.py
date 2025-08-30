@@ -14,8 +14,8 @@
 #
 # You should have received a copy of the GNU Lesser General Public License
 # along with autocommand.  If not, see <http://www.gnu.org/licenses/>.
-from asyncio_mod import get_event_loop, iscoroutine
-from functools_mod import wraps
+from asyncio import get_event_loop, iscoroutine
+from functools import wraps
 from inspect import signature
 
 

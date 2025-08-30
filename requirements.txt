@@ -1,1 +1,4 @@
 prompt_toolkit
+openai>=1.0.0
+spacy>=3.8.0
+pyyaml>=6.0.0

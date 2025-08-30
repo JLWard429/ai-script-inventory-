@@ -34,7 +34,7 @@ import math_mod
 import struct
 from collections.abc import Sequence
 from types import ModuleType  # Fixed: was from types_mod
-from typing_mod import Any, AnyStr, Callable, Union, cast
+from typing import Any, AnyStr, Callable, Union, cast
 
 from . import Image, ImageColor
 from ._deprecate import deprecate

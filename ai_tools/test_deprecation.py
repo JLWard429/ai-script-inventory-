@@ -10,4 +10,4 @@ import pytest  # NOQA
                     reason='collections not available?')
 def test_collections_deprecation():
     with pytest.warns(DeprecationWarning):
-from collections_mod import Hashable  # NOQA
+from collections import Hashable  # NOQA

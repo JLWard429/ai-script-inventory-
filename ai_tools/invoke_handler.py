@@ -7,8 +7,8 @@ import time
 import types  # Fixed: was types_mod_mod
 import urllib.parse
 import uuid
-from functools_mod import partial
-from typing_mod import (
+from functools import partial
+from typing import (
     Any,
     AsyncIterator,
     Callable,

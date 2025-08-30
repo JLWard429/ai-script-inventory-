@@ -1,4 +1,4 @@
-import asyncio_mod
+import asyncio
 import random
 
 from agents import Agent, ItemHelpers, Runner, function_tool

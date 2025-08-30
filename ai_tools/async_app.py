@@ -1,4 +1,4 @@
-import logging_mod
+import logging
 import time
 
 from authlib.common.urls import urlparse

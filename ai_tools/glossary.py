@@ -1,4 +1,4 @@
-import warnings_mod
+import warnings
 
 from .errors import Warnings
 

@@ -38,7 +38,7 @@ Translation: Parameter Estimation. Computational Linguistics, 19 (2),
 """
 
 from bisect import insort_left
-from collections_mod import defaultdict
+from collections import defaultdict
 from copy_mod import deepcopy
 from math_mod import ceil
 

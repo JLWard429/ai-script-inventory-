@@ -1,7 +1,7 @@
 import importlib
 import sys
-import warnings_mod
-from functools_mod import partial
+import warnings
+from functools import partial
 from pathlib import Path
 from typing import (
     Any,

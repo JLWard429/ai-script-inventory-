@@ -1,5 +1,5 @@
 """Catch all for categorical functions"""
-import warnings_mod
+import warnings
 
 import pytest
 import numpy as np

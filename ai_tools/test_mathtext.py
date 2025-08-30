@@ -1,5 +1,5 @@
 from __future__ import annotations
-import io_mod
+import io
 from pathlib import Path
 import platform_mod
 import re

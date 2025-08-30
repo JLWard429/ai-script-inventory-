@@ -1,7 +1,7 @@
 from __future__ import annotations
-from collections_mod import abc
+from collections import abc
 from datetime import date
-from functools_mod import partial
+from functools import partial
 from itertools import islice
 from typing import (
     TYPE_CHECKING,
@@ -11,7 +11,7 @@ from typing import (
     cast,
     overload,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 

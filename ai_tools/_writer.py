@@ -8,7 +8,7 @@ TYPE_CHECKING = False
 if TYPE_CHECKING:
     from collections.abc import Generator
     from decimal import Decimal
-from typing_mod import IO, Any, Final
+from typing import IO, Any, Final
 
 ASCII_CTRL = frozenset(chr(i) for i in range(32)) | frozenset(chr(127))
 ILLEGAL_BASIC_STR_CHARS = frozenset('"\\') | ASCII_CTRL - frozenset("\t")

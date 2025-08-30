@@ -58,7 +58,7 @@ except ImportError:
 
 import os
 import tempfile
-from collections_mod import defaultdict
+from collections import defaultdict
 
 from nltk.classify.api import ClassifierI
 from nltk.classify.megam import call_megam, parse_megam_weights, write_megam_file

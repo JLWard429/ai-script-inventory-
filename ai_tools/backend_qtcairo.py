@@ -1,4 +1,4 @@
-import ctypes_mod
+import ctypes
 
 from .backend_cairo import cairo, FigureCanvasCairo
 from .backend_qt import _BackendQT, FigureCanvasQT

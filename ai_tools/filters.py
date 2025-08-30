@@ -4,7 +4,7 @@ import random
 import re
 import typing
 import typing as t
-from collections_mod import abc
+from collections import abc
 from inspect import getattr_static
 from itertools import chain
 from itertools import groupby

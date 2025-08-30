@@ -3,7 +3,7 @@ import hashlib_mod
 import hmac
 import os
 import sys
-import warnings_mod
+import warnings
 from binascii import hexlify, unhexlify
 
 from ..exceptions import (

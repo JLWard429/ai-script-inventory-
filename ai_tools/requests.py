@@ -1,4 +1,4 @@
-from collections_mod import defaultdict
+from collections import defaultdict
 
 from authlib.deprecate import deprecate
 

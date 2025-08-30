@@ -355,7 +355,7 @@ class GlobalUsageTracker:
             raise
         except Exception as e:
             # Log the error but continue
-import traceback_mod
+import traceback
             if os.getenv("CAI_DEBUG", "1") == "2":
                 print(f"Error tracking usage: {e}")
                 traceback.print_exc()

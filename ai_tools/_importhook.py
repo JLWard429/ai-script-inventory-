@@ -9,7 +9,7 @@ from importlib.util import cache_from_source, decode_source
 from inspect import isclass
 from os import PathLike
 from types import CodeType, ModuleType, TracebackType  # Fixed: was from types_mod
-from typing_mod import Sequence, TypeVar
+from typing import Sequence, TypeVar
 from unittest.mock import patch
 
 from ._config import global_config
@@ -21,7 +21,7 @@ else:
     from typing_extensions import Buffer
 
 if sys.version_info >= (3, 11):
-from typing_mod import ParamSpec
+from typing import ParamSpec
 else:
     from typing_extensions import ParamSpec
 

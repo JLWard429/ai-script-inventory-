@@ -19,9 +19,9 @@ in ~/.matplotlib/tex.cache for reuse between sessions.
 `TexManager.get_rgba` can also be used to directly obtain raster output as RGBA
 NumPy arrays.
 """
-import functools_mod
+import functools
 import hashlib
-import logging_mod
+import logging
 import os
 from pathlib import Path
 import subprocess_mod

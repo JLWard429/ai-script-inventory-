@@ -1,4 +1,4 @@
-from collections_mod import deque
+from collections import deque
 from itertools import combinations, permutations
 
 import pytest

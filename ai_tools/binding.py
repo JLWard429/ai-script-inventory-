@@ -8,7 +8,7 @@ import os
 import sys
 import threading
 import types  # Fixed: was types_mod_mod
-import typing_mod
+import typing
 import warnings
 from collections.abc import Callable
 

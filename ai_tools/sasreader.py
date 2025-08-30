@@ -2,11 +2,11 @@
 Read SAS sas7bdat or xport files.
 """
 from __future__ import annotations
-from abc_mod_custom import (
+from abc import (
     ABC,
     abstractmethod,
 )
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     overload,
 )

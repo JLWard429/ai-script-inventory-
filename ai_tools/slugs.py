@@ -23,7 +23,7 @@ DEALINGS IN THE SOFTWARE.
 """
 import re
 import unicodedata
-import functools_mod
+import functools
 from urllib.parse import quote
 from . import util
 

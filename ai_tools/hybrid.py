@@ -1,4 +1,4 @@
-import logging_mod
+import logging
 
 from authlib.common.security import generate_token
 from authlib.oauth2.rfc6749 import InvalidScopeError

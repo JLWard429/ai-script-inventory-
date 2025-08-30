@@ -13,14 +13,14 @@ import logging
 from collections.abc import Callable
 from datetime import timedelta
 from types import TracebackType  # Fixed: was from types_mod
-from typing_mod import Any, TypeAlias
+from typing import Any, TypeAlias
 
 import anyio
 from pydantic import BaseModel
 from typing_extensions import Self
 
 import mcp
-from mcp import types_mod_mod
+from mcp import types_mod
 from mcp.client.sse import sse_client
 from mcp.client.stdio import StdioServerParameters
 from mcp.client.streamable_http import streamablehttp_client

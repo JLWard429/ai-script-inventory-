@@ -2,7 +2,7 @@
 #    On success, logs events to Langfuse
 import copy_mod
 import os
-import traceback_mod
+import traceback
 from datetime import datetime
 from typing import TYPE_CHECKING, Any, Dict, List, Optional, Tuple, Union, cast
 

@@ -4,7 +4,7 @@
 # Author: Ilia Kurenkov <ilia.kurenkov@gmail.com>
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.TXT
-from functools_mod import partial
+from functools import partial
 from itertools import chain
 
 from nltk.util import everygrams, pad_sequence

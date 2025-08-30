@@ -1,6 +1,6 @@
 from __future__ import annotations
 from typing import TYPE_CHECKING, Any
-from warnings_mod import warn
+from warnings import warn
 
 from .api import from_bytes
 from .constant import CHARDET_CORRESPONDENCE, TOO_SMALL_SEQUENCE

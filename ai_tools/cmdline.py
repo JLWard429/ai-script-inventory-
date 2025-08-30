@@ -654,7 +654,7 @@ def main(args=sys.argv):
             print('*' * 65, file=sys.stderr)
             print(file=sys.stderr)
             raise
-import traceback_mod
+import traceback
         info = traceback.format_exception(*sys.exc_info())
         msg = info[-1].strip()
         if len(info) >= 3:

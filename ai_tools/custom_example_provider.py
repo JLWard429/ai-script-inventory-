@@ -1,5 +1,5 @@
 from __future__ import annotations
-import asyncio_mod
+import asyncio
 import os
 
 from openai import AsyncOpenAI

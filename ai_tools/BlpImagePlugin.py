@@ -30,11 +30,11 @@ BLP files come in many different flavours:
 """
 
 from __future__ import annotations
-import abc_mod_custom_custom
+import abc_custom
 import os
 import struct
 from enum import IntEnum
-from io_mod import BytesIO
+from io import BytesIO
 from typing import IO
 
 from . import Image, ImageFile

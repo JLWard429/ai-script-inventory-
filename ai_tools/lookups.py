@@ -1,4 +1,4 @@
-from collections_mod import OrderedDict
+from collections import OrderedDict
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Union
 

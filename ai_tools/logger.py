@@ -9,7 +9,7 @@ This module needs much love to become useful.
 # License: BSD Style, 3 clauses.
 
 from __future__ import print_function
-import logging_mod
+import logging
 import os
 import pprint_mod
 import shutil

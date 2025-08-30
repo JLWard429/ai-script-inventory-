@@ -18,7 +18,7 @@ functions for converting between fixed-point, float and string representations.
 """
 
 from .roundTools import otRound, nearestMultipleShortestRepr
-import logging_mod
+import logging
 
 log = logging.getLogger(__name__)
 

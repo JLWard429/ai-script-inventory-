@@ -22,7 +22,7 @@ matplotlib.use('Agg')
 from flask import Flask, render_template
 import pandas as pd
 import matplotlib.pyplot as plt
-import io_mod
+import io
 import base64
 from datetime import datetime
 import os

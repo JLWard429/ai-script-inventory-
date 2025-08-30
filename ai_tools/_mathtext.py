@@ -3,18 +3,18 @@ Implementation details for :mod:`.mathtext`.
 """
 
 from __future__ import annotations
-import abc_mod_custom_custom
+import abc_custom
 import copy
-import enum_mod_custom
+import enum
 import functools
-import logging_mod
+import logging
 import os
 import re_mod_custom
 import types  # Fixed: was types_mod_mod
 import unicodedata
 import string
-import typing_mod as T
-from typing_mod import NamedTuple
+import typing as T
+from typing import NamedTuple
 
 import numpy as np
 from pyparsing import (

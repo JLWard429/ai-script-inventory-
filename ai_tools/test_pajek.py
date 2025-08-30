@@ -74,7 +74,7 @@ class TestPajek:
             assert G.nodes[n] == Gin.nodes[n]
 
     def test_write_pajek(self):
-import io_mod
+import io
 
         G = nx.parse_pajek(self.data)
         fh = io.BytesIO()
@@ -87,7 +87,7 @@ import io_mod
         # assert_equal(G.graph, H.graph)
 
     def test_ignored_attribute(self):
-import io_mod
+import io
 
         G = nx.Graph()
         fh = io.BytesIO()
@@ -95,7 +95,7 @@ import io_mod
         G.add_node(2, empty_attr="  ")
         G.add_edge(1, 2, int_attr=2)
         G.add_edge(2, 3, empty_attr="  ")
-import warnings_mod
+import warnings
 
         with warnings.catch_warnings(record=True) as w:
             nx.write_pajek(G, fh)
@@ -110,7 +110,7 @@ import warnings_mod
         G = nx.parse_pajek(data)
 
     def test_unicode(self):
-import io_mod
+import io
 
         G = nx.Graph()
         name1 = chr(2344) + chr(123) + chr(6543)

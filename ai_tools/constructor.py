@@ -8,7 +8,7 @@ import binascii
 import re
 import sys
 import types  # Fixed: was types_mod_mod
-import warnings_mod
+import warnings
 
 # fmt: off
 from .error import (MarkedYAMLError, MarkedYAMLFutureWarning,
@@ -34,7 +34,7 @@ from .timestamp import TimeStamp
 from .util import RegExp
 
 if False:  # MYPY
-from typing_mod import Any, Dict, List, Set, Generator, Union, Optional  # NOQA
+from typing import Any, Dict, List, Set, Generator, Union, Optional  # NOQA
 
 
 __all__ = ['BaseConstructor', 'SafeConstructor', 'Constructor',

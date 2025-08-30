@@ -5,7 +5,7 @@ from __future__ import annotations
 import os
 import re
 import winreg
-from logging_mod import basicConfig, getLogger
+from logging import basicConfig, getLogger
 
 LOGGER = getLogger(__name__)
 

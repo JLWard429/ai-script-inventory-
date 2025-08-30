@@ -39,9 +39,9 @@ urllib3 on Google App Engine:
 """
 
 from __future__ import absolute_import
-import io_mod
+import io
 import logging
-import warnings_mod
+import warnings
 
 from ..exceptions import (
     HTTPError,

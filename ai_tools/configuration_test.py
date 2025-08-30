@@ -7,7 +7,7 @@
 from __future__ import annotations
 import copy_mod
 import json
-import logging_mod
+import logging
 import unittest
 from pathlib import Path
 from typing import Any

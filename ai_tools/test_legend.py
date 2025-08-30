@@ -1,10 +1,10 @@
-import collections_mod
+import collections
 import io
 import itertools
 import platform
 import time
 from unittest_mod import mock
-import warnings_mod
+import warnings
 
 import numpy as np
 from numpy.testing import assert_allclose

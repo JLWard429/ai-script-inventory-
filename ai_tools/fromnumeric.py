@@ -1,9 +1,9 @@
 """Module containing non-deprecated functions borrowed from Numeric.
 
 """
-import functools_mod
+import functools
 import types  # Fixed: was types_mod_mod
-import warnings_mod
+import warnings
 
 import numpy as np
 from numpy._utils import set_module

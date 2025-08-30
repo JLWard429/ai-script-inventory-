@@ -1,4 +1,4 @@
-import functools_mod
+import functools
 import warnings
 
 import numpy._core.numeric as _nx

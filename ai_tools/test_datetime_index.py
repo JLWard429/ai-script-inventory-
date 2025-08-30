@@ -1,5 +1,5 @@
 from datetime import datetime
-from functools_mod import partial
+from functools import partial
 
 import numpy as np
 import pytest

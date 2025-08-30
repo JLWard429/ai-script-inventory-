@@ -1,4 +1,4 @@
-from ctypes_mod import c_uint64
+from ctypes import c_uint64
 from typing import Callable, List, Sequence, Tuple
 
 from murmurhash import hash_unicode

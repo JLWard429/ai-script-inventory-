@@ -138,7 +138,7 @@ def floyd_warshall_predecessor_and_distance(G, weight="weight"):
     all_pairs_shortest_path
     all_pairs_shortest_path_length
     """
-from collections_mod import defaultdict
+from collections import defaultdict
 
     # dictionary-of-dictionaries representation for dist and pred
     # use some defaultdict magick here
