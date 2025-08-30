@@ -12,23 +12,20 @@ from pathlib import Path
 # Add the current directory to the path to ensure imports work properly
 sys.path.insert(0, str(Path(__file__).parent))
 
-# Import the main terminal class
-try:
-    from superhuman_terminal import SuperhumanTerminal
-except ImportError:
-    print("ERROR: Could not import SuperhumanTerminal.")
-    print("Make sure you have installed the required dependencies:")
-    print("  pip install -r requirements.txt")
-    print("  python -m spacy download en_core_web_sm")
-    sys.exit(1)
-
-
 def main():
     """Launch the Superhuman AI Terminal."""
     try:
+        # Try to import the terminal
+        from superhuman_terminal import SuperhumanTerminal
         # Initialize and start the terminal
         terminal = SuperhumanTerminal()
         terminal.start()
+    except ImportError:
+        print("\nERROR: Could not import SuperhumanTerminal.")
+        print("Make sure you have installed the required dependencies:")
+        print("  pip install -r requirements.txt")
+        print("  python -m spacy download en_core_web_sm")
+        return 1
     except KeyboardInterrupt:
         print("\nExiting Superhuman AI Terminal...")
         return 0

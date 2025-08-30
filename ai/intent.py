@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Intent recognition module using spaCy for natural language processing.
 
@@ -8,12 +7,25 @@ allowing it to understand user commands expressed in natural language.
 
 import re
 from enum import Enum
+import os
+import sys
 from pathlib import Path
-from typing import Dict, List, Optional, Pattern, Set, Tuple, Union
+from typing import Dict, List, Optional, Pattern, Set, Tuple
 
-import spacy
-from spacy.matcher import Matcher
-from spacy.tokens import Doc, Span
+# Try to import spaCy - if not available, we'll use fallback patterns
+try:
+    import spacy
+    from spacy.matcher import Matcher
+    SPACY_AVAILABLE = True
+    print("Downloading spaCy language model...")
+    # Ensure spaCy model is downloaded
+    if not spacy.util.is_package("en_core_web_sm"):
+        os.system("python -m spacy download en_core_web_sm")
+    # Load the language model    
+    nlp = spacy.load("en_core_web_sm")
+except ImportError:
+    SPACY_AVAILABLE = False
+    nlp = None
 
 
 class IntentType(Enum):
@@ -37,13 +49,6 @@ class IntentType(Enum):
 class Intent:
     """
     Represents a recognized user intent with associated parameters.
-    
-    Attributes:
-        type: The type of intent recognized
-        confidence: Confidence score of the intent recognition (0.0-1.0)
-        target: Optional target of the intent (e.g., file, directory)
-        parameters: Dictionary of additional parameters extracted from the input
-        original_input: The original user input string
     """
     
     def __init__(
@@ -69,140 +74,115 @@ class Intent:
 class IntentRecognizer:
     """
     A class for recognizing intents from natural language input using spaCy.
-    
-    This class uses spaCy's NLP capabilities to analyze user input and determine
-    the most likely intent, along with any associated parameters or targets.
+    Falls back to regex patterns if spaCy is not available.
     """
     
     def __init__(self):
-        """Initialize the intent recognizer with spaCy models and patterns."""
-        self.nlp = None
-        try:
-            # Try to load spaCy model, with fallback to smaller model if needed
-            try:
-                self.nlp = spacy.load("en_core_web_sm")
-            except OSError:
-                print("Downloading spaCy language model...")
-                spacy.cli.download("en_core_web_sm")
-                self.nlp = spacy.load("en_core_web_sm")
-            
-            # Set up matcher with patterns
-            self.matcher = Matcher(self.nlp.vocab)
-            self._setup_spacy_patterns()
-            
-            print("✅ Intent recognition system initialized with spaCy")
-        except Exception as e:
-            print(f"⚠️ Error initializing spaCy: {e}")
-            print("Intent recognition will use fallback regex patterns")
-            
-        # Fallback regex patterns for when spaCy is unavailable
+        """Initialize the intent recognizer with spaCy or fallback patterns."""
         self._setup_fallback_patterns()
+        
+        if SPACY_AVAILABLE:
+            self._setup_spacy_patterns()
+            print("✅ Intent recognition system initialized with spaCy")
+        else:
+            print("⚠️ spaCy not available. Using fallback pattern matching.")
+            print("To install spaCy, run: pip install spacy && python -m spacy download en_core_web_sm")
     
     def _setup_spacy_patterns(self):
-        """Set up spaCy patterns for intent matching."""
-        # List patterns
+        """Set up spaCy patterns for intent recognition."""
+        self.matcher = Matcher(nlp.vocab)
+        
+        # List intent patterns
         list_patterns = [
-            [{"LOWER": {"IN": ["list", "show", "display"]}}, {"IS_ALPHA": True}],
-            [{"LOWER": {"IN": ["list", "show", "display"]}}, {"LOWER": "all"}],
-            [{"LOWER": {"IN": ["list", "show", "display"]}}, {"LOWER": "my"}],
-            [{"LOWER": {"IN": ["what", "which"]}}, {"LOWER": {"IN": ["scripts", "files"]}}],
-            [{"LOWER": "ls"}]
+            [{"LOWER": {"IN": ["list", "show", "display", "ls"]}}, {"OP": "*"}],
+            [{"LOWER": {"IN": ["show", "display", "get"]}}, {"LOWER": "me"}, {"OP": "*"}],
+            [{"LOWER": "what"}, {"LEMMA": {"IN": ["be", "have"]}}, {"OP": "*"}, {"LOWER": {"IN": ["file", "script", "available"]}}],
         ]
         self.matcher.add("LIST", list_patterns)
         
-        # Run patterns
+        # Run intent patterns
         run_patterns = [
-            [{"LOWER": {"IN": ["run", "execute", "start"]}}, {"IS_ALPHA": True}],
-            [{"LOWER": {"IN": ["run", "execute", "start"]}}, {"TEXT": {"REGEX": r".*\.(py|sh)$"}}]
+            [{"LOWER": {"IN": ["run", "execute", "launch", "start"]}}, {"OP": "*"}],
+            [{"LOWER": "use"}, {"OP": "*"}, {"LOWER": {"IN": ["script", "program", "tool"]}}],
+            [{"LOWER": {"IN": ["start", "begin", "initiate"]}}, {"OP": "*"}, {"LOWER": {"IN": ["script", "program", "process"]}}],
         ]
         self.matcher.add("RUN", run_patterns)
         
-        # Search patterns
+        # Search intent patterns
         search_patterns = [
-            [{"LOWER": {"IN": ["search", "find", "locate"]}}, {"OP": "+"}, {"IS_ALPHA": True}],
-            [{"LOWER": {"IN": ["search", "find", "locate", "grep"]}}, {"LOWER": "for"}, {"OP": "+"}]
+            [{"LOWER": {"IN": ["search", "find", "locate"]}}, {"OP": "*"}],
+            [{"LOWER": "look"}, {"LOWER": "for"}, {"OP": "*"}],
+            [{"LOWER": "grep"}, {"OP": "*"}],
         ]
         self.matcher.add("SEARCH", search_patterns)
         
-        # Help patterns
+        # Help intent patterns
         help_patterns = [
-            [{"LOWER": {"IN": ["help", "manual", "guide", "usage", "instructions"]}}],
-            [{"LOWER": {"IN": ["how", "what"]}}, {"LOWER": "can"}, {"LOWER": "i"}, {"LOWER": {"IN": ["do", "use"]}}],
-            [{"LOWER": {"IN": ["how", "what"]}}, {"LOWER": {"IN": ["does", "is"]}}, {"LOWER": "this"}, {"LOWER": {"IN": ["work", "system"]}}]
+            [{"LOWER": "help"}],
+            [{"LOWER": {"IN": ["show", "display", "list"]}}, {"LOWER": "help"}],
+            [{"LOWER": "how"}, {"LOWER": "to"}, {"OP": "*"}],
+            [{"LOWER": "how"}, {"LOWER": "do"}, {"LOWER": "i"}, {"OP": "*"}],
+            [{"LOWER": "what"}, {"LOWER": "can"}, {"LOWER": {"IN": ["i", "you"]}}, {"OP": "*"}],
+            [{"LOWER": "what"}, {"LOWER": "is"}, {"OP": "*"}, {"LOWER": "command"}],
         ]
         self.matcher.add("HELP", help_patterns)
         
-        # Organize patterns
+        # Organize intent patterns
         organize_patterns = [
-            [{"LOWER": {"IN": ["organize", "sort", "clean", "arrange"]}}],
-            [{"LOWER": {"IN": ["organize", "sort", "clean", "arrange"]}}, {"LOWER": "my"}, {"LOWER": {"IN": ["files", "scripts"]}}],
-            [{"LOWER": "run"}, {"LOWER": {"IN": ["organizer", "organization"]}}]
+            [{"LOWER": {"IN": ["organize", "sort", "arrange", "clean"]}}],
+            [{"LOWER": {"IN": ["tidy", "categorize"]}}, {"LOWER": "up"}, {"OP": "*"}],
         ]
         self.matcher.add("ORGANIZE", organize_patterns)
         
-        # Show patterns
+        # Show intent patterns
         show_patterns = [
-            [{"LOWER": {"IN": ["show", "open", "view", "display", "cat"]}}, {"IS_ALPHA": True}],
-            [{"LOWER": {"IN": ["show", "open", "view", "display", "cat"]}}, {"TEXT": {"REGEX": r".*\.(py|sh|md|txt)$"}}],
-            [{"LOWER": {"IN": ["contents", "content"]}}, {"LOWER": "of"}]
+            [{"LOWER": {"IN": ["show", "display", "cat", "open", "view"]}}, {"OP": "*"}],
+            [{"LOWER": "read"}, {"OP": "*"}, {"LOWER": {"IN": ["file", "content"]}}],
         ]
         self.matcher.add("SHOW", show_patterns)
         
-        # Create patterns
+        # Create intent patterns
         create_patterns = [
-            [{"LOWER": {"IN": ["create", "new", "make", "add"]}}],
-            [{"LOWER": {"IN": ["create", "new", "make", "add"]}}, {"LOWER": {"IN": ["file", "script", "directory", "folder"]}}],
-            [{"LOWER": "touch"}, {"IS_ALPHA": True}]
+            [{"LOWER": {"IN": ["create", "make", "new", "touch", "add"]}}, {"OP": "*"}],
         ]
         self.matcher.add("CREATE", create_patterns)
         
-        # Delete patterns
+        # Delete intent patterns
         delete_patterns = [
-            [{"LOWER": {"IN": ["delete", "remove", "trash", "rm"]}}],
-            [{"LOWER": {"IN": ["delete", "remove", "trash", "rm"]}}, {"LOWER": {"IN": ["file", "script", "directory", "folder"]}}]
+            [{"LOWER": {"IN": ["delete", "remove", "trash", "rm", "erase"]}}],
+            [{"LOWER": "get"}, {"LOWER": "rid"}, {"LOWER": "of"}],
         ]
         self.matcher.add("DELETE", delete_patterns)
         
-        # Rename patterns
+        # Rename intent patterns
         rename_patterns = [
-            [{"LOWER": {"IN": ["rename", "mv", "move"]}}],
-            [{"LOWER": {"IN": ["rename", "change", "update"]}}, {"LOWER": "name"}, {"LOWER": "of"}]
+            [{"LOWER": {"IN": ["rename", "mv"]}}],
+            [{"LOWER": "change"}, {"OP": "*"}, {"LOWER": "name"}],
         ]
         self.matcher.add("RENAME", rename_patterns)
         
-        # Move patterns
+        # Move intent patterns
         move_patterns = [
-            [{"LOWER": {"IN": ["move", "copy", "cp", "mv"]}}],
-            [{"LOWER": {"IN": ["move", "copy"]}}, {"LOWER": {"IN": ["file", "script", "directory", "folder"]}}]
+            [{"LOWER": {"IN": ["move", "mv", "cp", "copy", "transfer"]}}],
         ]
         self.matcher.add("MOVE", move_patterns)
         
-        # Summarize patterns
+        # Summarize intent patterns
         summarize_patterns = [
-            [{"LOWER": {"IN": ["summarize", "summary", "tldr"]}}],
-            [{"LOWER": {"IN": ["summarize", "summarization"]}}, {"LOWER": "of"}],
-            [{"LOWER": "give"}, {"LOWER": "me"}, {"LOWER": {"IN": ["summary", "overview"]}}]
+            [{"LOWER": {"IN": ["summarize", "summary", "tldr", "summarise"]}}],
+            [{"LOWER": "give"}, {"LOWER": "me"}, {"OP": "*"}, {"LOWER": "summary"}],
         ]
         self.matcher.add("SUMMARIZE", summarize_patterns)
         
-        # Exit patterns
+        # Exit intent patterns
         exit_patterns = [
             [{"LOWER": {"IN": ["exit", "quit", "bye", "goodbye", "close"]}}],
-            [{"LOWER": {"IN": ["end", "terminate"]}}, {"LOWER": "session"}]
+            [{"LOWER": "end"}, {"LOWER": "session"}],
         ]
         self.matcher.add("EXIT", exit_patterns)
-        
-        # AI Chat patterns - this is a fallback for general conversation
-        ai_chat_patterns = [
-            [{"LOWER": {"IN": ["hi", "hello", "hey"]}}],
-            [{"LOWER": {"IN": ["chat", "talk", "converse"]}}],
-            [{"TEXT": {"REGEX": r"\?"}}],  # Any text with a question mark
-            [{"LOWER": {"IN": ["what", "who", "when", "why", "how", "which", "where"]}}]
-        ]
-        self.matcher.add("AI_CHAT", ai_chat_patterns)
     
     def _setup_fallback_patterns(self):
-        """Set up fallback regex patterns for when spaCy is unavailable."""
+        """Set up regex patterns for when spaCy is unavailable."""
         self.fallback_patterns = {
             IntentType.LIST: re.compile(r"^(list|show|display|ls)(\s+\w+)?", re.IGNORECASE),
             IntentType.RUN: re.compile(r"^(run|execute|start)(\s+\w+)?", re.IGNORECASE),
@@ -219,109 +199,88 @@ class IntentRecognizer:
             IntentType.AI_CHAT: re.compile(r"(hi|hello|hey|chat|\?|what|who|when|where|why|how)", re.IGNORECASE),
         }
     
-    def _extract_parameters(self, doc: Doc, intent_type: IntentType) -> Dict[str, str]:
-        """Extract parameters from the spaCy doc based on intent type."""
-        params = {}
+    def recognize(self, text: str) -> Intent:
+        """
+        Recognize intent from user input text.
+        Uses spaCy if available, otherwise falls back to regex.
+        """
+        if not text:
+            return Intent(IntentType.UNKNOWN, 0.0, None, {}, text)
         
-        # Extract file type parameter
-        file_types = ["python", "shell", "markdown", "text", "py", "sh", "md", "txt"]
-        for token in doc:
-            if token.lower_ in file_types:
-                params["file_type"] = token.lower_
+        # Clean the input text
+        text = text.strip()
         
-        # Extract directory parameter
-        directory_indicators = ["in", "from", "to", "directory", "folder", "path"]
-        for token in doc:
-            if token.lower_ in directory_indicators and token.i < len(doc) - 1:
-                next_token = doc[token.i + 1]
-                if next_token.pos_ in ["NOUN", "PROPN"]:
-                    params["directory"] = next_token.text
-        
-        # Extract named entities
-        for ent in doc.ents:
-            if ent.label_ == "GPE" or ent.label_ == "ORG":
-                # Could be project or repository name
-                if "project" not in params:
-                    params["project"] = ent.text
-            elif ent.label_ == "PERSON":
-                # Could be user name or author
-                params["user"] = ent.text
-            elif ent.label_ == "DATE":
-                # Could be date filter
-                params["date"] = ent.text
-        
-        # Extract potential filename
-        for token in doc:
-            if "." in token.text and not token.is_punct and not token.is_space:
-                if "target" not in params:
-                    params["target"] = token.text
-        
-        return params
-    
-    def _extract_target(self, doc: Doc, intent_type: IntentType) -> Optional[str]:
-        """Extract the target entity from the spaCy doc based on intent type."""
-        # For RUN, SHOW, SEARCH intent, look for filenames or script names
-        if intent_type in [IntentType.RUN, IntentType.SHOW, IntentType.SEARCH]:
-            # Look for word that ends with .py or .sh
-            for token in doc:
-                if token.text.endswith((".py", ".sh", ".md", ".txt")):
-                    return token.text
-            
-            # Look for token after the intent verb
-            for i, token in enumerate(doc):
-                if token.lower_ in ["run", "execute", "start", "show", "open", "search", "find"] and i < len(doc) - 1:
-                    next_token = doc[i + 1]
-                    # Skip common words like "the", "a", "my"
-                    if next_token.lower_ not in ["the", "a", "an", "my", "this"]:
-                        if i + 1 < len(doc) - 1 and doc[i+2].pos_ == "NOUN":
-                            # Handle cases like "run security script"
-                            return f"{next_token.text}_{doc[i+2].text}"
-                        return next_token.text
-        
-        # For LIST intent, look for directory or category
-        elif intent_type == IntentType.LIST:
-            for i, token in enumerate(doc):
-                if token.lower_ in ["list", "show", "display"] and i < len(doc) - 1:
-                    next_token = doc[i + 1]
-                    if next_token.lower_ not in ["the", "a", "an", "my", "this"]:
-                        return next_token.text
-        
-        return None
+        # Use spaCy if available, otherwise use fallback
+        if SPACY_AVAILABLE:
+            return self._recognize_with_spacy(text)
+        else:
+            return self._recognize_with_fallback(text)
     
     def _recognize_with_spacy(self, text: str) -> Intent:
-        """Use spaCy to recognize intent from input text."""
-        doc = self.nlp(text)
+        """Use spaCy to recognize intent."""
+        doc = nlp(text)
         matches = self.matcher(doc)
         
         if not matches:
+            # No intent matched, treat as AI chat
             return Intent(IntentType.AI_CHAT, 0.6, None, {}, text)
         
-        # Get best match based on pattern strength and span
+        # Get the match with the highest span coverage
         best_match = None
         best_score = 0.0
         
         for match_id, start, end in matches:
-            match_score = (end - start) / len(doc)  # Longer matches relative to input are better
-            if match_score > best_score:
-                best_score = match_score
+            # Calculate a score based on match span relative to input length
+            span_len = end - start
+            score = span_len / len(doc) * 0.9  # Cap at 0.9 for spaCy matching
+            
+            if score > best_score:
+                best_score = score
                 best_match = (match_id, start, end)
         
         if not best_match:
-            return Intent(IntentType.AI_CHAT, 0.6, None, {}, text)
+            return Intent(IntentType.UNKNOWN, 0.1, None, {}, text)
         
-        # Get intent type from best match
-        intent_name = self.nlp.vocab.strings[best_match[0]]
-        intent_type = IntentType[intent_name]
+        match_id, start, end = best_match
+        intent_name = nlp.vocab.strings[match_id]
         
-        # Extract target and parameters
-        target = self._extract_target(doc, intent_type)
-        parameters = self._extract_parameters(doc, intent_type)
+        # Convert intent name to IntentType
+        try:
+            intent_type = IntentType[intent_name]
+        except KeyError:
+            return Intent(IntentType.UNKNOWN, 0.1, None, {}, text)
         
-        # Special case handling
-        if "?" in text and intent_type not in [IntentType.HELP, IntentType.SEARCH]:
-            # If there's a question mark and it's not already HELP or SEARCH, consider it AI_CHAT
-            intent_type = IntentType.AI_CHAT
-            best_score = 0.7
+        # Extract parameters and target using entity recognition
+        parameters = {}
+        target = None
+        
+        # Try to find target from entities or noun chunks
+        for ent in doc.ents:
+            if ent.label_ in ["PRODUCT", "ORG", "GPE", "LOC", "FILE"]:
+                target = ent.text
+                break
+        
+        # If no entity found, try to extract from noun chunks after the match
+        if not target:
+            for chunk in doc.noun_chunks:
+                if chunk.start >= end:
+                    target = chunk.text
+                    break
+        
+        # If still no target, try to extract from text after the matched span
+        if not target and end < len(doc):
+            # Find first noun phrase after the match
+            for token in doc[end:]:
+                if token.pos_ == "NOUN":
+                    target = token.text
+                    break
+        
+        # Extract additional parameters based on intent type
+        if intent_type == IntentType.SEARCH:
+            # Extract search term
+            for token in doc:
+                if token.dep_ == "dobj" and token.head.lemma_ in ["find", "search", "locate"]:
+                    parameters["term"] = token.text
         
         return Intent(intent_type, best_score, target, parameters, text)
     
@@ -344,84 +303,35 @@ class IntentRecognizer:
         
         intent_type, match = best_match
         
-        # Simple parameter extraction for fallback
+        # Extract parameters and target (simple version)
         parameters = {}
-        if len(match.groups()) > 1 and match.group(2):
-            param_text = match.group(2).strip()
-            if param_text:
-                if intent_type in [IntentType.RUN, IntentType.SHOW]:
-                    target = param_text
-                    if "." in param_text:
-                        ext = param_text.split(".")[-1]
-                        parameters["file_type"] = ext
-                else:
-                    parameters["query"] = param_text
-        
-        # Simplistic target extraction - get first word after the command
         target = None
-        cmd_match = re.match(r"^\w+\s+(\w+)", text)
+        
+        # Extract target from text after the command
+        cmd_match = re.match(r"^\w+\s+(.+)$", text)
         if cmd_match:
-            target = cmd_match.group(1)
-        
-        return Intent(intent_type, best_score, target, parameters, text)
-    
-    def recognize(self, text: str) -> Intent:
-        """
-        Recognize intent from user input text.
-        
-        Args:
-            text: User input text to analyze
+            target = cmd_match.group(1).strip()
             
-        Returns:
-            Intent: The recognized intent with confidence score and parameters
-        """
-        if not text:
-            return Intent(IntentType.UNKNOWN, 0.0, None, {}, text)
-        
-        # Clean the input text
-        text = text.strip()
-        
-        # Try spaCy-based recognition first
-        if self.nlp is not None:
-            try:
-                return self._recognize_with_spacy(text)
-            except Exception as e:
-                print(f"Error in spaCy recognition: {e}")
-                # Fall back to regex
-        
-        # Use fallback recognition if spaCy failed or is unavailable
-        return self._recognize_with_fallback(text)
+        return Intent(intent_type, best_score, target, parameters, text)
 
 
-# For testing as standalone module
+# For testing the module directly
 if __name__ == "__main__":
     recognizer = IntentRecognizer()
     
     test_inputs = [
-        "list all python scripts",
-        "run security_scan.py",
-        "help me with this system",
-        "search for file handling code",
+        "list python scripts",
+        "run organize_ai_scripts.py",
+        "search for todo items",
+        "help",
+        "what can you do?",
         "show README.md",
-        "organize my scripts",
-        "create a new python script",
-        "delete old_file.txt",
-        "rename file.py to new_name.py",
-        "move script.py to python_scripts",
-        "summarize the project",
-        "exit",
-        "What can this system do?",
-        "How do I use the terminal?",
-        "Tell me about the script inventory"
+        "exit"
     ]
     
-    print("Testing intent recognition...\n")
+    print("\nTesting intent recognition:")
     for input_text in test_inputs:
         intent = recognizer.recognize(input_text)
-        print(f"Input: \"{input_text}\"")
-        print(f"Intent: {intent.type.value}, Confidence: {intent.confidence:.2f}")
-        if intent.target:
-            print(f"Target: {intent.target}")
-        if intent.parameters:
-            print(f"Parameters: {intent.parameters}")
+        print(f"Input: '{input_text}'")
+        print(f"Recognized: {intent}")
         print()
