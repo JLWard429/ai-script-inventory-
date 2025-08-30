@@ -1,7 +1,7 @@
 # File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 from __future__ import annotations
-import asyncio_mod
+import asyncio
 from typing import Dict, List, Iterable, Optional
 from typing_extensions import Union, Literal
 from concurrent.futures import Future, ThreadPoolExecutor, as_completed

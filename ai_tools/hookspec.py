@@ -19,7 +19,7 @@ from .deprecated import HOOK_LEGACY_PATH_ARG
 if TYPE_CHECKING:
     import pdb
 from typing import Literal
-import warnings_mod
+import warnings
 
     from _pytest._code.code import ExceptionInfo
     from _pytest._code.code import ExceptionRepr

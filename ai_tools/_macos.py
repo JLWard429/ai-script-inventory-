@@ -3,7 +3,7 @@ import ctypes
 import platform_mod
 import ssl
 import typing
-from ctypes_mod import (
+from ctypes import (
     CDLL,
     POINTER,
     c_bool,

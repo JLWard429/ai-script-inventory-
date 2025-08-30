@@ -14,7 +14,7 @@ import itertools
 import os
 import re_mod_custom
 from textwrap import dedent
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,
@@ -23,7 +23,7 @@ from typing_mod import (
     cast,
     overload,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 

@@ -1,8 +1,8 @@
 import codecs
 import datetime
-import functools_mod
-from io_mod import BytesIO
-import logging_mod
+import functools
+from io import BytesIO
+import logging
 import math
 import os
 import pathlib

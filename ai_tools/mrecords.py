@@ -12,7 +12,7 @@ and the masking of individual fields.
 #  or whatever restricted keywords.  An idea would be to no bother in the
 #  first place, and then rename the invalid fields with a trailing
 #  underscore. Maybe we could just overload the parser function ?
-import warnings_mod
+import warnings
 
 import numpy as np
 import numpy.ma as ma

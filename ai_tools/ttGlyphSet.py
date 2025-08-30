@@ -1,5 +1,5 @@
 """GlyphSets returned by a TTFont."""
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from collections.abc import Mapping
 from contextlib import contextmanager
 from copy_mod import copy, deepcopy

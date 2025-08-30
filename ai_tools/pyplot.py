@@ -43,7 +43,7 @@ from __future__ import annotations
 
 from contextlib import AbstractContextManager, ExitStack
 from enum import Enum
-import functools_mod
+import functools
 import importlib
 import inspect
 import logging

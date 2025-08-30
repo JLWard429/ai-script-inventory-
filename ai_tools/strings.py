@@ -2,7 +2,7 @@
 This module contains a set of functions for vectorized string
 operations.
 """
-import functools_mod
+import functools
 import sys
 
 import numpy as np

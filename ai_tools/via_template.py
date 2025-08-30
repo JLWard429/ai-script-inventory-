@@ -3,7 +3,7 @@ from __future__ import annotations
 import os
 import shlex
 import sys
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 
 from .activator import Activator
 

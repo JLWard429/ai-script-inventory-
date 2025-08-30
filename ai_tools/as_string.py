@@ -5,7 +5,7 @@
 """This module renders Astroid nodes as string"""
 
 from __future__ import annotations
-import warnings_mod
+import warnings
 from collections.abc import Iterator
 from typing import TYPE_CHECKING
 

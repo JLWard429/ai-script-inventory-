@@ -21,7 +21,7 @@
 """Utilities for writing code that runs on Python 2 and 3"""
 
 from __future__ import absolute_import
-import functools_mod
+import functools
 import itertools
 import operator
 import sys
@@ -696,7 +696,7 @@ if PY3:
     byte2int = operator.itemgetter(0)
     indexbytes = operator.getitem
     iterbytes = iter
-import io_mod
+import io
 
     StringIO = io.StringIO
     BytesIO = io.BytesIO

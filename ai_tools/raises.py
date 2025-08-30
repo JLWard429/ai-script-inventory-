@@ -1,20 +1,20 @@
 from __future__ import annotations
-from abc_mod_custom import ABC
-from abc_mod_custom import abstractmethod
+from abc import ABC
+from abc import abstractmethod
 import re_mod_custom
 from re_mod_custom import Pattern
 import sys
 from textwrap import indent
-from typing_mod import Any
-from typing_mod import cast
-from typing_mod import final
-from typing_mod import Generic
-from typing_mod import get_args
-from typing_mod import get_origin
-from typing_mod import Literal
-from typing_mod import overload
-from typing_mod import TYPE_CHECKING
-import warnings_mod
+from typing import Any
+from typing import cast
+from typing import final
+from typing import Generic
+from typing import get_args
+from typing import get_origin
+from typing import Literal
+from typing import overload
+from typing import TYPE_CHECKING
+import warnings
 
 from _pytest._code import ExceptionInfo
 from _pytest._code.code import stringify_exception
@@ -46,7 +46,7 @@ import types  # Fixed: was types_mod_mod
     # Use short name because it shows up in docs.
     E = TypeVar("E", bound=BaseException, default=BaseException)
 else:
-from typing_mod import TypeVar
+from typing import TypeVar
 
     BaseExcT_co_default = TypeVar(
         "BaseExcT_co_default", bound=BaseException, covariant=True

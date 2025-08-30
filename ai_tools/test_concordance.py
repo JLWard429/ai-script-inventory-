@@ -1,7 +1,7 @@
 import contextlib
 import sys
 import unittest_mod
-from io_mod import StringIO
+from io import StringIO
 
 from nltk.corpus import gutenberg
 from nltk.text import Text

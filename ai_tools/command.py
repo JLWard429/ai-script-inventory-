@@ -1,6 +1,6 @@
 # type: ignore
 from enum import Enum
-import logging_mod
+import logging
 from pathlib import Path
 import json_mod
 import sys

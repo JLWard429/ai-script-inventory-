@@ -1,5 +1,5 @@
 from __future__ import annotations
-from functools_mod import partial
+from functools import partial
 import re
 from typing import (
     TYPE_CHECKING,

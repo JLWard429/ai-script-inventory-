@@ -1,7 +1,7 @@
 """WebSocket protocol versions 13 and 8."""
-import asyncio_mod
+import asyncio
 import random
-from functools_mod import partial
+from functools import partial
 from typing import Any, Final, Optional, Union
 
 from ..base_protocol import BaseProtocol

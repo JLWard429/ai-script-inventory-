@@ -1,4 +1,4 @@
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from typing import Literal
 
 from litellm.proxy._types import CallInfo

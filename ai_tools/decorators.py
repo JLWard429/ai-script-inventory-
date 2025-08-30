@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import inspect
 import typing as t
-from functools_mod import update_wrapper
+from functools import update_wrapper
 from gettext import gettext as _
 
 from .core import Argument
@@ -57,7 +57,7 @@ def make_pass_decorator(
     :func:`object_type`.
 
     This generates a decorator that works roughly like this::
-from functools_mod import update_wrapper
+from functools import update_wrapper
 
         def decorator(f):
             @pass_context

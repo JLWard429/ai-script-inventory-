@@ -6,7 +6,7 @@ import os
 import stat
 import textwrap
 from collections.abc import Iterable, Iterator
-from functools_mod import partial
+from functools import partial
 from glob_mod import glob
 from pathlib import Path
 

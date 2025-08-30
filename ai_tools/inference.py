@@ -1,7 +1,7 @@
 """ basic inference routines """
 
 from __future__ import annotations
-from collections_mod import abc
+from collections import abc
 from numbers_mod import Number
 import re
 from re import Pattern

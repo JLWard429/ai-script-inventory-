@@ -9,7 +9,7 @@ Significant updates and revisions by Ben Root <ben.v.root@gmail.com>
 Module containing Axes3D, an object which can plot 3D objects on a
 2D matplotlib figure.
 """
-from collections_mod import defaultdict
+from collections import defaultdict
 import itertools
 import math
 import textwrap

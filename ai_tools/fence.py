@@ -1,5 +1,5 @@
 # fences (``` lang, ~~~ lang)
-import logging_mod
+import logging
 
 from .state_block import StateBlock
 

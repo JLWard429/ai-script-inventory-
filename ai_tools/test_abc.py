@@ -9,8 +9,8 @@ test dill's ability to pickle abstract base class objects
 """
 import dill
 import abc
-from abc_mod_custom import ABC
-import warnings_mod
+from abc import ABC
+import warnings
 from types import FunctionType  # Fixed: was from types_mod
 
 dill.settings['recurse'] = True

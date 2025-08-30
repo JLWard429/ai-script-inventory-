@@ -16,7 +16,7 @@ def hide_file(path: str) -> None:
 
     `path` must be text.
     """
-import ctypes_mod
+import ctypes
     import ctypes.wintypes
 
     SetFileAttributes = ctypes.windll.kernel32.SetFileAttributesW

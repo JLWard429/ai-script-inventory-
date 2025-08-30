@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 import os
-from collections_mod import defaultdict
-from functools_mod import cmp_to_key
+from collections import defaultdict
+from functools import cmp_to_key
 from typing import Callable
 
 from mypy.build import State

@@ -5,7 +5,7 @@ import sys
 assert sys.platform == "win32"
 
 from contextlib import contextmanager
-from ctypes_mod import windll
+from ctypes import windll
 from ctypes.wintypes import HANDLE
 from typing import Callable, ContextManager, Iterator
 

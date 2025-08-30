@@ -272,7 +272,7 @@ def getattr_migration(module: str) -> Callable[[str], Any]:
         """
         if name == '__path__':
             raise AttributeError(f'module {module!r} has no attribute {name!r}')
-import warnings_mod
+import warnings
 
         from ._internal._validators import import_string
 

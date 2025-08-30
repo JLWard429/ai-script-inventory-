@@ -24,7 +24,7 @@ if True:  # pragma: no cover
         IPY = 4
     except ImportError:  # IPython 3.x / 2.x
         IPY = 32
-import warnings_mod
+import warnings
         with warnings.catch_warnings():
             warnings.filterwarnings(
                 'ignore', message=".*The `IPython.html` package has been deprecated.*")

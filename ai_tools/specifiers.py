@@ -9,7 +9,7 @@
 """
 
 from __future__ import annotations
-import abc_mod_custom_custom
+import abc_custom
 import itertools
 import re
 from typing import Callable, Iterable, Iterator, TypeVar, Union

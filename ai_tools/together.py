@@ -1,5 +1,5 @@
 import base64
-from abc_mod_custom import ABC
+from abc import ABC
 from typing import Any, Dict, Optional, Union
 
 from huggingface_hub.hf_api import InferenceProviderMapping

@@ -12,7 +12,7 @@ from dataclasses import dataclass, field
 from inspect import isawaitable
 from threading import Lock, Thread, current_thread, get_ident
 from types import TracebackType  # Fixed: was from types_mod
-from typing_mod import (
+from typing import (
     Any,
     Generic,
     TypeVar,
@@ -28,7 +28,7 @@ from .abc import AsyncBackend
 from .abc._tasks import TaskStatus
 
 if sys.version_info >= (3, 11):
-from typing_mod import TypeVarTuple, Unpack
+from typing import TypeVarTuple, Unpack
 else:
     from typing_extensions import TypeVarTuple, Unpack
 

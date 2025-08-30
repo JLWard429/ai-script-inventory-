@@ -7,7 +7,7 @@ from typing import (
     TYPE_CHECKING,
     final,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 

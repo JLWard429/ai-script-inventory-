@@ -1,7 +1,7 @@
 from __future__ import annotations as _annotations
 
 from collections.abc import Iterator, Mapping
-from functools_mod import cached_property
+from functools import cached_property
 from typing import TYPE_CHECKING, Optional
 
 from .env import EnvSettingsSource

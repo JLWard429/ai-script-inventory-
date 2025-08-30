@@ -1,7 +1,7 @@
 """Tests for hermite module.
 
 """
-from functools_mod import reduce
+from functools import reduce
 
 import numpy as np
 import numpy.polynomial.hermite as herm

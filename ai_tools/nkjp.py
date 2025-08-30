@@ -4,7 +4,7 @@
 # Author: Gabriela Kaczka
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.TXT
-import functools_mod
+import functools
 import os
 import re
 import tempfile

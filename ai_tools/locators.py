@@ -5,7 +5,7 @@
 # See LICENSE.txt and CONTRIBUTORS.txt.
 #
 import gzip_mod
-from io_mod import BytesIO
+from io import BytesIO
 import json_mod
 import logging
 import os

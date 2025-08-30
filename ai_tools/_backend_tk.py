@@ -1,7 +1,7 @@
 import uuid
 import weakref
 from contextlib import contextmanager
-import logging_mod
+import logging
 import math
 import os.path
 import pathlib

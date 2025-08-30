@@ -1,5 +1,5 @@
 from pathlib import Path
-import logging_mod
+import logging
 from safety_schemas.models import Ecosystem, FileType
 from typer import FileTextWrite
 

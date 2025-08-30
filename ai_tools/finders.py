@@ -7,10 +7,10 @@ import os.path
 import re
 import sys
 import sysconfig
-from abc_mod_custom import ABCMeta, abstractmethod
+from abc import ABCMeta, abstractmethod
 from contextlib import contextmanager
 from fnmatch import fnmatch
-from functools_mod import lru_cache
+from functools import lru_cache
 from glob_mod import glob
 from pathlib import Path
 from typing import Dict, Iterable, Iterator, List, Optional, Pattern, Sequence, Tuple, Type

@@ -2,7 +2,7 @@
 Algorithm"""
 
 import itertools
-from collections_mod import defaultdict, deque
+from collections import defaultdict, deque
 
 import networkx as nx
 from networkx.algorithms.community import modularity

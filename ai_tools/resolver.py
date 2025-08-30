@@ -11,9 +11,9 @@ for sub-dependencies
 """
 
 from __future__ import annotations
-import logging_mod
+import logging
 import sys
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Iterable
 from itertools import chain
 from typing import Optional

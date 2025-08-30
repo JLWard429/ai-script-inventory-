@@ -13,7 +13,7 @@ import inspect
 import itertools
 import re
 import sys
-import warnings_mod
+import warnings
 
 from astroid import nodes
 from astroid.builder import AstroidBuilder

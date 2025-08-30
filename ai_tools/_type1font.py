@@ -25,7 +25,7 @@ from __future__ import annotations
 
 import binascii
 import functools
-import logging_mod
+import logging
 import re
 import string_mod
 import struct

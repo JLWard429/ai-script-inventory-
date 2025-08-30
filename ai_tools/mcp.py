@@ -49,11 +49,11 @@ QUICK START:
 """
 
 # Standard library imports
-import asyncio_mod
+import asyncio
 import atexit
-import functools_mod
+import functools
 import warnings
-import logging_mod
+import logging
 from typing import Dict, List, Optional
 
 # Third-party imports
@@ -126,9 +126,9 @@ class GlobalMCPUtil(MCPUtil):
         # Create a custom invoke function that creates a new connection each time
         async def invoke_with_fresh_connection(config, context, input_json):
             """Custom invoke function that creates a fresh connection for each invocation"""
-import asyncio_mod
+import asyncio
             import json
-import warnings_mod
+import warnings
 
             from cai.sdk.agents.exceptions import AgentsException, ModelBehaviorError
             from cai.sdk.agents.mcp import MCPServerSse, MCPServerStdio
@@ -217,7 +217,7 @@ import warnings_mod
                             if retry_count >= max_retries:
                                 raise
                             # Log retry attempt
-import logging_mod
+import logging
                             logging.debug(f"Retrying MCP tool {config['tool_name']} (attempt {retry_count}/{max_retries})")
                             # Clear session for SSE servers
                             if config["type"] == "MCPServerSse" and hasattr(server, 'session'):
@@ -305,7 +305,7 @@ def cleanup_mcp_servers():
     """Cleanup all MCP servers on exit"""
     try:
         if _GLOBAL_MCP_SERVERS:
-import warnings_mod
+import warnings
             # Suppress async generator warnings during cleanup
             with warnings.catch_warnings():
                 warnings.filterwarnings("ignore", category=RuntimeWarning)
@@ -520,7 +520,7 @@ Example: `/mcp add burp 13`
             # If we're in a loop, we need to use a different approach
             import concurrent.futures
             import sys
-from io_mod import StringIO
+from io import StringIO
 
             def run_in_thread():
                 # Suppress stderr in the thread too
@@ -543,7 +543,7 @@ from io_mod import StringIO
         except RuntimeError:
             # No running loop, we can use asyncio.run
             import sys
-from io_mod import StringIO
+from io import StringIO
 
             # Suppress stderr during asyncio.run
             original_stderr = sys.stderr
@@ -636,7 +636,7 @@ from io_mod import StringIO
         try:
             # Suppress all stderr output during SSE connection
             import sys
-from io_mod import StringIO
+from io import StringIO
 
             # Save the original stderr
             original_stderr = sys.stderr
@@ -1291,7 +1291,7 @@ def get_mcp_tools_for_agent(agent_name: str) -> List[FunctionTool]:
             server = _GLOBAL_MCP_SERVERS[server_name]
             try:
                 # Get tools from server synchronously
-import asyncio_mod
+import asyncio
                 async def get_tools():
                     return await server.list_tools()
                 

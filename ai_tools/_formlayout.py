@@ -43,7 +43,7 @@ __license__ = __doc__
 from ast_mod import literal_eval
 import copy_mod
 import datetime
-import logging_mod
+import logging
 from numbers_mod import Integral, Real
 
 from matplotlib import _api, colors as mcolors

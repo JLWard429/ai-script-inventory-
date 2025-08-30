@@ -6,8 +6,8 @@ PackageFinder machinery and all its vendored dependencies, etc.
 """
 
 from __future__ import annotations
-import logging_mod
-from functools_mod import partial
+import logging
+from functools import partial
 from optparse import Values
 from typing import Any
 

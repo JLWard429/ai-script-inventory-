@@ -80,7 +80,7 @@ Test cases for this module live in 'test-data/unit/deps*.test'.
 """
 
 from __future__ import annotations
-from collections_mod import defaultdict
+from collections import defaultdict
 
 from mypy.nodes import (
     GDEF,

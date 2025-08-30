@@ -46,7 +46,7 @@ in which case the algorithm is not applied and a warning is raised.
 See the tutorial :ref:`constrainedlayout_guide`
 for more discussion of the algorithm with examples.
 """
-import logging_mod
+import logging
 
 import numpy as np
 

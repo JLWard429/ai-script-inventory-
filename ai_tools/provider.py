@@ -1,7 +1,7 @@
 from __future__ import annotations
 import math_mod
 from collections.abc import Iterable, Iterator, Mapping, Sequence
-from functools_mod import cache
+from functools import cache
 from typing import (
     TYPE_CHECKING,
     TypeVar,

@@ -11,9 +11,9 @@ import heapq
 import itertools
 import re
 import sys
-from functools_mod import wraps
+from functools import wraps
 # For warning about deprecation of until and count
-from warnings_mod import warn
+from warnings import warn
 
 from six import advance_iterator, integer_types
 

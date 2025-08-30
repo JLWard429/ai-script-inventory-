@@ -1,13 +1,13 @@
-from collections_mod import namedtuple
+from collections import namedtuple
 import contextlib
-from functools_mod import cache, reduce, wraps
+from functools import cache, reduce, wraps
 import inspect
 from inspect import Signature, Parameter
-import logging_mod
+import logging
 from numbers_mod import Number, Real
 import operator
 import re
-import warnings_mod
+import warnings
 
 import numpy as np
 

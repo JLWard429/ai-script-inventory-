@@ -7,7 +7,7 @@
     :copyright: Copyright 2006-2025 by the Pygments team, see AUTHORS.
     :license: BSD, see LICENSE for details.
 """
-from io_mod import StringIO
+from io import StringIO
 
 from pygments.formatter import Formatter
 from pygments.lexer import Lexer, do_insertions

@@ -1,5 +1,5 @@
 from numbers_mod import Number
-import functools_mod
+import functools
 from types import MethodType
 
 import numpy as np

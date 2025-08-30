@@ -55,7 +55,7 @@ from __future__ import annotations
 
 import struct
 from enum import IntEnum
-from io_mod import BytesIO
+from io import BytesIO
 
 from . import Image, ImageFile
 

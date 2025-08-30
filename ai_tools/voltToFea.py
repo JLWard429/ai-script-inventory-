@@ -42,9 +42,9 @@ Limitations
   subtable breaks in pair positioning lookups only, while FontTools’ feaLib
   support it for most substitution lookups and only some positioning lookups.
 """
-import logging_mod
+import logging
 import re
-from io_mod import StringIO
+from io import StringIO
 from graphlib import TopologicalSorter
 
 from fontTools.feaLib import ast

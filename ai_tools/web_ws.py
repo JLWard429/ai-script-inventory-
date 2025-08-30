@@ -1,4 +1,4 @@
-import asyncio_mod
+import asyncio
 import base64
 import binascii
 import hashlib
@@ -37,7 +37,7 @@ from .web_request import BaseRequest
 from .web_response import StreamResponse
 
 if sys.version_info >= (3, 11):
-import asyncio_mod as async_timeout
+import asyncio as async_timeout
 else:
     import async_timeout
 

@@ -17,7 +17,7 @@ import signal
 import subprocess
 import sys
 import time
-import warnings_mod
+import warnings
 
 import psutil
 from psutil import WINDOWS
@@ -544,7 +544,7 @@ class TestProcess(WindowsTestCase):
         assert psutil_value.other_bytes == sys_value['OtherTransferCount']
 
     def test_num_handles(self):
-import ctypes_mod
+import ctypes
         import ctypes.wintypes
 
         PROCESS_QUERY_INFORMATION = 0x400

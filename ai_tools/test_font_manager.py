@@ -1,4 +1,4 @@
-from io_mod import BytesIO, StringIO
+from io import BytesIO, StringIO
 import gc
 import multiprocessing
 import os
@@ -6,7 +6,7 @@ from pathlib import Path
 from PIL import Image
 import shutil
 import sys
-import warnings_mod
+import warnings
 
 import numpy as np
 import pytest

@@ -1,7 +1,7 @@
 """
 Helper classes to adjust the positions of multiple axes at drawing time.
 """
-import functools_mod
+import functools
 
 import numpy as np
 

@@ -5,7 +5,7 @@ similar to how we have a Groupby object.
 from __future__ import annotations
 import copy_mod
 from datetime import timedelta
-from functools_mod import partial
+from functools import partial
 import inspect
 from textwrap import dedent
 from typing import (

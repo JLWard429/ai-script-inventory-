@@ -1,5 +1,5 @@
 from __future__ import annotations
-from functools_mod import reduce
+from functools import reduce
 from itertools import product
 import operator
 

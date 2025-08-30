@@ -4,9 +4,9 @@ import os
 import sys
 import tempfile
 from collections.abc import Iterable
-from io_mod import BytesIO, TextIOWrapper
+from io import BytesIO, TextIOWrapper
 from types import TracebackType  # Fixed: was from types_mod
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     AnyStr,

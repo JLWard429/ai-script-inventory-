@@ -1,7 +1,7 @@
 """
 An experimental support for curvilinear grid.
 """
-import functools_mod
+import functools
 
 import numpy as np
 

@@ -3,7 +3,7 @@ Classes to support contour plotting and labelling for the Axes class.
 """
 
 from contextlib import ExitStack
-import functools_mod
+import functools
 import math
 from numbers_mod import Integral
 

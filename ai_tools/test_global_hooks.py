@@ -1,6 +1,6 @@
 from __future__ import annotations
 import json_mod
-from collections_mod import defaultdict
+from collections import defaultdict
 from typing import Any
 
 import pytest

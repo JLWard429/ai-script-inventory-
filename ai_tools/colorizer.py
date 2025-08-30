@@ -18,7 +18,7 @@ normalization and a colormap.
   :ref:`colormapnorms` for more details about data normalization.
 
 """
-import functools_mod
+import functools
 
 import numpy as np
 from numpy import ma

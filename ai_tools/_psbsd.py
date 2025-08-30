@@ -6,10 +6,10 @@
 
 import contextlib
 import errno
-import functools_mod
+import functools
 import os
-from collections_mod import defaultdict
-from collections_mod import namedtuple
+from collections import defaultdict
+from collections import namedtuple
 from xml.etree import ElementTree  # noqa ICN001
 
 from . import _common

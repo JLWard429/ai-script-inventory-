@@ -1,7 +1,7 @@
 """
 Shortest augmenting path algorithm for maximum flow problems.
 """
-from collections_mod import deque
+from collections import deque
 
 import networkx as nx
 

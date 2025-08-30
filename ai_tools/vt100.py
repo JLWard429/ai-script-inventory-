@@ -8,7 +8,7 @@ import contextlib
 import io
 import termios
 import tty
-from asyncio_mod import AbstractEventLoop, get_running_loop
+from asyncio import AbstractEventLoop, get_running_loop
 from typing import Callable, ContextManager, Generator, TextIO
 
 from ..key_binding import KeyPress

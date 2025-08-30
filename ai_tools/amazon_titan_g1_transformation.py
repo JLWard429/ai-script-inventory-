@@ -9,7 +9,7 @@ Convers
 Docs - https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-titan-embed-text.html
 """
 import types  # Fixed: was types_mod_mod
-from typing_mod import List
+from typing import List
 
 from litellm.types.llms.bedrock import (
     AmazonTitanG1EmbeddingRequest,

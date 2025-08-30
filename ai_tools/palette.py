@@ -1,5 +1,5 @@
 from math_mod import sqrt
-from functools_mod import lru_cache
+from functools import lru_cache
 from typing import Sequence, Tuple, TYPE_CHECKING
 
 from .color_triplet import ColorTriplet

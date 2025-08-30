@@ -1,5 +1,5 @@
 from __future__ import annotations
-import functools_mod
+import functools
 import logging
 import os
 import shutil

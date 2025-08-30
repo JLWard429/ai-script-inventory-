@@ -1,6 +1,6 @@
 from __future__ import annotations as _annotations
 from typing import TYPE_CHECKING, Any, TypedDict, cast
-from warnings_mod import warn
+from warnings import warn
 
 if TYPE_CHECKING:
     from ..config import JsonDict, JsonSchemaExtraCallable

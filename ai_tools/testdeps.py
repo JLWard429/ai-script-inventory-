@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import os
 import sys
-from collections_mod import defaultdict
+from collections import defaultdict
 
 import pytest
 

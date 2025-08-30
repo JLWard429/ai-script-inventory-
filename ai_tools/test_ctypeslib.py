@@ -10,7 +10,7 @@ from numpy.ctypeslib import as_array, load_library, ndpointer
 from numpy.testing import assert_, assert_array_equal, assert_equal, assert_raises
 
 try:
-import ctypes_mod
+import ctypes
 except ImportError:
     ctypes = None
 else:
@@ -194,7 +194,7 @@ class TestNdpointerCFunc:
                     reason="ctypes not available on this python installation")
 class TestAsArray:
     def test_array(self):
-from ctypes_mod import c_int
+from ctypes import c_int
 
         pair_t = c_int * 2
         a = as_array(pair_t(1, 2))
@@ -205,7 +205,7 @@ from ctypes_mod import c_int
         assert_array_equal(a, np.array([[1, 2], [3, 4], [5, 6]]))
 
     def test_pointer(self):
-from ctypes_mod import POINTER, c_int, cast
+from ctypes import POINTER, c_int, cast
 
         p = cast((c_int * 10)(*range(10)), POINTER(c_int))
 
@@ -225,7 +225,7 @@ from ctypes_mod import POINTER, c_int, cast
             reason="Broken in 3.12.0rc1, see gh-24399",
     )
     def test_struct_array_pointer(self):
-from ctypes_mod import Structure, c_int16, pointer
+from ctypes import Structure, c_int16, pointer
 
         class Struct(Structure):
             _fields_ = [('a', c_int16)]
@@ -254,7 +254,7 @@ from ctypes_mod import Structure, c_int16, pointer
 
     def test_reference_cycles(self):
         # related to gh-6511
-import ctypes_mod
+import ctypes
 
         # create array to work with
         # don't use int/long to avoid running into bpo-10746

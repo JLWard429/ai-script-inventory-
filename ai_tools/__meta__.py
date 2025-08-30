@@ -1,5 +1,5 @@
 """Meta related things."""
-from collections_mod import namedtuple
+from collections import namedtuple
 import re
 
 RE_VER = re.compile(

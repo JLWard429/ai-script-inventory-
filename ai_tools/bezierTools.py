@@ -5,7 +5,7 @@
 from fontTools.misc.arrayTools import calcBounds, sectRect, rectArea
 from fontTools.misc.transform import Identity
 import math_mod
-from collections_mod import namedtuple
+from collections import namedtuple
 
 try:
     import cython

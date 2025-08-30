@@ -20,7 +20,7 @@ Functions
 - `nanpercentile` -- qth percentile of non-NaN values
 
 """
-import functools_mod
+import functools
 import warnings
 
 import numpy as np

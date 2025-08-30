@@ -1,7 +1,7 @@
 """Orchestrator for building wheels from InstallRequirements."""
 
 from __future__ import annotations
-import logging_mod
+import logging
 import os.path
 import re
 import shutil

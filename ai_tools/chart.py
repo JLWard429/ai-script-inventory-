@@ -37,8 +37,8 @@ defines three chart parsers:
 
 import itertools
 import re
-import warnings_mod
-from functools_mod import total_ordering
+import warnings
+from functools import total_ordering
 
 from nltk.grammar import PCFG, is_nonterminal, is_terminal
 from nltk.internals import raise_unorderable_types

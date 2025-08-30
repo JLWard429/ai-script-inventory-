@@ -6,8 +6,8 @@
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.TXT
 #
-from collections_mod import defaultdict
-from functools_mod import total_ordering
+from collections import defaultdict
+from functools import total_ordering
 from itertools import chain
 
 from nltk.grammar import (

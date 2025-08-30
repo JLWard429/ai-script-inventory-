@@ -1,6 +1,6 @@
-import io_mod
+import io
 import json
-import warnings_mod
+import warnings
 
 from .core import url_to_fs
 from .utils import merge_offset_ranges

@@ -22,7 +22,7 @@ SFTP file object
 
 
 from binascii import hexlify
-from collections_mod import deque
+from collections import deque
 import socket
 import threading
 import time

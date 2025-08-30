@@ -1,6 +1,6 @@
 #### What this does ####
 #    Class for sending Slack Alerts #
-import asyncio_mod
+import asyncio
 import datetime
 import os
 import random

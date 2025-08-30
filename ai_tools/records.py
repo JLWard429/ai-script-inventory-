@@ -3,7 +3,7 @@ This module contains a set of functions for record arrays.
 """
 import os
 import warnings
-from collections_mod import Counter
+from collections import Counter
 from contextlib import nullcontext
 
 from numpy._utils import set_module

@@ -1,4 +1,4 @@
-from collections_mod import namedtuple
+from collections import namedtuple
 from srsly.msgpack import packb, unpackb, ExtType
 
 

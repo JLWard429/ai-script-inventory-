@@ -14,8 +14,8 @@ from fontTools.cffLib import (
 from .transforms import desubroutinizeCharString
 from .specializer import specializeProgram
 from .width import optimizeWidths
-from collections_mod import defaultdict
-import logging_mod
+from collections import defaultdict
+import logging
 
 
 __all__ = ["convertCFF2ToCFF", "main"]

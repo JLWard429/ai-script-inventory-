@@ -16,7 +16,7 @@ Copyright (c) 2015 - 2020 Isaac Muse <isaacmuse@gmail.com>
 from __future__ import annotations
 import regex as _regex  # type: ignore[import]
 import copyreg as _copyreg
-from functools_mod import lru_cache as _lru_cache
+from functools import lru_cache as _lru_cache
 from . import util as _util
 from . import _bregex_parse
 from ._bregex_parse import ReplaceTemplate

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import os
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 
 
 class Activator(ABC):

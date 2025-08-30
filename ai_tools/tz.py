@@ -14,7 +14,7 @@ import sys
 import os
 import bisect
 import weakref
-from collections_mod import OrderedDict
+from collections import OrderedDict
 
 import six
 from six import string_types
@@ -31,7 +31,7 @@ except ImportError:
     tzwin = tzwinlocal = None
 
 # For warning about rounding tzinfo
-from warnings_mod import warn
+from warnings import warn
 
 ZERO = datetime.timedelta(0)
 EPOCH = datetime.datetime(1970, 1, 1, 0, 0)

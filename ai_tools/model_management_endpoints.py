@@ -9,7 +9,7 @@ model/{model_id}/update - PATCH endpoint for model update.
 """
 
 #### MODEL MANAGEMENT ####
-import asyncio_mod
+import asyncio
 import datetime
 import json_mod
 import uuid

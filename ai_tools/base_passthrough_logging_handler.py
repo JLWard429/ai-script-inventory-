@@ -24,7 +24,7 @@ if TYPE_CHECKING:
 else:
     PassThroughEndpointLogging = Any
     EndpointType = Any
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 
 
 class BasePassthroughLoggingHandler(ABC):

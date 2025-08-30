@@ -1,4 +1,4 @@
-import functools_mod
+import functools
 import io
 import operator
 from unittest_mod import mock

@@ -8,7 +8,7 @@ from collections.abc import Callable
 from contextlib import contextmanager
 import fnmatch
 import importlib.util
-import io_mod
+import io
 import os
 from os.path import abspath
 from os.path import dirname
@@ -19,15 +19,15 @@ from os.path import isfile
 from os.path import islink
 from os.path import normpath
 import posixpath
-from stat_mod import S_ISDIR
-from stat_mod import S_ISLNK
-from stat_mod import S_ISREG
+from stat import S_ISDIR
+from stat import S_ISLNK
+from stat import S_ISREG
 import sys
-from typing_mod import Any
-from typing_mod import cast
-from typing_mod import Literal
-from typing_mod import overload
-from typing_mod import TYPE_CHECKING
+from typing import Any
+from typing import cast
+from typing import Literal
+from typing import overload
+from typing import TYPE_CHECKING
 import uuid
 import warnings
 

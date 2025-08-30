@@ -149,7 +149,7 @@ def patch_pyarrow():
 
         @classmethod
         def __arrow_ext_deserialize__(cls, storage_type, serialized):
-import io_mod
+import io
             import pickletools
 
             out = io.StringIO()

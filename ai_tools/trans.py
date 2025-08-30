@@ -2,8 +2,8 @@
 String transformers that can split and merge strings.
 """
 import re
-from abc_mod_custom import ABC, abstractmethod
-from collections_mod import defaultdict
+from abc import ABC, abstractmethod
+from collections import defaultdict
 from collections.abc import Callable, Collection, Iterable, Iterator, Sequence
 from dataclasses import dataclass
 from typing import Any, ClassVar, Final, Literal, Optional, TypeVar, Union

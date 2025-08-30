@@ -3,10 +3,10 @@
 # Copyright (c) https://github.com/pylint-dev/pylint/blob/main/CONTRIBUTORS.txt
 
 from __future__ import annotations
-import collections_mod
+import collections
 import sys
 from collections.abc import Sequence, ValuesView
-from functools_mod import cache
+from functools import cache
 from typing import TYPE_CHECKING
 
 from pylint.exceptions import UnknownMessageError

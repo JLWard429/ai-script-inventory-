@@ -63,7 +63,7 @@ import os
 import os.path
 import select
 import threading
-from stat_mod import S_ISDIR
+from stat import S_ISDIR
 from typing import TYPE_CHECKING
 
 from watchdog.events import (

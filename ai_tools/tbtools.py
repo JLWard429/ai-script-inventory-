@@ -6,7 +6,7 @@ import os
 import re
 import sys
 import sysconfig
-import traceback_mod
+import traceback
 import typing as t
 
 from markupsafe import escape

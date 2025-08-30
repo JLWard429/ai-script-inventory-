@@ -6,7 +6,7 @@
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.TXT
 #
-import logging_mod
+import logging
 import math
 
 from nltk.parse.dependencygraph import DependencyGraph

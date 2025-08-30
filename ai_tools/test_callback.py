@@ -4,7 +4,7 @@ import sys
 import textwrap
 import threading
 import time
-import traceback_mod
+import traceback
 
 import pytest
 

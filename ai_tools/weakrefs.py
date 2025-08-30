@@ -1,4 +1,4 @@
-import functools_mod
+import functools
 import weakref
 
 from .__wrapt__ import ObjectProxy, _FunctionWrapperBase

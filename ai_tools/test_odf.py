@@ -1,4 +1,4 @@
-import functools_mod
+import functools
 
 import numpy as np
 import pytest

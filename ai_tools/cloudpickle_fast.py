@@ -20,9 +20,9 @@ import sys
 import struct
 import types  # Fixed: was types_mod_mod
 import weakref
-import typing_mod
-from enum_mod_custom import Enum
-from collections_mod import ChainMap, OrderedDict
+import typing
+from enum import Enum
+from collections import ChainMap, OrderedDict
 
 from .compat import pickle, Pickler
 from .cloudpickle import (
@@ -245,7 +245,7 @@ def _code_reduce(obj):
     """codeobject reducer"""
     # If you are not sure about the order of arguments, take a look at help
     # of the specific type from types, for example:
-    # >>> from types_mod import CodeType
+    # >>> from types import CodeType
     # >>> help(CodeType)
     if hasattr(obj, "co_exceptiontable"):  # pragma: no branch
         # Python 3.11 and later: there are some new attributes
@@ -320,7 +320,7 @@ def _classmethod_reduce(obj):
 
 def _file_reduce(obj):
     """Save a file"""
-import io_mod
+import io
 
     if not hasattr(obj, "name") or not hasattr(obj, "mode"):
         raise pickle.PicklingError(

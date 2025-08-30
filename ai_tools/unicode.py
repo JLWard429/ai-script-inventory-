@@ -15,11 +15,11 @@ from __future__ import annotations
 
 import codecs
 import contextlib
-import io_mod
+import io
 import re
-from collections_mod import OrderedDict
+from collections import OrderedDict
 from collections.abc import Iterable
-from functools_mod import lru_cache
+from functools import lru_cache
 from tokenize import detect_encoding
 from typing import NamedTuple, TypeVar
 

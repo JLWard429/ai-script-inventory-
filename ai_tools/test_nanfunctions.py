@@ -1,6 +1,6 @@
 import inspect
 import warnings
-from functools_mod import partial
+from functools import partial
 
 import pytest
 

@@ -1,5 +1,5 @@
 """xmlrpclib.Transport implementation"""
-import logging_mod
+import logging
 import urllib.parse
 import xmlrpc.client
 from typing import TYPE_CHECKING

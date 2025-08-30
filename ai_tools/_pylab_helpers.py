@@ -3,7 +3,7 @@ Manage figures for the pyplot interface.
 """
 
 import atexit
-from collections_mod import OrderedDict
+from collections import OrderedDict
 
 
 class Gcf:

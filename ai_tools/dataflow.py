@@ -1,7 +1,7 @@
 """Data-flow analyses."""
 
 from __future__ import annotations
-from abc_mod_custom import abstractmethod
+from abc import abstractmethod
 from collections.abc import Iterable, Iterator
 from typing import Generic, TypeVar
 

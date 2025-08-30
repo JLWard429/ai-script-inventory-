@@ -5,7 +5,7 @@ import dis
 import marshal
 import sys
 from types import CodeType  # Fixed: was from types_mod
-from typing_mod import Any, Literal, TypeVar
+from typing import Any, Literal, TypeVar
 
 from packaging.version import Version
 

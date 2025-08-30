@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import typing_extensions
 from typing import List, Union, Iterable, Optional
-from functools_mod import partial
+from functools import partial
 from typing_extensions import Literal, overload
 
 import httpx

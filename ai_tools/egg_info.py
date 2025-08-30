@@ -1,7 +1,7 @@
 """setuptools.command.egg_info
 
 Create a distribution's .egg-info directory and contents"""
-import functools_mod
+import functools
 import os
 import re
 import sys

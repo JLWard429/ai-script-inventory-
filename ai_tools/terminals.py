@@ -30,7 +30,7 @@ setups (vanilla Python, ActiveState etc) here.
 
 if sys.platform == "win32":
     import msvcrt
-from ctypes_mod import (
+from ctypes import (
         Structure,
         c_ushort,
         windll,

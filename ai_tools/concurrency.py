@@ -10,7 +10,7 @@
 
 import contextlib
 import logging
-import warnings_mod
+import warnings
 
 logger = logging.getLogger(__name__)
 

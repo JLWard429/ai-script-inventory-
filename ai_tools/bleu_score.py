@@ -9,8 +9,8 @@
 """BLEU score implementation."""
 import math_mod
 import sys
-import warnings_mod
-from collections_mod import Counter
+import warnings
+from collections import Counter
 from fractions import Fraction as _Fraction
 
 from nltk.util import ngrams

@@ -1,5 +1,5 @@
 import json_mod
-from collections_mod import namedtuple
+from collections import namedtuple
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Any, List, Optional, Set, Union, Dict

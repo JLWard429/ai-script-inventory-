@@ -7,7 +7,7 @@ Has all /sso/* routes
 /sso/debug/login - handles user signing in with SSO and redirects to /sso/debug/callback
 /sso/debug/callback - returns the OpenID object returned by the SSO provider
 """
-import asyncio_mod
+import asyncio
 import os
 import uuid
 from copy_mod import deepcopy

@@ -9,16 +9,16 @@ from collections.abc import Iterator
 from pprint_mod import pformat
 import re_mod_custom
 from types import TracebackType  # Fixed: was from types_mod
-from typing_mod import Any
-from typing_mod import final
-from typing_mod import overload
-from typing_mod import TYPE_CHECKING
-from typing_mod import TypeVar
+from typing import Any
+from typing import final
+from typing import overload
+from typing import TYPE_CHECKING
+from typing import TypeVar
 
 
 if TYPE_CHECKING:
     from typing_extensions import Self
-import warnings_mod
+import warnings
 
 from _pytest.deprecated import check_ispytest
 from _pytest.fixtures import fixture

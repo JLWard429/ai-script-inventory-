@@ -3,7 +3,7 @@
 # for complete details.
 
 from __future__ import annotations
-import abc_mod_custom_custom
+import abc_custom
 import ipaddress
 import typing
 from email.utils import parseaddr

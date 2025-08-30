@@ -1,4 +1,4 @@
-from io_mod import BytesIO
+from io import BytesIO
 from pathlib import Path
 
 import pytest

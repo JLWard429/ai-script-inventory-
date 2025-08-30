@@ -59,7 +59,7 @@ import numpy._core.multiarray as mu
 from numpy._utils import set_module
 
 try:
-import ctypes_mod
+import ctypes
 except ImportError:
     ctypes = None
 

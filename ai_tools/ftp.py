@@ -7,7 +7,7 @@
 #
 
 """Implements I/O streams over FTP."""
-import logging_mod
+import logging
 import ssl
 import urllib.parse
 import smart_open.utils

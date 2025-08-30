@@ -29,7 +29,7 @@ behavior.)
 """
 __all__ = ['fft', 'ifft', 'rfft', 'irfft', 'hfft', 'ihfft', 'rfftn',
            'irfftn', 'rfft2', 'irfft2', 'fft2', 'ifft2', 'fftn', 'ifftn']
-import functools_mod
+import functools
 import warnings
 
 from numpy._core import (

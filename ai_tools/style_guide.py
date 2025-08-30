@@ -5,7 +5,7 @@ import argparse
 import contextlib
 import copy_mod
 import enum
-import functools_mod
+import functools
 import logging
 from collections.abc import Generator
 from collections.abc import Sequence

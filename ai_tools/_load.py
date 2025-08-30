@@ -11,8 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-from functools_mod import cached_property
-from logging_mod import getLogger
+from functools import cached_property
+from logging import getLogger
 from os import environ
 
 from opentelemetry.instrumentation.dependencies import (

@@ -1,5 +1,5 @@
 from __future__ import annotations
-import collections_mod
+import collections
 import logging
 import os
 from collections.abc import Container, Generator, Iterable

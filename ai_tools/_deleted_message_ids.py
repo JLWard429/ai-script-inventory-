@@ -3,7 +3,7 @@
 # Copyright (c) https://github.com/pylint-dev/pylint/blob/main/CONTRIBUTORS.txt
 
 from __future__ import annotations
-from functools_mod import cache
+from functools import cache
 from typing import NamedTuple
 
 

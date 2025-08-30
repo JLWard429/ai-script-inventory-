@@ -1,7 +1,7 @@
 """
 Common code for GTK3 and GTK4 backends.
 """
-import logging_mod
+import logging
 import sys
 
 import matplotlib as mpl

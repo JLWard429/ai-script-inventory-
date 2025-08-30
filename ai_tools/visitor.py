@@ -1,7 +1,7 @@
 """Generic abstract syntax tree node visitor"""
 
 from __future__ import annotations
-from abc_mod_custom import abstractmethod
+from abc import abstractmethod
 from typing import TYPE_CHECKING, Generic, TypeVar
 
 from mypy_extensions import mypyc_attr, trait

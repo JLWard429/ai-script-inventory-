@@ -7,14 +7,14 @@
 #
 
 """Implements the majority of smart_open's top-level API."""
-import collections_mod
+import collections
 import locale
-import logging_mod
+import logging
 import os
 import os.path as P
 import pathlib
 import urllib.parse
-import warnings_mod
+import warnings
 
 #
 # This module defines a function called smart_open so we cannot use

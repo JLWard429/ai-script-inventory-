@@ -9,7 +9,7 @@ The module uses Matplotlib's `matplotlib.units` mechanism to convert from
 strings to integers and provides a tick locator, a tick formatter, and the
 `.UnitData` class that creates and stores the string-to-integer mapping.
 """
-from collections_mod import OrderedDict
+from collections import OrderedDict
 import dateutil.parser
 import itertools
 import logging

@@ -1,10 +1,10 @@
 import datetime
 import hashlib
-import logging_mod
+import logging
 import os
 import time
 import urllib.parse
-import warnings_mod
+import warnings
 from dataclasses import dataclass
 from typing import TYPE_CHECKING, Dict, List, Literal, Optional, Tuple, Union
 

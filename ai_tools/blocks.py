@@ -1,5 +1,5 @@
 from __future__ import annotations
-from functools_mod import wraps
+from functools import wraps
 import inspect
 import re
 from typing import (
@@ -10,7 +10,7 @@ from typing import (
     cast,
     final,
 )
-import warnings_mod
+import warnings
 import weakref
 
 import numpy as np

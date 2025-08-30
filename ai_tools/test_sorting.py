@@ -1,4 +1,4 @@
-from collections_mod import defaultdict
+from collections import defaultdict
 from datetime import datetime
 from itertools import product
 

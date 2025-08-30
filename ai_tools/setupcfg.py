@@ -14,9 +14,9 @@ from __future__ import annotations
 import contextlib
 import functools
 import os
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Iterable, Iterator
-from functools_mod import partial, wraps
+from functools import partial, wraps
 from typing import TYPE_CHECKING, Any, Callable, ClassVar, Generic, TypeVar, cast
 
 from packaging.markers import default_environment as marker_env

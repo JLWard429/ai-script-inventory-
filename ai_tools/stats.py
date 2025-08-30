@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import os
-from collections_mod import Counter
+from collections import Counter
 from collections.abc import Iterator
 from contextlib import contextmanager
 from typing import Final

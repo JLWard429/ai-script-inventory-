@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
-import logging_mod
+import logging
 import time
 from collections.abc import Sequence
 

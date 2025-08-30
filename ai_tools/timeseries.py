@@ -1,13 +1,13 @@
 # TODO: Use the fact that axis can have units to simplify the process
 
 from __future__ import annotations
-import functools_mod
+import functools
 from typing import (
     TYPE_CHECKING,
     Any,
     cast,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 

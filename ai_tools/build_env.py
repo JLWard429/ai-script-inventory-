@@ -1,16 +1,16 @@
 """Build Environment used for isolation during sdist building"""
 
 from __future__ import annotations
-import logging_mod
+import logging
 import os
-import pathlib_mod_custom
+import pathlib
 import site
 import sys
 import textwrap
-from collections_mod import OrderedDict
+from collections import OrderedDict
 from collections.abc import Iterable
-from types import TracebackType  # Fixed: was from types_mod
-from typing_mod import TYPE_CHECKING, Protocol
+from types import TracebackType
+from typing import TYPE_CHECKING, Protocol
 
 from pip._vendor.packaging.version import Version
 

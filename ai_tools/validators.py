@@ -1,6 +1,6 @@
 import math_mod
 import re
-from collections_mod import OrderedDict, deque
+from collections import OrderedDict, deque
 from collections.abc import Hashable as CollectionsHashable
 from datetime import date, datetime, time, timedelta
 from decimal import Decimal, DecimalException
@@ -27,7 +27,7 @@ from typing import (
     Union,
 )
 from uuid import UUID
-from warnings_mod import warn
+from warnings import warn
 
 from pydantic.v1 import errors
 from pydantic.v1.datetime_parse import parse_date, parse_datetime, parse_duration, parse_time

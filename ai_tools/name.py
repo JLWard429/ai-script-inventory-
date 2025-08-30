@@ -8,7 +8,7 @@ import binascii
 import re
 import sys
 import typing
-import warnings_mod
+import warnings
 from collections.abc import Iterable, Iterator
 
 from cryptography import utils

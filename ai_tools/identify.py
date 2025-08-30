@@ -5,7 +5,7 @@ import math
 import os.path
 import re
 import shlex
-import stat_mod
+import stat
 import string
 import sys
 from typing import IO

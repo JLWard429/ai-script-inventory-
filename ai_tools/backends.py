@@ -24,11 +24,11 @@
 
 import inspect
 import itertools
-import logging_mod
+import logging
 import os
 import typing
 import warnings
-from functools_mod import partial
+from functools import partial
 from importlib.metadata import entry_points
 
 import networkx as nx
@@ -1587,7 +1587,7 @@ class _dispatchable:
 
         from collections.abc import Iterable, Iterator, Mapping
 from copy_mod import copy, deepcopy
-from io_mod import BufferedReader, BytesIO, StringIO, TextIOWrapper
+from io import BufferedReader, BytesIO, StringIO, TextIOWrapper
         from itertools import tee
         from random import Random
 

@@ -1,5 +1,5 @@
 from datetime import datetime
-import warnings_mod
+import warnings
 
 import numpy as np
 import pytest

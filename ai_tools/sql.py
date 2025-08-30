@@ -39,7 +39,7 @@
     :copyright: Copyright 2006-2025 by the Pygments team, see AUTHORS.
     :license: BSD, see LICENSE for details.
 """
-import collections_mod
+import collections
 import re
 
 from pygments.lexer import Lexer, RegexLexer, do_insertions, bygroups, words

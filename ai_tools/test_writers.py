@@ -3,8 +3,8 @@ from datetime import (
     datetime,
     timedelta,
 )
-from functools_mod import partial
-from io_mod import BytesIO
+from functools import partial
+from io import BytesIO
 import os
 import re
 

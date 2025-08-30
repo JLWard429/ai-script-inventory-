@@ -21,7 +21,7 @@ RTypes.
 """
 
 from __future__ import annotations
-from abc_mod_custom import abstractmethod
+from abc import abstractmethod
 from typing import TYPE_CHECKING, ClassVar, Final, Generic, TypeVar
 from typing_extensions import TypeGuard
 

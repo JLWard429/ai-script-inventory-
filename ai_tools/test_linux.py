@@ -7,7 +7,7 @@
 """Linux specific tests."""
 
 from __future__ import division
-import collections_mod
+import collections
 import contextlib
 import errno
 import io

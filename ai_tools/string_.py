@@ -1,5 +1,5 @@
 from __future__ import annotations
-from functools_mod import partial
+from functools import partial
 import operator
 from typing import (
     TYPE_CHECKING,
@@ -7,7 +7,7 @@ from typing import (
     Literal,
     cast,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 

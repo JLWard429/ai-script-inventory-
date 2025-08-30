@@ -1,5 +1,5 @@
 """Test parallel agents' history persistence when interrupted."""
-import asyncio_mod
+import asyncio
 import pytest
 from unittest.mock import MagicMock, patch, AsyncMock
 from cai.repl.commands.parallel import ParallelCommand, PARALLEL_CONFIGS, ParallelConfig, PARALLEL_AGENT_INSTANCES

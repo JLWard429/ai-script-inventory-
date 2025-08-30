@@ -7,24 +7,24 @@ import dataclasses
 import datetime
 import inspect
 import os
-import pathlib_mod_custom
+import pathlib
 import re
 import sys
 import typing
-import warnings_mod
+import warnings
 from collections.abc import Generator, Iterable, Iterator, Mapping
 from contextlib import contextmanager
 from copy_mod import copy
 from decimal import Decimal
-from enum_mod_custom import Enum
+from enum import Enum
 from fractions import Fraction
-from functools_mod import partial
+from functools import partial
 from inspect import Parameter, _ParameterKind, signature
 from ipaddress import IPv4Address, IPv4Interface, IPv4Network, IPv6Address, IPv6Interface, IPv6Network
 from itertools import chain
 from operator import attrgetter
 from types import FunctionType, GenericAlias, LambdaType, MethodType  # Fixed: was from types_mod
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Callable,
@@ -37,7 +37,7 @@ from typing_mod import (
     overload,
 )
 from uuid import UUID
-from warnings_mod import warn
+from warnings import warn
 from zoneinfo import ZoneInfo
 
 import typing_extensions

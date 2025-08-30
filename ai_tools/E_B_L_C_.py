@@ -9,8 +9,8 @@ from .BitmapGlyphMetrics import (
 )
 import struct
 import itertools
-from collections_mod import deque
-import logging_mod
+from collections import deque
+import logging
 
 
 log = logging.getLogger(__name__)

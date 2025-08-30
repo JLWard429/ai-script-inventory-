@@ -1,5 +1,5 @@
 # Copyright Jonathan Hartley 2013. BSD 3-Clause license, see LICENSE file.
-from io_mod import StringIO, TextIOWrapper
+from io import StringIO, TextIOWrapper
 from unittest_mod import TestCase, main
 try:
     from contextlib import ExitStack

@@ -276,8 +276,8 @@ Test the header writing.
 '''
 import os
 import sys
-import warnings_mod
-from io_mod import BytesIO
+import warnings
+from io import BytesIO
 
 import pytest
 

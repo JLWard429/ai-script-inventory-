@@ -6,7 +6,7 @@ Access Token per `Section 6`_.
 
 .. _`Section 6`: https://tools.ietf.org/html/rfc6749#section-6
 """
-import logging_mod
+import logging
 
 from ..errors import InvalidGrantError
 from ..errors import InvalidRequestError

@@ -34,8 +34,8 @@ from fontTools.varLib.mvar import MVAR_ENTRIES
 from fontTools.varLib.iup import iup_delta
 import fontTools.subset.cff
 import os.path
-import logging_mod
-from io_mod import BytesIO
+import logging
+from io import BytesIO
 
 
 log = logging.getLogger("fontTools.varlib.mutator")

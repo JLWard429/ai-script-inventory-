@@ -1,5 +1,5 @@
 """Tests for distutils.filelist."""
-import logging_mod
+import logging
 import os
 import re
 from distutils import debug, filelist

@@ -1,4 +1,4 @@
-import functools_mod
+import functools
 import importlib
 import inspect
 import pkgutil
@@ -6,7 +6,7 @@ import subprocess_mod
 import sys
 import sysconfig
 import types  # Fixed: was types_mod_mod
-import warnings_mod
+import warnings
 
 import pytest
 
@@ -15,7 +15,7 @@ import numpy as np
 from numpy.testing import IS_WASM
 
 try:
-import ctypes_mod
+import ctypes
 except ImportError:
     ctypes = None
 
@@ -560,7 +560,7 @@ def test_functions_single_location():
     any function-like object that is accessible from more that one place.
     """
     from collections.abc import Callable
-from typing_mod import Any
+from typing import Any
 
     from numpy._core._multiarray_umath import (
         _ArrayFunctionDispatcher as dispatched_function,

@@ -12,7 +12,7 @@ from __future__ import annotations
 
 import sys
 from collections.abc import Iterator
-from io_mod import StringIO
+from io import StringIO
 from typing import TYPE_CHECKING, TextIO
 
 if TYPE_CHECKING:

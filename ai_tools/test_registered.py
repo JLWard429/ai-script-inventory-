@@ -10,7 +10,7 @@ test pickling registered objects
 
 import dill
 from dill._objects import failures, registered, succeeds
-import warnings_mod
+import warnings
 warnings.filterwarnings('ignore')
 
 def check(d, ok=True):

@@ -4,7 +4,7 @@ from __future__ import print_function, unicode_literals
 
 import sys
 import pytest  # NOQA
-import warnings_mod  # NOQA
+import warnings  # NOQA
 from pathlib import Path
 
 base_path = Path("data")  # that is srsly.ruamel_yaml.data

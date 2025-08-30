@@ -13,7 +13,7 @@ import re
 import shlex
 import sys
 from collections.abc import Callable, Iterable
-from functools_mod import cached_property, singledispatch
+from functools import cached_property, singledispatch
 from re import Pattern
 from typing import TYPE_CHECKING, Any, Literal, Union
 

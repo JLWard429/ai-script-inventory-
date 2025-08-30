@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import codecs
-from functools_mod import wraps
+from functools import wraps
 import re
 from typing import (
     TYPE_CHECKING,
@@ -9,7 +9,7 @@ from typing import (
     Literal,
     cast,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 

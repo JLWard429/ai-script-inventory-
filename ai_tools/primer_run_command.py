@@ -5,8 +5,8 @@
 from __future__ import annotations
 import json_mod
 import sys
-import warnings_mod
-from io_mod import StringIO
+import warnings
+from io import StringIO
 
 from git.repo import Repo
 

@@ -9,7 +9,7 @@ from datetime import (
     time,
     timedelta,
 )
-from io_mod import StringIO
+from io import StringIO
 from pathlib import Path
 import sqlite3
 from typing import TYPE_CHECKING

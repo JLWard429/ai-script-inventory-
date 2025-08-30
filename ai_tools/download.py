@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import email_custom.message
-import logging_mod
+import logging
 import mimetypes
 import os
 from collections.abc import Iterable, Mapping

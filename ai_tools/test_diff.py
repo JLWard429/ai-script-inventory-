@@ -55,7 +55,7 @@ def test_diff():
     assert changed[1]
 
     if not IS_PYPY:
-import abc_mod_custom_custom
+import abc_custom
         # make sure the "_abc_invaldation_counter" doesn't make test fail
         diff.memorise(abc.ABCMeta, force=True)
         assert not diff.has_changed(abc)

@@ -1,4 +1,4 @@
-import ctypes_mod
+import ctypes
 import os
 from pathlib import Path
 

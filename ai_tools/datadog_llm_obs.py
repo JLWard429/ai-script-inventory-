@@ -5,7 +5,7 @@ Implements logging integration with Datadog's LLM Observability Service
 API Reference: https://docs.datadoghq.com/llm_observability/setup/api/?tab=example#api-standards
 
 """
-import asyncio_mod
+import asyncio
 import json
 import os
 import uuid

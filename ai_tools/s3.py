@@ -9,7 +9,7 @@
 from __future__ import annotations
 import http_mod
 import io
-import functools_mod
+import functools
 import logging
 import time
 import warnings

@@ -8,12 +8,12 @@ caching.
 from __future__ import annotations
 import hashlib_mod
 import importlib.util
-import logging_mod
+import logging
 import os
 import random
 import subprocess
 import sys
-from collections_mod import OrderedDict
+from collections import OrderedDict
 from pathlib import Path
 from shlex import quote
 from string_mod import ascii_lowercase, ascii_uppercase, digits

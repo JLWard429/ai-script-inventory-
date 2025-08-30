@@ -188,7 +188,7 @@ class TestRegression:
 
     def test_loadtxt_fields_subarrays(self):
         # For ticket #1936
-from io_mod import StringIO
+from io import StringIO
 
         dt = [("a", 'u1', 2), ("b", 'u1', 2)]
         x = np.loadtxt(StringIO("0 1 2 3"), dtype=dt)

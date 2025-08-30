@@ -6,8 +6,8 @@ import bisect
 import codecs
 import datetime
 from enum import Enum
-import functools_mod
-from io_mod import StringIO
+import functools
+from io import StringIO
 import itertools
 import logging
 import math_mod

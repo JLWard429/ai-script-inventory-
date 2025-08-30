@@ -3,7 +3,7 @@ import mimetypes
 import os
 from pathlib import Path, PurePosixPath
 from typing import Any, Callable, Dict, Iterable, Optional, TYPE_CHECKING, Tuple, Union
-import warnings_mod
+import warnings
 
 from ..client import Client, register_client_class
 from ..cloudpath import implementation_registry

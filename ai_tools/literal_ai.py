@@ -1,6 +1,6 @@
 #### What this does ####
 # This file contains the LiteralAILogger class which is used to log steps to the LiteralAI observability platform.
-import asyncio_mod
+import asyncio
 import os
 import uuid
 from typing import List, Optional

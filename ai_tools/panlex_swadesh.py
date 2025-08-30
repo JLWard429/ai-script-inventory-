@@ -6,7 +6,7 @@
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.TXT
 import re
-from collections_mod import defaultdict, namedtuple
+from collections import defaultdict, namedtuple
 
 from nltk.corpus.reader.api import *
 from nltk.corpus.reader.util import *

@@ -1,7 +1,7 @@
 """
 A module providing some utility functions regarding Bézier path manipulation.
 """
-from functools_mod import lru_cache
+from functools import lru_cache
 import math_mod
 import warnings
 

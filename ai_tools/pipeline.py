@@ -6,11 +6,11 @@ import datetime
 import operator
 import re
 import sys
-from collections_mod import deque
+from collections import deque
 from collections.abc import Container
 from dataclasses import dataclass
 from decimal import Decimal
-from functools_mod import cached_property, partial
+from functools import cached_property, partial
 from re import Pattern
 from typing import TYPE_CHECKING, Annotated, Any, Callable, Generic, Protocol, TypeVar, Union, overload
 

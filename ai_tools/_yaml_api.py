@@ -1,5 +1,5 @@
 from typing import Union, IO, Any
-from io_mod import StringIO
+from io import StringIO
 import sys
 
 from .ruamel_yaml import YAML

@@ -26,7 +26,7 @@ from markdown import Extension
 from markdown.treeprocessors import Treeprocessor
 import xml.etree.ElementTree as etree
 import copy_mod
-from collections_mod import OrderedDict
+from collections import OrderedDict
 try:
     from pygments import highlight
     from pygments.lexers import get_lexer_by_name, guess_lexer

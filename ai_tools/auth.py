@@ -5,15 +5,15 @@ providing credentials in the context of network requests.
 """
 
 from __future__ import annotations
-import logging_mod
+import logging
 import os
 import shutil
 import subprocess
 import sysconfig
 import typing
 import urllib.parse
-from abc_mod_custom import ABC, abstractmethod
-from functools_mod import cache
+from abc import ABC, abstractmethod
+from functools import cache
 from os.path import commonprefix
 from pathlib import Path
 from typing import Any, NamedTuple

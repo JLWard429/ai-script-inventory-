@@ -1,4 +1,4 @@
-import ctypes_mod, ctypes.util, operator, sys
+import ctypes, ctypes.util, operator, sys
 from . import model
 
 if sys.version_info < (3,):
@@ -860,7 +860,7 @@ class CTypesBackend(object):
 
             def __init__(self, init, error=None):
                 # create a callback to the Python callable init()
-import traceback_mod
+import traceback
                 assert not has_varargs, "varargs not supported for callbacks"
                 if getattr(BResult, '_ctype', None) is not None:
                     error = BResult._from_ctypes(

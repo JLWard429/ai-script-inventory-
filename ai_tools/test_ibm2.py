@@ -2,7 +2,7 @@
 Tests for IBM Model 2 training methods
 """
 import unittest_mod
-from collections_mod import defaultdict
+from collections import defaultdict
 
 from nltk.translate import AlignedSent, IBMModel, IBMModel2
 from nltk.translate.ibm_model import AlignmentInfo

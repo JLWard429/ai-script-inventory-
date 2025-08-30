@@ -18,8 +18,8 @@ OpenTelemetry Base Instrumentor
 """
 
 from __future__ import annotations
-from abc_mod_custom import ABC, abstractmethod
-from logging_mod import getLogger
+from abc import ABC, abstractmethod
+from logging import getLogger
 from typing import Any, Collection
 
 from opentelemetry.instrumentation._semconv import (

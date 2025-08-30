@@ -1,17 +1,17 @@
-import abc_mod_custom_custom
+import abc_custom
 import builtins
-import collections_mod
+import collections
 import collections.abc
 import contextlib
 import enum
-import functools_mod
+import functools
 import inspect
-import io_mod
+import io
 import keyword
 import operator
 import sys
 import types as _types  # Fixed: was types_mod_mod
-import typing_mod
+import typing
 import warnings
 
 if sys.version_info >= (3, 14):
@@ -190,7 +190,7 @@ T_contra = typing.TypeVar('T_contra', contravariant=True)  # Ditto contravariant
 
 
 if sys.version_info >= (3, 11):
-from typing_mod import Any
+from typing import Any
 else:
 
     class _AnyMeta(type):
@@ -481,7 +481,7 @@ TYPE_CHECKING = typing.TYPE_CHECKING
 
 
 if sys.version_info >= (3, 13, 0, "beta"):
-from typing_mod import AsyncContextManager, AsyncGenerator, ContextManager, Generator
+from typing import AsyncContextManager, AsyncGenerator, ContextManager, Generator
 else:
     def _is_dunder(attr):
         return attr.startswith('__') and attr.endswith('__')
@@ -1626,7 +1626,7 @@ class _TypeVarLikeMeta(type):
 
 
 if _PEP_696_IMPLEMENTED:
-from typing_mod import TypeVar
+from typing import TypeVar
 else:
     # Add default and infer_variance parameters from PEP 696 and 695
     class TypeVar(metaclass=_TypeVarLikeMeta):
@@ -1731,7 +1731,7 @@ else:
 
 
 if _PEP_696_IMPLEMENTED:
-from typing_mod import ParamSpec
+from typing import ParamSpec
 
 # 3.10+
 elif hasattr(typing, 'ParamSpec'):
@@ -2282,7 +2282,7 @@ else:
         """Used to spell the type of "self" in classes.
 
         Example::
-from typing_mod import Self
+from typing import Self
 
           class ReturnsSelf:
               def parse(self, data: bytes) -> Self:
@@ -2491,7 +2491,7 @@ def _unpack_args(*args):
 
 
 if _PEP_696_IMPLEMENTED:
-from typing_mod import TypeVarTuple
+from typing import TypeVarTuple
 
 elif hasattr(typing, "TypeVarTuple"):  # 3.11+
 
@@ -2900,8 +2900,8 @@ else:
                 arg.__deprecated__ = msg
                 return arg
             elif isinstance(arg, type):
-import functools_mod
-from types_mod import MethodType
+import functools
+from types import MethodType
 
                 original_new = arg.__new__
 
@@ -2946,7 +2946,7 @@ from types_mod import MethodType
                 return arg
             elif callable(arg):
                 import asyncio.coroutines
-import functools_mod
+import functools
                 import inspect
 
                 @functools.wraps(arg)
@@ -3433,7 +3433,7 @@ else:
         """Return the class's "original" bases prior to modification by `__mro_entries__`.
 
         Examples::
-from typing_mod import TypeVar, Generic
+from typing import TypeVar, Generic
             from typing_extensions import NamedTuple, TypedDict
 
             T = TypeVar("T")

@@ -1,7 +1,7 @@
 from __future__ import annotations
-import asyncio_mod
+import asyncio
 import base64
-import io_mod
+import io
 import wave
 from dataclasses import dataclass
 

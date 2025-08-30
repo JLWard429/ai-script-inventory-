@@ -6,7 +6,7 @@ from collections.abc import Iterator
 from collections.abc import Mapping
 from collections.abc import Sequence
 import dataclasses
-from io_mod import StringIO
+from io import StringIO
 import os
 from pprint_mod import pprint
 from typing import Any

@@ -7,7 +7,7 @@
 """Callback actions for various options."""
 
 from __future__ import annotations
-import abc_mod_custom_custom
+import abc_custom
 import argparse
 import sys
 from collections.abc import Callable, Sequence

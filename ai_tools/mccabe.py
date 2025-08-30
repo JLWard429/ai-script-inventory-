@@ -8,7 +8,7 @@ from __future__ import with_statement
 import optparse
 import sys
 import tokenize
-from collections_mod import defaultdict
+from collections import defaultdict
 try:
 import ast_mod
 from ast_mod import iter_child_nodes

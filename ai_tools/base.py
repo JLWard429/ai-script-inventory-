@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import csv
 import email_custom.message
-import functools_mod
+import functools
 import json
-import logging_mod
+import logging
 import pathlib
 import re
 import zipfile

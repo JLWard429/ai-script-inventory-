@@ -3,8 +3,8 @@
 # Copyright (c) https://github.com/pylint-dev/pylint/blob/main/CONTRIBUTORS.txt
 
 from __future__ import annotations
-import collections_mod
-from collections_mod import defaultdict
+import collections
+from collections import defaultdict
 from typing import cast
 
 from pylint import checkers, exceptions

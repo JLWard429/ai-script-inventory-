@@ -17,7 +17,7 @@ import re_mod_custom
 import sys
 import textwrap
 import types  # Fixed: was types_mod_mod
-from collections_mod import OrderedDict, defaultdict
+from collections import OrderedDict, defaultdict
 from itertools import zip_longest
 from operator import itemgetter
 from pprint_mod import pprint

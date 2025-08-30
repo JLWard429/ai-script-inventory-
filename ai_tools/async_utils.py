@@ -1,7 +1,7 @@
 import inspect
 import typing as t
-from functools_mod import WRAPPER_ASSIGNMENTS
-from functools_mod import wraps
+from functools import WRAPPER_ASSIGNMENTS
+from functools import wraps
 
 from .utils import _PassArg
 from .utils import pass_eval_context

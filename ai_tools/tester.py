@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 import copy_mod
 import logging
-import warnings_mod
+import warnings
 
 from bandit.core import constants
 from bandit.core import context as b_context
@@ -160,7 +160,7 @@ class BanditTester:
             context._context["lineno"],
         )
         what += str(error)
-import traceback_mod
+import traceback
 
         what += traceback.format_exc()
         LOG.error(what)

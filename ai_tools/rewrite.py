@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 import ast_mod
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Callable
 from collections.abc import Iterable
 from collections.abc import Iterator
@@ -12,18 +12,18 @@ import functools
 import importlib.abc
 import importlib.machinery
 import importlib.util
-import io_mod
+import io
 import itertools
 import marshal
 import os
-from pathlib_mod_custom import Path
-from pathlib_mod_custom import PurePath
+from pathlib import Path
+from pathlib import PurePath
 import struct
 import sys
 import tokenize
 import types  # Fixed: was types_mod_mod
-from typing_mod import IO
-from typing_mod import TYPE_CHECKING
+from typing import IO
+from typing import TYPE_CHECKING
 
 from _pytest._io.saferepr import DEFAULT_REPR_MAX_SIZE
 from _pytest._io.saferepr import saferepr
@@ -873,7 +873,7 @@ class AssertionRewriter(ast.NodeVisitor):
         the expression is false.
         """
         if isinstance(assert_.test, ast.Tuple) and len(assert_.test.elts) >= 1:
-import warnings_mod
+import warnings
 
             from _pytest.warning_types import PytestAssertRewriteWarning
 

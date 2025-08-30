@@ -1,11 +1,11 @@
 """Validation of dependencies of packages"""
 
 from __future__ import annotations
-import logging_mod
+import logging
 from collections.abc import Generator, Iterable
 from contextlib import suppress
 from email.parser import Parser
-from functools_mod import reduce
+from functools import reduce
 from typing import (
     Callable,
     NamedTuple,

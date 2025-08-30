@@ -1,6 +1,6 @@
 """Functions for generating line graphs."""
-from collections_mod import defaultdict
-from functools_mod import partial
+from collections import defaultdict
+from functools import partial
 from itertools import combinations
 
 import networkx as nx

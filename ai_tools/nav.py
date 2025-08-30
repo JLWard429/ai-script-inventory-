@@ -1,5 +1,5 @@
 from __future__ import annotations
-import logging_mod
+import logging
 from typing import TYPE_CHECKING, Iterator, TypeVar
 from urllib.parse import urlsplit
 

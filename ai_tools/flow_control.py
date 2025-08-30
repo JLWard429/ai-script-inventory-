@@ -1,4 +1,4 @@
-import asyncio_mod
+import asyncio
 
 from uvicorn._types import ASGIReceiveCallable, ASGISendCallable, Scope
 

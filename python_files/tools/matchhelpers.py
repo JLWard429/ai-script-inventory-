@@ -3,7 +3,7 @@ edge_match functions to use during isomorphism checks.
 """
 
 import math
-import types_mod
+import types
 from itertools import permutations
 
 __all__ = [

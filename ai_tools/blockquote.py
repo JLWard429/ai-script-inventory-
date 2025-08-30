@@ -1,6 +1,6 @@
 # Block quotes
 from __future__ import annotations
-import logging_mod
+import logging
 
 from ..common.utils import isStrSpace
 from .state_block import StateBlock

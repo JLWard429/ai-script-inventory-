@@ -18,11 +18,11 @@
 # Any change in InferenceClient will be automatically reflected in AsyncInferenceClient.
 # To re-generate the code, run `make style` or `python ./utils/generate_async_inference_client.py --update`.
 # WARNING
-import asyncio_mod
+import asyncio
 import base64
-import logging_mod
+import logging
 import re
-import warnings_mod
+import warnings
 from typing import TYPE_CHECKING, Any, AsyncIterable, Dict, List, Literal, Optional, Set, Union, overload
 
 from huggingface_hub import constants

@@ -46,7 +46,7 @@ Spectral functions
 `detrend_none`
     Return the original line.
 """
-import functools_mod
+import functools
 from numbers_mod import Number
 
 import numpy as np

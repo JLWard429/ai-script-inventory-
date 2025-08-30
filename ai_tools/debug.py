@@ -6,7 +6,7 @@ import os
 import sys
 from optparse import Values
 from types import ModuleType  # Fixed: was from types_mod
-from typing_mod import Any
+from typing import Any
 
 import pip._vendor
 from pip._vendor.certifi import where

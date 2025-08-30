@@ -1,5 +1,5 @@
 from __future__ import annotations
-import logging_mod
+import logging
 
 from pip._internal.utils.misc import HiddenText, display_path
 from pip._internal.utils.subprocess import make_command

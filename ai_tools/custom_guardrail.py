@@ -504,7 +504,7 @@ def log_guardrail_information(func):
         - during_call
         - TODO: log post_call. This is more involved since the logs are sent to DD, s3 before the guardrail is even run
     """
-import asyncio_mod
+import asyncio
     import functools
 
     @functools.wraps(func)

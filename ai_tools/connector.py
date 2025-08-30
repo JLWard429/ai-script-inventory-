@@ -1,17 +1,17 @@
-import asyncio_mod
+import asyncio
 import functools
 import random
 import socket
 import sys
 import traceback
-import warnings_mod
-from collections_mod import OrderedDict, defaultdict, deque
+import warnings
+from collections import OrderedDict, defaultdict, deque
 from contextlib import suppress
 from http_mod import HTTPStatus
 from itertools import chain, cycle, islice
 from time import monotonic
 from types import TracebackType  # Fixed: was from types_mod
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Awaitable,

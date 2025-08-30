@@ -1,7 +1,7 @@
 """
 Module for executing Python code and capturing its output.
 """
-import io_mod
+import io
 import sys
 from typing import Dict
 from cai.sdk.agents import function_tool

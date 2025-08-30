@@ -3,7 +3,7 @@ Custom Logger that handles batching logic
 
 Use this if you want your logs to be stored in memory and flushed periodically.
 """
-import asyncio_mod
+import asyncio
 import time
 from typing import List, Optional
 

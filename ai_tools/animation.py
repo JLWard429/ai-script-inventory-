@@ -1,7 +1,7 @@
-import abc_mod_custom_custom
+import abc_custom
 import base64
 import contextlib
-from io_mod import BytesIO, TextIOWrapper
+from io import BytesIO, TextIOWrapper
 import itertools
 import logging
 from pathlib import Path

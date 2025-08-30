@@ -1,4 +1,4 @@
-from collections_mod import namedtuple
+from collections import namedtuple
 from fontTools.cffLib import (
     maxStackLimit,
     TopDictIndex,
@@ -11,7 +11,7 @@ from fontTools.cffLib import (
     FontDict,
     VarStoreData,
 )
-from io_mod import BytesIO
+from io import BytesIO
 from fontTools.cffLib.specializer import specializeCommands, commandsToProgram
 from fontTools.ttLib import newTable
 from fontTools import varLib
@@ -20,7 +20,7 @@ from fontTools.misc.loggingTools import deprecateFunction
 from fontTools.misc.roundTools import roundFunc
 from fontTools.misc.psCharStrings import T2CharString, T2OutlineExtractor
 from fontTools.pens.t2CharStringPen import T2CharStringPen
-from functools_mod import partial
+from functools import partial
 
 from .errors import (
     VarLibCFFDictMergeError,

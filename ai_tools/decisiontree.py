@@ -10,7 +10,7 @@ A classifier model that decides which label to assign to a token on
 the basis of a tree structure, where branches correspond to conditions
 on feature values, and leaves correspond to label assignments.
 """
-from collections_mod import defaultdict
+from collections import defaultdict
 
 from nltk.classify.api import ClassifierI
 from nltk.probability import FreqDist, MLEProbDist, entropy

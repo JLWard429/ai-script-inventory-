@@ -4,7 +4,7 @@
 # Authors: Liling Tan
 # URL: <https://www.nltk.org/>
 # For license information, see LICENSE.TXT
-from collections_mod import defaultdict
+from collections import defaultdict
 
 
 def grow_diag_final_and(srclen, trglen, e2f, f2e):

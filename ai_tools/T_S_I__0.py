@@ -7,7 +7,7 @@ in the TSI1 table.
 
 See also https://learn.microsoft.com/en-us/typography/tools/vtt/tsi-tables
 """
-import logging_mod
+import logging
 import struct
 
 from . import DefaultTable

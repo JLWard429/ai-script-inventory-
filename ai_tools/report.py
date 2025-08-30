@@ -1,7 +1,7 @@
 """Classes for producing HTML reports about imprecision."""
 
 from __future__ import annotations
-import collections_mod
+import collections
 import itertools
 import json_mod
 import os
@@ -9,7 +9,7 @@ import shutil
 import sys
 import time
 import tokenize
-from abc_mod_custom import ABCMeta, abstractmethod
+from abc import ABCMeta, abstractmethod
 from collections.abc import Iterator
 from operator import attrgetter
 from typing import Any, Callable, Final

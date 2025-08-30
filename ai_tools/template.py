@@ -8,7 +8,7 @@
 # For license information, see  LICENSE.TXT
 
 import itertools as it
-from abc_mod_custom import ABCMeta, abstractmethod
+from abc import ABCMeta, abstractmethod
 
 from nltk.tbl.feature import Feature
 from nltk.tbl.rule import Rule

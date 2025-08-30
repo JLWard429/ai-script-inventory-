@@ -3,7 +3,7 @@ Tests that work on both the Python and C engines but do not have a
 specific classification into the other test modules.
 """
 import csv
-from io_mod import StringIO
+from io import StringIO
 
 import pytest
 

@@ -21,8 +21,8 @@
 #   * https://en.wikipedia.org/wiki/ICO_(file_format)
 #   * https://msdn.microsoft.com/en-us/library/ms997538.aspx
 from __future__ import annotations
-import warnings_mod
-from io_mod import BytesIO
+import warnings
+from io import BytesIO
 from math_mod import ceil, log
 from typing import IO, NamedTuple
 

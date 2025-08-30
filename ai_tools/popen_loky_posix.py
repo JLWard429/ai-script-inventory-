@@ -7,7 +7,7 @@ import os
 import sys
 import signal
 import pickle
-from io_mod import BytesIO
+from io import BytesIO
 from multiprocessing import util, process
 from multiprocessing.connection import wait
 from multiprocessing.context import set_spawning_popen
@@ -182,7 +182,7 @@ if __name__ == "__main__":
         print("\n\n" + "-" * 80)
         print(f"{args.process_name} failed with traceback: ")
         print("-" * 80)
-import traceback_mod
+import traceback
 
         print(traceback.format_exc())
         print("\n" + "-" * 80)

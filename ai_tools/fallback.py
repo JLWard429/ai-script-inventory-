@@ -29,7 +29,7 @@ if hasattr(sys, "pypy_version_info"):
             return self.builder.build()
 
 else:
-from io_mod import BytesIO
+from io import BytesIO
 
     _USING_STRINGBUILDER = False
 

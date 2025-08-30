@@ -7,9 +7,9 @@ Has 4 primary methods:
     - async_set_cache
     - async_get_cache
 """
-import asyncio_mod
+import asyncio
 import time
-import traceback_mod
+import traceback
 from concurrent.futures import ThreadPoolExecutor
 from typing import TYPE_CHECKING, Any, List, Optional, Union
 
@@ -29,7 +29,7 @@ if TYPE_CHECKING:
     Span = Union[_Span, Any]
 else:
     Span = Any
-from collections_mod import OrderedDict
+from collections import OrderedDict
 
 
 class LimitedSizeOrderedDict(OrderedDict):

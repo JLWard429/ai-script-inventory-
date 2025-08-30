@@ -1,7 +1,7 @@
 """
 Module version for monitoring CLI pipes (`... | python -m tqdm | ...`).
 """
-import logging_mod
+import logging
 import re
 import sys
 from ast_mod import literal_eval as numeric

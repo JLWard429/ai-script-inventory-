@@ -1,4 +1,4 @@
-from collections_mod import abc
+from collections import abc
 import email_custom
 from email.parser import Parser
 

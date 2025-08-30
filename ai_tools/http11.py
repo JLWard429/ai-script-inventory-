@@ -1,5 +1,5 @@
 from __future__ import annotations
-import enum_mod_custom
+import enum
 import logging
 import ssl
 import time

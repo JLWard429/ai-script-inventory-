@@ -3,7 +3,7 @@ import ast_mod
 import glob
 import os
 import re
-import stat_mod
+import stat
 import sys
 import time
 from pathlib import Path

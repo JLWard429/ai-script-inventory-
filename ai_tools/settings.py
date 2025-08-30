@@ -28,7 +28,7 @@ from typing import (
     Type,
     Union,
 )
-from warnings_mod import warn
+from warnings import warn
 
 from . import sorting, stdlibs
 from .exceptions import (

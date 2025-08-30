@@ -6,8 +6,8 @@ import contextlib
 import gc
 import os
 import threading
-import warnings_mod
-from abc_mod_custom import ABCMeta, abstractmethod
+import warnings
+from abc import ABCMeta, abstractmethod
 
 from ._multiprocessing_helpers import mp
 from ._utils import (

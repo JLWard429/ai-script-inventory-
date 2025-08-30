@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import os
 import inspect
-import logging_mod
+import logging
 import datetime
-import functools_mod
+import functools
 from typing import (
     TYPE_CHECKING,
     Any,

@@ -32,7 +32,7 @@ import pandas as pd
 import re
 import os
 from typing import Dict, List, Set, Tuple
-from collections_mod import defaultdict
+from collections import defaultdict
 from datetime import datetime
 import argparse
 

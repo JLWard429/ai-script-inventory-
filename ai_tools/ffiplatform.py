@@ -86,7 +86,7 @@ try:
     import cStringIO
 except NameError:
     int_or_long = int      # Python 3
-import io_mod as cStringIO
+import io as cStringIO
 
 def _flatten(x, f):
     if isinstance(x, str):

@@ -3,7 +3,7 @@ Graph isomorphism functions.
 """
 
 import itertools
-from collections_mod import Counter
+from collections import Counter
 
 import networkx as nx
 from networkx.exception import NetworkXError
@@ -110,7 +110,7 @@ def graph_could_be_isomorphic(G1, G2):
        `graph_could_be_isomorphic` is a deprecated alias for `could_be_isomorphic`.
        Use `could_be_isomorphic` instead.
     """
-import warnings_mod
+import warnings
 
     warnings.warn(
         "graph_could_be_isomorphic is deprecated, use `could_be_isomorphic` instead.",
@@ -165,7 +165,7 @@ def fast_graph_could_be_isomorphic(G1, G2):
        `fast_graph_could_be_isomorphic` is a deprecated alias for
        `fast_could_be_isomorphic`. Use `fast_could_be_isomorphic` instead.
     """
-import warnings_mod
+import warnings
 
     warnings.warn(
         "fast_graph_could_be_isomorphic is deprecated, use fast_could_be_isomorphic instead",
@@ -212,7 +212,7 @@ def faster_graph_could_be_isomorphic(G1, G2):
        `faster_graph_could_be_isomorphic` is a deprecated alias for
        `faster_could_be_isomorphic`. Use `faster_could_be_isomorphic` instead.
     """
-import warnings_mod
+import warnings
 
     warnings.warn(
         "faster_graph_could_be_isomorphic is deprecated, use faster_could_be_isomorphic instead",

@@ -1,8 +1,8 @@
 # Standard library imports
-import logging_mod
+import logging
 import sys
-import traceback_mod
-from functools_mod import wraps
+import traceback
+from functools import wraps
 from typing import TYPE_CHECKING, Optional
 
 # Third-party imports

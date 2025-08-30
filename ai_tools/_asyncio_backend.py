@@ -1,7 +1,7 @@
 # Copyright (C) Dnspython Contributors, see LICENSE for text of ISC license
 
 """asyncio library query support"""
-import asyncio_mod
+import asyncio
 import socket
 import sys
 

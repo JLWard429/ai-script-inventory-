@@ -14,7 +14,7 @@ from typing import Any
 from typing import final
 from typing import overload
 from typing import TypeVar
-import warnings_mod
+import warnings
 
 from _pytest.fixtures import fixture
 from _pytest.warning_types import PytestWarning
@@ -142,7 +142,7 @@ class MonkeyPatch:
         Example:
 
         .. code-block:: python
-import functools_mod
+import functools
 
 
             def test_partial(monkeypatch):

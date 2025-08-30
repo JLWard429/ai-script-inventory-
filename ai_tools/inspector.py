@@ -8,10 +8,10 @@ Try to resolve definitions (namespace) dictionary, relationship...
 """
 
 from __future__ import annotations
-import collections_mod
+import collections
 import os
-import traceback_mod
-from abc_mod_custom import ABC, abstractmethod
+import traceback
+from abc import ABC, abstractmethod
 from collections.abc import Callable
 from typing import Optional
 

@@ -5,7 +5,7 @@
 """Astroid hooks for the Python standard library."""
 
 from __future__ import annotations
-import functools_mod
+import functools
 import keyword
 from collections.abc import Iterator
 from textwrap import dedent
@@ -538,7 +538,7 @@ def infer_typing_namedtuple_class(class_node, context: InferenceContext | None =
     ]
     code = dedent(
         """
-from collections_mod import namedtuple
+from collections import namedtuple
     namedtuple({typename!r}, {fields!r})
     """
     ).format(typename=class_node.name, fields=",".join(annassigns_fields))

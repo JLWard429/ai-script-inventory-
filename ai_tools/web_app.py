@@ -1,7 +1,7 @@
-import asyncio_mod
+import asyncio
 import logging
-import warnings_mod
-from functools_mod import lru_cache, partial, update_wrapper
+import warnings
+from functools import lru_cache, partial, update_wrapper
 from typing import (
     TYPE_CHECKING,
     Any,

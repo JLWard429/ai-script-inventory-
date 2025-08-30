@@ -1,11 +1,11 @@
 from __future__ import annotations
-import logging_mod
+import logging
 import re
 import ssl
 import sys
 from collections.abc import Callable, Mapping
 from dataclasses import dataclass
-from functools_mod import wraps
+from functools import wraps
 from ssl import SSLContext
 from typing import Any, TypeVar
 

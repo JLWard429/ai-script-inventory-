@@ -3,7 +3,7 @@
 # Copyright (c) https://github.com/pylint-dev/pylint/blob/main/CONTRIBUTORS.txt
 
 from __future__ import annotations
-import collections_mod
+import collections
 from collections.abc import MutableSequence
 from typing import TYPE_CHECKING
 

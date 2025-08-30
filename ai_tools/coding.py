@@ -8,7 +8,7 @@ applied to unrooted trees. Furthermore, there is a bijection from Prüfer
 sequences to labeled trees.
 
 """
-from collections_mod import Counter
+from collections import Counter
 from itertools import chain
 
 import networkx as nx

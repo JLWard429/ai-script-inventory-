@@ -1,7 +1,7 @@
 """
 Shortest path algorithms for weighted graphs.
 """
-from collections_mod import deque
+from collections import deque
 from heapq import heappop, heappush
 from itertools import count
 

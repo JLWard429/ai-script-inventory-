@@ -39,13 +39,13 @@
 # See the README file for information on usage and redistribution.
 #
 from __future__ import annotations
-import io_mod
+import io
 import itertools
-import logging_mod
+import logging
 import math
 import os
 import struct
-import warnings_mod
+import warnings
 from collections.abc import Iterator, MutableMapping
 from fractions import Fraction
 from numbers_mod import Number, Rational

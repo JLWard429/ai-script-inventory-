@@ -32,7 +32,7 @@ import re
 import struct
 import zlib
 from datetime import datetime
-from io_mod import BytesIO
+from io import BytesIO
 from pathlib import Path
 from typing import (
     Any,

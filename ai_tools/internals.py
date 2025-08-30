@@ -11,7 +11,7 @@ import fnmatch
 import locale
 import os
 import re
-import stat_mod
+import stat
 import subprocess
 import sys
 import textwrap

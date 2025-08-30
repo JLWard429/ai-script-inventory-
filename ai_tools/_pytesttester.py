@@ -123,7 +123,7 @@ class PytestTester:
         True
 
         """
-import warnings_mod
+import warnings
 
         import pytest
 

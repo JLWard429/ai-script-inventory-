@@ -16,10 +16,10 @@ Interface::
           for x, y, height, width in page.boxes:
               ...
 """
-from collections_mod import namedtuple
+from collections import namedtuple
 import enum
-from functools_mod import lru_cache, partial, wraps
-import logging_mod
+from functools import lru_cache, partial, wraps
+import logging
 import os
 from pathlib import Path
 import re

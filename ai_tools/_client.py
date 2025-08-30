@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import datetime
 import enum
-import logging_mod
+import logging
 import time
-import typing_mod
+import typing
 import warnings
 from contextlib import asynccontextmanager, contextmanager
 from types import TracebackType  # Fixed: was from types_mod

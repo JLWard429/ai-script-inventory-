@@ -1,4 +1,4 @@
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 
 from folium.elements import JSCSSMixin
 from folium.features import MacroElement

@@ -67,7 +67,7 @@ References
    https://doi.org/10.1016/j.dam.2018.02.018
 
 """
-import collections_mod
+import collections
 
 import networkx as nx
 

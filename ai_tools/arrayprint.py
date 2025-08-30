@@ -21,7 +21,7 @@ __docformat__ = 'restructuredtext'
 # the scalar is printed on its own, while arrayprint.py has strs for when
 # scalars are printed inside an ndarray. Only the latter strs are currently
 # user-customizable.
-import functools_mod
+import functools
 import numbers
 import sys
 
@@ -32,7 +32,7 @@ except ImportError:
 
 import contextlib
 import operator
-import warnings_mod
+import warnings
 
 import numpy as np
 

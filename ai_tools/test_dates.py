@@ -2,7 +2,7 @@ import datetime
 
 import dateutil.tz
 import dateutil.rrule
-import functools_mod
+import functools
 import numpy as np
 import pytest
 

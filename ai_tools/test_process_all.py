@@ -11,9 +11,9 @@ import enum
 import errno
 import multiprocessing
 import os
-import stat_mod
+import stat
 import time
-import traceback_mod
+import traceback
 
 import psutil
 from psutil import AIX

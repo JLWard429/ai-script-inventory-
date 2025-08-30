@@ -6,7 +6,7 @@ from matplotlib.testing.decorators import (image_comparison,
 import matplotlib as mpl
 import pytest
 from pathlib import Path
-from io_mod import BytesIO
+from io import BytesIO
 from PIL import Image
 import base64
 

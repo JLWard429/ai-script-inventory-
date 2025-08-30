@@ -120,7 +120,7 @@ import os
 import sys
 import getopt
 import re
-import logging_mod
+import logging
 
 
 log = logging.getLogger("fontTools.ttx")

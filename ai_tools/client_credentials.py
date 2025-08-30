@@ -1,4 +1,4 @@
-import logging_mod
+import logging
 
 from ..errors import UnauthorizedClientError
 from ..hooks import hooked

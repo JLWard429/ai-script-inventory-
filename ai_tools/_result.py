@@ -4,12 +4,12 @@ Hook wrapper "result" utilities.
 
 from __future__ import annotations
 from types import TracebackType  # Fixed: was from types_mod
-from typing_mod import Callable
-from typing_mod import cast
-from typing_mod import final
-from typing_mod import Generic
-from typing_mod import Optional
-from typing_mod import TypeVar
+from typing import Callable
+from typing import cast
+from typing import final
+from typing import Generic
+from typing import Optional
+from typing import TypeVar
 
 
 _ExcInfo = tuple[type[BaseException], BaseException, Optional[TracebackType]]

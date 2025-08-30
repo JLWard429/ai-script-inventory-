@@ -8,7 +8,7 @@
 CCG Lexicons
 """
 import re
-from collections_mod import defaultdict
+from collections import defaultdict
 
 from nltk.ccg.api import CCGVar, Direction, FunctionalCategory, PrimitiveCategory
 from nltk.internals import deprecated

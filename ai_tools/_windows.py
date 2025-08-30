@@ -13,8 +13,8 @@ class WindowsConsoleFeatures:
 
 
 try:
-import ctypes_mod
-from ctypes_mod import LibraryLoader
+import ctypes
+from ctypes import LibraryLoader
 
     if sys.platform == "win32":
         windll = LibraryLoader(ctypes.WinDLL)

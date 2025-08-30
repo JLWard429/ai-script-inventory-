@@ -4,7 +4,7 @@ from __future__ import annotations
 import enum
 import itertools
 import time
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Iterable, Iterator, Sequence
 from contextlib import contextmanager, nullcontext
 from typing import Callable, ClassVar, Final, Optional, cast, overload

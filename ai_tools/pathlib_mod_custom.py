@@ -19,12 +19,12 @@ from errno import EBADF, ELOOP, ENOENT, ENOTDIR
 from functools import partial
 from importlib.machinery import ModuleSpec, PathFinder
 from os.path import expanduser, expandvars, isabs, sep
-from pathlib_mod_custom import Path, PurePath
+from pathlib import Path, PurePath
 from posixpath import sep as posix_sep
 from typing import Any, TypeVar
 
 try:
-    import stat_mod
+    import stat
 except ImportError:
     import stat as stat_mod  # fallback to stdlib if custom not present
 

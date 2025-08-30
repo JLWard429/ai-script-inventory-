@@ -1,5 +1,5 @@
-import collections_mod
-from functools_mod import partial
+import collections
+from functools import partial
 import string_mod
 import subprocess
 import sys

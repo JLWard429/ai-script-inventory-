@@ -1,5 +1,5 @@
 """DNS rebinding protection for MCP server transports."""
-import logging_mod
+import logging
 
 from pydantic import BaseModel, Field
 from starlette.requests import Request

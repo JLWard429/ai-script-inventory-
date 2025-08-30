@@ -5,7 +5,7 @@ a single _multiarray_umath extension module. So we replicate the old
 namespace by importing from the extension module.
 
 """
-import functools_mod
+import functools
 
 from . import _multiarray_umath, overrides
 from ._multiarray_umath import *  # noqa: F403

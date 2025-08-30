@@ -1,6 +1,6 @@
 import threading
 import time
-from collections_mod import Counter
+from collections import Counter
 
 import numpy
 import pytest

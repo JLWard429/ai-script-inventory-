@@ -3,7 +3,7 @@ Margin implementations for a :class:`~prompt_toolkit.layout.containers.Window`.
 """
 
 from __future__ import annotations
-from abc_mod_custom import ABCMeta, abstractmethod
+from abc import ABCMeta, abstractmethod
 from typing import TYPE_CHECKING, Callable
 
 from prompt_toolkit.filters import FilterOrBool, to_filter

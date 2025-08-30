@@ -8,7 +8,7 @@
 
 """ ChrF score implementation """
 import re
-from collections_mod import Counter, defaultdict
+from collections import Counter, defaultdict
 
 from nltk.util import ngrams
 

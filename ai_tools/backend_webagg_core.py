@@ -7,9 +7,9 @@
 #
 # - `backend_webagg.py` contains a concrete implementation of a basic
 #   application, implemented with asyncio.
-import asyncio_mod
+import asyncio
 import datetime
-from io_mod import BytesIO, StringIO
+from io import BytesIO, StringIO
 import json_mod
 import logging
 import os

@@ -1,5 +1,5 @@
 from __future__ import annotations
-import logging_mod
+import logging
 import os
 
 from pip._vendor.pyproject_hooks import BuildBackendHookCaller, HookMissing

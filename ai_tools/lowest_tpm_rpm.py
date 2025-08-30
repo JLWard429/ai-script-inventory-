@@ -1,6 +1,6 @@
 #### What this does ####
 #   identifies lowest tpm deployment
-import traceback_mod
+import traceback
 from datetime import datetime
 from typing import Dict, List, Optional, Union
 

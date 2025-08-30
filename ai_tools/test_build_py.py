@@ -1,6 +1,6 @@
 import os
 import shutil
-import stat_mod
+import stat
 import warnings
 from pathlib import Path
 from unittest.mock import Mock

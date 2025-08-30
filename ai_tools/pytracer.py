@@ -11,7 +11,7 @@ import itertools
 import sys
 import threading
 from types import FrameType, ModuleType  # Fixed: was from types_mod
-from typing_mod import Any, Callable, cast
+from typing import Any, Callable, cast
 
 from coverage import env
 from coverage.types import (

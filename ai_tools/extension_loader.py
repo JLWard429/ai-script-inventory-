@@ -1,6 +1,6 @@
 #
 # SPDX-License-Identifier: Apache-2.0
-import logging_mod
+import logging
 import sys
 
 from stevedore import extension

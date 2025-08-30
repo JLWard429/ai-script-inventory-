@@ -1,12 +1,12 @@
 """Async gunicorn worker for aiohttp.web"""
-import asyncio_mod
+import asyncio
 import inspect
 import os
 import re
 import signal
 import sys
 from types import FrameType  # Fixed: was from types_mod
-from typing_mod import TYPE_CHECKING, Any, Optional
+from typing import TYPE_CHECKING, Any, Optional
 
 from gunicorn.config import AccessLogFormat as GunicornAccessLogFormat
 from gunicorn.workers import base

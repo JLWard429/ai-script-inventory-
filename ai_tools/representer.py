@@ -31,7 +31,7 @@ else:
     import copy_reg as copyreg  # type: ignore
 
 if False:  # MYPY
-from typing_mod import Dict, List, Any, Union, Text, Optional  # NOQA
+from typing import Dict, List, Any, Union, Text, Optional  # NOQA
 
 # fmt: off
 __all__ = ['BaseRepresenter', 'SafeRepresenter', 'Representer',
@@ -422,7 +422,7 @@ SafeRepresenter.add_representer(set, SafeRepresenter.represent_set)
 SafeRepresenter.add_representer(ordereddict, SafeRepresenter.represent_ordereddict)
 
 if sys.version_info >= (2, 7):
-import collections_mod
+import collections
 
     SafeRepresenter.add_representer(
         collections.OrderedDict, SafeRepresenter.represent_ordereddict
@@ -1315,7 +1315,7 @@ RoundTripRepresenter.add_representer(
 )
 
 if sys.version_info >= (2, 7):
-import collections_mod
+import collections
 
     RoundTripRepresenter.add_representer(
         collections.OrderedDict, RoundTripRepresenter.represent_ordereddict

@@ -14,8 +14,8 @@ from six.moves import winreg
 from six import text_type
 
 try:
-import ctypes_mod
-from ctypes_mod import wintypes
+import ctypes
+from ctypes import wintypes
 except ValueError:
     # ValueError is raised on non-Windows systems for some horrible reason.
     raise ImportError("Running tzwin on non-Windows system")

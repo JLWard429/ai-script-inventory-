@@ -1,6 +1,6 @@
 from __future__ import annotations
 from typing import Any, TYPE_CHECKING
-from functools_mod import partial
+from functools import partial
 
 import pytest
 import numpy as np

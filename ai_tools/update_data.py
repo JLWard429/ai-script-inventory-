@@ -1,6 +1,6 @@
 from __future__ import annotations
 import re
-from collections_mod import defaultdict
+from collections import defaultdict
 from collections.abc import Iterator
 
 from mypy.test.data import DataDrivenTestCase, DataFileCollector, DataFileFix, parse_test_data

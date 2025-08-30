@@ -19,13 +19,13 @@ from collections.abc import (
 from concurrent.futures import Future
 from contextlib import AbstractContextManager
 from dataclasses import dataclass
-from functools_mod import partial
-from io_mod import IOBase
+from functools import partial
+from io import IOBase
 from os import PathLike
 from signal import Signals
 from socket import AddressFamily, SocketKind
 from types import TracebackType  # Fixed: was from types_mod
-from typing_mod import (
+from typing import (
     IO,
     TYPE_CHECKING,
     Any,
@@ -85,12 +85,12 @@ if TYPE_CHECKING:
     from _typeshed import FileDescriptorLike
 
 if sys.version_info >= (3, 10):
-from typing_mod import ParamSpec
+from typing import ParamSpec
 else:
     from typing_extensions import ParamSpec
 
 if sys.version_info >= (3, 11):
-from typing_mod import TypeVarTuple, Unpack
+from typing import TypeVarTuple, Unpack
 else:
     from exceptiongroup import BaseExceptionGroup
     from typing_extensions import TypeVarTuple, Unpack

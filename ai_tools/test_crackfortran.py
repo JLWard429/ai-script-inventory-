@@ -1,6 +1,6 @@
 import contextlib
 import importlib
-import io_mod
+import io
 import textwrap
 import time
 

@@ -1,5 +1,5 @@
 from collections.abc import MutableMapping
-import functools_mod
+import functools
 
 import numpy as np
 

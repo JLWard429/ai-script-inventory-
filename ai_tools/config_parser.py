@@ -6,7 +6,7 @@ import glob_mod as fileglob
 import os
 import re
 import sys
-from io_mod import StringIO
+from io import StringIO
 
 from mypy.errorcodes import error_codes
 

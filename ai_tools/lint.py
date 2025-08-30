@@ -14,10 +14,10 @@ common HTTP errors such as non-empty responses for 304 status codes.
 """
 
 from __future__ import annotations
-import typing_mod as t
+import typing as t
 from types import TracebackType  # Fixed: was from types_mod
 from urllib.parse import urlparse
-from warnings_mod import warn
+from warnings import warn
 
 from ..datastructures import Headers
 from ..http import is_entity_header

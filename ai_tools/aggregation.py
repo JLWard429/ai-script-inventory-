@@ -13,11 +13,11 @@
 # limitations under the License.
 
 # pylint: disable=too-many-lines
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from bisect import bisect_left
 from enum import IntEnum
-from functools_mod import partial
-from logging_mod import getLogger
+from functools import partial
+from logging import getLogger
 from math_mod import inf
 from threading import Lock
 from typing import (

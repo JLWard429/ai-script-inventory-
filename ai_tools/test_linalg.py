@@ -7,7 +7,7 @@ import subprocess_mod
 import sys
 import textwrap
 import threading
-import traceback_mod
+import traceback
 
 import pytest
 

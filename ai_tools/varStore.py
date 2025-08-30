@@ -8,8 +8,8 @@ from fontTools.varLib.builder import (
     buildVarRegion,
     buildVarData,
 )
-from functools_mod import partial
-from collections_mod import defaultdict
+from functools import partial
+from collections import defaultdict
 from heapq import heappush, heappop
 
 

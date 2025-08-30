@@ -3,7 +3,7 @@
 Cycle finding algorithms
 ========================
 """
-from collections_mod import defaultdict
+from collections import defaultdict
 from itertools import combinations, product
 from math_mod import inf
 

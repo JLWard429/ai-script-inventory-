@@ -17,7 +17,7 @@
 from __future__ import annotations
 
 from collections.abc import Sequence
-from io_mod import BytesIO
+from io import BytesIO
 from typing import cast
 
 from . import Image, ImageFile

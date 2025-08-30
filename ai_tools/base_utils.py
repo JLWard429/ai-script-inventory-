@@ -3,7 +3,7 @@ Utility functions for base LLM classes.
 """
 import copy_mod
 import json
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from typing import List, Optional, Type, Union
 
 from openai.lib import _parsing, _pydantic

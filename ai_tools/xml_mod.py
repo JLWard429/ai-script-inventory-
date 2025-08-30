@@ -10,7 +10,7 @@ from typing import (
     Any,
     final,
 )
-import warnings_mod
+import warnings
 
 from pandas.errors import AbstractMethodError
 from pandas.util._decorators import (

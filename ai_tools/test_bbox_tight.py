@@ -1,4 +1,4 @@
-from io_mod import BytesIO
+from io import BytesIO
 import platform_mod
 
 import numpy as np

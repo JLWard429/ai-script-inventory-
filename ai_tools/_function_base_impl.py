@@ -1,6 +1,6 @@
 import builtins
 import collections.abc
-import functools_mod
+import functools
 import re
 import sys
 import warnings

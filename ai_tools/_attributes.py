@@ -4,7 +4,7 @@ from dataclasses import asdict
 from datetime import datetime
 from json_mod import JSONEncoder
 from types import ModuleType  # Fixed: was from types_mod
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Dict,

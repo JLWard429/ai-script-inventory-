@@ -8,7 +8,7 @@ import os
 import ctypes
 import platform_mod
 import subprocess
-import collections_mod
+import collections
 import math
 
 import freetype

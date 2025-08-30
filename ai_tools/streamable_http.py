@@ -9,7 +9,7 @@ responses, with streaming support for long-running operations.
 import json_mod
 import logging
 import re
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from collections.abc import AsyncGenerator, Awaitable, Callable
 from contextlib import asynccontextmanager
 from dataclasses import dataclass

@@ -13,7 +13,7 @@ but the concept of naming are introduced in `RFC7591`_.
 .. _`RFC6749`: https://tools.ietf.org/html/rfc6749
 .. _`RFC7591`: https://tools.ietf.org/html/rfc7591
 """
-import logging_mod
+import logging
 
 from .errors import InvalidClientError
 from .util import extract_basic_authorization

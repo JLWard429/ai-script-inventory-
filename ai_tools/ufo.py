@@ -22,7 +22,7 @@ number of segments for a spline until the error gets below a bound.
 Respective curves from multiple fonts will be converted at once to ensure that
 the resulting splines are interpolation-compatible.
 """
-import logging_mod
+import logging
 from fontTools.pens.basePen import AbstractPen
 from fontTools.pens.pointPen import PointToSegmentPen
 from fontTools.pens.reverseContourPen import ReverseContourPen

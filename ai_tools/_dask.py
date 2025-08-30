@@ -1,5 +1,5 @@
 from __future__ import absolute_import, division, print_function
-import asyncio_mod
+import asyncio
 import concurrent.futures
 import contextlib
 import time

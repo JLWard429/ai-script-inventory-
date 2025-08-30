@@ -1,7 +1,7 @@
 from __future__ import annotations
-import asyncio_mod
+import asyncio
 import http
-import logging_mod
+import logging
 from typing import Any, Callable, Literal, cast
 from urllib.parse import unquote
 

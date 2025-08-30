@@ -1,5 +1,5 @@
 # test_openai_stt_transcription_session.py
-import asyncio_mod
+import asyncio
 import json
 import time
 from unittest.mock import AsyncMock, patch

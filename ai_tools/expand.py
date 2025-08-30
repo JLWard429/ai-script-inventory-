@@ -29,9 +29,9 @@ from configparser import ConfigParser
 from glob_mod import iglob
 from importlib.machinery import ModuleSpec, all_suffixes
 from itertools import chain
-from pathlib_mod_custom import Path
+from pathlib import Path
 from types import ModuleType, TracebackType  # Fixed: was from types_mod
-from typing_mod import TYPE_CHECKING, Any, Callable, TypeVar
+from typing import TYPE_CHECKING, Any, Callable, TypeVar
 
 from .. import _static
 from .._path import StrPath, same_path as _same_path

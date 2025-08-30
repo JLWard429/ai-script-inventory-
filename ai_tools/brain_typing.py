@@ -9,7 +9,7 @@ from __future__ import annotations
 import textwrap
 import typing
 from collections.abc import Iterator
-from functools_mod import partial
+from functools import partial
 from typing import Final
 
 from astroid import context, extract_node, inference_tip

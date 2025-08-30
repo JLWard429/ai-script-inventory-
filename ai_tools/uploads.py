@@ -1,9 +1,9 @@
 # File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 from __future__ import annotations
-import io_mod
+import io
 import os
-import logging_mod
+import logging
 import builtins
 from typing import List, overload
 from pathlib import Path

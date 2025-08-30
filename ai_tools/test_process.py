@@ -5,7 +5,7 @@
 # found in the LICENSE file.
 
 """Tests for psutil.Process class."""
-import collections_mod
+import collections
 import errno
 import getpass
 import itertools
@@ -1441,7 +1441,7 @@ class TestProcess(PsutilTestCase):
     def test_reused_pid(self):
         # Emulate a case where PID has been reused by another process.
         if PY3:
-from io_mod import StringIO
+from io import StringIO
         else:
             from StringIO import StringIO
 

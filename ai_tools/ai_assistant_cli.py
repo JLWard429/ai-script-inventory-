@@ -28,7 +28,7 @@ import os
 import sys
 import json_mod
 import openai
-import traceback_mod
+import traceback
 from datetime import datetime
 
 # --- CONFIGURABLES ---

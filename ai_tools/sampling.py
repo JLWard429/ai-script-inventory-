@@ -131,12 +131,12 @@ be an empty string. For example:
 In order to configure you application with a custom sampler's entry point, set the ``OTEL_TRACES_SAMPLER`` environment variable to the key name of the entry point. For example, to configured the
 above sampler, set ``OTEL_TRACES_SAMPLER=custom_sampler_name`` and ``OTEL_TRACES_SAMPLER_ARG=0.5``.
 """
-import abc_mod_custom_custom
+import abc_custom
 import enum
 import os
-from logging_mod import getLogger
+from logging import getLogger
 from types import MappingProxyType  # Fixed: was from types_mod
-from typing_mod import Optional, Sequence
+from typing import Optional, Sequence
 
 # pylint: disable=unused-import
 from opentelemetry.context import Context

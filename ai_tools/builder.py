@@ -16,7 +16,7 @@ import textwrap
 import types  # Fixed: was types_mod_mod
 import warnings
 from collections.abc import Iterator, Sequence
-from io_mod import TextIOWrapper
+from io import TextIOWrapper
 from tokenize import detect_encoding
 
 from astroid import bases, modutils, nodes, raw_building, rebuilder, util

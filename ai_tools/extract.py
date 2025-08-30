@@ -29,7 +29,7 @@ from collections.abc import (
     Mapping,
     MutableSequence,
 )
-from functools_mod import lru_cache
+from functools import lru_cache
 from os.path import relpath
 from textwrap import dedent
 from tokenize import COMMENT, NAME, NL, OP, STRING, generate_tokens

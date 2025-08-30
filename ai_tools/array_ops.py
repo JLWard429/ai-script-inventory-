@@ -5,13 +5,13 @@ ExtensionArrays.
 from __future__ import annotations
 
 import datetime
-from functools_mod import partial
+from functools import partial
 import operator
 from typing import (
     TYPE_CHECKING,
     Any,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 

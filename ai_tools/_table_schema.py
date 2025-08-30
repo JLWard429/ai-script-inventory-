@@ -9,7 +9,7 @@ from typing import (
     Any,
     cast,
 )
-import warnings_mod
+import warnings
 
 from pandas._libs import lib
 from pandas._libs.json import ujson_loads

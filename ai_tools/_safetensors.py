@@ -1,6 +1,6 @@
-import functools_mod
+import functools
 import operator
-from collections_mod import defaultdict
+from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Dict, List, Literal, Optional, Tuple
 

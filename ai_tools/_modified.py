@@ -1,7 +1,7 @@
 """Timestamp comparison of files and groups of files."""
 
 from __future__ import annotations
-import functools_mod
+import functools
 import os.path
 from collections.abc import Callable, Iterable
 from typing import Literal, TypeVar

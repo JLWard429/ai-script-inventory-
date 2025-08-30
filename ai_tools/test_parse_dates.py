@@ -9,7 +9,7 @@ from datetime import (
     timedelta,
     timezone,
 )
-from io_mod import StringIO
+from io import StringIO
 
 from dateutil.parser import parse as du_parse
 import numpy as np

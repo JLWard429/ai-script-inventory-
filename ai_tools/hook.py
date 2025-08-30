@@ -1,5 +1,5 @@
 from __future__ import annotations
-import logging_mod
+import logging
 from collections.abc import Sequence
 from typing import Any
 from typing import NamedTuple

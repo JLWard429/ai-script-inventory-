@@ -1,7 +1,7 @@
 """Automatically adapted for numpy Sep 19, 2005 by convertcode.py
 
 """
-import functools_mod
+import functools
 
 __all__ = ['iscomplexobj', 'isrealobj', 'imag', 'iscomplex',
            'isreal', 'nan_to_num', 'real', 'real_if_close',

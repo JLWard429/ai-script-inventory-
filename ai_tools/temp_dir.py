@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import errno
 import itertools
-import logging_mod
+import logging
 import os.path
 import tempfile
 import traceback

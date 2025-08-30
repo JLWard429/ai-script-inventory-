@@ -14,7 +14,7 @@ fonts are supported.  There is experimental support for using
 arbitrary fonts, but results may vary without proper tweaking and
 metrics for those fonts.
 """
-import functools_mod
+import functools
 import logging
 
 import matplotlib as mpl

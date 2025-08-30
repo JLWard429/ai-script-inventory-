@@ -6,7 +6,7 @@ Usage:
 >>> for i in trange(10):
 ...     ...
 """
-from warnings_mod import warn
+from warnings import warn
 
 from rich.progress import (
     BarColumn, Progress, ProgressColumn, Text, TimeElapsedColumn, TimeRemainingColumn, filesize)

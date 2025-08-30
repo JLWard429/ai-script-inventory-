@@ -10,7 +10,7 @@ import os
 import sys
 import __main__
 from contextlib import suppress
-from io_mod import BytesIO
+from io import BytesIO
 
 import dill
 
@@ -21,7 +21,7 @@ session_file = os.path.join(os.path.dirname(__file__), 'session-refimported-%s.p
 ###################
 
 def _error_line(error, obj, refimported):
-import traceback_mod
+import traceback
     line = traceback.format_exc().splitlines()[-2].replace('[obj]', '['+repr(obj)+']')
     return "while testing (with refimported=%s):  %s" % (refimported, line.lstrip())
 
@@ -226,7 +226,7 @@ from types import ModuleType  # Fixed: was from types_mod
     assert runtime not in sys.modules.values()
 
 def test_refimported_imported_as():
-import collections_mod
+import collections
     import concurrent.futures
 import types  # Fixed: was types_mod_mod
     import typing

@@ -3,7 +3,7 @@ import json
 import xml.etree.ElementTree as ET
 import os
 from pathlib import Path
-from collections_mod import defaultdict, Counter
+from collections import defaultdict, Counter
 
 from language_data.names import normalize_name
 from language_data.util import data_filename

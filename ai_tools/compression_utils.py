@@ -1,4 +1,4 @@
-import asyncio_mod
+import asyncio
 import sys
 import zlib
 from concurrent.futures import Executor

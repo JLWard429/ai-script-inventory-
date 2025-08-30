@@ -7,7 +7,7 @@ Has 4 methods:
     - async_set_cache
     - async_get_cache
 """
-import asyncio_mod
+import asyncio
 import json
 from contextlib import suppress
 

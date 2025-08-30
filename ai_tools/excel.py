@@ -9,7 +9,7 @@ from collections.abc import (
     Mapping,
     Sequence,
 )
-import functools_mod
+import functools
 import itertools
 import re
 from typing import (
@@ -18,7 +18,7 @@ from typing import (
     Callable,
     cast,
 )
-import warnings_mod
+import warnings
 
 import numpy as np
 

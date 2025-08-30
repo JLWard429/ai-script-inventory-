@@ -11,7 +11,7 @@ from matplotlib.testing.decorators import check_figures_equal, image_comparison
 
 import numpy as np
 from numpy.testing import assert_allclose
-import io_mod
+import io
 import pytest
 
 

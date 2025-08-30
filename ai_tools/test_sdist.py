@@ -2,7 +2,7 @@
 
 import contextlib
 import io
-import logging_mod
+import logging
 import os
 import pathlib
 import sys

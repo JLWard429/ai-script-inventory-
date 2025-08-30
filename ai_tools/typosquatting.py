@@ -1,7 +1,7 @@
 """
 Typosquatting detection for various tools.
 """
-import logging_mod
+import logging
 import nltk
 from typing import Tuple, List
 

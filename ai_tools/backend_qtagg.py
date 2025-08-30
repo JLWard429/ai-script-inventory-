@@ -1,7 +1,7 @@
 """
 Render to qt from agg.
 """
-import ctypes_mod
+import ctypes
 
 from matplotlib.transforms import Bbox
 

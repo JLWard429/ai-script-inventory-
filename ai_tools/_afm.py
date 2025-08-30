@@ -34,8 +34,8 @@ As in the Adobe Font Metrics File Format Specification, all dimensions
 are given in units of 1/1000 of the scale factor (point size) of the font
 being used.
 """
-from collections_mod import namedtuple
-import logging_mod
+from collections import namedtuple
+import logging
 import re
 
 from ._mathtext_data import uni2type1

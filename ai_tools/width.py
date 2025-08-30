@@ -8,9 +8,9 @@ This module determines the optimum ``defaultWidthX`` and ``nominalWidthX``
 values for a font, when provided with a list of glyph widths."""
 
 from fontTools.ttLib import TTFont
-from collections_mod import defaultdict
+from collections import defaultdict
 from operator import add
-from functools_mod import reduce
+from functools import reduce
 
 
 __all__ = ["optimizeWidths", "main"]

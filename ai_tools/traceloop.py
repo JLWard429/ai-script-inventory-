@@ -1,4 +1,4 @@
-import traceback_mod
+import traceback
 
 from litellm._logging import verbose_logger
 

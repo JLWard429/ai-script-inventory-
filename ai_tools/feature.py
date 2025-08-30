@@ -6,7 +6,7 @@
 #   Christopher Maloof, Edward Loper, Steven Bird
 # URL: <https://www.nltk.org/>
 # For license information, see  LICENSE.TXT
-from abc_mod_custom import ABCMeta, abstractmethod
+from abc import ABCMeta, abstractmethod
 
 
 class Feature(metaclass=ABCMeta):

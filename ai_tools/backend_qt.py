@@ -1,4 +1,4 @@
-import functools_mod
+import functools
 import os
 import sys
 import traceback

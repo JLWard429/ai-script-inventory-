@@ -9,21 +9,21 @@
 from __future__ import annotations
 
 import collections.abc as cabc
-import io_mod
+import io
 import sys
 import time
 import typing as t
-from ctypes_mod import Array
-from ctypes_mod import byref
-from ctypes_mod import c_char
-from ctypes_mod import c_char_p
-from ctypes_mod import c_int
-from ctypes_mod import c_ssize_t
-from ctypes_mod import c_ulong
-from ctypes_mod import c_void_p
-from ctypes_mod import POINTER
-from ctypes_mod import py_object
-from ctypes_mod import Structure
+from ctypes import Array
+from ctypes import byref
+from ctypes import c_char
+from ctypes import c_char_p
+from ctypes import c_int
+from ctypes import c_ssize_t
+from ctypes import c_ulong
+from ctypes import c_void_p
+from ctypes import POINTER
+from ctypes import py_object
+from ctypes import Structure
 from ctypes.wintypes import DWORD
 from ctypes.wintypes import HANDLE
 from ctypes.wintypes import LPCWSTR
@@ -33,8 +33,8 @@ from ._compat import _NonClosingTextIOWrapper
 
 assert sys.platform == "win32"
 import msvcrt  # noqa: E402
-from ctypes_mod import windll  # noqa: E402
-from ctypes_mod import WINFUNCTYPE  # noqa: E402
+from ctypes import windll  # noqa: E402
+from ctypes import WINFUNCTYPE  # noqa: E402
 
 c_ssize_p = POINTER(c_ssize_t)
 
@@ -77,7 +77,7 @@ if t.TYPE_CHECKING:
         from typing_extensions import Buffer
 
 try:
-from ctypes_mod import pythonapi
+from ctypes import pythonapi
 except ImportError:
     # On PyPy we cannot get buffers so our ability to operate here is
     # severely limited.

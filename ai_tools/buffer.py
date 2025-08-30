@@ -4,7 +4,7 @@ It holds the text, cursor position, history, etc...
 """
 
 from __future__ import annotations
-import asyncio_mod
+import asyncio
 import logging
 import os
 import re
@@ -12,9 +12,9 @@ import shlex
 import shutil
 import subprocess_mod
 import tempfile
-from collections_mod import deque
+from collections import deque
 from enum import Enum
-from functools_mod import wraps
+from functools import wraps
 from typing import Any, Callable, Coroutine, Iterable, TypeVar, cast
 
 from .application.current import get_app

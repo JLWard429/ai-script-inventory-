@@ -1,5 +1,5 @@
 """Functions for computing the harmonic centrality of a graph."""
-from functools_mod import partial
+from functools import partial
 
 import networkx as nx
 

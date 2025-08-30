@@ -9,7 +9,7 @@
 
 import bisect
 import textwrap
-from collections_mod import defaultdict
+from collections import defaultdict
 
 from nltk.tag import BrillTagger, untag
 

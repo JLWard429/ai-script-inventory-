@@ -1,5 +1,5 @@
 from __future__ import annotations
-import asyncio_mod
+import asyncio
 from dataclasses import dataclass
 from typing import Literal
 

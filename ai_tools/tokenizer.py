@@ -16,7 +16,7 @@
 # OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 """Tokenize DNS zone file format"""
-import io_mod
+import io
 import sys
 from typing import Any, List, Optional, Tuple
 

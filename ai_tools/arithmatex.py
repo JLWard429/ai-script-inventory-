@@ -46,7 +46,7 @@ from markdown import Extension
 from markdown.inlinepatterns import InlineProcessor
 from markdown.blockprocessors import BlockProcessor
 from markdown import util as md_util
-from functools_mod import partial
+from functools import partial
 import xml.etree.ElementTree as etree
 from . import util
 import re

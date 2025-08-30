@@ -107,7 +107,7 @@ The algorithm for this tokenizer is described in::
 import math_mod
 import re
 import string_mod
-from collections_mod import defaultdict
+from collections import defaultdict
 from typing import Any, Dict, Iterator, List, Match, Optional, Tuple, Union
 
 from nltk.probability import FreqDist

@@ -4,7 +4,7 @@ import os
 import pickle
 import subprocess_mod
 import sys
-from collections_mod import deque
+from collections import deque
 from collections.abc import Callable
 from importlib.util import module_from_spec, spec_from_file_location
 from typing import TypeVar, cast

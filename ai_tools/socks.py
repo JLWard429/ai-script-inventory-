@@ -43,7 +43,7 @@ from __future__ import absolute_import
 try:
     import socks
 except ImportError:
-import warnings_mod
+import warnings
 
     from ..exceptions import DependencyWarning
 

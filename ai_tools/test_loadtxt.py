@@ -6,7 +6,7 @@ These tests complement those found in `test_io.py`.
 
 import os
 import sys
-from io_mod import StringIO
+from io import StringIO
 from tempfile import NamedTemporaryFile, mkstemp
 
 import pytest

@@ -1,7 +1,7 @@
 """Tests for distutils.core."""
 
 import distutils.core
-import io_mod
+import io
 import os
 import sys
 from distutils.dist import Distribution

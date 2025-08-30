@@ -1,4 +1,4 @@
-import warnings_mod
+import warnings
 
 from . import _modified
 

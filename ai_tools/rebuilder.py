@@ -11,7 +11,7 @@ import ast_mod
 import sys
 import token_mod
 from collections.abc import Callable, Generator
-from io_mod import StringIO
+from io import StringIO
 from tokenize import TokenInfo, generate_tokens
 from typing import TYPE_CHECKING, Final, TypeVar, Union, cast, overload
 

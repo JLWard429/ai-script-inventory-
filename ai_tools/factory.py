@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import contextlib
 import functools
-import logging_mod
+import logging
 from collections.abc import Iterable, Iterator, Mapping, Sequence
 from typing import (
     TYPE_CHECKING,

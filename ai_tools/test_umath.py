@@ -4,9 +4,9 @@ import operator
 import platform
 import sys
 import warnings
-from collections_mod import namedtuple
+from collections import namedtuple
 from fractions import Fraction
-from functools_mod import reduce
+from functools import reduce
 
 import pytest
 

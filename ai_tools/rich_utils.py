@@ -3,7 +3,7 @@
 import inspect
 import io
 import sys
-from collections_mod import defaultdict
+from collections import defaultdict
 from gettext import gettext as _
 from os import getenv
 from typing import Any, DefaultDict, Dict, Iterable, List, Optional, Union

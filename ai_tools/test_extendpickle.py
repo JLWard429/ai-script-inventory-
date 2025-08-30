@@ -7,7 +7,7 @@
 #  - https://github.com/uqfoundation/dill/blob/master/LICENSE
 
 import dill as pickle
-from io_mod import BytesIO as StringIO
+from io import BytesIO as StringIO
 
 
 def my_fn(x):

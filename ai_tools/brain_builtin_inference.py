@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import itertools
 from collections.abc import Callable, Iterable, Iterator
-from functools_mod import partial
+from functools import partial
 from typing import TYPE_CHECKING, Any, NoReturn, Union, cast
 
 from astroid import arguments, helpers, inference_tip, nodes, objects, util

@@ -1,8 +1,8 @@
 from __future__ import annotations
-import logging_mod
-from enum_mod_custom import Enum
+import logging
+from enum import Enum
 from types import ModuleType  # Fixed: was from types_mod
-from typing_mod import (
+from typing import (
     TYPE_CHECKING,
     Any,
     Iterable,

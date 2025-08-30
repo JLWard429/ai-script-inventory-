@@ -742,7 +742,7 @@ async def azure_proxy_route(
         api_key=azure_api_key,
         custom_llm_provider=litellm.LlmProviders.AZURE,
     )
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 
 
 class BaseVertexAIPassThroughHandler(ABC):

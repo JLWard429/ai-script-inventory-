@@ -19,7 +19,7 @@ from __future__ import annotations
 
 import os
 import threading
-from functools_mod import partial
+from functools import partial
 from typing import TYPE_CHECKING
 
 from watchdog.events import (

@@ -15,7 +15,7 @@ available in your version of Python.
 The preferred alias for `defchararray` is `numpy.char`.
 
 """
-import functools_mod
+import functools
 
 import numpy as np
 from numpy._core import overrides

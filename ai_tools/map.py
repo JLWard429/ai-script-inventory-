@@ -1,6 +1,6 @@
 from __future__ import annotations
 import typing as t
-import warnings_mod
+import warnings
 from pprint_mod import pformat
 from threading import Lock
 from urllib.parse import quote

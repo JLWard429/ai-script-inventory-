@@ -39,10 +39,10 @@ Important remarks:
 """
 
 from __future__ import annotations
-import ctypes_mod
+import ctypes
 import os
 import sys
-from io_mod import BufferedIOBase
+from io import BufferedIOBase
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:

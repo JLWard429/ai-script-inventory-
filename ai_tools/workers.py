@@ -1,9 +1,9 @@
 from __future__ import annotations
-import asyncio_mod
+import asyncio
 import logging
 import signal
 import sys
-import warnings_mod
+import warnings
 from typing import Any
 
 from gunicorn.arbiter import Arbiter

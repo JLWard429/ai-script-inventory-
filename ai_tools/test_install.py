@@ -1,5 +1,5 @@
 """Tests for distutils.command.install."""
-import logging_mod
+import logging
 import os
 import pathlib
 import site

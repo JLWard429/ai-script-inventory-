@@ -11,20 +11,20 @@ Create a wheel that, when installed, will make the source package 'editable'
 """
 
 from __future__ import annotations
-import io_mod
+import io
 import logging
 import os
 import shutil
-import traceback_mod
+import traceback
 from collections.abc import Iterable, Iterator, Mapping
 from contextlib import suppress
-from enum_mod_custom import Enum
+from enum import Enum
 from inspect import cleandoc
 from itertools import chain, starmap
-from pathlib_mod_custom import Path
+from pathlib import Path
 from tempfile import TemporaryDirectory
 from types import TracebackType  # Fixed: was from types_mod
-from typing_mod import TYPE_CHECKING, Protocol, TypeVar, cast
+from typing import TYPE_CHECKING, Protocol, TypeVar, cast
 
 from .. import Command, _normalization, _path, _shutil, errors, namespaces
 from .._path import StrPath
@@ -811,7 +811,7 @@ from importlib.machinery import ModuleSpec, PathFinder
 from importlib.machinery import all_suffixes as module_suffixes
 from importlib.util import spec_from_file_location
 from itertools import chain
-from pathlib_mod_custom import Path
+from pathlib import Path
 
 MAPPING: dict[str, str] = {mapping!r}
 NAMESPACES: dict[str, list[str]] = {namespaces!r}

@@ -1,4 +1,4 @@
-from io_mod import BytesIO
+from io import BytesIO
 import sys
 import pytest
 from srsly.msgpack import Unpacker, packb, OutOfData, ExtType

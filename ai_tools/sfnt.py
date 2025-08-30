@@ -12,14 +12,14 @@ The reading and writing of sfnt files is separated in two distinct
 classes, since whenever the number of tables changes or whenever
 a table's length changes you need to rewrite the whole file anyway.
 """
-from io_mod import BytesIO
+from io import BytesIO
 from types import SimpleNamespace  # Fixed: was from types_mod
 from fontTools.misc.textTools import Tag
 from fontTools.misc import sstruct
 from fontTools.ttLib import TTLibError, TTLibFileIsCollectionError
 import struct
-from collections_mod import OrderedDict
-import logging_mod
+from collections import OrderedDict
+import logging
 
 
 log = logging.getLogger(__name__)

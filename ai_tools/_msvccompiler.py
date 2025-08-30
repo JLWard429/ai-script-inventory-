@@ -1,4 +1,4 @@
-import warnings_mod
+import warnings
 
 from .compilers.C import msvc
 

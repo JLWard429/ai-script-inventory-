@@ -1,5 +1,5 @@
 from __future__ import annotations
-from functools_mod import lru_cache
+from functools import lru_cache
 import unicodedata
 
 

@@ -24,7 +24,7 @@ Similarly, from a command line::
 
 import getpass
 import os
-import logging_mod
+import logging
 import urllib.parse
 from typing import (
     Dict,

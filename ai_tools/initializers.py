@@ -1,4 +1,4 @@
-import warnings_mod
+import warnings
 
 
 def _viztracer_init(init_kwargs):

@@ -1,6 +1,6 @@
 import importlib
 import sys
-import warnings_mod
+import warnings
 from typing import Any, Dict
 
 import srsly

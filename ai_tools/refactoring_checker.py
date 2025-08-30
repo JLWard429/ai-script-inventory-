@@ -3,12 +3,12 @@
 # Copyright (c) https://github.com/pylint-dev/pylint/blob/main/CONTRIBUTORS.txt
 
 from __future__ import annotations
-import collections_mod
+import collections
 import copy
 import itertools
 import tokenize
 from collections.abc import Iterator
-from functools_mod import cached_property, reduce
+from functools import cached_property, reduce
 from re import Pattern
 from typing import TYPE_CHECKING, Any, NamedTuple, Union, cast
 

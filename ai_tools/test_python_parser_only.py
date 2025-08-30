@@ -7,7 +7,7 @@ arguments when parsing.
 from __future__ import annotations
 
 import csv
-from io_mod import (
+from io import (
     BytesIO,
     StringIO,
     TextIOWrapper,

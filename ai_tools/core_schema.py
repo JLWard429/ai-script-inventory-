@@ -4318,7 +4318,7 @@ def __getattr__(attr_name: str) -> object:
     if new_attr is None:
         raise AttributeError(f"module 'pydantic_core' has no attribute '{attr_name}'")
     else:
-import warnings_mod
+import warnings
 
         msg = f'`{attr_name}` is deprecated, use `{new_attr.__name__}` instead.'
         warnings.warn(msg, DeprecationWarning, stacklevel=1)

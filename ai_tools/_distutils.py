@@ -15,7 +15,7 @@ try:
     __import__("_distutils_hack").remove_shim()
 except (ImportError, AttributeError):
     pass
-import logging_mod
+import logging
 import os
 import sys
 from distutils.cmd import Command as DistutilsCommand

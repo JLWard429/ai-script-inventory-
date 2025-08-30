@@ -4,8 +4,8 @@ from __future__ import annotations as _annotations
 
 import dataclasses
 import typing
-import warnings_mod
-from functools_mod import partial, wraps
+import warnings
+from functools import partial, wraps
 from typing import Any, ClassVar
 
 from pydantic_core import (

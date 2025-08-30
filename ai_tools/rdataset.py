@@ -16,7 +16,7 @@
 # OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 """DNS rdatasets (an rdataset is a set of rdatas of a given type and class)"""
-import io_mod
+import io
 import random
 import struct
 from typing import Any, Collection, Dict, List, Optional, Union, cast

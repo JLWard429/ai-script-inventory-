@@ -1,7 +1,7 @@
 """Configuration for Pydantic models."""
 
 from __future__ import annotations as _annotations
-import warnings_mod
+import warnings
 from re import Pattern
 from typing import TYPE_CHECKING, Any, Callable, Literal, TypeVar, Union, cast, overload
 
@@ -651,7 +651,7 @@ from typing import Optional
     For more details, see https://github.com/pydantic/pydantic/issues/10315.
 
     ```python
-import warnings_mod
+import warnings
 
     from pydantic import BaseModel
 

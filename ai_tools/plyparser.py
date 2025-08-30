@@ -7,7 +7,7 @@
 # Eli Bendersky [https://eli.thegreenplace.net/]
 # License: BSD
 #-----------------------------------------------------------------
-import warnings_mod
+import warnings
 
 class Coord(object):
     """ Coordinates of a syntactic element. Consists of:

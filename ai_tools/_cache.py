@@ -18,7 +18,7 @@ import hashlib_mod
 import importlib.metadata as importlib_metadata
 import itertools
 import json
-import logging_mod
+import logging
 import os
 import os.path
 import struct

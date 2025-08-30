@@ -16,7 +16,7 @@ __author__ = "Guido van Rossum <guido@python.org>"
 __all__ = ["Driver", "load_grammar"]
 
 # Python imports
-import io_mod
+import io
 import logging
 import os
 import pkgutil
@@ -24,7 +24,7 @@ import sys
 from collections.abc import Iterable, Iterator
 from contextlib import contextmanager
 from dataclasses import dataclass, field
-from logging_mod import Logger
+from logging import Logger
 from typing import IO, Any, Optional, Union, cast
 
 from blib2to3.pgen2.grammar import Grammar

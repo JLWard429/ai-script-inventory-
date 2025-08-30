@@ -1,4 +1,4 @@
-from collections_mod import OrderedDict
+from collections import OrderedDict
 from copy_mod import deepcopy
 
 from authlib.common.encoding import json_b64encode

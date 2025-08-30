@@ -6,7 +6,7 @@ Hunter (jdhunter@ace.bsd.uchicago.edu).
 
 Copyright (C) Jeremy O'Donoghue & John Hunter, 2003-4.
 """
-import functools_mod
+import functools
 import logging
 import math_mod
 import pathlib

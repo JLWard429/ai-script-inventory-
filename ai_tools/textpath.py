@@ -1,5 +1,5 @@
-from collections_mod import OrderedDict
-import logging_mod
+from collections import OrderedDict
+import logging
 import urllib.parse
 
 import numpy as np

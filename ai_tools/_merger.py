@@ -24,11 +24,11 @@
 # CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
-import warnings_mod
-from io_mod import BytesIO, FileIO, IOBase
-from pathlib_mod_custom import Path
+import warnings
+from io import BytesIO, FileIO, IOBase
+from pathlib import Path
 from types import TracebackType  # Fixed: was from types_mod
-from typing_mod import (
+from typing import (
     Any,
     Dict,
     Iterable,

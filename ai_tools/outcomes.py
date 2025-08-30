@@ -250,7 +250,7 @@ def importorskip(
 
         The ``exc_type`` parameter.
     """
-import warnings_mod
+import warnings
 
     __tracebackhide__ = True
     compile(modname, "", "eval")  # to catch syntaxerrors

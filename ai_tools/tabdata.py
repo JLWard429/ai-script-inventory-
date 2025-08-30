@@ -103,6 +103,6 @@ class MaxentDecoder(TabDecoder):
 class PunktDecoder(TabDecoder):
 
     def tab2intdict(self, f):
-from collections_mod import defaultdict
+from collections import defaultdict
 
         return defaultdict(int, {a: int(b) for a, b in self.tab2tups(f)})

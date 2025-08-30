@@ -16,8 +16,8 @@
 # See the README file for information on usage and redistribution.
 #
 from __future__ import annotations
-import io_mod
-from functools_mod import cached_property
+import io
+from functools import cached_property
 from typing import IO
 
 from . import Image, ImageFile, ImagePalette

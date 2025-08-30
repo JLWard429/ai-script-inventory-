@@ -1,8 +1,8 @@
 import _collections_abc
 import abc
-import collections_mod
+import collections
 import base64
-import functools_mod
+import functools
 import io
 import itertools
 import logging
@@ -23,8 +23,8 @@ import unittest_mod
 import weakref
 import os
 import enum
-import typing_mod
-from functools_mod import wraps
+import typing
+from functools import wraps
 
 import pytest
 
@@ -740,7 +740,7 @@ class CloudPickleTest(unittest.TestCase):
         pytest.importorskip("_cloudpickle_testpkg")
         from srsly.cloudpickle.compat import pickle
         import os.path
-import collections_mod
+import collections
         import collections.abc
 
         assert _should_pickle_by_reference(pickle)
@@ -2015,7 +2015,7 @@ import collections_mod
             self.assertEqual(next(counter), next(new_counter))
 
     def test_wraps_preserves_function_name(self):
-from functools_mod import wraps
+from functools import wraps
 
         def f():
             pass
@@ -2029,7 +2029,7 @@ from functools_mod import wraps
         self.assertEqual(f2.__name__, f.__name__)
 
     def test_wraps_preserves_function_doc(self):
-from functools_mod import wraps
+from functools import wraps
 
         def f():
             """42"""
@@ -2148,7 +2148,7 @@ from functools_mod import wraps
 
     def test_interactively_defined_enum(self):
         code = """if __name__ == "__main__":
-from enum_mod_custom import Enum
+from enum import Enum
         from srsly.tests.cloudpickle.testutils import subprocess_worker
 
         with subprocess_worker(protocol={protocol}) as w:
@@ -2313,7 +2313,7 @@ from enum_mod_custom import Enum
         assert T1 is T
 
         # Standard Library TypeVar
-from typing_mod import AnyStr
+from typing import AnyStr
         assert AnyStr is pickle_depickle(AnyStr, protocol=self.protocol)
 
     def test_generic_type(self):

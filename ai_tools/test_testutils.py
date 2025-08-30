@@ -6,7 +6,7 @@
 # found in the LICENSE file.
 
 """Tests for testing utils (psutil.tests namespace)."""
-import collections_mod
+import collections
 import contextlib
 import errno
 import os

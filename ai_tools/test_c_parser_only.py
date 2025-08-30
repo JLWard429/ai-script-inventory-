@@ -5,7 +5,7 @@ these tests out of this module as soon as the Python parser can accept
 further arguments when parsing.
 """
 from decimal import Decimal
-from io_mod import (
+from io import (
     BytesIO,
     StringIO,
     TextIOWrapper,

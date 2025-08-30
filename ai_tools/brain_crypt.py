@@ -10,7 +10,7 @@ from astroid.manager import AstroidManager
 def _re_transform():
     return parse(
         """
-from collections_mod import namedtuple
+from collections import namedtuple
     _Method = namedtuple('_Method', 'name ident salt_chars total_size')
 
     METHOD_SHA512 = _Method('SHA512', '6', 16, 106)

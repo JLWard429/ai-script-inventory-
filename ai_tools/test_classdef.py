@@ -99,7 +99,7 @@ def test_specialtypes():
     assert dill.pickles(type(NotImplemented))
     assert dill.pickles(type(Ellipsis))
     assert dill.pickles(type(EnumMeta))
-from collections_mod import namedtuple
+from collections import namedtuple
 Z = namedtuple("Z", ['a','b'])
 Zi = Z(0,1)
 X = namedtuple("Y", ['a','b'])

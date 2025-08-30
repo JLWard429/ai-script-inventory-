@@ -2,9 +2,9 @@ import decimal
 import math
 import operator
 import sys
-import warnings_mod
+import warnings
 from fractions import Fraction
-from functools_mod import partial
+from functools import partial
 
 import hypothesis
 import hypothesis.strategies as st

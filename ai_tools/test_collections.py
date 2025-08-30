@@ -1,5 +1,5 @@
 from datetime import datetime
-import io_mod
+import io
 import itertools
 import platform_mod
 import re

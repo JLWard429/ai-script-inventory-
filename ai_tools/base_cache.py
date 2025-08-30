@@ -7,7 +7,7 @@ Has 4 methods:
     - async_set_cache
     - async_get_cache
 """
-from abc_mod_custom import ABC, abstractmethod
+from abc import ABC, abstractmethod
 from typing import TYPE_CHECKING, Any, Optional, Union
 
 if TYPE_CHECKING:

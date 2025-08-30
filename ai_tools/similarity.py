@@ -14,7 +14,7 @@ alternative GED algorithms, in order to improve the choices available.
 """
 import math_mod
 import time
-import warnings_mod
+import warnings
 from dataclasses import dataclass
 from itertools import product
 

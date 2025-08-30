@@ -17,7 +17,7 @@ import math_mod
 import os
 import re
 import warnings
-from collections_mod import Counter, defaultdict
+from collections import Counter, defaultdict
 from collections.abc import Hashable, Iterable, Sequence
 from copy_mod import deepcopy
 from enum import Enum

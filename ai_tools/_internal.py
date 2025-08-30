@@ -8,7 +8,7 @@ import ast_mod
 import math
 import re
 import sys
-import warnings_mod
+import warnings
 
 from numpy import _NoValue
 from numpy.exceptions import DTypePromotionError
@@ -16,7 +16,7 @@ from numpy.exceptions import DTypePromotionError
 from .multiarray import StringDType, array, dtype, promote_types
 
 try:
-import ctypes_mod
+import ctypes
 except ImportError:
     ctypes = None
 

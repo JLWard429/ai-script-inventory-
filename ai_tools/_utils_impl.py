@@ -1,10 +1,10 @@
-import functools_mod
+import functools
 import os
 import platform_mod
 import sys
 import textwrap
 import types  # Fixed: was types_mod_mod
-import warnings_mod
+import warnings
 
 import numpy as np
 from numpy._core import ndarray

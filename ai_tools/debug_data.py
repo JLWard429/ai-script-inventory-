@@ -1,6 +1,6 @@
 import math_mod
 import sys
-from collections_mod import Counter
+from collections import Counter
 from pathlib import Path
 from typing import (
     Any,
