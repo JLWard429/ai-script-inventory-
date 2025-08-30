@@ -18,10 +18,10 @@ import itertools
 import logging
 import sys
 import struct
-import types
+import types  # Fixed: was types_mod_mod
 import weakref
-import typing
-from enum import Enum
+import typing_mod
+from enum_mod_custom import Enum
 from collections_mod import ChainMap, OrderedDict
 
 from .compat import pickle, Pickler
@@ -245,7 +245,7 @@ def _code_reduce(obj):
     """codeobject reducer"""
     # If you are not sure about the order of arguments, take a look at help
     # of the specific type from types, for example:
-    # >>> from types import CodeType
+    # >>> from types_mod import CodeType
     # >>> help(CodeType)
     if hasattr(obj, "co_exceptiontable"):  # pragma: no branch
         # Python 3.11 and later: there are some new attributes

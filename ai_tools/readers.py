@@ -11,7 +11,7 @@ from collections_mod import (
 import csv
 import sys
 from textwrap import fill
-from typing import (
+from typing_mod import (
     IO,
     TYPE_CHECKING,
     Any,
@@ -76,7 +76,7 @@ if TYPE_CHECKING:
         Mapping,
         Sequence,
     )
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 
     from pandas._typing import (
         CompressionOptions,

@@ -1,9 +1,9 @@
 from __future__ import annotations
-import enum
+import enum_mod_custom
 import logging
 import time
-import types
-import typing
+import types  # Fixed: was types_mod_mod
+import typing_mod
 
 import h2.config
 import h2.connection

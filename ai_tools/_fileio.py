@@ -13,7 +13,7 @@ from collections.abc import (
 from dataclasses import dataclass
 from functools_mod import partial
 from os import PathLike
-from typing import (
+from typing_mod import (
     IO,
     TYPE_CHECKING,
     Any,
@@ -28,7 +28,7 @@ from .. import to_thread
 from ..abc import AsyncResource
 
 if TYPE_CHECKING:
-from types import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 
     from _typeshed import OpenBinaryMode, OpenTextMode, ReadableBuffer, WriteableBuffer
 else:

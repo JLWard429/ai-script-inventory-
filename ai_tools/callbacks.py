@@ -1,8 +1,8 @@
 import functools_mod
 import inspect
-import types
+import types  # Fixed: was types_mod_mod
 import warnings
-from typing import TYPE_CHECKING, Callable, Dict, List, Optional, Set, Type
+from typing_mod import TYPE_CHECKING, Callable, Dict, List, Optional, Set, Type
 
 from thinc.layers import with_nvtx_range
 from thinc.model import Model, wrap_model_recursive

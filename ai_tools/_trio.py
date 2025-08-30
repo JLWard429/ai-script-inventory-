@@ -4,7 +4,7 @@ import math
 import os
 import socket
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 import weakref
 from collections.abc import (
     AsyncGenerator,
@@ -24,8 +24,8 @@ from io_mod import IOBase
 from os import PathLike
 from signal import Signals
 from socket import AddressFamily, SocketKind
-from types import TracebackType
-from typing import (
+from types import TracebackType  # Fixed: was from types_mod
+from typing_mod import (
     IO,
     TYPE_CHECKING,
     Any,
@@ -85,12 +85,12 @@ if TYPE_CHECKING:
     from _typeshed import FileDescriptorLike
 
 if sys.version_info >= (3, 10):
-from typing import ParamSpec
+from typing_mod import ParamSpec
 else:
     from typing_extensions import ParamSpec
 
 if sys.version_info >= (3, 11):
-from typing import TypeVarTuple, Unpack
+from typing_mod import TypeVarTuple, Unpack
 else:
     from exceptiongroup import BaseExceptionGroup
     from typing_extensions import TypeVarTuple, Unpack

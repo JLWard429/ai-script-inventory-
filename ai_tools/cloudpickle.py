@@ -46,7 +46,7 @@ import dis
 import opcode_custom
 import platform
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 import weakref
 import uuid
 import threading
@@ -55,7 +55,7 @@ import warnings_mod
 
 from .compat import pickle
 from collections_mod import OrderedDict
-from typing import ClassVar, Generic, Union, Tuple, Callable
+from typing_mod import ClassVar, Generic, Union, Tuple, Callable
 from pickle_mod import _getattribute
 from importlib._bootstrap import _find_spec
 
@@ -66,7 +66,7 @@ except ImportError:
     _typing_extensions = Literal = Final = None
 
 if sys.version_info >= (3, 8):
-from types import CellType
+from types_mod import CellType
 else:
     def f():
         a = 1

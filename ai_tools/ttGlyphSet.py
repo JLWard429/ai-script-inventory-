@@ -3,7 +3,7 @@ from abc_mod_custom import ABC, abstractmethod
 from collections.abc import Mapping
 from contextlib import contextmanager
 from copy_mod import copy, deepcopy
-from types import SimpleNamespace
+from types import SimpleNamespace  # Fixed: was from types_mod
 from fontTools.misc.vector import Vector
 from fontTools.misc.fixedTools import otRound, fixedToFloat as fi2fl
 from fontTools.misc.loggingTools import deprecateFunction

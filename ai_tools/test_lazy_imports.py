@@ -1,5 +1,5 @@
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 
 import pytest
 

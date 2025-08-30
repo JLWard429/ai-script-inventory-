@@ -1,6 +1,6 @@
-import re
-import types
-from typing import List, Optional, Union
+import re_mod_custom
+import types  # Fixed: was types_mod_mod
+from typing_mod import List, Optional, Union
 
 import litellm
 from litellm.llms.base_llm.chat.transformation import BaseConfig

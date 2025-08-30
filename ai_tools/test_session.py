@@ -192,7 +192,7 @@ def test_session_other():
     assert module.selfref is module
 
 def test_runtime_module():
-from types import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
     modname = '__runtime__'
     runtime = ModuleType(modname)
     runtime.x = 42
@@ -228,7 +228,7 @@ from types import ModuleType
 def test_refimported_imported_as():
 import collections_mod
     import concurrent.futures
-import types
+import types  # Fixed: was types_mod_mod
     import typing
     mod = sys.modules['__test__'] = types.ModuleType('__test__')
     dill.executor = concurrent.futures.ThreadPoolExecutor(max_workers=1)

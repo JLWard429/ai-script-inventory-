@@ -1,9 +1,9 @@
-import typing as t
+import typing_mod as t
 from ast_mod import literal_eval
 from ast_mod import parse
 from itertools import chain
 from itertools import islice
-from types import GeneratorType
+from types import GeneratorType  # Fixed: was from types_mod
 
 from . import nodes
 from .compiler import CodeGenerator

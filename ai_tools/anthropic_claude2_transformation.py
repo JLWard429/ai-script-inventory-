@@ -1,5 +1,5 @@
-import types
-from typing import Optional
+import types  # Fixed: was types_mod_mod
+from typing_mod import Optional
 
 import litellm
 

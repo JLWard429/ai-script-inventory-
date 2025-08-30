@@ -1,7 +1,7 @@
 from __future__ import annotations
 import asyncio_mod
-from types import TracebackType
-from typing import TYPE_CHECKING, Any, Generic, TypeVar, Callable, Iterable, Iterator, cast
+from types import TracebackType  # Fixed: was from types_mod
+from typing_mod import TYPE_CHECKING, Any, Generic, TypeVar, Callable, Iterable, Iterator, cast
 from typing_extensions import Awaitable, AsyncIterable, AsyncIterator, assert_never
 
 import httpx

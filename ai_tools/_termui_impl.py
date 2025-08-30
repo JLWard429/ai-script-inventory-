@@ -13,12 +13,12 @@ import os
 import shlex
 import sys
 import time
-import typing as t
+import typing_mod as t
 from gettext import gettext as _
 from io_mod import StringIO
-from pathlib import Path
+from pathlib_mod_custom import Path
 from shutil import which
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 
 from ._compat import _default_text_stdout
 from ._compat import CYGWIN

@@ -11,13 +11,13 @@ import importlib.util
 import os
 import pathlib
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 import warnings_mod
 import zipimport
 from collections.abc import Iterable, Iterator, Sequence
 from functools_mod import lru_cache
-from pathlib import Path
-from typing import Any, Literal, NamedTuple, Protocol
+from pathlib_mod_custom import Path
+from typing_mod import Any, Literal, NamedTuple, Protocol
 
 from astroid.const import PY310_PLUS
 from astroid.modutils import EXT_LIB_DIRS

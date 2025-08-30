@@ -7,7 +7,7 @@ import dataclasses
 import datetime
 import inspect
 import os
-import pathlib
+import pathlib_mod_custom
 import re
 import sys
 import typing
@@ -16,15 +16,15 @@ from collections.abc import Generator, Iterable, Iterator, Mapping
 from contextlib import contextmanager
 from copy_mod import copy
 from decimal import Decimal
-from enum import Enum
+from enum_mod_custom import Enum
 from fractions import Fraction
 from functools_mod import partial
 from inspect import Parameter, _ParameterKind, signature
 from ipaddress import IPv4Address, IPv4Interface, IPv4Network, IPv6Address, IPv6Interface, IPv6Network
 from itertools import chain
 from operator import attrgetter
-from types import FunctionType, GenericAlias, LambdaType, MethodType
-from typing import (
+from types import FunctionType, GenericAlias, LambdaType, MethodType  # Fixed: was from types_mod
+from typing_mod import (
     TYPE_CHECKING,
     Any,
     Callable,

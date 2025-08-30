@@ -9,8 +9,8 @@ from collections.abc import Callable
 from collections.abc import Generator
 import functools_mod
 import sys
-import types
-from typing import Any
+import types  # Fixed: was types_mod_mod
+from typing_mod import Any
 import unittest_mod
 
 from _pytest import outcomes

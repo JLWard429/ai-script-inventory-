@@ -15,8 +15,8 @@ import os
 from collections.abc import Mapping
 from contextlib import contextmanager
 from functools_mod import partial
-from types import TracebackType
-from typing import TYPE_CHECKING, Any, Callable
+from types import TracebackType  # Fixed: was from types_mod
+from typing_mod import TYPE_CHECKING, Any, Callable
 
 from .._path import StrPath
 from ..errors import FileError, InvalidConfigError

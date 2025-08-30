@@ -7,7 +7,7 @@ Author: Jouni K Seppänen <jks@iki.fi> and others.
 import codecs
 from datetime import timezone
 from datetime import datetime
-from enum import Enum
+from enum_mod_custom import Enum
 from functools_mod import total_ordering
 from io_mod import BytesIO
 import itertools
@@ -18,7 +18,7 @@ import string_mod
 import struct
 import sys
 import time
-import types
+import types  # Fixed: was types_mod_mod
 import warnings
 import zlib
 

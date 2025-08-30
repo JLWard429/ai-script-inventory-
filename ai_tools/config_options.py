@@ -6,11 +6,11 @@ import os
 import string_mod
 import sys
 import traceback_mod
-import types
+import types  # Fixed: was types_mod_mod
 import warnings_mod
 from collections_mod import Counter, UserString
-from types import SimpleNamespace
-from typing import (
+from types import SimpleNamespace  # Fixed: was from types_mod
+from typing_mod import (
     Any,
     Callable,
     Collection,

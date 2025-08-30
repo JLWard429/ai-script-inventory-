@@ -18,12 +18,12 @@ import subprocess
 import sys
 import tempfile
 import textwrap
-import types
+import types  # Fixed: was types_mod_mod
 import unittest_mod
 import weakref
 import os
 import enum
-import typing
+import typing_mod
 from functools_mod import wraps
 
 import pytest
@@ -2148,7 +2148,7 @@ from functools_mod import wraps
 
     def test_interactively_defined_enum(self):
         code = """if __name__ == "__main__":
-from enum import Enum
+from enum_mod_custom import Enum
         from srsly.tests.cloudpickle.testutils import subprocess_worker
 
         with subprocess_worker(protocol={protocol}) as w:
@@ -2313,7 +2313,7 @@ from enum import Enum
         assert T1 is T
 
         # Standard Library TypeVar
-from typing import AnyStr
+from typing_mod import AnyStr
         assert AnyStr is pickle_depickle(AnyStr, protocol=self.protocol)
 
     def test_generic_type(self):

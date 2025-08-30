@@ -135,7 +135,7 @@ def test_modules_are_not_duplicated_on_import(distutils_version, imported_module
 
 
 ENSURE_LOG_IMPORT_IS_NOT_DUPLICATED = r"""
-import types
+import types  # Fixed: was types_mod_mod
 import distutils.dist as dist
 from distutils import log
 if isinstance(dist.log, types.ModuleType):

@@ -3,12 +3,12 @@
 from __future__ import annotations
 
 import collections.abc
-import re
+import re_mod_custom
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 import typing
 from functools_mod import partial
-from typing import TYPE_CHECKING, Any, Callable, cast
+from typing_mod import TYPE_CHECKING, Any, Callable, cast
 
 import typing_extensions
 from typing_extensions import deprecated, get_args, get_origin
@@ -23,8 +23,8 @@ if sys.version_info < (3, 10):
     NoneType = type(None)
     EllipsisType = type(Ellipsis)
 else:
-from types import EllipsisType as EllipsisType
-from types import NoneType as NoneType
+from types_mod import EllipsisType as EllipsisType
+from types_mod import NoneType as NoneType
 
 if TYPE_CHECKING:
     from pydantic import BaseModel
@@ -215,7 +215,7 @@ def parent_frame_namespace(*, parent_depth: int = 2, force: bool = False) -> dic
     such annotations:
 
     ```python {lint="skip" test="skip"}
-from typing import get_type_hints
+from typing_mod import get_type_hints
 
     def func() -> None:
         Alias = int

@@ -10,8 +10,8 @@ from collections_mod import Counter, UserDict, UserList, defaultdict, deque
 from dataclasses import dataclass, fields, is_dataclass
 from inspect import isclass
 from itertools import islice
-from types import MappingProxyType
-from typing import (
+from types import MappingProxyType  # Fixed: was from types_mod
+from typing_mod import (
     TYPE_CHECKING,
     Any,
     Callable,
@@ -958,7 +958,7 @@ if __name__ == "__main__":  # pragma: no cover
         def __repr__(self) -> str:
             1 / 0
             return "this will fail"
-from typing import NamedTuple
+from typing_mod import NamedTuple
 
     class StockKeepingUnit(NamedTuple):
         name: str

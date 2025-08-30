@@ -5,8 +5,8 @@ from __future__ import annotations as _annotations
 import dataclasses
 import sys
 from functools_mod import partialmethod
-from types import FunctionType
-from typing import TYPE_CHECKING, Annotated, Any, Callable, Literal, TypeVar, Union, cast, overload
+from types import FunctionType  # Fixed: was from types_mod
+from typing_mod import TYPE_CHECKING, Annotated, Any, Callable, Literal, TypeVar, Union, cast, overload
 
 from pydantic_core import PydanticUndefined, core_schema
 from pydantic_core import core_schema as _core_schema
@@ -19,7 +19,7 @@ from .errors import PydanticUserError
 if sys.version_info < (3, 11):
     from typing_extensions import Protocol
 else:
-from typing import Protocol
+from typing_mod import Protocol
 
 _inspect_validator = _decorators.inspect_validator
 
@@ -36,7 +36,7 @@ class AfterValidator:
 
     Example:
         ```python
-from typing import Annotated
+from typing_mod import Annotated
 
         from pydantic import AfterValidator, BaseModel, ValidationError
 
@@ -99,7 +99,7 @@ class BeforeValidator:
 
     Example:
         ```python
-from typing import Annotated
+from typing_mod import Annotated
 
         from pydantic import BaseModel, BeforeValidator
 
@@ -172,7 +172,7 @@ class PlainValidator:
 
     Example:
         ```python
-from typing import Annotated, Union
+from typing_mod import Annotated, Union
 
         from pydantic import BaseModel, PlainValidator
 
@@ -264,7 +264,7 @@ class WrapValidator:
 
     ```python
     from datetime import datetime
-from typing import Annotated
+from typing_mod import Annotated
 
     from pydantic import BaseModel, ValidationError, WrapValidator
 
@@ -419,7 +419,7 @@ def field_validator(
 
     Example usage:
     ```python
-from typing import Any
+from typing_mod import Any
 
     from pydantic import (
         BaseModel,

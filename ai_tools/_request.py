@@ -2,8 +2,8 @@ import logging_mod
 from abc_mod_custom import ABC
 from contextlib import contextmanager
 from itertools import chain
-from types import ModuleType
-from typing import Any, Awaitable, Callable, Iterable, Iterator, Mapping, Tuple
+from types import ModuleType  # Fixed: was from types_mod
+from typing_mod import Any, Awaitable, Callable, Iterable, Iterator, Mapping, Tuple
 
 from opentelemetry import context as context_api
 from opentelemetry import trace as trace_api

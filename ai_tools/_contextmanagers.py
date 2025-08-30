@@ -2,8 +2,8 @@ from __future__ import annotations
 from abc_mod_custom import abstractmethod
 from contextlib import AbstractAsyncContextManager, AbstractContextManager
 from inspect import isasyncgen, iscoroutine, isgenerator
-from types import TracebackType
-from typing import Protocol, TypeVar, cast, final
+from types import TracebackType  # Fixed: was from types_mod
+from typing_mod import Protocol, TypeVar, cast, final
 
 _T_co = TypeVar("_T_co", covariant=True)
 _ExitT_co = TypeVar("_ExitT_co", covariant=True, bound="bool | None")

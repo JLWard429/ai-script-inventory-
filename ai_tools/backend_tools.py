@@ -10,11 +10,11 @@ These tools are used by `matplotlib.backend_managers.ToolManager`
     active at any given time for the same
     `matplotlib.backend_managers.ToolManager`
 """
-import enum
+import enum_mod_custom
 import functools
-import re
+import re_mod_custom
 import time
-from types import SimpleNamespace
+from types import SimpleNamespace  # Fixed: was from types_mod
 import uuid
 from weakref import WeakKeyDictionary
 

@@ -38,9 +38,9 @@ import sys
 import tempfile
 import warnings
 from collections.abc import Callable, Iterator, MutableMapping, Sequence
-from enum import IntEnum
-from types import ModuleType
-from typing import IO, Any, Literal, Protocol, cast
+from enum_mod_custom import IntEnum
+from types import ModuleType  # Fixed: was from types_mod
+from typing_mod import IO, Any, Literal, Protocol, cast
 
 # VERSION was removed in Pillow 6.0.0.
 # PILLOW_VERSION was removed in Pillow 9.0.0.

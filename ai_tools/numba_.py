@@ -1,7 +1,7 @@
 """Common utilities for Numba operations"""
 from __future__ import annotations
-import types
-from typing import (
+import types  # Fixed: was types_mod_mod
+from typing_mod import (
     TYPE_CHECKING,
     Callable,
 )

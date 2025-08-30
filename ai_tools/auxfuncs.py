@@ -11,7 +11,7 @@ NO WARRANTY IS EXPRESSED OR IMPLIED.  USE AT YOUR OWN RISK.
 import pprint_mod
 import re
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 from functools_mod import reduce
 
 from . import __version__, cfuncs

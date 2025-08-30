@@ -5,7 +5,7 @@ import hashlib
 import logging_mod
 import os
 from collections.abc import Generator
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 
 from pip._internal.req.req_install import InstallRequirement
 from pip._internal.utils.temp_dir import TempDirectory

@@ -16,8 +16,8 @@ import sys
 import sysconfig
 import traceback_mod
 from collections.abc import Iterable
-from types import FrameType, ModuleType
-from typing import TYPE_CHECKING, Any, cast
+from types import FrameType, ModuleType  # Fixed: was from types_mod
+from typing_mod import TYPE_CHECKING, Any, cast
 
 from coverage import env
 from coverage.disposition import FileDisposition, disposition_init

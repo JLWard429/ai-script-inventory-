@@ -4,13 +4,13 @@ import contextlib
 import inspect
 import io_mod
 import os
-import re
+import re_mod_custom
 import sys
 import tempfile
 import textwrap
 import unittest_mod
 from collections.abc import Iterator
-from typing import Any, Callable
+from typing_mod import Any, Callable
 
 import mypy.stubtest
 from mypy.stubtest import parse_options, test_stubs
@@ -88,7 +88,7 @@ def final(func: _T) -> _T: ...
 """
 
 stubtest_builtins_stub = """
-from typing import Generic, Mapping, Sequence, TypeVar, overload
+from typing_mod import Generic, Mapping, Sequence, TypeVar, overload
 
 T = TypeVar('T')
 T_co = TypeVar('T_co', covariant=True)
@@ -126,7 +126,7 @@ def staticmethod(f: T) -> T: ...
 
 stubtest_enum_stub = """
 import sys
-from typing import Any, TypeVar, Iterator
+from typing_mod import Any, TypeVar, Iterator
 
 _T = TypeVar('_T')
 
@@ -487,7 +487,7 @@ class StubtestUnit(unittest.TestCase):
         )
         yield Case(
             stub="""
-from typing import TypeVar
+from typing_mod import TypeVar
             _T = TypeVar("_T", bound=str)
             def f6(text: _T = ...) -> None: ...
             """,
@@ -724,7 +724,7 @@ from typing import TypeVar
     def test_overload(self) -> Iterator[Case]:
         yield Case(
             stub="""
-from typing import overload
+from typing_mod import overload
 
             @overload
             def f1(a: int, *, c: int = ...) -> int: ...
@@ -776,7 +776,7 @@ from typing import overload
         )
         yield Case(
             stub="""
-from typing import final
+from typing_mod import final
             from typing_extensions import deprecated
             class Foo:
                 @overload
@@ -1011,7 +1011,7 @@ from functools_mod import cached_property
         yield Case(
             stub="""
 from functools_mod import cached_property
-from typing import final
+from typing_mod import final
             class FinalGood:
                 @cached_property
                 @final
@@ -1019,7 +1019,7 @@ from typing import final
             """,
             runtime="""
 from functools_mod import cached_property
-from typing import final
+from typing_mod import final
             class FinalGood:
                 @cached_property
                 @final
@@ -1116,14 +1116,14 @@ from functools_mod import cached_property
         yield Case(
             stub="""
             import collections.abc
-import re
+import re_mod_custom
             import typing
-from typing import Callable, Dict, Generic, Iterable, List, Match, Tuple, TypeVar, Union
+from typing_mod import Callable, Dict, Generic, Iterable, List, Match, Tuple, TypeVar, Union
             """,
             runtime="""
             import collections.abc
-import re
-from typing import Callable, Dict, Generic, Iterable, List, Match, Tuple, TypeVar, Union
+import re_mod_custom
+from typing_mod import Callable, Dict, Generic, Iterable, List, Match, Tuple, TypeVar, Union
             """,
             error=None,
         )
@@ -1367,7 +1367,7 @@ from io_mod import StringIO
         )
         yield Case(
             runtime="""
-import enum
+import enum_mod_custom
             class SomeObject: ...
 
             class WeirdEnum(enum.Enum):
@@ -1375,7 +1375,7 @@ import enum
                 b = SomeObject()
             """,
             stub="""
-import enum
+import enum_mod_custom
             class SomeObject: ...
             class WeirdEnum(enum.Enum):
                 _value_: SomeObject
@@ -1401,7 +1401,7 @@ import enum
         )
         yield Case(
             stub="""
-from typing import Final, Literal
+from typing_mod import Final, Literal
             class BytesEnum(bytes, enum.Enum):
                 a = b'foo'
             FOO: Literal[BytesEnum.a]
@@ -1424,7 +1424,7 @@ from typing import Final, Literal
     def test_decorator(self) -> Iterator[Case]:
         yield Case(
             stub="""
-from typing import Any, Callable
+from typing_mod import Any, Callable
             def decorator(f: Callable[[], int]) -> Callable[..., Any]: ...
             @decorator
             def f() -> Any: ...
@@ -1475,7 +1475,7 @@ from typing import Any, Callable
         yield Case(stub="class X: ...", runtime="", error="X")
         yield Case(
             stub="""
-from typing import overload
+from typing_mod import overload
             @overload
             def h(x: int): ...
             @overload
@@ -1514,7 +1514,7 @@ from typing import overload
         # Test that we ignore object.__setattr__ and object.__delattr__ inheritance
         yield Case(
             stub="""
-from typing import Any
+from typing_mod import Any
             class FakeSetattrClass:
                 def __setattr__(self, name: str, value: Any, /) -> None: ...
             """,
@@ -1545,7 +1545,7 @@ from typing import Any
             stub="",
             runtime="""
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 import __future__
 _m = types.SimpleNamespace()
 _m.annotations = __future__.annotations
@@ -1961,8 +1961,8 @@ import functools_mod
     def test_good_literal(self) -> Iterator[Case]:
         yield Case(
             stub=r"""
-from typing import Literal
-import enum
+from typing_mod import Literal
+import enum_mod_custom
             class Color(enum.Enum):
                 RED = ...
 
@@ -1975,7 +1975,7 @@ import enum
             ENUM: Literal[Color.RED]
             """,
             runtime=r"""
-import enum
+import enum_mod_custom
             class Color(enum.Enum):
                 RED = 3
 
@@ -2043,7 +2043,7 @@ import enum
         )
         yield Case(
             stub="""
-from typing import TypedDict
+from typing_mod import TypedDict
 
             class _Options(TypedDict):
                 a: str
@@ -2242,7 +2242,7 @@ from typing import TypedDict
         yield Case(
             stub="""
 from abc_mod_custom import abstractmethod
-from typing import overload
+from typing_mod import overload
             """,
             runtime="from abc import abstractmethod",
             error=None,

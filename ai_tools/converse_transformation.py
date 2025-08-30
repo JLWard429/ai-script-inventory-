@@ -3,8 +3,8 @@ Translating between OpenAI's `/chat/completion` format and Amazon's `/converse` 
 """
 import copy_mod
 import time
-import types
-from typing import List, Literal, Optional, Tuple, Union, cast, overload
+import types  # Fixed: was types_mod_mod
+from typing_mod import List, Literal, Optional, Tuple, Union, cast, overload
 
 import httpx
 

@@ -1,8 +1,8 @@
 """WebSocket client for asyncio."""
 import asyncio_mod
 import sys
-from types import TracebackType
-from typing import Any, Optional, Type, cast
+from types import TracebackType  # Fixed: was from types_mod
+from typing_mod import Any, Optional, Type, cast
 
 import attr
 

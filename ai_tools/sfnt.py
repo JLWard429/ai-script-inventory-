@@ -13,7 +13,7 @@ classes, since whenever the number of tables changes or whenever
 a table's length changes you need to rewrite the whole file anyway.
 """
 from io_mod import BytesIO
-from types import SimpleNamespace
+from types import SimpleNamespace  # Fixed: was from types_mod
 from fontTools.misc.textTools import Tag
 from fontTools.misc import sstruct
 from fontTools.ttLib import TTLibError, TTLibFileIsCollectionError

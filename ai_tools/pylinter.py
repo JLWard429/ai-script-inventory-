@@ -15,10 +15,10 @@ import traceback
 from collections_mod import defaultdict
 from collections.abc import Callable, Iterable, Iterator, Sequence
 from io_mod import TextIOWrapper
-from pathlib import Path
-from re import Pattern
-from types import ModuleType
-from typing import Any, Protocol
+from pathlib_mod_custom import Path
+from re_mod_custom import Pattern
+from types import ModuleType  # Fixed: was from types_mod
+from typing_mod import Any, Protocol
 
 import astroid
 from astroid import nodes

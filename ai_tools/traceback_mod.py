@@ -5,8 +5,8 @@ import sys
 from dataclasses import dataclass, field
 from itertools import islice
 from traceback_mod import walk_tb
-from types import ModuleType, TracebackType
-from typing import (
+from types import ModuleType, TracebackType  # Fixed: was from types_mod
+from typing_mod import (
     Any,
     Callable,
     Dict,

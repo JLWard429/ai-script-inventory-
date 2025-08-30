@@ -17,8 +17,8 @@ from copy_mod import deepcopy
 from functools_mod import cached_property
 from inspect import Parameter
 from itertools import zip_longest
-from types import BuiltinFunctionType, CodeType, FunctionType, GeneratorType, LambdaType, ModuleType
-from typing import Any, Callable, Generic, TypeVar, overload
+from types import BuiltinFunctionType, CodeType, FunctionType, GeneratorType, LambdaType, ModuleType  # Fixed: was from types_mod
+from typing_mod import Any, Callable, Generic, TypeVar, overload
 
 from typing_extensions import TypeAlias, TypeGuard, deprecated
 

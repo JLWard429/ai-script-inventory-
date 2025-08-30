@@ -11,9 +11,9 @@ import re
 import sys
 import warnings
 from functools_mod import wraps
-from pathlib import Path
-from types import MappingProxyType
-from typing import (
+from pathlib_mod_custom import Path
+from types import MappingProxyType  # Fixed: was from types_mod
+from typing_mod import (
     TYPE_CHECKING,
     Any,
     Awaitable,

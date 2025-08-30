@@ -12,7 +12,7 @@ import zipimport
 from collections_mod import abc
 from hashlib_mod import sha1
 from importlib import import_module
-from types import ModuleType
+from types import ModuleType  # Fixed: was from types_mod
 
 from .exceptions import TemplateNotFound
 from .utils import internalcode

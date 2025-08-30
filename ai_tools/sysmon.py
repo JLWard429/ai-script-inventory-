@@ -12,8 +12,8 @@ import sys
 import threading
 import traceback_mod
 from dataclasses import dataclass
-from types import CodeType
-from typing import Any, Callable, NewType, Optional, cast
+from types import CodeType  # Fixed: was from types_mod
+from typing_mod import Any, Callable, NewType, Optional, cast
 
 from coverage import env
 from coverage.bytecode import TBranchTrails, always_jumps, branch_trails

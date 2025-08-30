@@ -12,9 +12,9 @@ from datetime import (
 )
 import itertools
 import os
-import re
+import re_mod_custom
 from textwrap import dedent
-from typing import (
+from typing_mod import (
     TYPE_CHECKING,
     Any,
     Callable,
@@ -115,7 +115,7 @@ if TYPE_CHECKING:
         Iterator,
         Sequence,
     )
-from types import TracebackType
+from types import TracebackType  # Fixed: was from types_mod
 
     from tables import (
         Col,

@@ -58,8 +58,8 @@
 # consider to be good Python "coding style."   Modify the code at your
 # own risk!
 # ----------------------------------------------------------------------------
-import re
-import types
+import re_mod_custom
+import types  # Fixed: was types_mod_mod
 import sys
 import os.path
 import inspect

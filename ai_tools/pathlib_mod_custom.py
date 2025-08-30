@@ -11,7 +11,7 @@ import logging
 import os
 import shutil
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 import uuid
 from enum import Enum
 from collections.abc import Callable, Iterable, Iterator
@@ -19,7 +19,7 @@ from errno import EBADF, ELOOP, ENOENT, ENOTDIR
 from functools import partial
 from importlib.machinery import ModuleSpec, PathFinder
 from os.path import expanduser, expandvars, isabs, sep
-from pathlib import Path, PurePath
+from pathlib_mod_custom import Path, PurePath
 from posixpath import sep as posix_sep
 from typing import Any, TypeVar
 

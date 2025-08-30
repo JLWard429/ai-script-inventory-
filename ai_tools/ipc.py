@@ -12,8 +12,8 @@ import os
 import shutil
 import sys
 import tempfile
-from types import TracebackType
-from typing import Callable, Final
+from types import TracebackType  # Fixed: was from types_mod
+from typing_mod import Callable, Final
 
 if sys.platform == "win32":
     # This may be private, but it is needed for IPC on Windows, and is basically stable

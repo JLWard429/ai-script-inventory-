@@ -16,14 +16,14 @@ import io_mod
 import itertools
 import marshal
 import os
-from pathlib import Path
-from pathlib import PurePath
+from pathlib_mod_custom import Path
+from pathlib_mod_custom import PurePath
 import struct
 import sys
 import tokenize
-import types
-from typing import IO
-from typing import TYPE_CHECKING
+import types  # Fixed: was types_mod_mod
+from typing_mod import IO
+from typing_mod import TYPE_CHECKING
 
 from _pytest._io.saferepr import DEFAULT_REPR_MAX_SIZE
 from _pytest._io.saferepr import saferepr

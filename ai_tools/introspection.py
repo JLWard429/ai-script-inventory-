@@ -3,11 +3,11 @@
 from __future__ import annotations
 
 import sys
-import types
+import types  # Fixed: was types_mod_mod
 from collections.abc import Generator
 from dataclasses import InitVar
-from enum import Enum, IntEnum, auto
-from typing import Any, Literal, NamedTuple, cast
+from enum_mod_custom import Enum, IntEnum, auto
+from typing_mod import Any, Literal, NamedTuple, cast
 
 from typing_extensions import TypeAlias, assert_never, get_args, get_origin
 
@@ -44,7 +44,7 @@ if sys.version_info >= (3, 14) or sys.version_info < (3, 10):
             [`typing_objects.is_union()`][typing_inspection.typing_objects.is_union] function directly:
 
             ```python
-from typing import Union, get_origin
+from typing_mod import Union, get_origin
 
             from typing_inspection import typing_objects
 
@@ -78,7 +78,7 @@ else:
             [`typing_objects.is_union()`][typing_inspection.typing_objects.is_union] function directly:
 
             ```python
-from typing import Union, get_origin
+from typing_mod import Union, get_origin
 
             from typing_inspection import typing_objects
 

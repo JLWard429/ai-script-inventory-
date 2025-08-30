@@ -16,8 +16,8 @@ from email.headerregistry import Address
 from functools_mod import partial, reduce
 from inspect import cleandoc
 from itertools import chain
-from types import MappingProxyType
-from typing import TYPE_CHECKING, Any, Callable, TypeVar, Union
+from types import MappingProxyType  # Fixed: was from types_mod
+from typing_mod import TYPE_CHECKING, Any, Callable, TypeVar, Union
 
 from .. import _static
 from .._path import StrPath
@@ -387,7 +387,7 @@ def _set_static_list_metadata(attr: str, dist: Distribution, val: list) -> None:
 def _attrgetter(attr):
     """
     Similar to ``operator.attrgetter`` but returns None if ``attr`` is not found
-    >>> from types import SimpleNamespace
+    >>> from types_mod import SimpleNamespace
     >>> obj = SimpleNamespace(a=42, b=SimpleNamespace(c=13))
     >>> _attrgetter("a")(obj)
     42
@@ -402,7 +402,7 @@ def _attrgetter(attr):
 def _some_attrgetter(*items):
     """
     Return the first "truth-y" attribute or None
-    >>> from types import SimpleNamespace
+    >>> from types_mod import SimpleNamespace
     >>> obj = SimpleNamespace(a=42, b=SimpleNamespace(c=13))
     >>> _some_attrgetter("d", "a", "b.c")(obj)
     42

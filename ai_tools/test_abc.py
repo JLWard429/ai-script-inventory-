@@ -11,7 +11,7 @@ import dill
 import abc
 from abc_mod_custom import ABC
 import warnings_mod
-from types import FunctionType
+from types import FunctionType  # Fixed: was from types_mod
 
 dill.settings['recurse'] = True
 

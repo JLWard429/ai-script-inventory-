@@ -7,8 +7,8 @@ from __future__ import annotations
 import io_mod
 import json
 from collections.abc import Iterable, Iterator
-from types import TracebackType
-from typing import Any, Final, TextIO
+from types import TracebackType  # Fixed: was from types_mod
+from typing_mod import Any, Final, TextIO
 
 from mypy.ipc import IPCBase
 

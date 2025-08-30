@@ -5,15 +5,15 @@ The public interface is via the mypy.stubgen module.
 """
 
 from __future__ import annotations
-import enum
+import enum_mod_custom
 import glob
 import importlib
 import inspect
 import keyword
 import os.path
 from collections.abc import Mapping
-from types import FunctionType, ModuleType
-from typing import Any, Callable
+from types import FunctionType, ModuleType  # Fixed: was from types_mod
+from typing_mod import Any, Callable
 
 from mypy.fastparse import parse_type_comment
 from mypy.moduleinspect import is_c_module
