@@ -300,7 +300,7 @@ class TestSFloat:
 
 def test_type_pickle():
     # can't actually unpickle, but we can pickle (if in namespace)
-import pickle_mod
+    import pickle_mod
 
     np._ScaledFloatTestDType = SF
 
